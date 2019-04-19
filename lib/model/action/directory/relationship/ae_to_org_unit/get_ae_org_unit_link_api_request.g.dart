@@ -157,15 +157,15 @@ class _$GetAeOrgUnitLinkApiRequestActions
   final StatefulActionsOptions<
       GetAeOrgUnitLinkApiRequest,
       GetAeOrgUnitLinkApiRequestBuilder,
-      GetAeOrgUnitLinkApiRequestActions> $options;
+      GetAeOrgUnitLinkApiRequestActions> options$;
 
-  final ActionDispatcher<GetAeOrgUnitLinkApiRequest> $replace;
+  final ActionDispatcher<GetAeOrgUnitLinkApiRequest> replace$;
   final FieldDispatcher<String> aeToOrgUnitId;
 
-  _$GetAeOrgUnitLinkApiRequestActions._(this.$options)
-      : $replace = $options.action<GetAeOrgUnitLinkApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        aeToOrgUnitId = $options.field<String>(
+  _$GetAeOrgUnitLinkApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetAeOrgUnitLinkApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        aeToOrgUnitId = options$.field<String>(
             'aeToOrgUnitId',
             (a) => a?.aeToOrgUnitId,
             (s) => s?.aeToOrgUnitId,
@@ -177,32 +177,28 @@ class _$GetAeOrgUnitLinkApiRequestActions
       _$GetAeOrgUnitLinkApiRequestActions._(options());
 
   @override
-  GetAeOrgUnitLinkApiRequest get $initial => GetAeOrgUnitLinkApiRequest();
+  GetAeOrgUnitLinkApiRequest get initialState$ => GetAeOrgUnitLinkApiRequest();
 
   @override
-  GetAeOrgUnitLinkApiRequestBuilder $newBuilder() =>
+  GetAeOrgUnitLinkApiRequestBuilder newBuilder$() =>
       GetAeOrgUnitLinkApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.aeToOrgUnitId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    aeToOrgUnitId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    aeToOrgUnitId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetAeOrgUnitLinkApiRequest);
 }

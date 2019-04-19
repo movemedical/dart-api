@@ -177,21 +177,21 @@ class _$RunCustomActionApiRequestActions
   final StatefulActionsOptions<
       RunCustomActionApiRequest,
       RunCustomActionApiRequestBuilder,
-      RunCustomActionApiRequestActions> $options;
+      RunCustomActionApiRequestActions> options$;
 
-  final ActionDispatcher<RunCustomActionApiRequest> $replace;
+  final ActionDispatcher<RunCustomActionApiRequest> replace$;
   final FieldDispatcher<String> customActionId;
   final FieldDispatcher<String> args;
 
-  _$RunCustomActionApiRequestActions._(this.$options)
-      : $replace = $options.action<RunCustomActionApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        customActionId = $options.field<String>(
+  _$RunCustomActionApiRequestActions._(this.options$)
+      : replace$ = options$.action<RunCustomActionApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        customActionId = options$.field<String>(
             'customActionId',
             (a) => a?.customActionId,
             (s) => s?.customActionId,
             (p, b) => p?.customActionId = b),
-        args = $options.field<String>(
+        args = options$.field<String>(
             'args', (a) => a?.args, (s) => s?.args, (p, b) => p?.args = b),
         super._();
 
@@ -200,34 +200,30 @@ class _$RunCustomActionApiRequestActions
       _$RunCustomActionApiRequestActions._(options());
 
   @override
-  RunCustomActionApiRequest get $initial => RunCustomActionApiRequest();
+  RunCustomActionApiRequest get initialState$ => RunCustomActionApiRequest();
 
   @override
-  RunCustomActionApiRequestBuilder $newBuilder() =>
+  RunCustomActionApiRequestBuilder newBuilder$() =>
       RunCustomActionApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customActionId,
         this.args,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    customActionId.$reducer(reducer);
-    args.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    customActionId.reducer$(reducer);
+    args.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(RunCustomActionApiRequest);
 }

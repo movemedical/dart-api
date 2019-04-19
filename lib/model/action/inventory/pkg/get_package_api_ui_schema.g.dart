@@ -176,21 +176,21 @@ typedef StatefulActionsOptions<
 
 class _$GetPackageApiUiSchemaActions extends GetPackageApiUiSchemaActions {
   final StatefulActionsOptions<GetPackageApiUiSchema,
-      GetPackageApiUiSchemaBuilder, GetPackageApiUiSchemaActions> $options;
+      GetPackageApiUiSchemaBuilder, GetPackageApiUiSchemaActions> options$;
 
-  final ActionDispatcher<GetPackageApiUiSchema> $replace;
+  final ActionDispatcher<GetPackageApiUiSchema> replace$;
   final FieldDispatcher<bool> updateTrackingNumber;
   final FieldDispatcher<bool> printPackingList;
 
-  _$GetPackageApiUiSchemaActions._(this.$options)
-      : $replace = $options.action<GetPackageApiUiSchema>(
-            '\$replace', (a) => a?.$replace),
-        updateTrackingNumber = $options.field<bool>(
+  _$GetPackageApiUiSchemaActions._(this.options$)
+      : replace$ = options$.action<GetPackageApiUiSchema>(
+            'replace\$', (a) => a?.replace$),
+        updateTrackingNumber = options$.field<bool>(
             'updateTrackingNumber',
             (a) => a?.updateTrackingNumber,
             (s) => s?.updateTrackingNumber,
             (p, b) => p?.updateTrackingNumber = b),
-        printPackingList = $options.field<bool>(
+        printPackingList = options$.field<bool>(
             'printPackingList',
             (a) => a?.printPackingList,
             (s) => s?.printPackingList,
@@ -202,33 +202,29 @@ class _$GetPackageApiUiSchemaActions extends GetPackageApiUiSchemaActions {
       _$GetPackageApiUiSchemaActions._(options());
 
   @override
-  GetPackageApiUiSchema get $initial => GetPackageApiUiSchema();
+  GetPackageApiUiSchema get initialState$ => GetPackageApiUiSchema();
 
   @override
-  GetPackageApiUiSchemaBuilder $newBuilder() => GetPackageApiUiSchemaBuilder();
+  GetPackageApiUiSchemaBuilder newBuilder$() => GetPackageApiUiSchemaBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.updateTrackingNumber,
         this.printPackingList,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    updateTrackingNumber.$reducer(reducer);
-    printPackingList.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    updateTrackingNumber.reducer$(reducer);
+    printPackingList.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetPackageApiUiSchema);
 }

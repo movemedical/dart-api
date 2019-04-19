@@ -22,67 +22,32 @@ class _$ListShipToAddressesApi extends ListShipToAddressesApi {
           ApiResult<ListShipToAddressesApiResponse>>,
       CommandStateBuilder<ApiCommand<ListShipToAddressesApiRequest>,
           ApiResult<ListShipToAddressesApiResponse>>,
-      ListShipToAddressesApi> $options;
+      ListShipToAddressesApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListShipToAddressesApiRequest>,
-          ApiResult<ListShipToAddressesApiResponse>>> $replace;
+          ApiResult<ListShipToAddressesApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListShipToAddressesApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListShipToAddressesApiRequest>,
-          ApiResult<ListShipToAddressesApiResponse>,
-          ListShipToAddressesApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListShipToAddressesApiRequest>,
-          ApiResult<ListShipToAddressesApiResponse>,
-          ListShipToAddressesApi,
-          Command<ApiCommand<ListShipToAddressesApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListShipToAddressesApiRequest>,
-          ApiResult<ListShipToAddressesApiResponse>,
-          ListShipToAddressesApi,
-          CommandResult<ApiResult<ListShipToAddressesApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListShipToAddressesApiRequest>,
-          ApiResult<ListShipToAddressesApiResponse>,
-          ListShipToAddressesApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListShipToAddressesApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListShipToAddressesApi._(this.$options)
-      : $replace = $options.action<
+  _$ListShipToAddressesApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListShipToAddressesApiRequest>,
                     ApiResult<ListShipToAddressesApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListShipToAddressesApiRequest>,
-                ApiResult<ListShipToAddressesApiResponse>,
-                ListShipToAddressesApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListShipToAddressesApiRequest>,
-                    ApiResult<ListShipToAddressesApiResponse>,
-                    ListShipToAddressesApi,
-                    Command<ApiCommand<ListShipToAddressesApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListShipToAddressesApiRequest>,
-                    ApiResult<ListShipToAddressesApiResponse>,
-                    ListShipToAddressesApi,
-                    CommandResult<ApiResult<ListShipToAddressesApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListShipToAddressesApiRequest>,
-                ApiResult<ListShipToAddressesApiResponse>,
-                ListShipToAddressesApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListShipToAddressesApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListShipToAddressesApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListShipToAddressesApi(ListShipToAddressesApiOptions options) =>
@@ -91,32 +56,26 @@ class _$ListShipToAddressesApi extends ListShipToAddressesApi {
   @override
   CommandState<ApiCommand<ListShipToAddressesApiRequest>,
           ApiResult<ListShipToAddressesApiResponse>>
-      get $initial => CommandState<ApiCommand<ListShipToAddressesApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<ListShipToAddressesApiRequest>,
           ApiResult<ListShipToAddressesApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListShipToAddressesApiRequest>,
           ApiResult<ListShipToAddressesApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListShipToAddressesApiRequest>,
           ApiResult<ListShipToAddressesApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListShipToAddressesApiRequest)]),
-        FullType(ApiResult, [FullType(ListShipToAddressesApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

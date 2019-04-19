@@ -175,18 +175,18 @@ typedef StatefulActionsOptions<
 
 class _$GetUiSetupWebApiRequestActions extends GetUiSetupWebApiRequestActions {
   final StatefulActionsOptions<GetUiSetupWebApiRequest,
-      GetUiSetupWebApiRequestBuilder, GetUiSetupWebApiRequestActions> $options;
+      GetUiSetupWebApiRequestBuilder, GetUiSetupWebApiRequestActions> options$;
 
-  final ActionDispatcher<GetUiSetupWebApiRequest> $replace;
+  final ActionDispatcher<GetUiSetupWebApiRequest> replace$;
   final FieldDispatcher<String> appVersion;
   final FieldDispatcher<String> platformVersion;
 
-  _$GetUiSetupWebApiRequestActions._(this.$options)
-      : $replace = $options.action<GetUiSetupWebApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        appVersion = $options.field<String>('appVersion', (a) => a?.appVersion,
+  _$GetUiSetupWebApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetUiSetupWebApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        appVersion = options$.field<String>('appVersion', (a) => a?.appVersion,
             (s) => s?.appVersion, (p, b) => p?.appVersion = b),
-        platformVersion = $options.field<String>(
+        platformVersion = options$.field<String>(
             'platformVersion',
             (a) => a?.platformVersion,
             (s) => s?.platformVersion,
@@ -198,34 +198,30 @@ class _$GetUiSetupWebApiRequestActions extends GetUiSetupWebApiRequestActions {
       _$GetUiSetupWebApiRequestActions._(options());
 
   @override
-  GetUiSetupWebApiRequest get $initial => GetUiSetupWebApiRequest();
+  GetUiSetupWebApiRequest get initialState$ => GetUiSetupWebApiRequest();
 
   @override
-  GetUiSetupWebApiRequestBuilder $newBuilder() =>
+  GetUiSetupWebApiRequestBuilder newBuilder$() =>
       GetUiSetupWebApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.appVersion,
         this.platformVersion,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    appVersion.$reducer(reducer);
-    platformVersion.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    appVersion.reducer$(reducer);
+    platformVersion.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetUiSetupWebApiRequest);
 }

@@ -430,9 +430,9 @@ class _$UpdateCustomerApiRequestActions
   final StatefulActionsOptions<
       UpdateCustomerApiRequest,
       UpdateCustomerApiRequestBuilder,
-      UpdateCustomerApiRequestActions> $options;
+      UpdateCustomerApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateCustomerApiRequest> $replace;
+  final ActionDispatcher<UpdateCustomerApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> description;
   final FieldDispatcher<String> idOverride;
@@ -446,48 +446,48 @@ class _$UpdateCustomerApiRequestActions
   final FieldDispatcher<bool> active;
   final FieldDispatcher<bool> publicVisible;
 
-  _$UpdateCustomerApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateCustomerApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdateCustomerApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateCustomerApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        idOverride = $options.field<String>('idOverride', (a) => a?.idOverride,
+        idOverride = options$.field<String>('idOverride', (a) => a?.idOverride,
             (s) => s?.idOverride, (p, b) => p?.idOverride = b),
-        customerNumber = $options.field<String>(
+        customerNumber = options$.field<String>(
             'customerNumber',
             (a) => a?.customerNumber,
             (s) => s?.customerNumber,
             (p, b) => p?.customerNumber = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        phoneNumber = PhoneNumberActions(() => $options
+        phoneNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'phoneNumber',
                 (a) => a.phoneNumber,
                 (s) => s?.phoneNumber,
                 (b) => b?.phoneNumber,
                 (parent, builder) => parent?.phoneNumber = builder)),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        creditHold = $options.field<bool>('creditHold', (a) => a?.creditHold,
+        creditHold = options$.field<bool>('creditHold', (a) => a?.creditHold,
             (s) => s?.creditHold, (p, b) => p?.creditHold = b),
-        moveManaged = $options.field<bool>('moveManaged', (a) => a?.moveManaged,
+        moveManaged = options$.field<bool>('moveManaged', (a) => a?.moveManaged,
             (s) => s?.moveManaged, (p, b) => p?.moveManaged = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        publicVisible = $options.field<bool>(
+        publicVisible = options$.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
@@ -499,24 +499,24 @@ class _$UpdateCustomerApiRequestActions
       _$UpdateCustomerApiRequestActions._(options());
 
   @override
-  UpdateCustomerApiRequest get $initial => UpdateCustomerApiRequest();
+  UpdateCustomerApiRequest get initialState$ => UpdateCustomerApiRequest();
 
   @override
-  UpdateCustomerApiRequestBuilder $newBuilder() =>
+  UpdateCustomerApiRequestBuilder newBuilder$() =>
       UpdateCustomerApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
         this.phoneNumber,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.description,
         this.idOverride,
@@ -530,30 +530,26 @@ class _$UpdateCustomerApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    description.$reducer(reducer);
-    idOverride.$reducer(reducer);
-    customerNumber.$reducer(reducer);
-    name.$reducer(reducer);
-    email.$reducer(reducer);
-    phoneNumber.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    creditHold.$reducer(reducer);
-    moveManaged.$reducer(reducer);
-    active.$reducer(reducer);
-    publicVisible.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    description.reducer$(reducer);
+    idOverride.reducer$(reducer);
+    customerNumber.reducer$(reducer);
+    name.reducer$(reducer);
+    email.reducer$(reducer);
+    phoneNumber.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    creditHold.reducer$(reducer);
+    moveManaged.reducer$(reducer);
+    active.reducer$(reducer);
+    publicVisible.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    email.$middleware(middleware);
-    phoneNumber.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    email.middleware$(middleware);
+    phoneNumber.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(UpdateCustomerApiRequest);
 }

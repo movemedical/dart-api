@@ -22,69 +22,32 @@ class _$ProcessKitTrayRestockPlanApi extends ProcessKitTrayRestockPlanApi {
           ApiResult<ProcessKitTrayRestockPlanApiResponse>>,
       CommandStateBuilder<ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
           ApiResult<ProcessKitTrayRestockPlanApiResponse>>,
-      ProcessKitTrayRestockPlanApi> $options;
+      ProcessKitTrayRestockPlanApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-          ApiResult<ProcessKitTrayRestockPlanApiResponse>>> $replace;
+          ApiResult<ProcessKitTrayRestockPlanApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-          ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-          ProcessKitTrayRestockPlanApi,
-          String>> $cancel;
+      Command<ApiCommand<ProcessKitTrayRestockPlanApiRequest>>> execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-          ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-          ProcessKitTrayRestockPlanApi,
-          Command<ApiCommand<ProcessKitTrayRestockPlanApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-              ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-              ProcessKitTrayRestockPlanApi,
-              CommandResult<ApiResult<ProcessKitTrayRestockPlanApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-          ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-          ProcessKitTrayRestockPlanApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ProcessKitTrayRestockPlanApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ProcessKitTrayRestockPlanApi._(this.$options)
-      : $replace = $options.action<
+  _$ProcessKitTrayRestockPlanApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
                     ApiResult<ProcessKitTrayRestockPlanApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-                ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-                ProcessKitTrayRestockPlanApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-                    ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-                    ProcessKitTrayRestockPlanApi,
-                    Command<ApiCommand<ProcessKitTrayRestockPlanApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-                    ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-                    ProcessKitTrayRestockPlanApi,
-                    CommandResult<
-                        ApiResult<ProcessKitTrayRestockPlanApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-                ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-                ProcessKitTrayRestockPlanApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ProcessKitTrayRestockPlanApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<ProcessKitTrayRestockPlanApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ProcessKitTrayRestockPlanApi(
@@ -94,33 +57,26 @@ class _$ProcessKitTrayRestockPlanApi extends ProcessKitTrayRestockPlanApi {
   @override
   CommandState<ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
           ApiResult<ProcessKitTrayRestockPlanApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
           ApiResult<ProcessKitTrayRestockPlanApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
           ApiResult<ProcessKitTrayRestockPlanApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
           ApiResult<ProcessKitTrayRestockPlanApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ProcessKitTrayRestockPlanApiRequest)]),
-        FullType(ApiResult, [FullType(ProcessKitTrayRestockPlanApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

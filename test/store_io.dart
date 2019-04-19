@@ -11,7 +11,7 @@ ApiActions createActions() => ApiActions(
 Store<ApiState, ApiStateBuilder, ApiActions> createStore(
     [ApiStateBuilder Function(ApiActions) state]) {
   final actions = createActions();
-  if (state == null) state = (ApiActions a) => a.$initialBuilder;
+  if (state == null) state = (ApiActions a) => a.initialBuilder$;
   return Store<ApiState, ApiStateBuilder, ApiActions>(
       $createSerializers(), actions, state(actions)?.build(),
       httpFactory: () => IOClient(),
@@ -23,7 +23,7 @@ Store<ApiState, ApiStateBuilder, ApiActions> createStore(
               protocols: protocols,
               headers: headers,
               pingInterval: pingInterval),
-      middleware: [actions.$createMiddleware()],
+      middleware: [actions.createMiddleware$()],
       serviceFactory: (store, register) {
         register(DefaultJsonService(store, store.serializers));
         register(ApiService(store, store.actions));

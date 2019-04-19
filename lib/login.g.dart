@@ -398,21 +398,21 @@ typedef StatefulActionsOptions<LoginRequest, LoginRequestBuilder,
 
 class _$LoginRequestActions extends LoginRequestActions {
   final StatefulActionsOptions<LoginRequest, LoginRequestBuilder,
-      LoginRequestActions> $options;
+      LoginRequestActions> options$;
 
-  final ActionDispatcher<LoginRequest> $replace;
+  final ActionDispatcher<LoginRequest> replace$;
   final FieldDispatcher<String> email;
   final FieldDispatcher<String> password;
   final FieldDispatcher<String> session;
 
-  _$LoginRequestActions._(this.$options)
-      : $replace =
-            $options.action<LoginRequest>('\$replace', (a) => a?.$replace),
-        email = $options.field<String>(
+  _$LoginRequestActions._(this.options$)
+      : replace$ =
+            options$.action<LoginRequest>('replace\$', (a) => a?.replace$),
+        email = options$.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        password = $options.field<String>('password', (a) => a?.password,
+        password = options$.field<String>('password', (a) => a?.password,
             (s) => s?.password, (p, b) => p?.password = b),
-        session = $options.field<String>('session', (a) => a?.session,
+        session = options$.field<String>('session', (a) => a?.session,
             (s) => s?.session, (p, b) => p?.session = b),
         super._();
 
@@ -420,37 +420,33 @@ class _$LoginRequestActions extends LoginRequestActions {
       _$LoginRequestActions._(options());
 
   @override
-  LoginRequest get $initial => LoginRequest();
+  LoginRequest get initialState$ => LoginRequest();
 
   @override
-  LoginRequestBuilder $newBuilder() => LoginRequestBuilder();
+  LoginRequestBuilder newBuilder$() => LoginRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.email,
         this.password,
         this.session,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    email.$reducer(reducer);
-    password.$reducer(reducer);
-    session.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    email.reducer$(reducer);
+    password.reducer$(reducer);
+    session.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(LoginRequest);
 }
 
 typedef StatefulActionsOptions<
@@ -462,51 +458,27 @@ class _$LoginDispatcher extends LoginDispatcher {
   final StatefulActionsOptions<
       CommandState<ApiCommand<LoginRequest>, ApiResult<LoginResponse>>,
       CommandStateBuilder<ApiCommand<LoginRequest>, ApiResult<LoginResponse>>,
-      LoginDispatcher> $options;
+      LoginDispatcher> options$;
 
   final ActionDispatcher<
           CommandState<ApiCommand<LoginRequest>, ApiResult<LoginResponse>>>
-      $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
-          LoginDispatcher, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
-          LoginDispatcher, Command<ApiCommand<LoginRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
-          LoginDispatcher, CommandResult<ApiResult<LoginResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
-          LoginDispatcher, CommandProgress>> $progress;
+      replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<LoginRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<LoginResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$LoginDispatcher._(this.$options)
-      : $replace = $options.action<
+  _$LoginDispatcher._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<LoginRequest>,
-                ApiResult<LoginResponse>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
-                LoginDispatcher, String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<LoginRequest>,
-                    ApiResult<LoginResponse>,
-                    LoginDispatcher,
-                    Command<ApiCommand<LoginRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<LoginRequest>,
-                    ApiResult<LoginResponse>,
-                    LoginDispatcher,
-                    CommandResult<ApiResult<LoginResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<LoginRequest>,
-                ApiResult<LoginResponse>,
-                LoginDispatcher,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<LoginResponse>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<LoginRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<LoginResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$LoginDispatcher(LoginDispatcherOptions options) =>
@@ -514,30 +486,23 @@ class _$LoginDispatcher extends LoginDispatcher {
 
   @override
   CommandState<ApiCommand<LoginRequest>, ApiResult<LoginResponse>>
-      get $initial =>
+      get initialState$ =>
           CommandState<ApiCommand<LoginRequest>, ApiResult<LoginResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<LoginRequest>, ApiResult<LoginResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<LoginRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<LoginRequest>,
           ApiResult<LoginResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(LoginRequest)]),
-        FullType(ApiResult, [FullType(LoginResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

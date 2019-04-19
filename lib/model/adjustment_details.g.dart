@@ -240,33 +240,33 @@ typedef StatefulActionsOptions<AdjustmentDetails, AdjustmentDetailsBuilder,
 
 class _$AdjustmentDetailsActions extends AdjustmentDetailsActions {
   final StatefulActionsOptions<AdjustmentDetails, AdjustmentDetailsBuilder,
-      AdjustmentDetailsActions> $options;
+      AdjustmentDetailsActions> options$;
 
-  final ActionDispatcher<AdjustmentDetails> $replace;
+  final ActionDispatcher<AdjustmentDetails> replace$;
   final FieldDispatcher<AdjustmentReason> reason;
   final FieldDispatcher<AdjustmentStatus> status;
   final FieldDispatcher<String> erpReferenceNumber;
   final FieldDispatcher<AdjustmentReferenceType> referenceType;
   final FieldDispatcher<String> referenceId;
 
-  _$AdjustmentDetailsActions._(this.$options)
-      : $replace =
-            $options.action<AdjustmentDetails>('\$replace', (a) => a?.$replace),
-        reason = $options.field<AdjustmentReason>('reason', (a) => a?.reason,
+  _$AdjustmentDetailsActions._(this.options$)
+      : replace$ =
+            options$.action<AdjustmentDetails>('replace\$', (a) => a?.replace$),
+        reason = options$.field<AdjustmentReason>('reason', (a) => a?.reason,
             (s) => s?.reason, (p, b) => p?.reason = b),
-        status = $options.field<AdjustmentStatus>('status', (a) => a?.status,
+        status = options$.field<AdjustmentStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        erpReferenceNumber = $options.field<String>(
+        erpReferenceNumber = options$.field<String>(
             'erpReferenceNumber',
             (a) => a?.erpReferenceNumber,
             (s) => s?.erpReferenceNumber,
             (p, b) => p?.erpReferenceNumber = b),
-        referenceType = $options.field<AdjustmentReferenceType>(
+        referenceType = options$.field<AdjustmentReferenceType>(
             'referenceType',
             (a) => a?.referenceType,
             (s) => s?.referenceType,
             (p, b) => p?.referenceType = b),
-        referenceId = $options.field<String>(
+        referenceId = options$.field<String>(
             'referenceId',
             (a) => a?.referenceId,
             (s) => s?.referenceId,
@@ -277,16 +277,16 @@ class _$AdjustmentDetailsActions extends AdjustmentDetailsActions {
       _$AdjustmentDetailsActions._(options());
 
   @override
-  AdjustmentDetails get $initial => AdjustmentDetails();
+  AdjustmentDetails get initialState$ => AdjustmentDetails();
 
   @override
-  AdjustmentDetailsBuilder $newBuilder() => AdjustmentDetailsBuilder();
+  AdjustmentDetailsBuilder newBuilder$() => AdjustmentDetailsBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.reason,
         this.status,
         this.erpReferenceNumber,
@@ -295,21 +295,17 @@ class _$AdjustmentDetailsActions extends AdjustmentDetailsActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    reason.$reducer(reducer);
-    status.$reducer(reducer);
-    erpReferenceNumber.$reducer(reducer);
-    referenceType.$reducer(reducer);
-    referenceId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    reason.reducer$(reducer);
+    status.reducer$(reducer);
+    erpReferenceNumber.reducer$(reducer);
+    referenceType.reducer$(reducer);
+    referenceId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(AdjustmentDetails);
 }

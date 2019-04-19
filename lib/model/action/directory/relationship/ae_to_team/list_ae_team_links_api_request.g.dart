@@ -243,22 +243,22 @@ class _$ListAeTeamLinksApiRequestActions
   final StatefulActionsOptions<
       ListAeTeamLinksApiRequest,
       ListAeTeamLinksApiRequestBuilder,
-      ListAeTeamLinksApiRequestActions> $options;
+      ListAeTeamLinksApiRequestActions> options$;
 
-  final ActionDispatcher<ListAeTeamLinksApiRequest> $replace;
+  final ActionDispatcher<ListAeTeamLinksApiRequest> replace$;
   final FieldDispatcher<String> aeId;
   final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListAeTeamLinksApiOrderBy> orderBy;
 
-  _$ListAeTeamLinksApiRequestActions._(this.$options)
-      : $replace = $options.action<ListAeTeamLinksApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        aeId = $options.field<String>(
+  _$ListAeTeamLinksApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListAeTeamLinksApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        aeId = options$.field<String>(
             'aeId', (a) => a?.aeId, (s) => s?.aeId, (p, b) => p?.aeId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -268,7 +268,7 @@ class _$ListAeTeamLinksApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListAeTeamLinksApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListAeTeamLinksApiOrderBy>,
                     OrderByParamsBuilder<ListAeTeamLinksApiOrderBy>,
                     OrderByParamsActions<ListAeTeamLinksApiOrderBy>>(
@@ -284,45 +284,41 @@ class _$ListAeTeamLinksApiRequestActions
       _$ListAeTeamLinksApiRequestActions._(options());
 
   @override
-  ListAeTeamLinksApiRequest get $initial => ListAeTeamLinksApiRequest();
+  ListAeTeamLinksApiRequest get initialState$ => ListAeTeamLinksApiRequest();
 
   @override
-  ListAeTeamLinksApiRequestBuilder $newBuilder() =>
+  ListAeTeamLinksApiRequestBuilder newBuilder$() =>
       ListAeTeamLinksApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.aeId,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    aeId.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    aeId.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListAeTeamLinksApiRequest);
 }

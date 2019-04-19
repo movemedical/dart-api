@@ -150,15 +150,15 @@ typedef StatefulActionsOptions<
 
 class _$AuditUpdatedPushMessageActions extends AuditUpdatedPushMessageActions {
   final StatefulActionsOptions<AuditUpdatedPushMessage,
-      AuditUpdatedPushMessageBuilder, AuditUpdatedPushMessageActions> $options;
+      AuditUpdatedPushMessageBuilder, AuditUpdatedPushMessageActions> options$;
 
-  final ActionDispatcher<AuditUpdatedPushMessage> $replace;
+  final ActionDispatcher<AuditUpdatedPushMessage> replace$;
   final FieldDispatcher<String> auditId;
 
-  _$AuditUpdatedPushMessageActions._(this.$options)
-      : $replace = $options.action<AuditUpdatedPushMessage>(
-            '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+  _$AuditUpdatedPushMessageActions._(this.options$)
+      : replace$ = options$.action<AuditUpdatedPushMessage>(
+            'replace\$', (a) => a?.replace$),
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         super._();
 
@@ -167,32 +167,28 @@ class _$AuditUpdatedPushMessageActions extends AuditUpdatedPushMessageActions {
       _$AuditUpdatedPushMessageActions._(options());
 
   @override
-  AuditUpdatedPushMessage get $initial => AuditUpdatedPushMessage();
+  AuditUpdatedPushMessage get initialState$ => AuditUpdatedPushMessage();
 
   @override
-  AuditUpdatedPushMessageBuilder $newBuilder() =>
+  AuditUpdatedPushMessageBuilder newBuilder$() =>
       AuditUpdatedPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(AuditUpdatedPushMessage);
 }

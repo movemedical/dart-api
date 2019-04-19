@@ -22,64 +22,30 @@ class _$GlobalSearchApi extends GlobalSearchApi {
           ApiResult<GlobalSearchApiResponse>>,
       CommandStateBuilder<ApiCommand<GlobalSearchApiRequest>,
           ApiResult<GlobalSearchApiResponse>>,
-      GlobalSearchApi> $options;
+      GlobalSearchApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GlobalSearchApiRequest>,
-          ApiResult<GlobalSearchApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GlobalSearchApiRequest>,
-          ApiResult<GlobalSearchApiResponse>, GlobalSearchApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GlobalSearchApiRequest>,
-          ApiResult<GlobalSearchApiResponse>,
-          GlobalSearchApi,
-          Command<ApiCommand<GlobalSearchApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GlobalSearchApiRequest>,
-          ApiResult<GlobalSearchApiResponse>,
-          GlobalSearchApi,
-          CommandResult<ApiResult<GlobalSearchApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GlobalSearchApiRequest>,
-          ApiResult<GlobalSearchApiResponse>,
-          GlobalSearchApi,
-          CommandProgress>> $progress;
+          ApiResult<GlobalSearchApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GlobalSearchApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<GlobalSearchApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GlobalSearchApi._(this.$options)
-      : $replace = $options.action<
+  _$GlobalSearchApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GlobalSearchApiRequest>,
                     ApiResult<GlobalSearchApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GlobalSearchApiRequest>,
-                ApiResult<GlobalSearchApiResponse>,
-                GlobalSearchApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GlobalSearchApiRequest>,
-                    ApiResult<GlobalSearchApiResponse>,
-                    GlobalSearchApi,
-                    Command<ApiCommand<GlobalSearchApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GlobalSearchApiRequest>,
-                    ApiResult<GlobalSearchApiResponse>,
-                    GlobalSearchApi,
-                    CommandResult<ApiResult<GlobalSearchApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GlobalSearchApiRequest>,
-                ApiResult<GlobalSearchApiResponse>,
-                GlobalSearchApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<GlobalSearchApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<GlobalSearchApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GlobalSearchApi(GlobalSearchApiOptions options) =>
@@ -88,31 +54,24 @@ class _$GlobalSearchApi extends GlobalSearchApi {
   @override
   CommandState<ApiCommand<GlobalSearchApiRequest>,
           ApiResult<GlobalSearchApiResponse>>
-      get $initial => CommandState<ApiCommand<GlobalSearchApiRequest>,
+      get initialState$ => CommandState<ApiCommand<GlobalSearchApiRequest>,
           ApiResult<GlobalSearchApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GlobalSearchApiRequest>,
           ApiResult<GlobalSearchApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<GlobalSearchApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<GlobalSearchApiRequest>,
           ApiResult<GlobalSearchApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GlobalSearchApiRequest)]),
-        FullType(ApiResult, [FullType(GlobalSearchApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

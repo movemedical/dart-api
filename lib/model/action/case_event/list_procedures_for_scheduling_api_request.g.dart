@@ -203,21 +203,21 @@ class _$ListProceduresForSchedulingApiRequestActions
   final StatefulActionsOptions<
       ListProceduresForSchedulingApiRequest,
       ListProceduresForSchedulingApiRequestBuilder,
-      ListProceduresForSchedulingApiRequestActions> $options;
+      ListProceduresForSchedulingApiRequestActions> options$;
 
-  final ActionDispatcher<ListProceduresForSchedulingApiRequest> $replace;
+  final ActionDispatcher<ListProceduresForSchedulingApiRequest> replace$;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> search;
   final FieldDispatcher<bool> active;
 
-  _$ListProceduresForSchedulingApiRequestActions._(this.$options)
-      : $replace = $options.action<ListProceduresForSchedulingApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+  _$ListProceduresForSchedulingApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListProceduresForSchedulingApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -226,38 +226,33 @@ class _$ListProceduresForSchedulingApiRequestActions
       _$ListProceduresForSchedulingApiRequestActions._(options());
 
   @override
-  ListProceduresForSchedulingApiRequest get $initial =>
+  ListProceduresForSchedulingApiRequest get initialState$ =>
       ListProceduresForSchedulingApiRequest();
 
   @override
-  ListProceduresForSchedulingApiRequestBuilder $newBuilder() =>
+  ListProceduresForSchedulingApiRequestBuilder newBuilder$() =>
       ListProceduresForSchedulingApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.bizUnitId,
         this.search,
         this.active,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    search.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    search.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListProceduresForSchedulingApiRequest);
 }

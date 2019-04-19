@@ -321,9 +321,9 @@ typedef StatefulActionsOptions<Insurance, InsuranceBuilder,
 
 class _$InsuranceActions extends InsuranceActions {
   final StatefulActionsOptions<Insurance, InsuranceBuilder, InsuranceActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<Insurance> $replace;
+  final ActionDispatcher<Insurance> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> policyNumber;
@@ -333,23 +333,23 @@ class _$InsuranceActions extends InsuranceActions {
   final FieldDispatcher<String> subscriberRelation;
   final FieldDispatcher<DateTime> subscriberDateOfBirth;
 
-  _$InsuranceActions._(this.$options)
-      : $replace = $options.action<Insurance>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$InsuranceActions._(this.options$)
+      : replace$ = options$.action<Insurance>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        policyNumber = $options.field<String>(
+        policyNumber = options$.field<String>(
             'policyNumber',
             (a) => a?.policyNumber,
             (s) => s?.policyNumber,
             (p, b) => p?.policyNumber = b),
-        groupNumber = $options.field<String>(
+        groupNumber = options$.field<String>(
             'groupNumber',
             (a) => a?.groupNumber,
             (s) => s?.groupNumber,
             (p, b) => p?.groupNumber = b),
-        phoneNumber = PhoneNumberActions(() => $options
+        phoneNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'phoneNumber',
                 (a) => a.phoneNumber,
@@ -357,18 +357,18 @@ class _$InsuranceActions extends InsuranceActions {
                 (b) => b?.phoneNumber,
                 (parent, builder) => parent?.phoneNumber = builder)),
         subscriberName = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'subscriberName',
                 (a) => a.subscriberName,
                 (s) => s?.subscriberName,
                 (b) => b?.subscriberName,
                 (parent, builder) => parent?.subscriberName = builder)),
-        subscriberRelation = $options.field<String>(
+        subscriberRelation = options$.field<String>(
             'subscriberRelation',
             (a) => a?.subscriberRelation,
             (s) => s?.subscriberRelation,
             (p, b) => p?.subscriberRelation = b),
-        subscriberDateOfBirth = $options.field<DateTime>(
+        subscriberDateOfBirth = options$.field<DateTime>(
             'subscriberDateOfBirth',
             (a) => a?.subscriberDateOfBirth,
             (s) => s?.subscriberDateOfBirth,
@@ -379,23 +379,23 @@ class _$InsuranceActions extends InsuranceActions {
       _$InsuranceActions._(options());
 
   @override
-  Insurance get $initial => Insurance();
+  Insurance get initialState$ => Insurance();
 
   @override
-  InsuranceBuilder $newBuilder() => InsuranceBuilder();
+  InsuranceBuilder newBuilder$() => InsuranceBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.phoneNumber,
         this.subscriberName,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.policyNumber,
@@ -405,26 +405,22 @@ class _$InsuranceActions extends InsuranceActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    policyNumber.$reducer(reducer);
-    groupNumber.$reducer(reducer);
-    phoneNumber.$reducer(reducer);
-    subscriberName.$reducer(reducer);
-    subscriberRelation.$reducer(reducer);
-    subscriberDateOfBirth.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    policyNumber.reducer$(reducer);
+    groupNumber.reducer$(reducer);
+    phoneNumber.reducer$(reducer);
+    subscriberName.reducer$(reducer);
+    subscriberRelation.reducer$(reducer);
+    subscriberDateOfBirth.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    phoneNumber.$middleware(middleware);
-    subscriberName.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    phoneNumber.middleware$(middleware);
+    subscriberName.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Insurance);
 }

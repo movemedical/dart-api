@@ -206,24 +206,24 @@ class _$CreateSimpleKitStockApiResponseActions
   final StatefulActionsOptions<
       CreateSimpleKitStockApiResponse,
       CreateSimpleKitStockApiResponseBuilder,
-      CreateSimpleKitStockApiResponseActions> $options;
+      CreateSimpleKitStockApiResponseActions> options$;
 
-  final ActionDispatcher<CreateSimpleKitStockApiResponse> $replace;
+  final ActionDispatcher<CreateSimpleKitStockApiResponse> replace$;
   final FieldDispatcher<String> kitStockId;
   final FieldDispatcher<String> kitStockSummaryKey;
   final FieldDispatcher<String> toteStockId;
 
-  _$CreateSimpleKitStockApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateSimpleKitStockApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        kitStockId = $options.field<String>('kitStockId', (a) => a?.kitStockId,
+  _$CreateSimpleKitStockApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateSimpleKitStockApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        kitStockId = options$.field<String>('kitStockId', (a) => a?.kitStockId,
             (s) => s?.kitStockId, (p, b) => p?.kitStockId = b),
-        kitStockSummaryKey = $options.field<String>(
+        kitStockSummaryKey = options$.field<String>(
             'kitStockSummaryKey',
             (a) => a?.kitStockSummaryKey,
             (s) => s?.kitStockSummaryKey,
             (p, b) => p?.kitStockSummaryKey = b),
-        toteStockId = $options.field<String>(
+        toteStockId = options$.field<String>(
             'toteStockId',
             (a) => a?.toteStockId,
             (s) => s?.toteStockId,
@@ -235,38 +235,33 @@ class _$CreateSimpleKitStockApiResponseActions
       _$CreateSimpleKitStockApiResponseActions._(options());
 
   @override
-  CreateSimpleKitStockApiResponse get $initial =>
+  CreateSimpleKitStockApiResponse get initialState$ =>
       CreateSimpleKitStockApiResponse();
 
   @override
-  CreateSimpleKitStockApiResponseBuilder $newBuilder() =>
+  CreateSimpleKitStockApiResponseBuilder newBuilder$() =>
       CreateSimpleKitStockApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.kitStockId,
         this.kitStockSummaryKey,
         this.toteStockId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    kitStockId.$reducer(reducer);
-    kitStockSummaryKey.$reducer(reducer);
-    toteStockId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    kitStockId.reducer$(reducer);
+    kitStockSummaryKey.reducer$(reducer);
+    toteStockId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateSimpleKitStockApiResponse);
 }

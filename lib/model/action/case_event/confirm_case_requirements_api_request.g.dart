@@ -205,27 +205,27 @@ class _$ConfirmCaseRequirementsApiRequestActions
   final StatefulActionsOptions<
       ConfirmCaseRequirementsApiRequest,
       ConfirmCaseRequirementsApiRequestBuilder,
-      ConfirmCaseRequirementsApiRequestActions> $options;
+      ConfirmCaseRequirementsApiRequestActions> options$;
 
-  final ActionDispatcher<ConfirmCaseRequirementsApiRequest> $replace;
+  final ActionDispatcher<ConfirmCaseRequirementsApiRequest> replace$;
   final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<DateTime> surgeryDate;
   final FieldDispatcher<bool> eventTimeUnknown;
 
-  _$ConfirmCaseRequirementsApiRequestActions._(this.$options)
-      : $replace = $options.action<ConfirmCaseRequirementsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$ConfirmCaseRequirementsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ConfirmCaseRequirementsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        surgeryDate = $options.field<DateTime>(
+        surgeryDate = options$.field<DateTime>(
             'surgeryDate',
             (a) => a?.surgeryDate,
             (s) => s?.surgeryDate,
             (p, b) => p?.surgeryDate = b),
-        eventTimeUnknown = $options.field<bool>(
+        eventTimeUnknown = options$.field<bool>(
             'eventTimeUnknown',
             (a) => a?.eventTimeUnknown,
             (s) => s?.eventTimeUnknown,
@@ -237,38 +237,33 @@ class _$ConfirmCaseRequirementsApiRequestActions
       _$ConfirmCaseRequirementsApiRequestActions._(options());
 
   @override
-  ConfirmCaseRequirementsApiRequest get $initial =>
+  ConfirmCaseRequirementsApiRequest get initialState$ =>
       ConfirmCaseRequirementsApiRequest();
 
   @override
-  ConfirmCaseRequirementsApiRequestBuilder $newBuilder() =>
+  ConfirmCaseRequirementsApiRequestBuilder newBuilder$() =>
       ConfirmCaseRequirementsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
         this.surgeryDate,
         this.eventTimeUnknown,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
-    surgeryDate.$reducer(reducer);
-    eventTimeUnknown.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
+    surgeryDate.reducer$(reducer);
+    eventTimeUnknown.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ConfirmCaseRequirementsApiRequest);
 }

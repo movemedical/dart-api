@@ -214,23 +214,23 @@ class _$GetOrderReasonSpecificationApiOrderReasonFieldDataActions
   final StatefulActionsOptions<
       GetOrderReasonSpecificationApiOrderReasonFieldData,
       GetOrderReasonSpecificationApiOrderReasonFieldDataBuilder,
-      GetOrderReasonSpecificationApiOrderReasonFieldDataActions> $options;
+      GetOrderReasonSpecificationApiOrderReasonFieldDataActions> options$;
 
   final ActionDispatcher<GetOrderReasonSpecificationApiOrderReasonFieldData>
-      $replace;
+      replace$;
   final FieldDispatcher<OrderReasonField> name;
   final FieldDispatcher<int> sort;
   final FieldDispatcher<bool> required;
 
-  _$GetOrderReasonSpecificationApiOrderReasonFieldDataActions._(this.$options)
-      : $replace =
-            $options.action<GetOrderReasonSpecificationApiOrderReasonFieldData>(
-                '\$replace', (a) => a?.$replace),
-        name = $options.field<OrderReasonField>(
+  _$GetOrderReasonSpecificationApiOrderReasonFieldDataActions._(this.options$)
+      : replace$ =
+            options$.action<GetOrderReasonSpecificationApiOrderReasonFieldData>(
+                'replace\$', (a) => a?.replace$),
+        name = options$.field<OrderReasonField>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        sort = $options.field<int>(
+        sort = options$.field<int>(
             'sort', (a) => a?.sort, (s) => s?.sort, (p, b) => p?.sort = b),
-        required = $options.field<bool>('required', (a) => a?.required,
+        required = options$.field<bool>('required', (a) => a?.required,
             (s) => s?.required, (p, b) => p?.required = b),
         super._();
 
@@ -240,38 +240,33 @@ class _$GetOrderReasonSpecificationApiOrderReasonFieldDataActions
       _$GetOrderReasonSpecificationApiOrderReasonFieldDataActions._(options());
 
   @override
-  GetOrderReasonSpecificationApiOrderReasonFieldData get $initial =>
+  GetOrderReasonSpecificationApiOrderReasonFieldData get initialState$ =>
       GetOrderReasonSpecificationApiOrderReasonFieldData();
 
   @override
-  GetOrderReasonSpecificationApiOrderReasonFieldDataBuilder $newBuilder() =>
+  GetOrderReasonSpecificationApiOrderReasonFieldDataBuilder newBuilder$() =>
       GetOrderReasonSpecificationApiOrderReasonFieldDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.name,
         this.sort,
         this.required,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    name.$reducer(reducer);
-    sort.$reducer(reducer);
-    required.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    name.reducer$(reducer);
+    sort.reducer$(reducer);
+    required.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(GetOrderReasonSpecificationApiOrderReasonFieldData);
 }

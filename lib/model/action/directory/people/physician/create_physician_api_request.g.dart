@@ -311,9 +311,9 @@ class _$CreatePhysicianApiRequestActions
   final StatefulActionsOptions<
       CreatePhysicianApiRequest,
       CreatePhysicianApiRequestBuilder,
-      CreatePhysicianApiRequestActions> $options;
+      CreatePhysicianApiRequestActions> options$;
 
-  final ActionDispatcher<CreatePhysicianApiRequest> $replace;
+  final ActionDispatcher<CreatePhysicianApiRequest> replace$;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<PhysicianType> physicianType;
   final PersonNameActions name;
@@ -322,35 +322,35 @@ class _$CreatePhysicianApiRequestActions
   final FieldDispatcher<String> timeZone;
   final FieldDispatcher<bool> active;
 
-  _$CreatePhysicianApiRequestActions._(this.$options)
-      : $replace = $options.action<CreatePhysicianApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orgId = $options.field<String>(
+  _$CreatePhysicianApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreatePhysicianApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        physicianType = $options.field<PhysicianType>(
+        physicianType = options$.field<PhysicianType>(
             'physicianType',
             (a) => a?.physicianType,
             (s) => s?.physicianType,
             (p, b) => p?.physicianType = b),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        npi = $options.field<String>(
+        npi = options$.field<String>(
             'npi', (a) => a?.npi, (s) => s?.npi, (p, b) => p?.npi = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -359,24 +359,24 @@ class _$CreatePhysicianApiRequestActions
       _$CreatePhysicianApiRequestActions._(options());
 
   @override
-  CreatePhysicianApiRequest get $initial => CreatePhysicianApiRequest();
+  CreatePhysicianApiRequest get initialState$ => CreatePhysicianApiRequest();
 
   @override
-  CreatePhysicianApiRequestBuilder $newBuilder() =>
+  CreatePhysicianApiRequestBuilder newBuilder$() =>
       CreatePhysicianApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orgId,
         this.physicianType,
         this.npi,
@@ -385,25 +385,21 @@ class _$CreatePhysicianApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orgId.$reducer(reducer);
-    physicianType.$reducer(reducer);
-    name.$reducer(reducer);
-    npi.$reducer(reducer);
-    email.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orgId.reducer$(reducer);
+    physicianType.reducer$(reducer);
+    name.reducer$(reducer);
+    npi.reducer$(reducer);
+    email.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    name.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    name.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreatePhysicianApiRequest);
 }

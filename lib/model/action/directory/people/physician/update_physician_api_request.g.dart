@@ -286,9 +286,9 @@ class _$UpdatePhysicianApiRequestActions
   final StatefulActionsOptions<
       UpdatePhysicianApiRequest,
       UpdatePhysicianApiRequestBuilder,
-      UpdatePhysicianApiRequestActions> $options;
+      UpdatePhysicianApiRequestActions> options$;
 
-  final ActionDispatcher<UpdatePhysicianApiRequest> $replace;
+  final ActionDispatcher<UpdatePhysicianApiRequest> replace$;
   final FieldDispatcher<String> id;
   final PersonNameActions name;
   final FieldDispatcher<String> npi;
@@ -296,30 +296,30 @@ class _$UpdatePhysicianApiRequestActions
   final EmailActions email;
   final FieldDispatcher<PhysicianType> physicianType;
 
-  _$UpdatePhysicianApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdatePhysicianApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdatePhysicianApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdatePhysicianApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        npi = $options.field<String>(
+        npi = options$.field<String>(
             'npi', (a) => a?.npi, (s) => s?.npi, (p, b) => p?.npi = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        physicianType = $options.field<PhysicianType>(
+        physicianType = options$.field<PhysicianType>(
             'physicianType',
             (a) => a?.physicianType,
             (s) => s?.physicianType,
@@ -331,24 +331,24 @@ class _$UpdatePhysicianApiRequestActions
       _$UpdatePhysicianApiRequestActions._(options());
 
   @override
-  UpdatePhysicianApiRequest get $initial => UpdatePhysicianApiRequest();
+  UpdatePhysicianApiRequest get initialState$ => UpdatePhysicianApiRequest();
 
   @override
-  UpdatePhysicianApiRequestBuilder $newBuilder() =>
+  UpdatePhysicianApiRequestBuilder newBuilder$() =>
       UpdatePhysicianApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.npi,
         this.active,
@@ -356,24 +356,20 @@ class _$UpdatePhysicianApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    npi.$reducer(reducer);
-    active.$reducer(reducer);
-    email.$reducer(reducer);
-    physicianType.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    npi.reducer$(reducer);
+    active.reducer$(reducer);
+    email.reducer$(reducer);
+    physicianType.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    name.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    name.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(UpdatePhysicianApiRequest);
 }

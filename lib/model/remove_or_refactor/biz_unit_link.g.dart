@@ -234,33 +234,33 @@ typedef StatefulActionsOptions<BizUnitLink, BizUnitLinkBuilder,
 
 class _$BizUnitLinkActions extends BizUnitLinkActions {
   final StatefulActionsOptions<BizUnitLink, BizUnitLinkBuilder,
-      BizUnitLinkActions> $options;
+      BizUnitLinkActions> options$;
 
-  final ActionDispatcher<BizUnitLink> $replace;
+  final ActionDispatcher<BizUnitLink> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> bizUnitName;
   final FieldDispatcher<String> bizUnitDescription;
   final FieldDispatcher<bool> bizUnitActive;
 
-  _$BizUnitLinkActions._(this.$options)
-      : $replace =
-            $options.action<BizUnitLink>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BizUnitLinkActions._(this.options$)
+      : replace$ =
+            options$.action<BizUnitLink>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        bizUnitName = $options.field<String>(
+        bizUnitName = options$.field<String>(
             'bizUnitName',
             (a) => a?.bizUnitName,
             (s) => s?.bizUnitName,
             (p, b) => p?.bizUnitName = b),
-        bizUnitDescription = $options.field<String>(
+        bizUnitDescription = options$.field<String>(
             'bizUnitDescription',
             (a) => a?.bizUnitDescription,
             (s) => s?.bizUnitDescription,
             (p, b) => p?.bizUnitDescription = b),
-        bizUnitActive = $options.field<bool>(
+        bizUnitActive = options$.field<bool>(
             'bizUnitActive',
             (a) => a?.bizUnitActive,
             (s) => s?.bizUnitActive,
@@ -271,16 +271,16 @@ class _$BizUnitLinkActions extends BizUnitLinkActions {
       _$BizUnitLinkActions._(options());
 
   @override
-  BizUnitLink get $initial => BizUnitLink();
+  BizUnitLink get initialState$ => BizUnitLink();
 
   @override
-  BizUnitLinkBuilder $newBuilder() => BizUnitLinkBuilder();
+  BizUnitLinkBuilder newBuilder$() => BizUnitLinkBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.bizUnitId,
         this.bizUnitName,
@@ -289,21 +289,17 @@ class _$BizUnitLinkActions extends BizUnitLinkActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    bizUnitName.$reducer(reducer);
-    bizUnitDescription.$reducer(reducer);
-    bizUnitActive.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    bizUnitName.reducer$(reducer);
+    bizUnitDescription.reducer$(reducer);
+    bizUnitActive.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(BizUnitLink);
 }

@@ -374,9 +374,9 @@ class _$GetIntegrationIssueApiIssueActions
   final StatefulActionsOptions<
       GetIntegrationIssueApiIssue,
       GetIntegrationIssueApiIssueBuilder,
-      GetIntegrationIssueApiIssueActions> $options;
+      GetIntegrationIssueApiIssueActions> options$;
 
-  final ActionDispatcher<GetIntegrationIssueApiIssue> $replace;
+  final ActionDispatcher<GetIntegrationIssueApiIssue> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> issueNumber;
   final FieldDispatcher<String> logReferenceId;
@@ -388,43 +388,43 @@ class _$GetIntegrationIssueApiIssueActions
   final FieldDispatcher<DateTime> resolvedDate;
   final FieldDispatcher<String> regenerateFileId;
 
-  _$GetIntegrationIssueApiIssueActions._(this.$options)
-      : $replace = $options.action<GetIntegrationIssueApiIssue>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetIntegrationIssueApiIssueActions._(this.options$)
+      : replace$ = options$.action<GetIntegrationIssueApiIssue>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        issueNumber = $options.field<int>('issueNumber', (a) => a?.issueNumber,
+        issueNumber = options$.field<int>('issueNumber', (a) => a?.issueNumber,
             (s) => s?.issueNumber, (p, b) => p?.issueNumber = b),
-        logReferenceId = $options.field<String>(
+        logReferenceId = options$.field<String>(
             'logReferenceId',
             (a) => a?.logReferenceId,
             (s) => s?.logReferenceId,
             (p, b) => p?.logReferenceId = b),
-        status = $options.field<IntegrationIssueStatus>('status',
+        status = options$.field<IntegrationIssueStatus>('status',
             (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        issueType = $options.field<IntegrationType>(
+        issueType = options$.field<IntegrationType>(
             'issueType',
             (a) => a?.issueType,
             (s) => s?.issueType,
             (p, b) => p?.issueType = b),
-        issueGroup = $options.field<String>('issueGroup', (a) => a?.issueGroup,
+        issueGroup = options$.field<String>('issueGroup', (a) => a?.issueGroup,
             (s) => s?.issueGroup, (p, b) => p?.issueGroup = b),
-        createdDate = $options.field<DateTime>(
+        createdDate = options$.field<DateTime>(
             'createdDate',
             (a) => a?.createdDate,
             (s) => s?.createdDate,
             (p, b) => p?.createdDate = b),
-        assignedDate = $options.field<DateTime>(
+        assignedDate = options$.field<DateTime>(
             'assignedDate',
             (a) => a?.assignedDate,
             (s) => s?.assignedDate,
             (p, b) => p?.assignedDate = b),
-        resolvedDate = $options.field<DateTime>(
+        resolvedDate = options$.field<DateTime>(
             'resolvedDate',
             (a) => a?.resolvedDate,
             (s) => s?.resolvedDate,
             (p, b) => p?.resolvedDate = b),
-        regenerateFileId = $options.field<String>(
+        regenerateFileId = options$.field<String>(
             'regenerateFileId',
             (a) => a?.regenerateFileId,
             (s) => s?.regenerateFileId,
@@ -436,17 +436,18 @@ class _$GetIntegrationIssueApiIssueActions
       _$GetIntegrationIssueApiIssueActions._(options());
 
   @override
-  GetIntegrationIssueApiIssue get $initial => GetIntegrationIssueApiIssue();
+  GetIntegrationIssueApiIssue get initialState$ =>
+      GetIntegrationIssueApiIssue();
 
   @override
-  GetIntegrationIssueApiIssueBuilder $newBuilder() =>
+  GetIntegrationIssueApiIssueBuilder newBuilder$() =>
       GetIntegrationIssueApiIssueBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.issueNumber,
         this.logReferenceId,
@@ -460,27 +461,22 @@ class _$GetIntegrationIssueApiIssueActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    issueNumber.$reducer(reducer);
-    logReferenceId.$reducer(reducer);
-    status.$reducer(reducer);
-    issueType.$reducer(reducer);
-    issueGroup.$reducer(reducer);
-    createdDate.$reducer(reducer);
-    assignedDate.$reducer(reducer);
-    resolvedDate.$reducer(reducer);
-    regenerateFileId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    issueNumber.reducer$(reducer);
+    logReferenceId.reducer$(reducer);
+    status.reducer$(reducer);
+    issueType.reducer$(reducer);
+    issueGroup.reducer$(reducer);
+    createdDate.reducer$(reducer);
+    assignedDate.reducer$(reducer);
+    resolvedDate.reducer$(reducer);
+    regenerateFileId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetIntegrationIssueApiIssue);
 }

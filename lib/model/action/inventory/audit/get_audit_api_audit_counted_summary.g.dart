@@ -358,9 +358,9 @@ class _$GetAuditApiAuditCountedSummaryActions
   final StatefulActionsOptions<
       GetAuditApiAuditCountedSummary,
       GetAuditApiAuditCountedSummaryBuilder,
-      GetAuditApiAuditCountedSummaryActions> $options;
+      GetAuditApiAuditCountedSummaryActions> options$;
 
-  final ActionDispatcher<GetAuditApiAuditCountedSummary> $replace;
+  final ActionDispatcher<GetAuditApiAuditCountedSummary> replace$;
   final GetAuditApiItemDetailActions itemDetail;
   final GetAuditApiPieceDetailActions expected;
   final GetAuditApiPieceDetailActions applied;
@@ -370,10 +370,10 @@ class _$GetAuditApiAuditCountedSummaryActions
   final FieldDispatcher<int> totalQtyVariance;
   final FieldDispatcher<double> totalPriceVariance;
 
-  _$GetAuditApiAuditCountedSummaryActions._(this.$options)
-      : $replace = $options.action<GetAuditApiAuditCountedSummary>(
-            '\$replace', (a) => a?.$replace),
-        itemDetail = GetAuditApiItemDetailActions(() => $options.stateful<
+  _$GetAuditApiAuditCountedSummaryActions._(this.options$)
+      : replace$ = options$.action<GetAuditApiAuditCountedSummary>(
+            'replace\$', (a) => a?.replace$),
+        itemDetail = GetAuditApiItemDetailActions(() => options$.stateful<
                 GetAuditApiItemDetail,
                 GetAuditApiItemDetailBuilder,
                 GetAuditApiItemDetailActions>(
@@ -382,7 +382,7 @@ class _$GetAuditApiAuditCountedSummaryActions
             (s) => s?.itemDetail,
             (b) => b?.itemDetail,
             (parent, builder) => parent?.itemDetail = builder)),
-        expected = GetAuditApiPieceDetailActions(() => $options.stateful<
+        expected = GetAuditApiPieceDetailActions(() => options$.stateful<
                 GetAuditApiPieceDetail,
                 GetAuditApiPieceDetailBuilder,
                 GetAuditApiPieceDetailActions>(
@@ -391,7 +391,7 @@ class _$GetAuditApiAuditCountedSummaryActions
             (s) => s?.expected,
             (b) => b?.expected,
             (parent, builder) => parent?.expected = builder)),
-        applied = GetAuditApiPieceDetailActions(() => $options.stateful<
+        applied = GetAuditApiPieceDetailActions(() => options$.stateful<
                 GetAuditApiPieceDetail,
                 GetAuditApiPieceDetailBuilder,
                 GetAuditApiPieceDetailActions>(
@@ -400,7 +400,7 @@ class _$GetAuditApiAuditCountedSummaryActions
             (s) => s?.applied,
             (b) => b?.applied,
             (parent, builder) => parent?.applied = builder)),
-        shortage = GetAuditApiPieceDetailActions(() => $options.stateful<
+        shortage = GetAuditApiPieceDetailActions(() => options$.stateful<
                 GetAuditApiPieceDetail,
                 GetAuditApiPieceDetailBuilder,
                 GetAuditApiPieceDetailActions>(
@@ -409,7 +409,7 @@ class _$GetAuditApiAuditCountedSummaryActions
             (s) => s?.shortage,
             (b) => b?.shortage,
             (parent, builder) => parent?.shortage = builder)),
-        overage = GetAuditApiPieceDetailActions(() => $options.stateful<
+        overage = GetAuditApiPieceDetailActions(() => options$.stateful<
                 GetAuditApiPieceDetail,
                 GetAuditApiPieceDetailBuilder,
                 GetAuditApiPieceDetailActions>(
@@ -418,14 +418,14 @@ class _$GetAuditApiAuditCountedSummaryActions
             (s) => s?.overage,
             (b) => b?.overage,
             (parent, builder) => parent?.overage = builder)),
-        matched = $options.field<bool>('matched', (a) => a?.matched,
+        matched = options$.field<bool>('matched', (a) => a?.matched,
             (s) => s?.matched, (p, b) => p?.matched = b),
-        totalQtyVariance = $options.field<int>(
+        totalQtyVariance = options$.field<int>(
             'totalQtyVariance',
             (a) => a?.totalQtyVariance,
             (s) => s?.totalQtyVariance,
             (p, b) => p?.totalQtyVariance = b),
-        totalPriceVariance = $options.field<double>(
+        totalPriceVariance = options$.field<double>(
             'totalPriceVariance',
             (a) => a?.totalPriceVariance,
             (s) => s?.totalPriceVariance,
@@ -437,16 +437,16 @@ class _$GetAuditApiAuditCountedSummaryActions
       _$GetAuditApiAuditCountedSummaryActions._(options());
 
   @override
-  GetAuditApiAuditCountedSummary get $initial =>
+  GetAuditApiAuditCountedSummary get initialState$ =>
       GetAuditApiAuditCountedSummary();
 
   @override
-  GetAuditApiAuditCountedSummaryBuilder $newBuilder() =>
+  GetAuditApiAuditCountedSummaryBuilder newBuilder$() =>
       GetAuditApiAuditCountedSummaryBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.itemDetail,
         this.expected,
         this.applied,
@@ -454,41 +454,36 @@ class _$GetAuditApiAuditCountedSummaryActions
         this.overage,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.matched,
         this.totalQtyVariance,
         this.totalPriceVariance,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemDetail.$reducer(reducer);
-    expected.$reducer(reducer);
-    applied.$reducer(reducer);
-    shortage.$reducer(reducer);
-    overage.$reducer(reducer);
-    matched.$reducer(reducer);
-    totalQtyVariance.$reducer(reducer);
-    totalPriceVariance.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemDetail.reducer$(reducer);
+    expected.reducer$(reducer);
+    applied.reducer$(reducer);
+    shortage.reducer$(reducer);
+    overage.reducer$(reducer);
+    matched.reducer$(reducer);
+    totalQtyVariance.reducer$(reducer);
+    totalPriceVariance.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    itemDetail.$middleware(middleware);
-    expected.$middleware(middleware);
-    applied.$middleware(middleware);
-    shortage.$middleware(middleware);
-    overage.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    itemDetail.middleware$(middleware);
+    expected.middleware$(middleware);
+    applied.middleware$(middleware);
+    shortage.middleware$(middleware);
+    overage.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetAuditApiAuditCountedSummary);
 }

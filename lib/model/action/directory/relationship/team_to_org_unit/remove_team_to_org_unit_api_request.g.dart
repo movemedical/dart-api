@@ -157,15 +157,15 @@ class _$RemoveTeamToOrgUnitApiRequestActions
   final StatefulActionsOptions<
       RemoveTeamToOrgUnitApiRequest,
       RemoveTeamToOrgUnitApiRequestBuilder,
-      RemoveTeamToOrgUnitApiRequestActions> $options;
+      RemoveTeamToOrgUnitApiRequestActions> options$;
 
-  final ActionDispatcher<RemoveTeamToOrgUnitApiRequest> $replace;
+  final ActionDispatcher<RemoveTeamToOrgUnitApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$RemoveTeamToOrgUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<RemoveTeamToOrgUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$RemoveTeamToOrgUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<RemoveTeamToOrgUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -174,33 +174,29 @@ class _$RemoveTeamToOrgUnitApiRequestActions
       _$RemoveTeamToOrgUnitApiRequestActions._(options());
 
   @override
-  RemoveTeamToOrgUnitApiRequest get $initial => RemoveTeamToOrgUnitApiRequest();
+  RemoveTeamToOrgUnitApiRequest get initialState$ =>
+      RemoveTeamToOrgUnitApiRequest();
 
   @override
-  RemoveTeamToOrgUnitApiRequestBuilder $newBuilder() =>
+  RemoveTeamToOrgUnitApiRequestBuilder newBuilder$() =>
       RemoveTeamToOrgUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RemoveTeamToOrgUnitApiRequest);
 }

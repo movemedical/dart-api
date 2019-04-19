@@ -183,18 +183,18 @@ class _$AddMobileVersionBlacklistApiRequestActions
   final StatefulActionsOptions<
       AddMobileVersionBlacklistApiRequest,
       AddMobileVersionBlacklistApiRequestBuilder,
-      AddMobileVersionBlacklistApiRequestActions> $options;
+      AddMobileVersionBlacklistApiRequestActions> options$;
 
-  final ActionDispatcher<AddMobileVersionBlacklistApiRequest> $replace;
+  final ActionDispatcher<AddMobileVersionBlacklistApiRequest> replace$;
   final FieldDispatcher<MobilePlatform> platform;
   final FieldDispatcher<String> versionNumber;
 
-  _$AddMobileVersionBlacklistApiRequestActions._(this.$options)
-      : $replace = $options.action<AddMobileVersionBlacklistApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        platform = $options.field<MobilePlatform>('platform',
+  _$AddMobileVersionBlacklistApiRequestActions._(this.options$)
+      : replace$ = options$.action<AddMobileVersionBlacklistApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        platform = options$.field<MobilePlatform>('platform',
             (a) => a?.platform, (s) => s?.platform, (p, b) => p?.platform = b),
-        versionNumber = $options.field<String>(
+        versionNumber = options$.field<String>(
             'versionNumber',
             (a) => a?.versionNumber,
             (s) => s?.versionNumber,
@@ -206,36 +206,31 @@ class _$AddMobileVersionBlacklistApiRequestActions
       _$AddMobileVersionBlacklistApiRequestActions._(options());
 
   @override
-  AddMobileVersionBlacklistApiRequest get $initial =>
+  AddMobileVersionBlacklistApiRequest get initialState$ =>
       AddMobileVersionBlacklistApiRequest();
 
   @override
-  AddMobileVersionBlacklistApiRequestBuilder $newBuilder() =>
+  AddMobileVersionBlacklistApiRequestBuilder newBuilder$() =>
       AddMobileVersionBlacklistApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.platform,
         this.versionNumber,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    platform.$reducer(reducer);
-    versionNumber.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    platform.reducer$(reducer);
+    versionNumber.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AddMobileVersionBlacklistApiRequest);
 }

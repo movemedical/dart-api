@@ -176,15 +176,15 @@ class _$ListUserNavHistoryApiResponseActions
   final StatefulActionsOptions<
       ListUserNavHistoryApiResponse,
       ListUserNavHistoryApiResponseBuilder,
-      ListUserNavHistoryApiResponseActions> $options;
+      ListUserNavHistoryApiResponseActions> options$;
 
-  final ActionDispatcher<ListUserNavHistoryApiResponse> $replace;
+  final ActionDispatcher<ListUserNavHistoryApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListUserNavHistoryApiNavEntry>> entries;
 
-  _$ListUserNavHistoryApiResponseActions._(this.$options)
-      : $replace = $options.action<ListUserNavHistoryApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        entries = $options.field<BuiltList<ListUserNavHistoryApiNavEntry>>(
+  _$ListUserNavHistoryApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListUserNavHistoryApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        entries = options$.field<BuiltList<ListUserNavHistoryApiNavEntry>>(
             'entries',
             (a) => a?.entries,
             (s) => s?.entries,
@@ -196,33 +196,29 @@ class _$ListUserNavHistoryApiResponseActions
       _$ListUserNavHistoryApiResponseActions._(options());
 
   @override
-  ListUserNavHistoryApiResponse get $initial => ListUserNavHistoryApiResponse();
+  ListUserNavHistoryApiResponse get initialState$ =>
+      ListUserNavHistoryApiResponse();
 
   @override
-  ListUserNavHistoryApiResponseBuilder $newBuilder() =>
+  ListUserNavHistoryApiResponseBuilder newBuilder$() =>
       ListUserNavHistoryApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.entries,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    entries.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    entries.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListUserNavHistoryApiResponse);
 }

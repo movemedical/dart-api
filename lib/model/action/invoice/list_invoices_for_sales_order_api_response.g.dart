@@ -183,17 +183,17 @@ class _$ListInvoicesForSalesOrderApiResponseActions
   final StatefulActionsOptions<
       ListInvoicesForSalesOrderApiResponse,
       ListInvoicesForSalesOrderApiResponseBuilder,
-      ListInvoicesForSalesOrderApiResponseActions> $options;
+      ListInvoicesForSalesOrderApiResponseActions> options$;
 
-  final ActionDispatcher<ListInvoicesForSalesOrderApiResponse> $replace;
+  final ActionDispatcher<ListInvoicesForSalesOrderApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListInvoicesForSalesOrderApiInvoice>>
       invoices;
 
-  _$ListInvoicesForSalesOrderApiResponseActions._(this.$options)
-      : $replace = $options.action<ListInvoicesForSalesOrderApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$ListInvoicesForSalesOrderApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListInvoicesForSalesOrderApiResponse>(
+            'replace\$', (a) => a?.replace$),
         invoices =
-            $options.field<BuiltList<ListInvoicesForSalesOrderApiInvoice>>(
+            options$.field<BuiltList<ListInvoicesForSalesOrderApiInvoice>>(
                 'invoices',
                 (a) => a?.invoices,
                 (s) => s?.invoices,
@@ -205,34 +205,29 @@ class _$ListInvoicesForSalesOrderApiResponseActions
       _$ListInvoicesForSalesOrderApiResponseActions._(options());
 
   @override
-  ListInvoicesForSalesOrderApiResponse get $initial =>
+  ListInvoicesForSalesOrderApiResponse get initialState$ =>
       ListInvoicesForSalesOrderApiResponse();
 
   @override
-  ListInvoicesForSalesOrderApiResponseBuilder $newBuilder() =>
+  ListInvoicesForSalesOrderApiResponseBuilder newBuilder$() =>
       ListInvoicesForSalesOrderApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.invoices,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    invoices.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    invoices.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListInvoicesForSalesOrderApiResponse);
 }

@@ -298,9 +298,9 @@ class _$RequestShipmentPackingListDocApiRequestActions
   final StatefulActionsOptions<
       RequestShipmentPackingListDocApiRequest,
       RequestShipmentPackingListDocApiRequestBuilder,
-      RequestShipmentPackingListDocApiRequestActions> $options;
+      RequestShipmentPackingListDocApiRequestActions> options$;
 
-  final ActionDispatcher<RequestShipmentPackingListDocApiRequest> $replace;
+  final ActionDispatcher<RequestShipmentPackingListDocApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final FieldDispatcher<DocReportDisplayType> displayType;
@@ -308,10 +308,10 @@ class _$RequestShipmentPackingListDocApiRequestActions
   final FieldDispatcher<String> packageId;
   final FieldDispatcher<bool> displayNotes;
 
-  _$RequestShipmentPackingListDocApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestShipmentPackingListDocApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestShipmentPackingListDocApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestShipmentPackingListDocApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -320,18 +320,18 @@ class _$RequestShipmentPackingListDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.field<DocReportDisplayType>(
+        displayType = options$.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+        shipmentId = options$.field<String>('shipmentId', (a) => a?.shipmentId,
             (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
-        packageId = $options.field<String>('packageId', (a) => a?.packageId,
+        packageId = options$.field<String>('packageId', (a) => a?.packageId,
             (s) => s?.packageId, (p, b) => p?.packageId = b),
-        displayNotes = $options.field<bool>(
+        displayNotes = options$.field<bool>(
             'displayNotes',
             (a) => a?.displayNotes,
             (s) => s?.displayNotes,
@@ -343,24 +343,24 @@ class _$RequestShipmentPackingListDocApiRequestActions
       _$RequestShipmentPackingListDocApiRequestActions._(options());
 
   @override
-  RequestShipmentPackingListDocApiRequest get $initial =>
+  RequestShipmentPackingListDocApiRequest get initialState$ =>
       RequestShipmentPackingListDocApiRequest();
 
   @override
-  RequestShipmentPackingListDocApiRequestBuilder $newBuilder() =>
+  RequestShipmentPackingListDocApiRequestBuilder newBuilder$() =>
       RequestShipmentPackingListDocApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.format,
         this.displayType,
         this.shipmentId,
@@ -369,24 +369,19 @@ class _$RequestShipmentPackingListDocApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    format.$reducer(reducer);
-    displayType.$reducer(reducer);
-    shipmentId.$reducer(reducer);
-    packageId.$reducer(reducer);
-    displayNotes.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    format.reducer$(reducer);
+    displayType.reducer$(reducer);
+    shipmentId.reducer$(reducer);
+    packageId.reducer$(reducer);
+    displayNotes.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestShipmentPackingListDocApiRequest);
 }

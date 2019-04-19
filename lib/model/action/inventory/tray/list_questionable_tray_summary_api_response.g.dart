@@ -191,17 +191,17 @@ class _$ListQuestionableTraySummaryApiResponseActions
   final StatefulActionsOptions<
       ListQuestionableTraySummaryApiResponse,
       ListQuestionableTraySummaryApiResponseBuilder,
-      ListQuestionableTraySummaryApiResponseActions> $options;
+      ListQuestionableTraySummaryApiResponseActions> options$;
 
-  final ActionDispatcher<ListQuestionableTraySummaryApiResponse> $replace;
+  final ActionDispatcher<ListQuestionableTraySummaryApiResponse> replace$;
   final FieldDispatcher<
           BuiltList<ListQuestionableTraySummaryApiQuestionableSummary>>
       questionableSummaryList;
 
-  _$ListQuestionableTraySummaryApiResponseActions._(this.$options)
-      : $replace = $options.action<ListQuestionableTraySummaryApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        questionableSummaryList = $options.field<
+  _$ListQuestionableTraySummaryApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListQuestionableTraySummaryApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        questionableSummaryList = options$.field<
                 BuiltList<ListQuestionableTraySummaryApiQuestionableSummary>>(
             'questionableSummaryList',
             (a) => a?.questionableSummaryList,
@@ -214,34 +214,29 @@ class _$ListQuestionableTraySummaryApiResponseActions
       _$ListQuestionableTraySummaryApiResponseActions._(options());
 
   @override
-  ListQuestionableTraySummaryApiResponse get $initial =>
+  ListQuestionableTraySummaryApiResponse get initialState$ =>
       ListQuestionableTraySummaryApiResponse();
 
   @override
-  ListQuestionableTraySummaryApiResponseBuilder $newBuilder() =>
+  ListQuestionableTraySummaryApiResponseBuilder newBuilder$() =>
       ListQuestionableTraySummaryApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.questionableSummaryList,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    questionableSummaryList.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    questionableSummaryList.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListQuestionableTraySummaryApiResponse);
 }

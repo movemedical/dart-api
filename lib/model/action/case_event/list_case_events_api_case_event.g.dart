@@ -868,9 +868,9 @@ class _$ListCaseEventsApiCaseEventActions
   final StatefulActionsOptions<
       ListCaseEventsApiCaseEvent,
       ListCaseEventsApiCaseEventBuilder,
-      ListCaseEventsApiCaseEventActions> $options;
+      ListCaseEventsApiCaseEventActions> options$;
 
-  final ActionDispatcher<ListCaseEventsApiCaseEvent> $replace;
+  final ActionDispatcher<ListCaseEventsApiCaseEvent> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> caseNumber;
   final FieldDispatcher<DateTime> eventDate;
@@ -908,146 +908,146 @@ class _$ListCaseEventsApiCaseEventActions
   final FieldDispatcher<String> shipCity;
   final FieldDispatcher<String> shipState;
 
-  _$ListCaseEventsApiCaseEventActions._(this.$options)
-      : $replace = $options.action<ListCaseEventsApiCaseEvent>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListCaseEventsApiCaseEventActions._(this.options$)
+      : replace$ = options$.action<ListCaseEventsApiCaseEvent>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        caseNumber = $options.field<int>('caseNumber', (a) => a?.caseNumber,
+        caseNumber = options$.field<int>('caseNumber', (a) => a?.caseNumber,
             (s) => s?.caseNumber, (p, b) => p?.caseNumber = b),
-        eventDate = $options.field<DateTime>('eventDate', (a) => a?.eventDate,
+        eventDate = options$.field<DateTime>('eventDate', (a) => a?.eventDate,
             (s) => s?.eventDate, (p, b) => p?.eventDate = b),
-        localEventDate = $options.field<DateTime>(
+        localEventDate = options$.field<DateTime>(
             'localEventDate',
             (a) => a?.localEventDate,
             (s) => s?.localEventDate,
             (p, b) => p?.localEventDate = b),
-        eventDurationMinutes = $options.field<int>(
+        eventDurationMinutes = options$.field<int>(
             'eventDurationMinutes',
             (a) => a?.eventDurationMinutes,
             (s) => s?.eventDurationMinutes,
             (p, b) => p?.eventDurationMinutes = b),
-        status = $options.field<CaseEventStatus>('status', (a) => a?.status,
+        status = options$.field<CaseEventStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        patientId = $options.field<String>('patientId', (a) => a?.patientId,
+        patientId = options$.field<String>('patientId', (a) => a?.patientId,
             (s) => s?.patientId, (p, b) => p?.patientId = b),
-        patientName = $options.field<String>(
+        patientName = options$.field<String>(
             'patientName',
             (a) => a?.patientName,
             (s) => s?.patientName,
             (p, b) => p?.patientName = b),
-        patientGender = $options.field<Gender>(
+        patientGender = options$.field<Gender>(
             'patientGender',
             (a) => a?.patientGender,
             (s) => s?.patientGender,
             (p, b) => p?.patientGender = b),
-        patientDob = $options.field<DateTime>(
+        patientDob = options$.field<DateTime>(
             'patientDob',
             (a) => a?.patientDob,
             (s) => s?.patientDob,
             (p, b) => p?.patientDob = b),
-        patientMrn = $options.field<String>('patientMrn', (a) => a?.patientMrn,
+        patientMrn = options$.field<String>('patientMrn', (a) => a?.patientMrn,
             (s) => s?.patientMrn, (p, b) => p?.patientMrn = b),
-        bizUnitName = $options.field<String>(
+        bizUnitName = options$.field<String>(
             'bizUnitName',
             (a) => a?.bizUnitName,
             (s) => s?.bizUnitName,
             (p, b) => p?.bizUnitName = b),
-        salesOrgUnitName = $options.field<String>(
+        salesOrgUnitName = options$.field<String>(
             'salesOrgUnitName',
             (a) => a?.salesOrgUnitName,
             (s) => s?.salesOrgUnitName,
             (p, b) => p?.salesOrgUnitName = b),
-        opsOrgUnitName = $options.field<String>(
+        opsOrgUnitName = options$.field<String>(
             'opsOrgUnitName',
             (a) => a?.opsOrgUnitName,
             (s) => s?.opsOrgUnitName,
             (p, b) => p?.opsOrgUnitName = b),
-        facilityName = $options.field<String>(
+        facilityName = options$.field<String>(
             'facilityName',
             (a) => a?.facilityName,
             (s) => s?.facilityName,
             (p, b) => p?.facilityName = b),
-        accountRef = $options.field<String>('accountRef', (a) => a?.accountRef,
+        accountRef = options$.field<String>('accountRef', (a) => a?.accountRef,
             (s) => s?.accountRef, (p, b) => p?.accountRef = b),
-        surgeonName = $options.field<String>(
+        surgeonName = options$.field<String>(
             'surgeonName',
             (a) => a?.surgeonName,
             (s) => s?.surgeonName,
             (p, b) => p?.surgeonName = b),
-        surgeonNpi = $options.field<String>('surgeonNpi', (a) => a?.surgeonNpi,
+        surgeonNpi = options$.field<String>('surgeonNpi', (a) => a?.surgeonNpi,
             (s) => s?.surgeonNpi, (p, b) => p?.surgeonNpi = b),
-        tempSurgeonName = $options.field<String>(
+        tempSurgeonName = options$.field<String>(
             'tempSurgeonName',
             (a) => a?.tempSurgeonName,
             (s) => s?.tempSurgeonName,
             (p, b) => p?.tempSurgeonName = b),
-        repTeamName = $options.field<String>(
+        repTeamName = options$.field<String>(
             'repTeamName',
             (a) => a?.repTeamName,
             (s) => s?.repTeamName,
             (p, b) => p?.repTeamName = b),
-        coverageRepTeamName = $options.field<String>(
+        coverageRepTeamName = options$.field<String>(
             'coverageRepTeamName',
             (a) => a?.coverageRepTeamName,
             (s) => s?.coverageRepTeamName,
             (p, b) => p?.coverageRepTeamName = b),
-        procedureName = $options.field<String>(
+        procedureName = options$.field<String>(
             'procedureName',
             (a) => a?.procedureName,
             (s) => s?.procedureName,
             (p, b) => p?.procedureName = b),
-        procedureDesc = $options.field<String>(
+        procedureDesc = options$.field<String>(
             'procedureDesc',
             (a) => a?.procedureDesc,
             (s) => s?.procedureDesc,
             (p, b) => p?.procedureDesc = b),
-        subProcedureName = $options.field<String>(
+        subProcedureName = options$.field<String>(
             'subProcedureName',
             (a) => a?.subProcedureName,
             (s) => s?.subProcedureName,
             (p, b) => p?.subProcedureName = b),
-        bodySide = $options.field<BodySide>('bodySide', (a) => a?.bodySide,
+        bodySide = options$.field<BodySide>('bodySide', (a) => a?.bodySide,
             (s) => s?.bodySide, (p, b) => p?.bodySide = b),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        timeUnknown = $options.field<bool>('timeUnknown', (a) => a?.timeUnknown,
+        timeUnknown = options$.field<bool>('timeUnknown', (a) => a?.timeUnknown,
             (s) => s?.timeUnknown, (p, b) => p?.timeUnknown = b),
-        caseType = $options.field<String>('caseType', (a) => a?.caseType,
+        caseType = options$.field<String>('caseType', (a) => a?.caseType,
             (s) => s?.caseType, (p, b) => p?.caseType = b),
-        patientFirstName = $options.field<String>(
+        patientFirstName = options$.field<String>(
             'patientFirstName',
             (a) => a?.patientFirstName,
             (s) => s?.patientFirstName,
             (p, b) => p?.patientFirstName = b),
-        patientLastName = $options.field<String>(
+        patientLastName = options$.field<String>(
             'patientLastName',
             (a) => a?.patientLastName,
             (s) => s?.patientLastName,
             (p, b) => p?.patientLastName = b),
-        mdcPatientFirstName = $options.field<String>(
+        mdcPatientFirstName = options$.field<String>(
             'mdcPatientFirstName',
             (a) => a?.mdcPatientFirstName,
             (s) => s?.mdcPatientFirstName,
             (p, b) => p?.mdcPatientFirstName = b),
-        mdcPatientLastName = $options.field<String>(
+        mdcPatientLastName = options$.field<String>(
             'mdcPatientLastName',
             (a) => a?.mdcPatientLastName,
             (s) => s?.mdcPatientLastName,
             (p, b) => p?.mdcPatientLastName = b),
-        mdcPatientDob = $options.field<String>(
+        mdcPatientDob = options$.field<String>(
             'mdcPatientDob',
             (a) => a?.mdcPatientDob,
             (s) => s?.mdcPatientDob,
             (p, b) => p?.mdcPatientDob = b),
-        mdcPatientGender = $options.field<String>(
+        mdcPatientGender = options$.field<String>(
             'mdcPatientGender',
             (a) => a?.mdcPatientGender,
             (s) => s?.mdcPatientGender,
             (p, b) => p?.mdcPatientGender = b),
-        shipCity = $options.field<String>('shipCity', (a) => a?.shipCity,
+        shipCity = options$.field<String>('shipCity', (a) => a?.shipCity,
             (s) => s?.shipCity, (p, b) => p?.shipCity = b),
-        shipState = $options.field<String>('shipState', (a) => a?.shipState,
+        shipState = options$.field<String>('shipState', (a) => a?.shipState,
             (s) => s?.shipState, (p, b) => p?.shipState = b),
         super._();
 
@@ -1056,17 +1056,17 @@ class _$ListCaseEventsApiCaseEventActions
       _$ListCaseEventsApiCaseEventActions._(options());
 
   @override
-  ListCaseEventsApiCaseEvent get $initial => ListCaseEventsApiCaseEvent();
+  ListCaseEventsApiCaseEvent get initialState$ => ListCaseEventsApiCaseEvent();
 
   @override
-  ListCaseEventsApiCaseEventBuilder $newBuilder() =>
+  ListCaseEventsApiCaseEventBuilder newBuilder$() =>
       ListCaseEventsApiCaseEventBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.caseNumber,
         this.eventDate,
@@ -1106,52 +1106,48 @@ class _$ListCaseEventsApiCaseEventActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    caseNumber.$reducer(reducer);
-    eventDate.$reducer(reducer);
-    localEventDate.$reducer(reducer);
-    eventDurationMinutes.$reducer(reducer);
-    status.$reducer(reducer);
-    patientId.$reducer(reducer);
-    patientName.$reducer(reducer);
-    patientGender.$reducer(reducer);
-    patientDob.$reducer(reducer);
-    patientMrn.$reducer(reducer);
-    bizUnitName.$reducer(reducer);
-    salesOrgUnitName.$reducer(reducer);
-    opsOrgUnitName.$reducer(reducer);
-    facilityName.$reducer(reducer);
-    accountRef.$reducer(reducer);
-    surgeonName.$reducer(reducer);
-    surgeonNpi.$reducer(reducer);
-    tempSurgeonName.$reducer(reducer);
-    repTeamName.$reducer(reducer);
-    coverageRepTeamName.$reducer(reducer);
-    procedureName.$reducer(reducer);
-    procedureDesc.$reducer(reducer);
-    subProcedureName.$reducer(reducer);
-    bodySide.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    timeUnknown.$reducer(reducer);
-    caseType.$reducer(reducer);
-    patientFirstName.$reducer(reducer);
-    patientLastName.$reducer(reducer);
-    mdcPatientFirstName.$reducer(reducer);
-    mdcPatientLastName.$reducer(reducer);
-    mdcPatientDob.$reducer(reducer);
-    mdcPatientGender.$reducer(reducer);
-    shipCity.$reducer(reducer);
-    shipState.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    caseNumber.reducer$(reducer);
+    eventDate.reducer$(reducer);
+    localEventDate.reducer$(reducer);
+    eventDurationMinutes.reducer$(reducer);
+    status.reducer$(reducer);
+    patientId.reducer$(reducer);
+    patientName.reducer$(reducer);
+    patientGender.reducer$(reducer);
+    patientDob.reducer$(reducer);
+    patientMrn.reducer$(reducer);
+    bizUnitName.reducer$(reducer);
+    salesOrgUnitName.reducer$(reducer);
+    opsOrgUnitName.reducer$(reducer);
+    facilityName.reducer$(reducer);
+    accountRef.reducer$(reducer);
+    surgeonName.reducer$(reducer);
+    surgeonNpi.reducer$(reducer);
+    tempSurgeonName.reducer$(reducer);
+    repTeamName.reducer$(reducer);
+    coverageRepTeamName.reducer$(reducer);
+    procedureName.reducer$(reducer);
+    procedureDesc.reducer$(reducer);
+    subProcedureName.reducer$(reducer);
+    bodySide.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    timeUnknown.reducer$(reducer);
+    caseType.reducer$(reducer);
+    patientFirstName.reducer$(reducer);
+    patientLastName.reducer$(reducer);
+    mdcPatientFirstName.reducer$(reducer);
+    mdcPatientLastName.reducer$(reducer);
+    mdcPatientDob.reducer$(reducer);
+    mdcPatientGender.reducer$(reducer);
+    shipCity.reducer$(reducer);
+    shipState.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListCaseEventsApiCaseEvent);
 }

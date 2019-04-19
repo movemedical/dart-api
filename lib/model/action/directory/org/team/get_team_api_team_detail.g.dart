@@ -358,9 +358,9 @@ typedef StatefulActionsOptions<
 
 class _$GetTeamApiTeamDetailActions extends GetTeamApiTeamDetailActions {
   final StatefulActionsOptions<GetTeamApiTeamDetail,
-      GetTeamApiTeamDetailBuilder, GetTeamApiTeamDetailActions> $options;
+      GetTeamApiTeamDetailBuilder, GetTeamApiTeamDetailActions> options$;
 
-  final ActionDispatcher<GetTeamApiTeamDetail> $replace;
+  final ActionDispatcher<GetTeamApiTeamDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<String> orgName;
@@ -372,31 +372,31 @@ class _$GetTeamApiTeamDetailActions extends GetTeamApiTeamDetailActions {
   final FieldDispatcher<String> timeZone;
   final FieldDispatcher<bool> active;
 
-  _$GetTeamApiTeamDetailActions._(this.$options)
-      : $replace = $options.action<GetTeamApiTeamDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetTeamApiTeamDetailActions._(this.options$)
+      : replace$ = options$.action<GetTeamApiTeamDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgName = $options.field<String>('orgName', (a) => a?.orgName,
+        orgName = options$.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
+        orgType = options$.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        salesTeam = $options.field<bool>('salesTeam', (a) => a?.salesTeam,
+        salesTeam = options$.field<bool>('salesTeam', (a) => a?.salesTeam,
             (s) => s?.salesTeam, (p, b) => p?.salesTeam = b),
-        opsTeam = $options.field<bool>('opsTeam', (a) => a?.opsTeam,
+        opsTeam = options$.field<bool>('opsTeam', (a) => a?.opsTeam,
             (s) => s?.opsTeam, (p, b) => p?.opsTeam = b),
-        teamReference = $options.field<String>(
+        teamReference = options$.field<String>(
             'teamReference',
             (a) => a?.teamReference,
             (s) => s?.teamReference,
             (p, b) => p?.teamReference = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -405,16 +405,16 @@ class _$GetTeamApiTeamDetailActions extends GetTeamApiTeamDetailActions {
       _$GetTeamApiTeamDetailActions._(options());
 
   @override
-  GetTeamApiTeamDetail get $initial => GetTeamApiTeamDetail();
+  GetTeamApiTeamDetail get initialState$ => GetTeamApiTeamDetail();
 
   @override
-  GetTeamApiTeamDetailBuilder $newBuilder() => GetTeamApiTeamDetailBuilder();
+  GetTeamApiTeamDetailBuilder newBuilder$() => GetTeamApiTeamDetailBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgId,
         this.orgName,
@@ -428,26 +428,22 @@ class _$GetTeamApiTeamDetailActions extends GetTeamApiTeamDetailActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgId.$reducer(reducer);
-    orgName.$reducer(reducer);
-    orgType.$reducer(reducer);
-    salesTeam.$reducer(reducer);
-    opsTeam.$reducer(reducer);
-    teamReference.$reducer(reducer);
-    name.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgId.reducer$(reducer);
+    orgName.reducer$(reducer);
+    orgType.reducer$(reducer);
+    salesTeam.reducer$(reducer);
+    opsTeam.reducer$(reducer);
+    teamReference.reducer$(reducer);
+    name.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetTeamApiTeamDetail);
 }

@@ -245,29 +245,29 @@ class _$ListStockForSourcingMatrixApiLineAvailabilityActions
   final StatefulActionsOptions<
       ListStockForSourcingMatrixApiLineAvailability,
       ListStockForSourcingMatrixApiLineAvailabilityBuilder,
-      ListStockForSourcingMatrixApiLineAvailabilityActions> $options;
+      ListStockForSourcingMatrixApiLineAvailabilityActions> options$;
 
   final ActionDispatcher<ListStockForSourcingMatrixApiLineAvailability>
-      $replace;
+      replace$;
   final FieldDispatcher<String> locationKey;
   final FieldDispatcher<BuiltList<String>> availableStockIds;
   final FieldDispatcher<BuiltList<String>> availableQuestionableStockIds;
 
-  _$ListStockForSourcingMatrixApiLineAvailabilityActions._(this.$options)
-      : $replace =
-            $options.action<ListStockForSourcingMatrixApiLineAvailability>(
-                '\$replace', (a) => a?.$replace),
-        locationKey = $options.field<String>(
+  _$ListStockForSourcingMatrixApiLineAvailabilityActions._(this.options$)
+      : replace$ =
+            options$.action<ListStockForSourcingMatrixApiLineAvailability>(
+                'replace\$', (a) => a?.replace$),
+        locationKey = options$.field<String>(
             'locationKey',
             (a) => a?.locationKey,
             (s) => s?.locationKey,
             (p, b) => p?.locationKey = b),
-        availableStockIds = $options.field<BuiltList<String>>(
+        availableStockIds = options$.field<BuiltList<String>>(
             'availableStockIds',
             (a) => a?.availableStockIds,
             (s) => s?.availableStockIds,
             (p, b) => p?.availableStockIds = b),
-        availableQuestionableStockIds = $options.field<BuiltList<String>>(
+        availableQuestionableStockIds = options$.field<BuiltList<String>>(
             'availableQuestionableStockIds',
             (a) => a?.availableQuestionableStockIds,
             (s) => s?.availableQuestionableStockIds,
@@ -280,38 +280,33 @@ class _$ListStockForSourcingMatrixApiLineAvailabilityActions
       _$ListStockForSourcingMatrixApiLineAvailabilityActions._(options());
 
   @override
-  ListStockForSourcingMatrixApiLineAvailability get $initial =>
+  ListStockForSourcingMatrixApiLineAvailability get initialState$ =>
       ListStockForSourcingMatrixApiLineAvailability();
 
   @override
-  ListStockForSourcingMatrixApiLineAvailabilityBuilder $newBuilder() =>
+  ListStockForSourcingMatrixApiLineAvailabilityBuilder newBuilder$() =>
       ListStockForSourcingMatrixApiLineAvailabilityBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.locationKey,
         this.availableStockIds,
         this.availableQuestionableStockIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    locationKey.$reducer(reducer);
-    availableStockIds.$reducer(reducer);
-    availableQuestionableStockIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    locationKey.reducer$(reducer);
+    availableStockIds.reducer$(reducer);
+    availableQuestionableStockIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListStockForSourcingMatrixApiLineAvailability);
 }

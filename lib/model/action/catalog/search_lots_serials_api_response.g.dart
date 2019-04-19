@@ -201,18 +201,18 @@ class _$SearchLotsSerialsApiResponseActions
   final StatefulActionsOptions<
       SearchLotsSerialsApiResponse,
       SearchLotsSerialsApiResponseBuilder,
-      SearchLotsSerialsApiResponseActions> $options;
+      SearchLotsSerialsApiResponseActions> options$;
 
-  final ActionDispatcher<SearchLotsSerialsApiResponse> $replace;
+  final ActionDispatcher<SearchLotsSerialsApiResponse> replace$;
   final FieldDispatcher<BuiltList<Lot>> lots;
   final FieldDispatcher<BuiltList<Serial>> serials;
 
-  _$SearchLotsSerialsApiResponseActions._(this.$options)
-      : $replace = $options.action<SearchLotsSerialsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        lots = $options.field<BuiltList<Lot>>(
+  _$SearchLotsSerialsApiResponseActions._(this.options$)
+      : replace$ = options$.action<SearchLotsSerialsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        lots = options$.field<BuiltList<Lot>>(
             'lots', (a) => a?.lots, (s) => s?.lots, (p, b) => p?.lots = b),
-        serials = $options.field<BuiltList<Serial>>('serials',
+        serials = options$.field<BuiltList<Serial>>('serials',
             (a) => a?.serials, (s) => s?.serials, (p, b) => p?.serials = b),
         super._();
 
@@ -221,35 +221,31 @@ class _$SearchLotsSerialsApiResponseActions
       _$SearchLotsSerialsApiResponseActions._(options());
 
   @override
-  SearchLotsSerialsApiResponse get $initial => SearchLotsSerialsApiResponse();
+  SearchLotsSerialsApiResponse get initialState$ =>
+      SearchLotsSerialsApiResponse();
 
   @override
-  SearchLotsSerialsApiResponseBuilder $newBuilder() =>
+  SearchLotsSerialsApiResponseBuilder newBuilder$() =>
       SearchLotsSerialsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.lots,
         this.serials,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    lots.$reducer(reducer);
-    serials.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    lots.reducer$(reducer);
+    serials.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SearchLotsSerialsApiResponse);
 }

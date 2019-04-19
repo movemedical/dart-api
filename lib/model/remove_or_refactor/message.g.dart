@@ -299,9 +299,9 @@ typedef StatefulActionsOptions<Message, MessageBuilder,
 
 class _$MessageActions extends MessageActions {
   final StatefulActionsOptions<Message, MessageBuilder, MessageActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<Message> $replace;
+  final ActionDispatcher<Message> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> fromParticipantId;
   final FieldDispatcher<String> behalfOfParticipantId;
@@ -310,33 +310,33 @@ class _$MessageActions extends MessageActions {
   final FieldDispatcher<String> conversationId;
   final FieldDispatcher<BuiltList<MessageMessageParticipant>> participants;
 
-  _$MessageActions._(this.$options)
-      : $replace = $options.action<Message>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$MessageActions._(this.options$)
+      : replace$ = options$.action<Message>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        fromParticipantId = $options.field<String>(
+        fromParticipantId = options$.field<String>(
             'fromParticipantId',
             (a) => a?.fromParticipantId,
             (s) => s?.fromParticipantId,
             (p, b) => p?.fromParticipantId = b),
-        behalfOfParticipantId = $options.field<String>(
+        behalfOfParticipantId = options$.field<String>(
             'behalfOfParticipantId',
             (a) => a?.behalfOfParticipantId,
             (s) => s?.behalfOfParticipantId,
             (p, b) => p?.behalfOfParticipantId = b),
-        sentDate = $options.field<DateTime>('sentDate', (a) => a?.sentDate,
+        sentDate = options$.field<DateTime>('sentDate', (a) => a?.sentDate,
             (s) => s?.sentDate, (p, b) => p?.sentDate = b),
-        messageContent = $options.field<String>(
+        messageContent = options$.field<String>(
             'messageContent',
             (a) => a?.messageContent,
             (s) => s?.messageContent,
             (p, b) => p?.messageContent = b),
-        conversationId = $options.field<String>(
+        conversationId = options$.field<String>(
             'conversationId',
             (a) => a?.conversationId,
             (s) => s?.conversationId,
             (p, b) => p?.conversationId = b),
-        participants = $options.field<BuiltList<MessageMessageParticipant>>(
+        participants = options$.field<BuiltList<MessageMessageParticipant>>(
             'participants',
             (a) => a?.participants,
             (s) => s?.participants,
@@ -347,16 +347,16 @@ class _$MessageActions extends MessageActions {
       _$MessageActions._(options());
 
   @override
-  Message get $initial => Message();
+  Message get initialState$ => Message();
 
   @override
-  MessageBuilder $newBuilder() => MessageBuilder();
+  MessageBuilder newBuilder$() => MessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.fromParticipantId,
         this.behalfOfParticipantId,
@@ -367,23 +367,19 @@ class _$MessageActions extends MessageActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    fromParticipantId.$reducer(reducer);
-    behalfOfParticipantId.$reducer(reducer);
-    sentDate.$reducer(reducer);
-    messageContent.$reducer(reducer);
-    conversationId.$reducer(reducer);
-    participants.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    fromParticipantId.reducer$(reducer);
+    behalfOfParticipantId.reducer$(reducer);
+    sentDate.reducer$(reducer);
+    messageContent.reducer$(reducer);
+    conversationId.reducer$(reducer);
+    participants.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Message);
 }

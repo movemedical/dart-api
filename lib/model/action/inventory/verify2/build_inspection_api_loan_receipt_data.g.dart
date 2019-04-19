@@ -206,18 +206,18 @@ class _$BuildInspectionApiLoanReceiptDataActions
   final StatefulActionsOptions<
       BuildInspectionApiLoanReceiptData,
       BuildInspectionApiLoanReceiptDataBuilder,
-      BuildInspectionApiLoanReceiptDataActions> $options;
+      BuildInspectionApiLoanReceiptDataActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiLoanReceiptData> $replace;
+  final ActionDispatcher<BuildInspectionApiLoanReceiptData> replace$;
   final FieldDispatcher<BuiltList<String>> entryIds;
   final FieldDispatcher<BuiltList<String>> expectedStockIds;
 
-  _$BuildInspectionApiLoanReceiptDataActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiLoanReceiptData>(
-            '\$replace', (a) => a?.$replace),
-        entryIds = $options.field<BuiltList<String>>('entryIds',
+  _$BuildInspectionApiLoanReceiptDataActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiLoanReceiptData>(
+            'replace\$', (a) => a?.replace$),
+        entryIds = options$.field<BuiltList<String>>('entryIds',
             (a) => a?.entryIds, (s) => s?.entryIds, (p, b) => p?.entryIds = b),
-        expectedStockIds = $options.field<BuiltList<String>>(
+        expectedStockIds = options$.field<BuiltList<String>>(
             'expectedStockIds',
             (a) => a?.expectedStockIds,
             (s) => s?.expectedStockIds,
@@ -229,36 +229,31 @@ class _$BuildInspectionApiLoanReceiptDataActions
       _$BuildInspectionApiLoanReceiptDataActions._(options());
 
   @override
-  BuildInspectionApiLoanReceiptData get $initial =>
+  BuildInspectionApiLoanReceiptData get initialState$ =>
       BuildInspectionApiLoanReceiptData();
 
   @override
-  BuildInspectionApiLoanReceiptDataBuilder $newBuilder() =>
+  BuildInspectionApiLoanReceiptDataBuilder newBuilder$() =>
       BuildInspectionApiLoanReceiptDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.entryIds,
         this.expectedStockIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    entryIds.$reducer(reducer);
-    expectedStockIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    entryIds.reducer$(reducer);
+    expectedStockIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiLoanReceiptData);
 }

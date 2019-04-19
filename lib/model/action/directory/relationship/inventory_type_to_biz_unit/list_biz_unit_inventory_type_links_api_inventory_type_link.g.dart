@@ -243,32 +243,32 @@ class _$ListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions
   final StatefulActionsOptions<
       ListBizUnitInventoryTypeLinksApiInventoryTypeLink,
       ListBizUnitInventoryTypeLinksApiInventoryTypeLinkBuilder,
-      ListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions> $options;
+      ListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions> options$;
 
   final ActionDispatcher<ListBizUnitInventoryTypeLinksApiInventoryTypeLink>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> inventoryTypeId;
   final FieldDispatcher<String> inventoryTypeName;
   final FieldDispatcher<bool> inventoryTypeActive;
 
-  _$ListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions._(this.$options)
-      : $replace =
-            $options.action<ListBizUnitInventoryTypeLinksApiInventoryTypeLink>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions._(this.options$)
+      : replace$ =
+            options$.action<ListBizUnitInventoryTypeLinksApiInventoryTypeLink>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        inventoryTypeId = $options.field<String>(
+        inventoryTypeId = options$.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        inventoryTypeName = $options.field<String>(
+        inventoryTypeName = options$.field<String>(
             'inventoryTypeName',
             (a) => a?.inventoryTypeName,
             (s) => s?.inventoryTypeName,
             (p, b) => p?.inventoryTypeName = b),
-        inventoryTypeActive = $options.field<bool>(
+        inventoryTypeActive = options$.field<bool>(
             'inventoryTypeActive',
             (a) => a?.inventoryTypeActive,
             (s) => s?.inventoryTypeActive,
@@ -281,18 +281,18 @@ class _$ListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions
       _$ListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions._(options());
 
   @override
-  ListBizUnitInventoryTypeLinksApiInventoryTypeLink get $initial =>
+  ListBizUnitInventoryTypeLinksApiInventoryTypeLink get initialState$ =>
       ListBizUnitInventoryTypeLinksApiInventoryTypeLink();
 
   @override
-  ListBizUnitInventoryTypeLinksApiInventoryTypeLinkBuilder $newBuilder() =>
+  ListBizUnitInventoryTypeLinksApiInventoryTypeLinkBuilder newBuilder$() =>
       ListBizUnitInventoryTypeLinksApiInventoryTypeLinkBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.inventoryTypeId,
         this.inventoryTypeName,
@@ -300,21 +300,16 @@ class _$ListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    inventoryTypeId.$reducer(reducer);
-    inventoryTypeName.$reducer(reducer);
-    inventoryTypeActive.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    inventoryTypeId.reducer$(reducer);
+    inventoryTypeName.reducer$(reducer);
+    inventoryTypeActive.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(ListBizUnitInventoryTypeLinksApiInventoryTypeLink);
 }

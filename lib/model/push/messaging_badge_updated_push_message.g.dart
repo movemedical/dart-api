@@ -159,15 +159,15 @@ class _$MessagingBadgeUpdatedPushMessageActions
   final StatefulActionsOptions<
       MessagingBadgeUpdatedPushMessage,
       MessagingBadgeUpdatedPushMessageBuilder,
-      MessagingBadgeUpdatedPushMessageActions> $options;
+      MessagingBadgeUpdatedPushMessageActions> options$;
 
-  final ActionDispatcher<MessagingBadgeUpdatedPushMessage> $replace;
+  final ActionDispatcher<MessagingBadgeUpdatedPushMessage> replace$;
   final FieldDispatcher<int> badge;
 
-  _$MessagingBadgeUpdatedPushMessageActions._(this.$options)
-      : $replace = $options.action<MessagingBadgeUpdatedPushMessage>(
-            '\$replace', (a) => a?.$replace),
-        badge = $options.field<int>(
+  _$MessagingBadgeUpdatedPushMessageActions._(this.options$)
+      : replace$ = options$.action<MessagingBadgeUpdatedPushMessage>(
+            'replace\$', (a) => a?.replace$),
+        badge = options$.field<int>(
             'badge', (a) => a?.badge, (s) => s?.badge, (p, b) => p?.badge = b),
         super._();
 
@@ -176,34 +176,29 @@ class _$MessagingBadgeUpdatedPushMessageActions
       _$MessagingBadgeUpdatedPushMessageActions._(options());
 
   @override
-  MessagingBadgeUpdatedPushMessage get $initial =>
+  MessagingBadgeUpdatedPushMessage get initialState$ =>
       MessagingBadgeUpdatedPushMessage();
 
   @override
-  MessagingBadgeUpdatedPushMessageBuilder $newBuilder() =>
+  MessagingBadgeUpdatedPushMessageBuilder newBuilder$() =>
       MessagingBadgeUpdatedPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.badge,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    badge.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    badge.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(MessagingBadgeUpdatedPushMessage);
 }

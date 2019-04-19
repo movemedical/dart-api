@@ -386,9 +386,9 @@ class _$GetUiSetupMobileApiResponseActions
   final StatefulActionsOptions<
       GetUiSetupMobileApiResponse,
       GetUiSetupMobileApiResponseBuilder,
-      GetUiSetupMobileApiResponseActions> $options;
+      GetUiSetupMobileApiResponseActions> options$;
 
-  final ActionDispatcher<GetUiSetupMobileApiResponse> $replace;
+  final ActionDispatcher<GetUiSetupMobileApiResponse> replace$;
   final GetUiSetupAllApiResponseActions uiSetup;
   final FieldDispatcher<BuiltList<GetUiSetupMobileApiDashboardWidget>>
       dashboardWidgets;
@@ -400,10 +400,10 @@ class _$GetUiSetupMobileApiResponseActions
   final FieldDispatcher<String> updateUrl;
   final FieldDispatcher<String> deviceId;
 
-  _$GetUiSetupMobileApiResponseActions._(this.$options)
-      : $replace = $options.action<GetUiSetupMobileApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        uiSetup = GetUiSetupAllApiResponseActions(() => $options.stateful<
+  _$GetUiSetupMobileApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetUiSetupMobileApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        uiSetup = GetUiSetupAllApiResponseActions(() => options$.stateful<
                 GetUiSetupAllApiResponse,
                 GetUiSetupAllApiResponseBuilder,
                 GetUiSetupAllApiResponseActions>(
@@ -413,36 +413,36 @@ class _$GetUiSetupMobileApiResponseActions
             (b) => b?.uiSetup,
             (parent, builder) => parent?.uiSetup = builder)),
         dashboardWidgets =
-            $options.field<BuiltList<GetUiSetupMobileApiDashboardWidget>>(
+            options$.field<BuiltList<GetUiSetupMobileApiDashboardWidget>>(
                 'dashboardWidgets',
                 (a) => a?.dashboardWidgets,
                 (s) => s?.dashboardWidgets,
                 (p, b) => p?.dashboardWidgets = b),
-        tabBarElements = $options.field<BuiltList<MobileNavigationElement>>(
+        tabBarElements = options$.field<BuiltList<MobileNavigationElement>>(
             'tabBarElements',
             (a) => a?.tabBarElements,
             (s) => s?.tabBarElements,
             (p, b) => p?.tabBarElements = b),
-        reports = $options.field<BuiltList<MobileReport>>('reports',
+        reports = options$.field<BuiltList<MobileReport>>('reports',
             (a) => a?.reports, (s) => s?.reports, (p, b) => p?.reports = b),
-        updateAvailable = $options.field<bool>(
+        updateAvailable = options$.field<bool>(
             'updateAvailable',
             (a) => a?.updateAvailable,
             (s) => s?.updateAvailable,
             (p, b) => p?.updateAvailable = b),
-        updateRequired = $options.field<bool>(
+        updateRequired = options$.field<bool>(
             'updateRequired',
             (a) => a?.updateRequired,
             (s) => s?.updateRequired,
             (p, b) => p?.updateRequired = b),
-        updateVersion = $options.field<String>(
+        updateVersion = options$.field<String>(
             'updateVersion',
             (a) => a?.updateVersion,
             (s) => s?.updateVersion,
             (p, b) => p?.updateVersion = b),
-        updateUrl = $options.field<String>('updateUrl', (a) => a?.updateUrl,
+        updateUrl = options$.field<String>('updateUrl', (a) => a?.updateUrl,
             (s) => s?.updateUrl, (p, b) => p?.updateUrl = b),
-        deviceId = $options.field<String>('deviceId', (a) => a?.deviceId,
+        deviceId = options$.field<String>('deviceId', (a) => a?.deviceId,
             (s) => s?.deviceId, (p, b) => p?.deviceId = b),
         super._();
 
@@ -451,23 +451,24 @@ class _$GetUiSetupMobileApiResponseActions
       _$GetUiSetupMobileApiResponseActions._(options());
 
   @override
-  GetUiSetupMobileApiResponse get $initial => GetUiSetupMobileApiResponse();
+  GetUiSetupMobileApiResponse get initialState$ =>
+      GetUiSetupMobileApiResponse();
 
   @override
-  GetUiSetupMobileApiResponseBuilder $newBuilder() =>
+  GetUiSetupMobileApiResponseBuilder newBuilder$() =>
       GetUiSetupMobileApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.uiSetup,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.dashboardWidgets,
         this.tabBarElements,
         this.reports,
@@ -479,27 +480,22 @@ class _$GetUiSetupMobileApiResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    uiSetup.$reducer(reducer);
-    dashboardWidgets.$reducer(reducer);
-    tabBarElements.$reducer(reducer);
-    reports.$reducer(reducer);
-    updateAvailable.$reducer(reducer);
-    updateRequired.$reducer(reducer);
-    updateVersion.$reducer(reducer);
-    updateUrl.$reducer(reducer);
-    deviceId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    uiSetup.reducer$(reducer);
+    dashboardWidgets.reducer$(reducer);
+    tabBarElements.reducer$(reducer);
+    reports.reducer$(reducer);
+    updateAvailable.reducer$(reducer);
+    updateRequired.reducer$(reducer);
+    updateVersion.reducer$(reducer);
+    updateUrl.reducer$(reducer);
+    deviceId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    uiSetup.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    uiSetup.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetUiSetupMobileApiResponse);
 }

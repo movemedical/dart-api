@@ -22,63 +22,29 @@ class _$AutoCompleteShipmentApi extends AutoCompleteShipmentApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<AutoCompleteShipmentApiRequest>,
           ApiResult<Nothing>>,
-      AutoCompleteShipmentApi> $options;
+      AutoCompleteShipmentApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Nothing>, AutoCompleteShipmentApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Nothing>,
-          AutoCompleteShipmentApi,
-          Command<ApiCommand<AutoCompleteShipmentApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Nothing>,
-          AutoCompleteShipmentApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Nothing>,
-          AutoCompleteShipmentApi,
-          CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<AutoCompleteShipmentApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$AutoCompleteShipmentApi._(this.$options)
-      : $replace = $options.action<
+  _$AutoCompleteShipmentApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<AutoCompleteShipmentApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<AutoCompleteShipmentApiRequest>,
-                ApiResult<Nothing>,
-                AutoCompleteShipmentApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<AutoCompleteShipmentApiRequest>,
-                    ApiResult<Nothing>,
-                    AutoCompleteShipmentApi,
-                    Command<ApiCommand<AutoCompleteShipmentApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<AutoCompleteShipmentApiRequest>,
-                    ApiResult<Nothing>,
-                    AutoCompleteShipmentApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<AutoCompleteShipmentApiRequest>,
-                ApiResult<Nothing>,
-                AutoCompleteShipmentApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<AutoCompleteShipmentApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$AutoCompleteShipmentApi(AutoCompleteShipmentApiOptions options) =>
@@ -86,31 +52,24 @@ class _$AutoCompleteShipmentApi extends AutoCompleteShipmentApi {
 
   @override
   CommandState<ApiCommand<AutoCompleteShipmentApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Nothing>>();
+      get initialState$ => CommandState<
+          ApiCommand<AutoCompleteShipmentApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<AutoCompleteShipmentApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<AutoCompleteShipmentApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(AutoCompleteShipmentApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

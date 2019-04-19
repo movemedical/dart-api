@@ -22,67 +22,32 @@ class _$GetExportLogDetailApi extends GetExportLogDetailApi {
           ApiResult<GetExportLogDetailApiResponse>>,
       CommandStateBuilder<ApiCommand<GetExportLogDetailApiRequest>,
           ApiResult<GetExportLogDetailApiResponse>>,
-      GetExportLogDetailApi> $options;
+      GetExportLogDetailApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetExportLogDetailApiRequest>,
-          ApiResult<GetExportLogDetailApiResponse>>> $replace;
+          ApiResult<GetExportLogDetailApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetExportLogDetailApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetExportLogDetailApiRequest>,
-          ApiResult<GetExportLogDetailApiResponse>,
-          GetExportLogDetailApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetExportLogDetailApiRequest>,
-          ApiResult<GetExportLogDetailApiResponse>,
-          GetExportLogDetailApi,
-          Command<ApiCommand<GetExportLogDetailApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetExportLogDetailApiRequest>,
-          ApiResult<GetExportLogDetailApiResponse>,
-          GetExportLogDetailApi,
-          CommandResult<ApiResult<GetExportLogDetailApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetExportLogDetailApiRequest>,
-          ApiResult<GetExportLogDetailApiResponse>,
-          GetExportLogDetailApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<GetExportLogDetailApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetExportLogDetailApi._(this.$options)
-      : $replace = $options.action<
+  _$GetExportLogDetailApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetExportLogDetailApiRequest>,
                     ApiResult<GetExportLogDetailApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetExportLogDetailApiRequest>,
-                ApiResult<GetExportLogDetailApiResponse>,
-                GetExportLogDetailApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetExportLogDetailApiRequest>,
-                    ApiResult<GetExportLogDetailApiResponse>,
-                    GetExportLogDetailApi,
-                    Command<ApiCommand<GetExportLogDetailApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetExportLogDetailApiRequest>,
-                    ApiResult<GetExportLogDetailApiResponse>,
-                    GetExportLogDetailApi,
-                    CommandResult<ApiResult<GetExportLogDetailApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetExportLogDetailApiRequest>,
-                ApiResult<GetExportLogDetailApiResponse>,
-                GetExportLogDetailApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<GetExportLogDetailApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<GetExportLogDetailApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetExportLogDetailApi(GetExportLogDetailApiOptions options) =>
@@ -91,32 +56,26 @@ class _$GetExportLogDetailApi extends GetExportLogDetailApi {
   @override
   CommandState<ApiCommand<GetExportLogDetailApiRequest>,
           ApiResult<GetExportLogDetailApiResponse>>
-      get $initial => CommandState<ApiCommand<GetExportLogDetailApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<GetExportLogDetailApiRequest>,
           ApiResult<GetExportLogDetailApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetExportLogDetailApiRequest>,
           ApiResult<GetExportLogDetailApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetExportLogDetailApiRequest>,
           ApiResult<GetExportLogDetailApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetExportLogDetailApiRequest)]),
-        FullType(ApiResult, [FullType(GetExportLogDetailApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

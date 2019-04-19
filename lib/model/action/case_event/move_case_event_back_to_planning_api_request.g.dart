@@ -161,15 +161,15 @@ class _$MoveCaseEventBackToPlanningApiRequestActions
   final StatefulActionsOptions<
       MoveCaseEventBackToPlanningApiRequest,
       MoveCaseEventBackToPlanningApiRequestBuilder,
-      MoveCaseEventBackToPlanningApiRequestActions> $options;
+      MoveCaseEventBackToPlanningApiRequestActions> options$;
 
-  final ActionDispatcher<MoveCaseEventBackToPlanningApiRequest> $replace;
+  final ActionDispatcher<MoveCaseEventBackToPlanningApiRequest> replace$;
   final FieldDispatcher<String> caseEventId;
 
-  _$MoveCaseEventBackToPlanningApiRequestActions._(this.$options)
-      : $replace = $options.action<MoveCaseEventBackToPlanningApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$MoveCaseEventBackToPlanningApiRequestActions._(this.options$)
+      : replace$ = options$.action<MoveCaseEventBackToPlanningApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
@@ -181,34 +181,29 @@ class _$MoveCaseEventBackToPlanningApiRequestActions
       _$MoveCaseEventBackToPlanningApiRequestActions._(options());
 
   @override
-  MoveCaseEventBackToPlanningApiRequest get $initial =>
+  MoveCaseEventBackToPlanningApiRequest get initialState$ =>
       MoveCaseEventBackToPlanningApiRequest();
 
   @override
-  MoveCaseEventBackToPlanningApiRequestBuilder $newBuilder() =>
+  MoveCaseEventBackToPlanningApiRequestBuilder newBuilder$() =>
       MoveCaseEventBackToPlanningApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(MoveCaseEventBackToPlanningApiRequest);
 }

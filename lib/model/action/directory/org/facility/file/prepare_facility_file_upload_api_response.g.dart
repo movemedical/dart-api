@@ -196,19 +196,19 @@ class _$PrepareFacilityFileUploadApiResponseActions
   final StatefulActionsOptions<
       PrepareFacilityFileUploadApiResponse,
       PrepareFacilityFileUploadApiResponseBuilder,
-      PrepareFacilityFileUploadApiResponseActions> $options;
+      PrepareFacilityFileUploadApiResponseActions> options$;
 
-  final ActionDispatcher<PrepareFacilityFileUploadApiResponse> $replace;
+  final ActionDispatcher<PrepareFacilityFileUploadApiResponse> replace$;
   final FieldDispatcher<String> url;
   final FileDetailActions file;
 
-  _$PrepareFacilityFileUploadApiResponseActions._(this.$options)
-      : $replace = $options.action<PrepareFacilityFileUploadApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        url = $options.field<String>(
+  _$PrepareFacilityFileUploadApiResponseActions._(this.options$)
+      : replace$ = options$.action<PrepareFacilityFileUploadApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        url = options$.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
         file = FileDetailActions(() =>
-            $options.stateful<FileDetail, FileDetailBuilder, FileDetailActions>(
+            options$.stateful<FileDetail, FileDetailBuilder, FileDetailActions>(
                 'file',
                 (a) => a.file,
                 (s) => s?.file,
@@ -221,42 +221,37 @@ class _$PrepareFacilityFileUploadApiResponseActions
       _$PrepareFacilityFileUploadApiResponseActions._(options());
 
   @override
-  PrepareFacilityFileUploadApiResponse get $initial =>
+  PrepareFacilityFileUploadApiResponse get initialState$ =>
       PrepareFacilityFileUploadApiResponse();
 
   @override
-  PrepareFacilityFileUploadApiResponseBuilder $newBuilder() =>
+  PrepareFacilityFileUploadApiResponseBuilder newBuilder$() =>
       PrepareFacilityFileUploadApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.file,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.url,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    url.$reducer(reducer);
-    file.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    url.reducer$(reducer);
+    file.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    file.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    file.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(PrepareFacilityFileUploadApiResponse);
 }

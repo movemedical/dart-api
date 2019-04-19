@@ -687,9 +687,9 @@ class _$BuildInspectionApiSupportingInfoActions
   final StatefulActionsOptions<
       BuildInspectionApiSupportingInfo,
       BuildInspectionApiSupportingInfoBuilder,
-      BuildInspectionApiSupportingInfoActions> $options;
+      BuildInspectionApiSupportingInfoActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiSupportingInfo> $replace;
+  final ActionDispatcher<BuildInspectionApiSupportingInfo> replace$;
   final FieldDispatcher<BuiltList<StockData>> stocks;
   final FieldDispatcher<BuiltList<Item>> items;
   final FieldDispatcher<BuiltList<Lot>> lots;
@@ -710,72 +710,72 @@ class _$BuildInspectionApiSupportingInfoActions
   final FieldDispatcher<BuiltList<BuildInspectionApiTrayStandardImageFile>>
       trayStandardImageFiles;
 
-  _$BuildInspectionApiSupportingInfoActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiSupportingInfo>(
-            '\$replace', (a) => a?.$replace),
-        stocks = $options.field<BuiltList<StockData>>('stocks',
+  _$BuildInspectionApiSupportingInfoActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiSupportingInfo>(
+            'replace\$', (a) => a?.replace$),
+        stocks = options$.field<BuiltList<StockData>>('stocks',
             (a) => a?.stocks, (s) => s?.stocks, (p, b) => p?.stocks = b),
-        items = $options.field<BuiltList<Item>>(
+        items = options$.field<BuiltList<Item>>(
             'items', (a) => a?.items, (s) => s?.items, (p, b) => p?.items = b),
-        lots = $options.field<BuiltList<Lot>>(
+        lots = options$.field<BuiltList<Lot>>(
             'lots', (a) => a?.lots, (s) => s?.lots, (p, b) => p?.lots = b),
-        serials = $options.field<BuiltList<Serial>>('serials',
+        serials = options$.field<BuiltList<Serial>>('serials',
             (a) => a?.serials, (s) => s?.serials, (p, b) => p?.serials = b),
-        locations = $options.field<BuiltList<Location>>(
+        locations = options$.field<BuiltList<Location>>(
             'locations',
             (a) => a?.locations,
             (s) => s?.locations,
             (p, b) => p?.locations = b),
-        containers = $options.field<BuiltList<StockContainer>>(
+        containers = options$.field<BuiltList<StockContainer>>(
             'containers',
             (a) => a?.containers,
             (s) => s?.containers,
             (p, b) => p?.containers = b),
-        inventoryTypes = $options.field<BuiltList<InventoryType>>(
+        inventoryTypes = options$.field<BuiltList<InventoryType>>(
             'inventoryTypes',
             (a) => a?.inventoryTypes,
             (s) => s?.inventoryTypes,
             (p, b) => p?.inventoryTypes = b),
-        loans = $options.field<BuiltList<LoanLite>>(
+        loans = options$.field<BuiltList<LoanLite>>(
             'loans', (a) => a?.loans, (s) => s?.loans, (p, b) => p?.loans = b),
-        cases = $options.field<BuiltList<CaseEventLite>>(
+        cases = options$.field<BuiltList<CaseEventLite>>(
             'cases', (a) => a?.cases, (s) => s?.cases, (p, b) => p?.cases = b),
-        pkgs = $options.field<BuiltList<Pkg>>(
+        pkgs = options$.field<BuiltList<Pkg>>(
             'pkgs', (a) => a?.pkgs, (s) => s?.pkgs, (p, b) => p?.pkgs = b),
-        bins = $options.field<BuiltList<Bin>>(
+        bins = options$.field<BuiltList<Bin>>(
             'bins', (a) => a?.bins, (s) => s?.bins, (p, b) => p?.bins = b),
-        shipments = $options.field<BuiltList<ShipmentLite>>(
+        shipments = options$.field<BuiltList<ShipmentLite>>(
             'shipments',
             (a) => a?.shipments,
             (s) => s?.shipments,
             (p, b) => p?.shipments = b),
-        orderReasons = $options.field<BuiltList<OrderReason>>(
+        orderReasons = options$.field<BuiltList<OrderReason>>(
             'orderReasons',
             (a) => a?.orderReasons,
             (s) => s?.orderReasons,
             (p, b) => p?.orderReasons = b),
-        stockHolds = $options.field<BuiltList<BuildInspectionApiStockHold>>(
+        stockHolds = options$.field<BuiltList<BuildInspectionApiStockHold>>(
             'stockHolds',
             (a) => a?.stockHolds,
             (s) => s?.stockHolds,
             (p, b) => p?.stockHolds = b),
-        lotHolds = $options.field<BuiltList<BuildInspectionApiLotHold>>(
+        lotHolds = options$.field<BuiltList<BuildInspectionApiLotHold>>(
             'lotHolds',
             (a) => a?.lotHolds,
             (s) => s?.lotHolds,
             (p, b) => p?.lotHolds = b),
-        serialHolds = $options.field<BuiltList<BuildInspectionApiSerialHold>>(
+        serialHolds = options$.field<BuiltList<BuildInspectionApiSerialHold>>(
             'serialHolds',
             (a) => a?.serialHolds,
             (s) => s?.serialHolds,
             (p, b) => p?.serialHolds = b),
-        expirationInfos = $options.field<BuiltList<ExpirationInfo>>(
+        expirationInfos = options$.field<BuiltList<ExpirationInfo>>(
             'expirationInfos',
             (a) => a?.expirationInfos,
             (s) => s?.expirationInfos,
             (p, b) => p?.expirationInfos = b),
         trayStandardImageFiles =
-            $options.field<BuiltList<BuildInspectionApiTrayStandardImageFile>>(
+            options$.field<BuiltList<BuildInspectionApiTrayStandardImageFile>>(
                 'trayStandardImageFiles',
                 (a) => a?.trayStandardImageFiles,
                 (s) => s?.trayStandardImageFiles,
@@ -787,18 +787,18 @@ class _$BuildInspectionApiSupportingInfoActions
       _$BuildInspectionApiSupportingInfoActions._(options());
 
   @override
-  BuildInspectionApiSupportingInfo get $initial =>
+  BuildInspectionApiSupportingInfo get initialState$ =>
       BuildInspectionApiSupportingInfo();
 
   @override
-  BuildInspectionApiSupportingInfoBuilder $newBuilder() =>
+  BuildInspectionApiSupportingInfoBuilder newBuilder$() =>
       BuildInspectionApiSupportingInfoBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stocks,
         this.items,
         this.lots,
@@ -820,35 +820,30 @@ class _$BuildInspectionApiSupportingInfoActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stocks.$reducer(reducer);
-    items.$reducer(reducer);
-    lots.$reducer(reducer);
-    serials.$reducer(reducer);
-    locations.$reducer(reducer);
-    containers.$reducer(reducer);
-    inventoryTypes.$reducer(reducer);
-    loans.$reducer(reducer);
-    cases.$reducer(reducer);
-    pkgs.$reducer(reducer);
-    bins.$reducer(reducer);
-    shipments.$reducer(reducer);
-    orderReasons.$reducer(reducer);
-    stockHolds.$reducer(reducer);
-    lotHolds.$reducer(reducer);
-    serialHolds.$reducer(reducer);
-    expirationInfos.$reducer(reducer);
-    trayStandardImageFiles.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stocks.reducer$(reducer);
+    items.reducer$(reducer);
+    lots.reducer$(reducer);
+    serials.reducer$(reducer);
+    locations.reducer$(reducer);
+    containers.reducer$(reducer);
+    inventoryTypes.reducer$(reducer);
+    loans.reducer$(reducer);
+    cases.reducer$(reducer);
+    pkgs.reducer$(reducer);
+    bins.reducer$(reducer);
+    shipments.reducer$(reducer);
+    orderReasons.reducer$(reducer);
+    stockHolds.reducer$(reducer);
+    lotHolds.reducer$(reducer);
+    serialHolds.reducer$(reducer);
+    expirationInfos.reducer$(reducer);
+    trayStandardImageFiles.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiSupportingInfo);
 }

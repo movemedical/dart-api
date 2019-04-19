@@ -156,15 +156,15 @@ class _$FacilityUpdatedPushMessageActions
   final StatefulActionsOptions<
       FacilityUpdatedPushMessage,
       FacilityUpdatedPushMessageBuilder,
-      FacilityUpdatedPushMessageActions> $options;
+      FacilityUpdatedPushMessageActions> options$;
 
-  final ActionDispatcher<FacilityUpdatedPushMessage> $replace;
+  final ActionDispatcher<FacilityUpdatedPushMessage> replace$;
   final FieldDispatcher<String> facilityId;
 
-  _$FacilityUpdatedPushMessageActions._(this.$options)
-      : $replace = $options.action<FacilityUpdatedPushMessage>(
-            '\$replace', (a) => a?.$replace),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+  _$FacilityUpdatedPushMessageActions._(this.options$)
+      : replace$ = options$.action<FacilityUpdatedPushMessage>(
+            'replace\$', (a) => a?.replace$),
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
         super._();
 
@@ -173,32 +173,28 @@ class _$FacilityUpdatedPushMessageActions
       _$FacilityUpdatedPushMessageActions._(options());
 
   @override
-  FacilityUpdatedPushMessage get $initial => FacilityUpdatedPushMessage();
+  FacilityUpdatedPushMessage get initialState$ => FacilityUpdatedPushMessage();
 
   @override
-  FacilityUpdatedPushMessageBuilder $newBuilder() =>
+  FacilityUpdatedPushMessageBuilder newBuilder$() =>
       FacilityUpdatedPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.facilityId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    facilityId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    facilityId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(FacilityUpdatedPushMessage);
 }

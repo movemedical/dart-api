@@ -22,67 +22,32 @@ class _$CreateTrayStockApi extends CreateTrayStockApi {
           ApiResult<CreateTrayStockApiResponse>>,
       CommandStateBuilder<ApiCommand<CreateTrayStockApiRequest>,
           ApiResult<CreateTrayStockApiResponse>>,
-      CreateTrayStockApi> $options;
+      CreateTrayStockApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateTrayStockApiRequest>,
-          ApiResult<CreateTrayStockApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateTrayStockApiRequest>,
-          ApiResult<CreateTrayStockApiResponse>,
-          CreateTrayStockApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateTrayStockApiRequest>,
-          ApiResult<CreateTrayStockApiResponse>,
-          CreateTrayStockApi,
-          Command<ApiCommand<CreateTrayStockApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateTrayStockApiRequest>,
-          ApiResult<CreateTrayStockApiResponse>,
-          CreateTrayStockApi,
-          CommandResult<ApiResult<CreateTrayStockApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateTrayStockApiRequest>,
-          ApiResult<CreateTrayStockApiResponse>,
-          CreateTrayStockApi,
-          CommandProgress>> $progress;
+          ApiResult<CreateTrayStockApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<CreateTrayStockApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<CreateTrayStockApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CreateTrayStockApi._(this.$options)
-      : $replace = $options.action<
+  _$CreateTrayStockApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<CreateTrayStockApiRequest>,
                     ApiResult<CreateTrayStockApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CreateTrayStockApiRequest>,
-                ApiResult<CreateTrayStockApiResponse>,
-                CreateTrayStockApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateTrayStockApiRequest>,
-                    ApiResult<CreateTrayStockApiResponse>,
-                    CreateTrayStockApi,
-                    Command<ApiCommand<CreateTrayStockApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateTrayStockApiRequest>,
-                    ApiResult<CreateTrayStockApiResponse>,
-                    CreateTrayStockApi,
-                    CommandResult<ApiResult<CreateTrayStockApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CreateTrayStockApiRequest>,
-                ApiResult<CreateTrayStockApiResponse>,
-                CreateTrayStockApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<CreateTrayStockApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<CreateTrayStockApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CreateTrayStockApi(CreateTrayStockApiOptions options) =>
@@ -91,32 +56,25 @@ class _$CreateTrayStockApi extends CreateTrayStockApi {
   @override
   CommandState<ApiCommand<CreateTrayStockApiRequest>,
           ApiResult<CreateTrayStockApiResponse>>
-      get $initial => CommandState<ApiCommand<CreateTrayStockApiRequest>,
+      get initialState$ => CommandState<ApiCommand<CreateTrayStockApiRequest>,
           ApiResult<CreateTrayStockApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateTrayStockApiRequest>,
           ApiResult<CreateTrayStockApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<CreateTrayStockApiRequest>,
           ApiResult<CreateTrayStockApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CreateTrayStockApiRequest)]),
-        FullType(ApiResult, [FullType(CreateTrayStockApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

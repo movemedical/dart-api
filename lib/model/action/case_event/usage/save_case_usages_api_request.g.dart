@@ -304,9 +304,9 @@ class _$SaveCaseUsagesApiRequestActions
   final StatefulActionsOptions<
       SaveCaseUsagesApiRequest,
       SaveCaseUsagesApiRequestBuilder,
-      SaveCaseUsagesApiRequestActions> $options;
+      SaveCaseUsagesApiRequestActions> options$;
 
-  final ActionDispatcher<SaveCaseUsagesApiRequest> $replace;
+  final ActionDispatcher<SaveCaseUsagesApiRequest> replace$;
   final FieldDispatcher<String> caseId;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<bool> usageComplete;
@@ -314,26 +314,26 @@ class _$SaveCaseUsagesApiRequestActions
   final FieldDispatcher<BuiltList<SaveCaseUsagesApiUsageOrder>> orders;
   final FieldDispatcher<BuiltList<String>> orderIdsToDelete;
 
-  _$SaveCaseUsagesApiRequestActions._(this.$options)
-      : $replace = $options.action<SaveCaseUsagesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseId = $options.field<String>('caseId', (a) => a?.caseId,
+  _$SaveCaseUsagesApiRequestActions._(this.options$)
+      : replace$ = options$.action<SaveCaseUsagesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseId = options$.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        usageComplete = $options.field<bool>(
+        usageComplete = options$.field<bool>(
             'usageComplete',
             (a) => a?.usageComplete,
             (s) => s?.usageComplete,
             (p, b) => p?.usageComplete = b),
-        usages = $options.field<BuiltList<SaveCaseUsagesApiUsage>>('usages',
+        usages = options$.field<BuiltList<SaveCaseUsagesApiUsage>>('usages',
             (a) => a?.usages, (s) => s?.usages, (p, b) => p?.usages = b),
-        orders = $options.field<BuiltList<SaveCaseUsagesApiUsageOrder>>(
+        orders = options$.field<BuiltList<SaveCaseUsagesApiUsageOrder>>(
             'orders',
             (a) => a?.orders,
             (s) => s?.orders,
             (p, b) => p?.orders = b),
-        orderIdsToDelete = $options.field<BuiltList<String>>(
+        orderIdsToDelete = options$.field<BuiltList<String>>(
             'orderIdsToDelete',
             (a) => a?.orderIdsToDelete,
             (s) => s?.orderIdsToDelete,
@@ -345,17 +345,17 @@ class _$SaveCaseUsagesApiRequestActions
       _$SaveCaseUsagesApiRequestActions._(options());
 
   @override
-  SaveCaseUsagesApiRequest get $initial => SaveCaseUsagesApiRequest();
+  SaveCaseUsagesApiRequest get initialState$ => SaveCaseUsagesApiRequest();
 
   @override
-  SaveCaseUsagesApiRequestBuilder $newBuilder() =>
+  SaveCaseUsagesApiRequestBuilder newBuilder$() =>
       SaveCaseUsagesApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseId,
         this.orderId,
         this.usageComplete,
@@ -365,22 +365,18 @@ class _$SaveCaseUsagesApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseId.$reducer(reducer);
-    orderId.$reducer(reducer);
-    usageComplete.$reducer(reducer);
-    usages.$reducer(reducer);
-    orders.$reducer(reducer);
-    orderIdsToDelete.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseId.reducer$(reducer);
+    orderId.reducer$(reducer);
+    usageComplete.reducer$(reducer);
+    usages.reducer$(reducer);
+    orders.reducer$(reducer);
+    orderIdsToDelete.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SaveCaseUsagesApiRequest);
 }

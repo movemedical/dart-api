@@ -167,15 +167,15 @@ class _$RemovePhysicianBizUnitProcedureApiRequestActions
   final StatefulActionsOptions<
       RemovePhysicianBizUnitProcedureApiRequest,
       RemovePhysicianBizUnitProcedureApiRequestBuilder,
-      RemovePhysicianBizUnitProcedureApiRequestActions> $options;
+      RemovePhysicianBizUnitProcedureApiRequestActions> options$;
 
-  final ActionDispatcher<RemovePhysicianBizUnitProcedureApiRequest> $replace;
+  final ActionDispatcher<RemovePhysicianBizUnitProcedureApiRequest> replace$;
   final FieldDispatcher<String> physicianBizUnitProcedureId;
 
-  _$RemovePhysicianBizUnitProcedureApiRequestActions._(this.$options)
-      : $replace = $options.action<RemovePhysicianBizUnitProcedureApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        physicianBizUnitProcedureId = $options.field<String>(
+  _$RemovePhysicianBizUnitProcedureApiRequestActions._(this.options$)
+      : replace$ = options$.action<RemovePhysicianBizUnitProcedureApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        physicianBizUnitProcedureId = options$.field<String>(
             'physicianBizUnitProcedureId',
             (a) => a?.physicianBizUnitProcedureId,
             (s) => s?.physicianBizUnitProcedureId,
@@ -187,34 +187,29 @@ class _$RemovePhysicianBizUnitProcedureApiRequestActions
       _$RemovePhysicianBizUnitProcedureApiRequestActions._(options());
 
   @override
-  RemovePhysicianBizUnitProcedureApiRequest get $initial =>
+  RemovePhysicianBizUnitProcedureApiRequest get initialState$ =>
       RemovePhysicianBizUnitProcedureApiRequest();
 
   @override
-  RemovePhysicianBizUnitProcedureApiRequestBuilder $newBuilder() =>
+  RemovePhysicianBizUnitProcedureApiRequestBuilder newBuilder$() =>
       RemovePhysicianBizUnitProcedureApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.physicianBizUnitProcedureId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    physicianBizUnitProcedureId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    physicianBizUnitProcedureId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RemovePhysicianBizUnitProcedureApiRequest);
 }

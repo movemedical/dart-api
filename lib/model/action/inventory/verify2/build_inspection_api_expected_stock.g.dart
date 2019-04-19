@@ -384,9 +384,9 @@ class _$BuildInspectionApiExpectedStockActions
   final StatefulActionsOptions<
       BuildInspectionApiExpectedStock,
       BuildInspectionApiExpectedStockBuilder,
-      BuildInspectionApiExpectedStockActions> $options;
+      BuildInspectionApiExpectedStockActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiExpectedStock> $replace;
+  final ActionDispatcher<BuildInspectionApiExpectedStock> replace$;
   final FieldDispatcher<String> stockId;
   final FieldDispatcher<bool> fillsKitStandard;
   final FieldDispatcher<int> kitTrayComponentSequence;
@@ -398,22 +398,22 @@ class _$BuildInspectionApiExpectedStockActions
   final FieldDispatcher<BuiltList<BuildInspectionApiMissingExpectedStockOption>>
       options;
 
-  _$BuildInspectionApiExpectedStockActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiExpectedStock>(
-            '\$replace', (a) => a?.$replace),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+  _$BuildInspectionApiExpectedStockActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiExpectedStock>(
+            'replace\$', (a) => a?.replace$),
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        fillsKitStandard = $options.field<bool>(
+        fillsKitStandard = options$.field<bool>(
             'fillsKitStandard',
             (a) => a?.fillsKitStandard,
             (s) => s?.fillsKitStandard,
             (p, b) => p?.fillsKitStandard = b),
-        kitTrayComponentSequence = $options.field<int>(
+        kitTrayComponentSequence = options$.field<int>(
             'kitTrayComponentSequence',
             (a) => a?.kitTrayComponentSequence,
             (s) => s?.kitTrayComponentSequence,
             (p, b) => p?.kitTrayComponentSequence = b),
-        toContainer = StockContainerDataActions(() => $options.stateful<
+        toContainer = StockContainerDataActions(() => options$.stateful<
                 StockContainerData,
                 StockContainerDataBuilder,
                 StockContainerDataActions>(
@@ -422,24 +422,24 @@ class _$BuildInspectionApiExpectedStockActions
             (s) => s?.toContainer,
             (b) => b?.toContainer,
             (parent, builder) => parent?.toContainer = builder)),
-        verifyKitNow = $options.field<bool>(
+        verifyKitNow = options$.field<bool>(
             'verifyKitNow',
             (a) => a?.verifyKitNow,
             (s) => s?.verifyKitNow,
             (p, b) => p?.verifyKitNow = b),
-        childExpectedStockIds = $options.field<BuiltList<String>>(
+        childExpectedStockIds = options$.field<BuiltList<String>>(
             'childExpectedStockIds',
             (a) => a?.childExpectedStockIds,
             (s) => s?.childExpectedStockIds,
             (p, b) => p?.childExpectedStockIds = b),
-        entryMatch = $options.field<String>('entryMatch', (a) => a?.entryMatch,
+        entryMatch = options$.field<String>('entryMatch', (a) => a?.entryMatch,
             (s) => s?.entryMatch, (p, b) => p?.entryMatch = b),
-        selectedOptionId = $options.field<String>(
+        selectedOptionId = options$.field<String>(
             'selectedOptionId',
             (a) => a?.selectedOptionId,
             (s) => s?.selectedOptionId,
             (p, b) => p?.selectedOptionId = b),
-        options = $options
+        options = options$
             .field<BuiltList<BuildInspectionApiMissingExpectedStockOption>>(
                 'options',
                 (a) => a?.options,
@@ -452,24 +452,24 @@ class _$BuildInspectionApiExpectedStockActions
       _$BuildInspectionApiExpectedStockActions._(options());
 
   @override
-  BuildInspectionApiExpectedStock get $initial =>
+  BuildInspectionApiExpectedStock get initialState$ =>
       BuildInspectionApiExpectedStock();
 
   @override
-  BuildInspectionApiExpectedStockBuilder $newBuilder() =>
+  BuildInspectionApiExpectedStockBuilder newBuilder$() =>
       BuildInspectionApiExpectedStockBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toContainer,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockId,
         this.fillsKitStandard,
         this.kitTrayComponentSequence,
@@ -481,27 +481,22 @@ class _$BuildInspectionApiExpectedStockActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockId.$reducer(reducer);
-    fillsKitStandard.$reducer(reducer);
-    kitTrayComponentSequence.$reducer(reducer);
-    toContainer.$reducer(reducer);
-    verifyKitNow.$reducer(reducer);
-    childExpectedStockIds.$reducer(reducer);
-    entryMatch.$reducer(reducer);
-    selectedOptionId.$reducer(reducer);
-    options.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockId.reducer$(reducer);
+    fillsKitStandard.reducer$(reducer);
+    kitTrayComponentSequence.reducer$(reducer);
+    toContainer.reducer$(reducer);
+    verifyKitNow.reducer$(reducer);
+    childExpectedStockIds.reducer$(reducer);
+    entryMatch.reducer$(reducer);
+    selectedOptionId.reducer$(reducer);
+    options.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    toContainer.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    toContainer.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiExpectedStock);
 }

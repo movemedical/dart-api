@@ -22,67 +22,32 @@ class _$ListStockForUsageApi extends ListStockForUsageApi {
           ApiResult<ListStockForUsageApiResponse>>,
       CommandStateBuilder<ApiCommand<ListStockForUsageApiRequest>,
           ApiResult<ListStockForUsageApiResponse>>,
-      ListStockForUsageApi> $options;
+      ListStockForUsageApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListStockForUsageApiRequest>,
-          ApiResult<ListStockForUsageApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockForUsageApiRequest>,
-          ApiResult<ListStockForUsageApiResponse>,
-          ListStockForUsageApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockForUsageApiRequest>,
-          ApiResult<ListStockForUsageApiResponse>,
-          ListStockForUsageApi,
-          Command<ApiCommand<ListStockForUsageApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockForUsageApiRequest>,
-          ApiResult<ListStockForUsageApiResponse>,
-          ListStockForUsageApi,
-          CommandResult<ApiResult<ListStockForUsageApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockForUsageApiRequest>,
-          ApiResult<ListStockForUsageApiResponse>,
-          ListStockForUsageApi,
-          CommandProgress>> $progress;
+          ApiResult<ListStockForUsageApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListStockForUsageApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<ListStockForUsageApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListStockForUsageApi._(this.$options)
-      : $replace = $options.action<
+  _$ListStockForUsageApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListStockForUsageApiRequest>,
                     ApiResult<ListStockForUsageApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockForUsageApiRequest>,
-                ApiResult<ListStockForUsageApiResponse>,
-                ListStockForUsageApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListStockForUsageApiRequest>,
-                    ApiResult<ListStockForUsageApiResponse>,
-                    ListStockForUsageApi,
-                    Command<ApiCommand<ListStockForUsageApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListStockForUsageApiRequest>,
-                    ApiResult<ListStockForUsageApiResponse>,
-                    ListStockForUsageApi,
-                    CommandResult<ApiResult<ListStockForUsageApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockForUsageApiRequest>,
-                ApiResult<ListStockForUsageApiResponse>,
-                ListStockForUsageApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListStockForUsageApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListStockForUsageApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListStockForUsageApi(ListStockForUsageApiOptions options) =>
@@ -91,32 +56,25 @@ class _$ListStockForUsageApi extends ListStockForUsageApi {
   @override
   CommandState<ApiCommand<ListStockForUsageApiRequest>,
           ApiResult<ListStockForUsageApiResponse>>
-      get $initial => CommandState<ApiCommand<ListStockForUsageApiRequest>,
+      get initialState$ => CommandState<ApiCommand<ListStockForUsageApiRequest>,
           ApiResult<ListStockForUsageApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListStockForUsageApiRequest>,
           ApiResult<ListStockForUsageApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListStockForUsageApiRequest>,
           ApiResult<ListStockForUsageApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListStockForUsageApiRequest)]),
-        FullType(ApiResult, [FullType(ListStockForUsageApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

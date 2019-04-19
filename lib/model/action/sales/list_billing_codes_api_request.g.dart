@@ -176,18 +176,18 @@ class _$ListBillingCodesApiRequestActions
   final StatefulActionsOptions<
       ListBillingCodesApiRequest,
       ListBillingCodesApiRequestBuilder,
-      ListBillingCodesApiRequestActions> $options;
+      ListBillingCodesApiRequestActions> options$;
 
-  final ActionDispatcher<ListBillingCodesApiRequest> $replace;
+  final ActionDispatcher<ListBillingCodesApiRequest> replace$;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> search;
 
-  _$ListBillingCodesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListBillingCodesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+  _$ListBillingCodesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListBillingCodesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -196,34 +196,30 @@ class _$ListBillingCodesApiRequestActions
       _$ListBillingCodesApiRequestActions._(options());
 
   @override
-  ListBillingCodesApiRequest get $initial => ListBillingCodesApiRequest();
+  ListBillingCodesApiRequest get initialState$ => ListBillingCodesApiRequest();
 
   @override
-  ListBillingCodesApiRequestBuilder $newBuilder() =>
+  ListBillingCodesApiRequestBuilder newBuilder$() =>
       ListBillingCodesApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.bizUnitId,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    search.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    search.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListBillingCodesApiRequest);
 }

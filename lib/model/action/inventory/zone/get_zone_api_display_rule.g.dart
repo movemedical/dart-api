@@ -150,15 +150,15 @@ typedef StatefulActionsOptions<
 
 class _$GetZoneApiDisplayRuleActions extends GetZoneApiDisplayRuleActions {
   final StatefulActionsOptions<GetZoneApiDisplayRule,
-      GetZoneApiDisplayRuleBuilder, GetZoneApiDisplayRuleActions> $options;
+      GetZoneApiDisplayRuleBuilder, GetZoneApiDisplayRuleActions> options$;
 
-  final ActionDispatcher<GetZoneApiDisplayRule> $replace;
+  final ActionDispatcher<GetZoneApiDisplayRule> replace$;
   final FieldDispatcher<bool> editAllowed;
 
-  _$GetZoneApiDisplayRuleActions._(this.$options)
-      : $replace = $options.action<GetZoneApiDisplayRule>(
-            '\$replace', (a) => a?.$replace),
-        editAllowed = $options.field<bool>('editAllowed', (a) => a?.editAllowed,
+  _$GetZoneApiDisplayRuleActions._(this.options$)
+      : replace$ = options$.action<GetZoneApiDisplayRule>(
+            'replace\$', (a) => a?.replace$),
+        editAllowed = options$.field<bool>('editAllowed', (a) => a?.editAllowed,
             (s) => s?.editAllowed, (p, b) => p?.editAllowed = b),
         super._();
 
@@ -167,31 +167,27 @@ class _$GetZoneApiDisplayRuleActions extends GetZoneApiDisplayRuleActions {
       _$GetZoneApiDisplayRuleActions._(options());
 
   @override
-  GetZoneApiDisplayRule get $initial => GetZoneApiDisplayRule();
+  GetZoneApiDisplayRule get initialState$ => GetZoneApiDisplayRule();
 
   @override
-  GetZoneApiDisplayRuleBuilder $newBuilder() => GetZoneApiDisplayRuleBuilder();
+  GetZoneApiDisplayRuleBuilder newBuilder$() => GetZoneApiDisplayRuleBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.editAllowed,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    editAllowed.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    editAllowed.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetZoneApiDisplayRule);
 }

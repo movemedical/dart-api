@@ -377,9 +377,9 @@ class _$GetBizUnitApiBizUnitDetailActions
   final StatefulActionsOptions<
       GetBizUnitApiBizUnitDetail,
       GetBizUnitApiBizUnitDetailBuilder,
-      GetBizUnitApiBizUnitDetailActions> $options;
+      GetBizUnitApiBizUnitDetailActions> options$;
 
-  final ActionDispatcher<GetBizUnitApiBizUnitDetail> $replace;
+  final ActionDispatcher<GetBizUnitApiBizUnitDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<OrgType> orgType;
   final FieldDispatcher<String> orgId;
@@ -391,39 +391,39 @@ class _$GetBizUnitApiBizUnitDetailActions
   final FieldDispatcher<bool> publicListing;
   final FieldDispatcher<bool> active;
 
-  _$GetBizUnitApiBizUnitDetailActions._(this.$options)
-      : $replace = $options.action<GetBizUnitApiBizUnitDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetBizUnitApiBizUnitDetailActions._(this.options$)
+      : replace$ = options$.action<GetBizUnitApiBizUnitDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
+        orgType = options$.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgName = $options.field<String>('orgName', (a) => a?.orgName,
+        orgName = options$.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        key = $options.field<String>(
+        key = options$.field<String>(
             'key', (a) => a?.key, (s) => s?.key, (p, b) => p?.key = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        publicListing = $options.field<bool>(
+        publicListing = options$.field<bool>(
             'publicListing',
             (a) => a?.publicListing,
             (s) => s?.publicListing,
             (p, b) => p?.publicListing = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -432,23 +432,23 @@ class _$GetBizUnitApiBizUnitDetailActions
       _$GetBizUnitApiBizUnitDetailActions._(options());
 
   @override
-  GetBizUnitApiBizUnitDetail get $initial => GetBizUnitApiBizUnitDetail();
+  GetBizUnitApiBizUnitDetail get initialState$ => GetBizUnitApiBizUnitDetail();
 
   @override
-  GetBizUnitApiBizUnitDetailBuilder $newBuilder() =>
+  GetBizUnitApiBizUnitDetailBuilder newBuilder$() =>
       GetBizUnitApiBizUnitDetailBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgType,
         this.orgId,
@@ -461,27 +461,23 @@ class _$GetBizUnitApiBizUnitDetailActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgType.$reducer(reducer);
-    orgId.$reducer(reducer);
-    orgName.$reducer(reducer);
-    key.$reducer(reducer);
-    name.$reducer(reducer);
-    email.$reducer(reducer);
-    description.$reducer(reducer);
-    publicListing.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgType.reducer$(reducer);
+    orgId.reducer$(reducer);
+    orgName.reducer$(reducer);
+    key.reducer$(reducer);
+    name.reducer$(reducer);
+    email.reducer$(reducer);
+    description.reducer$(reducer);
+    publicListing.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetBizUnitApiBizUnitDetail);
 }

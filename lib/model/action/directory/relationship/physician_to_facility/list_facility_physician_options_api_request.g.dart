@@ -255,22 +255,22 @@ class _$ListFacilityPhysicianOptionsApiRequestActions
   final StatefulActionsOptions<
       ListFacilityPhysicianOptionsApiRequest,
       ListFacilityPhysicianOptionsApiRequestBuilder,
-      ListFacilityPhysicianOptionsApiRequestActions> $options;
+      ListFacilityPhysicianOptionsApiRequestActions> options$;
 
-  final ActionDispatcher<ListFacilityPhysicianOptionsApiRequest> $replace;
+  final ActionDispatcher<ListFacilityPhysicianOptionsApiRequest> replace$;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListFacilityPhysicianOptionsApiOrderBy> orderBy;
 
-  _$ListFacilityPhysicianOptionsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListFacilityPhysicianOptionsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+  _$ListFacilityPhysicianOptionsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListFacilityPhysicianOptionsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -280,7 +280,7 @@ class _$ListFacilityPhysicianOptionsApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<
-            ListFacilityPhysicianOptionsApiOrderBy>(() => $options.stateful<
+            ListFacilityPhysicianOptionsApiOrderBy>(() => options$.stateful<
                 OrderByParams<ListFacilityPhysicianOptionsApiOrderBy>,
                 OrderByParamsBuilder<ListFacilityPhysicianOptionsApiOrderBy>,
                 OrderByParamsActions<ListFacilityPhysicianOptionsApiOrderBy>>(
@@ -296,47 +296,42 @@ class _$ListFacilityPhysicianOptionsApiRequestActions
       _$ListFacilityPhysicianOptionsApiRequestActions._(options());
 
   @override
-  ListFacilityPhysicianOptionsApiRequest get $initial =>
+  ListFacilityPhysicianOptionsApiRequest get initialState$ =>
       ListFacilityPhysicianOptionsApiRequest();
 
   @override
-  ListFacilityPhysicianOptionsApiRequestBuilder $newBuilder() =>
+  ListFacilityPhysicianOptionsApiRequestBuilder newBuilder$() =>
       ListFacilityPhysicianOptionsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.facilityId,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListFacilityPhysicianOptionsApiRequest);
 }

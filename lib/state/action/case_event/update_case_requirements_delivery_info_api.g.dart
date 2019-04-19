@@ -25,76 +25,37 @@ class _$UpdateCaseRequirementsDeliveryInfoApi
       CommandStateBuilder<
           ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
           ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>>,
-      UpdateCaseRequirementsDeliveryInfoApi> $options;
+      UpdateCaseRequirementsDeliveryInfoApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-          ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>>> $replace;
+          ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-          ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-          UpdateCaseRequirementsDeliveryInfoApi,
-          String>> $cancel;
+          Command<ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>>>
+      execute$;
   final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-              ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-              UpdateCaseRequirementsDeliveryInfoApi,
-              Command<
-                  ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-              ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-              UpdateCaseRequirementsDeliveryInfoApi,
-              CommandResult<
-                  ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-          ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-          UpdateCaseRequirementsDeliveryInfoApi,
-          CommandProgress>> $progress;
+      CommandResult<
+          ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$UpdateCaseRequirementsDeliveryInfoApi._(this.$options)
-      : $replace = $options.action<
+  _$UpdateCaseRequirementsDeliveryInfoApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<
                     ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
                     ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-                ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-                UpdateCaseRequirementsDeliveryInfoApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-                    ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-                    UpdateCaseRequirementsDeliveryInfoApi,
-                    Command<
-                        ApiCommand<
-                            UpdateCaseRequirementsDeliveryInfoApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-                    ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-                    UpdateCaseRequirementsDeliveryInfoApi,
-                    CommandResult<
-                        ApiResult<
-                            UpdateCaseRequirementsDeliveryInfoApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-                ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-                UpdateCaseRequirementsDeliveryInfoApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<
+                    ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$UpdateCaseRequirementsDeliveryInfoApi(
@@ -104,35 +65,26 @@ class _$UpdateCaseRequirementsDeliveryInfoApi
   @override
   CommandState<ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
           ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
           ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
           ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
           ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand,
-            [FullType(UpdateCaseRequirementsDeliveryInfoApiRequest)]),
-        FullType(ApiResult,
-            [FullType(UpdateCaseRequirementsDeliveryInfoApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

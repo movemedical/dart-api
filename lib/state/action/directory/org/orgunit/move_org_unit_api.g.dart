@@ -19,54 +19,27 @@ class _$MoveOrgUnitApi extends MoveOrgUnitApi {
       CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<MoveOrgUnitApiRequest>,
           ApiResult<Nothing>>,
-      MoveOrgUnitApi> $options;
+      MoveOrgUnitApi> options$;
 
   final ActionDispatcher<
           CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Nothing>>>
-      $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Nothing>,
-          MoveOrgUnitApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Nothing>,
-          MoveOrgUnitApi, Command<ApiCommand<MoveOrgUnitApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Nothing>,
-          MoveOrgUnitApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Nothing>,
-          MoveOrgUnitApi, CommandProgress>> $progress;
+      replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<MoveOrgUnitApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$MoveOrgUnitApi._(this.$options)
-      : $replace = $options.action<
+  _$MoveOrgUnitApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<MoveOrgUnitApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<MoveOrgUnitApiRequest>,
-                ApiResult<Nothing>,
-                MoveOrgUnitApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<MoveOrgUnitApiRequest>,
-                    ApiResult<Nothing>,
-                    MoveOrgUnitApi,
-                    Command<ApiCommand<MoveOrgUnitApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<MoveOrgUnitApiRequest>,
-                    ApiResult<Nothing>,
-                    MoveOrgUnitApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<MoveOrgUnitApiRequest>,
-                ApiResult<Nothing>,
-                MoveOrgUnitApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<MoveOrgUnitApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$MoveOrgUnitApi(MoveOrgUnitApiOptions options) =>
@@ -74,30 +47,23 @@ class _$MoveOrgUnitApi extends MoveOrgUnitApi {
 
   @override
   CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Nothing>>
-      get $initial =>
+      get initialState$ =>
           CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<MoveOrgUnitApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<MoveOrgUnitApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(MoveOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

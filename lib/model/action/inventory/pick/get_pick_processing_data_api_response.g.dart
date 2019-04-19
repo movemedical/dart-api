@@ -282,26 +282,26 @@ class _$GetPickProcessingDataApiResponseActions
   final StatefulActionsOptions<
       GetPickProcessingDataApiResponse,
       GetPickProcessingDataApiResponseBuilder,
-      GetPickProcessingDataApiResponseActions> $options;
+      GetPickProcessingDataApiResponseActions> options$;
 
-  final ActionDispatcher<GetPickProcessingDataApiResponse> $replace;
+  final ActionDispatcher<GetPickProcessingDataApiResponse> replace$;
   final OrderHeaderLiteActions order;
   final ShipmentLiteActions shipment;
   final LocationActions location;
   final FieldDispatcher<BuiltList<StockContainer>> containers;
   final FieldDispatcher<BuiltList<GetPickProcessingDataApiPick>> picks;
 
-  _$GetPickProcessingDataApiResponseActions._(this.$options)
-      : $replace = $options.action<GetPickProcessingDataApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        order = OrderHeaderLiteActions(() => $options.stateful<OrderHeaderLite,
+  _$GetPickProcessingDataApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetPickProcessingDataApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        order = OrderHeaderLiteActions(() => options$.stateful<OrderHeaderLite,
                 OrderHeaderLiteBuilder, OrderHeaderLiteActions>(
             'order',
             (a) => a.order,
             (s) => s?.order,
             (b) => b?.order,
             (parent, builder) => parent?.order = builder)),
-        shipment = ShipmentLiteActions(() => $options
+        shipment = ShipmentLiteActions(() => options$
             .stateful<ShipmentLite, ShipmentLiteBuilder, ShipmentLiteActions>(
                 'shipment',
                 (a) => a.shipment,
@@ -309,18 +309,18 @@ class _$GetPickProcessingDataApiResponseActions
                 (b) => b?.shipment,
                 (parent, builder) => parent?.shipment = builder)),
         location = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        containers = $options.field<BuiltList<StockContainer>>(
+        containers = options$.field<BuiltList<StockContainer>>(
             'containers',
             (a) => a?.containers,
             (s) => s?.containers,
             (p, b) => p?.containers = b),
-        picks = $options.field<BuiltList<GetPickProcessingDataApiPick>>(
+        picks = options$.field<BuiltList<GetPickProcessingDataApiPick>>(
             'picks', (a) => a?.picks, (s) => s?.picks, (p, b) => p?.picks = b),
         super._();
 
@@ -329,50 +329,45 @@ class _$GetPickProcessingDataApiResponseActions
       _$GetPickProcessingDataApiResponseActions._(options());
 
   @override
-  GetPickProcessingDataApiResponse get $initial =>
+  GetPickProcessingDataApiResponse get initialState$ =>
       GetPickProcessingDataApiResponse();
 
   @override
-  GetPickProcessingDataApiResponseBuilder $newBuilder() =>
+  GetPickProcessingDataApiResponseBuilder newBuilder$() =>
       GetPickProcessingDataApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.order,
         this.shipment,
         this.location,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.containers,
         this.picks,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    order.$reducer(reducer);
-    shipment.$reducer(reducer);
-    location.$reducer(reducer);
-    containers.$reducer(reducer);
-    picks.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    order.reducer$(reducer);
+    shipment.reducer$(reducer);
+    location.reducer$(reducer);
+    containers.reducer$(reducer);
+    picks.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    order.$middleware(middleware);
-    shipment.$middleware(middleware);
-    location.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    order.middleware$(middleware);
+    shipment.middleware$(middleware);
+    location.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetPickProcessingDataApiResponse);
 }

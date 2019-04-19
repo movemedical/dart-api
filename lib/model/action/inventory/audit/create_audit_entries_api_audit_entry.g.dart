@@ -595,9 +595,9 @@ class _$CreateAuditEntriesApiAuditEntryActions
   final StatefulActionsOptions<
       CreateAuditEntriesApiAuditEntry,
       CreateAuditEntriesApiAuditEntryBuilder,
-      CreateAuditEntriesApiAuditEntryActions> $options;
+      CreateAuditEntriesApiAuditEntryActions> options$;
 
-  final ActionDispatcher<CreateAuditEntriesApiAuditEntry> $replace;
+  final ActionDispatcher<CreateAuditEntriesApiAuditEntry> replace$;
   final FieldDispatcher<String> auditId;
   final FieldDispatcher<String> reference;
   final FieldDispatcher<String> auditItemId;
@@ -618,76 +618,76 @@ class _$CreateAuditEntriesApiAuditEntryActions
   final FieldDispatcher<int> quantity;
   final FieldDispatcher<String> containerString;
 
-  _$CreateAuditEntriesApiAuditEntryActions._(this.$options)
-      : $replace = $options.action<CreateAuditEntriesApiAuditEntry>(
-            '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+  _$CreateAuditEntriesApiAuditEntryActions._(this.options$)
+      : replace$ = options$.action<CreateAuditEntriesApiAuditEntry>(
+            'replace\$', (a) => a?.replace$),
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
-        auditItemId = $options.field<String>(
+        auditItemId = options$.field<String>(
             'auditItemId',
             (a) => a?.auditItemId,
             (s) => s?.auditItemId,
             (p, b) => p?.auditItemId = b),
-        entryType = $options.field<ItemCaptureType>(
+        entryType = options$.field<ItemCaptureType>(
             'entryType',
             (a) => a?.entryType,
             (s) => s?.entryType,
             (p, b) => p?.entryType = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        containerType = $options.field<StockContainerType>(
+        containerType = options$.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionId = $options.field<String>(
+        itemVersionId = options$.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        tagId = $options.field<String>(
+        tagId = options$.field<String>(
             'tagId', (a) => a?.tagId, (s) => s?.tagId, (p, b) => p?.tagId = b),
-        unknownItemNumber = $options.field<String>(
+        unknownItemNumber = options$.field<String>(
             'unknownItemNumber',
             (a) => a?.unknownItemNumber,
             (s) => s?.unknownItemNumber,
             (p, b) => p?.unknownItemNumber = b),
-        unknownLotNumber = $options.field<String>(
+        unknownLotNumber = options$.field<String>(
             'unknownLotNumber',
             (a) => a?.unknownLotNumber,
             (s) => s?.unknownLotNumber,
             (p, b) => p?.unknownLotNumber = b),
-        unknownSerialNumber = $options.field<String>(
+        unknownSerialNumber = options$.field<String>(
             'unknownSerialNumber',
             (a) => a?.unknownSerialNumber,
             (s) => s?.unknownSerialNumber,
             (p, b) => p?.unknownSerialNumber = b),
-        unknownScanValue = $options.field<String>(
+        unknownScanValue = options$.field<String>(
             'unknownScanValue',
             (a) => a?.unknownScanValue,
             (s) => s?.unknownScanValue,
             (p, b) => p?.unknownScanValue = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        containerString = $options.field<String>(
+        containerString = options$.field<String>(
             'containerString',
             (a) => a?.containerString,
             (s) => s?.containerString,
@@ -699,18 +699,18 @@ class _$CreateAuditEntriesApiAuditEntryActions
       _$CreateAuditEntriesApiAuditEntryActions._(options());
 
   @override
-  CreateAuditEntriesApiAuditEntry get $initial =>
+  CreateAuditEntriesApiAuditEntry get initialState$ =>
       CreateAuditEntriesApiAuditEntry();
 
   @override
-  CreateAuditEntriesApiAuditEntryBuilder $newBuilder() =>
+  CreateAuditEntriesApiAuditEntryBuilder newBuilder$() =>
       CreateAuditEntriesApiAuditEntryBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
         this.reference,
         this.auditItemId,
@@ -733,36 +733,31 @@ class _$CreateAuditEntriesApiAuditEntryActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditId.$reducer(reducer);
-    reference.$reducer(reducer);
-    auditItemId.$reducer(reducer);
-    entryType.$reducer(reducer);
-    locationType.$reducer(reducer);
-    locationId.$reducer(reducer);
-    containerType.$reducer(reducer);
-    containerId.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemVersionId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    tagId.$reducer(reducer);
-    unknownItemNumber.$reducer(reducer);
-    unknownLotNumber.$reducer(reducer);
-    unknownSerialNumber.$reducer(reducer);
-    unknownScanValue.$reducer(reducer);
-    quantity.$reducer(reducer);
-    containerString.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditId.reducer$(reducer);
+    reference.reducer$(reducer);
+    auditItemId.reducer$(reducer);
+    entryType.reducer$(reducer);
+    locationType.reducer$(reducer);
+    locationId.reducer$(reducer);
+    containerType.reducer$(reducer);
+    containerId.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemVersionId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    tagId.reducer$(reducer);
+    unknownItemNumber.reducer$(reducer);
+    unknownLotNumber.reducer$(reducer);
+    unknownSerialNumber.reducer$(reducer);
+    unknownScanValue.reducer$(reducer);
+    quantity.reducer$(reducer);
+    containerString.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateAuditEntriesApiAuditEntry);
 }

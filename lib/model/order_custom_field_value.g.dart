@@ -291,9 +291,9 @@ typedef StatefulActionsOptions<
 
 class _$OrderCustomFieldValueActions extends OrderCustomFieldValueActions {
   final StatefulActionsOptions<OrderCustomFieldValue,
-      OrderCustomFieldValueBuilder, OrderCustomFieldValueActions> $options;
+      OrderCustomFieldValueBuilder, OrderCustomFieldValueActions> options$;
 
-  final ActionDispatcher<OrderCustomFieldValue> $replace;
+  final ActionDispatcher<OrderCustomFieldValue> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orderReasonCustomFieldId;
   final FieldDispatcher<bool> booleanValue;
@@ -302,34 +302,34 @@ class _$OrderCustomFieldValueActions extends OrderCustomFieldValueActions {
   final FieldDispatcher<double> doubleValue;
   final FieldDispatcher<int> longValue;
 
-  _$OrderCustomFieldValueActions._(this.$options)
-      : $replace = $options.action<OrderCustomFieldValue>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$OrderCustomFieldValueActions._(this.options$)
+      : replace$ = options$.action<OrderCustomFieldValue>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orderReasonCustomFieldId = $options.field<String>(
+        orderReasonCustomFieldId = options$.field<String>(
             'orderReasonCustomFieldId',
             (a) => a?.orderReasonCustomFieldId,
             (s) => s?.orderReasonCustomFieldId,
             (p, b) => p?.orderReasonCustomFieldId = b),
-        booleanValue = $options.field<bool>(
+        booleanValue = options$.field<bool>(
             'booleanValue',
             (a) => a?.booleanValue,
             (s) => s?.booleanValue,
             (p, b) => p?.booleanValue = b),
-        stringValue = $options.field<String>(
+        stringValue = options$.field<String>(
             'stringValue',
             (a) => a?.stringValue,
             (s) => s?.stringValue,
             (p, b) => p?.stringValue = b),
-        dateValue = $options.field<DateTime>('dateValue', (a) => a?.dateValue,
+        dateValue = options$.field<DateTime>('dateValue', (a) => a?.dateValue,
             (s) => s?.dateValue, (p, b) => p?.dateValue = b),
-        doubleValue = $options.field<double>(
+        doubleValue = options$.field<double>(
             'doubleValue',
             (a) => a?.doubleValue,
             (s) => s?.doubleValue,
             (p, b) => p?.doubleValue = b),
-        longValue = $options.field<int>('longValue', (a) => a?.longValue,
+        longValue = options$.field<int>('longValue', (a) => a?.longValue,
             (s) => s?.longValue, (p, b) => p?.longValue = b),
         super._();
 
@@ -338,16 +338,16 @@ class _$OrderCustomFieldValueActions extends OrderCustomFieldValueActions {
       _$OrderCustomFieldValueActions._(options());
 
   @override
-  OrderCustomFieldValue get $initial => OrderCustomFieldValue();
+  OrderCustomFieldValue get initialState$ => OrderCustomFieldValue();
 
   @override
-  OrderCustomFieldValueBuilder $newBuilder() => OrderCustomFieldValueBuilder();
+  OrderCustomFieldValueBuilder newBuilder$() => OrderCustomFieldValueBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orderReasonCustomFieldId,
         this.booleanValue,
@@ -358,23 +358,19 @@ class _$OrderCustomFieldValueActions extends OrderCustomFieldValueActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orderReasonCustomFieldId.$reducer(reducer);
-    booleanValue.$reducer(reducer);
-    stringValue.$reducer(reducer);
-    dateValue.$reducer(reducer);
-    doubleValue.$reducer(reducer);
-    longValue.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orderReasonCustomFieldId.reducer$(reducer);
+    booleanValue.reducer$(reducer);
+    stringValue.reducer$(reducer);
+    dateValue.reducer$(reducer);
+    doubleValue.reducer$(reducer);
+    longValue.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(OrderCustomFieldValue);
 }

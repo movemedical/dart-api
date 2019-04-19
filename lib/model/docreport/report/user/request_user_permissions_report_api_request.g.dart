@@ -227,17 +227,17 @@ class _$RequestUserPermissionsReportApiRequestActions
   final StatefulActionsOptions<
       RequestUserPermissionsReportApiRequest,
       RequestUserPermissionsReportApiRequestBuilder,
-      RequestUserPermissionsReportApiRequestActions> $options;
+      RequestUserPermissionsReportApiRequestActions> options$;
 
-  final ActionDispatcher<RequestUserPermissionsReportApiRequest> $replace;
+  final ActionDispatcher<RequestUserPermissionsReportApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final FieldDispatcher<DocReportDisplayType> displayType;
 
-  _$RequestUserPermissionsReportApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestUserPermissionsReportApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestUserPermissionsReportApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestUserPermissionsReportApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -246,9 +246,9 @@ class _$RequestUserPermissionsReportApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.field<DocReportDisplayType>(
+        displayType = options$.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
@@ -260,44 +260,39 @@ class _$RequestUserPermissionsReportApiRequestActions
       _$RequestUserPermissionsReportApiRequestActions._(options());
 
   @override
-  RequestUserPermissionsReportApiRequest get $initial =>
+  RequestUserPermissionsReportApiRequest get initialState$ =>
       RequestUserPermissionsReportApiRequest();
 
   @override
-  RequestUserPermissionsReportApiRequestBuilder $newBuilder() =>
+  RequestUserPermissionsReportApiRequestBuilder newBuilder$() =>
       RequestUserPermissionsReportApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.format,
         this.displayType,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    format.$reducer(reducer);
-    displayType.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    format.reducer$(reducer);
+    displayType.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestUserPermissionsReportApiRequest);
 }

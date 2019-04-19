@@ -22,63 +22,29 @@ class _$CreateDeliverToAddressApi extends CreateDeliverToAddressApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<CreateDeliverToAddressApiRequest>,
           ApiResult<Nothing>>,
-      CreateDeliverToAddressApi> $options;
+      CreateDeliverToAddressApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateDeliverToAddressApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateDeliverToAddressApiRequest>,
-          ApiResult<Nothing>, CreateDeliverToAddressApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateDeliverToAddressApiRequest>,
-          ApiResult<Nothing>,
-          CreateDeliverToAddressApi,
-          Command<ApiCommand<CreateDeliverToAddressApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateDeliverToAddressApiRequest>,
-          ApiResult<Nothing>,
-          CreateDeliverToAddressApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateDeliverToAddressApiRequest>,
-          ApiResult<Nothing>,
-          CreateDeliverToAddressApi,
-          CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<CreateDeliverToAddressApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CreateDeliverToAddressApi._(this.$options)
-      : $replace = $options.action<
+  _$CreateDeliverToAddressApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<CreateDeliverToAddressApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CreateDeliverToAddressApiRequest>,
-                ApiResult<Nothing>,
-                CreateDeliverToAddressApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateDeliverToAddressApiRequest>,
-                    ApiResult<Nothing>,
-                    CreateDeliverToAddressApi,
-                    Command<ApiCommand<CreateDeliverToAddressApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateDeliverToAddressApiRequest>,
-                    ApiResult<Nothing>,
-                    CreateDeliverToAddressApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CreateDeliverToAddressApiRequest>,
-                ApiResult<Nothing>,
-                CreateDeliverToAddressApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<CreateDeliverToAddressApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CreateDeliverToAddressApi(
@@ -87,31 +53,24 @@ class _$CreateDeliverToAddressApi extends CreateDeliverToAddressApi {
 
   @override
   CommandState<ApiCommand<CreateDeliverToAddressApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<CreateDeliverToAddressApiRequest>,
-          ApiResult<Nothing>>();
+      get initialState$ => CommandState<
+          ApiCommand<CreateDeliverToAddressApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateDeliverToAddressApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<CreateDeliverToAddressApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CreateDeliverToAddressApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

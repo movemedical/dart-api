@@ -157,15 +157,15 @@ class _$CreateHoldReasonApiResponseActions
   final StatefulActionsOptions<
       CreateHoldReasonApiResponse,
       CreateHoldReasonApiResponseBuilder,
-      CreateHoldReasonApiResponseActions> $options;
+      CreateHoldReasonApiResponseActions> options$;
 
-  final ActionDispatcher<CreateHoldReasonApiResponse> $replace;
+  final ActionDispatcher<CreateHoldReasonApiResponse> replace$;
   final FieldDispatcher<String> id;
 
-  _$CreateHoldReasonApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateHoldReasonApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$CreateHoldReasonApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateHoldReasonApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -174,33 +174,29 @@ class _$CreateHoldReasonApiResponseActions
       _$CreateHoldReasonApiResponseActions._(options());
 
   @override
-  CreateHoldReasonApiResponse get $initial => CreateHoldReasonApiResponse();
+  CreateHoldReasonApiResponse get initialState$ =>
+      CreateHoldReasonApiResponse();
 
   @override
-  CreateHoldReasonApiResponseBuilder $newBuilder() =>
+  CreateHoldReasonApiResponseBuilder newBuilder$() =>
       CreateHoldReasonApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateHoldReasonApiResponse);
 }

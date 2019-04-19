@@ -248,30 +248,30 @@ class _$UpdateOrderLineCancelReasonApiRequestActions
   final StatefulActionsOptions<
       UpdateOrderLineCancelReasonApiRequest,
       UpdateOrderLineCancelReasonApiRequestBuilder,
-      UpdateOrderLineCancelReasonApiRequestActions> $options;
+      UpdateOrderLineCancelReasonApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateOrderLineCancelReasonApiRequest> $replace;
+  final ActionDispatcher<UpdateOrderLineCancelReasonApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<String> orderReasonId;
   final FieldDispatcher<bool> active;
 
-  _$UpdateOrderLineCancelReasonApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateOrderLineCancelReasonApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdateOrderLineCancelReasonApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateOrderLineCancelReasonApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        orderReasonId = $options.field<String>(
+        orderReasonId = options$.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
             (p, b) => p?.orderReasonId = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -280,18 +280,18 @@ class _$UpdateOrderLineCancelReasonApiRequestActions
       _$UpdateOrderLineCancelReasonApiRequestActions._(options());
 
   @override
-  UpdateOrderLineCancelReasonApiRequest get $initial =>
+  UpdateOrderLineCancelReasonApiRequest get initialState$ =>
       UpdateOrderLineCancelReasonApiRequest();
 
   @override
-  UpdateOrderLineCancelReasonApiRequestBuilder $newBuilder() =>
+  UpdateOrderLineCancelReasonApiRequestBuilder newBuilder$() =>
       UpdateOrderLineCancelReasonApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.orgUnitId,
@@ -300,22 +300,17 @@ class _$UpdateOrderLineCancelReasonApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    orderReasonId.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateOrderLineCancelReasonApiRequest);
 }

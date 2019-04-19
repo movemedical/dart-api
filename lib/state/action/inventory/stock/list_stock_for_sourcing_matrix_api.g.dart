@@ -22,69 +22,33 @@ class _$ListStockForSourcingMatrixApi extends ListStockForSourcingMatrixApi {
           ApiResult<ListStockForSourcingMatrixApiResponse>>,
       CommandStateBuilder<ApiCommand<ListStockForSourcingMatrixApiRequest>,
           ApiResult<ListStockForSourcingMatrixApiResponse>>,
-      ListStockForSourcingMatrixApi> $options;
+      ListStockForSourcingMatrixApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListStockForSourcingMatrixApiRequest>,
-          ApiResult<ListStockForSourcingMatrixApiResponse>>> $replace;
+          ApiResult<ListStockForSourcingMatrixApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockForSourcingMatrixApiRequest>,
-          ApiResult<ListStockForSourcingMatrixApiResponse>,
-          ListStockForSourcingMatrixApi,
-          String>> $cancel;
+      Command<ApiCommand<ListStockForSourcingMatrixApiRequest>>> execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockForSourcingMatrixApiRequest>,
-          ApiResult<ListStockForSourcingMatrixApiResponse>,
-          ListStockForSourcingMatrixApi,
-          Command<ApiCommand<ListStockForSourcingMatrixApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListStockForSourcingMatrixApiRequest>,
-              ApiResult<ListStockForSourcingMatrixApiResponse>,
-              ListStockForSourcingMatrixApi,
-              CommandResult<ApiResult<ListStockForSourcingMatrixApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockForSourcingMatrixApiRequest>,
-          ApiResult<ListStockForSourcingMatrixApiResponse>,
-          ListStockForSourcingMatrixApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListStockForSourcingMatrixApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListStockForSourcingMatrixApi._(this.$options)
-      : $replace = $options.action<
+  _$ListStockForSourcingMatrixApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListStockForSourcingMatrixApiRequest>,
                     ApiResult<ListStockForSourcingMatrixApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockForSourcingMatrixApiRequest>,
-                ApiResult<ListStockForSourcingMatrixApiResponse>,
-                ListStockForSourcingMatrixApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListStockForSourcingMatrixApiRequest>,
-                    ApiResult<ListStockForSourcingMatrixApiResponse>,
-                    ListStockForSourcingMatrixApi,
-                    Command<ApiCommand<ListStockForSourcingMatrixApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListStockForSourcingMatrixApiRequest>,
-                    ApiResult<ListStockForSourcingMatrixApiResponse>,
-                    ListStockForSourcingMatrixApi,
-                    CommandResult<
-                        ApiResult<ListStockForSourcingMatrixApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockForSourcingMatrixApiRequest>,
-                ApiResult<ListStockForSourcingMatrixApiResponse>,
-                ListStockForSourcingMatrixApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListStockForSourcingMatrixApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<ListStockForSourcingMatrixApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListStockForSourcingMatrixApi(
@@ -94,33 +58,26 @@ class _$ListStockForSourcingMatrixApi extends ListStockForSourcingMatrixApi {
   @override
   CommandState<ApiCommand<ListStockForSourcingMatrixApiRequest>,
           ApiResult<ListStockForSourcingMatrixApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListStockForSourcingMatrixApiRequest>,
           ApiResult<ListStockForSourcingMatrixApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListStockForSourcingMatrixApiRequest>,
           ApiResult<ListStockForSourcingMatrixApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListStockForSourcingMatrixApiRequest>,
           ApiResult<ListStockForSourcingMatrixApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListStockForSourcingMatrixApiRequest)]),
-        FullType(ApiResult, [FullType(ListStockForSourcingMatrixApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

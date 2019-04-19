@@ -318,9 +318,9 @@ class _$EnableUserAccessApiRequestActions
   final StatefulActionsOptions<
       EnableUserAccessApiRequest,
       EnableUserAccessApiRequestBuilder,
-      EnableUserAccessApiRequestActions> $options;
+      EnableUserAccessApiRequestActions> options$;
 
-  final ActionDispatcher<EnableUserAccessApiRequest> $replace;
+  final ActionDispatcher<EnableUserAccessApiRequest> replace$;
   final FieldDispatcher<String> linkedId;
   final FieldDispatcher<String> password;
   final FieldDispatcher<bool> phiAllowed;
@@ -330,27 +330,27 @@ class _$EnableUserAccessApiRequestActions
   final FieldDispatcher<SSOType> ssoType;
   final FieldDispatcher<String> ssoId;
 
-  _$EnableUserAccessApiRequestActions._(this.$options)
-      : $replace = $options.action<EnableUserAccessApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
+  _$EnableUserAccessApiRequestActions._(this.options$)
+      : replace$ = options$.action<EnableUserAccessApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        linkedId = options$.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
-        password = $options.field<String>('password', (a) => a?.password,
+        password = options$.field<String>('password', (a) => a?.password,
             (s) => s?.password, (p, b) => p?.password = b),
-        phiAllowed = $options.field<bool>('phiAllowed', (a) => a?.phiAllowed,
+        phiAllowed = options$.field<bool>('phiAllowed', (a) => a?.phiAllowed,
             (s) => s?.phiAllowed, (p, b) => p?.phiAllowed = b),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        locale = $options.field<MoveLocale>('locale', (a) => a?.locale,
+        locale = options$.field<MoveLocale>('locale', (a) => a?.locale,
             (s) => s?.locale, (p, b) => p?.locale = b),
-        moveDateRegion = $options.field<MoveDateRegion>(
+        moveDateRegion = options$.field<MoveDateRegion>(
             'moveDateRegion',
             (a) => a?.moveDateRegion,
             (s) => s?.moveDateRegion,
             (p, b) => p?.moveDateRegion = b),
-        ssoType = $options.field<SSOType>('ssoType', (a) => a?.ssoType,
+        ssoType = options$.field<SSOType>('ssoType', (a) => a?.ssoType,
             (s) => s?.ssoType, (p, b) => p?.ssoType = b),
-        ssoId = $options.field<String>(
+        ssoId = options$.field<String>(
             'ssoId', (a) => a?.ssoId, (s) => s?.ssoId, (p, b) => p?.ssoId = b),
         super._();
 
@@ -359,17 +359,17 @@ class _$EnableUserAccessApiRequestActions
       _$EnableUserAccessApiRequestActions._(options());
 
   @override
-  EnableUserAccessApiRequest get $initial => EnableUserAccessApiRequest();
+  EnableUserAccessApiRequest get initialState$ => EnableUserAccessApiRequest();
 
   @override
-  EnableUserAccessApiRequestBuilder $newBuilder() =>
+  EnableUserAccessApiRequestBuilder newBuilder$() =>
       EnableUserAccessApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.linkedId,
         this.password,
         this.phiAllowed,
@@ -381,24 +381,20 @@ class _$EnableUserAccessApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    linkedId.$reducer(reducer);
-    password.$reducer(reducer);
-    phiAllowed.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    locale.$reducer(reducer);
-    moveDateRegion.$reducer(reducer);
-    ssoType.$reducer(reducer);
-    ssoId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    linkedId.reducer$(reducer);
+    password.reducer$(reducer);
+    phiAllowed.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    locale.reducer$(reducer);
+    moveDateRegion.reducer$(reducer);
+    ssoType.reducer$(reducer);
+    ssoId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(EnableUserAccessApiRequest);
 }

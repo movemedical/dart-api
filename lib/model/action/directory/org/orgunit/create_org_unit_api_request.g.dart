@@ -572,9 +572,9 @@ typedef StatefulActionsOptions<
 
 class _$CreateOrgUnitApiRequestActions extends CreateOrgUnitApiRequestActions {
   final StatefulActionsOptions<CreateOrgUnitApiRequest,
-      CreateOrgUnitApiRequestBuilder, CreateOrgUnitApiRequestActions> $options;
+      CreateOrgUnitApiRequestBuilder, CreateOrgUnitApiRequestActions> options$;
 
-  final ActionDispatcher<CreateOrgUnitApiRequest> $replace;
+  final ActionDispatcher<CreateOrgUnitApiRequest> replace$;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> reference;
   final FieldDispatcher<String> parentId;
@@ -594,73 +594,73 @@ class _$CreateOrgUnitApiRequestActions extends CreateOrgUnitApiRequestActions {
   final FieldDispatcher<int> fulfillmentLeadTimeHours;
   final FieldDispatcher<int> requirementsLeadTimeHours;
 
-  _$CreateOrgUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateOrgUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        name = $options.field<String>(
+  _$CreateOrgUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateOrgUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
-        parentId = $options.field<String>('parentId', (a) => a?.parentId,
+        parentId = options$.field<String>('parentId', (a) => a?.parentId,
             (s) => s?.parentId, (p, b) => p?.parentId = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        publicName = $options.field<String>('publicName', (a) => a?.publicName,
+        publicName = options$.field<String>('publicName', (a) => a?.publicName,
             (s) => s?.publicName, (p, b) => p?.publicName = b),
-        salesOrgUnit = $options.field<bool>(
+        salesOrgUnit = options$.field<bool>(
             'salesOrgUnit',
             (a) => a?.salesOrgUnit,
             (s) => s?.salesOrgUnit,
             (p, b) => p?.salesOrgUnit = b),
-        opsOrgUnit = $options.field<bool>('opsOrgUnit', (a) => a?.opsOrgUnit,
+        opsOrgUnit = options$.field<bool>('opsOrgUnit', (a) => a?.opsOrgUnit,
             (s) => s?.opsOrgUnit, (p, b) => p?.opsOrgUnit = b),
-        opsOrgUnitId = $options.field<String>(
+        opsOrgUnitId = options$.field<String>(
             'opsOrgUnitId',
             (a) => a?.opsOrgUnitId,
             (s) => s?.opsOrgUnitId,
             (p, b) => p?.opsOrgUnitId = b),
-        signUpAllowed = $options.field<bool>(
+        signUpAllowed = options$.field<bool>(
             'signUpAllowed',
             (a) => a?.signUpAllowed,
             (s) => s?.signUpAllowed,
             (p, b) => p?.signUpAllowed = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        label = $options.field<String>(
+        label = options$.field<String>(
             'label', (a) => a?.label, (s) => s?.label, (p, b) => p?.label = b),
-        schema = $options.field<String>('schema', (a) => a?.schema,
+        schema = options$.field<String>('schema', (a) => a?.schema,
             (s) => s?.schema, (p, b) => p?.schema = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        publicListing = $options.field<bool>(
+        publicListing = options$.field<bool>(
             'publicListing',
             (a) => a?.publicListing,
             (s) => s?.publicListing,
             (p, b) => p?.publicListing = b),
-        allowRemoteUsage = $options.field<bool>(
+        allowRemoteUsage = options$.field<bool>(
             'allowRemoteUsage',
             (a) => a?.allowRemoteUsage,
             (s) => s?.allowRemoteUsage,
             (p, b) => p?.allowRemoteUsage = b),
-        allowMixedInventoryTypeUsage = $options.field<bool>(
+        allowMixedInventoryTypeUsage = options$.field<bool>(
             'allowMixedInventoryTypeUsage',
             (a) => a?.allowMixedInventoryTypeUsage,
             (s) => s?.allowMixedInventoryTypeUsage,
             (p, b) => p?.allowMixedInventoryTypeUsage = b),
-        fulfillmentLeadTimeHours = $options.field<int>(
+        fulfillmentLeadTimeHours = options$.field<int>(
             'fulfillmentLeadTimeHours',
             (a) => a?.fulfillmentLeadTimeHours,
             (s) => s?.fulfillmentLeadTimeHours,
             (p, b) => p?.fulfillmentLeadTimeHours = b),
-        requirementsLeadTimeHours = $options.field<int>(
+        requirementsLeadTimeHours = options$.field<int>(
             'requirementsLeadTimeHours',
             (a) => a?.requirementsLeadTimeHours,
             (s) => s?.requirementsLeadTimeHours,
@@ -672,23 +672,23 @@ class _$CreateOrgUnitApiRequestActions extends CreateOrgUnitApiRequestActions {
       _$CreateOrgUnitApiRequestActions._(options());
 
   @override
-  CreateOrgUnitApiRequest get $initial => CreateOrgUnitApiRequest();
+  CreateOrgUnitApiRequest get initialState$ => CreateOrgUnitApiRequest();
 
   @override
-  CreateOrgUnitApiRequestBuilder $newBuilder() =>
+  CreateOrgUnitApiRequestBuilder newBuilder$() =>
       CreateOrgUnitApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.name,
         this.reference,
         this.parentId,
@@ -709,35 +709,31 @@ class _$CreateOrgUnitApiRequestActions extends CreateOrgUnitApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    name.$reducer(reducer);
-    reference.$reducer(reducer);
-    parentId.$reducer(reducer);
-    email.$reducer(reducer);
-    publicName.$reducer(reducer);
-    salesOrgUnit.$reducer(reducer);
-    opsOrgUnit.$reducer(reducer);
-    opsOrgUnitId.$reducer(reducer);
-    signUpAllowed.$reducer(reducer);
-    description.$reducer(reducer);
-    label.$reducer(reducer);
-    schema.$reducer(reducer);
-    active.$reducer(reducer);
-    publicListing.$reducer(reducer);
-    allowRemoteUsage.$reducer(reducer);
-    allowMixedInventoryTypeUsage.$reducer(reducer);
-    fulfillmentLeadTimeHours.$reducer(reducer);
-    requirementsLeadTimeHours.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    name.reducer$(reducer);
+    reference.reducer$(reducer);
+    parentId.reducer$(reducer);
+    email.reducer$(reducer);
+    publicName.reducer$(reducer);
+    salesOrgUnit.reducer$(reducer);
+    opsOrgUnit.reducer$(reducer);
+    opsOrgUnitId.reducer$(reducer);
+    signUpAllowed.reducer$(reducer);
+    description.reducer$(reducer);
+    label.reducer$(reducer);
+    schema.reducer$(reducer);
+    active.reducer$(reducer);
+    publicListing.reducer$(reducer);
+    allowRemoteUsage.reducer$(reducer);
+    allowMixedInventoryTypeUsage.reducer$(reducer);
+    fulfillmentLeadTimeHours.reducer$(reducer);
+    requirementsLeadTimeHours.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateOrgUnitApiRequest);
 }

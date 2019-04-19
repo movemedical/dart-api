@@ -177,17 +177,17 @@ class _$CreateStocks2ApiResponseActions
   final StatefulActionsOptions<
       CreateStocks2ApiResponse,
       CreateStocks2ApiResponseBuilder,
-      CreateStocks2ApiResponseActions> $options;
+      CreateStocks2ApiResponseActions> options$;
 
-  final ActionDispatcher<CreateStocks2ApiResponse> $replace;
+  final ActionDispatcher<CreateStocks2ApiResponse> replace$;
   final FieldDispatcher<BuiltList<CreateStocks2ApiStockResponse>>
       stockResponses;
 
-  _$CreateStocks2ApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateStocks2ApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$CreateStocks2ApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateStocks2ApiResponse>(
+            'replace\$', (a) => a?.replace$),
         stockResponses =
-            $options.field<BuiltList<CreateStocks2ApiStockResponse>>(
+            options$.field<BuiltList<CreateStocks2ApiStockResponse>>(
                 'stockResponses',
                 (a) => a?.stockResponses,
                 (s) => s?.stockResponses,
@@ -199,32 +199,28 @@ class _$CreateStocks2ApiResponseActions
       _$CreateStocks2ApiResponseActions._(options());
 
   @override
-  CreateStocks2ApiResponse get $initial => CreateStocks2ApiResponse();
+  CreateStocks2ApiResponse get initialState$ => CreateStocks2ApiResponse();
 
   @override
-  CreateStocks2ApiResponseBuilder $newBuilder() =>
+  CreateStocks2ApiResponseBuilder newBuilder$() =>
       CreateStocks2ApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockResponses,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockResponses.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockResponses.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateStocks2ApiResponse);
 }

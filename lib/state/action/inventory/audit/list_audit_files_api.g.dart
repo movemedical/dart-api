@@ -22,67 +22,32 @@ class _$ListAuditFilesApi extends ListAuditFilesApi {
           ApiResult<ListAuditFilesApiResponse>>,
       CommandStateBuilder<ApiCommand<ListAuditFilesApiRequest>,
           ApiResult<ListAuditFilesApiResponse>>,
-      ListAuditFilesApi> $options;
+      ListAuditFilesApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListAuditFilesApiRequest>,
-          ApiResult<ListAuditFilesApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditFilesApiRequest>,
-          ApiResult<ListAuditFilesApiResponse>,
-          ListAuditFilesApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditFilesApiRequest>,
-          ApiResult<ListAuditFilesApiResponse>,
-          ListAuditFilesApi,
-          Command<ApiCommand<ListAuditFilesApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditFilesApiRequest>,
-          ApiResult<ListAuditFilesApiResponse>,
-          ListAuditFilesApi,
-          CommandResult<ApiResult<ListAuditFilesApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditFilesApiRequest>,
-          ApiResult<ListAuditFilesApiResponse>,
-          ListAuditFilesApi,
-          CommandProgress>> $progress;
+          ApiResult<ListAuditFilesApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListAuditFilesApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<ListAuditFilesApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListAuditFilesApi._(this.$options)
-      : $replace = $options.action<
+  _$ListAuditFilesApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListAuditFilesApiRequest>,
                     ApiResult<ListAuditFilesApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListAuditFilesApiRequest>,
-                ApiResult<ListAuditFilesApiResponse>,
-                ListAuditFilesApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListAuditFilesApiRequest>,
-                    ApiResult<ListAuditFilesApiResponse>,
-                    ListAuditFilesApi,
-                    Command<ApiCommand<ListAuditFilesApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListAuditFilesApiRequest>,
-                    ApiResult<ListAuditFilesApiResponse>,
-                    ListAuditFilesApi,
-                    CommandResult<ApiResult<ListAuditFilesApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListAuditFilesApiRequest>,
-                ApiResult<ListAuditFilesApiResponse>,
-                ListAuditFilesApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListAuditFilesApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListAuditFilesApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListAuditFilesApi(ListAuditFilesApiOptions options) =>
@@ -91,31 +56,24 @@ class _$ListAuditFilesApi extends ListAuditFilesApi {
   @override
   CommandState<ApiCommand<ListAuditFilesApiRequest>,
           ApiResult<ListAuditFilesApiResponse>>
-      get $initial => CommandState<ApiCommand<ListAuditFilesApiRequest>,
+      get initialState$ => CommandState<ApiCommand<ListAuditFilesApiRequest>,
           ApiResult<ListAuditFilesApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListAuditFilesApiRequest>,
           ApiResult<ListAuditFilesApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<ListAuditFilesApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<ListAuditFilesApiRequest>,
           ApiResult<ListAuditFilesApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListAuditFilesApiRequest)]),
-        FullType(ApiResult, [FullType(ListAuditFilesApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

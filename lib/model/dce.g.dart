@@ -314,9 +314,9 @@ class DceBuilder implements Builder<Dce, DceBuilder> {
 typedef StatefulActionsOptions<Dce, DceBuilder, DceActions> DceActionsOptions();
 
 class _$DceActions extends DceActions {
-  final StatefulActionsOptions<Dce, DceBuilder, DceActions> $options;
+  final StatefulActionsOptions<Dce, DceBuilder, DceActions> options$;
 
-  final ActionDispatcher<Dce> $replace;
+  final ActionDispatcher<Dce> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<OrgType> orgType;
@@ -326,62 +326,62 @@ class _$DceActions extends DceActions {
   final EmailActions email;
   final FieldDispatcher<bool> active;
 
-  _$DceActions._(this.$options)
-      : $replace = $options.action<Dce>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$DceActions._(this.options$)
+      : replace$ = options$.action<Dce>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
+        orgType = options$.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        workingHomeId = $options.field<String>(
+        workingHomeId = options$.field<String>(
             'workingHomeId',
             (a) => a?.workingHomeId,
             (s) => s?.workingHomeId,
             (p, b) => p?.workingHomeId = b),
-        workingAtId = $options.field<String>(
+        workingAtId = options$.field<String>(
             'workingAtId',
             (a) => a?.workingAtId,
             (s) => s?.workingAtId,
             (p, b) => p?.workingAtId = b),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
   factory _$DceActions(DceActionsOptions options) => _$DceActions._(options());
 
   @override
-  Dce get $initial => Dce();
+  Dce get initialState$ => Dce();
 
   @override
-  DceBuilder $newBuilder() => DceBuilder();
+  DceBuilder newBuilder$() => DceBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgId,
         this.orgType,
@@ -391,26 +391,22 @@ class _$DceActions extends DceActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgId.$reducer(reducer);
-    orgType.$reducer(reducer);
-    workingHomeId.$reducer(reducer);
-    workingAtId.$reducer(reducer);
-    name.$reducer(reducer);
-    email.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgId.reducer$(reducer);
+    orgType.reducer$(reducer);
+    workingHomeId.reducer$(reducer);
+    workingAtId.reducer$(reducer);
+    name.reducer$(reducer);
+    email.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    name.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    name.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Dce);
 }

@@ -22,67 +22,32 @@ class _$ListOrgUnitTeamLinksApi extends ListOrgUnitTeamLinksApi {
           ApiResult<ListOrgUnitTeamLinksApiResponse>>,
       CommandStateBuilder<ApiCommand<ListOrgUnitTeamLinksApiRequest>,
           ApiResult<ListOrgUnitTeamLinksApiResponse>>,
-      ListOrgUnitTeamLinksApi> $options;
+      ListOrgUnitTeamLinksApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListOrgUnitTeamLinksApiRequest>,
-          ApiResult<ListOrgUnitTeamLinksApiResponse>>> $replace;
+          ApiResult<ListOrgUnitTeamLinksApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListOrgUnitTeamLinksApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListOrgUnitTeamLinksApiRequest>,
-          ApiResult<ListOrgUnitTeamLinksApiResponse>,
-          ListOrgUnitTeamLinksApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListOrgUnitTeamLinksApiRequest>,
-          ApiResult<ListOrgUnitTeamLinksApiResponse>,
-          ListOrgUnitTeamLinksApi,
-          Command<ApiCommand<ListOrgUnitTeamLinksApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListOrgUnitTeamLinksApiRequest>,
-          ApiResult<ListOrgUnitTeamLinksApiResponse>,
-          ListOrgUnitTeamLinksApi,
-          CommandResult<ApiResult<ListOrgUnitTeamLinksApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListOrgUnitTeamLinksApiRequest>,
-          ApiResult<ListOrgUnitTeamLinksApiResponse>,
-          ListOrgUnitTeamLinksApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListOrgUnitTeamLinksApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListOrgUnitTeamLinksApi._(this.$options)
-      : $replace = $options.action<
+  _$ListOrgUnitTeamLinksApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListOrgUnitTeamLinksApiRequest>,
                     ApiResult<ListOrgUnitTeamLinksApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListOrgUnitTeamLinksApiRequest>,
-                ApiResult<ListOrgUnitTeamLinksApiResponse>,
-                ListOrgUnitTeamLinksApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListOrgUnitTeamLinksApiRequest>,
-                    ApiResult<ListOrgUnitTeamLinksApiResponse>,
-                    ListOrgUnitTeamLinksApi,
-                    Command<ApiCommand<ListOrgUnitTeamLinksApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListOrgUnitTeamLinksApiRequest>,
-                    ApiResult<ListOrgUnitTeamLinksApiResponse>,
-                    ListOrgUnitTeamLinksApi,
-                    CommandResult<ApiResult<ListOrgUnitTeamLinksApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListOrgUnitTeamLinksApiRequest>,
-                ApiResult<ListOrgUnitTeamLinksApiResponse>,
-                ListOrgUnitTeamLinksApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListOrgUnitTeamLinksApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListOrgUnitTeamLinksApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListOrgUnitTeamLinksApi(ListOrgUnitTeamLinksApiOptions options) =>
@@ -91,32 +56,26 @@ class _$ListOrgUnitTeamLinksApi extends ListOrgUnitTeamLinksApi {
   @override
   CommandState<ApiCommand<ListOrgUnitTeamLinksApiRequest>,
           ApiResult<ListOrgUnitTeamLinksApiResponse>>
-      get $initial => CommandState<ApiCommand<ListOrgUnitTeamLinksApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<ListOrgUnitTeamLinksApiRequest>,
           ApiResult<ListOrgUnitTeamLinksApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListOrgUnitTeamLinksApiRequest>,
           ApiResult<ListOrgUnitTeamLinksApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListOrgUnitTeamLinksApiRequest>,
           ApiResult<ListOrgUnitTeamLinksApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListOrgUnitTeamLinksApiRequest)]),
-        FullType(ApiResult, [FullType(ListOrgUnitTeamLinksApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

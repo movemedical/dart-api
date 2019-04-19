@@ -448,9 +448,9 @@ typedef StatefulActionsOptions<ExpirationInfo, ExpirationInfoBuilder,
 
 class _$ExpirationInfoActions extends ExpirationInfoActions {
   final StatefulActionsOptions<ExpirationInfo, ExpirationInfoBuilder,
-      ExpirationInfoActions> $options;
+      ExpirationInfoActions> options$;
 
-  final ActionDispatcher<ExpirationInfo> $replace;
+  final ActionDispatcher<ExpirationInfo> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> lotId;
   final FieldDispatcher<String> serialId;
@@ -466,54 +466,54 @@ class _$ExpirationInfoActions extends ExpirationInfoActions {
   final FieldDispatcher<int> levelSequence;
   final FieldDispatcher<ExpirationLevelColor> levelColor;
 
-  _$ExpirationInfoActions._(this.$options)
-      : $replace =
-            $options.action<ExpirationInfo>('\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$ExpirationInfoActions._(this.options$)
+      : replace$ =
+            options$.action<ExpirationInfo>('replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        expirationDate = $options.field<DateTime>(
+        expirationDate = options$.field<DateTime>(
             'expirationDate',
             (a) => a?.expirationDate,
             (s) => s?.expirationDate,
             (p, b) => p?.expirationDate = b),
-        expiresInDays = $options.field<int>(
+        expiresInDays = options$.field<int>(
             'expiresInDays',
             (a) => a?.expiresInDays,
             (s) => s?.expiresInDays,
             (p, b) => p?.expiresInDays = b),
-        profileId = $options.field<String>('profileId', (a) => a?.profileId,
+        profileId = options$.field<String>('profileId', (a) => a?.profileId,
             (s) => s?.profileId, (p, b) => p?.profileId = b),
-        profileName = $options.field<String>(
+        profileName = options$.field<String>(
             'profileName',
             (a) => a?.profileName,
             (s) => s?.profileName,
             (p, b) => p?.profileName = b),
-        specId = $options.field<String>('specId', (a) => a?.specId,
+        specId = options$.field<String>('specId', (a) => a?.specId,
             (s) => s?.specId, (p, b) => p?.specId = b),
-        levelGroupId = $options.field<String>(
+        levelGroupId = options$.field<String>(
             'levelGroupId',
             (a) => a?.levelGroupId,
             (s) => s?.levelGroupId,
             (p, b) => p?.levelGroupId = b),
-        levelGroupName = $options.field<String>(
+        levelGroupName = options$.field<String>(
             'levelGroupName',
             (a) => a?.levelGroupName,
             (s) => s?.levelGroupName,
             (p, b) => p?.levelGroupName = b),
-        levelId = $options.field<String>('levelId', (a) => a?.levelId,
+        levelId = options$.field<String>('levelId', (a) => a?.levelId,
             (s) => s?.levelId, (p, b) => p?.levelId = b),
-        levelName = $options.field<String>('levelName', (a) => a?.levelName,
+        levelName = options$.field<String>('levelName', (a) => a?.levelName,
             (s) => s?.levelName, (p, b) => p?.levelName = b),
-        levelSequence = $options.field<int>(
+        levelSequence = options$.field<int>(
             'levelSequence',
             (a) => a?.levelSequence,
             (s) => s?.levelSequence,
             (p, b) => p?.levelSequence = b),
-        levelColor = $options.field<ExpirationLevelColor>(
+        levelColor = options$.field<ExpirationLevelColor>(
             'levelColor',
             (a) => a?.levelColor,
             (s) => s?.levelColor,
@@ -524,16 +524,16 @@ class _$ExpirationInfoActions extends ExpirationInfoActions {
       _$ExpirationInfoActions._(options());
 
   @override
-  ExpirationInfo get $initial => ExpirationInfo();
+  ExpirationInfo get initialState$ => ExpirationInfo();
 
   @override
-  ExpirationInfoBuilder $newBuilder() => ExpirationInfoBuilder();
+  ExpirationInfoBuilder newBuilder$() => ExpirationInfoBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.lotId,
         this.serialId,
@@ -551,30 +551,26 @@ class _$ExpirationInfoActions extends ExpirationInfoActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    expirationDate.$reducer(reducer);
-    expiresInDays.$reducer(reducer);
-    profileId.$reducer(reducer);
-    profileName.$reducer(reducer);
-    specId.$reducer(reducer);
-    levelGroupId.$reducer(reducer);
-    levelGroupName.$reducer(reducer);
-    levelId.$reducer(reducer);
-    levelName.$reducer(reducer);
-    levelSequence.$reducer(reducer);
-    levelColor.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    expirationDate.reducer$(reducer);
+    expiresInDays.reducer$(reducer);
+    profileId.reducer$(reducer);
+    profileName.reducer$(reducer);
+    specId.reducer$(reducer);
+    levelGroupId.reducer$(reducer);
+    levelGroupName.reducer$(reducer);
+    levelId.reducer$(reducer);
+    levelName.reducer$(reducer);
+    levelSequence.reducer$(reducer);
+    levelColor.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ExpirationInfo);
 }

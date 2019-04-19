@@ -183,18 +183,18 @@ class _$BuildInspectionApiTrayStandardImageFileActions
   final StatefulActionsOptions<
       BuildInspectionApiTrayStandardImageFile,
       BuildInspectionApiTrayStandardImageFileBuilder,
-      BuildInspectionApiTrayStandardImageFileActions> $options;
+      BuildInspectionApiTrayStandardImageFileActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiTrayStandardImageFile> $replace;
+  final ActionDispatcher<BuildInspectionApiTrayStandardImageFile> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> fileId;
 
-  _$BuildInspectionApiTrayStandardImageFileActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiTrayStandardImageFile>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$BuildInspectionApiTrayStandardImageFileActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiTrayStandardImageFile>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
         super._();
 
@@ -203,36 +203,31 @@ class _$BuildInspectionApiTrayStandardImageFileActions
       _$BuildInspectionApiTrayStandardImageFileActions._(options());
 
   @override
-  BuildInspectionApiTrayStandardImageFile get $initial =>
+  BuildInspectionApiTrayStandardImageFile get initialState$ =>
       BuildInspectionApiTrayStandardImageFile();
 
   @override
-  BuildInspectionApiTrayStandardImageFileBuilder $newBuilder() =>
+  BuildInspectionApiTrayStandardImageFileBuilder newBuilder$() =>
       BuildInspectionApiTrayStandardImageFileBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.fileId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    fileId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    fileId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiTrayStandardImageFile);
 }

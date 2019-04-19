@@ -260,36 +260,36 @@ class _$ListPhysicianFacilityLinksApiFacilityLinkActions
   final StatefulActionsOptions<
       ListPhysicianFacilityLinksApiFacilityLink,
       ListPhysicianFacilityLinksApiFacilityLinkBuilder,
-      ListPhysicianFacilityLinksApiFacilityLinkActions> $options;
+      ListPhysicianFacilityLinksApiFacilityLinkActions> options$;
 
-  final ActionDispatcher<ListPhysicianFacilityLinksApiFacilityLink> $replace;
+  final ActionDispatcher<ListPhysicianFacilityLinksApiFacilityLink> replace$;
   final FieldDispatcher<String> physicianToFacilityId;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> facilityName;
   final FieldDispatcher<FacilityType> facilityType;
   final FieldDispatcher<bool> facilityActive;
 
-  _$ListPhysicianFacilityLinksApiFacilityLinkActions._(this.$options)
-      : $replace = $options.action<ListPhysicianFacilityLinksApiFacilityLink>(
-            '\$replace', (a) => a?.$replace),
-        physicianToFacilityId = $options.field<String>(
+  _$ListPhysicianFacilityLinksApiFacilityLinkActions._(this.options$)
+      : replace$ = options$.action<ListPhysicianFacilityLinksApiFacilityLink>(
+            'replace\$', (a) => a?.replace$),
+        physicianToFacilityId = options$.field<String>(
             'physicianToFacilityId',
             (a) => a?.physicianToFacilityId,
             (s) => s?.physicianToFacilityId,
             (p, b) => p?.physicianToFacilityId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        facilityName = $options.field<String>(
+        facilityName = options$.field<String>(
             'facilityName',
             (a) => a?.facilityName,
             (s) => s?.facilityName,
             (p, b) => p?.facilityName = b),
-        facilityType = $options.field<FacilityType>(
+        facilityType = options$.field<FacilityType>(
             'facilityType',
             (a) => a?.facilityType,
             (s) => s?.facilityType,
             (p, b) => p?.facilityType = b),
-        facilityActive = $options.field<bool>(
+        facilityActive = options$.field<bool>(
             'facilityActive',
             (a) => a?.facilityActive,
             (s) => s?.facilityActive,
@@ -301,18 +301,18 @@ class _$ListPhysicianFacilityLinksApiFacilityLinkActions
       _$ListPhysicianFacilityLinksApiFacilityLinkActions._(options());
 
   @override
-  ListPhysicianFacilityLinksApiFacilityLink get $initial =>
+  ListPhysicianFacilityLinksApiFacilityLink get initialState$ =>
       ListPhysicianFacilityLinksApiFacilityLink();
 
   @override
-  ListPhysicianFacilityLinksApiFacilityLinkBuilder $newBuilder() =>
+  ListPhysicianFacilityLinksApiFacilityLinkBuilder newBuilder$() =>
       ListPhysicianFacilityLinksApiFacilityLinkBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.physicianToFacilityId,
         this.facilityId,
         this.facilityName,
@@ -321,22 +321,17 @@ class _$ListPhysicianFacilityLinksApiFacilityLinkActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    physicianToFacilityId.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    facilityName.$reducer(reducer);
-    facilityType.$reducer(reducer);
-    facilityActive.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    physicianToFacilityId.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    facilityName.reducer$(reducer);
+    facilityType.reducer$(reducer);
+    facilityActive.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPhysicianFacilityLinksApiFacilityLink);
 }

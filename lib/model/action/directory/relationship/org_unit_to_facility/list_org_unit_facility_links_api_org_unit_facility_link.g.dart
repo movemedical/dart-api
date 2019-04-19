@@ -360,10 +360,10 @@ class _$ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions
   final StatefulActionsOptions<
       ListOrgUnitFacilityLinksApiOrgUnitFacilityLink,
       ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkBuilder,
-      ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions> $options;
+      ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions> options$;
 
   final ActionDispatcher<ListOrgUnitFacilityLinksApiOrgUnitFacilityLink>
-      $replace;
+      replace$;
   final FieldDispatcher<String> orgUnitToFacilityId;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> facilityName;
@@ -374,48 +374,48 @@ class _$ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions
   final FieldDispatcher<String> relationshipTypeId;
   final FieldDispatcher<String> relationshipTypeName;
 
-  _$ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions._(this.$options)
-      : $replace =
-            $options.action<ListOrgUnitFacilityLinksApiOrgUnitFacilityLink>(
-                '\$replace', (a) => a?.$replace),
-        orgUnitToFacilityId = $options.field<String>(
+  _$ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions._(this.options$)
+      : replace$ =
+            options$.action<ListOrgUnitFacilityLinksApiOrgUnitFacilityLink>(
+                'replace\$', (a) => a?.replace$),
+        orgUnitToFacilityId = options$.field<String>(
             'orgUnitToFacilityId',
             (a) => a?.orgUnitToFacilityId,
             (s) => s?.orgUnitToFacilityId,
             (p, b) => p?.orgUnitToFacilityId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        facilityName = $options.field<String>(
+        facilityName = options$.field<String>(
             'facilityName',
             (a) => a?.facilityName,
             (s) => s?.facilityName,
             (p, b) => p?.facilityName = b),
-        facilityType = $options.field<FacilityType>(
+        facilityType = options$.field<FacilityType>(
             'facilityType',
             (a) => a?.facilityType,
             (s) => s?.facilityType,
             (p, b) => p?.facilityType = b),
-        facilityActive = $options.field<bool>(
+        facilityActive = options$.field<bool>(
             'facilityActive',
             (a) => a?.facilityActive,
             (s) => s?.facilityActive,
             (p, b) => p?.facilityActive = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        procedureName = $options.field<String>(
+        procedureName = options$.field<String>(
             'procedureName',
             (a) => a?.procedureName,
             (s) => s?.procedureName,
             (p, b) => p?.procedureName = b),
-        relationshipTypeId = $options.field<String>(
+        relationshipTypeId = options$.field<String>(
             'relationshipTypeId',
             (a) => a?.relationshipTypeId,
             (s) => s?.relationshipTypeId,
             (p, b) => p?.relationshipTypeId = b),
-        relationshipTypeName = $options.field<String>(
+        relationshipTypeName = options$.field<String>(
             'relationshipTypeName',
             (a) => a?.relationshipTypeName,
             (s) => s?.relationshipTypeName,
@@ -428,18 +428,18 @@ class _$ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions
       _$ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions._(options());
 
   @override
-  ListOrgUnitFacilityLinksApiOrgUnitFacilityLink get $initial =>
+  ListOrgUnitFacilityLinksApiOrgUnitFacilityLink get initialState$ =>
       ListOrgUnitFacilityLinksApiOrgUnitFacilityLink();
 
   @override
-  ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkBuilder $newBuilder() =>
+  ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkBuilder newBuilder$() =>
       ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orgUnitToFacilityId,
         this.facilityId,
         this.facilityName,
@@ -452,26 +452,21 @@ class _$ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orgUnitToFacilityId.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    facilityName.$reducer(reducer);
-    facilityType.$reducer(reducer);
-    facilityActive.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    procedureName.$reducer(reducer);
-    relationshipTypeId.$reducer(reducer);
-    relationshipTypeName.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orgUnitToFacilityId.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    facilityName.reducer$(reducer);
+    facilityType.reducer$(reducer);
+    facilityActive.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    procedureName.reducer$(reducer);
+    relationshipTypeId.reducer$(reducer);
+    relationshipTypeName.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListOrgUnitFacilityLinksApiOrgUnitFacilityLink);
 }

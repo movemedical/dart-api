@@ -200,20 +200,20 @@ class _$ListContainerJournalsApiResponseActions
   final StatefulActionsOptions<
       ListContainerJournalsApiResponse,
       ListContainerJournalsApiResponseBuilder,
-      ListContainerJournalsApiResponseActions> $options;
+      ListContainerJournalsApiResponseActions> options$;
 
-  final ActionDispatcher<ListContainerJournalsApiResponse> $replace;
+  final ActionDispatcher<ListContainerJournalsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListContainerJournalsApiContainerJournal>>
       data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListContainerJournalsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListContainerJournalsApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$ListContainerJournalsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListContainerJournalsApiResponse>(
+            'replace\$', (a) => a?.replace$),
         data =
-            $options.field<BuiltList<ListContainerJournalsApiContainerJournal>>(
+            options$.field<BuiltList<ListContainerJournalsApiContainerJournal>>(
                 'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -222,36 +222,31 @@ class _$ListContainerJournalsApiResponseActions
       _$ListContainerJournalsApiResponseActions._(options());
 
   @override
-  ListContainerJournalsApiResponse get $initial =>
+  ListContainerJournalsApiResponse get initialState$ =>
       ListContainerJournalsApiResponse();
 
   @override
-  ListContainerJournalsApiResponseBuilder $newBuilder() =>
+  ListContainerJournalsApiResponseBuilder newBuilder$() =>
       ListContainerJournalsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListContainerJournalsApiResponse);
 }

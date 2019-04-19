@@ -168,15 +168,15 @@ typedef StatefulActionsOptions<
 
 class _$ListOrgUnitsApiResponseActions extends ListOrgUnitsApiResponseActions {
   final StatefulActionsOptions<ListOrgUnitsApiResponse,
-      ListOrgUnitsApiResponseBuilder, ListOrgUnitsApiResponseActions> $options;
+      ListOrgUnitsApiResponseBuilder, ListOrgUnitsApiResponseActions> options$;
 
-  final ActionDispatcher<ListOrgUnitsApiResponse> $replace;
+  final ActionDispatcher<ListOrgUnitsApiResponse> replace$;
   final FieldDispatcher<BuiltList<OrgUnit>> orgUnits;
 
-  _$ListOrgUnitsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListOrgUnitsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        orgUnits = $options.field<BuiltList<OrgUnit>>('orgUnits',
+  _$ListOrgUnitsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListOrgUnitsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        orgUnits = options$.field<BuiltList<OrgUnit>>('orgUnits',
             (a) => a?.orgUnits, (s) => s?.orgUnits, (p, b) => p?.orgUnits = b),
         super._();
 
@@ -185,32 +185,28 @@ class _$ListOrgUnitsApiResponseActions extends ListOrgUnitsApiResponseActions {
       _$ListOrgUnitsApiResponseActions._(options());
 
   @override
-  ListOrgUnitsApiResponse get $initial => ListOrgUnitsApiResponse();
+  ListOrgUnitsApiResponse get initialState$ => ListOrgUnitsApiResponse();
 
   @override
-  ListOrgUnitsApiResponseBuilder $newBuilder() =>
+  ListOrgUnitsApiResponseBuilder newBuilder$() =>
       ListOrgUnitsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orgUnits,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orgUnits.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orgUnits.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListOrgUnitsApiResponse);
 }

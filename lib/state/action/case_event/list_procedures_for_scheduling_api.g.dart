@@ -22,70 +22,33 @@ class _$ListProceduresForSchedulingApi extends ListProceduresForSchedulingApi {
           ApiResult<ListProceduresForSchedulingApiResponse>>,
       CommandStateBuilder<ApiCommand<ListProceduresForSchedulingApiRequest>,
           ApiResult<ListProceduresForSchedulingApiResponse>>,
-      ListProceduresForSchedulingApi> $options;
+      ListProceduresForSchedulingApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListProceduresForSchedulingApiRequest>,
-          ApiResult<ListProceduresForSchedulingApiResponse>>> $replace;
+          ApiResult<ListProceduresForSchedulingApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProceduresForSchedulingApiRequest>,
-          ApiResult<ListProceduresForSchedulingApiResponse>,
-          ListProceduresForSchedulingApi,
-          String>> $cancel;
+      Command<ApiCommand<ListProceduresForSchedulingApiRequest>>> execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProceduresForSchedulingApiRequest>,
-          ApiResult<ListProceduresForSchedulingApiResponse>,
-          ListProceduresForSchedulingApi,
-          Command<ApiCommand<ListProceduresForSchedulingApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListProceduresForSchedulingApiRequest>,
-              ApiResult<ListProceduresForSchedulingApiResponse>,
-              ListProceduresForSchedulingApi,
-              CommandResult<ApiResult<ListProceduresForSchedulingApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProceduresForSchedulingApiRequest>,
-          ApiResult<ListProceduresForSchedulingApiResponse>,
-          ListProceduresForSchedulingApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListProceduresForSchedulingApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListProceduresForSchedulingApi._(this.$options)
-      : $replace = $options.action<
+  _$ListProceduresForSchedulingApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListProceduresForSchedulingApiRequest>,
                     ApiResult<ListProceduresForSchedulingApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListProceduresForSchedulingApiRequest>,
-                ApiResult<ListProceduresForSchedulingApiResponse>,
-                ListProceduresForSchedulingApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListProceduresForSchedulingApiRequest>,
-                    ApiResult<ListProceduresForSchedulingApiResponse>,
-                    ListProceduresForSchedulingApi,
-                    Command<
-                        ApiCommand<ListProceduresForSchedulingApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListProceduresForSchedulingApiRequest>,
-                    ApiResult<ListProceduresForSchedulingApiResponse>,
-                    ListProceduresForSchedulingApi,
-                    CommandResult<
-                        ApiResult<ListProceduresForSchedulingApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListProceduresForSchedulingApiRequest>,
-                ApiResult<ListProceduresForSchedulingApiResponse>,
-                ListProceduresForSchedulingApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListProceduresForSchedulingApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<ListProceduresForSchedulingApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListProceduresForSchedulingApi(
@@ -95,33 +58,26 @@ class _$ListProceduresForSchedulingApi extends ListProceduresForSchedulingApi {
   @override
   CommandState<ApiCommand<ListProceduresForSchedulingApiRequest>,
           ApiResult<ListProceduresForSchedulingApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListProceduresForSchedulingApiRequest>,
           ApiResult<ListProceduresForSchedulingApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListProceduresForSchedulingApiRequest>,
           ApiResult<ListProceduresForSchedulingApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListProceduresForSchedulingApiRequest>,
           ApiResult<ListProceduresForSchedulingApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListProceduresForSchedulingApiRequest)]),
-        FullType(ApiResult, [FullType(ListProceduresForSchedulingApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

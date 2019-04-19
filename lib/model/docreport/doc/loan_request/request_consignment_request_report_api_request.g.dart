@@ -276,19 +276,19 @@ class _$RequestConsignmentRequestReportApiRequestActions
   final StatefulActionsOptions<
       RequestConsignmentRequestReportApiRequest,
       RequestConsignmentRequestReportApiRequestBuilder,
-      RequestConsignmentRequestReportApiRequestActions> $options;
+      RequestConsignmentRequestReportApiRequestActions> options$;
 
-  final ActionDispatcher<RequestConsignmentRequestReportApiRequest> $replace;
+  final ActionDispatcher<RequestConsignmentRequestReportApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final FieldDispatcher<DocReportDisplayType> displayType;
   final FieldDispatcher<String> loanId;
   final FieldDispatcher<bool> displayNotes;
 
-  _$RequestConsignmentRequestReportApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestConsignmentRequestReportApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestConsignmentRequestReportApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestConsignmentRequestReportApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -297,16 +297,16 @@ class _$RequestConsignmentRequestReportApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.field<DocReportDisplayType>(
+        displayType = options$.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        loanId = $options.field<String>('loanId', (a) => a?.loanId,
+        loanId = options$.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
-        displayNotes = $options.field<bool>(
+        displayNotes = options$.field<bool>(
             'displayNotes',
             (a) => a?.displayNotes,
             (s) => s?.displayNotes,
@@ -318,24 +318,24 @@ class _$RequestConsignmentRequestReportApiRequestActions
       _$RequestConsignmentRequestReportApiRequestActions._(options());
 
   @override
-  RequestConsignmentRequestReportApiRequest get $initial =>
+  RequestConsignmentRequestReportApiRequest get initialState$ =>
       RequestConsignmentRequestReportApiRequest();
 
   @override
-  RequestConsignmentRequestReportApiRequestBuilder $newBuilder() =>
+  RequestConsignmentRequestReportApiRequestBuilder newBuilder$() =>
       RequestConsignmentRequestReportApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.format,
         this.displayType,
         this.loanId,
@@ -343,23 +343,18 @@ class _$RequestConsignmentRequestReportApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    format.$reducer(reducer);
-    displayType.$reducer(reducer);
-    loanId.$reducer(reducer);
-    displayNotes.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    format.reducer$(reducer);
+    displayType.reducer$(reducer);
+    loanId.reducer$(reducer);
+    displayNotes.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestConsignmentRequestReportApiRequest);
 }

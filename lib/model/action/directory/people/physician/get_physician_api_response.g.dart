@@ -168,15 +168,15 @@ typedef StatefulActionsOptions<
 
 class _$GetPhysicianApiResponseActions extends GetPhysicianApiResponseActions {
   final StatefulActionsOptions<GetPhysicianApiResponse,
-      GetPhysicianApiResponseBuilder, GetPhysicianApiResponseActions> $options;
+      GetPhysicianApiResponseBuilder, GetPhysicianApiResponseActions> options$;
 
-  final ActionDispatcher<GetPhysicianApiResponse> $replace;
+  final ActionDispatcher<GetPhysicianApiResponse> replace$;
   final GetPhysicianApiPhysicianDetailActions detail;
 
-  _$GetPhysicianApiResponseActions._(this.$options)
-      : $replace = $options.action<GetPhysicianApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        detail = GetPhysicianApiPhysicianDetailActions(() => $options.stateful<
+  _$GetPhysicianApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetPhysicianApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        detail = GetPhysicianApiPhysicianDetailActions(() => options$.stateful<
                 GetPhysicianApiPhysicianDetail,
                 GetPhysicianApiPhysicianDetailBuilder,
                 GetPhysicianApiPhysicianDetailActions>(
@@ -192,38 +192,34 @@ class _$GetPhysicianApiResponseActions extends GetPhysicianApiResponseActions {
       _$GetPhysicianApiResponseActions._(options());
 
   @override
-  GetPhysicianApiResponse get $initial => GetPhysicianApiResponse();
+  GetPhysicianApiResponse get initialState$ => GetPhysicianApiResponse();
 
   @override
-  GetPhysicianApiResponseBuilder $newBuilder() =>
+  GetPhysicianApiResponseBuilder newBuilder$() =>
       GetPhysicianApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.detail,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    detail.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    detail.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    detail.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    detail.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetPhysicianApiResponse);
 }

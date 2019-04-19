@@ -172,18 +172,18 @@ typedef StatefulActionsOptions<
 
 class _$GetStockOrderApiRequestActions extends GetStockOrderApiRequestActions {
   final StatefulActionsOptions<GetStockOrderApiRequest,
-      GetStockOrderApiRequestBuilder, GetStockOrderApiRequestActions> $options;
+      GetStockOrderApiRequestBuilder, GetStockOrderApiRequestActions> options$;
 
-  final ActionDispatcher<GetStockOrderApiRequest> $replace;
+  final ActionDispatcher<GetStockOrderApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<bool> skipPresence;
 
-  _$GetStockOrderApiRequestActions._(this.$options)
-      : $replace = $options.action<GetStockOrderApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetStockOrderApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetStockOrderApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        skipPresence = $options.field<bool>(
+        skipPresence = options$.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -195,34 +195,30 @@ class _$GetStockOrderApiRequestActions extends GetStockOrderApiRequestActions {
       _$GetStockOrderApiRequestActions._(options());
 
   @override
-  GetStockOrderApiRequest get $initial => GetStockOrderApiRequest();
+  GetStockOrderApiRequest get initialState$ => GetStockOrderApiRequest();
 
   @override
-  GetStockOrderApiRequestBuilder $newBuilder() =>
+  GetStockOrderApiRequestBuilder newBuilder$() =>
       GetStockOrderApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.skipPresence,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    skipPresence.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    skipPresence.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetStockOrderApiRequest);
 }

@@ -171,18 +171,18 @@ typedef StatefulActionsOptions<
 
 class _$GetSyncFileApiResponseActions extends GetSyncFileApiResponseActions {
   final StatefulActionsOptions<GetSyncFileApiResponse,
-      GetSyncFileApiResponseBuilder, GetSyncFileApiResponseActions> $options;
+      GetSyncFileApiResponseBuilder, GetSyncFileApiResponseActions> options$;
 
-  final ActionDispatcher<GetSyncFileApiResponse> $replace;
+  final ActionDispatcher<GetSyncFileApiResponse> replace$;
   final FieldDispatcher<String> ackId;
   final FieldDispatcher<String> fileUrl;
 
-  _$GetSyncFileApiResponseActions._(this.$options)
-      : $replace = $options.action<GetSyncFileApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        ackId = $options.field<String>(
+  _$GetSyncFileApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetSyncFileApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        ackId = options$.field<String>(
             'ackId', (a) => a?.ackId, (s) => s?.ackId, (p, b) => p?.ackId = b),
-        fileUrl = $options.field<String>('fileUrl', (a) => a?.fileUrl,
+        fileUrl = options$.field<String>('fileUrl', (a) => a?.fileUrl,
             (s) => s?.fileUrl, (p, b) => p?.fileUrl = b),
         super._();
 
@@ -191,34 +191,30 @@ class _$GetSyncFileApiResponseActions extends GetSyncFileApiResponseActions {
       _$GetSyncFileApiResponseActions._(options());
 
   @override
-  GetSyncFileApiResponse get $initial => GetSyncFileApiResponse();
+  GetSyncFileApiResponse get initialState$ => GetSyncFileApiResponse();
 
   @override
-  GetSyncFileApiResponseBuilder $newBuilder() =>
+  GetSyncFileApiResponseBuilder newBuilder$() =>
       GetSyncFileApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.ackId,
         this.fileUrl,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    ackId.$reducer(reducer);
-    fileUrl.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    ackId.reducer$(reducer);
+    fileUrl.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetSyncFileApiResponse);
 }

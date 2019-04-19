@@ -261,9 +261,9 @@ typedef StatefulActionsOptions<FacilityOption, FacilityOptionBuilder,
 
 class _$FacilityOptionActions extends FacilityOptionActions {
   final StatefulActionsOptions<FacilityOption, FacilityOptionBuilder,
-      FacilityOptionActions> $options;
+      FacilityOptionActions> options$;
 
-  final ActionDispatcher<FacilityOption> $replace;
+  final ActionDispatcher<FacilityOption> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<FacilityType> facilityType;
@@ -271,29 +271,29 @@ class _$FacilityOptionActions extends FacilityOptionActions {
   final FieldDispatcher<String> addressCity;
   final FieldDispatcher<String> addressState;
 
-  _$FacilityOptionActions._(this.$options)
-      : $replace =
-            $options.action<FacilityOption>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$FacilityOptionActions._(this.options$)
+      : replace$ =
+            options$.action<FacilityOption>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        facilityType = $options.field<FacilityType>(
+        facilityType = options$.field<FacilityType>(
             'facilityType',
             (a) => a?.facilityType,
             (s) => s?.facilityType,
             (p, b) => p?.facilityType = b),
-        accountNumber = $options.field<String>(
+        accountNumber = options$.field<String>(
             'accountNumber',
             (a) => a?.accountNumber,
             (s) => s?.accountNumber,
             (p, b) => p?.accountNumber = b),
-        addressCity = $options.field<String>(
+        addressCity = options$.field<String>(
             'addressCity',
             (a) => a?.addressCity,
             (s) => s?.addressCity,
             (p, b) => p?.addressCity = b),
-        addressState = $options.field<String>(
+        addressState = options$.field<String>(
             'addressState',
             (a) => a?.addressState,
             (s) => s?.addressState,
@@ -304,16 +304,16 @@ class _$FacilityOptionActions extends FacilityOptionActions {
       _$FacilityOptionActions._(options());
 
   @override
-  FacilityOption get $initial => FacilityOption();
+  FacilityOption get initialState$ => FacilityOption();
 
   @override
-  FacilityOptionBuilder $newBuilder() => FacilityOptionBuilder();
+  FacilityOptionBuilder newBuilder$() => FacilityOptionBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.facilityType,
@@ -323,22 +323,18 @@ class _$FacilityOptionActions extends FacilityOptionActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    facilityType.$reducer(reducer);
-    accountNumber.$reducer(reducer);
-    addressCity.$reducer(reducer);
-    addressState.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    facilityType.reducer$(reducer);
+    accountNumber.reducer$(reducer);
+    addressCity.reducer$(reducer);
+    addressState.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(FacilityOption);
 }

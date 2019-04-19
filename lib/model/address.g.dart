@@ -371,9 +371,9 @@ typedef StatefulActionsOptions<Address, AddressBuilder,
 
 class _$AddressActions extends AddressActions {
   final StatefulActionsOptions<Address, AddressBuilder, AddressActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<Address> $replace;
+  final ActionDispatcher<Address> replace$;
   final FieldDispatcher<String> attn;
   final FieldDispatcher<String> line1;
   final FieldDispatcher<String> line2;
@@ -386,29 +386,29 @@ class _$AddressActions extends AddressActions {
   final FieldDispatcher<double> latitude;
   final FieldDispatcher<double> longitude;
 
-  _$AddressActions._(this.$options)
-      : $replace = $options.action<Address>('\$replace', (a) => a?.$replace),
-        attn = $options.field<String>(
+  _$AddressActions._(this.options$)
+      : replace$ = options$.action<Address>('replace\$', (a) => a?.replace$),
+        attn = options$.field<String>(
             'attn', (a) => a?.attn, (s) => s?.attn, (p, b) => p?.attn = b),
-        line1 = $options.field<String>(
+        line1 = options$.field<String>(
             'line1', (a) => a?.line1, (s) => s?.line1, (p, b) => p?.line1 = b),
-        line2 = $options.field<String>(
+        line2 = options$.field<String>(
             'line2', (a) => a?.line2, (s) => s?.line2, (p, b) => p?.line2 = b),
-        line3 = $options.field<String>(
+        line3 = options$.field<String>(
             'line3', (a) => a?.line3, (s) => s?.line3, (p, b) => p?.line3 = b),
-        city = $options.field<String>(
+        city = options$.field<String>(
             'city', (a) => a?.city, (s) => s?.city, (p, b) => p?.city = b),
-        county = $options.field<String>('county', (a) => a?.county,
+        county = options$.field<String>('county', (a) => a?.county,
             (s) => s?.county, (p, b) => p?.county = b),
-        state = $options.field<String>(
+        state = options$.field<String>(
             'state', (a) => a?.state, (s) => s?.state, (p, b) => p?.state = b),
-        postalCode = $options.field<String>('postalCode', (a) => a?.postalCode,
+        postalCode = options$.field<String>('postalCode', (a) => a?.postalCode,
             (s) => s?.postalCode, (p, b) => p?.postalCode = b),
-        country = $options.field<String>('country', (a) => a?.country,
+        country = options$.field<String>('country', (a) => a?.country,
             (s) => s?.country, (p, b) => p?.country = b),
-        latitude = $options.field<double>('latitude', (a) => a?.latitude,
+        latitude = options$.field<double>('latitude', (a) => a?.latitude,
             (s) => s?.latitude, (p, b) => p?.latitude = b),
-        longitude = $options.field<double>('longitude', (a) => a?.longitude,
+        longitude = options$.field<double>('longitude', (a) => a?.longitude,
             (s) => s?.longitude, (p, b) => p?.longitude = b),
         super._();
 
@@ -416,16 +416,16 @@ class _$AddressActions extends AddressActions {
       _$AddressActions._(options());
 
   @override
-  Address get $initial => Address();
+  Address get initialState$ => Address();
 
   @override
-  AddressBuilder $newBuilder() => AddressBuilder();
+  AddressBuilder newBuilder$() => AddressBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.attn,
         this.line1,
         this.line2,
@@ -440,27 +440,23 @@ class _$AddressActions extends AddressActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    attn.$reducer(reducer);
-    line1.$reducer(reducer);
-    line2.$reducer(reducer);
-    line3.$reducer(reducer);
-    city.$reducer(reducer);
-    county.$reducer(reducer);
-    state.$reducer(reducer);
-    postalCode.$reducer(reducer);
-    country.$reducer(reducer);
-    latitude.$reducer(reducer);
-    longitude.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    attn.reducer$(reducer);
+    line1.reducer$(reducer);
+    line2.reducer$(reducer);
+    line3.reducer$(reducer);
+    city.reducer$(reducer);
+    county.reducer$(reducer);
+    state.reducer$(reducer);
+    postalCode.reducer$(reducer);
+    country.reducer$(reducer);
+    latitude.reducer$(reducer);
+    longitude.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Address);
 }

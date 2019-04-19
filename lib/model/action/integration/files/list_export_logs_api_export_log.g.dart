@@ -440,9 +440,9 @@ class _$ListExportLogsApiExportLogActions
   final StatefulActionsOptions<
       ListExportLogsApiExportLog,
       ListExportLogsApiExportLogBuilder,
-      ListExportLogsApiExportLogActions> $options;
+      ListExportLogsApiExportLogActions> options$;
 
-  final ActionDispatcher<ListExportLogsApiExportLog> $replace;
+  final ActionDispatcher<ListExportLogsApiExportLog> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<String> jobId;
@@ -457,49 +457,49 @@ class _$ListExportLogsApiExportLogActions
   final FieldDispatcher<bool> outcome;
   final FieldDispatcher<String> outcomeMessage;
 
-  _$ListExportLogsApiExportLogActions._(this.$options)
-      : $replace = $options.action<ListExportLogsApiExportLog>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListExportLogsApiExportLogActions._(this.options$)
+      : replace$ = options$.action<ListExportLogsApiExportLog>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        jobId = $options.field<String>(
+        jobId = options$.field<String>(
             'jobId', (a) => a?.jobId, (s) => s?.jobId, (p, b) => p?.jobId = b),
-        jobKey = $options.field<String>('jobKey', (a) => a?.jobKey,
+        jobKey = options$.field<String>('jobKey', (a) => a?.jobKey,
             (s) => s?.jobKey, (p, b) => p?.jobKey = b),
-        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+        startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
-        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
+        endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        processingTimeSec = $options.field<int>(
+        processingTimeSec = options$.field<int>(
             'processingTimeSec',
             (a) => a?.processingTimeSec,
             (s) => s?.processingTimeSec,
             (p, b) => p?.processingTimeSec = b),
-        currentState = $options.field<ExportState>(
+        currentState = options$.field<ExportState>(
             'currentState',
             (a) => a?.currentState,
             (s) => s?.currentState,
             (p, b) => p?.currentState = b),
-        currentStateEnteredTime = $options.field<DateTime>(
+        currentStateEnteredTime = options$.field<DateTime>(
             'currentStateEnteredTime',
             (a) => a?.currentStateEnteredTime,
             (s) => s?.currentStateEnteredTime,
             (p, b) => p?.currentStateEnteredTime = b),
-        currentStateTimeOut = $options.field<DateTime>(
+        currentStateTimeOut = options$.field<DateTime>(
             'currentStateTimeOut',
             (a) => a?.currentStateTimeOut,
             (s) => s?.currentStateTimeOut,
             (p, b) => p?.currentStateTimeOut = b),
-        statusMessage = $options.field<String>(
+        statusMessage = options$.field<String>(
             'statusMessage',
             (a) => a?.statusMessage,
             (s) => s?.statusMessage,
             (p, b) => p?.statusMessage = b),
-        outcome = $options.field<bool>('outcome', (a) => a?.outcome,
+        outcome = options$.field<bool>('outcome', (a) => a?.outcome,
             (s) => s?.outcome, (p, b) => p?.outcome = b),
-        outcomeMessage = $options.field<String>(
+        outcomeMessage = options$.field<String>(
             'outcomeMessage',
             (a) => a?.outcomeMessage,
             (s) => s?.outcomeMessage,
@@ -511,17 +511,17 @@ class _$ListExportLogsApiExportLogActions
       _$ListExportLogsApiExportLogActions._(options());
 
   @override
-  ListExportLogsApiExportLog get $initial => ListExportLogsApiExportLog();
+  ListExportLogsApiExportLog get initialState$ => ListExportLogsApiExportLog();
 
   @override
-  ListExportLogsApiExportLogBuilder $newBuilder() =>
+  ListExportLogsApiExportLogBuilder newBuilder$() =>
       ListExportLogsApiExportLogBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgId,
         this.jobId,
@@ -538,29 +538,25 @@ class _$ListExportLogsApiExportLogActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgId.$reducer(reducer);
-    jobId.$reducer(reducer);
-    jobKey.$reducer(reducer);
-    startDate.$reducer(reducer);
-    endDate.$reducer(reducer);
-    processingTimeSec.$reducer(reducer);
-    currentState.$reducer(reducer);
-    currentStateEnteredTime.$reducer(reducer);
-    currentStateTimeOut.$reducer(reducer);
-    statusMessage.$reducer(reducer);
-    outcome.$reducer(reducer);
-    outcomeMessage.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgId.reducer$(reducer);
+    jobId.reducer$(reducer);
+    jobKey.reducer$(reducer);
+    startDate.reducer$(reducer);
+    endDate.reducer$(reducer);
+    processingTimeSec.reducer$(reducer);
+    currentState.reducer$(reducer);
+    currentStateEnteredTime.reducer$(reducer);
+    currentStateTimeOut.reducer$(reducer);
+    statusMessage.reducer$(reducer);
+    outcome.reducer$(reducer);
+    outcomeMessage.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListExportLogsApiExportLog);
 }

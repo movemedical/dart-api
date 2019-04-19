@@ -206,18 +206,18 @@ class _$BarcodeScansToStockApiRequestActions
   final StatefulActionsOptions<
       BarcodeScansToStockApiRequest,
       BarcodeScansToStockApiRequestBuilder,
-      BarcodeScansToStockApiRequestActions> $options;
+      BarcodeScansToStockApiRequestActions> options$;
 
-  final ActionDispatcher<BarcodeScansToStockApiRequest> $replace;
+  final ActionDispatcher<BarcodeScansToStockApiRequest> replace$;
   final FieldDispatcher<BuiltList<BarcodeScansToStockApiScan>> scans;
   final FieldDispatcher<BuiltList<String>> prevSelectedSummaryKeys;
 
-  _$BarcodeScansToStockApiRequestActions._(this.$options)
-      : $replace = $options.action<BarcodeScansToStockApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        scans = $options.field<BuiltList<BarcodeScansToStockApiScan>>(
+  _$BarcodeScansToStockApiRequestActions._(this.options$)
+      : replace$ = options$.action<BarcodeScansToStockApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        scans = options$.field<BuiltList<BarcodeScansToStockApiScan>>(
             'scans', (a) => a?.scans, (s) => s?.scans, (p, b) => p?.scans = b),
-        prevSelectedSummaryKeys = $options.field<BuiltList<String>>(
+        prevSelectedSummaryKeys = options$.field<BuiltList<String>>(
             'prevSelectedSummaryKeys',
             (a) => a?.prevSelectedSummaryKeys,
             (s) => s?.prevSelectedSummaryKeys,
@@ -229,35 +229,31 @@ class _$BarcodeScansToStockApiRequestActions
       _$BarcodeScansToStockApiRequestActions._(options());
 
   @override
-  BarcodeScansToStockApiRequest get $initial => BarcodeScansToStockApiRequest();
+  BarcodeScansToStockApiRequest get initialState$ =>
+      BarcodeScansToStockApiRequest();
 
   @override
-  BarcodeScansToStockApiRequestBuilder $newBuilder() =>
+  BarcodeScansToStockApiRequestBuilder newBuilder$() =>
       BarcodeScansToStockApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.scans,
         this.prevSelectedSummaryKeys,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    scans.$reducer(reducer);
-    prevSelectedSummaryKeys.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    scans.reducer$(reducer);
+    prevSelectedSummaryKeys.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BarcodeScansToStockApiRequest);
 }

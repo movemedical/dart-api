@@ -22,67 +22,31 @@ class _$CreateRootOrgApi extends CreateRootOrgApi {
           ApiResult<CreateRootOrgApiResponse>>,
       CommandStateBuilder<ApiCommand<CreateRootOrgApiRequest>,
           ApiResult<CreateRootOrgApiResponse>>,
-      CreateRootOrgApi> $options;
+      CreateRootOrgApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateRootOrgApiRequest>,
-          ApiResult<CreateRootOrgApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateRootOrgApiRequest>,
-          ApiResult<CreateRootOrgApiResponse>,
-          CreateRootOrgApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateRootOrgApiRequest>,
-          ApiResult<CreateRootOrgApiResponse>,
-          CreateRootOrgApi,
-          Command<ApiCommand<CreateRootOrgApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateRootOrgApiRequest>,
-          ApiResult<CreateRootOrgApiResponse>,
-          CreateRootOrgApi,
-          CommandResult<ApiResult<CreateRootOrgApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateRootOrgApiRequest>,
-          ApiResult<CreateRootOrgApiResponse>,
-          CreateRootOrgApi,
-          CommandProgress>> $progress;
+          ApiResult<CreateRootOrgApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<CreateRootOrgApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<CreateRootOrgApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CreateRootOrgApi._(this.$options)
-      : $replace = $options.action<
+  _$CreateRootOrgApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<CreateRootOrgApiRequest>,
                     ApiResult<CreateRootOrgApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CreateRootOrgApiRequest>,
-                ApiResult<CreateRootOrgApiResponse>,
-                CreateRootOrgApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateRootOrgApiRequest>,
-                    ApiResult<CreateRootOrgApiResponse>,
-                    CreateRootOrgApi,
-                    Command<ApiCommand<CreateRootOrgApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateRootOrgApiRequest>,
-                    ApiResult<CreateRootOrgApiResponse>,
-                    CreateRootOrgApi,
-                    CommandResult<ApiResult<CreateRootOrgApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CreateRootOrgApiRequest>,
-                ApiResult<CreateRootOrgApiResponse>,
-                CreateRootOrgApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<CreateRootOrgApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<CreateRootOrgApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CreateRootOrgApi(CreateRootOrgApiOptions options) =>
@@ -91,31 +55,24 @@ class _$CreateRootOrgApi extends CreateRootOrgApi {
   @override
   CommandState<ApiCommand<CreateRootOrgApiRequest>,
           ApiResult<CreateRootOrgApiResponse>>
-      get $initial => CommandState<ApiCommand<CreateRootOrgApiRequest>,
+      get initialState$ => CommandState<ApiCommand<CreateRootOrgApiRequest>,
           ApiResult<CreateRootOrgApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateRootOrgApiRequest>,
           ApiResult<CreateRootOrgApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<CreateRootOrgApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<CreateRootOrgApiRequest>,
           ApiResult<CreateRootOrgApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CreateRootOrgApiRequest)]),
-        FullType(ApiResult, [FullType(CreateRootOrgApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

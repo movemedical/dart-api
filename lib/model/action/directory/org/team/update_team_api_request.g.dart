@@ -371,9 +371,9 @@ typedef StatefulActionsOptions<
 
 class _$UpdateTeamApiRequestActions extends UpdateTeamApiRequestActions {
   final StatefulActionsOptions<UpdateTeamApiRequest,
-      UpdateTeamApiRequestBuilder, UpdateTeamApiRequestActions> $options;
+      UpdateTeamApiRequestBuilder, UpdateTeamApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateTeamApiRequest> $replace;
+  final ActionDispatcher<UpdateTeamApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<bool> opsTeam;
   final FieldDispatcher<bool> salesTeam;
@@ -385,36 +385,36 @@ class _$UpdateTeamApiRequestActions extends UpdateTeamApiRequestActions {
   final FieldDispatcher<bool> publiclyVisible;
   final FieldDispatcher<String> customerId;
 
-  _$UpdateTeamApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateTeamApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdateTeamApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateTeamApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        opsTeam = $options.field<bool>('opsTeam', (a) => a?.opsTeam,
+        opsTeam = options$.field<bool>('opsTeam', (a) => a?.opsTeam,
             (s) => s?.opsTeam, (p, b) => p?.opsTeam = b),
-        salesTeam = $options.field<bool>('salesTeam', (a) => a?.salesTeam,
+        salesTeam = options$.field<bool>('salesTeam', (a) => a?.salesTeam,
             (s) => s?.salesTeam, (p, b) => p?.salesTeam = b),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        publiclyVisible = $options.field<bool>(
+        publiclyVisible = options$.field<bool>(
             'publiclyVisible',
             (a) => a?.publiclyVisible,
             (s) => s?.publiclyVisible,
             (p, b) => p?.publiclyVisible = b),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
         super._();
 
@@ -423,22 +423,22 @@ class _$UpdateTeamApiRequestActions extends UpdateTeamApiRequestActions {
       _$UpdateTeamApiRequestActions._(options());
 
   @override
-  UpdateTeamApiRequest get $initial => UpdateTeamApiRequest();
+  UpdateTeamApiRequest get initialState$ => UpdateTeamApiRequest();
 
   @override
-  UpdateTeamApiRequestBuilder $newBuilder() => UpdateTeamApiRequestBuilder();
+  UpdateTeamApiRequestBuilder newBuilder$() => UpdateTeamApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.opsTeam,
         this.salesTeam,
@@ -451,27 +451,23 @@ class _$UpdateTeamApiRequestActions extends UpdateTeamApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    opsTeam.$reducer(reducer);
-    salesTeam.$reducer(reducer);
-    reference.$reducer(reducer);
-    name.$reducer(reducer);
-    email.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    active.$reducer(reducer);
-    publiclyVisible.$reducer(reducer);
-    customerId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    opsTeam.reducer$(reducer);
+    salesTeam.reducer$(reducer);
+    reference.reducer$(reducer);
+    name.reducer$(reducer);
+    email.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    active.reducer$(reducer);
+    publiclyVisible.reducer$(reducer);
+    customerId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(UpdateTeamApiRequest);
 }

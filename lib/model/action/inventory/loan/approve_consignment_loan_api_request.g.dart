@@ -180,18 +180,18 @@ class _$ApproveConsignmentLoanApiRequestActions
   final StatefulActionsOptions<
       ApproveConsignmentLoanApiRequest,
       ApproveConsignmentLoanApiRequestBuilder,
-      ApproveConsignmentLoanApiRequestActions> $options;
+      ApproveConsignmentLoanApiRequestActions> options$;
 
-  final ActionDispatcher<ApproveConsignmentLoanApiRequest> $replace;
+  final ActionDispatcher<ApproveConsignmentLoanApiRequest> replace$;
   final FieldDispatcher<String> loanId;
   final FieldDispatcher<bool> approve;
 
-  _$ApproveConsignmentLoanApiRequestActions._(this.$options)
-      : $replace = $options.action<ApproveConsignmentLoanApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        loanId = $options.field<String>('loanId', (a) => a?.loanId,
+  _$ApproveConsignmentLoanApiRequestActions._(this.options$)
+      : replace$ = options$.action<ApproveConsignmentLoanApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        loanId = options$.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
-        approve = $options.field<bool>('approve', (a) => a?.approve,
+        approve = options$.field<bool>('approve', (a) => a?.approve,
             (s) => s?.approve, (p, b) => p?.approve = b),
         super._();
 
@@ -200,36 +200,31 @@ class _$ApproveConsignmentLoanApiRequestActions
       _$ApproveConsignmentLoanApiRequestActions._(options());
 
   @override
-  ApproveConsignmentLoanApiRequest get $initial =>
+  ApproveConsignmentLoanApiRequest get initialState$ =>
       ApproveConsignmentLoanApiRequest();
 
   @override
-  ApproveConsignmentLoanApiRequestBuilder $newBuilder() =>
+  ApproveConsignmentLoanApiRequestBuilder newBuilder$() =>
       ApproveConsignmentLoanApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.loanId,
         this.approve,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    loanId.$reducer(reducer);
-    approve.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    loanId.reducer$(reducer);
+    approve.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ApproveConsignmentLoanApiRequest);
 }

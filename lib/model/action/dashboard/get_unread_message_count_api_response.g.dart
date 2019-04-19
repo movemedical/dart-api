@@ -159,15 +159,15 @@ class _$GetUnreadMessageCountApiResponseActions
   final StatefulActionsOptions<
       GetUnreadMessageCountApiResponse,
       GetUnreadMessageCountApiResponseBuilder,
-      GetUnreadMessageCountApiResponseActions> $options;
+      GetUnreadMessageCountApiResponseActions> options$;
 
-  final ActionDispatcher<GetUnreadMessageCountApiResponse> $replace;
+  final ActionDispatcher<GetUnreadMessageCountApiResponse> replace$;
   final FieldDispatcher<int> count;
 
-  _$GetUnreadMessageCountApiResponseActions._(this.$options)
-      : $replace = $options.action<GetUnreadMessageCountApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        count = $options.field<int>(
+  _$GetUnreadMessageCountApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetUnreadMessageCountApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        count = options$.field<int>(
             'count', (a) => a?.count, (s) => s?.count, (p, b) => p?.count = b),
         super._();
 
@@ -176,34 +176,29 @@ class _$GetUnreadMessageCountApiResponseActions
       _$GetUnreadMessageCountApiResponseActions._(options());
 
   @override
-  GetUnreadMessageCountApiResponse get $initial =>
+  GetUnreadMessageCountApiResponse get initialState$ =>
       GetUnreadMessageCountApiResponse();
 
   @override
-  GetUnreadMessageCountApiResponseBuilder $newBuilder() =>
+  GetUnreadMessageCountApiResponseBuilder newBuilder$() =>
       GetUnreadMessageCountApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.count,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    count.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    count.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetUnreadMessageCountApiResponse);
 }

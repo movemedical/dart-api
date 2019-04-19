@@ -231,29 +231,29 @@ typedef StatefulActionsOptions<Hospital, HospitalBuilder,
 
 class _$HospitalActions extends HospitalActions {
   final StatefulActionsOptions<Hospital, HospitalBuilder, HospitalActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<Hospital> $replace;
+  final ActionDispatcher<Hospital> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> displayName;
   final FieldDispatcher<bool> creditHold;
   final FieldDispatcher<String> customerId;
   final FieldDispatcher<String> timezone;
 
-  _$HospitalActions._(this.$options)
-      : $replace = $options.action<Hospital>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$HospitalActions._(this.options$)
+      : replace$ = options$.action<Hospital>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        displayName = $options.field<String>(
+        displayName = options$.field<String>(
             'displayName',
             (a) => a?.displayName,
             (s) => s?.displayName,
             (p, b) => p?.displayName = b),
-        creditHold = $options.field<bool>('creditHold', (a) => a?.creditHold,
+        creditHold = options$.field<bool>('creditHold', (a) => a?.creditHold,
             (s) => s?.creditHold, (p, b) => p?.creditHold = b),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        timezone = $options.field<String>('timezone', (a) => a?.timezone,
+        timezone = options$.field<String>('timezone', (a) => a?.timezone,
             (s) => s?.timezone, (p, b) => p?.timezone = b),
         super._();
 
@@ -261,16 +261,16 @@ class _$HospitalActions extends HospitalActions {
       _$HospitalActions._(options());
 
   @override
-  Hospital get $initial => Hospital();
+  Hospital get initialState$ => Hospital();
 
   @override
-  HospitalBuilder $newBuilder() => HospitalBuilder();
+  HospitalBuilder newBuilder$() => HospitalBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.displayName,
         this.creditHold,
@@ -279,21 +279,17 @@ class _$HospitalActions extends HospitalActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    displayName.$reducer(reducer);
-    creditHold.$reducer(reducer);
-    customerId.$reducer(reducer);
-    timezone.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    displayName.reducer$(reducer);
+    creditHold.reducer$(reducer);
+    customerId.reducer$(reducer);
+    timezone.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Hospital);
 }

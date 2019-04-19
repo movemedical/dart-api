@@ -157,15 +157,15 @@ class _$GetShippingServiceApiRequestActions
   final StatefulActionsOptions<
       GetShippingServiceApiRequest,
       GetShippingServiceApiRequestBuilder,
-      GetShippingServiceApiRequestActions> $options;
+      GetShippingServiceApiRequestActions> options$;
 
-  final ActionDispatcher<GetShippingServiceApiRequest> $replace;
+  final ActionDispatcher<GetShippingServiceApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$GetShippingServiceApiRequestActions._(this.$options)
-      : $replace = $options.action<GetShippingServiceApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetShippingServiceApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetShippingServiceApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -174,33 +174,29 @@ class _$GetShippingServiceApiRequestActions
       _$GetShippingServiceApiRequestActions._(options());
 
   @override
-  GetShippingServiceApiRequest get $initial => GetShippingServiceApiRequest();
+  GetShippingServiceApiRequest get initialState$ =>
+      GetShippingServiceApiRequest();
 
   @override
-  GetShippingServiceApiRequestBuilder $newBuilder() =>
+  GetShippingServiceApiRequestBuilder newBuilder$() =>
       GetShippingServiceApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetShippingServiceApiRequest);
 }

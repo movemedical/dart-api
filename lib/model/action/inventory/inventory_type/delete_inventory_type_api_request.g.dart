@@ -157,15 +157,15 @@ class _$DeleteInventoryTypeApiRequestActions
   final StatefulActionsOptions<
       DeleteInventoryTypeApiRequest,
       DeleteInventoryTypeApiRequestBuilder,
-      DeleteInventoryTypeApiRequestActions> $options;
+      DeleteInventoryTypeApiRequestActions> options$;
 
-  final ActionDispatcher<DeleteInventoryTypeApiRequest> $replace;
+  final ActionDispatcher<DeleteInventoryTypeApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$DeleteInventoryTypeApiRequestActions._(this.$options)
-      : $replace = $options.action<DeleteInventoryTypeApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$DeleteInventoryTypeApiRequestActions._(this.options$)
+      : replace$ = options$.action<DeleteInventoryTypeApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -174,33 +174,29 @@ class _$DeleteInventoryTypeApiRequestActions
       _$DeleteInventoryTypeApiRequestActions._(options());
 
   @override
-  DeleteInventoryTypeApiRequest get $initial => DeleteInventoryTypeApiRequest();
+  DeleteInventoryTypeApiRequest get initialState$ =>
+      DeleteInventoryTypeApiRequest();
 
   @override
-  DeleteInventoryTypeApiRequestBuilder $newBuilder() =>
+  DeleteInventoryTypeApiRequestBuilder newBuilder$() =>
       DeleteInventoryTypeApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(DeleteInventoryTypeApiRequest);
 }

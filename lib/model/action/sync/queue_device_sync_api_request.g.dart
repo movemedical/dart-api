@@ -155,15 +155,15 @@ class _$QueueDeviceSyncApiRequestActions
   final StatefulActionsOptions<
       QueueDeviceSyncApiRequest,
       QueueDeviceSyncApiRequestBuilder,
-      QueueDeviceSyncApiRequestActions> $options;
+      QueueDeviceSyncApiRequestActions> options$;
 
-  final ActionDispatcher<QueueDeviceSyncApiRequest> $replace;
+  final ActionDispatcher<QueueDeviceSyncApiRequest> replace$;
   final FieldDispatcher<String> deviceId;
 
-  _$QueueDeviceSyncApiRequestActions._(this.$options)
-      : $replace = $options.action<QueueDeviceSyncApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        deviceId = $options.field<String>('deviceId', (a) => a?.deviceId,
+  _$QueueDeviceSyncApiRequestActions._(this.options$)
+      : replace$ = options$.action<QueueDeviceSyncApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        deviceId = options$.field<String>('deviceId', (a) => a?.deviceId,
             (s) => s?.deviceId, (p, b) => p?.deviceId = b),
         super._();
 
@@ -172,32 +172,28 @@ class _$QueueDeviceSyncApiRequestActions
       _$QueueDeviceSyncApiRequestActions._(options());
 
   @override
-  QueueDeviceSyncApiRequest get $initial => QueueDeviceSyncApiRequest();
+  QueueDeviceSyncApiRequest get initialState$ => QueueDeviceSyncApiRequest();
 
   @override
-  QueueDeviceSyncApiRequestBuilder $newBuilder() =>
+  QueueDeviceSyncApiRequestBuilder newBuilder$() =>
       QueueDeviceSyncApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.deviceId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    deviceId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    deviceId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(QueueDeviceSyncApiRequest);
 }

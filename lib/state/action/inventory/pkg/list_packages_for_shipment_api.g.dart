@@ -22,69 +22,32 @@ class _$ListPackagesForShipmentApi extends ListPackagesForShipmentApi {
           ApiResult<ListPackagesForShipmentApiResponse>>,
       CommandStateBuilder<ApiCommand<ListPackagesForShipmentApiRequest>,
           ApiResult<ListPackagesForShipmentApiResponse>>,
-      ListPackagesForShipmentApi> $options;
+      ListPackagesForShipmentApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListPackagesForShipmentApiRequest>,
-          ApiResult<ListPackagesForShipmentApiResponse>>> $replace;
+          ApiResult<ListPackagesForShipmentApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListPackagesForShipmentApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPackagesForShipmentApiRequest>,
-          ApiResult<ListPackagesForShipmentApiResponse>,
-          ListPackagesForShipmentApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPackagesForShipmentApiRequest>,
-          ApiResult<ListPackagesForShipmentApiResponse>,
-          ListPackagesForShipmentApi,
-          Command<ApiCommand<ListPackagesForShipmentApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListPackagesForShipmentApiRequest>,
-              ApiResult<ListPackagesForShipmentApiResponse>,
-              ListPackagesForShipmentApi,
-              CommandResult<ApiResult<ListPackagesForShipmentApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPackagesForShipmentApiRequest>,
-          ApiResult<ListPackagesForShipmentApiResponse>,
-          ListPackagesForShipmentApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListPackagesForShipmentApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListPackagesForShipmentApi._(this.$options)
-      : $replace = $options.action<
+  _$ListPackagesForShipmentApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListPackagesForShipmentApiRequest>,
                     ApiResult<ListPackagesForShipmentApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListPackagesForShipmentApiRequest>,
-                ApiResult<ListPackagesForShipmentApiResponse>,
-                ListPackagesForShipmentApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListPackagesForShipmentApiRequest>,
-                    ApiResult<ListPackagesForShipmentApiResponse>,
-                    ListPackagesForShipmentApi,
-                    Command<ApiCommand<ListPackagesForShipmentApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListPackagesForShipmentApiRequest>,
-                    ApiResult<ListPackagesForShipmentApiResponse>,
-                    ListPackagesForShipmentApi,
-                    CommandResult<
-                        ApiResult<ListPackagesForShipmentApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListPackagesForShipmentApiRequest>,
-                ApiResult<ListPackagesForShipmentApiResponse>,
-                ListPackagesForShipmentApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListPackagesForShipmentApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<ListPackagesForShipmentApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListPackagesForShipmentApi(
@@ -94,33 +57,26 @@ class _$ListPackagesForShipmentApi extends ListPackagesForShipmentApi {
   @override
   CommandState<ApiCommand<ListPackagesForShipmentApiRequest>,
           ApiResult<ListPackagesForShipmentApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListPackagesForShipmentApiRequest>,
           ApiResult<ListPackagesForShipmentApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListPackagesForShipmentApiRequest>,
           ApiResult<ListPackagesForShipmentApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListPackagesForShipmentApiRequest>,
           ApiResult<ListPackagesForShipmentApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListPackagesForShipmentApiRequest)]),
-        FullType(ApiResult, [FullType(ListPackagesForShipmentApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

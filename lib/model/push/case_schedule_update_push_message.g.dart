@@ -118,13 +118,13 @@ class _$CaseScheduleUpdatePushMessageActions
   final StatefulActionsOptions<
       CaseScheduleUpdatePushMessage,
       CaseScheduleUpdatePushMessageBuilder,
-      CaseScheduleUpdatePushMessageActions> $options;
+      CaseScheduleUpdatePushMessageActions> options$;
 
-  final ActionDispatcher<CaseScheduleUpdatePushMessage> $replace;
+  final ActionDispatcher<CaseScheduleUpdatePushMessage> replace$;
 
-  _$CaseScheduleUpdatePushMessageActions._(this.$options)
-      : $replace = $options.action<CaseScheduleUpdatePushMessage>(
-            '\$replace', (a) => a?.$replace),
+  _$CaseScheduleUpdatePushMessageActions._(this.options$)
+      : replace$ = options$.action<CaseScheduleUpdatePushMessage>(
+            'replace\$', (a) => a?.replace$),
         super._();
 
   factory _$CaseScheduleUpdatePushMessageActions(
@@ -132,21 +132,17 @@ class _$CaseScheduleUpdatePushMessageActions
       _$CaseScheduleUpdatePushMessageActions._(options());
 
   @override
-  CaseScheduleUpdatePushMessage get $initial => CaseScheduleUpdatePushMessage();
+  CaseScheduleUpdatePushMessage get initialState$ =>
+      CaseScheduleUpdatePushMessage();
 
   @override
-  CaseScheduleUpdatePushMessageBuilder $newBuilder() =>
+  CaseScheduleUpdatePushMessageBuilder newBuilder$() =>
       CaseScheduleUpdatePushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CaseScheduleUpdatePushMessage);
 }

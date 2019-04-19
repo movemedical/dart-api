@@ -164,15 +164,15 @@ class _$ReprocessIntegrationIssueApiRequestActions
   final StatefulActionsOptions<
       ReprocessIntegrationIssueApiRequest,
       ReprocessIntegrationIssueApiRequestBuilder,
-      ReprocessIntegrationIssueApiRequestActions> $options;
+      ReprocessIntegrationIssueApiRequestActions> options$;
 
-  final ActionDispatcher<ReprocessIntegrationIssueApiRequest> $replace;
+  final ActionDispatcher<ReprocessIntegrationIssueApiRequest> replace$;
   final FieldDispatcher<String> integrationIssueId;
 
-  _$ReprocessIntegrationIssueApiRequestActions._(this.$options)
-      : $replace = $options.action<ReprocessIntegrationIssueApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        integrationIssueId = $options.field<String>(
+  _$ReprocessIntegrationIssueApiRequestActions._(this.options$)
+      : replace$ = options$.action<ReprocessIntegrationIssueApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        integrationIssueId = options$.field<String>(
             'integrationIssueId',
             (a) => a?.integrationIssueId,
             (s) => s?.integrationIssueId,
@@ -184,34 +184,29 @@ class _$ReprocessIntegrationIssueApiRequestActions
       _$ReprocessIntegrationIssueApiRequestActions._(options());
 
   @override
-  ReprocessIntegrationIssueApiRequest get $initial =>
+  ReprocessIntegrationIssueApiRequest get initialState$ =>
       ReprocessIntegrationIssueApiRequest();
 
   @override
-  ReprocessIntegrationIssueApiRequestBuilder $newBuilder() =>
+  ReprocessIntegrationIssueApiRequestBuilder newBuilder$() =>
       ReprocessIntegrationIssueApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.integrationIssueId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    integrationIssueId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    integrationIssueId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ReprocessIntegrationIssueApiRequest);
 }

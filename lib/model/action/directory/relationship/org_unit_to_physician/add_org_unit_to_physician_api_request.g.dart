@@ -230,30 +230,30 @@ class _$AddOrgUnitToPhysicianApiRequestActions
   final StatefulActionsOptions<
       AddOrgUnitToPhysicianApiRequest,
       AddOrgUnitToPhysicianApiRequestBuilder,
-      AddOrgUnitToPhysicianApiRequestActions> $options;
+      AddOrgUnitToPhysicianApiRequestActions> options$;
 
-  final ActionDispatcher<AddOrgUnitToPhysicianApiRequest> $replace;
+  final ActionDispatcher<AddOrgUnitToPhysicianApiRequest> replace$;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<String> physicianId;
   final FieldDispatcher<String> procedureId;
   final FieldDispatcher<String> relationshipTypeId;
 
-  _$AddOrgUnitToPhysicianApiRequestActions._(this.$options)
-      : $replace = $options.action<AddOrgUnitToPhysicianApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+  _$AddOrgUnitToPhysicianApiRequestActions._(this.options$)
+      : replace$ = options$.action<AddOrgUnitToPhysicianApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        physicianId = $options.field<String>(
+        physicianId = options$.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        relationshipTypeId = $options.field<String>(
+        relationshipTypeId = options$.field<String>(
             'relationshipTypeId',
             (a) => a?.relationshipTypeId,
             (s) => s?.relationshipTypeId,
@@ -265,18 +265,18 @@ class _$AddOrgUnitToPhysicianApiRequestActions
       _$AddOrgUnitToPhysicianApiRequestActions._(options());
 
   @override
-  AddOrgUnitToPhysicianApiRequest get $initial =>
+  AddOrgUnitToPhysicianApiRequest get initialState$ =>
       AddOrgUnitToPhysicianApiRequest();
 
   @override
-  AddOrgUnitToPhysicianApiRequestBuilder $newBuilder() =>
+  AddOrgUnitToPhysicianApiRequestBuilder newBuilder$() =>
       AddOrgUnitToPhysicianApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orgUnitId,
         this.physicianId,
         this.procedureId,
@@ -284,21 +284,16 @@ class _$AddOrgUnitToPhysicianApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    physicianId.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    relationshipTypeId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    physicianId.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    relationshipTypeId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AddOrgUnitToPhysicianApiRequest);
 }

@@ -425,9 +425,9 @@ typedef StatefulActionsOptions<AttributeContact, AttributeContactBuilder,
 
 class _$AttributeContactActions extends AttributeContactActions {
   final StatefulActionsOptions<AttributeContact, AttributeContactBuilder,
-      AttributeContactActions> $options;
+      AttributeContactActions> options$;
 
-  final ActionDispatcher<AttributeContact> $replace;
+  final ActionDispatcher<AttributeContact> replace$;
   final FieldDispatcher<String> linkId;
   final FieldDispatcher<AttributableType> attrType;
   final FieldDispatcher<String> attrId;
@@ -441,60 +441,60 @@ class _$AttributeContactActions extends AttributeContactActions {
   final FieldDispatcher<String> reference;
   final FieldDispatcher<bool> active;
 
-  _$AttributeContactActions._(this.$options)
-      : $replace =
-            $options.action<AttributeContact>('\$replace', (a) => a?.$replace),
-        linkId = $options.field<String>('linkId', (a) => a?.linkId,
+  _$AttributeContactActions._(this.options$)
+      : replace$ =
+            options$.action<AttributeContact>('replace\$', (a) => a?.replace$),
+        linkId = options$.field<String>('linkId', (a) => a?.linkId,
             (s) => s?.linkId, (p, b) => p?.linkId = b),
-        attrType = $options.field<AttributableType>('attrType',
+        attrType = options$.field<AttributableType>('attrType',
             (a) => a?.attrType, (s) => s?.attrType, (p, b) => p?.attrType = b),
-        attrId = $options.field<String>('attrId', (a) => a?.attrId,
+        attrId = options$.field<String>('attrId', (a) => a?.attrId,
             (s) => s?.attrId, (p, b) => p?.attrId = b),
-        contactId = $options.field<String>('contactId', (a) => a?.contactId,
+        contactId = options$.field<String>('contactId', (a) => a?.contactId,
             (s) => s?.contactId, (p, b) => p?.contactId = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        workPhone = PhoneNumberActions(() => $options
+        workPhone = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'workPhone',
                 (a) => a.workPhone,
                 (s) => s?.workPhone,
                 (b) => b?.workPhone,
                 (parent, builder) => parent?.workPhone = builder)),
-        mobilePhone = PhoneNumberActions(() => $options
+        mobilePhone = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'mobilePhone',
                 (a) => a.mobilePhone,
                 (s) => s?.mobilePhone,
                 (b) => b?.mobilePhone,
                 (parent, builder) => parent?.mobilePhone = builder)),
-        faxNumber = PhoneNumberActions(() => $options
+        faxNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'faxNumber',
                 (a) => a.faxNumber,
                 (s) => s?.faxNumber,
                 (b) => b?.faxNumber,
                 (parent, builder) => parent?.faxNumber = builder)),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -502,14 +502,14 @@ class _$AttributeContactActions extends AttributeContactActions {
       _$AttributeContactActions._(options());
 
   @override
-  AttributeContact get $initial => AttributeContact();
+  AttributeContact get initialState$ => AttributeContact();
 
   @override
-  AttributeContactBuilder $newBuilder() => AttributeContactBuilder();
+  AttributeContactBuilder newBuilder$() => AttributeContactBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
         this.name,
         this.workPhone,
@@ -517,11 +517,11 @@ class _$AttributeContactActions extends AttributeContactActions {
         this.faxNumber,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.linkId,
         this.attrType,
         this.attrId,
@@ -532,33 +532,29 @@ class _$AttributeContactActions extends AttributeContactActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    linkId.$reducer(reducer);
-    attrType.$reducer(reducer);
-    attrId.$reducer(reducer);
-    contactId.$reducer(reducer);
-    email.$reducer(reducer);
-    name.$reducer(reducer);
-    workPhone.$reducer(reducer);
-    mobilePhone.$reducer(reducer);
-    faxNumber.$reducer(reducer);
-    description.$reducer(reducer);
-    reference.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    linkId.reducer$(reducer);
+    attrType.reducer$(reducer);
+    attrId.reducer$(reducer);
+    contactId.reducer$(reducer);
+    email.reducer$(reducer);
+    name.reducer$(reducer);
+    workPhone.reducer$(reducer);
+    mobilePhone.reducer$(reducer);
+    faxNumber.reducer$(reducer);
+    description.reducer$(reducer);
+    reference.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    email.$middleware(middleware);
-    name.$middleware(middleware);
-    workPhone.$middleware(middleware);
-    mobilePhone.$middleware(middleware);
-    faxNumber.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    email.middleware$(middleware);
+    name.middleware$(middleware);
+    workPhone.middleware$(middleware);
+    mobilePhone.middleware$(middleware);
+    faxNumber.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(AttributeContact);
 }

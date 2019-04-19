@@ -219,21 +219,21 @@ class _$BuildUsageRestockPlanApiRequestActions
   final StatefulActionsOptions<
       BuildUsageRestockPlanApiRequest,
       BuildUsageRestockPlanApiRequestBuilder,
-      BuildUsageRestockPlanApiRequestActions> $options;
+      BuildUsageRestockPlanApiRequestActions> options$;
 
-  final ActionDispatcher<BuildUsageRestockPlanApiRequest> $replace;
+  final ActionDispatcher<BuildUsageRestockPlanApiRequest> replace$;
   final FieldDispatcher<String> caseId;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<BuiltList<BuildUsageRestockPlanApiUsage>> usages;
 
-  _$BuildUsageRestockPlanApiRequestActions._(this.$options)
-      : $replace = $options.action<BuildUsageRestockPlanApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseId = $options.field<String>('caseId', (a) => a?.caseId,
+  _$BuildUsageRestockPlanApiRequestActions._(this.options$)
+      : replace$ = options$.action<BuildUsageRestockPlanApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseId = options$.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        usages = $options.field<BuiltList<BuildUsageRestockPlanApiUsage>>(
+        usages = options$.field<BuiltList<BuildUsageRestockPlanApiUsage>>(
             'usages',
             (a) => a?.usages,
             (s) => s?.usages,
@@ -245,38 +245,33 @@ class _$BuildUsageRestockPlanApiRequestActions
       _$BuildUsageRestockPlanApiRequestActions._(options());
 
   @override
-  BuildUsageRestockPlanApiRequest get $initial =>
+  BuildUsageRestockPlanApiRequest get initialState$ =>
       BuildUsageRestockPlanApiRequest();
 
   @override
-  BuildUsageRestockPlanApiRequestBuilder $newBuilder() =>
+  BuildUsageRestockPlanApiRequestBuilder newBuilder$() =>
       BuildUsageRestockPlanApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseId,
         this.orderId,
         this.usages,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseId.$reducer(reducer);
-    orderId.$reducer(reducer);
-    usages.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseId.reducer$(reducer);
+    orderId.reducer$(reducer);
+    usages.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildUsageRestockPlanApiRequest);
 }

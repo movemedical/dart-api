@@ -175,21 +175,21 @@ typedef StatefulActionsOptions<
 
 class _$CreateMessageApiRequestActions extends CreateMessageApiRequestActions {
   final StatefulActionsOptions<CreateMessageApiRequest,
-      CreateMessageApiRequestBuilder, CreateMessageApiRequestActions> $options;
+      CreateMessageApiRequestBuilder, CreateMessageApiRequestActions> options$;
 
-  final ActionDispatcher<CreateMessageApiRequest> $replace;
+  final ActionDispatcher<CreateMessageApiRequest> replace$;
   final FieldDispatcher<String> fromParticipantId;
   final FieldDispatcher<String> messageText;
 
-  _$CreateMessageApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateMessageApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        fromParticipantId = $options.field<String>(
+  _$CreateMessageApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateMessageApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        fromParticipantId = options$.field<String>(
             'fromParticipantId',
             (a) => a?.fromParticipantId,
             (s) => s?.fromParticipantId,
             (p, b) => p?.fromParticipantId = b),
-        messageText = $options.field<String>(
+        messageText = options$.field<String>(
             'messageText',
             (a) => a?.messageText,
             (s) => s?.messageText,
@@ -201,34 +201,30 @@ class _$CreateMessageApiRequestActions extends CreateMessageApiRequestActions {
       _$CreateMessageApiRequestActions._(options());
 
   @override
-  CreateMessageApiRequest get $initial => CreateMessageApiRequest();
+  CreateMessageApiRequest get initialState$ => CreateMessageApiRequest();
 
   @override
-  CreateMessageApiRequestBuilder $newBuilder() =>
+  CreateMessageApiRequestBuilder newBuilder$() =>
       CreateMessageApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.fromParticipantId,
         this.messageText,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    fromParticipantId.$reducer(reducer);
-    messageText.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    fromParticipantId.reducer$(reducer);
+    messageText.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateMessageApiRequest);
 }

@@ -22,70 +22,33 @@ class _$ListBizUnitProcedureOptionsApi extends ListBizUnitProcedureOptionsApi {
           ApiResult<ListBizUnitProcedureOptionsApiResponse>>,
       CommandStateBuilder<ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
           ApiResult<ListBizUnitProcedureOptionsApiResponse>>,
-      ListBizUnitProcedureOptionsApi> $options;
+      ListBizUnitProcedureOptionsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
-          ApiResult<ListBizUnitProcedureOptionsApiResponse>>> $replace;
+          ApiResult<ListBizUnitProcedureOptionsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
-          ApiResult<ListBizUnitProcedureOptionsApiResponse>,
-          ListBizUnitProcedureOptionsApi,
-          String>> $cancel;
+      Command<ApiCommand<ListBizUnitProcedureOptionsApiRequest>>> execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
-          ApiResult<ListBizUnitProcedureOptionsApiResponse>,
-          ListBizUnitProcedureOptionsApi,
-          Command<ApiCommand<ListBizUnitProcedureOptionsApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
-              ApiResult<ListBizUnitProcedureOptionsApiResponse>,
-              ListBizUnitProcedureOptionsApi,
-              CommandResult<ApiResult<ListBizUnitProcedureOptionsApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
-          ApiResult<ListBizUnitProcedureOptionsApiResponse>,
-          ListBizUnitProcedureOptionsApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListBizUnitProcedureOptionsApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListBizUnitProcedureOptionsApi._(this.$options)
-      : $replace = $options.action<
+  _$ListBizUnitProcedureOptionsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
                     ApiResult<ListBizUnitProcedureOptionsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
-                ApiResult<ListBizUnitProcedureOptionsApiResponse>,
-                ListBizUnitProcedureOptionsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
-                    ApiResult<ListBizUnitProcedureOptionsApiResponse>,
-                    ListBizUnitProcedureOptionsApi,
-                    Command<
-                        ApiCommand<ListBizUnitProcedureOptionsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
-                    ApiResult<ListBizUnitProcedureOptionsApiResponse>,
-                    ListBizUnitProcedureOptionsApi,
-                    CommandResult<
-                        ApiResult<ListBizUnitProcedureOptionsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
-                ApiResult<ListBizUnitProcedureOptionsApiResponse>,
-                ListBizUnitProcedureOptionsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListBizUnitProcedureOptionsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<ListBizUnitProcedureOptionsApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListBizUnitProcedureOptionsApi(
@@ -95,33 +58,26 @@ class _$ListBizUnitProcedureOptionsApi extends ListBizUnitProcedureOptionsApi {
   @override
   CommandState<ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
           ApiResult<ListBizUnitProcedureOptionsApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
           ApiResult<ListBizUnitProcedureOptionsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
           ApiResult<ListBizUnitProcedureOptionsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListBizUnitProcedureOptionsApiRequest>,
           ApiResult<ListBizUnitProcedureOptionsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListBizUnitProcedureOptionsApiRequest)]),
-        FullType(ApiResult, [FullType(ListBizUnitProcedureOptionsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

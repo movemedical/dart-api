@@ -304,9 +304,9 @@ class _$PrepareFacilityFileUploadApiRequestActions
   final StatefulActionsOptions<
       PrepareFacilityFileUploadApiRequest,
       PrepareFacilityFileUploadApiRequestBuilder,
-      PrepareFacilityFileUploadApiRequestActions> $options;
+      PrepareFacilityFileUploadApiRequestActions> options$;
 
-  final ActionDispatcher<PrepareFacilityFileUploadApiRequest> $replace;
+  final ActionDispatcher<PrepareFacilityFileUploadApiRequest> replace$;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> fileName;
   final FieldDispatcher<String> fileDescription;
@@ -315,34 +315,34 @@ class _$PrepareFacilityFileUploadApiRequestActions
   final FieldDispatcher<String> ownerOrgUnitId;
   final FieldDispatcher<Visibility> visibility;
 
-  _$PrepareFacilityFileUploadApiRequestActions._(this.$options)
-      : $replace = $options.action<PrepareFacilityFileUploadApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+  _$PrepareFacilityFileUploadApiRequestActions._(this.options$)
+      : replace$ = options$.action<PrepareFacilityFileUploadApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        fileName = $options.field<String>('fileName', (a) => a?.fileName,
+        fileName = options$.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
-        fileDescription = $options.field<String>(
+        fileDescription = options$.field<String>(
             'fileDescription',
             (a) => a?.fileDescription,
             (s) => s?.fileDescription,
             (p, b) => p?.fileDescription = b),
-        facilityFileType = $options.field<FacilityFileType>(
+        facilityFileType = options$.field<FacilityFileType>(
             'facilityFileType',
             (a) => a?.facilityFileType,
             (s) => s?.facilityFileType,
             (p, b) => p?.facilityFileType = b),
-        estimatedSizeKb = $options.field<int>(
+        estimatedSizeKb = options$.field<int>(
             'estimatedSizeKb',
             (a) => a?.estimatedSizeKb,
             (s) => s?.estimatedSizeKb,
             (p, b) => p?.estimatedSizeKb = b),
-        ownerOrgUnitId = $options.field<String>(
+        ownerOrgUnitId = options$.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        visibility = $options.field<Visibility>(
+        visibility = options$.field<Visibility>(
             'visibility',
             (a) => a?.visibility,
             (s) => s?.visibility,
@@ -354,18 +354,18 @@ class _$PrepareFacilityFileUploadApiRequestActions
       _$PrepareFacilityFileUploadApiRequestActions._(options());
 
   @override
-  PrepareFacilityFileUploadApiRequest get $initial =>
+  PrepareFacilityFileUploadApiRequest get initialState$ =>
       PrepareFacilityFileUploadApiRequest();
 
   @override
-  PrepareFacilityFileUploadApiRequestBuilder $newBuilder() =>
+  PrepareFacilityFileUploadApiRequestBuilder newBuilder$() =>
       PrepareFacilityFileUploadApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.facilityId,
         this.fileName,
         this.fileDescription,
@@ -376,24 +376,19 @@ class _$PrepareFacilityFileUploadApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    fileName.$reducer(reducer);
-    fileDescription.$reducer(reducer);
-    facilityFileType.$reducer(reducer);
-    estimatedSizeKb.$reducer(reducer);
-    ownerOrgUnitId.$reducer(reducer);
-    visibility.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    fileName.reducer$(reducer);
+    fileDescription.reducer$(reducer);
+    facilityFileType.reducer$(reducer);
+    estimatedSizeKb.reducer$(reducer);
+    ownerOrgUnitId.reducer$(reducer);
+    visibility.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(PrepareFacilityFileUploadApiRequest);
 }

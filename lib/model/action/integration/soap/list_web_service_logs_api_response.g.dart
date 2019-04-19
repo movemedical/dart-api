@@ -197,18 +197,18 @@ class _$ListWebServiceLogsApiResponseActions
   final StatefulActionsOptions<
       ListWebServiceLogsApiResponse,
       ListWebServiceLogsApiResponseBuilder,
-      ListWebServiceLogsApiResponseActions> $options;
+      ListWebServiceLogsApiResponseActions> options$;
 
-  final ActionDispatcher<ListWebServiceLogsApiResponse> $replace;
+  final ActionDispatcher<ListWebServiceLogsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListWebServiceLogsApiWebServiceLog>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListWebServiceLogsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListWebServiceLogsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListWebServiceLogsApiWebServiceLog>>(
+  _$ListWebServiceLogsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListWebServiceLogsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListWebServiceLogsApiWebServiceLog>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -217,35 +217,31 @@ class _$ListWebServiceLogsApiResponseActions
       _$ListWebServiceLogsApiResponseActions._(options());
 
   @override
-  ListWebServiceLogsApiResponse get $initial => ListWebServiceLogsApiResponse();
+  ListWebServiceLogsApiResponse get initialState$ =>
+      ListWebServiceLogsApiResponse();
 
   @override
-  ListWebServiceLogsApiResponseBuilder $newBuilder() =>
+  ListWebServiceLogsApiResponseBuilder newBuilder$() =>
       ListWebServiceLogsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListWebServiceLogsApiResponse);
 }

@@ -174,21 +174,21 @@ typedef StatefulActionsOptions<
 
 class _$MessageAddedPushMessageActions extends MessageAddedPushMessageActions {
   final StatefulActionsOptions<MessageAddedPushMessage,
-      MessageAddedPushMessageBuilder, MessageAddedPushMessageActions> $options;
+      MessageAddedPushMessageBuilder, MessageAddedPushMessageActions> options$;
 
-  final ActionDispatcher<MessageAddedPushMessage> $replace;
+  final ActionDispatcher<MessageAddedPushMessage> replace$;
   final FieldDispatcher<String> conversationId;
   final FieldDispatcher<String> messageId;
 
-  _$MessageAddedPushMessageActions._(this.$options)
-      : $replace = $options.action<MessageAddedPushMessage>(
-            '\$replace', (a) => a?.$replace),
-        conversationId = $options.field<String>(
+  _$MessageAddedPushMessageActions._(this.options$)
+      : replace$ = options$.action<MessageAddedPushMessage>(
+            'replace\$', (a) => a?.replace$),
+        conversationId = options$.field<String>(
             'conversationId',
             (a) => a?.conversationId,
             (s) => s?.conversationId,
             (p, b) => p?.conversationId = b),
-        messageId = $options.field<String>('messageId', (a) => a?.messageId,
+        messageId = options$.field<String>('messageId', (a) => a?.messageId,
             (s) => s?.messageId, (p, b) => p?.messageId = b),
         super._();
 
@@ -197,34 +197,30 @@ class _$MessageAddedPushMessageActions extends MessageAddedPushMessageActions {
       _$MessageAddedPushMessageActions._(options());
 
   @override
-  MessageAddedPushMessage get $initial => MessageAddedPushMessage();
+  MessageAddedPushMessage get initialState$ => MessageAddedPushMessage();
 
   @override
-  MessageAddedPushMessageBuilder $newBuilder() =>
+  MessageAddedPushMessageBuilder newBuilder$() =>
       MessageAddedPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.conversationId,
         this.messageId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    conversationId.$reducer(reducer);
-    messageId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    conversationId.reducer$(reducer);
+    messageId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(MessageAddedPushMessage);
 }

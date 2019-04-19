@@ -197,18 +197,18 @@ class _$ListStockSummaryApiResponseActions
   final StatefulActionsOptions<
       ListStockSummaryApiResponse,
       ListStockSummaryApiResponseBuilder,
-      ListStockSummaryApiResponseActions> $options;
+      ListStockSummaryApiResponseActions> options$;
 
-  final ActionDispatcher<ListStockSummaryApiResponse> $replace;
+  final ActionDispatcher<ListStockSummaryApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListStockSummaryApiStockSummary>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListStockSummaryApiResponseActions._(this.$options)
-      : $replace = $options.action<ListStockSummaryApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListStockSummaryApiStockSummary>>(
+  _$ListStockSummaryApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListStockSummaryApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListStockSummaryApiStockSummary>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -217,35 +217,31 @@ class _$ListStockSummaryApiResponseActions
       _$ListStockSummaryApiResponseActions._(options());
 
   @override
-  ListStockSummaryApiResponse get $initial => ListStockSummaryApiResponse();
+  ListStockSummaryApiResponse get initialState$ =>
+      ListStockSummaryApiResponse();
 
   @override
-  ListStockSummaryApiResponseBuilder $newBuilder() =>
+  ListStockSummaryApiResponseBuilder newBuilder$() =>
       ListStockSummaryApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListStockSummaryApiResponse);
 }

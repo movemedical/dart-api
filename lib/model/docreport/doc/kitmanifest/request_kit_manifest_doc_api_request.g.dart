@@ -275,19 +275,19 @@ class _$RequestKitManifestDocApiRequestActions
   final StatefulActionsOptions<
       RequestKitManifestDocApiRequest,
       RequestKitManifestDocApiRequestBuilder,
-      RequestKitManifestDocApiRequestActions> $options;
+      RequestKitManifestDocApiRequestActions> options$;
 
-  final ActionDispatcher<RequestKitManifestDocApiRequest> $replace;
+  final ActionDispatcher<RequestKitManifestDocApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final FieldDispatcher<DocReportDisplayType> displayType;
   final FieldDispatcher<String> kitStockId;
   final FieldDispatcher<RequestKitManifestDocApiReportOption> option;
 
-  _$RequestKitManifestDocApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestKitManifestDocApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestKitManifestDocApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestKitManifestDocApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -296,16 +296,16 @@ class _$RequestKitManifestDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.field<DocReportDisplayType>(
+        displayType = options$.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        kitStockId = $options.field<String>('kitStockId', (a) => a?.kitStockId,
+        kitStockId = options$.field<String>('kitStockId', (a) => a?.kitStockId,
             (s) => s?.kitStockId, (p, b) => p?.kitStockId = b),
-        option = $options.field<RequestKitManifestDocApiReportOption>('option',
+        option = options$.field<RequestKitManifestDocApiReportOption>('option',
             (a) => a?.option, (s) => s?.option, (p, b) => p?.option = b),
         super._();
 
@@ -314,24 +314,24 @@ class _$RequestKitManifestDocApiRequestActions
       _$RequestKitManifestDocApiRequestActions._(options());
 
   @override
-  RequestKitManifestDocApiRequest get $initial =>
+  RequestKitManifestDocApiRequest get initialState$ =>
       RequestKitManifestDocApiRequest();
 
   @override
-  RequestKitManifestDocApiRequestBuilder $newBuilder() =>
+  RequestKitManifestDocApiRequestBuilder newBuilder$() =>
       RequestKitManifestDocApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.format,
         this.displayType,
         this.kitStockId,
@@ -339,23 +339,18 @@ class _$RequestKitManifestDocApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    format.$reducer(reducer);
-    displayType.$reducer(reducer);
-    kitStockId.$reducer(reducer);
-    option.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    format.reducer$(reducer);
+    displayType.reducer$(reducer);
+    kitStockId.reducer$(reducer);
+    option.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestKitManifestDocApiRequest);
 }

@@ -214,24 +214,24 @@ typedef StatefulActionsOptions<
 
 class _$SetupSystemApiResponseActions extends SetupSystemApiResponseActions {
   final StatefulActionsOptions<SetupSystemApiResponse,
-      SetupSystemApiResponseBuilder, SetupSystemApiResponseActions> $options;
+      SetupSystemApiResponseBuilder, SetupSystemApiResponseActions> options$;
 
-  final ActionDispatcher<SetupSystemApiResponse> $replace;
+  final ActionDispatcher<SetupSystemApiResponse> replace$;
   final FieldDispatcher<String> aeId;
   final FieldDispatcher<String> userId;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<String> orgUnitId;
 
-  _$SetupSystemApiResponseActions._(this.$options)
-      : $replace = $options.action<SetupSystemApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        aeId = $options.field<String>(
+  _$SetupSystemApiResponseActions._(this.options$)
+      : replace$ = options$.action<SetupSystemApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        aeId = options$.field<String>(
             'aeId', (a) => a?.aeId, (s) => s?.aeId, (p, b) => p?.aeId = b),
-        userId = $options.field<String>('userId', (a) => a?.userId,
+        userId = options$.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
         super._();
 
@@ -240,17 +240,17 @@ class _$SetupSystemApiResponseActions extends SetupSystemApiResponseActions {
       _$SetupSystemApiResponseActions._(options());
 
   @override
-  SetupSystemApiResponse get $initial => SetupSystemApiResponse();
+  SetupSystemApiResponse get initialState$ => SetupSystemApiResponse();
 
   @override
-  SetupSystemApiResponseBuilder $newBuilder() =>
+  SetupSystemApiResponseBuilder newBuilder$() =>
       SetupSystemApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.aeId,
         this.userId,
         this.orgId,
@@ -258,20 +258,16 @@ class _$SetupSystemApiResponseActions extends SetupSystemApiResponseActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    aeId.$reducer(reducer);
-    userId.$reducer(reducer);
-    orgId.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    aeId.reducer$(reducer);
+    userId.reducer$(reducer);
+    orgId.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SetupSystemApiResponse);
 }

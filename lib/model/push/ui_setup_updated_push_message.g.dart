@@ -114,13 +114,13 @@ class _$UiSetupUpdatedPushMessageActions
   final StatefulActionsOptions<
       UiSetupUpdatedPushMessage,
       UiSetupUpdatedPushMessageBuilder,
-      UiSetupUpdatedPushMessageActions> $options;
+      UiSetupUpdatedPushMessageActions> options$;
 
-  final ActionDispatcher<UiSetupUpdatedPushMessage> $replace;
+  final ActionDispatcher<UiSetupUpdatedPushMessage> replace$;
 
-  _$UiSetupUpdatedPushMessageActions._(this.$options)
-      : $replace = $options.action<UiSetupUpdatedPushMessage>(
-            '\$replace', (a) => a?.$replace),
+  _$UiSetupUpdatedPushMessageActions._(this.options$)
+      : replace$ = options$.action<UiSetupUpdatedPushMessage>(
+            'replace\$', (a) => a?.replace$),
         super._();
 
   factory _$UiSetupUpdatedPushMessageActions(
@@ -128,20 +128,16 @@ class _$UiSetupUpdatedPushMessageActions
       _$UiSetupUpdatedPushMessageActions._(options());
 
   @override
-  UiSetupUpdatedPushMessage get $initial => UiSetupUpdatedPushMessage();
+  UiSetupUpdatedPushMessage get initialState$ => UiSetupUpdatedPushMessage();
 
   @override
-  UiSetupUpdatedPushMessageBuilder $newBuilder() =>
+  UiSetupUpdatedPushMessageBuilder newBuilder$() =>
       UiSetupUpdatedPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(UiSetupUpdatedPushMessage);
 }

@@ -206,30 +206,30 @@ typedef StatefulActionsOptions<PhoneNumber, PhoneNumberBuilder,
 
 class _$PhoneNumberActions extends PhoneNumberActions {
   final StatefulActionsOptions<PhoneNumber, PhoneNumberBuilder,
-      PhoneNumberActions> $options;
+      PhoneNumberActions> options$;
 
-  final ActionDispatcher<PhoneNumber> $replace;
+  final ActionDispatcher<PhoneNumber> replace$;
   final FieldDispatcher<String> countryCode;
   final FieldDispatcher<String> areaCode;
   final FieldDispatcher<String> phoneNumber;
   final FieldDispatcher<String> extension;
 
-  _$PhoneNumberActions._(this.$options)
-      : $replace =
-            $options.action<PhoneNumber>('\$replace', (a) => a?.$replace),
-        countryCode = $options.field<String>(
+  _$PhoneNumberActions._(this.options$)
+      : replace$ =
+            options$.action<PhoneNumber>('replace\$', (a) => a?.replace$),
+        countryCode = options$.field<String>(
             'countryCode',
             (a) => a?.countryCode,
             (s) => s?.countryCode,
             (p, b) => p?.countryCode = b),
-        areaCode = $options.field<String>('areaCode', (a) => a?.areaCode,
+        areaCode = options$.field<String>('areaCode', (a) => a?.areaCode,
             (s) => s?.areaCode, (p, b) => p?.areaCode = b),
-        phoneNumber = $options.field<String>(
+        phoneNumber = options$.field<String>(
             'phoneNumber',
             (a) => a?.phoneNumber,
             (s) => s?.phoneNumber,
             (p, b) => p?.phoneNumber = b),
-        extension = $options.field<String>('extension', (a) => a?.extension,
+        extension = options$.field<String>('extension', (a) => a?.extension,
             (s) => s?.extension, (p, b) => p?.extension = b),
         super._();
 
@@ -237,16 +237,16 @@ class _$PhoneNumberActions extends PhoneNumberActions {
       _$PhoneNumberActions._(options());
 
   @override
-  PhoneNumber get $initial => PhoneNumber();
+  PhoneNumber get initialState$ => PhoneNumber();
 
   @override
-  PhoneNumberBuilder $newBuilder() => PhoneNumberBuilder();
+  PhoneNumberBuilder newBuilder$() => PhoneNumberBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.countryCode,
         this.areaCode,
         this.phoneNumber,
@@ -254,20 +254,16 @@ class _$PhoneNumberActions extends PhoneNumberActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    countryCode.$reducer(reducer);
-    areaCode.$reducer(reducer);
-    phoneNumber.$reducer(reducer);
-    extension.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    countryCode.reducer$(reducer);
+    areaCode.reducer$(reducer);
+    phoneNumber.reducer$(reducer);
+    extension.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(PhoneNumber);
 }

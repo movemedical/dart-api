@@ -229,27 +229,27 @@ class _$ListStockContainersForLocationApiRequestActions
   final StatefulActionsOptions<
       ListStockContainersForLocationApiRequest,
       ListStockContainersForLocationApiRequestBuilder,
-      ListStockContainersForLocationApiRequestActions> $options;
+      ListStockContainersForLocationApiRequestActions> options$;
 
-  final ActionDispatcher<ListStockContainersForLocationApiRequest> $replace;
+  final ActionDispatcher<ListStockContainersForLocationApiRequest> replace$;
   final FieldDispatcher<String> locationId;
   final FieldDispatcher<LocationType> locationType;
   final FieldDispatcher<bool> active;
   final FieldDispatcher<String> search;
 
-  _$ListStockContainersForLocationApiRequestActions._(this.$options)
-      : $replace = $options.action<ListStockContainersForLocationApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+  _$ListStockContainersForLocationApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListStockContainersForLocationApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -258,18 +258,18 @@ class _$ListStockContainersForLocationApiRequestActions
       _$ListStockContainersForLocationApiRequestActions._(options());
 
   @override
-  ListStockContainersForLocationApiRequest get $initial =>
+  ListStockContainersForLocationApiRequest get initialState$ =>
       ListStockContainersForLocationApiRequest();
 
   @override
-  ListStockContainersForLocationApiRequestBuilder $newBuilder() =>
+  ListStockContainersForLocationApiRequestBuilder newBuilder$() =>
       ListStockContainersForLocationApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.locationId,
         this.locationType,
         this.active,
@@ -277,21 +277,16 @@ class _$ListStockContainersForLocationApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    locationId.$reducer(reducer);
-    locationType.$reducer(reducer);
-    active.$reducer(reducer);
-    search.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    locationId.reducer$(reducer);
+    locationType.reducer$(reducer);
+    active.reducer$(reducer);
+    search.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListStockContainersForLocationApiRequest);
 }

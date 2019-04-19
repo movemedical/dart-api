@@ -523,9 +523,9 @@ typedef StatefulActionsOptions<
 
 class _$CreateRootOrgApiRequestActions extends CreateRootOrgApiRequestActions {
   final StatefulActionsOptions<CreateRootOrgApiRequest,
-      CreateRootOrgApiRequestBuilder, CreateRootOrgApiRequestActions> $options;
+      CreateRootOrgApiRequestBuilder, CreateRootOrgApiRequestActions> options$;
 
-  final ActionDispatcher<CreateRootOrgApiRequest> $replace;
+  final ActionDispatcher<CreateRootOrgApiRequest> replace$;
   final FieldDispatcher<String> aeReference;
   final FieldDispatcher<String> orgReference;
   final PersonNameActions aeName;
@@ -543,77 +543,77 @@ class _$CreateRootOrgApiRequestActions extends CreateRootOrgApiRequestActions {
   final FieldDispatcher<String> aePassword;
   final FieldDispatcher<bool> phiAllowed;
 
-  _$CreateRootOrgApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateRootOrgApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        aeReference = $options.field<String>(
+  _$CreateRootOrgApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateRootOrgApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        aeReference = options$.field<String>(
             'aeReference',
             (a) => a?.aeReference,
             (s) => s?.aeReference,
             (p, b) => p?.aeReference = b),
-        orgReference = $options.field<String>(
+        orgReference = options$.field<String>(
             'orgReference',
             (a) => a?.orgReference,
             (s) => s?.orgReference,
             (p, b) => p?.orgReference = b),
         aeName = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'aeName',
                 (a) => a.aeName,
                 (s) => s?.aeName,
                 (b) => b?.aeName,
                 (parent, builder) => parent?.aeName = builder)),
-        orgName = $options.field<String>('orgName', (a) => a?.orgName,
+        orgName = options$.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        type = $options.field<OrgType>(
+        type = options$.field<OrgType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        addressLine1 = $options.field<String>(
+        addressLine1 = options$.field<String>(
             'addressLine1',
             (a) => a?.addressLine1,
             (s) => s?.addressLine1,
             (p, b) => p?.addressLine1 = b),
-        addressLine2 = $options.field<String>(
+        addressLine2 = options$.field<String>(
             'addressLine2',
             (a) => a?.addressLine2,
             (s) => s?.addressLine2,
             (p, b) => p?.addressLine2 = b),
-        addressLine3 = $options.field<String>(
+        addressLine3 = options$.field<String>(
             'addressLine3',
             (a) => a?.addressLine3,
             (s) => s?.addressLine3,
             (p, b) => p?.addressLine3 = b),
-        addressCity = $options.field<String>(
+        addressCity = options$.field<String>(
             'addressCity',
             (a) => a?.addressCity,
             (s) => s?.addressCity,
             (p, b) => p?.addressCity = b),
-        addressState = $options.field<String>(
+        addressState = options$.field<String>(
             'addressState',
             (a) => a?.addressState,
             (s) => s?.addressState,
             (p, b) => p?.addressState = b),
-        addressPostalCode = $options.field<String>(
+        addressPostalCode = options$.field<String>(
             'addressPostalCode',
             (a) => a?.addressPostalCode,
             (s) => s?.addressPostalCode,
             (p, b) => p?.addressPostalCode = b),
-        addressCountry = $options.field<String>(
+        addressCountry = options$.field<String>(
             'addressCountry',
             (a) => a?.addressCountry,
             (s) => s?.addressCountry,
             (p, b) => p?.addressCountry = b),
-        aeTimezone = $options.field<String>('aeTimezone', (a) => a?.aeTimezone,
+        aeTimezone = options$.field<String>('aeTimezone', (a) => a?.aeTimezone,
             (s) => s?.aeTimezone, (p, b) => p?.aeTimezone = b),
-        aePassword = $options.field<String>('aePassword', (a) => a?.aePassword,
+        aePassword = options$.field<String>('aePassword', (a) => a?.aePassword,
             (s) => s?.aePassword, (p, b) => p?.aePassword = b),
-        phiAllowed = $options.field<bool>('phiAllowed', (a) => a?.phiAllowed,
+        phiAllowed = options$.field<bool>('phiAllowed', (a) => a?.phiAllowed,
             (s) => s?.phiAllowed, (p, b) => p?.phiAllowed = b),
         super._();
 
@@ -622,24 +622,24 @@ class _$CreateRootOrgApiRequestActions extends CreateRootOrgApiRequestActions {
       _$CreateRootOrgApiRequestActions._(options());
 
   @override
-  CreateRootOrgApiRequest get $initial => CreateRootOrgApiRequest();
+  CreateRootOrgApiRequest get initialState$ => CreateRootOrgApiRequest();
 
   @override
-  CreateRootOrgApiRequestBuilder $newBuilder() =>
+  CreateRootOrgApiRequestBuilder newBuilder$() =>
       CreateRootOrgApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.aeName,
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.aeReference,
         this.orgReference,
         this.orgName,
@@ -657,34 +657,30 @@ class _$CreateRootOrgApiRequestActions extends CreateRootOrgApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    aeReference.$reducer(reducer);
-    orgReference.$reducer(reducer);
-    aeName.$reducer(reducer);
-    orgName.$reducer(reducer);
-    type.$reducer(reducer);
-    email.$reducer(reducer);
-    addressLine1.$reducer(reducer);
-    addressLine2.$reducer(reducer);
-    addressLine3.$reducer(reducer);
-    addressCity.$reducer(reducer);
-    addressState.$reducer(reducer);
-    addressPostalCode.$reducer(reducer);
-    addressCountry.$reducer(reducer);
-    aeTimezone.$reducer(reducer);
-    aePassword.$reducer(reducer);
-    phiAllowed.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    aeReference.reducer$(reducer);
+    orgReference.reducer$(reducer);
+    aeName.reducer$(reducer);
+    orgName.reducer$(reducer);
+    type.reducer$(reducer);
+    email.reducer$(reducer);
+    addressLine1.reducer$(reducer);
+    addressLine2.reducer$(reducer);
+    addressLine3.reducer$(reducer);
+    addressCity.reducer$(reducer);
+    addressState.reducer$(reducer);
+    addressPostalCode.reducer$(reducer);
+    addressCountry.reducer$(reducer);
+    aeTimezone.reducer$(reducer);
+    aePassword.reducer$(reducer);
+    phiAllowed.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    aeName.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    aeName.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateRootOrgApiRequest);
 }

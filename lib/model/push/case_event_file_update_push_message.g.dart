@@ -235,32 +235,32 @@ class _$CaseEventFileUpdatePushMessageActions
   final StatefulActionsOptions<
       CaseEventFileUpdatePushMessage,
       CaseEventFileUpdatePushMessageBuilder,
-      CaseEventFileUpdatePushMessageActions> $options;
+      CaseEventFileUpdatePushMessageActions> options$;
 
-  final ActionDispatcher<CaseEventFileUpdatePushMessage> $replace;
+  final ActionDispatcher<CaseEventFileUpdatePushMessage> replace$;
   final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<String> fileId;
   final FieldDispatcher<CaseEventFileUpdatePushMessageCaseEventFileUpdateType>
       updateType;
   final FieldDispatcher<double> percentUploadedDecimalForm;
 
-  _$CaseEventFileUpdatePushMessageActions._(this.$options)
-      : $replace = $options.action<CaseEventFileUpdatePushMessage>(
-            '\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$CaseEventFileUpdatePushMessageActions._(this.options$)
+      : replace$ = options$.action<CaseEventFileUpdatePushMessage>(
+            'replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        updateType = $options
+        updateType = options$
             .field<CaseEventFileUpdatePushMessageCaseEventFileUpdateType>(
                 'updateType',
                 (a) => a?.updateType,
                 (s) => s?.updateType,
                 (p, b) => p?.updateType = b),
-        percentUploadedDecimalForm = $options.field<double>(
+        percentUploadedDecimalForm = options$.field<double>(
             'percentUploadedDecimalForm',
             (a) => a?.percentUploadedDecimalForm,
             (s) => s?.percentUploadedDecimalForm,
@@ -272,18 +272,18 @@ class _$CaseEventFileUpdatePushMessageActions
       _$CaseEventFileUpdatePushMessageActions._(options());
 
   @override
-  CaseEventFileUpdatePushMessage get $initial =>
+  CaseEventFileUpdatePushMessage get initialState$ =>
       CaseEventFileUpdatePushMessage();
 
   @override
-  CaseEventFileUpdatePushMessageBuilder $newBuilder() =>
+  CaseEventFileUpdatePushMessageBuilder newBuilder$() =>
       CaseEventFileUpdatePushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
         this.fileId,
         this.updateType,
@@ -291,21 +291,16 @@ class _$CaseEventFileUpdatePushMessageActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
-    fileId.$reducer(reducer);
-    updateType.$reducer(reducer);
-    percentUploadedDecimalForm.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
+    fileId.reducer$(reducer);
+    updateType.reducer$(reducer);
+    percentUploadedDecimalForm.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CaseEventFileUpdatePushMessage);
 }

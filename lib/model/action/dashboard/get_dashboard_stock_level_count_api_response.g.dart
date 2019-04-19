@@ -162,15 +162,15 @@ class _$GetDashboardStockLevelCountApiResponseActions
   final StatefulActionsOptions<
       GetDashboardStockLevelCountApiResponse,
       GetDashboardStockLevelCountApiResponseBuilder,
-      GetDashboardStockLevelCountApiResponseActions> $options;
+      GetDashboardStockLevelCountApiResponseActions> options$;
 
-  final ActionDispatcher<GetDashboardStockLevelCountApiResponse> $replace;
+  final ActionDispatcher<GetDashboardStockLevelCountApiResponse> replace$;
   final FieldDispatcher<int> count;
 
-  _$GetDashboardStockLevelCountApiResponseActions._(this.$options)
-      : $replace = $options.action<GetDashboardStockLevelCountApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        count = $options.field<int>(
+  _$GetDashboardStockLevelCountApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetDashboardStockLevelCountApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        count = options$.field<int>(
             'count', (a) => a?.count, (s) => s?.count, (p, b) => p?.count = b),
         super._();
 
@@ -179,34 +179,29 @@ class _$GetDashboardStockLevelCountApiResponseActions
       _$GetDashboardStockLevelCountApiResponseActions._(options());
 
   @override
-  GetDashboardStockLevelCountApiResponse get $initial =>
+  GetDashboardStockLevelCountApiResponse get initialState$ =>
       GetDashboardStockLevelCountApiResponse();
 
   @override
-  GetDashboardStockLevelCountApiResponseBuilder $newBuilder() =>
+  GetDashboardStockLevelCountApiResponseBuilder newBuilder$() =>
       GetDashboardStockLevelCountApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.count,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    count.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    count.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetDashboardStockLevelCountApiResponse);
 }

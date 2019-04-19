@@ -148,15 +148,15 @@ typedef StatefulActionsOptions<
 
 class _$DeleteFileApiRequestActions extends DeleteFileApiRequestActions {
   final StatefulActionsOptions<DeleteFileApiRequest,
-      DeleteFileApiRequestBuilder, DeleteFileApiRequestActions> $options;
+      DeleteFileApiRequestBuilder, DeleteFileApiRequestActions> options$;
 
-  final ActionDispatcher<DeleteFileApiRequest> $replace;
+  final ActionDispatcher<DeleteFileApiRequest> replace$;
   final FieldDispatcher<String> fileId;
 
-  _$DeleteFileApiRequestActions._(this.$options)
-      : $replace = $options.action<DeleteFileApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+  _$DeleteFileApiRequestActions._(this.options$)
+      : replace$ = options$.action<DeleteFileApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
         super._();
 
@@ -165,31 +165,27 @@ class _$DeleteFileApiRequestActions extends DeleteFileApiRequestActions {
       _$DeleteFileApiRequestActions._(options());
 
   @override
-  DeleteFileApiRequest get $initial => DeleteFileApiRequest();
+  DeleteFileApiRequest get initialState$ => DeleteFileApiRequest();
 
   @override
-  DeleteFileApiRequestBuilder $newBuilder() => DeleteFileApiRequestBuilder();
+  DeleteFileApiRequestBuilder newBuilder$() => DeleteFileApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.fileId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    fileId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    fileId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(DeleteFileApiRequest);
 }

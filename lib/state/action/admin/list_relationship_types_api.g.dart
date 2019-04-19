@@ -22,68 +22,32 @@ class _$ListRelationshipTypesApi extends ListRelationshipTypesApi {
           ApiResult<ListRelationshipTypesApiResponse>>,
       CommandStateBuilder<ApiCommand<ListRelationshipTypesApiRequest>,
           ApiResult<ListRelationshipTypesApiResponse>>,
-      ListRelationshipTypesApi> $options;
+      ListRelationshipTypesApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListRelationshipTypesApiRequest>,
-          ApiResult<ListRelationshipTypesApiResponse>>> $replace;
+          ApiResult<ListRelationshipTypesApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListRelationshipTypesApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListRelationshipTypesApiRequest>,
-          ApiResult<ListRelationshipTypesApiResponse>,
-          ListRelationshipTypesApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListRelationshipTypesApiRequest>,
-          ApiResult<ListRelationshipTypesApiResponse>,
-          ListRelationshipTypesApi,
-          Command<ApiCommand<ListRelationshipTypesApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListRelationshipTypesApiRequest>,
-          ApiResult<ListRelationshipTypesApiResponse>,
-          ListRelationshipTypesApi,
-          CommandResult<ApiResult<ListRelationshipTypesApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListRelationshipTypesApiRequest>,
-          ApiResult<ListRelationshipTypesApiResponse>,
-          ListRelationshipTypesApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListRelationshipTypesApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListRelationshipTypesApi._(this.$options)
-      : $replace = $options.action<
+  _$ListRelationshipTypesApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListRelationshipTypesApiRequest>,
                     ApiResult<ListRelationshipTypesApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListRelationshipTypesApiRequest>,
-                ApiResult<ListRelationshipTypesApiResponse>,
-                ListRelationshipTypesApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListRelationshipTypesApiRequest>,
-                    ApiResult<ListRelationshipTypesApiResponse>,
-                    ListRelationshipTypesApi,
-                    Command<ApiCommand<ListRelationshipTypesApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListRelationshipTypesApiRequest>,
-                    ApiResult<ListRelationshipTypesApiResponse>,
-                    ListRelationshipTypesApi,
-                    CommandResult<
-                        ApiResult<ListRelationshipTypesApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListRelationshipTypesApiRequest>,
-                ApiResult<ListRelationshipTypesApiResponse>,
-                ListRelationshipTypesApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListRelationshipTypesApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListRelationshipTypesApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListRelationshipTypesApi(ListRelationshipTypesApiOptions options) =>
@@ -92,32 +56,26 @@ class _$ListRelationshipTypesApi extends ListRelationshipTypesApi {
   @override
   CommandState<ApiCommand<ListRelationshipTypesApiRequest>,
           ApiResult<ListRelationshipTypesApiResponse>>
-      get $initial => CommandState<ApiCommand<ListRelationshipTypesApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<ListRelationshipTypesApiRequest>,
           ApiResult<ListRelationshipTypesApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListRelationshipTypesApiRequest>,
           ApiResult<ListRelationshipTypesApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListRelationshipTypesApiRequest>,
           ApiResult<ListRelationshipTypesApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListRelationshipTypesApiRequest)]),
-        FullType(ApiResult, [FullType(ListRelationshipTypesApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

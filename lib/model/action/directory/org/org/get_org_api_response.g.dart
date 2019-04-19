@@ -204,17 +204,17 @@ typedef StatefulActionsOptions<GetOrgApiResponse, GetOrgApiResponseBuilder,
 
 class _$GetOrgApiResponseActions extends GetOrgApiResponseActions {
   final StatefulActionsOptions<GetOrgApiResponse, GetOrgApiResponseBuilder,
-      GetOrgApiResponseActions> $options;
+      GetOrgApiResponseActions> options$;
 
-  final ActionDispatcher<GetOrgApiResponse> $replace;
+  final ActionDispatcher<GetOrgApiResponse> replace$;
   final GetOrgApiOrgDetailActions data;
   final FieldDispatcher<bool> editAllowed;
   final FieldDispatcher<bool> relationAddRemoveAllowed;
 
-  _$GetOrgApiResponseActions._(this.$options)
-      : $replace =
-            $options.action<GetOrgApiResponse>('\$replace', (a) => a?.$replace),
-        data = GetOrgApiOrgDetailActions(() => $options.stateful<
+  _$GetOrgApiResponseActions._(this.options$)
+      : replace$ =
+            options$.action<GetOrgApiResponse>('replace\$', (a) => a?.replace$),
+        data = GetOrgApiOrgDetailActions(() => options$.stateful<
                 GetOrgApiOrgDetail,
                 GetOrgApiOrgDetailBuilder,
                 GetOrgApiOrgDetailActions>(
@@ -223,9 +223,9 @@ class _$GetOrgApiResponseActions extends GetOrgApiResponseActions {
             (s) => s?.data,
             (b) => b?.data,
             (parent, builder) => parent?.data = builder)),
-        editAllowed = $options.field<bool>('editAllowed', (a) => a?.editAllowed,
+        editAllowed = options$.field<bool>('editAllowed', (a) => a?.editAllowed,
             (s) => s?.editAllowed, (p, b) => p?.editAllowed = b),
-        relationAddRemoveAllowed = $options.field<bool>(
+        relationAddRemoveAllowed = options$.field<bool>(
             'relationAddRemoveAllowed',
             (a) => a?.relationAddRemoveAllowed,
             (s) => s?.relationAddRemoveAllowed,
@@ -236,41 +236,37 @@ class _$GetOrgApiResponseActions extends GetOrgApiResponseActions {
       _$GetOrgApiResponseActions._(options());
 
   @override
-  GetOrgApiResponse get $initial => GetOrgApiResponse();
+  GetOrgApiResponse get initialState$ => GetOrgApiResponse();
 
   @override
-  GetOrgApiResponseBuilder $newBuilder() => GetOrgApiResponseBuilder();
+  GetOrgApiResponseBuilder newBuilder$() => GetOrgApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.data,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.editAllowed,
         this.relationAddRemoveAllowed,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    editAllowed.$reducer(reducer);
-    relationAddRemoveAllowed.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    editAllowed.reducer$(reducer);
+    relationAddRemoveAllowed.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    data.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    data.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetOrgApiResponse);
 }

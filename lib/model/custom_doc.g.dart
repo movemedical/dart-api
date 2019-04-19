@@ -181,23 +181,23 @@ typedef StatefulActionsOptions<CustomDoc, CustomDocBuilder,
 
 class _$CustomDocActions extends CustomDocActions {
   final StatefulActionsOptions<CustomDoc, CustomDocBuilder, CustomDocActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<CustomDoc> $replace;
+  final ActionDispatcher<CustomDoc> replace$;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> orderReasonDocId;
   final FieldDispatcher<OrderReasonDocValidFor> validFor;
 
-  _$CustomDocActions._(this.$options)
-      : $replace = $options.action<CustomDoc>('\$replace', (a) => a?.$replace),
-        name = $options.field<String>(
+  _$CustomDocActions._(this.options$)
+      : replace$ = options$.action<CustomDoc>('replace\$', (a) => a?.replace$),
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        orderReasonDocId = $options.field<String>(
+        orderReasonDocId = options$.field<String>(
             'orderReasonDocId',
             (a) => a?.orderReasonDocId,
             (s) => s?.orderReasonDocId,
             (p, b) => p?.orderReasonDocId = b),
-        validFor = $options.field<OrderReasonDocValidFor>('validFor',
+        validFor = options$.field<OrderReasonDocValidFor>('validFor',
             (a) => a?.validFor, (s) => s?.validFor, (p, b) => p?.validFor = b),
         super._();
 
@@ -205,35 +205,31 @@ class _$CustomDocActions extends CustomDocActions {
       _$CustomDocActions._(options());
 
   @override
-  CustomDoc get $initial => CustomDoc();
+  CustomDoc get initialState$ => CustomDoc();
 
   @override
-  CustomDocBuilder $newBuilder() => CustomDocBuilder();
+  CustomDocBuilder newBuilder$() => CustomDocBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.name,
         this.orderReasonDocId,
         this.validFor,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    name.$reducer(reducer);
-    orderReasonDocId.$reducer(reducer);
-    validFor.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    name.reducer$(reducer);
+    orderReasonDocId.reducer$(reducer);
+    validFor.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CustomDoc);
 }

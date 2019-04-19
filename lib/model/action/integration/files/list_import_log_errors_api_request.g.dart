@@ -245,30 +245,30 @@ class _$ListImportLogErrorsApiRequestActions
   final StatefulActionsOptions<
       ListImportLogErrorsApiRequest,
       ListImportLogErrorsApiRequestBuilder,
-      ListImportLogErrorsApiRequestActions> $options;
+      ListImportLogErrorsApiRequestActions> options$;
 
-  final ActionDispatcher<ListImportLogErrorsApiRequest> $replace;
+  final ActionDispatcher<ListImportLogErrorsApiRequest> replace$;
   final FieldDispatcher<String> importLogFileId;
   final FieldDispatcher<String> integrationIssueId;
   final FieldDispatcher<bool> skipped;
   final PaginationParamsActions paging;
 
-  _$ListImportLogErrorsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListImportLogErrorsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        importLogFileId = $options.field<String>(
+  _$ListImportLogErrorsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListImportLogErrorsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        importLogFileId = options$.field<String>(
             'importLogFileId',
             (a) => a?.importLogFileId,
             (s) => s?.importLogFileId,
             (p, b) => p?.importLogFileId = b),
-        integrationIssueId = $options.field<String>(
+        integrationIssueId = options$.field<String>(
             'integrationIssueId',
             (a) => a?.integrationIssueId,
             (s) => s?.integrationIssueId,
             (p, b) => p?.integrationIssueId = b),
-        skipped = $options.field<bool>('skipped', (a) => a?.skipped,
+        skipped = options$.field<bool>('skipped', (a) => a?.skipped,
             (s) => s?.skipped, (p, b) => p?.skipped = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -284,45 +284,41 @@ class _$ListImportLogErrorsApiRequestActions
       _$ListImportLogErrorsApiRequestActions._(options());
 
   @override
-  ListImportLogErrorsApiRequest get $initial => ListImportLogErrorsApiRequest();
+  ListImportLogErrorsApiRequest get initialState$ =>
+      ListImportLogErrorsApiRequest();
 
   @override
-  ListImportLogErrorsApiRequestBuilder $newBuilder() =>
+  ListImportLogErrorsApiRequestBuilder newBuilder$() =>
       ListImportLogErrorsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.importLogFileId,
         this.integrationIssueId,
         this.skipped,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    importLogFileId.$reducer(reducer);
-    integrationIssueId.$reducer(reducer);
-    skipped.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    importLogFileId.reducer$(reducer);
+    integrationIssueId.reducer$(reducer);
+    skipped.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListImportLogErrorsApiRequest);
 }

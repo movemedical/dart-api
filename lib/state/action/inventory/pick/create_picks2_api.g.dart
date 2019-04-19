@@ -19,57 +19,27 @@ class _$CreatePicks2Api extends CreatePicks2Api {
       CommandState<ApiCommand<CreatePicks2ApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<CreatePicks2ApiRequest>,
           ApiResult<Nothing>>,
-      CreatePicks2Api> $options;
+      CreatePicks2Api> options$;
 
   final ActionDispatcher<
           CommandState<ApiCommand<CreatePicks2ApiRequest>, ApiResult<Nothing>>>
-      $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePicks2ApiRequest>, ApiResult<Nothing>,
-          CreatePicks2Api, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreatePicks2ApiRequest>,
-          ApiResult<Nothing>,
-          CreatePicks2Api,
-          Command<ApiCommand<CreatePicks2ApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePicks2ApiRequest>, ApiResult<Nothing>,
-          CreatePicks2Api, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePicks2ApiRequest>, ApiResult<Nothing>,
-          CreatePicks2Api, CommandProgress>> $progress;
+      replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<CreatePicks2ApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CreatePicks2Api._(this.$options)
-      : $replace = $options.action<
+  _$CreatePicks2Api._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<CreatePicks2ApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CreatePicks2ApiRequest>,
-                ApiResult<Nothing>,
-                CreatePicks2Api,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CreatePicks2ApiRequest>,
-                    ApiResult<Nothing>,
-                    CreatePicks2Api,
-                    Command<ApiCommand<CreatePicks2ApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CreatePicks2ApiRequest>,
-                    ApiResult<Nothing>,
-                    CreatePicks2Api,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CreatePicks2ApiRequest>,
-                ApiResult<Nothing>,
-                CreatePicks2Api,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<CreatePicks2ApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CreatePicks2Api(CreatePicks2ApiOptions options) =>
@@ -77,30 +47,23 @@ class _$CreatePicks2Api extends CreatePicks2Api {
 
   @override
   CommandState<ApiCommand<CreatePicks2ApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<CreatePicks2ApiRequest>,
+      get initialState$ => CommandState<ApiCommand<CreatePicks2ApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreatePicks2ApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<CreatePicks2ApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<CreatePicks2ApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CreatePicks2ApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

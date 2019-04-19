@@ -155,17 +155,17 @@ typedef StatefulActionsOptions<BizUnit, BizUnitBuilder,
 
 class _$BizUnitActions extends BizUnitActions {
   final StatefulActionsOptions<BizUnit, BizUnitBuilder, BizUnitActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<BizUnit> $replace;
+  final ActionDispatcher<BizUnit> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
 
-  _$BizUnitActions._(this.$options)
-      : $replace = $options.action<BizUnit>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BizUnitActions._(this.options$)
+      : replace$ = options$.action<BizUnit>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         super._();
 
@@ -173,33 +173,29 @@ class _$BizUnitActions extends BizUnitActions {
       _$BizUnitActions._(options());
 
   @override
-  BizUnit get $initial => BizUnit();
+  BizUnit get initialState$ => BizUnit();
 
   @override
-  BizUnitBuilder $newBuilder() => BizUnitBuilder();
+  BizUnitBuilder newBuilder$() => BizUnitBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(BizUnit);
 }

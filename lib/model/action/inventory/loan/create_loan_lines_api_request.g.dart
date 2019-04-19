@@ -177,17 +177,17 @@ class _$CreateLoanLinesApiRequestActions
   final StatefulActionsOptions<
       CreateLoanLinesApiRequest,
       CreateLoanLinesApiRequestBuilder,
-      CreateLoanLinesApiRequestActions> $options;
+      CreateLoanLinesApiRequestActions> options$;
 
-  final ActionDispatcher<CreateLoanLinesApiRequest> $replace;
+  final ActionDispatcher<CreateLoanLinesApiRequest> replace$;
   final FieldDispatcher<BuiltList<CreateLoanLinesApiCreateLineRequest>>
       lineRequests;
 
-  _$CreateLoanLinesApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateLoanLinesApiRequest>(
-            '\$replace', (a) => a?.$replace),
+  _$CreateLoanLinesApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateLoanLinesApiRequest>(
+            'replace\$', (a) => a?.replace$),
         lineRequests =
-            $options.field<BuiltList<CreateLoanLinesApiCreateLineRequest>>(
+            options$.field<BuiltList<CreateLoanLinesApiCreateLineRequest>>(
                 'lineRequests',
                 (a) => a?.lineRequests,
                 (s) => s?.lineRequests,
@@ -199,32 +199,28 @@ class _$CreateLoanLinesApiRequestActions
       _$CreateLoanLinesApiRequestActions._(options());
 
   @override
-  CreateLoanLinesApiRequest get $initial => CreateLoanLinesApiRequest();
+  CreateLoanLinesApiRequest get initialState$ => CreateLoanLinesApiRequest();
 
   @override
-  CreateLoanLinesApiRequestBuilder $newBuilder() =>
+  CreateLoanLinesApiRequestBuilder newBuilder$() =>
       CreateLoanLinesApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.lineRequests,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    lineRequests.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    lineRequests.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateLoanLinesApiRequest);
 }

@@ -229,30 +229,30 @@ class _$GetWebServiceLogApiWebServiceLogDetailActions
   final StatefulActionsOptions<
       GetWebServiceLogApiWebServiceLogDetail,
       GetWebServiceLogApiWebServiceLogDetailBuilder,
-      GetWebServiceLogApiWebServiceLogDetailActions> $options;
+      GetWebServiceLogApiWebServiceLogDetailActions> options$;
 
-  final ActionDispatcher<GetWebServiceLogApiWebServiceLogDetail> $replace;
+  final ActionDispatcher<GetWebServiceLogApiWebServiceLogDetail> replace$;
   final FieldDispatcher<String> interfaceKey;
   final FieldDispatcher<String> outcomeMessage;
   final FieldDispatcher<String> request;
   final FieldDispatcher<String> response;
 
-  _$GetWebServiceLogApiWebServiceLogDetailActions._(this.$options)
-      : $replace = $options.action<GetWebServiceLogApiWebServiceLogDetail>(
-            '\$replace', (a) => a?.$replace),
-        interfaceKey = $options.field<String>(
+  _$GetWebServiceLogApiWebServiceLogDetailActions._(this.options$)
+      : replace$ = options$.action<GetWebServiceLogApiWebServiceLogDetail>(
+            'replace\$', (a) => a?.replace$),
+        interfaceKey = options$.field<String>(
             'interfaceKey',
             (a) => a?.interfaceKey,
             (s) => s?.interfaceKey,
             (p, b) => p?.interfaceKey = b),
-        outcomeMessage = $options.field<String>(
+        outcomeMessage = options$.field<String>(
             'outcomeMessage',
             (a) => a?.outcomeMessage,
             (s) => s?.outcomeMessage,
             (p, b) => p?.outcomeMessage = b),
-        request = $options.field<String>('request', (a) => a?.request,
+        request = options$.field<String>('request', (a) => a?.request,
             (s) => s?.request, (p, b) => p?.request = b),
-        response = $options.field<String>('response', (a) => a?.response,
+        response = options$.field<String>('response', (a) => a?.response,
             (s) => s?.response, (p, b) => p?.response = b),
         super._();
 
@@ -261,18 +261,18 @@ class _$GetWebServiceLogApiWebServiceLogDetailActions
       _$GetWebServiceLogApiWebServiceLogDetailActions._(options());
 
   @override
-  GetWebServiceLogApiWebServiceLogDetail get $initial =>
+  GetWebServiceLogApiWebServiceLogDetail get initialState$ =>
       GetWebServiceLogApiWebServiceLogDetail();
 
   @override
-  GetWebServiceLogApiWebServiceLogDetailBuilder $newBuilder() =>
+  GetWebServiceLogApiWebServiceLogDetailBuilder newBuilder$() =>
       GetWebServiceLogApiWebServiceLogDetailBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.interfaceKey,
         this.outcomeMessage,
         this.request,
@@ -280,21 +280,16 @@ class _$GetWebServiceLogApiWebServiceLogDetailActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    interfaceKey.$reducer(reducer);
-    outcomeMessage.$reducer(reducer);
-    request.$reducer(reducer);
-    response.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    interfaceKey.reducer$(reducer);
+    outcomeMessage.reducer$(reducer);
+    request.reducer$(reducer);
+    response.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetWebServiceLogApiWebServiceLogDetail);
 }

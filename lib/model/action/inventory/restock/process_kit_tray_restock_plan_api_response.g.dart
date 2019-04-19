@@ -207,18 +207,18 @@ class _$ProcessKitTrayRestockPlanApiResponseActions
   final StatefulActionsOptions<
       ProcessKitTrayRestockPlanApiResponse,
       ProcessKitTrayRestockPlanApiResponseBuilder,
-      ProcessKitTrayRestockPlanApiResponseActions> $options;
+      ProcessKitTrayRestockPlanApiResponseActions> options$;
 
-  final ActionDispatcher<ProcessKitTrayRestockPlanApiResponse> $replace;
+  final ActionDispatcher<ProcessKitTrayRestockPlanApiResponse> replace$;
   final FieldDispatcher<BuiltList<String>> orderIds;
   final FieldDispatcher<BuiltList<String>> pickIds;
 
-  _$ProcessKitTrayRestockPlanApiResponseActions._(this.$options)
-      : $replace = $options.action<ProcessKitTrayRestockPlanApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        orderIds = $options.field<BuiltList<String>>('orderIds',
+  _$ProcessKitTrayRestockPlanApiResponseActions._(this.options$)
+      : replace$ = options$.action<ProcessKitTrayRestockPlanApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        orderIds = options$.field<BuiltList<String>>('orderIds',
             (a) => a?.orderIds, (s) => s?.orderIds, (p, b) => p?.orderIds = b),
-        pickIds = $options.field<BuiltList<String>>('pickIds',
+        pickIds = options$.field<BuiltList<String>>('pickIds',
             (a) => a?.pickIds, (s) => s?.pickIds, (p, b) => p?.pickIds = b),
         super._();
 
@@ -227,36 +227,31 @@ class _$ProcessKitTrayRestockPlanApiResponseActions
       _$ProcessKitTrayRestockPlanApiResponseActions._(options());
 
   @override
-  ProcessKitTrayRestockPlanApiResponse get $initial =>
+  ProcessKitTrayRestockPlanApiResponse get initialState$ =>
       ProcessKitTrayRestockPlanApiResponse();
 
   @override
-  ProcessKitTrayRestockPlanApiResponseBuilder $newBuilder() =>
+  ProcessKitTrayRestockPlanApiResponseBuilder newBuilder$() =>
       ProcessKitTrayRestockPlanApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderIds,
         this.pickIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderIds.$reducer(reducer);
-    pickIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderIds.reducer$(reducer);
+    pickIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ProcessKitTrayRestockPlanApiResponse);
 }

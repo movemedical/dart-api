@@ -564,9 +564,9 @@ class _$GetTeamOrgUnitLinkApiDetailedOrgUnitLinkActions
   final StatefulActionsOptions<
       GetTeamOrgUnitLinkApiDetailedOrgUnitLink,
       GetTeamOrgUnitLinkApiDetailedOrgUnitLinkBuilder,
-      GetTeamOrgUnitLinkApiDetailedOrgUnitLinkActions> $options;
+      GetTeamOrgUnitLinkApiDetailedOrgUnitLinkActions> options$;
 
-  final ActionDispatcher<GetTeamOrgUnitLinkApiDetailedOrgUnitLink> $replace;
+  final ActionDispatcher<GetTeamOrgUnitLinkApiDetailedOrgUnitLink> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<String> orgUnitName;
@@ -585,60 +585,60 @@ class _$GetTeamOrgUnitLinkApiDetailedOrgUnitLinkActions
   final FieldDispatcher<bool> manageZone;
   final FieldDispatcher<BuiltList<OuLinkToInventoryType>> inventoryTypeLinks;
 
-  _$GetTeamOrgUnitLinkApiDetailedOrgUnitLinkActions._(this.$options)
-      : $replace = $options.action<GetTeamOrgUnitLinkApiDetailedOrgUnitLink>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetTeamOrgUnitLinkApiDetailedOrgUnitLinkActions._(this.options$)
+      : replace$ = options$.action<GetTeamOrgUnitLinkApiDetailedOrgUnitLink>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        orgUnitName = $options.field<String>(
+        orgUnitName = options$.field<String>(
             'orgUnitName',
             (a) => a?.orgUnitName,
             (s) => s?.orgUnitName,
             (p, b) => p?.orgUnitName = b),
-        ouAccessType = $options.field<OuAccessType>(
+        ouAccessType = options$.field<OuAccessType>(
             'ouAccessType',
             (a) => a?.ouAccessType,
             (s) => s?.ouAccessType,
             (p, b) => p?.ouAccessType = b),
-        createCase = $options.field<bool>('createCase', (a) => a?.createCase,
+        createCase = options$.field<bool>('createCase', (a) => a?.createCase,
             (s) => s?.createCase, (p, b) => p?.createCase = b),
-        editCase = $options.field<bool>('editCase', (a) => a?.editCase,
+        editCase = options$.field<bool>('editCase', (a) => a?.editCase,
             (s) => s?.editCase, (p, b) => p?.editCase = b),
-        processOrders = $options.field<bool>(
+        processOrders = options$.field<bool>(
             'processOrders',
             (a) => a?.processOrders,
             (s) => s?.processOrders,
             (p, b) => p?.processOrders = b),
-        manageCatalog = $options.field<bool>(
+        manageCatalog = options$.field<bool>(
             'manageCatalog',
             (a) => a?.manageCatalog,
             (s) => s?.manageCatalog,
             (p, b) => p?.manageCatalog = b),
-        manageUsers = $options.field<bool>('manageUsers', (a) => a?.manageUsers,
+        manageUsers = options$.field<bool>('manageUsers', (a) => a?.manageUsers,
             (s) => s?.manageUsers, (p, b) => p?.manageUsers = b),
-        createAudit = $options.field<bool>('createAudit', (a) => a?.createAudit,
+        createAudit = options$.field<bool>('createAudit', (a) => a?.createAudit,
             (s) => s?.createAudit, (p, b) => p?.createAudit = b),
-        performAudit = $options.field<bool>(
+        performAudit = options$.field<bool>(
             'performAudit',
             (a) => a?.performAudit,
             (s) => s?.performAudit,
             (p, b) => p?.performAudit = b),
-        manageAudit = $options.field<bool>('manageAudit', (a) => a?.manageAudit,
+        manageAudit = options$.field<bool>('manageAudit', (a) => a?.manageAudit,
             (s) => s?.manageAudit, (p, b) => p?.manageAudit = b),
-        requestLoan = $options.field<bool>('requestLoan', (a) => a?.requestLoan,
+        requestLoan = options$.field<bool>('requestLoan', (a) => a?.requestLoan,
             (s) => s?.requestLoan, (p, b) => p?.requestLoan = b),
-        approveLoan = $options.field<bool>('approveLoan', (a) => a?.approveLoan,
+        approveLoan = options$.field<bool>('approveLoan', (a) => a?.approveLoan,
             (s) => s?.approveLoan, (p, b) => p?.approveLoan = b),
-        approveLoanMax = $options.field<double>(
+        approveLoanMax = options$.field<double>(
             'approveLoanMax',
             (a) => a?.approveLoanMax,
             (s) => s?.approveLoanMax,
             (p, b) => p?.approveLoanMax = b),
-        manageZone = $options.field<bool>('manageZone', (a) => a?.manageZone,
+        manageZone = options$.field<bool>('manageZone', (a) => a?.manageZone,
             (s) => s?.manageZone, (p, b) => p?.manageZone = b),
-        inventoryTypeLinks = $options.field<BuiltList<OuLinkToInventoryType>>(
+        inventoryTypeLinks = options$.field<BuiltList<OuLinkToInventoryType>>(
             'inventoryTypeLinks',
             (a) => a?.inventoryTypeLinks,
             (s) => s?.inventoryTypeLinks,
@@ -650,18 +650,18 @@ class _$GetTeamOrgUnitLinkApiDetailedOrgUnitLinkActions
       _$GetTeamOrgUnitLinkApiDetailedOrgUnitLinkActions._(options());
 
   @override
-  GetTeamOrgUnitLinkApiDetailedOrgUnitLink get $initial =>
+  GetTeamOrgUnitLinkApiDetailedOrgUnitLink get initialState$ =>
       GetTeamOrgUnitLinkApiDetailedOrgUnitLink();
 
   @override
-  GetTeamOrgUnitLinkApiDetailedOrgUnitLinkBuilder $newBuilder() =>
+  GetTeamOrgUnitLinkApiDetailedOrgUnitLinkBuilder newBuilder$() =>
       GetTeamOrgUnitLinkApiDetailedOrgUnitLinkBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgUnitId,
         this.orgUnitName,
@@ -682,34 +682,29 @@ class _$GetTeamOrgUnitLinkApiDetailedOrgUnitLinkActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    orgUnitName.$reducer(reducer);
-    ouAccessType.$reducer(reducer);
-    createCase.$reducer(reducer);
-    editCase.$reducer(reducer);
-    processOrders.$reducer(reducer);
-    manageCatalog.$reducer(reducer);
-    manageUsers.$reducer(reducer);
-    createAudit.$reducer(reducer);
-    performAudit.$reducer(reducer);
-    manageAudit.$reducer(reducer);
-    requestLoan.$reducer(reducer);
-    approveLoan.$reducer(reducer);
-    approveLoanMax.$reducer(reducer);
-    manageZone.$reducer(reducer);
-    inventoryTypeLinks.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    orgUnitName.reducer$(reducer);
+    ouAccessType.reducer$(reducer);
+    createCase.reducer$(reducer);
+    editCase.reducer$(reducer);
+    processOrders.reducer$(reducer);
+    manageCatalog.reducer$(reducer);
+    manageUsers.reducer$(reducer);
+    createAudit.reducer$(reducer);
+    performAudit.reducer$(reducer);
+    manageAudit.reducer$(reducer);
+    requestLoan.reducer$(reducer);
+    approveLoan.reducer$(reducer);
+    approveLoanMax.reducer$(reducer);
+    manageZone.reducer$(reducer);
+    inventoryTypeLinks.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetTeamOrgUnitLinkApiDetailedOrgUnitLink);
 }

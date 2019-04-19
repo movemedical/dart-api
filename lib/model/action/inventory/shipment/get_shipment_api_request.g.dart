@@ -170,18 +170,18 @@ typedef StatefulActionsOptions<
 
 class _$GetShipmentApiRequestActions extends GetShipmentApiRequestActions {
   final StatefulActionsOptions<GetShipmentApiRequest,
-      GetShipmentApiRequestBuilder, GetShipmentApiRequestActions> $options;
+      GetShipmentApiRequestBuilder, GetShipmentApiRequestActions> options$;
 
-  final ActionDispatcher<GetShipmentApiRequest> $replace;
+  final ActionDispatcher<GetShipmentApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<bool> skipPresence;
 
-  _$GetShipmentApiRequestActions._(this.$options)
-      : $replace = $options.action<GetShipmentApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetShipmentApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetShipmentApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        skipPresence = $options.field<bool>(
+        skipPresence = options$.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -193,33 +193,29 @@ class _$GetShipmentApiRequestActions extends GetShipmentApiRequestActions {
       _$GetShipmentApiRequestActions._(options());
 
   @override
-  GetShipmentApiRequest get $initial => GetShipmentApiRequest();
+  GetShipmentApiRequest get initialState$ => GetShipmentApiRequest();
 
   @override
-  GetShipmentApiRequestBuilder $newBuilder() => GetShipmentApiRequestBuilder();
+  GetShipmentApiRequestBuilder newBuilder$() => GetShipmentApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.skipPresence,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    skipPresence.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    skipPresence.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetShipmentApiRequest);
 }

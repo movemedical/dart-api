@@ -197,18 +197,18 @@ class _$ListCancelReasonsApiResponseActions
   final StatefulActionsOptions<
       ListCancelReasonsApiResponse,
       ListCancelReasonsApiResponseBuilder,
-      ListCancelReasonsApiResponseActions> $options;
+      ListCancelReasonsApiResponseActions> options$;
 
-  final ActionDispatcher<ListCancelReasonsApiResponse> $replace;
+  final ActionDispatcher<ListCancelReasonsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListCancelReasonsApiCancelReason>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListCancelReasonsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListCancelReasonsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListCancelReasonsApiCancelReason>>(
+  _$ListCancelReasonsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListCancelReasonsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListCancelReasonsApiCancelReason>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -217,35 +217,31 @@ class _$ListCancelReasonsApiResponseActions
       _$ListCancelReasonsApiResponseActions._(options());
 
   @override
-  ListCancelReasonsApiResponse get $initial => ListCancelReasonsApiResponse();
+  ListCancelReasonsApiResponse get initialState$ =>
+      ListCancelReasonsApiResponse();
 
   @override
-  ListCancelReasonsApiResponseBuilder $newBuilder() =>
+  ListCancelReasonsApiResponseBuilder newBuilder$() =>
       ListCancelReasonsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListCancelReasonsApiResponse);
 }

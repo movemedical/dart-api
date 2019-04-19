@@ -202,20 +202,20 @@ class _$ListHcrColleagueOptionsApiResponseActions
   final StatefulActionsOptions<
       ListHcrColleagueOptionsApiResponse,
       ListHcrColleagueOptionsApiResponseBuilder,
-      ListHcrColleagueOptionsApiResponseActions> $options;
+      ListHcrColleagueOptionsApiResponseActions> options$;
 
-  final ActionDispatcher<ListHcrColleagueOptionsApiResponse> $replace;
+  final ActionDispatcher<ListHcrColleagueOptionsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListHcrColleagueOptionsApiColleagueOption>>
       data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListHcrColleagueOptionsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListHcrColleagueOptionsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options
+  _$ListHcrColleagueOptionsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListHcrColleagueOptionsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$
             .field<BuiltList<ListHcrColleagueOptionsApiColleagueOption>>(
                 'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -224,36 +224,31 @@ class _$ListHcrColleagueOptionsApiResponseActions
       _$ListHcrColleagueOptionsApiResponseActions._(options());
 
   @override
-  ListHcrColleagueOptionsApiResponse get $initial =>
+  ListHcrColleagueOptionsApiResponse get initialState$ =>
       ListHcrColleagueOptionsApiResponse();
 
   @override
-  ListHcrColleagueOptionsApiResponseBuilder $newBuilder() =>
+  ListHcrColleagueOptionsApiResponseBuilder newBuilder$() =>
       ListHcrColleagueOptionsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListHcrColleagueOptionsApiResponse);
 }

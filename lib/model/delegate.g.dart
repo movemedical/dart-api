@@ -260,9 +260,9 @@ typedef StatefulActionsOptions<Delegate, DelegateBuilder,
 
 class _$DelegateActions extends DelegateActions {
   final StatefulActionsOptions<Delegate, DelegateBuilder, DelegateActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<Delegate> $replace;
+  final ActionDispatcher<Delegate> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<DelegateType> type;
   final FieldDispatcher<String> linkedId;
@@ -270,24 +270,24 @@ class _$DelegateActions extends DelegateActions {
   final EmailActions email;
   final FieldDispatcher<bool> active;
 
-  _$DelegateActions._(this.$options)
-      : $replace = $options.action<Delegate>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$DelegateActions._(this.options$)
+      : replace$ = options$.action<Delegate>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.field<DelegateType>(
+        type = options$.field<DelegateType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
+        linkedId = options$.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -295,22 +295,22 @@ class _$DelegateActions extends DelegateActions {
       _$DelegateActions._(options());
 
   @override
-  Delegate get $initial => Delegate();
+  Delegate get initialState$ => Delegate();
 
   @override
-  DelegateBuilder $newBuilder() => DelegateBuilder();
+  DelegateBuilder newBuilder$() => DelegateBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.type,
         this.linkedId,
@@ -319,23 +319,19 @@ class _$DelegateActions extends DelegateActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    type.$reducer(reducer);
-    linkedId.$reducer(reducer);
-    name.$reducer(reducer);
-    email.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    type.reducer$(reducer);
+    linkedId.reducer$(reducer);
+    name.reducer$(reducer);
+    email.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Delegate);
 }

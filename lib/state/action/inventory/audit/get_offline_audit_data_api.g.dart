@@ -22,67 +22,32 @@ class _$GetOfflineAuditDataApi extends GetOfflineAuditDataApi {
           ApiResult<GetOfflineAuditDataApiResponse>>,
       CommandStateBuilder<ApiCommand<GetOfflineAuditDataApiRequest>,
           ApiResult<GetOfflineAuditDataApiResponse>>,
-      GetOfflineAuditDataApi> $options;
+      GetOfflineAuditDataApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetOfflineAuditDataApiRequest>,
-          ApiResult<GetOfflineAuditDataApiResponse>>> $replace;
+          ApiResult<GetOfflineAuditDataApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetOfflineAuditDataApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetOfflineAuditDataApiRequest>,
-          ApiResult<GetOfflineAuditDataApiResponse>,
-          GetOfflineAuditDataApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetOfflineAuditDataApiRequest>,
-          ApiResult<GetOfflineAuditDataApiResponse>,
-          GetOfflineAuditDataApi,
-          Command<ApiCommand<GetOfflineAuditDataApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetOfflineAuditDataApiRequest>,
-          ApiResult<GetOfflineAuditDataApiResponse>,
-          GetOfflineAuditDataApi,
-          CommandResult<ApiResult<GetOfflineAuditDataApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetOfflineAuditDataApiRequest>,
-          ApiResult<GetOfflineAuditDataApiResponse>,
-          GetOfflineAuditDataApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<GetOfflineAuditDataApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetOfflineAuditDataApi._(this.$options)
-      : $replace = $options.action<
+  _$GetOfflineAuditDataApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetOfflineAuditDataApiRequest>,
                     ApiResult<GetOfflineAuditDataApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetOfflineAuditDataApiRequest>,
-                ApiResult<GetOfflineAuditDataApiResponse>,
-                GetOfflineAuditDataApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetOfflineAuditDataApiRequest>,
-                    ApiResult<GetOfflineAuditDataApiResponse>,
-                    GetOfflineAuditDataApi,
-                    Command<ApiCommand<GetOfflineAuditDataApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetOfflineAuditDataApiRequest>,
-                    ApiResult<GetOfflineAuditDataApiResponse>,
-                    GetOfflineAuditDataApi,
-                    CommandResult<ApiResult<GetOfflineAuditDataApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetOfflineAuditDataApiRequest>,
-                ApiResult<GetOfflineAuditDataApiResponse>,
-                GetOfflineAuditDataApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<GetOfflineAuditDataApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<GetOfflineAuditDataApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetOfflineAuditDataApi(GetOfflineAuditDataApiOptions options) =>
@@ -91,32 +56,26 @@ class _$GetOfflineAuditDataApi extends GetOfflineAuditDataApi {
   @override
   CommandState<ApiCommand<GetOfflineAuditDataApiRequest>,
           ApiResult<GetOfflineAuditDataApiResponse>>
-      get $initial => CommandState<ApiCommand<GetOfflineAuditDataApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<GetOfflineAuditDataApiRequest>,
           ApiResult<GetOfflineAuditDataApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetOfflineAuditDataApiRequest>,
           ApiResult<GetOfflineAuditDataApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetOfflineAuditDataApiRequest>,
           ApiResult<GetOfflineAuditDataApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetOfflineAuditDataApiRequest)]),
-        FullType(ApiResult, [FullType(GetOfflineAuditDataApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

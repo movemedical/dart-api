@@ -249,33 +249,33 @@ class _$CreateProcedureApiRequestActions
   final StatefulActionsOptions<
       CreateProcedureApiRequest,
       CreateProcedureApiRequestBuilder,
-      CreateProcedureApiRequestActions> $options;
+      CreateProcedureApiRequestActions> options$;
 
-  final ActionDispatcher<CreateProcedureApiRequest> $replace;
+  final ActionDispatcher<CreateProcedureApiRequest> replace$;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> icdCode;
   final FieldDispatcher<String> description;
   final FieldDispatcher<bool> bodySideRequired;
   final FieldDispatcher<bool> active;
 
-  _$CreateProcedureApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateProcedureApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        name = $options.field<String>(
+  _$CreateProcedureApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateProcedureApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        icdCode = $options.field<String>('icdCode', (a) => a?.icdCode,
+        icdCode = options$.field<String>('icdCode', (a) => a?.icdCode,
             (s) => s?.icdCode, (p, b) => p?.icdCode = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        bodySideRequired = $options.field<bool>(
+        bodySideRequired = options$.field<bool>(
             'bodySideRequired',
             (a) => a?.bodySideRequired,
             (s) => s?.bodySideRequired,
             (p, b) => p?.bodySideRequired = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -284,17 +284,17 @@ class _$CreateProcedureApiRequestActions
       _$CreateProcedureApiRequestActions._(options());
 
   @override
-  CreateProcedureApiRequest get $initial => CreateProcedureApiRequest();
+  CreateProcedureApiRequest get initialState$ => CreateProcedureApiRequest();
 
   @override
-  CreateProcedureApiRequestBuilder $newBuilder() =>
+  CreateProcedureApiRequestBuilder newBuilder$() =>
       CreateProcedureApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.name,
         this.icdCode,
         this.description,
@@ -303,21 +303,17 @@ class _$CreateProcedureApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    name.$reducer(reducer);
-    icdCode.$reducer(reducer);
-    description.$reducer(reducer);
-    bodySideRequired.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    name.reducer$(reducer);
+    icdCode.reducer$(reducer);
+    description.reducer$(reducer);
+    bodySideRequired.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateProcedureApiRequest);
 }

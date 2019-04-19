@@ -221,24 +221,24 @@ class _$ListHoldReasonsApiHoldReasonActions
   final StatefulActionsOptions<
       ListHoldReasonsApiHoldReason,
       ListHoldReasonsApiHoldReasonBuilder,
-      ListHoldReasonsApiHoldReasonActions> $options;
+      ListHoldReasonsApiHoldReasonActions> options$;
 
-  final ActionDispatcher<ListHoldReasonsApiHoldReason> $replace;
+  final ActionDispatcher<ListHoldReasonsApiHoldReason> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<bool> active;
   final FieldDispatcher<bool> allowDelete;
 
-  _$ListHoldReasonsApiHoldReasonActions._(this.$options)
-      : $replace = $options.action<ListHoldReasonsApiHoldReason>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListHoldReasonsApiHoldReasonActions._(this.options$)
+      : replace$ = options$.action<ListHoldReasonsApiHoldReason>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        allowDelete = $options.field<bool>('allowDelete', (a) => a?.allowDelete,
+        allowDelete = options$.field<bool>('allowDelete', (a) => a?.allowDelete,
             (s) => s?.allowDelete, (p, b) => p?.allowDelete = b),
         super._();
 
@@ -247,17 +247,18 @@ class _$ListHoldReasonsApiHoldReasonActions
       _$ListHoldReasonsApiHoldReasonActions._(options());
 
   @override
-  ListHoldReasonsApiHoldReason get $initial => ListHoldReasonsApiHoldReason();
+  ListHoldReasonsApiHoldReason get initialState$ =>
+      ListHoldReasonsApiHoldReason();
 
   @override
-  ListHoldReasonsApiHoldReasonBuilder $newBuilder() =>
+  ListHoldReasonsApiHoldReasonBuilder newBuilder$() =>
       ListHoldReasonsApiHoldReasonBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.active,
@@ -265,21 +266,16 @@ class _$ListHoldReasonsApiHoldReasonActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    active.$reducer(reducer);
-    allowDelete.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    active.reducer$(reducer);
+    allowDelete.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListHoldReasonsApiHoldReason);
 }

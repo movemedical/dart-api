@@ -407,9 +407,9 @@ typedef StatefulActionsOptions<ListTagsApiTag, ListTagsApiTagBuilder,
 
 class _$ListTagsApiTagActions extends ListTagsApiTagActions {
   final StatefulActionsOptions<ListTagsApiTag, ListTagsApiTagBuilder,
-      ListTagsApiTagActions> $options;
+      ListTagsApiTagActions> options$;
 
-  final ActionDispatcher<ListTagsApiTag> $replace;
+  final ActionDispatcher<ListTagsApiTag> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> tagNumber;
   final ItemActions item;
@@ -422,60 +422,60 @@ class _$ListTagsApiTagActions extends ListTagsApiTagActions {
   final FieldDispatcher<String> stockNumber;
   final InventoryTypeActions inventoryType;
 
-  _$ListTagsApiTagActions._(this.$options)
-      : $replace =
-            $options.action<ListTagsApiTag>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListTagsApiTagActions._(this.options$)
+      : replace$ =
+            options$.action<ListTagsApiTag>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        tagNumber = $options.field<String>('tagNumber', (a) => a?.tagNumber,
+        tagNumber = options$.field<String>('tagNumber', (a) => a?.tagNumber,
             (s) => s?.tagNumber, (p, b) => p?.tagNumber = b),
         item = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'item',
                 (a) => a.item,
                 (s) => s?.item,
                 (b) => b?.item,
                 (parent, builder) => parent?.item = builder)),
-        itemVersion = ItemVersionActions(() => $options
+        itemVersion = ItemVersionActions(() => options$
             .stateful<ItemVersion, ItemVersionBuilder, ItemVersionActions>(
                 'itemVersion',
                 (a) => a.itemVersion,
                 (s) => s?.itemVersion,
                 (b) => b?.itemVersion,
                 (parent, builder) => parent?.itemVersion = builder)),
-        lot = LotActions(() => $options.stateful<Lot, LotBuilder, LotActions>(
+        lot = LotActions(() => options$.stateful<Lot, LotBuilder, LotActions>(
             'lot',
             (a) => a.lot,
             (s) => s?.lot,
             (b) => b?.lot,
             (parent, builder) => parent?.lot = builder)),
         serial = SerialActions(() =>
-            $options.stateful<Serial, SerialBuilder, SerialActions>(
+            options$.stateful<Serial, SerialBuilder, SerialActions>(
                 'serial',
                 (a) => a.serial,
                 (s) => s?.serial,
                 (b) => b?.serial,
                 (parent, builder) => parent?.serial = builder)),
         lastKnownLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'lastKnownLocation',
                 (a) => a.lastKnownLocation,
                 (s) => s?.lastKnownLocation,
                 (b) => b?.lastKnownLocation,
                 (parent, builder) => parent?.lastKnownLocation = builder)),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        stockSummaryKey = $options.field<String>(
+        stockSummaryKey = options$.field<String>(
             'stockSummaryKey',
             (a) => a?.stockSummaryKey,
             (s) => s?.stockSummaryKey,
             (p, b) => p?.stockSummaryKey = b),
-        stockNumber = $options.field<String>(
+        stockNumber = options$.field<String>(
             'stockNumber',
             (a) => a?.stockNumber,
             (s) => s?.stockNumber,
             (p, b) => p?.stockNumber = b),
-        inventoryType = InventoryTypeActions(() => $options.stateful<
+        inventoryType = InventoryTypeActions(() => options$.stateful<
                 InventoryType, InventoryTypeBuilder, InventoryTypeActions>(
             'inventoryType',
             (a) => a.inventoryType,
@@ -488,14 +488,14 @@ class _$ListTagsApiTagActions extends ListTagsApiTagActions {
       _$ListTagsApiTagActions._(options());
 
   @override
-  ListTagsApiTag get $initial => ListTagsApiTag();
+  ListTagsApiTag get initialState$ => ListTagsApiTag();
 
   @override
-  ListTagsApiTagBuilder $newBuilder() => ListTagsApiTagBuilder();
+  ListTagsApiTagBuilder newBuilder$() => ListTagsApiTagBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.item,
         this.itemVersion,
         this.lot,
@@ -504,11 +504,11 @@ class _$ListTagsApiTagActions extends ListTagsApiTagActions {
         this.inventoryType,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.tagNumber,
         this.stockId,
@@ -517,33 +517,29 @@ class _$ListTagsApiTagActions extends ListTagsApiTagActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    tagNumber.$reducer(reducer);
-    item.$reducer(reducer);
-    itemVersion.$reducer(reducer);
-    lot.$reducer(reducer);
-    serial.$reducer(reducer);
-    lastKnownLocation.$reducer(reducer);
-    stockId.$reducer(reducer);
-    stockSummaryKey.$reducer(reducer);
-    stockNumber.$reducer(reducer);
-    inventoryType.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    tagNumber.reducer$(reducer);
+    item.reducer$(reducer);
+    itemVersion.reducer$(reducer);
+    lot.reducer$(reducer);
+    serial.reducer$(reducer);
+    lastKnownLocation.reducer$(reducer);
+    stockId.reducer$(reducer);
+    stockSummaryKey.reducer$(reducer);
+    stockNumber.reducer$(reducer);
+    inventoryType.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    item.$middleware(middleware);
-    itemVersion.$middleware(middleware);
-    lot.$middleware(middleware);
-    serial.$middleware(middleware);
-    lastKnownLocation.$middleware(middleware);
-    inventoryType.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    item.middleware$(middleware);
+    itemVersion.middleware$(middleware);
+    lot.middleware$(middleware);
+    serial.middleware$(middleware);
+    lastKnownLocation.middleware$(middleware);
+    inventoryType.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListTagsApiTag);
 }

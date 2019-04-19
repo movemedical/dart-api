@@ -23,72 +23,35 @@ class _$ListItemCategoriesLinkedToItemApi
           ApiResult<ListItemCategoriesLinkedToItemApiResponse>>,
       CommandStateBuilder<ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
           ApiResult<ListItemCategoriesLinkedToItemApiResponse>>,
-      ListItemCategoriesLinkedToItemApi> $options;
+      ListItemCategoriesLinkedToItemApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
-          ApiResult<ListItemCategoriesLinkedToItemApiResponse>>> $replace;
+          ApiResult<ListItemCategoriesLinkedToItemApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
-          ApiResult<ListItemCategoriesLinkedToItemApiResponse>,
-          ListItemCategoriesLinkedToItemApi,
-          String>> $cancel;
+      Command<ApiCommand<ListItemCategoriesLinkedToItemApiRequest>>> execute$;
   final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
-              ApiResult<ListItemCategoriesLinkedToItemApiResponse>,
-              ListItemCategoriesLinkedToItemApi,
-              Command<ApiCommand<ListItemCategoriesLinkedToItemApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
-          ApiResult<ListItemCategoriesLinkedToItemApiResponse>,
-          ListItemCategoriesLinkedToItemApi,
-          CommandResult<
-              ApiResult<ListItemCategoriesLinkedToItemApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
-          ApiResult<ListItemCategoriesLinkedToItemApiResponse>,
-          ListItemCategoriesLinkedToItemApi,
-          CommandProgress>> $progress;
+          CommandResult<ApiResult<ListItemCategoriesLinkedToItemApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListItemCategoriesLinkedToItemApi._(this.$options)
-      : $replace = $options.action<
+  _$ListItemCategoriesLinkedToItemApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<
                     ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
                     ApiResult<ListItemCategoriesLinkedToItemApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
-                ApiResult<ListItemCategoriesLinkedToItemApiResponse>,
-                ListItemCategoriesLinkedToItemApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
-                    ApiResult<ListItemCategoriesLinkedToItemApiResponse>,
-                    ListItemCategoriesLinkedToItemApi,
-                    Command<
-                        ApiCommand<ListItemCategoriesLinkedToItemApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
-                    ApiResult<ListItemCategoriesLinkedToItemApiResponse>,
-                    ListItemCategoriesLinkedToItemApi,
-                    CommandResult<
-                        ApiResult<ListItemCategoriesLinkedToItemApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
-                ApiResult<ListItemCategoriesLinkedToItemApiResponse>,
-                ListItemCategoriesLinkedToItemApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<ApiCommand<ListItemCategoriesLinkedToItemApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<ListItemCategoriesLinkedToItemApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListItemCategoriesLinkedToItemApi(
@@ -98,35 +61,26 @@ class _$ListItemCategoriesLinkedToItemApi
   @override
   CommandState<ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
           ApiResult<ListItemCategoriesLinkedToItemApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
           ApiResult<ListItemCategoriesLinkedToItemApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
           ApiResult<ListItemCategoriesLinkedToItemApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListItemCategoriesLinkedToItemApiRequest>,
           ApiResult<ListItemCategoriesLinkedToItemApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(
-            ApiCommand, [FullType(ListItemCategoriesLinkedToItemApiRequest)]),
-        FullType(
-            ApiResult, [FullType(ListItemCategoriesLinkedToItemApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

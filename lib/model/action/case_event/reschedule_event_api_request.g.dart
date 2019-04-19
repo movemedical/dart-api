@@ -223,27 +223,27 @@ class _$RescheduleEventApiRequestActions
   final StatefulActionsOptions<
       RescheduleEventApiRequest,
       RescheduleEventApiRequestBuilder,
-      RescheduleEventApiRequestActions> $options;
+      RescheduleEventApiRequestActions> options$;
 
-  final ActionDispatcher<RescheduleEventApiRequest> $replace;
+  final ActionDispatcher<RescheduleEventApiRequest> replace$;
   final FieldDispatcher<String> eventId;
   final FieldDispatcher<DateTime> eventDate;
   final FieldDispatcher<bool> eventTimeUnknown;
   final FieldDispatcher<int> eventDuration;
 
-  _$RescheduleEventApiRequestActions._(this.$options)
-      : $replace = $options.action<RescheduleEventApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        eventId = $options.field<String>('eventId', (a) => a?.eventId,
+  _$RescheduleEventApiRequestActions._(this.options$)
+      : replace$ = options$.action<RescheduleEventApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        eventId = options$.field<String>('eventId', (a) => a?.eventId,
             (s) => s?.eventId, (p, b) => p?.eventId = b),
-        eventDate = $options.field<DateTime>('eventDate', (a) => a?.eventDate,
+        eventDate = options$.field<DateTime>('eventDate', (a) => a?.eventDate,
             (s) => s?.eventDate, (p, b) => p?.eventDate = b),
-        eventTimeUnknown = $options.field<bool>(
+        eventTimeUnknown = options$.field<bool>(
             'eventTimeUnknown',
             (a) => a?.eventTimeUnknown,
             (s) => s?.eventTimeUnknown,
             (p, b) => p?.eventTimeUnknown = b),
-        eventDuration = $options.field<int>(
+        eventDuration = options$.field<int>(
             'eventDuration',
             (a) => a?.eventDuration,
             (s) => s?.eventDuration,
@@ -255,17 +255,17 @@ class _$RescheduleEventApiRequestActions
       _$RescheduleEventApiRequestActions._(options());
 
   @override
-  RescheduleEventApiRequest get $initial => RescheduleEventApiRequest();
+  RescheduleEventApiRequest get initialState$ => RescheduleEventApiRequest();
 
   @override
-  RescheduleEventApiRequestBuilder $newBuilder() =>
+  RescheduleEventApiRequestBuilder newBuilder$() =>
       RescheduleEventApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.eventId,
         this.eventDate,
         this.eventTimeUnknown,
@@ -273,20 +273,16 @@ class _$RescheduleEventApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    eventId.$reducer(reducer);
-    eventDate.$reducer(reducer);
-    eventTimeUnknown.$reducer(reducer);
-    eventDuration.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    eventId.reducer$(reducer);
+    eventDate.reducer$(reducer);
+    eventTimeUnknown.reducer$(reducer);
+    eventDuration.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(RescheduleEventApiRequest);
 }

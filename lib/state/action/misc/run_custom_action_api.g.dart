@@ -22,67 +22,32 @@ class _$RunCustomActionApi extends RunCustomActionApi {
           ApiResult<RunCustomActionApiResponse>>,
       CommandStateBuilder<ApiCommand<RunCustomActionApiRequest>,
           ApiResult<RunCustomActionApiResponse>>,
-      RunCustomActionApi> $options;
+      RunCustomActionApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RunCustomActionApiRequest>,
-          ApiResult<RunCustomActionApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RunCustomActionApiRequest>,
-          ApiResult<RunCustomActionApiResponse>,
-          RunCustomActionApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RunCustomActionApiRequest>,
-          ApiResult<RunCustomActionApiResponse>,
-          RunCustomActionApi,
-          Command<ApiCommand<RunCustomActionApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RunCustomActionApiRequest>,
-          ApiResult<RunCustomActionApiResponse>,
-          RunCustomActionApi,
-          CommandResult<ApiResult<RunCustomActionApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RunCustomActionApiRequest>,
-          ApiResult<RunCustomActionApiResponse>,
-          RunCustomActionApi,
-          CommandProgress>> $progress;
+          ApiResult<RunCustomActionApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<RunCustomActionApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<RunCustomActionApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RunCustomActionApi._(this.$options)
-      : $replace = $options.action<
+  _$RunCustomActionApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<RunCustomActionApiRequest>,
                     ApiResult<RunCustomActionApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RunCustomActionApiRequest>,
-                ApiResult<RunCustomActionApiResponse>,
-                RunCustomActionApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RunCustomActionApiRequest>,
-                    ApiResult<RunCustomActionApiResponse>,
-                    RunCustomActionApi,
-                    Command<ApiCommand<RunCustomActionApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RunCustomActionApiRequest>,
-                    ApiResult<RunCustomActionApiResponse>,
-                    RunCustomActionApi,
-                    CommandResult<ApiResult<RunCustomActionApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RunCustomActionApiRequest>,
-                ApiResult<RunCustomActionApiResponse>,
-                RunCustomActionApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<RunCustomActionApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<RunCustomActionApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RunCustomActionApi(RunCustomActionApiOptions options) =>
@@ -91,32 +56,25 @@ class _$RunCustomActionApi extends RunCustomActionApi {
   @override
   CommandState<ApiCommand<RunCustomActionApiRequest>,
           ApiResult<RunCustomActionApiResponse>>
-      get $initial => CommandState<ApiCommand<RunCustomActionApiRequest>,
+      get initialState$ => CommandState<ApiCommand<RunCustomActionApiRequest>,
           ApiResult<RunCustomActionApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<RunCustomActionApiRequest>,
           ApiResult<RunCustomActionApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RunCustomActionApiRequest>,
           ApiResult<RunCustomActionApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RunCustomActionApiRequest)]),
-        FullType(ApiResult, [FullType(RunCustomActionApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

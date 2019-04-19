@@ -305,9 +305,9 @@ typedef StatefulActionsOptions<CaseCustomValue, CaseCustomValueBuilder,
 
 class _$CaseCustomValueActions extends CaseCustomValueActions {
   final StatefulActionsOptions<CaseCustomValue, CaseCustomValueBuilder,
-      CaseCustomValueActions> $options;
+      CaseCustomValueActions> options$;
 
-  final ActionDispatcher<CaseCustomValue> $replace;
+  final ActionDispatcher<CaseCustomValue> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<String> caseTypeCustomFieldId;
@@ -317,33 +317,33 @@ class _$CaseCustomValueActions extends CaseCustomValueActions {
   final FieldDispatcher<DateTime> dateValue;
   final FieldDispatcher<bool> booleanValue;
 
-  _$CaseCustomValueActions._(this.$options)
-      : $replace =
-            $options.action<CaseCustomValue>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$CaseCustomValueActions._(this.options$)
+      : replace$ =
+            options$.action<CaseCustomValue>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        caseTypeCustomFieldId = $options.field<String>(
+        caseTypeCustomFieldId = options$.field<String>(
             'caseTypeCustomFieldId',
             (a) => a?.caseTypeCustomFieldId,
             (s) => s?.caseTypeCustomFieldId,
             (p, b) => p?.caseTypeCustomFieldId = b),
-        stringValue = $options.field<String>(
+        stringValue = options$.field<String>(
             'stringValue',
             (a) => a?.stringValue,
             (s) => s?.stringValue,
             (p, b) => p?.stringValue = b),
-        longValue = $options.field<int>('longValue', (a) => a?.longValue,
+        longValue = options$.field<int>('longValue', (a) => a?.longValue,
             (s) => s?.longValue, (p, b) => p?.longValue = b),
-        doubleValue = $options.field<double>(
+        doubleValue = options$.field<double>(
             'doubleValue',
             (a) => a?.doubleValue,
             (s) => s?.doubleValue,
             (p, b) => p?.doubleValue = b),
-        dateValue = $options.field<DateTime>('dateValue', (a) => a?.dateValue,
+        dateValue = options$.field<DateTime>('dateValue', (a) => a?.dateValue,
             (s) => s?.dateValue, (p, b) => p?.dateValue = b),
-        booleanValue = $options.field<bool>(
+        booleanValue = options$.field<bool>(
             'booleanValue',
             (a) => a?.booleanValue,
             (s) => s?.booleanValue,
@@ -354,16 +354,16 @@ class _$CaseCustomValueActions extends CaseCustomValueActions {
       _$CaseCustomValueActions._(options());
 
   @override
-  CaseCustomValue get $initial => CaseCustomValue();
+  CaseCustomValue get initialState$ => CaseCustomValue();
 
   @override
-  CaseCustomValueBuilder $newBuilder() => CaseCustomValueBuilder();
+  CaseCustomValueBuilder newBuilder$() => CaseCustomValueBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgId,
         this.caseTypeCustomFieldId,
@@ -375,24 +375,20 @@ class _$CaseCustomValueActions extends CaseCustomValueActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgId.$reducer(reducer);
-    caseTypeCustomFieldId.$reducer(reducer);
-    stringValue.$reducer(reducer);
-    longValue.$reducer(reducer);
-    doubleValue.$reducer(reducer);
-    dateValue.$reducer(reducer);
-    booleanValue.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgId.reducer$(reducer);
+    caseTypeCustomFieldId.reducer$(reducer);
+    stringValue.reducer$(reducer);
+    longValue.reducer$(reducer);
+    doubleValue.reducer$(reducer);
+    dateValue.reducer$(reducer);
+    booleanValue.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CaseCustomValue);
 }

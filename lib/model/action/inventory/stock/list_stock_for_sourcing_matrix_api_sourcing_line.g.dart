@@ -498,9 +498,9 @@ class _$ListStockForSourcingMatrixApiSourcingLineActions
   final StatefulActionsOptions<
       ListStockForSourcingMatrixApiSourcingLine,
       ListStockForSourcingMatrixApiSourcingLineBuilder,
-      ListStockForSourcingMatrixApiSourcingLineActions> $options;
+      ListStockForSourcingMatrixApiSourcingLineActions> options$;
 
-  final ActionDispatcher<ListStockForSourcingMatrixApiSourcingLine> $replace;
+  final ActionDispatcher<ListStockForSourcingMatrixApiSourcingLine> replace$;
   final FieldDispatcher<String> orderLineId;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> itemVersionId;
@@ -520,61 +520,61 @@ class _$ListStockForSourcingMatrixApiSourcingLineActions
       locationItemMap;
   final SetComponentActions setComponent;
 
-  _$ListStockForSourcingMatrixApiSourcingLineActions._(this.$options)
-      : $replace = $options.action<ListStockForSourcingMatrixApiSourcingLine>(
-            '\$replace', (a) => a?.$replace),
-        orderLineId = $options.field<String>(
+  _$ListStockForSourcingMatrixApiSourcingLineActions._(this.options$)
+      : replace$ = options$.action<ListStockForSourcingMatrixApiSourcingLine>(
+            'replace\$', (a) => a?.replace$),
+        orderLineId = options$.field<String>(
             'orderLineId',
             (a) => a?.orderLineId,
             (s) => s?.orderLineId,
             (p, b) => p?.orderLineId = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionId = $options.field<String>(
+        itemVersionId = options$.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+        itemNumber = options$.field<String>('itemNumber', (a) => a?.itemNumber,
             (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
-        itemDesc = $options.field<String>('itemDesc', (a) => a?.itemDesc,
+        itemDesc = options$.field<String>('itemDesc', (a) => a?.itemDesc,
             (s) => s?.itemDesc, (p, b) => p?.itemDesc = b),
-        moveItemType = $options.field<MoveItemType>(
+        moveItemType = options$.field<MoveItemType>(
             'moveItemType',
             (a) => a?.moveItemType,
             (s) => s?.moveItemType,
             (p, b) => p?.moveItemType = b),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        qtyOpen = $options.field<int>('qtyOpen', (a) => a?.qtyOpen,
+        qtyOpen = options$.field<int>('qtyOpen', (a) => a?.qtyOpen,
             (s) => s?.qtyOpen, (p, b) => p?.qtyOpen = b),
-        locationItems = $options
+        locationItems = options$
             .field<BuiltList<ListStockForSourcingMatrixApiLineAvailability>>(
                 'locationItems',
                 (a) => a?.locationItems,
                 (s) => s?.locationItems,
                 (p, b) => p?.locationItems = b),
-        childItems = $options
+        childItems = options$
             .field<BuiltList<ListStockForSourcingMatrixApiSourcingLine>>(
                 'childItems',
                 (a) => a?.childItems,
                 (s) => s?.childItems,
                 (p, b) => p?.childItems = b),
-        locationItemMap = $options.field<
+        locationItemMap = options$.field<
                 BuiltMap<String,
                     ListStockForSourcingMatrixApiLineAvailability>>(
             'locationItemMap',
             (a) => a?.locationItemMap,
             (s) => s?.locationItemMap,
             (p, b) => p?.locationItemMap = b),
-        setComponent = SetComponentActions(() => $options
+        setComponent = SetComponentActions(() => options$
             .stateful<SetComponent, SetComponentBuilder, SetComponentActions>(
                 'setComponent',
                 (a) => a.setComponent,
@@ -588,24 +588,24 @@ class _$ListStockForSourcingMatrixApiSourcingLineActions
       _$ListStockForSourcingMatrixApiSourcingLineActions._(options());
 
   @override
-  ListStockForSourcingMatrixApiSourcingLine get $initial =>
+  ListStockForSourcingMatrixApiSourcingLine get initialState$ =>
       ListStockForSourcingMatrixApiSourcingLine();
 
   @override
-  ListStockForSourcingMatrixApiSourcingLineBuilder $newBuilder() =>
+  ListStockForSourcingMatrixApiSourcingLineBuilder newBuilder$() =>
       ListStockForSourcingMatrixApiSourcingLineBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.setComponent,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderLineId,
         this.itemId,
         this.itemVersionId,
@@ -622,32 +622,27 @@ class _$ListStockForSourcingMatrixApiSourcingLineActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderLineId.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemVersionId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    itemNumber.$reducer(reducer);
-    itemDesc.$reducer(reducer);
-    moveItemType.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    qtyOpen.$reducer(reducer);
-    locationItems.$reducer(reducer);
-    childItems.$reducer(reducer);
-    locationItemMap.$reducer(reducer);
-    setComponent.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderLineId.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemVersionId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    itemNumber.reducer$(reducer);
+    itemDesc.reducer$(reducer);
+    moveItemType.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    qtyOpen.reducer$(reducer);
+    locationItems.reducer$(reducer);
+    childItems.reducer$(reducer);
+    locationItemMap.reducer$(reducer);
+    setComponent.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    setComponent.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    setComponent.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListStockForSourcingMatrixApiSourcingLine);
 }

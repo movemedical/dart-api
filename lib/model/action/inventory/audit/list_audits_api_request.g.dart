@@ -647,9 +647,9 @@ typedef StatefulActionsOptions<
 
 class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
   final StatefulActionsOptions<ListAuditsApiRequest,
-      ListAuditsApiRequestBuilder, ListAuditsApiRequestActions> $options;
+      ListAuditsApiRequestBuilder, ListAuditsApiRequestActions> options$;
 
-  final ActionDispatcher<ListAuditsApiRequest> $replace;
+  final ActionDispatcher<ListAuditsApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> locationIds;
   final FieldDispatcher<BuiltList<AuditStatus>> statuses;
   final DateRangeActions scheduledStartDateRange;
@@ -669,18 +669,18 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListAuditsApiOrderBy> sortBy;
 
-  _$ListAuditsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListAuditsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        locationIds = $options.field<BuiltList<String>>(
+  _$ListAuditsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListAuditsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        locationIds = options$.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        statuses = $options.field<BuiltList<AuditStatus>>('statuses',
+        statuses = options$.field<BuiltList<AuditStatus>>('statuses',
             (a) => a?.statuses, (s) => s?.statuses, (p, b) => p?.statuses = b),
         scheduledStartDateRange = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'scheduledStartDateRange',
                 (a) => a.scheduledStartDateRange,
                 (s) => s?.scheduledStartDateRange,
@@ -688,55 +688,55 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
                 (parent, builder) =>
                     parent?.scheduledStartDateRange = builder)),
         scheduledEndDateRange = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'scheduledEndDateRange',
                 (a) => a.scheduledEndDateRange,
                 (s) => s?.scheduledEndDateRange,
                 (b) => b?.scheduledEndDateRange,
                 (parent, builder) => parent?.scheduledEndDateRange = builder)),
-        assigned = $options.field<bool>('assigned', (a) => a?.assigned,
+        assigned = options$.field<bool>('assigned', (a) => a?.assigned,
             (s) => s?.assigned, (p, b) => p?.assigned = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        itemIds = $options.field<BuiltList<String>>('itemIds',
+        itemIds = options$.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        lotIds = $options.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
+        lotIds = options$.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
             (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        serialIds = $options.field<BuiltList<String>>(
+        serialIds = options$.field<BuiltList<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
             (p, b) => p?.serialIds = b),
-        itemCategoryIds = $options.field<BuiltList<String>>(
+        itemCategoryIds = options$.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
             (p, b) => p?.itemCategoryIds = b),
-        assigneeLinkedIds = $options.field<BuiltList<String>>(
+        assigneeLinkedIds = options$.field<BuiltList<String>>(
             'assigneeLinkedIds',
             (a) => a?.assigneeLinkedIds,
             (s) => s?.assigneeLinkedIds,
             (p, b) => p?.assigneeLinkedIds = b),
-        types = $options.field<BuiltList<AuditType>>(
+        types = options$.field<BuiltList<AuditType>>(
             'types', (a) => a?.types, (s) => s?.types, (p, b) => p?.types = b),
-        countTypes = $options.field<BuiltList<AuditCountType>>(
+        countTypes = options$.field<BuiltList<AuditCountType>>(
             'countTypes',
             (a) => a?.countTypes,
             (s) => s?.countTypes,
             (p, b) => p?.countTypes = b),
-        auditNumber = $options.field<String>(
+        auditNumber = options$.field<String>(
             'auditNumber',
             (a) => a?.auditNumber,
             (s) => s?.auditNumber,
             (p, b) => p?.auditNumber = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        syncDate = $options.field<DateTime>('syncDate', (a) => a?.syncDate,
+        syncDate = options$.field<DateTime>('syncDate', (a) => a?.syncDate,
             (s) => s?.syncDate, (p, b) => p?.syncDate = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -746,7 +746,7 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         sortBy = OrderByParamsActions<ListAuditsApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListAuditsApiOrderBy>,
                     OrderByParamsBuilder<ListAuditsApiOrderBy>,
                     OrderByParamsActions<ListAuditsApiOrderBy>>(
@@ -762,25 +762,25 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
       _$ListAuditsApiRequestActions._(options());
 
   @override
-  ListAuditsApiRequest get $initial => ListAuditsApiRequest();
+  ListAuditsApiRequest get initialState$ => ListAuditsApiRequest();
 
   @override
-  ListAuditsApiRequestBuilder $newBuilder() => ListAuditsApiRequestBuilder();
+  ListAuditsApiRequestBuilder newBuilder$() => ListAuditsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.scheduledStartDateRange,
         this.scheduledEndDateRange,
         this.paging,
         this.sortBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.locationIds,
         this.statuses,
         this.assigned,
@@ -798,38 +798,34 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    locationIds.$reducer(reducer);
-    statuses.$reducer(reducer);
-    scheduledStartDateRange.$reducer(reducer);
-    scheduledEndDateRange.$reducer(reducer);
-    assigned.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    itemIds.$reducer(reducer);
-    lotIds.$reducer(reducer);
-    serialIds.$reducer(reducer);
-    itemCategoryIds.$reducer(reducer);
-    assigneeLinkedIds.$reducer(reducer);
-    types.$reducer(reducer);
-    countTypes.$reducer(reducer);
-    auditNumber.$reducer(reducer);
-    search.$reducer(reducer);
-    syncDate.$reducer(reducer);
-    paging.$reducer(reducer);
-    sortBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    locationIds.reducer$(reducer);
+    statuses.reducer$(reducer);
+    scheduledStartDateRange.reducer$(reducer);
+    scheduledEndDateRange.reducer$(reducer);
+    assigned.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    itemIds.reducer$(reducer);
+    lotIds.reducer$(reducer);
+    serialIds.reducer$(reducer);
+    itemCategoryIds.reducer$(reducer);
+    assigneeLinkedIds.reducer$(reducer);
+    types.reducer$(reducer);
+    countTypes.reducer$(reducer);
+    auditNumber.reducer$(reducer);
+    search.reducer$(reducer);
+    syncDate.reducer$(reducer);
+    paging.reducer$(reducer);
+    sortBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    scheduledStartDateRange.$middleware(middleware);
-    scheduledEndDateRange.$middleware(middleware);
-    paging.$middleware(middleware);
-    sortBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    scheduledStartDateRange.middleware$(middleware);
+    scheduledEndDateRange.middleware$(middleware);
+    paging.middleware$(middleware);
+    sortBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListAuditsApiRequest);
 }

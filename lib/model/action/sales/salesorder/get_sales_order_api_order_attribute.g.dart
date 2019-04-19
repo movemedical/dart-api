@@ -178,18 +178,18 @@ class _$GetSalesOrderApiOrderAttributeActions
   final StatefulActionsOptions<
       GetSalesOrderApiOrderAttribute,
       GetSalesOrderApiOrderAttributeBuilder,
-      GetSalesOrderApiOrderAttributeActions> $options;
+      GetSalesOrderApiOrderAttributeActions> options$;
 
-  final ActionDispatcher<GetSalesOrderApiOrderAttribute> $replace;
+  final ActionDispatcher<GetSalesOrderApiOrderAttribute> replace$;
   final FieldDispatcher<String> label;
   final FieldDispatcher<String> value;
 
-  _$GetSalesOrderApiOrderAttributeActions._(this.$options)
-      : $replace = $options.action<GetSalesOrderApiOrderAttribute>(
-            '\$replace', (a) => a?.$replace),
-        label = $options.field<String>(
+  _$GetSalesOrderApiOrderAttributeActions._(this.options$)
+      : replace$ = options$.action<GetSalesOrderApiOrderAttribute>(
+            'replace\$', (a) => a?.replace$),
+        label = options$.field<String>(
             'label', (a) => a?.label, (s) => s?.label, (p, b) => p?.label = b),
-        value = $options.field<String>(
+        value = options$.field<String>(
             'value', (a) => a?.value, (s) => s?.value, (p, b) => p?.value = b),
         super._();
 
@@ -198,36 +198,31 @@ class _$GetSalesOrderApiOrderAttributeActions
       _$GetSalesOrderApiOrderAttributeActions._(options());
 
   @override
-  GetSalesOrderApiOrderAttribute get $initial =>
+  GetSalesOrderApiOrderAttribute get initialState$ =>
       GetSalesOrderApiOrderAttribute();
 
   @override
-  GetSalesOrderApiOrderAttributeBuilder $newBuilder() =>
+  GetSalesOrderApiOrderAttributeBuilder newBuilder$() =>
       GetSalesOrderApiOrderAttributeBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.label,
         this.value,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    label.$reducer(reducer);
-    value.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    label.reducer$(reducer);
+    value.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetSalesOrderApiOrderAttribute);
 }

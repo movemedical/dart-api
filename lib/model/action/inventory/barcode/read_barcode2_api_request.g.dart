@@ -197,22 +197,22 @@ typedef StatefulActionsOptions<
 
 class _$ReadBarcode2ApiRequestActions extends ReadBarcode2ApiRequestActions {
   final StatefulActionsOptions<ReadBarcode2ApiRequest,
-      ReadBarcode2ApiRequestBuilder, ReadBarcode2ApiRequestActions> $options;
+      ReadBarcode2ApiRequestBuilder, ReadBarcode2ApiRequestActions> options$;
 
-  final ActionDispatcher<ReadBarcode2ApiRequest> $replace;
+  final ActionDispatcher<ReadBarcode2ApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> scanBarcodes;
   final ReadBarcode2ApiResponseActions previousResponse;
 
-  _$ReadBarcode2ApiRequestActions._(this.$options)
-      : $replace = $options.action<ReadBarcode2ApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        scanBarcodes = $options.field<BuiltList<String>>(
+  _$ReadBarcode2ApiRequestActions._(this.options$)
+      : replace$ = options$.action<ReadBarcode2ApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        scanBarcodes = options$.field<BuiltList<String>>(
             'scanBarcodes',
             (a) => a?.scanBarcodes,
             (s) => s?.scanBarcodes,
             (p, b) => p?.scanBarcodes = b),
         previousResponse = ReadBarcode2ApiResponseActions(() =>
-            $options.stateful<
+            options$.stateful<
                     ReadBarcode2ApiResponse,
                     ReadBarcode2ApiResponseBuilder,
                     ReadBarcode2ApiResponseActions>(
@@ -228,40 +228,36 @@ class _$ReadBarcode2ApiRequestActions extends ReadBarcode2ApiRequestActions {
       _$ReadBarcode2ApiRequestActions._(options());
 
   @override
-  ReadBarcode2ApiRequest get $initial => ReadBarcode2ApiRequest();
+  ReadBarcode2ApiRequest get initialState$ => ReadBarcode2ApiRequest();
 
   @override
-  ReadBarcode2ApiRequestBuilder $newBuilder() =>
+  ReadBarcode2ApiRequestBuilder newBuilder$() =>
       ReadBarcode2ApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.previousResponse,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.scanBarcodes,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    scanBarcodes.$reducer(reducer);
-    previousResponse.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    scanBarcodes.reducer$(reducer);
+    previousResponse.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    previousResponse.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    previousResponse.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ReadBarcode2ApiRequest);
 }

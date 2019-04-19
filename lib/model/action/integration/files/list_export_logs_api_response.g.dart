@@ -193,18 +193,18 @@ class _$ListExportLogsApiResponseActions
   final StatefulActionsOptions<
       ListExportLogsApiResponse,
       ListExportLogsApiResponseBuilder,
-      ListExportLogsApiResponseActions> $options;
+      ListExportLogsApiResponseActions> options$;
 
-  final ActionDispatcher<ListExportLogsApiResponse> $replace;
+  final ActionDispatcher<ListExportLogsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListExportLogsApiExportLog>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListExportLogsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListExportLogsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListExportLogsApiExportLog>>(
+  _$ListExportLogsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListExportLogsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListExportLogsApiExportLog>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -213,34 +213,30 @@ class _$ListExportLogsApiResponseActions
       _$ListExportLogsApiResponseActions._(options());
 
   @override
-  ListExportLogsApiResponse get $initial => ListExportLogsApiResponse();
+  ListExportLogsApiResponse get initialState$ => ListExportLogsApiResponse();
 
   @override
-  ListExportLogsApiResponseBuilder $newBuilder() =>
+  ListExportLogsApiResponseBuilder newBuilder$() =>
       ListExportLogsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListExportLogsApiResponse);
 }

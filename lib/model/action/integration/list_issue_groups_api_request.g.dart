@@ -154,15 +154,15 @@ class _$ListIssueGroupsApiRequestActions
   final StatefulActionsOptions<
       ListIssueGroupsApiRequest,
       ListIssueGroupsApiRequestBuilder,
-      ListIssueGroupsApiRequestActions> $options;
+      ListIssueGroupsApiRequestActions> options$;
 
-  final ActionDispatcher<ListIssueGroupsApiRequest> $replace;
+  final ActionDispatcher<ListIssueGroupsApiRequest> replace$;
   final FieldDispatcher<String> search;
 
-  _$ListIssueGroupsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListIssueGroupsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$ListIssueGroupsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListIssueGroupsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -171,32 +171,28 @@ class _$ListIssueGroupsApiRequestActions
       _$ListIssueGroupsApiRequestActions._(options());
 
   @override
-  ListIssueGroupsApiRequest get $initial => ListIssueGroupsApiRequest();
+  ListIssueGroupsApiRequest get initialState$ => ListIssueGroupsApiRequest();
 
   @override
-  ListIssueGroupsApiRequestBuilder $newBuilder() =>
+  ListIssueGroupsApiRequestBuilder newBuilder$() =>
       ListIssueGroupsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListIssueGroupsApiRequest);
 }

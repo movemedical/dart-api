@@ -172,18 +172,18 @@ typedef StatefulActionsOptions<
 
 class _$ListCaseUsageApiRequestActions extends ListCaseUsageApiRequestActions {
   final StatefulActionsOptions<ListCaseUsageApiRequest,
-      ListCaseUsageApiRequestBuilder, ListCaseUsageApiRequestActions> $options;
+      ListCaseUsageApiRequestBuilder, ListCaseUsageApiRequestActions> options$;
 
-  final ActionDispatcher<ListCaseUsageApiRequest> $replace;
+  final ActionDispatcher<ListCaseUsageApiRequest> replace$;
   final FieldDispatcher<String> caseId;
   final FieldDispatcher<String> orderId;
 
-  _$ListCaseUsageApiRequestActions._(this.$options)
-      : $replace = $options.action<ListCaseUsageApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseId = $options.field<String>('caseId', (a) => a?.caseId,
+  _$ListCaseUsageApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListCaseUsageApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseId = options$.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         super._();
 
@@ -192,34 +192,30 @@ class _$ListCaseUsageApiRequestActions extends ListCaseUsageApiRequestActions {
       _$ListCaseUsageApiRequestActions._(options());
 
   @override
-  ListCaseUsageApiRequest get $initial => ListCaseUsageApiRequest();
+  ListCaseUsageApiRequest get initialState$ => ListCaseUsageApiRequest();
 
   @override
-  ListCaseUsageApiRequestBuilder $newBuilder() =>
+  ListCaseUsageApiRequestBuilder newBuilder$() =>
       ListCaseUsageApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseId,
         this.orderId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseId.$reducer(reducer);
-    orderId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseId.reducer$(reducer);
+    orderId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListCaseUsageApiRequest);
 }

@@ -881,9 +881,9 @@ class _$ListCaseEventsApiRequestActions
   final StatefulActionsOptions<
       ListCaseEventsApiRequest,
       ListCaseEventsApiRequestBuilder,
-      ListCaseEventsApiRequestActions> $options;
+      ListCaseEventsApiRequestActions> options$;
 
-  final ActionDispatcher<ListCaseEventsApiRequest> $replace;
+  final ActionDispatcher<ListCaseEventsApiRequest> replace$;
   final FieldDispatcher<bool> canReturnCounts;
   final FieldDispatcher<bool> forceReturnCounts;
   final FieldDispatcher<DateTime> startDate;
@@ -913,113 +913,113 @@ class _$ListCaseEventsApiRequestActions
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListCaseEventsApiOrderBy> orderBy;
 
-  _$ListCaseEventsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListCaseEventsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        canReturnCounts = $options.field<bool>(
+  _$ListCaseEventsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListCaseEventsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        canReturnCounts = options$.field<bool>(
             'canReturnCounts',
             (a) => a?.canReturnCounts,
             (s) => s?.canReturnCounts,
             (p, b) => p?.canReturnCounts = b),
-        forceReturnCounts = $options.field<bool>(
+        forceReturnCounts = options$.field<bool>(
             'forceReturnCounts',
             (a) => a?.forceReturnCounts,
             (s) => s?.forceReturnCounts,
             (p, b) => p?.forceReturnCounts = b),
-        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+        startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
-        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
+        endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        startDateLocal = $options.field<DateTime>(
+        startDateLocal = options$.field<DateTime>(
             'startDateLocal',
             (a) => a?.startDateLocal,
             (s) => s?.startDateLocal,
             (p, b) => p?.startDateLocal = b),
-        endDateLocal = $options.field<DateTime>(
+        endDateLocal = options$.field<DateTime>(
             'endDateLocal',
             (a) => a?.endDateLocal,
             (s) => s?.endDateLocal,
             (p, b) => p?.endDateLocal = b),
-        caseIds = $options.field<BuiltList<String>>('caseIds',
+        caseIds = options$.field<BuiltList<String>>('caseIds',
             (a) => a?.caseIds, (s) => s?.caseIds, (p, b) => p?.caseIds = b),
-        caseTypeIds = $options.field<BuiltList<String>>(
+        caseTypeIds = options$.field<BuiltList<String>>(
             'caseTypeIds',
             (a) => a?.caseTypeIds,
             (s) => s?.caseTypeIds,
             (p, b) => p?.caseTypeIds = b),
-        bizUnitIds = $options.field<BuiltList<String>>(
+        bizUnitIds = options$.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        hcrIds = $options.field<BuiltList<String>>('hcrIds', (a) => a?.hcrIds,
+        hcrIds = options$.field<BuiltList<String>>('hcrIds', (a) => a?.hcrIds,
             (s) => s?.hcrIds, (p, b) => p?.hcrIds = b),
-        coverageHcrIds = $options.field<BuiltList<String>>(
+        coverageHcrIds = options$.field<BuiltList<String>>(
             'coverageHcrIds',
             (a) => a?.coverageHcrIds,
             (s) => s?.coverageHcrIds,
             (p, b) => p?.coverageHcrIds = b),
-        teamIds = $options.field<BuiltList<String>>('teamIds',
+        teamIds = options$.field<BuiltList<String>>('teamIds',
             (a) => a?.teamIds, (s) => s?.teamIds, (p, b) => p?.teamIds = b),
-        facilityIds = $options.field<BuiltList<String>>(
+        facilityIds = options$.field<BuiltList<String>>(
             'facilityIds',
             (a) => a?.facilityIds,
             (s) => s?.facilityIds,
             (p, b) => p?.facilityIds = b),
-        surgeonIds = $options.field<BuiltList<String>>(
+        surgeonIds = options$.field<BuiltList<String>>(
             'surgeonIds',
             (a) => a?.surgeonIds,
             (s) => s?.surgeonIds,
             (p, b) => p?.surgeonIds = b),
-        procedureIds = $options.field<BuiltList<String>>(
+        procedureIds = options$.field<BuiltList<String>>(
             'procedureIds',
             (a) => a?.procedureIds,
             (s) => s?.procedureIds,
             (p, b) => p?.procedureIds = b),
-        subProcedureIds = $options.field<BuiltList<String>>(
+        subProcedureIds = options$.field<BuiltList<String>>(
             'subProcedureIds',
             (a) => a?.subProcedureIds,
             (s) => s?.subProcedureIds,
             (p, b) => p?.subProcedureIds = b),
-        bodySides = $options.field<BuiltList<BodySide>>(
+        bodySides = options$.field<BuiltList<BodySide>>(
             'bodySides',
             (a) => a?.bodySides,
             (s) => s?.bodySides,
             (p, b) => p?.bodySides = b),
-        statuses = $options.field<BuiltList<CaseEventStatus>>('statuses',
+        statuses = options$.field<BuiltList<CaseEventStatus>>('statuses',
             (a) => a?.statuses, (s) => s?.statuses, (p, b) => p?.statuses = b),
-        patientName = $options.field<String>(
+        patientName = options$.field<String>(
             'patientName',
             (a) => a?.patientName,
             (s) => s?.patientName,
             (p, b) => p?.patientName = b),
-        patientGender = $options.field<Gender>(
+        patientGender = options$.field<Gender>(
             'patientGender',
             (a) => a?.patientGender,
             (s) => s?.patientGender,
             (p, b) => p?.patientGender = b),
-        patientSearch = $options.field<String>(
+        patientSearch = options$.field<String>(
             'patientSearch',
             (a) => a?.patientSearch,
             (s) => s?.patientSearch,
             (p, b) => p?.patientSearch = b),
-        caseNumber = $options.field<String>('caseNumber', (a) => a?.caseNumber,
+        caseNumber = options$.field<String>('caseNumber', (a) => a?.caseNumber,
             (s) => s?.caseNumber, (p, b) => p?.caseNumber = b),
-        syncDate = $options.field<DateTime>('syncDate', (a) => a?.syncDate,
+        syncDate = options$.field<DateTime>('syncDate', (a) => a?.syncDate,
             (s) => s?.syncDate, (p, b) => p?.syncDate = b),
-        activeWarnings = $options.field<bool>(
+        activeWarnings = options$.field<bool>(
             'activeWarnings',
             (a) => a?.activeWarnings,
             (s) => s?.activeWarnings,
             (p, b) => p?.activeWarnings = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        forExport = $options.field<bool>('forExport', (a) => a?.forExport,
+        forExport = options$.field<bool>('forExport', (a) => a?.forExport,
             (s) => s?.forExport, (p, b) => p?.forExport = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -1029,7 +1029,7 @@ class _$ListCaseEventsApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListCaseEventsApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListCaseEventsApiOrderBy>,
                     OrderByParamsBuilder<ListCaseEventsApiOrderBy>,
                     OrderByParamsActions<ListCaseEventsApiOrderBy>>(
@@ -1045,24 +1045,24 @@ class _$ListCaseEventsApiRequestActions
       _$ListCaseEventsApiRequestActions._(options());
 
   @override
-  ListCaseEventsApiRequest get $initial => ListCaseEventsApiRequest();
+  ListCaseEventsApiRequest get initialState$ => ListCaseEventsApiRequest();
 
   @override
-  ListCaseEventsApiRequestBuilder $newBuilder() =>
+  ListCaseEventsApiRequestBuilder newBuilder$() =>
       ListCaseEventsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.canReturnCounts,
         this.forceReturnCounts,
         this.startDate,
@@ -1092,46 +1092,42 @@ class _$ListCaseEventsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    canReturnCounts.$reducer(reducer);
-    forceReturnCounts.$reducer(reducer);
-    startDate.$reducer(reducer);
-    endDate.$reducer(reducer);
-    startDateLocal.$reducer(reducer);
-    endDateLocal.$reducer(reducer);
-    caseIds.$reducer(reducer);
-    caseTypeIds.$reducer(reducer);
-    bizUnitIds.$reducer(reducer);
-    hcrIds.$reducer(reducer);
-    coverageHcrIds.$reducer(reducer);
-    teamIds.$reducer(reducer);
-    facilityIds.$reducer(reducer);
-    surgeonIds.$reducer(reducer);
-    procedureIds.$reducer(reducer);
-    subProcedureIds.$reducer(reducer);
-    bodySides.$reducer(reducer);
-    statuses.$reducer(reducer);
-    patientName.$reducer(reducer);
-    patientGender.$reducer(reducer);
-    patientSearch.$reducer(reducer);
-    caseNumber.$reducer(reducer);
-    syncDate.$reducer(reducer);
-    activeWarnings.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    forExport.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    canReturnCounts.reducer$(reducer);
+    forceReturnCounts.reducer$(reducer);
+    startDate.reducer$(reducer);
+    endDate.reducer$(reducer);
+    startDateLocal.reducer$(reducer);
+    endDateLocal.reducer$(reducer);
+    caseIds.reducer$(reducer);
+    caseTypeIds.reducer$(reducer);
+    bizUnitIds.reducer$(reducer);
+    hcrIds.reducer$(reducer);
+    coverageHcrIds.reducer$(reducer);
+    teamIds.reducer$(reducer);
+    facilityIds.reducer$(reducer);
+    surgeonIds.reducer$(reducer);
+    procedureIds.reducer$(reducer);
+    subProcedureIds.reducer$(reducer);
+    bodySides.reducer$(reducer);
+    statuses.reducer$(reducer);
+    patientName.reducer$(reducer);
+    patientGender.reducer$(reducer);
+    patientSearch.reducer$(reducer);
+    caseNumber.reducer$(reducer);
+    syncDate.reducer$(reducer);
+    activeWarnings.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    forExport.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListCaseEventsApiRequest);
 }

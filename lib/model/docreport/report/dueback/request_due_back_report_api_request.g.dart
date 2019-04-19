@@ -315,9 +315,9 @@ class _$RequestDueBackReportApiRequestActions
   final StatefulActionsOptions<
       RequestDueBackReportApiRequest,
       RequestDueBackReportApiRequestBuilder,
-      RequestDueBackReportApiRequestActions> $options;
+      RequestDueBackReportApiRequestActions> options$;
 
-  final ActionDispatcher<RequestDueBackReportApiRequest> $replace;
+  final ActionDispatcher<RequestDueBackReportApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final FieldDispatcher<DocReportDisplayType> displayType;
@@ -325,10 +325,10 @@ class _$RequestDueBackReportApiRequestActions
   final FieldDispatcher<BuiltList<String>> orgUnitIds;
   final FieldDispatcher<BuiltList<String>> itemCategoryIds;
 
-  _$RequestDueBackReportApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestDueBackReportApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestDueBackReportApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestDueBackReportApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -337,24 +337,24 @@ class _$RequestDueBackReportApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.field<DocReportDisplayType>(
+        displayType = options$.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        locationIds = $options.field<BuiltList<String>>(
+        locationIds = options$.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        itemCategoryIds = $options.field<BuiltList<String>>(
+        itemCategoryIds = options$.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
@@ -366,24 +366,24 @@ class _$RequestDueBackReportApiRequestActions
       _$RequestDueBackReportApiRequestActions._(options());
 
   @override
-  RequestDueBackReportApiRequest get $initial =>
+  RequestDueBackReportApiRequest get initialState$ =>
       RequestDueBackReportApiRequest();
 
   @override
-  RequestDueBackReportApiRequestBuilder $newBuilder() =>
+  RequestDueBackReportApiRequestBuilder newBuilder$() =>
       RequestDueBackReportApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.format,
         this.displayType,
         this.locationIds,
@@ -392,24 +392,19 @@ class _$RequestDueBackReportApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    format.$reducer(reducer);
-    displayType.$reducer(reducer);
-    locationIds.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    itemCategoryIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    format.reducer$(reducer);
+    displayType.reducer$(reducer);
+    locationIds.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    itemCategoryIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestDueBackReportApiRequest);
 }

@@ -278,9 +278,9 @@ class _$BuildInspectionApiLocationReceiptDataActions
   final StatefulActionsOptions<
       BuildInspectionApiLocationReceiptData,
       BuildInspectionApiLocationReceiptDataBuilder,
-      BuildInspectionApiLocationReceiptDataActions> $options;
+      BuildInspectionApiLocationReceiptDataActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiLocationReceiptData> $replace;
+  final ActionDispatcher<BuildInspectionApiLocationReceiptData> replace$;
   final FieldDispatcher<String> locationId;
   final FieldDispatcher<LocationType> locationType;
   final FieldDispatcher<String> inventoryTypeId;
@@ -288,28 +288,28 @@ class _$BuildInspectionApiLocationReceiptDataActions
   final FieldDispatcher<BuiltList<BuildInspectionApiLocationReceiptDataBin>>
       bins;
 
-  _$BuildInspectionApiLocationReceiptDataActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiLocationReceiptData>(
-            '\$replace', (a) => a?.$replace),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+  _$BuildInspectionApiLocationReceiptDataActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiLocationReceiptData>(
+            'replace\$', (a) => a?.replace$),
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        inventoryTypeId = $options.field<String>(
+        inventoryTypeId = options$.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        orderReasonId = $options.field<String>(
+        orderReasonId = options$.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
             (p, b) => p?.orderReasonId = b),
         bins =
-            $options.field<BuiltList<BuildInspectionApiLocationReceiptDataBin>>(
+            options$.field<BuiltList<BuildInspectionApiLocationReceiptDataBin>>(
                 'bins', (a) => a?.bins, (s) => s?.bins, (p, b) => p?.bins = b),
         super._();
 
@@ -318,18 +318,18 @@ class _$BuildInspectionApiLocationReceiptDataActions
       _$BuildInspectionApiLocationReceiptDataActions._(options());
 
   @override
-  BuildInspectionApiLocationReceiptData get $initial =>
+  BuildInspectionApiLocationReceiptData get initialState$ =>
       BuildInspectionApiLocationReceiptData();
 
   @override
-  BuildInspectionApiLocationReceiptDataBuilder $newBuilder() =>
+  BuildInspectionApiLocationReceiptDataBuilder newBuilder$() =>
       BuildInspectionApiLocationReceiptDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.locationId,
         this.locationType,
         this.inventoryTypeId,
@@ -338,22 +338,17 @@ class _$BuildInspectionApiLocationReceiptDataActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    locationId.$reducer(reducer);
-    locationType.$reducer(reducer);
-    inventoryTypeId.$reducer(reducer);
-    orderReasonId.$reducer(reducer);
-    bins.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    locationId.reducer$(reducer);
+    locationType.reducer$(reducer);
+    inventoryTypeId.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
+    bins.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiLocationReceiptData);
 }

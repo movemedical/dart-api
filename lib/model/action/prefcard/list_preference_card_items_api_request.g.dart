@@ -162,15 +162,15 @@ class _$ListPreferenceCardItemsApiRequestActions
   final StatefulActionsOptions<
       ListPreferenceCardItemsApiRequest,
       ListPreferenceCardItemsApiRequestBuilder,
-      ListPreferenceCardItemsApiRequestActions> $options;
+      ListPreferenceCardItemsApiRequestActions> options$;
 
-  final ActionDispatcher<ListPreferenceCardItemsApiRequest> $replace;
+  final ActionDispatcher<ListPreferenceCardItemsApiRequest> replace$;
   final FieldDispatcher<String> preferenceCardId;
 
-  _$ListPreferenceCardItemsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListPreferenceCardItemsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        preferenceCardId = $options.field<String>(
+  _$ListPreferenceCardItemsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListPreferenceCardItemsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        preferenceCardId = options$.field<String>(
             'preferenceCardId',
             (a) => a?.preferenceCardId,
             (s) => s?.preferenceCardId,
@@ -182,34 +182,29 @@ class _$ListPreferenceCardItemsApiRequestActions
       _$ListPreferenceCardItemsApiRequestActions._(options());
 
   @override
-  ListPreferenceCardItemsApiRequest get $initial =>
+  ListPreferenceCardItemsApiRequest get initialState$ =>
       ListPreferenceCardItemsApiRequest();
 
   @override
-  ListPreferenceCardItemsApiRequestBuilder $newBuilder() =>
+  ListPreferenceCardItemsApiRequestBuilder newBuilder$() =>
       ListPreferenceCardItemsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.preferenceCardId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    preferenceCardId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    preferenceCardId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPreferenceCardItemsApiRequest);
 }

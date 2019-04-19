@@ -440,9 +440,9 @@ typedef StatefulActionsOptions<ListOrdersApiOrder, ListOrdersApiOrderBuilder,
 
 class _$ListOrdersApiOrderActions extends ListOrdersApiOrderActions {
   final StatefulActionsOptions<ListOrdersApiOrder, ListOrdersApiOrderBuilder,
-      ListOrdersApiOrderActions> $options;
+      ListOrdersApiOrderActions> options$;
 
-  final ActionDispatcher<ListOrdersApiOrder> $replace;
+  final ActionDispatcher<ListOrdersApiOrder> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> number;
   final FieldDispatcher<String> erpReference;
@@ -457,21 +457,21 @@ class _$ListOrdersApiOrderActions extends ListOrdersApiOrderActions {
   final FieldDispatcher<DateTime> deliveryEnd;
   final FieldDispatcher<int> noteCount;
 
-  _$ListOrdersApiOrderActions._(this.$options)
-      : $replace = $options.action<ListOrdersApiOrder>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListOrdersApiOrderActions._(this.options$)
+      : replace$ = options$.action<ListOrdersApiOrder>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        erpReference = $options.field<String>(
+        erpReference = options$.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
-        status = $options.field<OrderStatus>('status', (a) => a?.status,
+        status = options$.field<OrderStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        reason = OrderReasonActions(() => $options
+        reason = OrderReasonActions(() => options$
             .stateful<OrderReason, OrderReasonBuilder, OrderReasonActions>(
                 'reason',
                 (a) => a.reason,
@@ -479,37 +479,37 @@ class _$ListOrdersApiOrderActions extends ListOrdersApiOrderActions {
                 (b) => b?.reason,
                 (parent, builder) => parent?.reason = builder)),
         toLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'toLocation',
                 (a) => a.toLocation,
                 (s) => s?.toLocation,
                 (b) => b?.toLocation,
                 (parent, builder) => parent?.toLocation = builder)),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        created = $options.field<DateTime>('created', (a) => a?.created,
+        created = options$.field<DateTime>('created', (a) => a?.created,
             (s) => s?.created, (p, b) => p?.created = b),
-        createdBy = $options.field<String>('createdBy', (a) => a?.createdBy,
+        createdBy = options$.field<String>('createdBy', (a) => a?.createdBy,
             (s) => s?.createdBy, (p, b) => p?.createdBy = b),
-        sourceStart = $options.field<DateTime>(
+        sourceStart = options$.field<DateTime>(
             'sourceStart',
             (a) => a?.sourceStart,
             (s) => s?.sourceStart,
             (p, b) => p?.sourceStart = b),
-        deliveryStart = $options.field<DateTime>(
+        deliveryStart = options$.field<DateTime>(
             'deliveryStart',
             (a) => a?.deliveryStart,
             (s) => s?.deliveryStart,
             (p, b) => p?.deliveryStart = b),
-        deliveryEnd = $options.field<DateTime>(
+        deliveryEnd = options$.field<DateTime>(
             'deliveryEnd',
             (a) => a?.deliveryEnd,
             (s) => s?.deliveryEnd,
             (p, b) => p?.deliveryEnd = b),
-        noteCount = $options.field<int>('noteCount', (a) => a?.noteCount,
+        noteCount = options$.field<int>('noteCount', (a) => a?.noteCount,
             (s) => s?.noteCount, (p, b) => p?.noteCount = b),
         super._();
 
@@ -518,23 +518,23 @@ class _$ListOrdersApiOrderActions extends ListOrdersApiOrderActions {
       _$ListOrdersApiOrderActions._(options());
 
   @override
-  ListOrdersApiOrder get $initial => ListOrdersApiOrder();
+  ListOrdersApiOrder get initialState$ => ListOrdersApiOrder();
 
   @override
-  ListOrdersApiOrderBuilder $newBuilder() => ListOrdersApiOrderBuilder();
+  ListOrdersApiOrderBuilder newBuilder$() => ListOrdersApiOrderBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.reason,
         this.toLocation,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.number,
         this.erpReference,
@@ -549,31 +549,27 @@ class _$ListOrdersApiOrderActions extends ListOrdersApiOrderActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    number.$reducer(reducer);
-    erpReference.$reducer(reducer);
-    status.$reducer(reducer);
-    reason.$reducer(reducer);
-    toLocation.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    created.$reducer(reducer);
-    createdBy.$reducer(reducer);
-    sourceStart.$reducer(reducer);
-    deliveryStart.$reducer(reducer);
-    deliveryEnd.$reducer(reducer);
-    noteCount.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    number.reducer$(reducer);
+    erpReference.reducer$(reducer);
+    status.reducer$(reducer);
+    reason.reducer$(reducer);
+    toLocation.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    created.reducer$(reducer);
+    createdBy.reducer$(reducer);
+    sourceStart.reducer$(reducer);
+    deliveryStart.reducer$(reducer);
+    deliveryEnd.reducer$(reducer);
+    noteCount.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    reason.$middleware(middleware);
-    toLocation.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    reason.middleware$(middleware);
+    toLocation.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListOrdersApiOrder);
 }

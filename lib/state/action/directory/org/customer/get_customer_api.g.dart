@@ -22,64 +22,30 @@ class _$GetCustomerApi extends GetCustomerApi {
           ApiResult<GetCustomerApiResponse>>,
       CommandStateBuilder<ApiCommand<GetCustomerApiRequest>,
           ApiResult<GetCustomerApiResponse>>,
-      GetCustomerApi> $options;
+      GetCustomerApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetCustomerApiRequest>,
-          ApiResult<GetCustomerApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetCustomerApiRequest>,
-          ApiResult<GetCustomerApiResponse>, GetCustomerApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetCustomerApiRequest>,
-          ApiResult<GetCustomerApiResponse>,
-          GetCustomerApi,
-          Command<ApiCommand<GetCustomerApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetCustomerApiRequest>,
-          ApiResult<GetCustomerApiResponse>,
-          GetCustomerApi,
-          CommandResult<ApiResult<GetCustomerApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetCustomerApiRequest>,
-          ApiResult<GetCustomerApiResponse>,
-          GetCustomerApi,
-          CommandProgress>> $progress;
+          ApiResult<GetCustomerApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetCustomerApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<GetCustomerApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetCustomerApi._(this.$options)
-      : $replace = $options.action<
+  _$GetCustomerApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetCustomerApiRequest>,
                     ApiResult<GetCustomerApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetCustomerApiRequest>,
-                ApiResult<GetCustomerApiResponse>,
-                GetCustomerApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetCustomerApiRequest>,
-                    ApiResult<GetCustomerApiResponse>,
-                    GetCustomerApi,
-                    Command<ApiCommand<GetCustomerApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetCustomerApiRequest>,
-                    ApiResult<GetCustomerApiResponse>,
-                    GetCustomerApi,
-                    CommandResult<ApiResult<GetCustomerApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetCustomerApiRequest>,
-                ApiResult<GetCustomerApiResponse>,
-                GetCustomerApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<GetCustomerApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<GetCustomerApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetCustomerApi(GetCustomerApiOptions options) =>
@@ -88,31 +54,24 @@ class _$GetCustomerApi extends GetCustomerApi {
   @override
   CommandState<ApiCommand<GetCustomerApiRequest>,
           ApiResult<GetCustomerApiResponse>>
-      get $initial => CommandState<ApiCommand<GetCustomerApiRequest>,
+      get initialState$ => CommandState<ApiCommand<GetCustomerApiRequest>,
           ApiResult<GetCustomerApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetCustomerApiRequest>,
           ApiResult<GetCustomerApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<GetCustomerApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<GetCustomerApiRequest>,
           ApiResult<GetCustomerApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetCustomerApiRequest)]),
-        FullType(ApiResult, [FullType(GetCustomerApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

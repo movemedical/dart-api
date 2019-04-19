@@ -22,68 +22,32 @@ class _$GetPickProcessingDataApi extends GetPickProcessingDataApi {
           ApiResult<GetPickProcessingDataApiResponse>>,
       CommandStateBuilder<ApiCommand<GetPickProcessingDataApiRequest>,
           ApiResult<GetPickProcessingDataApiResponse>>,
-      GetPickProcessingDataApi> $options;
+      GetPickProcessingDataApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetPickProcessingDataApiRequest>,
-          ApiResult<GetPickProcessingDataApiResponse>>> $replace;
+          ApiResult<GetPickProcessingDataApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetPickProcessingDataApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetPickProcessingDataApiRequest>,
-          ApiResult<GetPickProcessingDataApiResponse>,
-          GetPickProcessingDataApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetPickProcessingDataApiRequest>,
-          ApiResult<GetPickProcessingDataApiResponse>,
-          GetPickProcessingDataApi,
-          Command<ApiCommand<GetPickProcessingDataApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetPickProcessingDataApiRequest>,
-          ApiResult<GetPickProcessingDataApiResponse>,
-          GetPickProcessingDataApi,
-          CommandResult<ApiResult<GetPickProcessingDataApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetPickProcessingDataApiRequest>,
-          ApiResult<GetPickProcessingDataApiResponse>,
-          GetPickProcessingDataApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<GetPickProcessingDataApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetPickProcessingDataApi._(this.$options)
-      : $replace = $options.action<
+  _$GetPickProcessingDataApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetPickProcessingDataApiRequest>,
                     ApiResult<GetPickProcessingDataApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetPickProcessingDataApiRequest>,
-                ApiResult<GetPickProcessingDataApiResponse>,
-                GetPickProcessingDataApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetPickProcessingDataApiRequest>,
-                    ApiResult<GetPickProcessingDataApiResponse>,
-                    GetPickProcessingDataApi,
-                    Command<ApiCommand<GetPickProcessingDataApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetPickProcessingDataApiRequest>,
-                    ApiResult<GetPickProcessingDataApiResponse>,
-                    GetPickProcessingDataApi,
-                    CommandResult<
-                        ApiResult<GetPickProcessingDataApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetPickProcessingDataApiRequest>,
-                ApiResult<GetPickProcessingDataApiResponse>,
-                GetPickProcessingDataApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<GetPickProcessingDataApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<GetPickProcessingDataApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetPickProcessingDataApi(GetPickProcessingDataApiOptions options) =>
@@ -92,32 +56,26 @@ class _$GetPickProcessingDataApi extends GetPickProcessingDataApi {
   @override
   CommandState<ApiCommand<GetPickProcessingDataApiRequest>,
           ApiResult<GetPickProcessingDataApiResponse>>
-      get $initial => CommandState<ApiCommand<GetPickProcessingDataApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<GetPickProcessingDataApiRequest>,
           ApiResult<GetPickProcessingDataApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetPickProcessingDataApiRequest>,
           ApiResult<GetPickProcessingDataApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetPickProcessingDataApiRequest>,
           ApiResult<GetPickProcessingDataApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetPickProcessingDataApiRequest)]),
-        FullType(ApiResult, [FullType(GetPickProcessingDataApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

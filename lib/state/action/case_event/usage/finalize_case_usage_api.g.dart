@@ -20,60 +20,29 @@ class _$FinalizeCaseUsageApi extends FinalizeCaseUsageApi {
       CommandState<ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<FinalizeCaseUsageApiRequest>,
           ApiResult<Nothing>>,
-      FinalizeCaseUsageApi> $options;
+      FinalizeCaseUsageApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<FinalizeCaseUsageApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<FinalizeCaseUsageApiRequest>,
-          ApiResult<Nothing>, FinalizeCaseUsageApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<FinalizeCaseUsageApiRequest>,
-          ApiResult<Nothing>,
-          FinalizeCaseUsageApi,
-          Command<ApiCommand<FinalizeCaseUsageApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<FinalizeCaseUsageApiRequest>,
-          ApiResult<Nothing>,
-          FinalizeCaseUsageApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<FinalizeCaseUsageApiRequest>,
-          ApiResult<Nothing>, FinalizeCaseUsageApi, CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<FinalizeCaseUsageApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$FinalizeCaseUsageApi._(this.$options)
-      : $replace = $options.action<
+  _$FinalizeCaseUsageApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<FinalizeCaseUsageApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<FinalizeCaseUsageApiRequest>,
-                ApiResult<Nothing>,
-                FinalizeCaseUsageApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<FinalizeCaseUsageApiRequest>,
-                    ApiResult<Nothing>,
-                    FinalizeCaseUsageApi,
-                    Command<ApiCommand<FinalizeCaseUsageApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<FinalizeCaseUsageApiRequest>,
-                    ApiResult<Nothing>,
-                    FinalizeCaseUsageApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<FinalizeCaseUsageApiRequest>,
-                ApiResult<Nothing>,
-                FinalizeCaseUsageApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<FinalizeCaseUsageApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$FinalizeCaseUsageApi(FinalizeCaseUsageApiOptions options) =>
@@ -81,31 +50,24 @@ class _$FinalizeCaseUsageApi extends FinalizeCaseUsageApi {
 
   @override
   CommandState<ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<FinalizeCaseUsageApiRequest>,
+      get initialState$ => CommandState<ApiCommand<FinalizeCaseUsageApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<FinalizeCaseUsageApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(FinalizeCaseUsageApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

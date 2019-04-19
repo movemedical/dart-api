@@ -157,15 +157,15 @@ typedef StatefulActionsOptions<GetZoneApiResponse, GetZoneApiResponseBuilder,
 
 class _$GetZoneApiResponseActions extends GetZoneApiResponseActions {
   final StatefulActionsOptions<GetZoneApiResponse, GetZoneApiResponseBuilder,
-      GetZoneApiResponseActions> $options;
+      GetZoneApiResponseActions> options$;
 
-  final ActionDispatcher<GetZoneApiResponse> $replace;
+  final ActionDispatcher<GetZoneApiResponse> replace$;
   final GetZoneApiZoneDetailActions data;
 
-  _$GetZoneApiResponseActions._(this.$options)
-      : $replace = $options.action<GetZoneApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = GetZoneApiZoneDetailActions(() => $options.stateful<
+  _$GetZoneApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetZoneApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = GetZoneApiZoneDetailActions(() => options$.stateful<
                 GetZoneApiZoneDetail,
                 GetZoneApiZoneDetailBuilder,
                 GetZoneApiZoneDetailActions>(
@@ -181,37 +181,33 @@ class _$GetZoneApiResponseActions extends GetZoneApiResponseActions {
       _$GetZoneApiResponseActions._(options());
 
   @override
-  GetZoneApiResponse get $initial => GetZoneApiResponse();
+  GetZoneApiResponse get initialState$ => GetZoneApiResponse();
 
   @override
-  GetZoneApiResponseBuilder $newBuilder() => GetZoneApiResponseBuilder();
+  GetZoneApiResponseBuilder newBuilder$() => GetZoneApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.data,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    data.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    data.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetZoneApiResponse);
 }

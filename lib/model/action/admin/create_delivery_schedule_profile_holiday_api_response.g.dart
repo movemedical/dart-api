@@ -168,17 +168,17 @@ class _$CreateDeliveryScheduleProfileHolidayApiResponseActions
   final StatefulActionsOptions<
       CreateDeliveryScheduleProfileHolidayApiResponse,
       CreateDeliveryScheduleProfileHolidayApiResponseBuilder,
-      CreateDeliveryScheduleProfileHolidayApiResponseActions> $options;
+      CreateDeliveryScheduleProfileHolidayApiResponseActions> options$;
 
   final ActionDispatcher<CreateDeliveryScheduleProfileHolidayApiResponse>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
 
-  _$CreateDeliveryScheduleProfileHolidayApiResponseActions._(this.$options)
-      : $replace =
-            $options.action<CreateDeliveryScheduleProfileHolidayApiResponse>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$CreateDeliveryScheduleProfileHolidayApiResponseActions._(this.options$)
+      : replace$ =
+            options$.action<CreateDeliveryScheduleProfileHolidayApiResponse>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -188,34 +188,29 @@ class _$CreateDeliveryScheduleProfileHolidayApiResponseActions
       _$CreateDeliveryScheduleProfileHolidayApiResponseActions._(options());
 
   @override
-  CreateDeliveryScheduleProfileHolidayApiResponse get $initial =>
+  CreateDeliveryScheduleProfileHolidayApiResponse get initialState$ =>
       CreateDeliveryScheduleProfileHolidayApiResponse();
 
   @override
-  CreateDeliveryScheduleProfileHolidayApiResponseBuilder $newBuilder() =>
+  CreateDeliveryScheduleProfileHolidayApiResponseBuilder newBuilder$() =>
       CreateDeliveryScheduleProfileHolidayApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateDeliveryScheduleProfileHolidayApiResponse);
 }

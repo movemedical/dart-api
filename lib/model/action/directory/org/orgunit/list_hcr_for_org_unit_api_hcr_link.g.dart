@@ -218,28 +218,28 @@ class _$ListHCRForOrgUnitApiHcrLinkActions
   final StatefulActionsOptions<
       ListHCRForOrgUnitApiHcrLink,
       ListHCRForOrgUnitApiHcrLinkBuilder,
-      ListHCRForOrgUnitApiHcrLinkActions> $options;
+      ListHCRForOrgUnitApiHcrLinkActions> options$;
 
-  final ActionDispatcher<ListHCRForOrgUnitApiHcrLink> $replace;
+  final ActionDispatcher<ListHCRForOrgUnitApiHcrLink> replace$;
   final HcrActions hcr;
   final FieldDispatcher<String> relationshipTypeId;
   final FieldDispatcher<String> relationshipTypeName;
 
-  _$ListHCRForOrgUnitApiHcrLinkActions._(this.$options)
-      : $replace = $options.action<ListHCRForOrgUnitApiHcrLink>(
-            '\$replace', (a) => a?.$replace),
-        hcr = HcrActions(() => $options.stateful<Hcr, HcrBuilder, HcrActions>(
+  _$ListHCRForOrgUnitApiHcrLinkActions._(this.options$)
+      : replace$ = options$.action<ListHCRForOrgUnitApiHcrLink>(
+            'replace\$', (a) => a?.replace$),
+        hcr = HcrActions(() => options$.stateful<Hcr, HcrBuilder, HcrActions>(
             'hcr',
             (a) => a.hcr,
             (s) => s?.hcr,
             (b) => b?.hcr,
             (parent, builder) => parent?.hcr = builder)),
-        relationshipTypeId = $options.field<String>(
+        relationshipTypeId = options$.field<String>(
             'relationshipTypeId',
             (a) => a?.relationshipTypeId,
             (s) => s?.relationshipTypeId,
             (p, b) => p?.relationshipTypeId = b),
-        relationshipTypeName = $options.field<String>(
+        relationshipTypeName = options$.field<String>(
             'relationshipTypeName',
             (a) => a?.relationshipTypeName,
             (s) => s?.relationshipTypeName,
@@ -251,43 +251,39 @@ class _$ListHCRForOrgUnitApiHcrLinkActions
       _$ListHCRForOrgUnitApiHcrLinkActions._(options());
 
   @override
-  ListHCRForOrgUnitApiHcrLink get $initial => ListHCRForOrgUnitApiHcrLink();
+  ListHCRForOrgUnitApiHcrLink get initialState$ =>
+      ListHCRForOrgUnitApiHcrLink();
 
   @override
-  ListHCRForOrgUnitApiHcrLinkBuilder $newBuilder() =>
+  ListHCRForOrgUnitApiHcrLinkBuilder newBuilder$() =>
       ListHCRForOrgUnitApiHcrLinkBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.hcr,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.relationshipTypeId,
         this.relationshipTypeName,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    hcr.$reducer(reducer);
-    relationshipTypeId.$reducer(reducer);
-    relationshipTypeName.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    hcr.reducer$(reducer);
+    relationshipTypeId.reducer$(reducer);
+    relationshipTypeName.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    hcr.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    hcr.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListHCRForOrgUnitApiHcrLink);
 }

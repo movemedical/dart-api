@@ -176,15 +176,15 @@ class _$GetFoundInventoryTypeApiResponseActions
   final StatefulActionsOptions<
       GetFoundInventoryTypeApiResponse,
       GetFoundInventoryTypeApiResponseBuilder,
-      GetFoundInventoryTypeApiResponseActions> $options;
+      GetFoundInventoryTypeApiResponseActions> options$;
 
-  final ActionDispatcher<GetFoundInventoryTypeApiResponse> $replace;
+  final ActionDispatcher<GetFoundInventoryTypeApiResponse> replace$;
   final InventoryTypeActions inventoryType;
 
-  _$GetFoundInventoryTypeApiResponseActions._(this.$options)
-      : $replace = $options.action<GetFoundInventoryTypeApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        inventoryType = InventoryTypeActions(() => $options.stateful<
+  _$GetFoundInventoryTypeApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetFoundInventoryTypeApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        inventoryType = InventoryTypeActions(() => options$.stateful<
                 InventoryType, InventoryTypeBuilder, InventoryTypeActions>(
             'inventoryType',
             (a) => a.inventoryType,
@@ -198,40 +198,35 @@ class _$GetFoundInventoryTypeApiResponseActions
       _$GetFoundInventoryTypeApiResponseActions._(options());
 
   @override
-  GetFoundInventoryTypeApiResponse get $initial =>
+  GetFoundInventoryTypeApiResponse get initialState$ =>
       GetFoundInventoryTypeApiResponse();
 
   @override
-  GetFoundInventoryTypeApiResponseBuilder $newBuilder() =>
+  GetFoundInventoryTypeApiResponseBuilder newBuilder$() =>
       GetFoundInventoryTypeApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.inventoryType,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    inventoryType.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    inventoryType.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    inventoryType.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    inventoryType.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetFoundInventoryTypeApiResponse);
 }

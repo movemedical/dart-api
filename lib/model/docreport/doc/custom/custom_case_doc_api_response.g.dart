@@ -156,15 +156,15 @@ class _$CustomCaseDocApiResponseActions
   final StatefulActionsOptions<
       CustomCaseDocApiResponse,
       CustomCaseDocApiResponseBuilder,
-      CustomCaseDocApiResponseActions> $options;
+      CustomCaseDocApiResponseActions> options$;
 
-  final ActionDispatcher<CustomCaseDocApiResponse> $replace;
+  final ActionDispatcher<CustomCaseDocApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
 
-  _$CustomCaseDocApiResponseActions._(this.$options)
-      : $replace = $options.action<CustomCaseDocApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$CustomCaseDocApiResponseActions._(this.options$)
+      : replace$ = options$.action<CustomCaseDocApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -176,32 +176,28 @@ class _$CustomCaseDocApiResponseActions
       _$CustomCaseDocApiResponseActions._(options());
 
   @override
-  CustomCaseDocApiResponse get $initial => CustomCaseDocApiResponse();
+  CustomCaseDocApiResponse get initialState$ => CustomCaseDocApiResponse();
 
   @override
-  CustomCaseDocApiResponseBuilder $newBuilder() =>
+  CustomCaseDocApiResponseBuilder newBuilder$() =>
       CustomCaseDocApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CustomCaseDocApiResponse);
 }

@@ -22,67 +22,32 @@ class _$GetUiSetupMobileApi extends GetUiSetupMobileApi {
           ApiResult<GetUiSetupMobileApiResponse>>,
       CommandStateBuilder<ApiCommand<GetUiSetupMobileApiRequest>,
           ApiResult<GetUiSetupMobileApiResponse>>,
-      GetUiSetupMobileApi> $options;
+      GetUiSetupMobileApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetUiSetupMobileApiRequest>,
-          ApiResult<GetUiSetupMobileApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUiSetupMobileApiRequest>,
-          ApiResult<GetUiSetupMobileApiResponse>,
-          GetUiSetupMobileApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUiSetupMobileApiRequest>,
-          ApiResult<GetUiSetupMobileApiResponse>,
-          GetUiSetupMobileApi,
-          Command<ApiCommand<GetUiSetupMobileApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUiSetupMobileApiRequest>,
-          ApiResult<GetUiSetupMobileApiResponse>,
-          GetUiSetupMobileApi,
-          CommandResult<ApiResult<GetUiSetupMobileApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUiSetupMobileApiRequest>,
-          ApiResult<GetUiSetupMobileApiResponse>,
-          GetUiSetupMobileApi,
-          CommandProgress>> $progress;
+          ApiResult<GetUiSetupMobileApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetUiSetupMobileApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<GetUiSetupMobileApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetUiSetupMobileApi._(this.$options)
-      : $replace = $options.action<
+  _$GetUiSetupMobileApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetUiSetupMobileApiRequest>,
                     ApiResult<GetUiSetupMobileApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetUiSetupMobileApiRequest>,
-                ApiResult<GetUiSetupMobileApiResponse>,
-                GetUiSetupMobileApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetUiSetupMobileApiRequest>,
-                    ApiResult<GetUiSetupMobileApiResponse>,
-                    GetUiSetupMobileApi,
-                    Command<ApiCommand<GetUiSetupMobileApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetUiSetupMobileApiRequest>,
-                    ApiResult<GetUiSetupMobileApiResponse>,
-                    GetUiSetupMobileApi,
-                    CommandResult<ApiResult<GetUiSetupMobileApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetUiSetupMobileApiRequest>,
-                ApiResult<GetUiSetupMobileApiResponse>,
-                GetUiSetupMobileApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<GetUiSetupMobileApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<GetUiSetupMobileApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetUiSetupMobileApi(GetUiSetupMobileApiOptions options) =>
@@ -91,32 +56,25 @@ class _$GetUiSetupMobileApi extends GetUiSetupMobileApi {
   @override
   CommandState<ApiCommand<GetUiSetupMobileApiRequest>,
           ApiResult<GetUiSetupMobileApiResponse>>
-      get $initial => CommandState<ApiCommand<GetUiSetupMobileApiRequest>,
+      get initialState$ => CommandState<ApiCommand<GetUiSetupMobileApiRequest>,
           ApiResult<GetUiSetupMobileApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetUiSetupMobileApiRequest>,
           ApiResult<GetUiSetupMobileApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetUiSetupMobileApiRequest>,
           ApiResult<GetUiSetupMobileApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetUiSetupMobileApiRequest)]),
-        FullType(ApiResult, [FullType(GetUiSetupMobileApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

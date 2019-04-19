@@ -160,15 +160,15 @@ class _$RegisterMobileDeviceApiResponseActions
   final StatefulActionsOptions<
       RegisterMobileDeviceApiResponse,
       RegisterMobileDeviceApiResponseBuilder,
-      RegisterMobileDeviceApiResponseActions> $options;
+      RegisterMobileDeviceApiResponseActions> options$;
 
-  final ActionDispatcher<RegisterMobileDeviceApiResponse> $replace;
+  final ActionDispatcher<RegisterMobileDeviceApiResponse> replace$;
   final FieldDispatcher<String> deviceId;
 
-  _$RegisterMobileDeviceApiResponseActions._(this.$options)
-      : $replace = $options.action<RegisterMobileDeviceApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        deviceId = $options.field<String>('deviceId', (a) => a?.deviceId,
+  _$RegisterMobileDeviceApiResponseActions._(this.options$)
+      : replace$ = options$.action<RegisterMobileDeviceApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        deviceId = options$.field<String>('deviceId', (a) => a?.deviceId,
             (s) => s?.deviceId, (p, b) => p?.deviceId = b),
         super._();
 
@@ -177,34 +177,29 @@ class _$RegisterMobileDeviceApiResponseActions
       _$RegisterMobileDeviceApiResponseActions._(options());
 
   @override
-  RegisterMobileDeviceApiResponse get $initial =>
+  RegisterMobileDeviceApiResponse get initialState$ =>
       RegisterMobileDeviceApiResponse();
 
   @override
-  RegisterMobileDeviceApiResponseBuilder $newBuilder() =>
+  RegisterMobileDeviceApiResponseBuilder newBuilder$() =>
       RegisterMobileDeviceApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.deviceId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    deviceId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    deviceId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RegisterMobileDeviceApiResponse);
 }

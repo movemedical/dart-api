@@ -501,9 +501,9 @@ typedef StatefulActionsOptions<
 
 class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
   final StatefulActionsOptions<ListShipmentsApiRequest,
-      ListShipmentsApiRequestBuilder, ListShipmentsApiRequestActions> $options;
+      ListShipmentsApiRequestBuilder, ListShipmentsApiRequestActions> options$;
 
-  final ActionDispatcher<ListShipmentsApiRequest> $replace;
+  final ActionDispatcher<ListShipmentsApiRequest> replace$;
   final FieldDispatcher<String> shipmentId;
   final FieldDispatcher<String> shipmentNumber;
   final FieldDispatcher<String> orderNumber;
@@ -519,60 +519,60 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListShipmentsApiOrderBy> orderBy;
 
-  _$ListShipmentsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListShipmentsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+  _$ListShipmentsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListShipmentsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        shipmentId = options$.field<String>('shipmentId', (a) => a?.shipmentId,
             (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
-        shipmentNumber = $options.field<String>(
+        shipmentNumber = options$.field<String>(
             'shipmentNumber',
             (a) => a?.shipmentNumber,
             (s) => s?.shipmentNumber,
             (p, b) => p?.shipmentNumber = b),
-        orderNumber = $options.field<String>(
+        orderNumber = options$.field<String>(
             'orderNumber',
             (a) => a?.orderNumber,
             (s) => s?.orderNumber,
             (p, b) => p?.orderNumber = b),
-        assignedToUserId = $options.field<String>(
+        assignedToUserId = options$.field<String>(
             'assignedToUserId',
             (a) => a?.assignedToUserId,
             (s) => s?.assignedToUserId,
             (p, b) => p?.assignedToUserId = b),
         createdDateRange = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'createdDateRange',
                 (a) => a.createdDateRange,
                 (s) => s?.createdDateRange,
                 (b) => b?.createdDateRange,
                 (parent, builder) => parent?.createdDateRange = builder)),
         fulfillmentCutoffDateRange = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'fulfillmentCutoffDateRange',
                 (a) => a.fulfillmentCutoffDateRange,
                 (s) => s?.fulfillmentCutoffDateRange,
                 (b) => b?.fulfillmentCutoffDateRange,
                 (parent, builder) =>
                     parent?.fulfillmentCutoffDateRange = builder)),
-        status = $options.field<BuiltList<ShipmentStatus>>('status',
+        status = options$.field<BuiltList<ShipmentStatus>>('status',
             (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        fromLocationId = $options.field<String>(
+        fromLocationId = options$.field<String>(
             'fromLocationId',
             (a) => a?.fromLocationId,
             (s) => s?.fromLocationId,
             (p, b) => p?.fromLocationId = b),
-        toLocationId = $options.field<String>(
+        toLocationId = options$.field<String>(
             'toLocationId',
             (a) => a?.toLocationId,
             (s) => s?.toLocationId,
             (p, b) => p?.toLocationId = b),
-        carrier = $options.field<MoveShippingCarrier>('carrier',
+        carrier = options$.field<MoveShippingCarrier>('carrier',
             (a) => a?.carrier, (s) => s?.carrier, (p, b) => p?.carrier = b),
-        openPicks = $options.field<bool>('openPicks', (a) => a?.openPicks,
+        openPicks = options$.field<bool>('openPicks', (a) => a?.openPicks,
             (s) => s?.openPicks, (p, b) => p?.openPicks = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -582,7 +582,7 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListShipmentsApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListShipmentsApiOrderBy>,
                     OrderByParamsBuilder<ListShipmentsApiOrderBy>,
                     OrderByParamsActions<ListShipmentsApiOrderBy>>(
@@ -598,26 +598,26 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
       _$ListShipmentsApiRequestActions._(options());
 
   @override
-  ListShipmentsApiRequest get $initial => ListShipmentsApiRequest();
+  ListShipmentsApiRequest get initialState$ => ListShipmentsApiRequest();
 
   @override
-  ListShipmentsApiRequestBuilder $newBuilder() =>
+  ListShipmentsApiRequestBuilder newBuilder$() =>
       ListShipmentsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.createdDateRange,
         this.fulfillmentCutoffDateRange,
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.shipmentId,
         this.shipmentNumber,
         this.orderNumber,
@@ -631,34 +631,30 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    shipmentId.$reducer(reducer);
-    shipmentNumber.$reducer(reducer);
-    orderNumber.$reducer(reducer);
-    assignedToUserId.$reducer(reducer);
-    createdDateRange.$reducer(reducer);
-    fulfillmentCutoffDateRange.$reducer(reducer);
-    status.$reducer(reducer);
-    fromLocationId.$reducer(reducer);
-    toLocationId.$reducer(reducer);
-    carrier.$reducer(reducer);
-    openPicks.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    shipmentId.reducer$(reducer);
+    shipmentNumber.reducer$(reducer);
+    orderNumber.reducer$(reducer);
+    assignedToUserId.reducer$(reducer);
+    createdDateRange.reducer$(reducer);
+    fulfillmentCutoffDateRange.reducer$(reducer);
+    status.reducer$(reducer);
+    fromLocationId.reducer$(reducer);
+    toLocationId.reducer$(reducer);
+    carrier.reducer$(reducer);
+    openPicks.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    createdDateRange.$middleware(middleware);
-    fulfillmentCutoffDateRange.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    createdDateRange.middleware$(middleware);
+    fulfillmentCutoffDateRange.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListShipmentsApiRequest);
 }

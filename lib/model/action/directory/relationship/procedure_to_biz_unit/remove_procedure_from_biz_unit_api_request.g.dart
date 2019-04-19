@@ -160,15 +160,15 @@ class _$RemoveProcedureFromBizUnitApiRequestActions
   final StatefulActionsOptions<
       RemoveProcedureFromBizUnitApiRequest,
       RemoveProcedureFromBizUnitApiRequestBuilder,
-      RemoveProcedureFromBizUnitApiRequestActions> $options;
+      RemoveProcedureFromBizUnitApiRequestActions> options$;
 
-  final ActionDispatcher<RemoveProcedureFromBizUnitApiRequest> $replace;
+  final ActionDispatcher<RemoveProcedureFromBizUnitApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$RemoveProcedureFromBizUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<RemoveProcedureFromBizUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$RemoveProcedureFromBizUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<RemoveProcedureFromBizUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -177,34 +177,29 @@ class _$RemoveProcedureFromBizUnitApiRequestActions
       _$RemoveProcedureFromBizUnitApiRequestActions._(options());
 
   @override
-  RemoveProcedureFromBizUnitApiRequest get $initial =>
+  RemoveProcedureFromBizUnitApiRequest get initialState$ =>
       RemoveProcedureFromBizUnitApiRequest();
 
   @override
-  RemoveProcedureFromBizUnitApiRequestBuilder $newBuilder() =>
+  RemoveProcedureFromBizUnitApiRequestBuilder newBuilder$() =>
       RemoveProcedureFromBizUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RemoveProcedureFromBizUnitApiRequest);
 }

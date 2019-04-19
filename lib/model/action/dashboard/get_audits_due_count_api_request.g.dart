@@ -118,13 +118,13 @@ class _$GetAuditsDueCountApiRequestActions
   final StatefulActionsOptions<
       GetAuditsDueCountApiRequest,
       GetAuditsDueCountApiRequestBuilder,
-      GetAuditsDueCountApiRequestActions> $options;
+      GetAuditsDueCountApiRequestActions> options$;
 
-  final ActionDispatcher<GetAuditsDueCountApiRequest> $replace;
+  final ActionDispatcher<GetAuditsDueCountApiRequest> replace$;
 
-  _$GetAuditsDueCountApiRequestActions._(this.$options)
-      : $replace = $options.action<GetAuditsDueCountApiRequest>(
-            '\$replace', (a) => a?.$replace),
+  _$GetAuditsDueCountApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetAuditsDueCountApiRequest>(
+            'replace\$', (a) => a?.replace$),
         super._();
 
   factory _$GetAuditsDueCountApiRequestActions(
@@ -132,21 +132,17 @@ class _$GetAuditsDueCountApiRequestActions
       _$GetAuditsDueCountApiRequestActions._(options());
 
   @override
-  GetAuditsDueCountApiRequest get $initial => GetAuditsDueCountApiRequest();
+  GetAuditsDueCountApiRequest get initialState$ =>
+      GetAuditsDueCountApiRequest();
 
   @override
-  GetAuditsDueCountApiRequestBuilder $newBuilder() =>
+  GetAuditsDueCountApiRequestBuilder newBuilder$() =>
       GetAuditsDueCountApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetAuditsDueCountApiRequest);
 }

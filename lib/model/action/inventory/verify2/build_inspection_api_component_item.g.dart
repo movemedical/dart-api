@@ -180,18 +180,18 @@ class _$BuildInspectionApiComponentItemActions
   final StatefulActionsOptions<
       BuildInspectionApiComponentItem,
       BuildInspectionApiComponentItemBuilder,
-      BuildInspectionApiComponentItemActions> $options;
+      BuildInspectionApiComponentItemActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiComponentItem> $replace;
+  final ActionDispatcher<BuildInspectionApiComponentItem> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<int> quantity;
 
-  _$BuildInspectionApiComponentItemActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiComponentItem>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$BuildInspectionApiComponentItemActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiComponentItem>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -200,36 +200,31 @@ class _$BuildInspectionApiComponentItemActions
       _$BuildInspectionApiComponentItemActions._(options());
 
   @override
-  BuildInspectionApiComponentItem get $initial =>
+  BuildInspectionApiComponentItem get initialState$ =>
       BuildInspectionApiComponentItem();
 
   @override
-  BuildInspectionApiComponentItemBuilder $newBuilder() =>
+  BuildInspectionApiComponentItemBuilder newBuilder$() =>
       BuildInspectionApiComponentItemBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.quantity,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    quantity.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    quantity.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiComponentItem);
 }

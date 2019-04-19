@@ -425,9 +425,9 @@ class _$GetPickProcessingDataApiPickActions
   final StatefulActionsOptions<
       GetPickProcessingDataApiPick,
       GetPickProcessingDataApiPickBuilder,
-      GetPickProcessingDataApiPickActions> $options;
+      GetPickProcessingDataApiPickActions> options$;
 
-  final ActionDispatcher<GetPickProcessingDataApiPick> $replace;
+  final ActionDispatcher<GetPickProcessingDataApiPick> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> sourcedStockId;
   final FieldDispatcher<int> pickNumber;
@@ -440,52 +440,52 @@ class _$GetPickProcessingDataApiPickActions
   final LoanLiteActions loan;
   final CaseEventLiteActions caseEvent;
 
-  _$GetPickProcessingDataApiPickActions._(this.$options)
-      : $replace = $options.action<GetPickProcessingDataApiPick>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetPickProcessingDataApiPickActions._(this.options$)
+      : replace$ = options$.action<GetPickProcessingDataApiPick>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        sourcedStockId = $options.field<String>(
+        sourcedStockId = options$.field<String>(
             'sourcedStockId',
             (a) => a?.sourcedStockId,
             (s) => s?.sourcedStockId,
             (p, b) => p?.sourcedStockId = b),
-        pickNumber = $options.field<int>('pickNumber', (a) => a?.pickNumber,
+        pickNumber = options$.field<int>('pickNumber', (a) => a?.pickNumber,
             (s) => s?.pickNumber, (p, b) => p?.pickNumber = b),
-        dependsOnPickId = $options.field<String>(
+        dependsOnPickId = options$.field<String>(
             'dependsOnPickId',
             (a) => a?.dependsOnPickId,
             (s) => s?.dependsOnPickId,
             (p, b) => p?.dependsOnPickId = b),
         stockItem = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
                 (a) => a.stockItem,
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
         kitItem = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'kitItem',
                 (a) => a.kitItem,
                 (s) => s?.kitItem,
                 (b) => b?.kitItem,
                 (parent, builder) => parent?.kitItem = builder)),
         kitSerial = SerialActions(() =>
-            $options.stateful<Serial, SerialBuilder, SerialActions>(
+            options$.stateful<Serial, SerialBuilder, SerialActions>(
                 'kitSerial',
                 (a) => a.kitSerial,
                 (s) => s?.kitSerial,
                 (b) => b?.kitSerial,
                 (parent, builder) => parent?.kitSerial = builder)),
-        fromContainer = StockContainerActions(() => $options.stateful<
+        fromContainer = StockContainerActions(() => options$.stateful<
                 StockContainer, StockContainerBuilder, StockContainerActions>(
             'fromContainer',
             (a) => a.fromContainer,
             (s) => s?.fromContainer,
             (b) => b?.fromContainer,
             (parent, builder) => parent?.fromContainer = builder)),
-        toContainer = StockContainerActions(() => $options.stateful<
+        toContainer = StockContainerActions(() => options$.stateful<
                 StockContainer, StockContainerBuilder, StockContainerActions>(
             'toContainer',
             (a) => a.toContainer,
@@ -493,13 +493,13 @@ class _$GetPickProcessingDataApiPickActions
             (b) => b?.toContainer,
             (parent, builder) => parent?.toContainer = builder)),
         loan = LoanLiteActions(() =>
-            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+            options$.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
                 'loan',
                 (a) => a.loan,
                 (s) => s?.loan,
                 (b) => b?.loan,
                 (parent, builder) => parent?.loan = builder)),
-        caseEvent = CaseEventLiteActions(() => $options.stateful<CaseEventLite,
+        caseEvent = CaseEventLiteActions(() => options$.stateful<CaseEventLite,
                 CaseEventLiteBuilder, CaseEventLiteActions>(
             'caseEvent',
             (a) => a.caseEvent,
@@ -513,15 +513,16 @@ class _$GetPickProcessingDataApiPickActions
       _$GetPickProcessingDataApiPickActions._(options());
 
   @override
-  GetPickProcessingDataApiPick get $initial => GetPickProcessingDataApiPick();
+  GetPickProcessingDataApiPick get initialState$ =>
+      GetPickProcessingDataApiPick();
 
   @override
-  GetPickProcessingDataApiPickBuilder $newBuilder() =>
+  GetPickProcessingDataApiPickBuilder newBuilder$() =>
       GetPickProcessingDataApiPickBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
         this.kitItem,
         this.kitSerial,
@@ -531,11 +532,11 @@ class _$GetPickProcessingDataApiPickActions
         this.caseEvent,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.sourcedStockId,
         this.pickNumber,
@@ -543,35 +544,30 @@ class _$GetPickProcessingDataApiPickActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    sourcedStockId.$reducer(reducer);
-    pickNumber.$reducer(reducer);
-    dependsOnPickId.$reducer(reducer);
-    stockItem.$reducer(reducer);
-    kitItem.$reducer(reducer);
-    kitSerial.$reducer(reducer);
-    fromContainer.$reducer(reducer);
-    toContainer.$reducer(reducer);
-    loan.$reducer(reducer);
-    caseEvent.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    sourcedStockId.reducer$(reducer);
+    pickNumber.reducer$(reducer);
+    dependsOnPickId.reducer$(reducer);
+    stockItem.reducer$(reducer);
+    kitItem.reducer$(reducer);
+    kitSerial.reducer$(reducer);
+    fromContainer.reducer$(reducer);
+    toContainer.reducer$(reducer);
+    loan.reducer$(reducer);
+    caseEvent.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    stockItem.$middleware(middleware);
-    kitItem.$middleware(middleware);
-    kitSerial.$middleware(middleware);
-    fromContainer.$middleware(middleware);
-    toContainer.$middleware(middleware);
-    loan.$middleware(middleware);
-    caseEvent.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    stockItem.middleware$(middleware);
+    kitItem.middleware$(middleware);
+    kitSerial.middleware$(middleware);
+    fromContainer.middleware$(middleware);
+    toContainer.middleware$(middleware);
+    loan.middleware$(middleware);
+    caseEvent.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetPickProcessingDataApiPick);
 }

@@ -204,21 +204,21 @@ class _$CreateOrderLineCancelReasonApiRequestActions
   final StatefulActionsOptions<
       CreateOrderLineCancelReasonApiRequest,
       CreateOrderLineCancelReasonApiRequestBuilder,
-      CreateOrderLineCancelReasonApiRequestActions> $options;
+      CreateOrderLineCancelReasonApiRequestActions> options$;
 
-  final ActionDispatcher<CreateOrderLineCancelReasonApiRequest> $replace;
+  final ActionDispatcher<CreateOrderLineCancelReasonApiRequest> replace$;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<String> orderReasonId;
 
-  _$CreateOrderLineCancelReasonApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateOrderLineCancelReasonApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        name = $options.field<String>(
+  _$CreateOrderLineCancelReasonApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateOrderLineCancelReasonApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        orderReasonId = $options.field<String>(
+        orderReasonId = options$.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
@@ -230,38 +230,33 @@ class _$CreateOrderLineCancelReasonApiRequestActions
       _$CreateOrderLineCancelReasonApiRequestActions._(options());
 
   @override
-  CreateOrderLineCancelReasonApiRequest get $initial =>
+  CreateOrderLineCancelReasonApiRequest get initialState$ =>
       CreateOrderLineCancelReasonApiRequest();
 
   @override
-  CreateOrderLineCancelReasonApiRequestBuilder $newBuilder() =>
+  CreateOrderLineCancelReasonApiRequestBuilder newBuilder$() =>
       CreateOrderLineCancelReasonApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.name,
         this.orgUnitId,
         this.orderReasonId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    name.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    orderReasonId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    name.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateOrderLineCancelReasonApiRequest);
 }

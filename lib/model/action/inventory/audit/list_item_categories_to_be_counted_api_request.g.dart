@@ -234,19 +234,19 @@ class _$ListItemCategoriesToBeCountedApiRequestActions
   final StatefulActionsOptions<
       ListItemCategoriesToBeCountedApiRequest,
       ListItemCategoriesToBeCountedApiRequestBuilder,
-      ListItemCategoriesToBeCountedApiRequestActions> $options;
+      ListItemCategoriesToBeCountedApiRequestActions> options$;
 
-  final ActionDispatcher<ListItemCategoriesToBeCountedApiRequest> $replace;
+  final ActionDispatcher<ListItemCategoriesToBeCountedApiRequest> replace$;
   final FieldDispatcher<String> auditId;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListItemCategoriesToBeCountedApiOrderBy> sortBy;
 
-  _$ListItemCategoriesToBeCountedApiRequestActions._(this.$options)
-      : $replace = $options.action<ListItemCategoriesToBeCountedApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+  _$ListItemCategoriesToBeCountedApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListItemCategoriesToBeCountedApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -256,7 +256,7 @@ class _$ListItemCategoriesToBeCountedApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         sortBy = OrderByParamsActions<
-            ListItemCategoriesToBeCountedApiOrderBy>(() => $options.stateful<
+            ListItemCategoriesToBeCountedApiOrderBy>(() => options$.stateful<
                 OrderByParams<ListItemCategoriesToBeCountedApiOrderBy>,
                 OrderByParamsBuilder<ListItemCategoriesToBeCountedApiOrderBy>,
                 OrderByParamsActions<ListItemCategoriesToBeCountedApiOrderBy>>(
@@ -272,45 +272,40 @@ class _$ListItemCategoriesToBeCountedApiRequestActions
       _$ListItemCategoriesToBeCountedApiRequestActions._(options());
 
   @override
-  ListItemCategoriesToBeCountedApiRequest get $initial =>
+  ListItemCategoriesToBeCountedApiRequest get initialState$ =>
       ListItemCategoriesToBeCountedApiRequest();
 
   @override
-  ListItemCategoriesToBeCountedApiRequestBuilder $newBuilder() =>
+  ListItemCategoriesToBeCountedApiRequestBuilder newBuilder$() =>
       ListItemCategoriesToBeCountedApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.sortBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditId.$reducer(reducer);
-    paging.$reducer(reducer);
-    sortBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditId.reducer$(reducer);
+    paging.reducer$(reducer);
+    sortBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    sortBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    sortBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListItemCategoriesToBeCountedApiRequest);
 }

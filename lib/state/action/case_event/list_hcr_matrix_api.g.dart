@@ -22,67 +22,31 @@ class _$ListHcrMatrixApi extends ListHcrMatrixApi {
           ApiResult<ListHcrMatrixApiResponse>>,
       CommandStateBuilder<ApiCommand<ListHcrMatrixApiRequest>,
           ApiResult<ListHcrMatrixApiResponse>>,
-      ListHcrMatrixApi> $options;
+      ListHcrMatrixApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListHcrMatrixApiRequest>,
-          ApiResult<ListHcrMatrixApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrMatrixApiRequest>,
-          ApiResult<ListHcrMatrixApiResponse>,
-          ListHcrMatrixApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrMatrixApiRequest>,
-          ApiResult<ListHcrMatrixApiResponse>,
-          ListHcrMatrixApi,
-          Command<ApiCommand<ListHcrMatrixApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrMatrixApiRequest>,
-          ApiResult<ListHcrMatrixApiResponse>,
-          ListHcrMatrixApi,
-          CommandResult<ApiResult<ListHcrMatrixApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrMatrixApiRequest>,
-          ApiResult<ListHcrMatrixApiResponse>,
-          ListHcrMatrixApi,
-          CommandProgress>> $progress;
+          ApiResult<ListHcrMatrixApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListHcrMatrixApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<ListHcrMatrixApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListHcrMatrixApi._(this.$options)
-      : $replace = $options.action<
+  _$ListHcrMatrixApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListHcrMatrixApiRequest>,
                     ApiResult<ListHcrMatrixApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListHcrMatrixApiRequest>,
-                ApiResult<ListHcrMatrixApiResponse>,
-                ListHcrMatrixApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListHcrMatrixApiRequest>,
-                    ApiResult<ListHcrMatrixApiResponse>,
-                    ListHcrMatrixApi,
-                    Command<ApiCommand<ListHcrMatrixApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListHcrMatrixApiRequest>,
-                    ApiResult<ListHcrMatrixApiResponse>,
-                    ListHcrMatrixApi,
-                    CommandResult<ApiResult<ListHcrMatrixApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListHcrMatrixApiRequest>,
-                ApiResult<ListHcrMatrixApiResponse>,
-                ListHcrMatrixApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListHcrMatrixApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<ListHcrMatrixApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListHcrMatrixApi(ListHcrMatrixApiOptions options) =>
@@ -91,31 +55,24 @@ class _$ListHcrMatrixApi extends ListHcrMatrixApi {
   @override
   CommandState<ApiCommand<ListHcrMatrixApiRequest>,
           ApiResult<ListHcrMatrixApiResponse>>
-      get $initial => CommandState<ApiCommand<ListHcrMatrixApiRequest>,
+      get initialState$ => CommandState<ApiCommand<ListHcrMatrixApiRequest>,
           ApiResult<ListHcrMatrixApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListHcrMatrixApiRequest>,
           ApiResult<ListHcrMatrixApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<ListHcrMatrixApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<ListHcrMatrixApiRequest>,
           ApiResult<ListHcrMatrixApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListHcrMatrixApiRequest)]),
-        FullType(ApiResult, [FullType(ListHcrMatrixApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

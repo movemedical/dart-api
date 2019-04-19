@@ -253,18 +253,18 @@ class _$BarcodeScansToStockApiBarcodeStockActions
   final StatefulActionsOptions<
       BarcodeScansToStockApiBarcodeStock,
       BarcodeScansToStockApiBarcodeStockBuilder,
-      BarcodeScansToStockApiBarcodeStockActions> $options;
+      BarcodeScansToStockApiBarcodeStockActions> options$;
 
-  final ActionDispatcher<BarcodeScansToStockApiBarcodeStock> $replace;
+  final ActionDispatcher<BarcodeScansToStockApiBarcodeStock> replace$;
   final BarcodeScansToStockApiScanActions scan;
   final FieldDispatcher<bool> multipleMatches;
   final ListStockSummaryApiStockSummaryActions stockSummary;
   final StockItemActions stockItem;
 
-  _$BarcodeScansToStockApiBarcodeStockActions._(this.$options)
-      : $replace = $options.action<BarcodeScansToStockApiBarcodeStock>(
-            '\$replace', (a) => a?.$replace),
-        scan = BarcodeScansToStockApiScanActions(() => $options.stateful<
+  _$BarcodeScansToStockApiBarcodeStockActions._(this.options$)
+      : replace$ = options$.action<BarcodeScansToStockApiBarcodeStock>(
+            'replace\$', (a) => a?.replace$),
+        scan = BarcodeScansToStockApiScanActions(() => options$.stateful<
                 BarcodeScansToStockApiScan,
                 BarcodeScansToStockApiScanBuilder,
                 BarcodeScansToStockApiScanActions>(
@@ -273,13 +273,13 @@ class _$BarcodeScansToStockApiBarcodeStockActions
             (s) => s?.scan,
             (b) => b?.scan,
             (parent, builder) => parent?.scan = builder)),
-        multipleMatches = $options.field<bool>(
+        multipleMatches = options$.field<bool>(
             'multipleMatches',
             (a) => a?.multipleMatches,
             (s) => s?.multipleMatches,
             (p, b) => p?.multipleMatches = b),
         stockSummary = ListStockSummaryApiStockSummaryActions(() =>
-            $options.stateful<
+            options$.stateful<
                     ListStockSummaryApiStockSummary,
                     ListStockSummaryApiStockSummaryBuilder,
                     ListStockSummaryApiStockSummaryActions>(
@@ -289,7 +289,7 @@ class _$BarcodeScansToStockApiBarcodeStockActions
                 (b) => b?.stockSummary,
                 (parent, builder) => parent?.stockSummary = builder)),
         stockItem = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
                 (a) => a.stockItem,
                 (s) => s?.stockItem,
@@ -302,48 +302,43 @@ class _$BarcodeScansToStockApiBarcodeStockActions
       _$BarcodeScansToStockApiBarcodeStockActions._(options());
 
   @override
-  BarcodeScansToStockApiBarcodeStock get $initial =>
+  BarcodeScansToStockApiBarcodeStock get initialState$ =>
       BarcodeScansToStockApiBarcodeStock();
 
   @override
-  BarcodeScansToStockApiBarcodeStockBuilder $newBuilder() =>
+  BarcodeScansToStockApiBarcodeStockBuilder newBuilder$() =>
       BarcodeScansToStockApiBarcodeStockBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.scan,
         this.stockSummary,
         this.stockItem,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.multipleMatches,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    scan.$reducer(reducer);
-    multipleMatches.$reducer(reducer);
-    stockSummary.$reducer(reducer);
-    stockItem.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    scan.reducer$(reducer);
+    multipleMatches.reducer$(reducer);
+    stockSummary.reducer$(reducer);
+    stockItem.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    scan.$middleware(middleware);
-    stockSummary.$middleware(middleware);
-    stockItem.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    scan.middleware$(middleware);
+    stockSummary.middleware$(middleware);
+    stockItem.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BarcodeScansToStockApiBarcodeStock);
 }

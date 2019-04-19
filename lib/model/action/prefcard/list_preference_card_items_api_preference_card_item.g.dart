@@ -311,9 +311,9 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemActions
   final StatefulActionsOptions<
       ListPreferenceCardItemsApiPreferenceCardItem,
       ListPreferenceCardItemsApiPreferenceCardItemBuilder,
-      ListPreferenceCardItemsApiPreferenceCardItemActions> $options;
+      ListPreferenceCardItemsApiPreferenceCardItemActions> options$;
 
-  final ActionDispatcher<ListPreferenceCardItemsApiPreferenceCardItem> $replace;
+  final ActionDispatcher<ListPreferenceCardItemsApiPreferenceCardItem> replace$;
   final FieldDispatcher<String> preferenceCardItemId;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> itemNumber;
@@ -322,35 +322,35 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemActions
   final FieldDispatcher<MoveItemType> moveItemType;
   final FieldDispatcher<int> quantity;
 
-  _$ListPreferenceCardItemsApiPreferenceCardItemActions._(this.$options)
-      : $replace =
-            $options.action<ListPreferenceCardItemsApiPreferenceCardItem>(
-                '\$replace', (a) => a?.$replace),
-        preferenceCardItemId = $options.field<String>(
+  _$ListPreferenceCardItemsApiPreferenceCardItemActions._(this.options$)
+      : replace$ =
+            options$.action<ListPreferenceCardItemsApiPreferenceCardItem>(
+                'replace\$', (a) => a?.replace$),
+        preferenceCardItemId = options$.field<String>(
             'preferenceCardItemId',
             (a) => a?.preferenceCardItemId,
             (s) => s?.preferenceCardItemId,
             (p, b) => p?.preferenceCardItemId = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+        itemNumber = options$.field<String>('itemNumber', (a) => a?.itemNumber,
             (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
-        itemDescription = $options.field<String>(
+        itemDescription = options$.field<String>(
             'itemDescription',
             (a) => a?.itemDescription,
             (s) => s?.itemDescription,
             (p, b) => p?.itemDescription = b),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        moveItemType = $options.field<MoveItemType>(
+        moveItemType = options$.field<MoveItemType>(
             'moveItemType',
             (a) => a?.moveItemType,
             (s) => s?.moveItemType,
             (p, b) => p?.moveItemType = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -359,18 +359,18 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemActions
       _$ListPreferenceCardItemsApiPreferenceCardItemActions._(options());
 
   @override
-  ListPreferenceCardItemsApiPreferenceCardItem get $initial =>
+  ListPreferenceCardItemsApiPreferenceCardItem get initialState$ =>
       ListPreferenceCardItemsApiPreferenceCardItem();
 
   @override
-  ListPreferenceCardItemsApiPreferenceCardItemBuilder $newBuilder() =>
+  ListPreferenceCardItemsApiPreferenceCardItemBuilder newBuilder$() =>
       ListPreferenceCardItemsApiPreferenceCardItemBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.preferenceCardItemId,
         this.itemId,
         this.itemNumber,
@@ -381,24 +381,19 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    preferenceCardItemId.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemNumber.$reducer(reducer);
-    itemDescription.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    moveItemType.$reducer(reducer);
-    quantity.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    preferenceCardItemId.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemNumber.reducer$(reducer);
+    itemDescription.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    moveItemType.reducer$(reducer);
+    quantity.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPreferenceCardItemsApiPreferenceCardItem);
 }

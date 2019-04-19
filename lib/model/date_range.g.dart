@@ -155,17 +155,17 @@ typedef StatefulActionsOptions<DateRange, DateRangeBuilder,
 
 class _$DateRangeActions extends DateRangeActions {
   final StatefulActionsOptions<DateRange, DateRangeBuilder, DateRangeActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<DateRange> $replace;
+  final ActionDispatcher<DateRange> replace$;
   final FieldDispatcher<DateTime> start;
   final FieldDispatcher<DateTime> end;
 
-  _$DateRangeActions._(this.$options)
-      : $replace = $options.action<DateRange>('\$replace', (a) => a?.$replace),
-        start = $options.field<DateTime>(
+  _$DateRangeActions._(this.options$)
+      : replace$ = options$.action<DateRange>('replace\$', (a) => a?.replace$),
+        start = options$.field<DateTime>(
             'start', (a) => a?.start, (s) => s?.start, (p, b) => p?.start = b),
-        end = $options.field<DateTime>(
+        end = options$.field<DateTime>(
             'end', (a) => a?.end, (s) => s?.end, (p, b) => p?.end = b),
         super._();
 
@@ -173,33 +173,29 @@ class _$DateRangeActions extends DateRangeActions {
       _$DateRangeActions._(options());
 
   @override
-  DateRange get $initial => DateRange();
+  DateRange get initialState$ => DateRange();
 
   @override
-  DateRangeBuilder $newBuilder() => DateRangeBuilder();
+  DateRangeBuilder newBuilder$() => DateRangeBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.start,
         this.end,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    start.$reducer(reducer);
-    end.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    start.reducer$(reducer);
+    end.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(DateRange);
 }

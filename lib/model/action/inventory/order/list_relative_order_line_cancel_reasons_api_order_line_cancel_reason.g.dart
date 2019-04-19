@@ -200,21 +200,21 @@ class _$ListRelativeOrderLineCancelReasonsApiOrderLineCancelReasonActions
           ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason,
           ListRelativeOrderLineCancelReasonsApiOrderLineCancelReasonBuilder,
           ListRelativeOrderLineCancelReasonsApiOrderLineCancelReasonActions>
-      $options;
+      options$;
 
   final ActionDispatcher<
-      ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason> $replace;
+      ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
 
   _$ListRelativeOrderLineCancelReasonsApiOrderLineCancelReasonActions._(
-      this.$options)
-      : $replace = $options
+      this.options$)
+      : replace$ = options$
             .action<ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         super._();
 
@@ -225,37 +225,33 @@ class _$ListRelativeOrderLineCancelReasonsApiOrderLineCancelReasonActions
           ._(options());
 
   @override
-  ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason get $initial =>
-      ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason();
+  ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason
+      get initialState$ =>
+          ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason();
 
   @override
   ListRelativeOrderLineCancelReasonsApiOrderLineCancelReasonBuilder
-      $newBuilder() =>
+      newBuilder$() =>
           ListRelativeOrderLineCancelReasonsApiOrderLineCancelReasonBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason);
 }

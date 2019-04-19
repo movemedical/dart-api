@@ -543,9 +543,9 @@ class _$GetSalesOrderApiDisplayRulesActions
   final StatefulActionsOptions<
       GetSalesOrderApiDisplayRules,
       GetSalesOrderApiDisplayRulesBuilder,
-      GetSalesOrderApiDisplayRulesActions> $options;
+      GetSalesOrderApiDisplayRulesActions> options$;
 
-  final ActionDispatcher<GetSalesOrderApiDisplayRules> $replace;
+  final ActionDispatcher<GetSalesOrderApiDisplayRules> replace$;
   final FieldDispatcher<bool> editLinePricing;
   final FieldDispatcher<bool> editDetails;
   final FieldDispatcher<bool> addLineQuantity;
@@ -564,63 +564,63 @@ class _$GetSalesOrderApiDisplayRulesActions
   final FieldDispatcher<bool> showShipments;
   final FieldDispatcher<bool> approve;
 
-  _$GetSalesOrderApiDisplayRulesActions._(this.$options)
-      : $replace = $options.action<GetSalesOrderApiDisplayRules>(
-            '\$replace', (a) => a?.$replace),
-        editLinePricing = $options.field<bool>(
+  _$GetSalesOrderApiDisplayRulesActions._(this.options$)
+      : replace$ = options$.action<GetSalesOrderApiDisplayRules>(
+            'replace\$', (a) => a?.replace$),
+        editLinePricing = options$.field<bool>(
             'editLinePricing',
             (a) => a?.editLinePricing,
             (s) => s?.editLinePricing,
             (p, b) => p?.editLinePricing = b),
-        editDetails = $options.field<bool>('editDetails', (a) => a?.editDetails,
+        editDetails = options$.field<bool>('editDetails', (a) => a?.editDetails,
             (s) => s?.editDetails, (p, b) => p?.editDetails = b),
-        addLineQuantity = $options.field<bool>(
+        addLineQuantity = options$.field<bool>(
             'addLineQuantity',
             (a) => a?.addLineQuantity,
             (s) => s?.addLineQuantity,
             (p, b) => p?.addLineQuantity = b),
-        editLineQuantity = $options.field<bool>(
+        editLineQuantity = options$.field<bool>(
             'editLineQuantity',
             (a) => a?.editLineQuantity,
             (s) => s?.editLineQuantity,
             (p, b) => p?.editLineQuantity = b),
-        sendToErp = $options.field<bool>('sendToErp', (a) => a?.sendToErp,
+        sendToErp = options$.field<bool>('sendToErp', (a) => a?.sendToErp,
             (s) => s?.sendToErp, (p, b) => p?.sendToErp = b),
-        skipErp = $options.field<bool>('skipErp', (a) => a?.skipErp,
+        skipErp = options$.field<bool>('skipErp', (a) => a?.skipErp,
             (s) => s?.skipErp, (p, b) => p?.skipErp = b),
-        confirm = $options.field<bool>('confirm', (a) => a?.confirm,
+        confirm = options$.field<bool>('confirm', (a) => a?.confirm,
             (s) => s?.confirm, (p, b) => p?.confirm = b),
-        cancel = $options.field<bool>('cancel', (a) => a?.cancel,
+        cancel = options$.field<bool>('cancel', (a) => a?.cancel,
             (s) => s?.cancel, (p, b) => p?.cancel = b),
-        showItemPricing = $options.field<bool>(
+        showItemPricing = options$.field<bool>(
             'showItemPricing',
             (a) => a?.showItemPricing,
             (s) => s?.showItemPricing,
             (p, b) => p?.showItemPricing = b),
-        getItemPricing = $options.field<bool>(
+        getItemPricing = options$.field<bool>(
             'getItemPricing',
             (a) => a?.getItemPricing,
             (s) => s?.getItemPricing,
             (p, b) => p?.getItemPricing = b),
-        printSalesOrder = $options.field<bool>(
+        printSalesOrder = options$.field<bool>(
             'printSalesOrder',
             (a) => a?.printSalesOrder,
             (s) => s?.printSalesOrder,
             (p, b) => p?.printSalesOrder = b),
-        editUsage = $options.field<bool>('editUsage', (a) => a?.editUsage,
+        editUsage = options$.field<bool>('editUsage', (a) => a?.editUsage,
             (s) => s?.editUsage, (p, b) => p?.editUsage = b),
-        updatePo = $options.field<bool>('updatePo', (a) => a?.updatePo,
+        updatePo = options$.field<bool>('updatePo', (a) => a?.updatePo,
             (s) => s?.updatePo, (p, b) => p?.updatePo = b),
-        showUsage = $options.field<bool>('showUsage', (a) => a?.showUsage,
+        showUsage = options$.field<bool>('showUsage', (a) => a?.showUsage,
             (s) => s?.showUsage, (p, b) => p?.showUsage = b),
-        showLines = $options.field<bool>('showLines', (a) => a?.showLines,
+        showLines = options$.field<bool>('showLines', (a) => a?.showLines,
             (s) => s?.showLines, (p, b) => p?.showLines = b),
-        showShipments = $options.field<bool>(
+        showShipments = options$.field<bool>(
             'showShipments',
             (a) => a?.showShipments,
             (s) => s?.showShipments,
             (p, b) => p?.showShipments = b),
-        approve = $options.field<bool>('approve', (a) => a?.approve,
+        approve = options$.field<bool>('approve', (a) => a?.approve,
             (s) => s?.approve, (p, b) => p?.approve = b),
         super._();
 
@@ -629,17 +629,18 @@ class _$GetSalesOrderApiDisplayRulesActions
       _$GetSalesOrderApiDisplayRulesActions._(options());
 
   @override
-  GetSalesOrderApiDisplayRules get $initial => GetSalesOrderApiDisplayRules();
+  GetSalesOrderApiDisplayRules get initialState$ =>
+      GetSalesOrderApiDisplayRules();
 
   @override
-  GetSalesOrderApiDisplayRulesBuilder $newBuilder() =>
+  GetSalesOrderApiDisplayRulesBuilder newBuilder$() =>
       GetSalesOrderApiDisplayRulesBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.editLinePricing,
         this.editDetails,
         this.addLineQuantity,
@@ -660,34 +661,29 @@ class _$GetSalesOrderApiDisplayRulesActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    editLinePricing.$reducer(reducer);
-    editDetails.$reducer(reducer);
-    addLineQuantity.$reducer(reducer);
-    editLineQuantity.$reducer(reducer);
-    sendToErp.$reducer(reducer);
-    skipErp.$reducer(reducer);
-    confirm.$reducer(reducer);
-    cancel.$reducer(reducer);
-    showItemPricing.$reducer(reducer);
-    getItemPricing.$reducer(reducer);
-    printSalesOrder.$reducer(reducer);
-    editUsage.$reducer(reducer);
-    updatePo.$reducer(reducer);
-    showUsage.$reducer(reducer);
-    showLines.$reducer(reducer);
-    showShipments.$reducer(reducer);
-    approve.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    editLinePricing.reducer$(reducer);
+    editDetails.reducer$(reducer);
+    addLineQuantity.reducer$(reducer);
+    editLineQuantity.reducer$(reducer);
+    sendToErp.reducer$(reducer);
+    skipErp.reducer$(reducer);
+    confirm.reducer$(reducer);
+    cancel.reducer$(reducer);
+    showItemPricing.reducer$(reducer);
+    getItemPricing.reducer$(reducer);
+    printSalesOrder.reducer$(reducer);
+    editUsage.reducer$(reducer);
+    updatePo.reducer$(reducer);
+    showUsage.reducer$(reducer);
+    showLines.reducer$(reducer);
+    showShipments.reducer$(reducer);
+    approve.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetSalesOrderApiDisplayRules);
 }

@@ -141,15 +141,15 @@ typedef StatefulActionsOptions<GetDceApiRequest, GetDceApiRequestBuilder,
 
 class _$GetDceApiRequestActions extends GetDceApiRequestActions {
   final StatefulActionsOptions<GetDceApiRequest, GetDceApiRequestBuilder,
-      GetDceApiRequestActions> $options;
+      GetDceApiRequestActions> options$;
 
-  final ActionDispatcher<GetDceApiRequest> $replace;
+  final ActionDispatcher<GetDceApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$GetDceApiRequestActions._(this.$options)
-      : $replace =
-            $options.action<GetDceApiRequest>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetDceApiRequestActions._(this.options$)
+      : replace$ =
+            options$.action<GetDceApiRequest>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -157,31 +157,27 @@ class _$GetDceApiRequestActions extends GetDceApiRequestActions {
       _$GetDceApiRequestActions._(options());
 
   @override
-  GetDceApiRequest get $initial => GetDceApiRequest();
+  GetDceApiRequest get initialState$ => GetDceApiRequest();
 
   @override
-  GetDceApiRequestBuilder $newBuilder() => GetDceApiRequestBuilder();
+  GetDceApiRequestBuilder newBuilder$() => GetDceApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetDceApiRequest);
 }

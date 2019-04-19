@@ -737,9 +737,9 @@ typedef StatefulActionsOptions<
 
 class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
   final StatefulActionsOptions<ListOrdersApiRequest,
-      ListOrdersApiRequestBuilder, ListOrdersApiRequestActions> $options;
+      ListOrdersApiRequestBuilder, ListOrdersApiRequestActions> options$;
 
-  final ActionDispatcher<ListOrdersApiRequest> $replace;
+  final ActionDispatcher<ListOrdersApiRequest> replace$;
   final FieldDispatcher<BuiltList<OrderStatus>> orderStatuses;
   final FieldDispatcher<BuiltList<OrderReasonGroup>> orderReasonGroups;
   final FieldDispatcher<BuiltList<String>> orderReasonIds;
@@ -763,108 +763,108 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListOrdersApiOrderBy> orderBy;
 
-  _$ListOrdersApiRequestActions._(this.$options)
-      : $replace = $options.action<ListOrdersApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderStatuses = $options.field<BuiltList<OrderStatus>>(
+  _$ListOrdersApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListOrdersApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderStatuses = options$.field<BuiltList<OrderStatus>>(
             'orderStatuses',
             (a) => a?.orderStatuses,
             (s) => s?.orderStatuses,
             (p, b) => p?.orderStatuses = b),
-        orderReasonGroups = $options.field<BuiltList<OrderReasonGroup>>(
+        orderReasonGroups = options$.field<BuiltList<OrderReasonGroup>>(
             'orderReasonGroups',
             (a) => a?.orderReasonGroups,
             (s) => s?.orderReasonGroups,
             (p, b) => p?.orderReasonGroups = b),
-        orderReasonIds = $options.field<BuiltList<String>>(
+        orderReasonIds = options$.field<BuiltList<String>>(
             'orderReasonIds',
             (a) => a?.orderReasonIds,
             (s) => s?.orderReasonIds,
             (p, b) => p?.orderReasonIds = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        itemCategoryIds = $options.field<BuiltList<String>>(
+        itemCategoryIds = options$.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
             (p, b) => p?.itemCategoryIds = b),
-        createdByContactIds = $options.field<BuiltList<String>>(
+        createdByContactIds = options$.field<BuiltList<String>>(
             'createdByContactIds',
             (a) => a?.createdByContactIds,
             (s) => s?.createdByContactIds,
             (p, b) => p?.createdByContactIds = b),
-        itemIds = $options.field<BuiltList<String>>('itemIds',
+        itemIds = options$.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        lotIds = $options.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
+        lotIds = options$.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
             (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        serialIds = $options.field<BuiltList<String>>(
+        serialIds = options$.field<BuiltList<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
             (p, b) => p?.serialIds = b),
-        hasErpErrors = $options.field<bool>(
+        hasErpErrors = options$.field<bool>(
             'hasErpErrors',
             (a) => a?.hasErpErrors,
             (s) => s?.hasErpErrors,
             (p, b) => p?.hasErpErrors = b),
-        pendingPo = $options.field<bool>('pendingPo', (a) => a?.pendingPo,
+        pendingPo = options$.field<bool>('pendingPo', (a) => a?.pendingPo,
             (s) => s?.pendingPo, (p, b) => p?.pendingPo = b),
-        orderNumber = $options.field<String>(
+        orderNumber = options$.field<String>(
             'orderNumber',
             (a) => a?.orderNumber,
             (s) => s?.orderNumber,
             (p, b) => p?.orderNumber = b),
-        erpOrderNumber = $options.field<String>(
+        erpOrderNumber = options$.field<String>(
             'erpOrderNumber',
             (a) => a?.erpOrderNumber,
             (s) => s?.erpOrderNumber,
             (p, b) => p?.erpOrderNumber = b),
-        location = LocationDataActions(() => $options
+        location = LocationDataActions(() => options$
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
         createDateRange = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'createDateRange',
                 (a) => a.createDateRange,
                 (s) => s?.createDateRange,
                 (b) => b?.createDateRange,
                 (parent, builder) => parent?.createDateRange = builder)),
         sourceStartDateRange = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'sourceStartDateRange',
                 (a) => a.sourceStartDateRange,
                 (s) => s?.sourceStartDateRange,
                 (b) => b?.sourceStartDateRange,
                 (parent, builder) => parent?.sourceStartDateRange = builder)),
         deliveryStartDateRange = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'deliveryStartDateRange',
                 (a) => a.deliveryStartDateRange,
                 (s) => s?.deliveryStartDateRange,
                 (b) => b?.deliveryStartDateRange,
                 (parent, builder) => parent?.deliveryStartDateRange = builder)),
         deliveryEndDateRange = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'deliveryEndDateRange',
                 (a) => a.deliveryEndDateRange,
                 (s) => s?.deliveryEndDateRange,
                 (b) => b?.deliveryEndDateRange,
                 (parent, builder) => parent?.deliveryEndDateRange = builder)),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -874,7 +874,7 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListOrdersApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListOrdersApiOrderBy>,
                     OrderByParamsBuilder<ListOrdersApiOrderBy>,
                     OrderByParamsActions<ListOrdersApiOrderBy>>(
@@ -890,14 +890,14 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
       _$ListOrdersApiRequestActions._(options());
 
   @override
-  ListOrdersApiRequest get $initial => ListOrdersApiRequest();
+  ListOrdersApiRequest get initialState$ => ListOrdersApiRequest();
 
   @override
-  ListOrdersApiRequestBuilder $newBuilder() => ListOrdersApiRequestBuilder();
+  ListOrdersApiRequestBuilder newBuilder$() => ListOrdersApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
         this.createDateRange,
         this.sourceStartDateRange,
@@ -907,11 +907,11 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderStatuses,
         this.orderReasonGroups,
         this.orderReasonIds,
@@ -930,45 +930,41 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderStatuses.$reducer(reducer);
-    orderReasonGroups.$reducer(reducer);
-    orderReasonIds.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    itemCategoryIds.$reducer(reducer);
-    createdByContactIds.$reducer(reducer);
-    itemIds.$reducer(reducer);
-    lotIds.$reducer(reducer);
-    serialIds.$reducer(reducer);
-    hasErpErrors.$reducer(reducer);
-    pendingPo.$reducer(reducer);
-    orderNumber.$reducer(reducer);
-    erpOrderNumber.$reducer(reducer);
-    location.$reducer(reducer);
-    locationType.$reducer(reducer);
-    createDateRange.$reducer(reducer);
-    sourceStartDateRange.$reducer(reducer);
-    deliveryStartDateRange.$reducer(reducer);
-    deliveryEndDateRange.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderStatuses.reducer$(reducer);
+    orderReasonGroups.reducer$(reducer);
+    orderReasonIds.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    itemCategoryIds.reducer$(reducer);
+    createdByContactIds.reducer$(reducer);
+    itemIds.reducer$(reducer);
+    lotIds.reducer$(reducer);
+    serialIds.reducer$(reducer);
+    hasErpErrors.reducer$(reducer);
+    pendingPo.reducer$(reducer);
+    orderNumber.reducer$(reducer);
+    erpOrderNumber.reducer$(reducer);
+    location.reducer$(reducer);
+    locationType.reducer$(reducer);
+    createDateRange.reducer$(reducer);
+    sourceStartDateRange.reducer$(reducer);
+    deliveryStartDateRange.reducer$(reducer);
+    deliveryEndDateRange.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    location.$middleware(middleware);
-    createDateRange.$middleware(middleware);
-    sourceStartDateRange.$middleware(middleware);
-    deliveryStartDateRange.$middleware(middleware);
-    deliveryEndDateRange.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    location.middleware$(middleware);
+    createDateRange.middleware$(middleware);
+    sourceStartDateRange.middleware$(middleware);
+    deliveryStartDateRange.middleware$(middleware);
+    deliveryEndDateRange.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListOrdersApiRequest);
 }

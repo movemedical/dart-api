@@ -286,9 +286,9 @@ class _$ListFacilityPhysicianLinksApiPhysicianLinkActions
   final StatefulActionsOptions<
       ListFacilityPhysicianLinksApiPhysicianLink,
       ListFacilityPhysicianLinksApiPhysicianLinkBuilder,
-      ListFacilityPhysicianLinksApiPhysicianLinkActions> $options;
+      ListFacilityPhysicianLinksApiPhysicianLinkActions> options$;
 
-  final ActionDispatcher<ListFacilityPhysicianLinksApiPhysicianLink> $replace;
+  final ActionDispatcher<ListFacilityPhysicianLinksApiPhysicianLink> replace$;
   final FieldDispatcher<String> physicianToFacilityId;
   final FieldDispatcher<String> physicianId;
   final FieldDispatcher<String> physicianName;
@@ -296,35 +296,35 @@ class _$ListFacilityPhysicianLinksApiPhysicianLinkActions
   final FieldDispatcher<String> physicianNpi;
   final FieldDispatcher<bool> physicianActive;
 
-  _$ListFacilityPhysicianLinksApiPhysicianLinkActions._(this.$options)
-      : $replace = $options.action<ListFacilityPhysicianLinksApiPhysicianLink>(
-            '\$replace', (a) => a?.$replace),
-        physicianToFacilityId = $options.field<String>(
+  _$ListFacilityPhysicianLinksApiPhysicianLinkActions._(this.options$)
+      : replace$ = options$.action<ListFacilityPhysicianLinksApiPhysicianLink>(
+            'replace\$', (a) => a?.replace$),
+        physicianToFacilityId = options$.field<String>(
             'physicianToFacilityId',
             (a) => a?.physicianToFacilityId,
             (s) => s?.physicianToFacilityId,
             (p, b) => p?.physicianToFacilityId = b),
-        physicianId = $options.field<String>(
+        physicianId = options$.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        physicianName = $options.field<String>(
+        physicianName = options$.field<String>(
             'physicianName',
             (a) => a?.physicianName,
             (s) => s?.physicianName,
             (p, b) => p?.physicianName = b),
-        physicianType = $options.field<PhysicianType>(
+        physicianType = options$.field<PhysicianType>(
             'physicianType',
             (a) => a?.physicianType,
             (s) => s?.physicianType,
             (p, b) => p?.physicianType = b),
-        physicianNpi = $options.field<String>(
+        physicianNpi = options$.field<String>(
             'physicianNpi',
             (a) => a?.physicianNpi,
             (s) => s?.physicianNpi,
             (p, b) => p?.physicianNpi = b),
-        physicianActive = $options.field<bool>(
+        physicianActive = options$.field<bool>(
             'physicianActive',
             (a) => a?.physicianActive,
             (s) => s?.physicianActive,
@@ -336,18 +336,18 @@ class _$ListFacilityPhysicianLinksApiPhysicianLinkActions
       _$ListFacilityPhysicianLinksApiPhysicianLinkActions._(options());
 
   @override
-  ListFacilityPhysicianLinksApiPhysicianLink get $initial =>
+  ListFacilityPhysicianLinksApiPhysicianLink get initialState$ =>
       ListFacilityPhysicianLinksApiPhysicianLink();
 
   @override
-  ListFacilityPhysicianLinksApiPhysicianLinkBuilder $newBuilder() =>
+  ListFacilityPhysicianLinksApiPhysicianLinkBuilder newBuilder$() =>
       ListFacilityPhysicianLinksApiPhysicianLinkBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.physicianToFacilityId,
         this.physicianId,
         this.physicianName,
@@ -357,23 +357,18 @@ class _$ListFacilityPhysicianLinksApiPhysicianLinkActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    physicianToFacilityId.$reducer(reducer);
-    physicianId.$reducer(reducer);
-    physicianName.$reducer(reducer);
-    physicianType.$reducer(reducer);
-    physicianNpi.$reducer(reducer);
-    physicianActive.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    physicianToFacilityId.reducer$(reducer);
+    physicianId.reducer$(reducer);
+    physicianName.reducer$(reducer);
+    physicianType.reducer$(reducer);
+    physicianNpi.reducer$(reducer);
+    physicianActive.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListFacilityPhysicianLinksApiPhysicianLink);
 }

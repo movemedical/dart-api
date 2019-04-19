@@ -180,15 +180,15 @@ class _$GetGeneratedDocReportUrlsApiResponseActions
   final StatefulActionsOptions<
       GetGeneratedDocReportUrlsApiResponse,
       GetGeneratedDocReportUrlsApiResponseBuilder,
-      GetGeneratedDocReportUrlsApiResponseActions> $options;
+      GetGeneratedDocReportUrlsApiResponseActions> options$;
 
-  final ActionDispatcher<GetGeneratedDocReportUrlsApiResponse> $replace;
+  final ActionDispatcher<GetGeneratedDocReportUrlsApiResponse> replace$;
   final FieldDispatcher<BuiltList<GetGeneratedDocReportUrlsApiNamedUrl>> urls;
 
-  _$GetGeneratedDocReportUrlsApiResponseActions._(this.$options)
-      : $replace = $options.action<GetGeneratedDocReportUrlsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        urls = $options.field<BuiltList<GetGeneratedDocReportUrlsApiNamedUrl>>(
+  _$GetGeneratedDocReportUrlsApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetGeneratedDocReportUrlsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        urls = options$.field<BuiltList<GetGeneratedDocReportUrlsApiNamedUrl>>(
             'urls', (a) => a?.urls, (s) => s?.urls, (p, b) => p?.urls = b),
         super._();
 
@@ -197,34 +197,29 @@ class _$GetGeneratedDocReportUrlsApiResponseActions
       _$GetGeneratedDocReportUrlsApiResponseActions._(options());
 
   @override
-  GetGeneratedDocReportUrlsApiResponse get $initial =>
+  GetGeneratedDocReportUrlsApiResponse get initialState$ =>
       GetGeneratedDocReportUrlsApiResponse();
 
   @override
-  GetGeneratedDocReportUrlsApiResponseBuilder $newBuilder() =>
+  GetGeneratedDocReportUrlsApiResponseBuilder newBuilder$() =>
       GetGeneratedDocReportUrlsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.urls,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    urls.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    urls.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetGeneratedDocReportUrlsApiResponse);
 }

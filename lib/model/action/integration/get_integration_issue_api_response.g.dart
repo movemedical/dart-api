@@ -287,19 +287,19 @@ class _$GetIntegrationIssueApiResponseActions
   final StatefulActionsOptions<
       GetIntegrationIssueApiResponse,
       GetIntegrationIssueApiResponseBuilder,
-      GetIntegrationIssueApiResponseActions> $options;
+      GetIntegrationIssueApiResponseActions> options$;
 
-  final ActionDispatcher<GetIntegrationIssueApiResponse> $replace;
+  final ActionDispatcher<GetIntegrationIssueApiResponse> replace$;
   final GetIntegrationIssueApiIssueActions issue;
   final GetIntegrationIssueApiDisplayUserActions assignedToUser;
   final GetIntegrationIssueApiDisplayUserActions resolvedByUser;
   final FieldDispatcher<String> nextOpenIssueId;
   final GetIntegrationIssueApiIssueUiSchemaActions uiSchema;
 
-  _$GetIntegrationIssueApiResponseActions._(this.$options)
-      : $replace = $options.action<GetIntegrationIssueApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        issue = GetIntegrationIssueApiIssueActions(() => $options.stateful<
+  _$GetIntegrationIssueApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetIntegrationIssueApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        issue = GetIntegrationIssueApiIssueActions(() => options$.stateful<
                 GetIntegrationIssueApiIssue,
                 GetIntegrationIssueApiIssueBuilder,
                 GetIntegrationIssueApiIssueActions>(
@@ -309,7 +309,7 @@ class _$GetIntegrationIssueApiResponseActions
             (b) => b?.issue,
             (parent, builder) => parent?.issue = builder)),
         assignedToUser = GetIntegrationIssueApiDisplayUserActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetIntegrationIssueApiDisplayUser,
                     GetIntegrationIssueApiDisplayUserBuilder,
                     GetIntegrationIssueApiDisplayUserActions>(
@@ -319,7 +319,7 @@ class _$GetIntegrationIssueApiResponseActions
                 (b) => b?.assignedToUser,
                 (parent, builder) => parent?.assignedToUser = builder)),
         resolvedByUser = GetIntegrationIssueApiDisplayUserActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetIntegrationIssueApiDisplayUser,
                     GetIntegrationIssueApiDisplayUserBuilder,
                     GetIntegrationIssueApiDisplayUserActions>(
@@ -328,13 +328,13 @@ class _$GetIntegrationIssueApiResponseActions
                 (s) => s?.resolvedByUser,
                 (b) => b?.resolvedByUser,
                 (parent, builder) => parent?.resolvedByUser = builder)),
-        nextOpenIssueId = $options.field<String>(
+        nextOpenIssueId = options$.field<String>(
             'nextOpenIssueId',
             (a) => a?.nextOpenIssueId,
             (s) => s?.nextOpenIssueId,
             (p, b) => p?.nextOpenIssueId = b),
         uiSchema = GetIntegrationIssueApiIssueUiSchemaActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetIntegrationIssueApiIssueUiSchema,
                     GetIntegrationIssueApiIssueUiSchemaBuilder,
                     GetIntegrationIssueApiIssueUiSchemaActions>(
@@ -350,51 +350,46 @@ class _$GetIntegrationIssueApiResponseActions
       _$GetIntegrationIssueApiResponseActions._(options());
 
   @override
-  GetIntegrationIssueApiResponse get $initial =>
+  GetIntegrationIssueApiResponse get initialState$ =>
       GetIntegrationIssueApiResponse();
 
   @override
-  GetIntegrationIssueApiResponseBuilder $newBuilder() =>
+  GetIntegrationIssueApiResponseBuilder newBuilder$() =>
       GetIntegrationIssueApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.issue,
         this.assignedToUser,
         this.resolvedByUser,
         this.uiSchema,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.nextOpenIssueId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    issue.$reducer(reducer);
-    assignedToUser.$reducer(reducer);
-    resolvedByUser.$reducer(reducer);
-    nextOpenIssueId.$reducer(reducer);
-    uiSchema.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    issue.reducer$(reducer);
+    assignedToUser.reducer$(reducer);
+    resolvedByUser.reducer$(reducer);
+    nextOpenIssueId.reducer$(reducer);
+    uiSchema.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    issue.$middleware(middleware);
-    assignedToUser.$middleware(middleware);
-    resolvedByUser.$middleware(middleware);
-    uiSchema.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    issue.middleware$(middleware);
+    assignedToUser.middleware$(middleware);
+    resolvedByUser.middleware$(middleware);
+    uiSchema.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetIntegrationIssueApiResponse);
 }

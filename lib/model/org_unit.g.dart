@@ -197,23 +197,23 @@ typedef StatefulActionsOptions<OrgUnit, OrgUnitBuilder,
 
 class _$OrgUnitActions extends OrgUnitActions {
   final StatefulActionsOptions<OrgUnit, OrgUnitBuilder, OrgUnitActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<OrgUnit> $replace;
+  final ActionDispatcher<OrgUnit> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<bool> ops;
   final FieldDispatcher<bool> sales;
 
-  _$OrgUnitActions._(this.$options)
-      : $replace = $options.action<OrgUnit>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$OrgUnitActions._(this.options$)
+      : replace$ = options$.action<OrgUnit>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        ops = $options.field<bool>(
+        ops = options$.field<bool>(
             'ops', (a) => a?.ops, (s) => s?.ops, (p, b) => p?.ops = b),
-        sales = $options.field<bool>(
+        sales = options$.field<bool>(
             'sales', (a) => a?.sales, (s) => s?.sales, (p, b) => p?.sales = b),
         super._();
 
@@ -221,16 +221,16 @@ class _$OrgUnitActions extends OrgUnitActions {
       _$OrgUnitActions._(options());
 
   @override
-  OrgUnit get $initial => OrgUnit();
+  OrgUnit get initialState$ => OrgUnit();
 
   @override
-  OrgUnitBuilder $newBuilder() => OrgUnitBuilder();
+  OrgUnitBuilder newBuilder$() => OrgUnitBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.ops,
@@ -238,20 +238,16 @@ class _$OrgUnitActions extends OrgUnitActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    ops.$reducer(reducer);
-    sales.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    ops.reducer$(reducer);
+    sales.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(OrgUnit);
 }

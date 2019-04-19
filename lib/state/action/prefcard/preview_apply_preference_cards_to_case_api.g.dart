@@ -24,75 +24,37 @@ class _$PreviewApplyPreferenceCardsToCaseApi
       CommandStateBuilder<
           ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
           ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>>,
-      PreviewApplyPreferenceCardsToCaseApi> $options;
+      PreviewApplyPreferenceCardsToCaseApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
-          ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>>> $replace;
+          ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
-          ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>,
-          PreviewApplyPreferenceCardsToCaseApi,
-          String>> $cancel;
+          Command<ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>>>
+      execute$;
   final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
-              ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>,
-              PreviewApplyPreferenceCardsToCaseApi,
-              Command<ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
-              ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>,
-              PreviewApplyPreferenceCardsToCaseApi,
-              CommandResult<
-                  ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
-          ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>,
-          PreviewApplyPreferenceCardsToCaseApi,
-          CommandProgress>> $progress;
+      CommandResult<
+          ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$PreviewApplyPreferenceCardsToCaseApi._(this.$options)
-      : $replace = $options.action<
+  _$PreviewApplyPreferenceCardsToCaseApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<
                     ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
                     ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
-                ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>,
-                PreviewApplyPreferenceCardsToCaseApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
-                    ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>,
-                    PreviewApplyPreferenceCardsToCaseApi,
-                    Command<
-                        ApiCommand<
-                            PreviewApplyPreferenceCardsToCaseApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
-                    ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>,
-                    PreviewApplyPreferenceCardsToCaseApi,
-                    CommandResult<
-                        ApiResult<
-                            PreviewApplyPreferenceCardsToCaseApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
-                ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>,
-                PreviewApplyPreferenceCardsToCaseApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<
+                    ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$PreviewApplyPreferenceCardsToCaseApi(
@@ -102,35 +64,26 @@ class _$PreviewApplyPreferenceCardsToCaseApi
   @override
   CommandState<ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
           ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
           ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
           ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>,
           ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand,
-            [FullType(PreviewApplyPreferenceCardsToCaseApiRequest)]),
-        FullType(
-            ApiResult, [FullType(PreviewApplyPreferenceCardsToCaseApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

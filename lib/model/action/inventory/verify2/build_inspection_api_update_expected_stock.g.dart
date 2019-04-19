@@ -209,24 +209,24 @@ class _$BuildInspectionApiUpdateExpectedStockActions
   final StatefulActionsOptions<
       BuildInspectionApiUpdateExpectedStock,
       BuildInspectionApiUpdateExpectedStockBuilder,
-      BuildInspectionApiUpdateExpectedStockActions> $options;
+      BuildInspectionApiUpdateExpectedStockActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiUpdateExpectedStock> $replace;
+  final ActionDispatcher<BuildInspectionApiUpdateExpectedStock> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<BuildInspectionApiUpdateExpectedStockType> updateType;
   final FieldDispatcher<String> selectedOptionId;
 
-  _$BuildInspectionApiUpdateExpectedStockActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiUpdateExpectedStock>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BuildInspectionApiUpdateExpectedStockActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiUpdateExpectedStock>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        updateType = $options.field<BuildInspectionApiUpdateExpectedStockType>(
+        updateType = options$.field<BuildInspectionApiUpdateExpectedStockType>(
             'updateType',
             (a) => a?.updateType,
             (s) => s?.updateType,
             (p, b) => p?.updateType = b),
-        selectedOptionId = $options.field<String>(
+        selectedOptionId = options$.field<String>(
             'selectedOptionId',
             (a) => a?.selectedOptionId,
             (s) => s?.selectedOptionId,
@@ -238,38 +238,33 @@ class _$BuildInspectionApiUpdateExpectedStockActions
       _$BuildInspectionApiUpdateExpectedStockActions._(options());
 
   @override
-  BuildInspectionApiUpdateExpectedStock get $initial =>
+  BuildInspectionApiUpdateExpectedStock get initialState$ =>
       BuildInspectionApiUpdateExpectedStock();
 
   @override
-  BuildInspectionApiUpdateExpectedStockBuilder $newBuilder() =>
+  BuildInspectionApiUpdateExpectedStockBuilder newBuilder$() =>
       BuildInspectionApiUpdateExpectedStockBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.updateType,
         this.selectedOptionId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    updateType.$reducer(reducer);
-    selectedOptionId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    updateType.reducer$(reducer);
+    selectedOptionId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiUpdateExpectedStock);
 }

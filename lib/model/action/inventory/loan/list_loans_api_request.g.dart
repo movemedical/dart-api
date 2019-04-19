@@ -373,9 +373,9 @@ typedef StatefulActionsOptions<ListLoansApiRequest, ListLoansApiRequestBuilder,
 
 class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
   final StatefulActionsOptions<ListLoansApiRequest, ListLoansApiRequestBuilder,
-      ListLoansApiRequestActions> $options;
+      ListLoansApiRequestActions> options$;
 
-  final ActionDispatcher<ListLoansApiRequest> $replace;
+  final ActionDispatcher<ListLoansApiRequest> replace$;
   final FieldDispatcher<LoanStatus> status;
   final LocationDataActions location;
   final FieldDispatcher<LocationType> locationType;
@@ -386,45 +386,45 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListLoansApiOrderBy> orderBy;
 
-  _$ListLoansApiRequestActions._(this.$options)
-      : $replace = $options.action<ListLoansApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        status = $options.field<LoanStatus>('status', (a) => a?.status,
+  _$ListLoansApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListLoansApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        status = options$.field<LoanStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        location = LocationDataActions(() => $options
+        location = LocationDataActions(() => options$
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
         serviceStartDateRange = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'serviceStartDateRange',
                 (a) => a.serviceStartDateRange,
                 (s) => s?.serviceStartDateRange,
                 (b) => b?.serviceStartDateRange,
                 (parent, builder) => parent?.serviceStartDateRange = builder)),
         serviceEndDateRange = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'serviceEndDateRange',
                 (a) => a.serviceEndDateRange,
                 (s) => s?.serviceEndDateRange,
                 (b) => b?.serviceEndDateRange,
                 (parent, builder) => parent?.serviceEndDateRange = builder)),
-        loanNumber = $options.field<String>('loanNumber', (a) => a?.loanNumber,
+        loanNumber = options$.field<String>('loanNumber', (a) => a?.loanNumber,
             (s) => s?.loanNumber, (p, b) => p?.loanNumber = b),
-        loanReasons = $options.field<BuiltList<LoanReason>>(
+        loanReasons = options$.field<BuiltList<LoanReason>>(
             'loanReasons',
             (a) => a?.loanReasons,
             (s) => s?.loanReasons,
             (p, b) => p?.loanReasons = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -434,7 +434,7 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListLoansApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListLoansApiOrderBy>,
                     OrderByParamsBuilder<ListLoansApiOrderBy>,
                     OrderByParamsActions<ListLoansApiOrderBy>>(
@@ -450,14 +450,14 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
       _$ListLoansApiRequestActions._(options());
 
   @override
-  ListLoansApiRequest get $initial => ListLoansApiRequest();
+  ListLoansApiRequest get initialState$ => ListLoansApiRequest();
 
   @override
-  ListLoansApiRequestBuilder $newBuilder() => ListLoansApiRequestBuilder();
+  ListLoansApiRequestBuilder newBuilder$() => ListLoansApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
         this.serviceStartDateRange,
         this.serviceEndDateRange,
@@ -465,11 +465,11 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.status,
         this.locationType,
         this.loanNumber,
@@ -477,30 +477,26 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    status.$reducer(reducer);
-    location.$reducer(reducer);
-    locationType.$reducer(reducer);
-    serviceStartDateRange.$reducer(reducer);
-    serviceEndDateRange.$reducer(reducer);
-    loanNumber.$reducer(reducer);
-    loanReasons.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    status.reducer$(reducer);
+    location.reducer$(reducer);
+    locationType.reducer$(reducer);
+    serviceStartDateRange.reducer$(reducer);
+    serviceEndDateRange.reducer$(reducer);
+    loanNumber.reducer$(reducer);
+    loanReasons.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    location.$middleware(middleware);
-    serviceStartDateRange.$middleware(middleware);
-    serviceEndDateRange.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    location.middleware$(middleware);
+    serviceStartDateRange.middleware$(middleware);
+    serviceEndDateRange.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListLoansApiRequest);
 }

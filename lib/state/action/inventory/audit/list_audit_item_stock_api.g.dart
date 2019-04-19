@@ -22,67 +22,32 @@ class _$ListAuditItemStockApi extends ListAuditItemStockApi {
           ApiResult<ListAuditItemStockApiResponse>>,
       CommandStateBuilder<ApiCommand<ListAuditItemStockApiRequest>,
           ApiResult<ListAuditItemStockApiResponse>>,
-      ListAuditItemStockApi> $options;
+      ListAuditItemStockApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListAuditItemStockApiRequest>,
-          ApiResult<ListAuditItemStockApiResponse>>> $replace;
+          ApiResult<ListAuditItemStockApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListAuditItemStockApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditItemStockApiRequest>,
-          ApiResult<ListAuditItemStockApiResponse>,
-          ListAuditItemStockApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditItemStockApiRequest>,
-          ApiResult<ListAuditItemStockApiResponse>,
-          ListAuditItemStockApi,
-          Command<ApiCommand<ListAuditItemStockApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditItemStockApiRequest>,
-          ApiResult<ListAuditItemStockApiResponse>,
-          ListAuditItemStockApi,
-          CommandResult<ApiResult<ListAuditItemStockApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditItemStockApiRequest>,
-          ApiResult<ListAuditItemStockApiResponse>,
-          ListAuditItemStockApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListAuditItemStockApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListAuditItemStockApi._(this.$options)
-      : $replace = $options.action<
+  _$ListAuditItemStockApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListAuditItemStockApiRequest>,
                     ApiResult<ListAuditItemStockApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListAuditItemStockApiRequest>,
-                ApiResult<ListAuditItemStockApiResponse>,
-                ListAuditItemStockApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListAuditItemStockApiRequest>,
-                    ApiResult<ListAuditItemStockApiResponse>,
-                    ListAuditItemStockApi,
-                    Command<ApiCommand<ListAuditItemStockApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListAuditItemStockApiRequest>,
-                    ApiResult<ListAuditItemStockApiResponse>,
-                    ListAuditItemStockApi,
-                    CommandResult<ApiResult<ListAuditItemStockApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListAuditItemStockApiRequest>,
-                ApiResult<ListAuditItemStockApiResponse>,
-                ListAuditItemStockApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListAuditItemStockApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListAuditItemStockApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListAuditItemStockApi(ListAuditItemStockApiOptions options) =>
@@ -91,32 +56,26 @@ class _$ListAuditItemStockApi extends ListAuditItemStockApi {
   @override
   CommandState<ApiCommand<ListAuditItemStockApiRequest>,
           ApiResult<ListAuditItemStockApiResponse>>
-      get $initial => CommandState<ApiCommand<ListAuditItemStockApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<ListAuditItemStockApiRequest>,
           ApiResult<ListAuditItemStockApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListAuditItemStockApiRequest>,
           ApiResult<ListAuditItemStockApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListAuditItemStockApiRequest>,
           ApiResult<ListAuditItemStockApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListAuditItemStockApiRequest)]),
-        FullType(ApiResult, [FullType(ListAuditItemStockApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

@@ -324,9 +324,9 @@ class _$GetConversationApiParticipantActions
   final StatefulActionsOptions<
       GetConversationApiParticipant,
       GetConversationApiParticipantBuilder,
-      GetConversationApiParticipantActions> $options;
+      GetConversationApiParticipantActions> options$;
 
-  final ActionDispatcher<GetConversationApiParticipant> $replace;
+  final ActionDispatcher<GetConversationApiParticipant> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> behalfOfParticipantId;
   final FieldDispatcher<bool> canDeactivate;
@@ -336,33 +336,33 @@ class _$GetConversationApiParticipantActions
   final FieldDispatcher<String> displayText;
   final FieldDispatcher<String> initials;
 
-  _$GetConversationApiParticipantActions._(this.$options)
-      : $replace = $options.action<GetConversationApiParticipant>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetConversationApiParticipantActions._(this.options$)
+      : replace$ = options$.action<GetConversationApiParticipant>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        behalfOfParticipantId = $options.field<String>(
+        behalfOfParticipantId = options$.field<String>(
             'behalfOfParticipantId',
             (a) => a?.behalfOfParticipantId,
             (s) => s?.behalfOfParticipantId,
             (p, b) => p?.behalfOfParticipantId = b),
-        canDeactivate = $options.field<bool>(
+        canDeactivate = options$.field<bool>(
             'canDeactivate',
             (a) => a?.canDeactivate,
             (s) => s?.canDeactivate,
             (p, b) => p?.canDeactivate = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        archived = $options.field<bool>('archived', (a) => a?.archived,
+        archived = options$.field<bool>('archived', (a) => a?.archived,
             (s) => s?.archived, (p, b) => p?.archived = b),
-        contactId = $options.field<String>('contactId', (a) => a?.contactId,
+        contactId = options$.field<String>('contactId', (a) => a?.contactId,
             (s) => s?.contactId, (p, b) => p?.contactId = b),
-        displayText = $options.field<String>(
+        displayText = options$.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
             (p, b) => p?.displayText = b),
-        initials = $options.field<String>('initials', (a) => a?.initials,
+        initials = options$.field<String>('initials', (a) => a?.initials,
             (s) => s?.initials, (p, b) => p?.initials = b),
         super._();
 
@@ -371,17 +371,18 @@ class _$GetConversationApiParticipantActions
       _$GetConversationApiParticipantActions._(options());
 
   @override
-  GetConversationApiParticipant get $initial => GetConversationApiParticipant();
+  GetConversationApiParticipant get initialState$ =>
+      GetConversationApiParticipant();
 
   @override
-  GetConversationApiParticipantBuilder $newBuilder() =>
+  GetConversationApiParticipantBuilder newBuilder$() =>
       GetConversationApiParticipantBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.behalfOfParticipantId,
         this.canDeactivate,
@@ -393,25 +394,20 @@ class _$GetConversationApiParticipantActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    behalfOfParticipantId.$reducer(reducer);
-    canDeactivate.$reducer(reducer);
-    active.$reducer(reducer);
-    archived.$reducer(reducer);
-    contactId.$reducer(reducer);
-    displayText.$reducer(reducer);
-    initials.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    behalfOfParticipantId.reducer$(reducer);
+    canDeactivate.reducer$(reducer);
+    active.reducer$(reducer);
+    archived.reducer$(reducer);
+    contactId.reducer$(reducer);
+    displayText.reducer$(reducer);
+    initials.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetConversationApiParticipant);
 }

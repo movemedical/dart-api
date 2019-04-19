@@ -179,21 +179,21 @@ class _$ListSubProceduresApiRequestActions
   final StatefulActionsOptions<
       ListSubProceduresApiRequest,
       ListSubProceduresApiRequestBuilder,
-      ListSubProceduresApiRequestActions> $options;
+      ListSubProceduresApiRequestActions> options$;
 
-  final ActionDispatcher<ListSubProceduresApiRequest> $replace;
+  final ActionDispatcher<ListSubProceduresApiRequest> replace$;
   final FieldDispatcher<String> procedureId;
   final FieldDispatcher<bool> active;
 
-  _$ListSubProceduresApiRequestActions._(this.$options)
-      : $replace = $options.action<ListSubProceduresApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        procedureId = $options.field<String>(
+  _$ListSubProceduresApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListSubProceduresApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -202,35 +202,31 @@ class _$ListSubProceduresApiRequestActions
       _$ListSubProceduresApiRequestActions._(options());
 
   @override
-  ListSubProceduresApiRequest get $initial => ListSubProceduresApiRequest();
+  ListSubProceduresApiRequest get initialState$ =>
+      ListSubProceduresApiRequest();
 
   @override
-  ListSubProceduresApiRequestBuilder $newBuilder() =>
+  ListSubProceduresApiRequestBuilder newBuilder$() =>
       ListSubProceduresApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.procedureId,
         this.active,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListSubProceduresApiRequest);
 }

@@ -180,17 +180,17 @@ class _$ListReservationsForStockApiResponseActions
   final StatefulActionsOptions<
       ListReservationsForStockApiResponse,
       ListReservationsForStockApiResponseBuilder,
-      ListReservationsForStockApiResponseActions> $options;
+      ListReservationsForStockApiResponseActions> options$;
 
-  final ActionDispatcher<ListReservationsForStockApiResponse> $replace;
+  final ActionDispatcher<ListReservationsForStockApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListReservationsForStockApiReservation>>
       picks;
 
-  _$ListReservationsForStockApiResponseActions._(this.$options)
-      : $replace = $options.action<ListReservationsForStockApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$ListReservationsForStockApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListReservationsForStockApiResponse>(
+            'replace\$', (a) => a?.replace$),
         picks =
-            $options.field<BuiltList<ListReservationsForStockApiReservation>>(
+            options$.field<BuiltList<ListReservationsForStockApiReservation>>(
                 'picks',
                 (a) => a?.picks,
                 (s) => s?.picks,
@@ -202,34 +202,29 @@ class _$ListReservationsForStockApiResponseActions
       _$ListReservationsForStockApiResponseActions._(options());
 
   @override
-  ListReservationsForStockApiResponse get $initial =>
+  ListReservationsForStockApiResponse get initialState$ =>
       ListReservationsForStockApiResponse();
 
   @override
-  ListReservationsForStockApiResponseBuilder $newBuilder() =>
+  ListReservationsForStockApiResponseBuilder newBuilder$() =>
       ListReservationsForStockApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.picks,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    picks.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    picks.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListReservationsForStockApiResponse);
 }

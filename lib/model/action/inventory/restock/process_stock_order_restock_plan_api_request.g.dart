@@ -255,28 +255,28 @@ class _$ProcessStockOrderRestockPlanApiRequestActions
   final StatefulActionsOptions<
       ProcessStockOrderRestockPlanApiRequest,
       ProcessStockOrderRestockPlanApiRequestBuilder,
-      ProcessStockOrderRestockPlanApiRequestActions> $options;
+      ProcessStockOrderRestockPlanApiRequestActions> options$;
 
-  final ActionDispatcher<ProcessStockOrderRestockPlanApiRequest> $replace;
+  final ActionDispatcher<ProcessStockOrderRestockPlanApiRequest> replace$;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<String> poNumber;
   final FieldDispatcher<ProcessStockOrderRestockPlanApiRestockSystem> system;
   final FieldDispatcher<BuiltList<ProcessStockOrderRestockPlanApiRestockItem>>
       restockItems;
 
-  _$ProcessStockOrderRestockPlanApiRequestActions._(this.$options)
-      : $replace = $options.action<ProcessStockOrderRestockPlanApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$ProcessStockOrderRestockPlanApiRequestActions._(this.options$)
+      : replace$ = options$.action<ProcessStockOrderRestockPlanApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        system = $options.field<ProcessStockOrderRestockPlanApiRestockSystem>(
+        system = options$.field<ProcessStockOrderRestockPlanApiRestockSystem>(
             'system',
             (a) => a?.system,
             (s) => s?.system,
             (p, b) => p?.system = b),
-        restockItems = $options
+        restockItems = options$
             .field<BuiltList<ProcessStockOrderRestockPlanApiRestockItem>>(
                 'restockItems',
                 (a) => a?.restockItems,
@@ -289,18 +289,18 @@ class _$ProcessStockOrderRestockPlanApiRequestActions
       _$ProcessStockOrderRestockPlanApiRequestActions._(options());
 
   @override
-  ProcessStockOrderRestockPlanApiRequest get $initial =>
+  ProcessStockOrderRestockPlanApiRequest get initialState$ =>
       ProcessStockOrderRestockPlanApiRequest();
 
   @override
-  ProcessStockOrderRestockPlanApiRequestBuilder $newBuilder() =>
+  ProcessStockOrderRestockPlanApiRequestBuilder newBuilder$() =>
       ProcessStockOrderRestockPlanApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
         this.poNumber,
         this.system,
@@ -308,21 +308,16 @@ class _$ProcessStockOrderRestockPlanApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
-    poNumber.$reducer(reducer);
-    system.$reducer(reducer);
-    restockItems.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
+    poNumber.reducer$(reducer);
+    system.reducer$(reducer);
+    restockItems.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ProcessStockOrderRestockPlanApiRequest);
 }

@@ -157,15 +157,15 @@ class _$RemoveHcrToColleagueApiRequestActions
   final StatefulActionsOptions<
       RemoveHcrToColleagueApiRequest,
       RemoveHcrToColleagueApiRequestBuilder,
-      RemoveHcrToColleagueApiRequestActions> $options;
+      RemoveHcrToColleagueApiRequestActions> options$;
 
-  final ActionDispatcher<RemoveHcrToColleagueApiRequest> $replace;
+  final ActionDispatcher<RemoveHcrToColleagueApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$RemoveHcrToColleagueApiRequestActions._(this.$options)
-      : $replace = $options.action<RemoveHcrToColleagueApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$RemoveHcrToColleagueApiRequestActions._(this.options$)
+      : replace$ = options$.action<RemoveHcrToColleagueApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -174,34 +174,29 @@ class _$RemoveHcrToColleagueApiRequestActions
       _$RemoveHcrToColleagueApiRequestActions._(options());
 
   @override
-  RemoveHcrToColleagueApiRequest get $initial =>
+  RemoveHcrToColleagueApiRequest get initialState$ =>
       RemoveHcrToColleagueApiRequest();
 
   @override
-  RemoveHcrToColleagueApiRequestBuilder $newBuilder() =>
+  RemoveHcrToColleagueApiRequestBuilder newBuilder$() =>
       RemoveHcrToColleagueApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RemoveHcrToColleagueApiRequest);
 }

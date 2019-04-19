@@ -234,28 +234,28 @@ class _$ShipmentFileUpdatePushMessageActions
   final StatefulActionsOptions<
       ShipmentFileUpdatePushMessage,
       ShipmentFileUpdatePushMessageBuilder,
-      ShipmentFileUpdatePushMessageActions> $options;
+      ShipmentFileUpdatePushMessageActions> options$;
 
-  final ActionDispatcher<ShipmentFileUpdatePushMessage> $replace;
+  final ActionDispatcher<ShipmentFileUpdatePushMessage> replace$;
   final FieldDispatcher<String> shipmentId;
   final FieldDispatcher<String> fileId;
   final FieldDispatcher<ShipmentFileUpdatePushMessageFileUpdateType> updateType;
   final FieldDispatcher<double> percentUploadedDecimalForm;
 
-  _$ShipmentFileUpdatePushMessageActions._(this.$options)
-      : $replace = $options.action<ShipmentFileUpdatePushMessage>(
-            '\$replace', (a) => a?.$replace),
-        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+  _$ShipmentFileUpdatePushMessageActions._(this.options$)
+      : replace$ = options$.action<ShipmentFileUpdatePushMessage>(
+            'replace\$', (a) => a?.replace$),
+        shipmentId = options$.field<String>('shipmentId', (a) => a?.shipmentId,
             (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
         updateType =
-            $options.field<ShipmentFileUpdatePushMessageFileUpdateType>(
+            options$.field<ShipmentFileUpdatePushMessageFileUpdateType>(
                 'updateType',
                 (a) => a?.updateType,
                 (s) => s?.updateType,
                 (p, b) => p?.updateType = b),
-        percentUploadedDecimalForm = $options.field<double>(
+        percentUploadedDecimalForm = options$.field<double>(
             'percentUploadedDecimalForm',
             (a) => a?.percentUploadedDecimalForm,
             (s) => s?.percentUploadedDecimalForm,
@@ -267,17 +267,18 @@ class _$ShipmentFileUpdatePushMessageActions
       _$ShipmentFileUpdatePushMessageActions._(options());
 
   @override
-  ShipmentFileUpdatePushMessage get $initial => ShipmentFileUpdatePushMessage();
+  ShipmentFileUpdatePushMessage get initialState$ =>
+      ShipmentFileUpdatePushMessage();
 
   @override
-  ShipmentFileUpdatePushMessageBuilder $newBuilder() =>
+  ShipmentFileUpdatePushMessageBuilder newBuilder$() =>
       ShipmentFileUpdatePushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.shipmentId,
         this.fileId,
         this.updateType,
@@ -285,21 +286,16 @@ class _$ShipmentFileUpdatePushMessageActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    shipmentId.$reducer(reducer);
-    fileId.$reducer(reducer);
-    updateType.$reducer(reducer);
-    percentUploadedDecimalForm.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    shipmentId.reducer$(reducer);
+    fileId.reducer$(reducer);
+    updateType.reducer$(reducer);
+    percentUploadedDecimalForm.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ShipmentFileUpdatePushMessage);
 }

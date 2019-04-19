@@ -278,38 +278,38 @@ class _$UpdateCaseRequirementsDeliveryInfoApiRequestActions
   final StatefulActionsOptions<
       UpdateCaseRequirementsDeliveryInfoApiRequest,
       UpdateCaseRequirementsDeliveryInfoApiRequestBuilder,
-      UpdateCaseRequirementsDeliveryInfoApiRequestActions> $options;
+      UpdateCaseRequirementsDeliveryInfoApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateCaseRequirementsDeliveryInfoApiRequest> $replace;
+  final ActionDispatcher<UpdateCaseRequirementsDeliveryInfoApiRequest> replace$;
   final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<DateTime> deliverByDate;
   final FieldDispatcher<String> attention;
   final FieldDispatcher<String> deliverToAddressId;
   final AddressActions deliverToAddressOverride;
 
-  _$UpdateCaseRequirementsDeliveryInfoApiRequestActions._(this.$options)
-      : $replace =
-            $options.action<UpdateCaseRequirementsDeliveryInfoApiRequest>(
-                '\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$UpdateCaseRequirementsDeliveryInfoApiRequestActions._(this.options$)
+      : replace$ =
+            options$.action<UpdateCaseRequirementsDeliveryInfoApiRequest>(
+                'replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        deliverByDate = $options.field<DateTime>(
+        deliverByDate = options$.field<DateTime>(
             'deliverByDate',
             (a) => a?.deliverByDate,
             (s) => s?.deliverByDate,
             (p, b) => p?.deliverByDate = b),
-        attention = $options.field<String>('attention', (a) => a?.attention,
+        attention = options$.field<String>('attention', (a) => a?.attention,
             (s) => s?.attention, (p, b) => p?.attention = b),
-        deliverToAddressId = $options.field<String>(
+        deliverToAddressId = options$.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
             (p, b) => p?.deliverToAddressId = b),
         deliverToAddressOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToAddressOverride',
                 (a) => a.deliverToAddressOverride,
                 (s) => s?.deliverToAddressOverride,
@@ -323,24 +323,24 @@ class _$UpdateCaseRequirementsDeliveryInfoApiRequestActions
       _$UpdateCaseRequirementsDeliveryInfoApiRequestActions._(options());
 
   @override
-  UpdateCaseRequirementsDeliveryInfoApiRequest get $initial =>
+  UpdateCaseRequirementsDeliveryInfoApiRequest get initialState$ =>
       UpdateCaseRequirementsDeliveryInfoApiRequest();
 
   @override
-  UpdateCaseRequirementsDeliveryInfoApiRequestBuilder $newBuilder() =>
+  UpdateCaseRequirementsDeliveryInfoApiRequestBuilder newBuilder$() =>
       UpdateCaseRequirementsDeliveryInfoApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
         this.deliverByDate,
         this.attention,
@@ -348,23 +348,18 @@ class _$UpdateCaseRequirementsDeliveryInfoApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
-    deliverByDate.$reducer(reducer);
-    attention.$reducer(reducer);
-    deliverToAddressId.$reducer(reducer);
-    deliverToAddressOverride.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
+    deliverByDate.reducer$(reducer);
+    attention.reducer$(reducer);
+    deliverToAddressId.reducer$(reducer);
+    deliverToAddressOverride.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    deliverToAddressOverride.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    deliverToAddressOverride.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateCaseRequirementsDeliveryInfoApiRequest);
 }

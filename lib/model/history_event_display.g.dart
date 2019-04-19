@@ -205,21 +205,21 @@ typedef StatefulActionsOptions<HistoryEventDisplay, HistoryEventDisplayBuilder,
 
 class _$HistoryEventDisplayActions extends HistoryEventDisplayActions {
   final StatefulActionsOptions<HistoryEventDisplay, HistoryEventDisplayBuilder,
-      HistoryEventDisplayActions> $options;
+      HistoryEventDisplayActions> options$;
 
-  final ActionDispatcher<HistoryEventDisplay> $replace;
+  final ActionDispatcher<HistoryEventDisplay> replace$;
   final FieldDispatcher<String> user;
   final FieldDispatcher<DateTime> timestamp;
   final FieldDispatcher<BuiltList<HistoryEventDisplayRecord>> records;
 
-  _$HistoryEventDisplayActions._(this.$options)
-      : $replace = $options.action<HistoryEventDisplay>(
-            '\$replace', (a) => a?.$replace),
-        user = $options.field<String>(
+  _$HistoryEventDisplayActions._(this.options$)
+      : replace$ = options$.action<HistoryEventDisplay>(
+            'replace\$', (a) => a?.replace$),
+        user = options$.field<String>(
             'user', (a) => a?.user, (s) => s?.user, (p, b) => p?.user = b),
-        timestamp = $options.field<DateTime>('timestamp', (a) => a?.timestamp,
+        timestamp = options$.field<DateTime>('timestamp', (a) => a?.timestamp,
             (s) => s?.timestamp, (p, b) => p?.timestamp = b),
-        records = $options.field<BuiltList<HistoryEventDisplayRecord>>(
+        records = options$.field<BuiltList<HistoryEventDisplayRecord>>(
             'records',
             (a) => a?.records,
             (s) => s?.records,
@@ -231,35 +231,31 @@ class _$HistoryEventDisplayActions extends HistoryEventDisplayActions {
       _$HistoryEventDisplayActions._(options());
 
   @override
-  HistoryEventDisplay get $initial => HistoryEventDisplay();
+  HistoryEventDisplay get initialState$ => HistoryEventDisplay();
 
   @override
-  HistoryEventDisplayBuilder $newBuilder() => HistoryEventDisplayBuilder();
+  HistoryEventDisplayBuilder newBuilder$() => HistoryEventDisplayBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.user,
         this.timestamp,
         this.records,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    user.$reducer(reducer);
-    timestamp.$reducer(reducer);
-    records.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    user.reducer$(reducer);
+    timestamp.reducer$(reducer);
+    records.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(HistoryEventDisplay);
 }

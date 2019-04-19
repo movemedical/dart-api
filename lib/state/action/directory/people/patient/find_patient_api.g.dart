@@ -22,64 +22,30 @@ class _$FindPatientApi extends FindPatientApi {
           ApiResult<FindPatientApiResponse>>,
       CommandStateBuilder<ApiCommand<FindPatientApiRequest>,
           ApiResult<FindPatientApiResponse>>,
-      FindPatientApi> $options;
+      FindPatientApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<FindPatientApiRequest>,
-          ApiResult<FindPatientApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<FindPatientApiRequest>,
-          ApiResult<FindPatientApiResponse>, FindPatientApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<FindPatientApiRequest>,
-          ApiResult<FindPatientApiResponse>,
-          FindPatientApi,
-          Command<ApiCommand<FindPatientApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<FindPatientApiRequest>,
-          ApiResult<FindPatientApiResponse>,
-          FindPatientApi,
-          CommandResult<ApiResult<FindPatientApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<FindPatientApiRequest>,
-          ApiResult<FindPatientApiResponse>,
-          FindPatientApi,
-          CommandProgress>> $progress;
+          ApiResult<FindPatientApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<FindPatientApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<FindPatientApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$FindPatientApi._(this.$options)
-      : $replace = $options.action<
+  _$FindPatientApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<FindPatientApiRequest>,
                     ApiResult<FindPatientApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<FindPatientApiRequest>,
-                ApiResult<FindPatientApiResponse>,
-                FindPatientApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<FindPatientApiRequest>,
-                    ApiResult<FindPatientApiResponse>,
-                    FindPatientApi,
-                    Command<ApiCommand<FindPatientApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<FindPatientApiRequest>,
-                    ApiResult<FindPatientApiResponse>,
-                    FindPatientApi,
-                    CommandResult<ApiResult<FindPatientApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<FindPatientApiRequest>,
-                ApiResult<FindPatientApiResponse>,
-                FindPatientApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<FindPatientApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<FindPatientApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$FindPatientApi(FindPatientApiOptions options) =>
@@ -88,31 +54,24 @@ class _$FindPatientApi extends FindPatientApi {
   @override
   CommandState<ApiCommand<FindPatientApiRequest>,
           ApiResult<FindPatientApiResponse>>
-      get $initial => CommandState<ApiCommand<FindPatientApiRequest>,
+      get initialState$ => CommandState<ApiCommand<FindPatientApiRequest>,
           ApiResult<FindPatientApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<FindPatientApiRequest>,
           ApiResult<FindPatientApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<FindPatientApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<FindPatientApiRequest>,
           ApiResult<FindPatientApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(FindPatientApiRequest)]),
-        FullType(ApiResult, [FullType(FindPatientApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

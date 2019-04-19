@@ -608,9 +608,9 @@ typedef StatefulActionsOptions<
 
 class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
   final StatefulActionsOptions<ReadBarcode2ApiResponse,
-      ReadBarcode2ApiResponseBuilder, ReadBarcode2ApiResponseActions> $options;
+      ReadBarcode2ApiResponseBuilder, ReadBarcode2ApiResponseActions> options$;
 
-  final ActionDispatcher<ReadBarcode2ApiResponse> $replace;
+  final ActionDispatcher<ReadBarcode2ApiResponse> replace$;
   final FieldDispatcher<ReadBarcode2ApiReadType> readType;
   final FieldDispatcher<BuiltList<String>> reconciledBarcodes;
   final FieldDispatcher<BuiltList<String>> unreconciledBarcodes;
@@ -630,70 +630,70 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
   final ItemActions kitItem;
   final SerialActions kitSerial;
 
-  _$ReadBarcode2ApiResponseActions._(this.$options)
-      : $replace = $options.action<ReadBarcode2ApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        readType = $options.field<ReadBarcode2ApiReadType>('readType',
+  _$ReadBarcode2ApiResponseActions._(this.options$)
+      : replace$ = options$.action<ReadBarcode2ApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        readType = options$.field<ReadBarcode2ApiReadType>('readType',
             (a) => a?.readType, (s) => s?.readType, (p, b) => p?.readType = b),
-        reconciledBarcodes = $options.field<BuiltList<String>>(
+        reconciledBarcodes = options$.field<BuiltList<String>>(
             'reconciledBarcodes',
             (a) => a?.reconciledBarcodes,
             (s) => s?.reconciledBarcodes,
             (p, b) => p?.reconciledBarcodes = b),
-        unreconciledBarcodes = $options.field<BuiltList<String>>(
+        unreconciledBarcodes = options$.field<BuiltList<String>>(
             'unreconciledBarcodes',
             (a) => a?.unreconciledBarcodes,
             (s) => s?.unreconciledBarcodes,
             (p, b) => p?.unreconciledBarcodes = b),
-        message = $options.field<String>('message', (a) => a?.message,
+        message = options$.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
-        complete = $options.field<bool>('complete', (a) => a?.complete,
+        complete = options$.field<bool>('complete', (a) => a?.complete,
             (s) => s?.complete, (p, b) => p?.complete = b),
         item = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'item',
                 (a) => a.item,
                 (s) => s?.item,
                 (b) => b?.item,
                 (parent, builder) => parent?.item = builder)),
-        unknownItem = $options.field<String>(
+        unknownItem = options$.field<String>(
             'unknownItem',
             (a) => a?.unknownItem,
             (s) => s?.unknownItem,
             (p, b) => p?.unknownItem = b),
-        lot = LotActions(() => $options.stateful<Lot, LotBuilder, LotActions>(
+        lot = LotActions(() => options$.stateful<Lot, LotBuilder, LotActions>(
             'lot',
             (a) => a.lot,
             (s) => s?.lot,
             (b) => b?.lot,
             (parent, builder) => parent?.lot = builder)),
-        unknownLot = $options.field<String>('unknownLot', (a) => a?.unknownLot,
+        unknownLot = options$.field<String>('unknownLot', (a) => a?.unknownLot,
             (s) => s?.unknownLot, (p, b) => p?.unknownLot = b),
         serial = SerialActions(() =>
-            $options.stateful<Serial, SerialBuilder, SerialActions>(
+            options$.stateful<Serial, SerialBuilder, SerialActions>(
                 'serial',
                 (a) => a.serial,
                 (s) => s?.serial,
                 (b) => b?.serial,
                 (parent, builder) => parent?.serial = builder)),
-        unknownSerial = $options.field<String>(
+        unknownSerial = options$.field<String>(
             'unknownSerial',
             (a) => a?.unknownSerial,
             (s) => s?.unknownSerial,
             (p, b) => p?.unknownSerial = b),
-        tag = TagActions(() => $options.stateful<Tag, TagBuilder, TagActions>(
+        tag = TagActions(() => options$.stateful<Tag, TagBuilder, TagActions>(
             'tag',
             (a) => a.tag,
             (s) => s?.tag,
             (b) => b?.tag,
             (parent, builder) => parent?.tag = builder)),
-        pkg = PkgActions(() => $options.stateful<Pkg, PkgBuilder, PkgActions>(
+        pkg = PkgActions(() => options$.stateful<Pkg, PkgBuilder, PkgActions>(
             'pkg',
             (a) => a.pkg,
             (s) => s?.pkg,
             (b) => b?.pkg,
             (parent, builder) => parent?.pkg = builder)),
-        shipmentLite = ShipmentLiteActions(() => $options
+        shipmentLite = ShipmentLiteActions(() => options$
             .stateful<ShipmentLite, ShipmentLiteBuilder, ShipmentLiteActions>(
                 'shipmentLite',
                 (a) => a.shipmentLite,
@@ -701,27 +701,27 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
                 (b) => b?.shipmentLite,
                 (parent, builder) => parent?.shipmentLite = builder)),
         pkgToLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'pkgToLocation',
                 (a) => a.pkgToLocation,
                 (s) => s?.pkgToLocation,
                 (b) => b?.pkgToLocation,
                 (parent, builder) => parent?.pkgToLocation = builder)),
-        bin = BinActions(() => $options.stateful<Bin, BinBuilder, BinActions>(
+        bin = BinActions(() => options$.stateful<Bin, BinBuilder, BinActions>(
             'bin',
             (a) => a.bin,
             (s) => s?.bin,
             (b) => b?.bin,
             (parent, builder) => parent?.bin = builder)),
         kitItem = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'kitItem',
                 (a) => a.kitItem,
                 (s) => s?.kitItem,
                 (b) => b?.kitItem,
                 (parent, builder) => parent?.kitItem = builder)),
         kitSerial = SerialActions(() =>
-            $options.stateful<Serial, SerialBuilder, SerialActions>(
+            options$.stateful<Serial, SerialBuilder, SerialActions>(
                 'kitSerial',
                 (a) => a.kitSerial,
                 (s) => s?.kitSerial,
@@ -734,15 +734,15 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
       _$ReadBarcode2ApiResponseActions._(options());
 
   @override
-  ReadBarcode2ApiResponse get $initial => ReadBarcode2ApiResponse();
+  ReadBarcode2ApiResponse get initialState$ => ReadBarcode2ApiResponse();
 
   @override
-  ReadBarcode2ApiResponseBuilder $newBuilder() =>
+  ReadBarcode2ApiResponseBuilder newBuilder$() =>
       ReadBarcode2ApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.item,
         this.lot,
         this.serial,
@@ -755,11 +755,11 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
         this.kitSerial,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.readType,
         this.reconciledBarcodes,
         this.unreconciledBarcodes,
@@ -771,44 +771,40 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    readType.$reducer(reducer);
-    reconciledBarcodes.$reducer(reducer);
-    unreconciledBarcodes.$reducer(reducer);
-    message.$reducer(reducer);
-    complete.$reducer(reducer);
-    item.$reducer(reducer);
-    unknownItem.$reducer(reducer);
-    lot.$reducer(reducer);
-    unknownLot.$reducer(reducer);
-    serial.$reducer(reducer);
-    unknownSerial.$reducer(reducer);
-    tag.$reducer(reducer);
-    pkg.$reducer(reducer);
-    shipmentLite.$reducer(reducer);
-    pkgToLocation.$reducer(reducer);
-    bin.$reducer(reducer);
-    kitItem.$reducer(reducer);
-    kitSerial.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    readType.reducer$(reducer);
+    reconciledBarcodes.reducer$(reducer);
+    unreconciledBarcodes.reducer$(reducer);
+    message.reducer$(reducer);
+    complete.reducer$(reducer);
+    item.reducer$(reducer);
+    unknownItem.reducer$(reducer);
+    lot.reducer$(reducer);
+    unknownLot.reducer$(reducer);
+    serial.reducer$(reducer);
+    unknownSerial.reducer$(reducer);
+    tag.reducer$(reducer);
+    pkg.reducer$(reducer);
+    shipmentLite.reducer$(reducer);
+    pkgToLocation.reducer$(reducer);
+    bin.reducer$(reducer);
+    kitItem.reducer$(reducer);
+    kitSerial.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    item.$middleware(middleware);
-    lot.$middleware(middleware);
-    serial.$middleware(middleware);
-    tag.$middleware(middleware);
-    pkg.$middleware(middleware);
-    shipmentLite.$middleware(middleware);
-    pkgToLocation.$middleware(middleware);
-    bin.$middleware(middleware);
-    kitItem.$middleware(middleware);
-    kitSerial.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    item.middleware$(middleware);
+    lot.middleware$(middleware);
+    serial.middleware$(middleware);
+    tag.middleware$(middleware);
+    pkg.middleware$(middleware);
+    shipmentLite.middleware$(middleware);
+    pkgToLocation.middleware$(middleware);
+    bin.middleware$(middleware);
+    kitItem.middleware$(middleware);
+    kitSerial.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ReadBarcode2ApiResponse);
 }

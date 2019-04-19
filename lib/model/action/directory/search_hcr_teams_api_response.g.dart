@@ -169,15 +169,15 @@ class _$SearchHcrTeamsApiResponseActions
   final StatefulActionsOptions<
       SearchHcrTeamsApiResponse,
       SearchHcrTeamsApiResponseBuilder,
-      SearchHcrTeamsApiResponseActions> $options;
+      SearchHcrTeamsApiResponseActions> options$;
 
-  final ActionDispatcher<SearchHcrTeamsApiResponse> $replace;
+  final ActionDispatcher<SearchHcrTeamsApiResponse> replace$;
   final FieldDispatcher<BuiltList<HcrTeam>> data;
 
-  _$SearchHcrTeamsApiResponseActions._(this.$options)
-      : $replace = $options.action<SearchHcrTeamsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<HcrTeam>>(
+  _$SearchHcrTeamsApiResponseActions._(this.options$)
+      : replace$ = options$.action<SearchHcrTeamsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<HcrTeam>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
         super._();
 
@@ -186,32 +186,28 @@ class _$SearchHcrTeamsApiResponseActions
       _$SearchHcrTeamsApiResponseActions._(options());
 
   @override
-  SearchHcrTeamsApiResponse get $initial => SearchHcrTeamsApiResponse();
+  SearchHcrTeamsApiResponse get initialState$ => SearchHcrTeamsApiResponse();
 
   @override
-  SearchHcrTeamsApiResponseBuilder $newBuilder() =>
+  SearchHcrTeamsApiResponseBuilder newBuilder$() =>
       SearchHcrTeamsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SearchHcrTeamsApiResponse);
 }

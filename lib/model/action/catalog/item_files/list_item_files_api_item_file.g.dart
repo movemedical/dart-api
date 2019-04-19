@@ -342,9 +342,9 @@ class _$ListItemFilesApiItemFileActions
   final StatefulActionsOptions<
       ListItemFilesApiItemFile,
       ListItemFilesApiItemFileBuilder,
-      ListItemFilesApiItemFileActions> $options;
+      ListItemFilesApiItemFileActions> options$;
 
-  final ActionDispatcher<ListItemFilesApiItemFile> $replace;
+  final ActionDispatcher<ListItemFilesApiItemFile> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> fileId;
   final FieldDispatcher<String> name;
@@ -355,38 +355,38 @@ class _$ListItemFilesApiItemFileActions
   final FieldDispatcher<String> description;
   final FieldDispatcher<bool> uploaded;
 
-  _$ListItemFilesApiItemFileActions._(this.$options)
-      : $replace = $options.action<ListItemFilesApiItemFile>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListItemFilesApiItemFileActions._(this.options$)
+      : replace$ = options$.action<ListItemFilesApiItemFile>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        fileType = $options.field<ItemFileType>('fileType', (a) => a?.fileType,
+        fileType = options$.field<ItemFileType>('fileType', (a) => a?.fileType,
             (s) => s?.fileType, (p, b) => p?.fileType = b),
-        uploadedByName = $options.field<String>(
+        uploadedByName = options$.field<String>(
             'uploadedByName',
             (a) => a?.uploadedByName,
             (s) => s?.uploadedByName,
             (p, b) => p?.uploadedByName = b),
-        uploadedByInitials = $options.field<String>(
+        uploadedByInitials = options$.field<String>(
             'uploadedByInitials',
             (a) => a?.uploadedByInitials,
             (s) => s?.uploadedByInitials,
             (p, b) => p?.uploadedByInitials = b),
-        createdDate = $options.field<DateTime>(
+        createdDate = options$.field<DateTime>(
             'createdDate',
             (a) => a?.createdDate,
             (s) => s?.createdDate,
             (p, b) => p?.createdDate = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        uploaded = $options.field<bool>('uploaded', (a) => a?.uploaded,
+        uploaded = options$.field<bool>('uploaded', (a) => a?.uploaded,
             (s) => s?.uploaded, (p, b) => p?.uploaded = b),
         super._();
 
@@ -395,17 +395,17 @@ class _$ListItemFilesApiItemFileActions
       _$ListItemFilesApiItemFileActions._(options());
 
   @override
-  ListItemFilesApiItemFile get $initial => ListItemFilesApiItemFile();
+  ListItemFilesApiItemFile get initialState$ => ListItemFilesApiItemFile();
 
   @override
-  ListItemFilesApiItemFileBuilder $newBuilder() =>
+  ListItemFilesApiItemFileBuilder newBuilder$() =>
       ListItemFilesApiItemFileBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.fileId,
         this.name,
@@ -418,25 +418,21 @@ class _$ListItemFilesApiItemFileActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    fileId.$reducer(reducer);
-    name.$reducer(reducer);
-    fileType.$reducer(reducer);
-    uploadedByName.$reducer(reducer);
-    uploadedByInitials.$reducer(reducer);
-    createdDate.$reducer(reducer);
-    description.$reducer(reducer);
-    uploaded.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    fileId.reducer$(reducer);
+    name.reducer$(reducer);
+    fileType.reducer$(reducer);
+    uploadedByName.reducer$(reducer);
+    uploadedByInitials.reducer$(reducer);
+    createdDate.reducer$(reducer);
+    description.reducer$(reducer);
+    uploaded.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListItemFilesApiItemFile);
 }

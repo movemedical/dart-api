@@ -223,29 +223,29 @@ class _$SaveCaseRequirementsApiRequestActions
   final StatefulActionsOptions<
       SaveCaseRequirementsApiRequest,
       SaveCaseRequirementsApiRequestBuilder,
-      SaveCaseRequirementsApiRequestActions> $options;
+      SaveCaseRequirementsApiRequestActions> options$;
 
-  final ActionDispatcher<SaveCaseRequirementsApiRequest> $replace;
+  final ActionDispatcher<SaveCaseRequirementsApiRequest> replace$;
   final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<BuiltList<SaveCaseRequirementsApiRequirement>>
       requirements;
   final FieldDispatcher<bool> confirmCase;
 
-  _$SaveCaseRequirementsApiRequestActions._(this.$options)
-      : $replace = $options.action<SaveCaseRequirementsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$SaveCaseRequirementsApiRequestActions._(this.options$)
+      : replace$ = options$.action<SaveCaseRequirementsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
         requirements =
-            $options.field<BuiltList<SaveCaseRequirementsApiRequirement>>(
+            options$.field<BuiltList<SaveCaseRequirementsApiRequirement>>(
                 'requirements',
                 (a) => a?.requirements,
                 (s) => s?.requirements,
                 (p, b) => p?.requirements = b),
-        confirmCase = $options.field<bool>('confirmCase', (a) => a?.confirmCase,
+        confirmCase = options$.field<bool>('confirmCase', (a) => a?.confirmCase,
             (s) => s?.confirmCase, (p, b) => p?.confirmCase = b),
         super._();
 
@@ -254,38 +254,33 @@ class _$SaveCaseRequirementsApiRequestActions
       _$SaveCaseRequirementsApiRequestActions._(options());
 
   @override
-  SaveCaseRequirementsApiRequest get $initial =>
+  SaveCaseRequirementsApiRequest get initialState$ =>
       SaveCaseRequirementsApiRequest();
 
   @override
-  SaveCaseRequirementsApiRequestBuilder $newBuilder() =>
+  SaveCaseRequirementsApiRequestBuilder newBuilder$() =>
       SaveCaseRequirementsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
         this.requirements,
         this.confirmCase,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
-    requirements.$reducer(reducer);
-    confirmCase.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
+    requirements.reducer$(reducer);
+    confirmCase.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SaveCaseRequirementsApiRequest);
 }

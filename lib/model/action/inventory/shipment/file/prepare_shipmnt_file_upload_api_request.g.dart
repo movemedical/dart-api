@@ -257,33 +257,33 @@ class _$PrepareShipmntFileUploadApiRequestActions
   final StatefulActionsOptions<
       PrepareShipmntFileUploadApiRequest,
       PrepareShipmntFileUploadApiRequestBuilder,
-      PrepareShipmntFileUploadApiRequestActions> $options;
+      PrepareShipmntFileUploadApiRequestActions> options$;
 
-  final ActionDispatcher<PrepareShipmntFileUploadApiRequest> $replace;
+  final ActionDispatcher<PrepareShipmntFileUploadApiRequest> replace$;
   final FieldDispatcher<String> shipmentId;
   final FieldDispatcher<String> fileName;
   final FieldDispatcher<ShipmentFileType> shipmentFileType;
   final FieldDispatcher<String> fileDescription;
   final FieldDispatcher<int> estimatedSizeKb;
 
-  _$PrepareShipmntFileUploadApiRequestActions._(this.$options)
-      : $replace = $options.action<PrepareShipmntFileUploadApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+  _$PrepareShipmntFileUploadApiRequestActions._(this.options$)
+      : replace$ = options$.action<PrepareShipmntFileUploadApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        shipmentId = options$.field<String>('shipmentId', (a) => a?.shipmentId,
             (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
-        fileName = $options.field<String>('fileName', (a) => a?.fileName,
+        fileName = options$.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
-        shipmentFileType = $options.field<ShipmentFileType>(
+        shipmentFileType = options$.field<ShipmentFileType>(
             'shipmentFileType',
             (a) => a?.shipmentFileType,
             (s) => s?.shipmentFileType,
             (p, b) => p?.shipmentFileType = b),
-        fileDescription = $options.field<String>(
+        fileDescription = options$.field<String>(
             'fileDescription',
             (a) => a?.fileDescription,
             (s) => s?.fileDescription,
             (p, b) => p?.fileDescription = b),
-        estimatedSizeKb = $options.field<int>(
+        estimatedSizeKb = options$.field<int>(
             'estimatedSizeKb',
             (a) => a?.estimatedSizeKb,
             (s) => s?.estimatedSizeKb,
@@ -295,18 +295,18 @@ class _$PrepareShipmntFileUploadApiRequestActions
       _$PrepareShipmntFileUploadApiRequestActions._(options());
 
   @override
-  PrepareShipmntFileUploadApiRequest get $initial =>
+  PrepareShipmntFileUploadApiRequest get initialState$ =>
       PrepareShipmntFileUploadApiRequest();
 
   @override
-  PrepareShipmntFileUploadApiRequestBuilder $newBuilder() =>
+  PrepareShipmntFileUploadApiRequestBuilder newBuilder$() =>
       PrepareShipmntFileUploadApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.shipmentId,
         this.fileName,
         this.shipmentFileType,
@@ -315,22 +315,17 @@ class _$PrepareShipmntFileUploadApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    shipmentId.$reducer(reducer);
-    fileName.$reducer(reducer);
-    shipmentFileType.$reducer(reducer);
-    fileDescription.$reducer(reducer);
-    estimatedSizeKb.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    shipmentId.reducer$(reducer);
+    fileName.reducer$(reducer);
+    shipmentFileType.reducer$(reducer);
+    fileDescription.reducer$(reducer);
+    estimatedSizeKb.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(PrepareShipmntFileUploadApiRequest);
 }

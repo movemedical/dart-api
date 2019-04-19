@@ -229,17 +229,17 @@ class _$RequestCaseListExportDocApiRequestActions
   final StatefulActionsOptions<
       RequestCaseListExportDocApiRequest,
       RequestCaseListExportDocApiRequestBuilder,
-      RequestCaseListExportDocApiRequestActions> $options;
+      RequestCaseListExportDocApiRequestActions> options$;
 
-  final ActionDispatcher<RequestCaseListExportDocApiRequest> $replace;
+  final ActionDispatcher<RequestCaseListExportDocApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final ListCaseEventsApiRequestActions listCaseEventsRequest;
 
-  _$RequestCaseListExportDocApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestCaseListExportDocApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestCaseListExportDocApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestCaseListExportDocApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -248,10 +248,10 @@ class _$RequestCaseListExportDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
         listCaseEventsRequest = ListCaseEventsApiRequestActions(() =>
-            $options.stateful<
+            options$.stateful<
                     ListCaseEventsApiRequest,
                     ListCaseEventsApiRequestBuilder,
                     ListCaseEventsApiRequestActions>(
@@ -267,45 +267,40 @@ class _$RequestCaseListExportDocApiRequestActions
       _$RequestCaseListExportDocApiRequestActions._(options());
 
   @override
-  RequestCaseListExportDocApiRequest get $initial =>
+  RequestCaseListExportDocApiRequest get initialState$ =>
       RequestCaseListExportDocApiRequest();
 
   @override
-  RequestCaseListExportDocApiRequestBuilder $newBuilder() =>
+  RequestCaseListExportDocApiRequestBuilder newBuilder$() =>
       RequestCaseListExportDocApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
         this.listCaseEventsRequest,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.format,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    format.$reducer(reducer);
-    listCaseEventsRequest.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    format.reducer$(reducer);
+    listCaseEventsRequest.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
-    listCaseEventsRequest.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
+    listCaseEventsRequest.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestCaseListExportDocApiRequest);
 }

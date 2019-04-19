@@ -178,18 +178,18 @@ class _$SearchLotsSerialsApiRequestActions
   final StatefulActionsOptions<
       SearchLotsSerialsApiRequest,
       SearchLotsSerialsApiRequestBuilder,
-      SearchLotsSerialsApiRequestActions> $options;
+      SearchLotsSerialsApiRequestActions> options$;
 
-  final ActionDispatcher<SearchLotsSerialsApiRequest> $replace;
+  final ActionDispatcher<SearchLotsSerialsApiRequest> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> search;
 
-  _$SearchLotsSerialsApiRequestActions._(this.$options)
-      : $replace = $options.action<SearchLotsSerialsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$SearchLotsSerialsApiRequestActions._(this.options$)
+      : replace$ = options$.action<SearchLotsSerialsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -198,35 +198,31 @@ class _$SearchLotsSerialsApiRequestActions
       _$SearchLotsSerialsApiRequestActions._(options());
 
   @override
-  SearchLotsSerialsApiRequest get $initial => SearchLotsSerialsApiRequest();
+  SearchLotsSerialsApiRequest get initialState$ =>
+      SearchLotsSerialsApiRequest();
 
   @override
-  SearchLotsSerialsApiRequestBuilder $newBuilder() =>
+  SearchLotsSerialsApiRequestBuilder newBuilder$() =>
       SearchLotsSerialsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    search.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    search.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SearchLotsSerialsApiRequest);
 }

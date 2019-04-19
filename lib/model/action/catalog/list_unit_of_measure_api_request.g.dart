@@ -194,18 +194,18 @@ class _$ListUnitOfMeasureApiRequestActions
   final StatefulActionsOptions<
       ListUnitOfMeasureApiRequest,
       ListUnitOfMeasureApiRequestBuilder,
-      ListUnitOfMeasureApiRequestActions> $options;
+      ListUnitOfMeasureApiRequestActions> options$;
 
-  final ActionDispatcher<ListUnitOfMeasureApiRequest> $replace;
+  final ActionDispatcher<ListUnitOfMeasureApiRequest> replace$;
   final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
 
-  _$ListUnitOfMeasureApiRequestActions._(this.$options)
-      : $replace = $options.action<ListUnitOfMeasureApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$ListUnitOfMeasureApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListUnitOfMeasureApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -221,41 +221,37 @@ class _$ListUnitOfMeasureApiRequestActions
       _$ListUnitOfMeasureApiRequestActions._(options());
 
   @override
-  ListUnitOfMeasureApiRequest get $initial => ListUnitOfMeasureApiRequest();
+  ListUnitOfMeasureApiRequest get initialState$ =>
+      ListUnitOfMeasureApiRequest();
 
   @override
-  ListUnitOfMeasureApiRequestBuilder $newBuilder() =>
+  ListUnitOfMeasureApiRequestBuilder newBuilder$() =>
       ListUnitOfMeasureApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListUnitOfMeasureApiRequest);
 }

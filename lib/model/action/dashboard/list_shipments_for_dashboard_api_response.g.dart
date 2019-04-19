@@ -207,20 +207,20 @@ class _$ListShipmentsForDashboardApiResponseActions
   final StatefulActionsOptions<
       ListShipmentsForDashboardApiResponse,
       ListShipmentsForDashboardApiResponseBuilder,
-      ListShipmentsForDashboardApiResponseActions> $options;
+      ListShipmentsForDashboardApiResponseActions> options$;
 
-  final ActionDispatcher<ListShipmentsForDashboardApiResponse> $replace;
+  final ActionDispatcher<ListShipmentsForDashboardApiResponse> replace$;
   final FieldDispatcher<
       BuiltList<ListShipmentsForDashboardApiDashboardShipmentLite>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListShipmentsForDashboardApiResponseActions._(this.$options)
-      : $replace = $options.action<ListShipmentsForDashboardApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<
+  _$ListShipmentsForDashboardApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListShipmentsForDashboardApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<
                 BuiltList<ListShipmentsForDashboardApiDashboardShipmentLite>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -229,36 +229,31 @@ class _$ListShipmentsForDashboardApiResponseActions
       _$ListShipmentsForDashboardApiResponseActions._(options());
 
   @override
-  ListShipmentsForDashboardApiResponse get $initial =>
+  ListShipmentsForDashboardApiResponse get initialState$ =>
       ListShipmentsForDashboardApiResponse();
 
   @override
-  ListShipmentsForDashboardApiResponseBuilder $newBuilder() =>
+  ListShipmentsForDashboardApiResponseBuilder newBuilder$() =>
       ListShipmentsForDashboardApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListShipmentsForDashboardApiResponse);
 }

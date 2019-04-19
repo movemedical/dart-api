@@ -246,30 +246,30 @@ class _$CanUserConfirmPkgAtLocationApiRequestActions
   final StatefulActionsOptions<
       CanUserConfirmPkgAtLocationApiRequest,
       CanUserConfirmPkgAtLocationApiRequestBuilder,
-      CanUserConfirmPkgAtLocationApiRequestActions> $options;
+      CanUserConfirmPkgAtLocationApiRequestActions> options$;
 
-  final ActionDispatcher<CanUserConfirmPkgAtLocationApiRequest> $replace;
+  final ActionDispatcher<CanUserConfirmPkgAtLocationApiRequest> replace$;
   final FieldDispatcher<String> userId;
   final FieldDispatcher<String> transferTypeId;
   final FieldDispatcher<String> orderReasonId;
   final LocationDataActions toLocation;
 
-  _$CanUserConfirmPkgAtLocationApiRequestActions._(this.$options)
-      : $replace = $options.action<CanUserConfirmPkgAtLocationApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        userId = $options.field<String>('userId', (a) => a?.userId,
+  _$CanUserConfirmPkgAtLocationApiRequestActions._(this.options$)
+      : replace$ = options$.action<CanUserConfirmPkgAtLocationApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        userId = options$.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        transferTypeId = $options.field<String>(
+        transferTypeId = options$.field<String>(
             'transferTypeId',
             (a) => a?.transferTypeId,
             (s) => s?.transferTypeId,
             (p, b) => p?.transferTypeId = b),
-        orderReasonId = $options.field<String>(
+        orderReasonId = options$.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
             (p, b) => p?.orderReasonId = b),
-        toLocation = LocationDataActions(() => $options
+        toLocation = LocationDataActions(() => options$
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
                 'toLocation',
                 (a) => a.toLocation,
@@ -283,46 +283,41 @@ class _$CanUserConfirmPkgAtLocationApiRequestActions
       _$CanUserConfirmPkgAtLocationApiRequestActions._(options());
 
   @override
-  CanUserConfirmPkgAtLocationApiRequest get $initial =>
+  CanUserConfirmPkgAtLocationApiRequest get initialState$ =>
       CanUserConfirmPkgAtLocationApiRequest();
 
   @override
-  CanUserConfirmPkgAtLocationApiRequestBuilder $newBuilder() =>
+  CanUserConfirmPkgAtLocationApiRequestBuilder newBuilder$() =>
       CanUserConfirmPkgAtLocationApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toLocation,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.userId,
         this.transferTypeId,
         this.orderReasonId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    userId.$reducer(reducer);
-    transferTypeId.$reducer(reducer);
-    orderReasonId.$reducer(reducer);
-    toLocation.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    userId.reducer$(reducer);
+    transferTypeId.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
+    toLocation.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    toLocation.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    toLocation.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CanUserConfirmPkgAtLocationApiRequest);
 }

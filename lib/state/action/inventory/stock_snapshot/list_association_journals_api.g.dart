@@ -22,69 +22,32 @@ class _$ListAssociationJournalsApi extends ListAssociationJournalsApi {
           ApiResult<ListAssociationJournalsApiResponse>>,
       CommandStateBuilder<ApiCommand<ListAssociationJournalsApiRequest>,
           ApiResult<ListAssociationJournalsApiResponse>>,
-      ListAssociationJournalsApi> $options;
+      ListAssociationJournalsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListAssociationJournalsApiRequest>,
-          ApiResult<ListAssociationJournalsApiResponse>>> $replace;
+          ApiResult<ListAssociationJournalsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListAssociationJournalsApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAssociationJournalsApiRequest>,
-          ApiResult<ListAssociationJournalsApiResponse>,
-          ListAssociationJournalsApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAssociationJournalsApiRequest>,
-          ApiResult<ListAssociationJournalsApiResponse>,
-          ListAssociationJournalsApi,
-          Command<ApiCommand<ListAssociationJournalsApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListAssociationJournalsApiRequest>,
-              ApiResult<ListAssociationJournalsApiResponse>,
-              ListAssociationJournalsApi,
-              CommandResult<ApiResult<ListAssociationJournalsApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAssociationJournalsApiRequest>,
-          ApiResult<ListAssociationJournalsApiResponse>,
-          ListAssociationJournalsApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListAssociationJournalsApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListAssociationJournalsApi._(this.$options)
-      : $replace = $options.action<
+  _$ListAssociationJournalsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListAssociationJournalsApiRequest>,
                     ApiResult<ListAssociationJournalsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListAssociationJournalsApiRequest>,
-                ApiResult<ListAssociationJournalsApiResponse>,
-                ListAssociationJournalsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListAssociationJournalsApiRequest>,
-                    ApiResult<ListAssociationJournalsApiResponse>,
-                    ListAssociationJournalsApi,
-                    Command<ApiCommand<ListAssociationJournalsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListAssociationJournalsApiRequest>,
-                    ApiResult<ListAssociationJournalsApiResponse>,
-                    ListAssociationJournalsApi,
-                    CommandResult<
-                        ApiResult<ListAssociationJournalsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListAssociationJournalsApiRequest>,
-                ApiResult<ListAssociationJournalsApiResponse>,
-                ListAssociationJournalsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListAssociationJournalsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<ListAssociationJournalsApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListAssociationJournalsApi(
@@ -94,33 +57,26 @@ class _$ListAssociationJournalsApi extends ListAssociationJournalsApi {
   @override
   CommandState<ApiCommand<ListAssociationJournalsApiRequest>,
           ApiResult<ListAssociationJournalsApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListAssociationJournalsApiRequest>,
           ApiResult<ListAssociationJournalsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListAssociationJournalsApiRequest>,
           ApiResult<ListAssociationJournalsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListAssociationJournalsApiRequest>,
           ApiResult<ListAssociationJournalsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListAssociationJournalsApiRequest)]),
-        FullType(ApiResult, [FullType(ListAssociationJournalsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

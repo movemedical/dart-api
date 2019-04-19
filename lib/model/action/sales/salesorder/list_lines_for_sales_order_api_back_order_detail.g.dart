@@ -229,27 +229,27 @@ class _$ListLinesForSalesOrderApiBackOrderDetailActions
   final StatefulActionsOptions<
       ListLinesForSalesOrderApiBackOrderDetail,
       ListLinesForSalesOrderApiBackOrderDetailBuilder,
-      ListLinesForSalesOrderApiBackOrderDetailActions> $options;
+      ListLinesForSalesOrderApiBackOrderDetailActions> options$;
 
-  final ActionDispatcher<ListLinesForSalesOrderApiBackOrderDetail> $replace;
+  final ActionDispatcher<ListLinesForSalesOrderApiBackOrderDetail> replace$;
   final FieldDispatcher<String> reference;
   final FieldDispatcher<DateTime> createdTimestamp;
   final FieldDispatcher<String> fieldName;
   final FieldDispatcher<String> fieldValue;
 
-  _$ListLinesForSalesOrderApiBackOrderDetailActions._(this.$options)
-      : $replace = $options.action<ListLinesForSalesOrderApiBackOrderDetail>(
-            '\$replace', (a) => a?.$replace),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+  _$ListLinesForSalesOrderApiBackOrderDetailActions._(this.options$)
+      : replace$ = options$.action<ListLinesForSalesOrderApiBackOrderDetail>(
+            'replace\$', (a) => a?.replace$),
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
-        createdTimestamp = $options.field<DateTime>(
+        createdTimestamp = options$.field<DateTime>(
             'createdTimestamp',
             (a) => a?.createdTimestamp,
             (s) => s?.createdTimestamp,
             (p, b) => p?.createdTimestamp = b),
-        fieldName = $options.field<String>('fieldName', (a) => a?.fieldName,
+        fieldName = options$.field<String>('fieldName', (a) => a?.fieldName,
             (s) => s?.fieldName, (p, b) => p?.fieldName = b),
-        fieldValue = $options.field<String>('fieldValue', (a) => a?.fieldValue,
+        fieldValue = options$.field<String>('fieldValue', (a) => a?.fieldValue,
             (s) => s?.fieldValue, (p, b) => p?.fieldValue = b),
         super._();
 
@@ -258,18 +258,18 @@ class _$ListLinesForSalesOrderApiBackOrderDetailActions
       _$ListLinesForSalesOrderApiBackOrderDetailActions._(options());
 
   @override
-  ListLinesForSalesOrderApiBackOrderDetail get $initial =>
+  ListLinesForSalesOrderApiBackOrderDetail get initialState$ =>
       ListLinesForSalesOrderApiBackOrderDetail();
 
   @override
-  ListLinesForSalesOrderApiBackOrderDetailBuilder $newBuilder() =>
+  ListLinesForSalesOrderApiBackOrderDetailBuilder newBuilder$() =>
       ListLinesForSalesOrderApiBackOrderDetailBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.reference,
         this.createdTimestamp,
         this.fieldName,
@@ -277,21 +277,16 @@ class _$ListLinesForSalesOrderApiBackOrderDetailActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    reference.$reducer(reducer);
-    createdTimestamp.$reducer(reducer);
-    fieldName.$reducer(reducer);
-    fieldValue.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    reference.reducer$(reducer);
+    createdTimestamp.reducer$(reducer);
+    fieldName.reducer$(reducer);
+    fieldValue.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListLinesForSalesOrderApiBackOrderDetail);
 }

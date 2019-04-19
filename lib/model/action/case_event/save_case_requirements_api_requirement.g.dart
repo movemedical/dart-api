@@ -370,9 +370,9 @@ class _$SaveCaseRequirementsApiRequirementActions
   final StatefulActionsOptions<
       SaveCaseRequirementsApiRequirement,
       SaveCaseRequirementsApiRequirementBuilder,
-      SaveCaseRequirementsApiRequirementActions> $options;
+      SaveCaseRequirementsApiRequirementActions> options$;
 
-  final ActionDispatcher<SaveCaseRequirementsApiRequirement> $replace;
+  final ActionDispatcher<SaveCaseRequirementsApiRequirement> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<CaseRequirementSource> source;
   final FieldDispatcher<String> sourceId;
@@ -384,31 +384,31 @@ class _$SaveCaseRequirementsApiRequirementActions
   final FieldDispatcher<String> serialId;
   final FieldDispatcher<int> quantity;
 
-  _$SaveCaseRequirementsApiRequirementActions._(this.$options)
-      : $replace = $options.action<SaveCaseRequirementsApiRequirement>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$SaveCaseRequirementsApiRequirementActions._(this.options$)
+      : replace$ = options$.action<SaveCaseRequirementsApiRequirement>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        source = $options.field<CaseRequirementSource>('source',
+        source = options$.field<CaseRequirementSource>('source',
             (a) => a?.source, (s) => s?.source, (p, b) => p?.source = b),
-        sourceId = $options.field<String>('sourceId', (a) => a?.sourceId,
+        sourceId = options$.field<String>('sourceId', (a) => a?.sourceId,
             (s) => s?.sourceId, (p, b) => p?.sourceId = b),
-        remove = $options.field<bool>('remove', (a) => a?.remove,
+        remove = options$.field<bool>('remove', (a) => a?.remove,
             (s) => s?.remove, (p, b) => p?.remove = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        uomId = $options.field<String>(
+        uomId = options$.field<String>(
             'uomId', (a) => a?.uomId, (s) => s?.uomId, (p, b) => p?.uomId = b),
-        itemVersionId = $options.field<String>(
+        itemVersionId = options$.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -417,18 +417,18 @@ class _$SaveCaseRequirementsApiRequirementActions
       _$SaveCaseRequirementsApiRequirementActions._(options());
 
   @override
-  SaveCaseRequirementsApiRequirement get $initial =>
+  SaveCaseRequirementsApiRequirement get initialState$ =>
       SaveCaseRequirementsApiRequirement();
 
   @override
-  SaveCaseRequirementsApiRequirementBuilder $newBuilder() =>
+  SaveCaseRequirementsApiRequirementBuilder newBuilder$() =>
       SaveCaseRequirementsApiRequirementBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.source,
         this.sourceId,
@@ -442,27 +442,22 @@ class _$SaveCaseRequirementsApiRequirementActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    source.$reducer(reducer);
-    sourceId.$reducer(reducer);
-    remove.$reducer(reducer);
-    itemId.$reducer(reducer);
-    uomId.$reducer(reducer);
-    itemVersionId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    quantity.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    source.reducer$(reducer);
+    sourceId.reducer$(reducer);
+    remove.reducer$(reducer);
+    itemId.reducer$(reducer);
+    uomId.reducer$(reducer);
+    itemVersionId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    quantity.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SaveCaseRequirementsApiRequirement);
 }

@@ -341,9 +341,9 @@ class _$CreatePreferenceCardApiRequestActions
   final StatefulActionsOptions<
       CreatePreferenceCardApiRequest,
       CreatePreferenceCardApiRequestBuilder,
-      CreatePreferenceCardApiRequestActions> $options;
+      CreatePreferenceCardApiRequestActions> options$;
 
-  final ActionDispatcher<CreatePreferenceCardApiRequest> $replace;
+  final ActionDispatcher<CreatePreferenceCardApiRequest> replace$;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> physicianId;
   final FieldDispatcher<String> techniqueId;
@@ -353,39 +353,39 @@ class _$CreatePreferenceCardApiRequestActions
   final FieldDispatcher<String> subProcedureId;
   final FieldDispatcher<BuiltList<String>> orgUnitIds;
 
-  _$CreatePreferenceCardApiRequestActions._(this.$options)
-      : $replace = $options.action<CreatePreferenceCardApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+  _$CreatePreferenceCardApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreatePreferenceCardApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        physicianId = $options.field<String>(
+        physicianId = options$.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        techniqueId = $options.field<String>(
+        techniqueId = options$.field<String>(
             'techniqueId',
             (a) => a?.techniqueId,
             (s) => s?.techniqueId,
             (p, b) => p?.techniqueId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        subProcedureId = $options.field<String>(
+        subProcedureId = options$.field<String>(
             'subProcedureId',
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
             (p, b) => p?.subProcedureId = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
@@ -397,18 +397,18 @@ class _$CreatePreferenceCardApiRequestActions
       _$CreatePreferenceCardApiRequestActions._(options());
 
   @override
-  CreatePreferenceCardApiRequest get $initial =>
+  CreatePreferenceCardApiRequest get initialState$ =>
       CreatePreferenceCardApiRequest();
 
   @override
-  CreatePreferenceCardApiRequestBuilder $newBuilder() =>
+  CreatePreferenceCardApiRequestBuilder newBuilder$() =>
       CreatePreferenceCardApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.facilityId,
         this.physicianId,
         this.techniqueId,
@@ -420,25 +420,20 @@ class _$CreatePreferenceCardApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    physicianId.$reducer(reducer);
-    techniqueId.$reducer(reducer);
-    name.$reducer(reducer);
-    description.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    subProcedureId.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    physicianId.reducer$(reducer);
+    techniqueId.reducer$(reducer);
+    name.reducer$(reducer);
+    description.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    subProcedureId.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreatePreferenceCardApiRequest);
 }

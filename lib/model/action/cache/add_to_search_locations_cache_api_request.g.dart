@@ -227,27 +227,27 @@ class _$AddToSearchLocationsCacheApiRequestActions
   final StatefulActionsOptions<
       AddToSearchLocationsCacheApiRequest,
       AddToSearchLocationsCacheApiRequestBuilder,
-      AddToSearchLocationsCacheApiRequestActions> $options;
+      AddToSearchLocationsCacheApiRequestActions> options$;
 
-  final ActionDispatcher<AddToSearchLocationsCacheApiRequest> $replace;
+  final ActionDispatcher<AddToSearchLocationsCacheApiRequest> replace$;
   final FieldDispatcher<BuiltList<Location>> locations;
   final FieldDispatcher<bool> locationVizScoped;
   final FieldDispatcher<SearchLocationsApiSearchLocationsPurpose> purpose;
 
-  _$AddToSearchLocationsCacheApiRequestActions._(this.$options)
-      : $replace = $options.action<AddToSearchLocationsCacheApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        locations = $options.field<BuiltList<Location>>(
+  _$AddToSearchLocationsCacheApiRequestActions._(this.options$)
+      : replace$ = options$.action<AddToSearchLocationsCacheApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        locations = options$.field<BuiltList<Location>>(
             'locations',
             (a) => a?.locations,
             (s) => s?.locations,
             (p, b) => p?.locations = b),
-        locationVizScoped = $options.field<bool>(
+        locationVizScoped = options$.field<bool>(
             'locationVizScoped',
             (a) => a?.locationVizScoped,
             (s) => s?.locationVizScoped,
             (p, b) => p?.locationVizScoped = b),
-        purpose = $options.field<SearchLocationsApiSearchLocationsPurpose>(
+        purpose = options$.field<SearchLocationsApiSearchLocationsPurpose>(
             'purpose',
             (a) => a?.purpose,
             (s) => s?.purpose,
@@ -259,38 +259,33 @@ class _$AddToSearchLocationsCacheApiRequestActions
       _$AddToSearchLocationsCacheApiRequestActions._(options());
 
   @override
-  AddToSearchLocationsCacheApiRequest get $initial =>
+  AddToSearchLocationsCacheApiRequest get initialState$ =>
       AddToSearchLocationsCacheApiRequest();
 
   @override
-  AddToSearchLocationsCacheApiRequestBuilder $newBuilder() =>
+  AddToSearchLocationsCacheApiRequestBuilder newBuilder$() =>
       AddToSearchLocationsCacheApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.locations,
         this.locationVizScoped,
         this.purpose,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    locations.$reducer(reducer);
-    locationVizScoped.$reducer(reducer);
-    purpose.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    locations.reducer$(reducer);
+    locationVizScoped.reducer$(reducer);
+    purpose.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AddToSearchLocationsCacheApiRequest);
 }

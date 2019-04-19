@@ -188,17 +188,17 @@ class _$ListSurgeonPhysiciansForSchedulingApiResponseActions
   final StatefulActionsOptions<
       ListSurgeonPhysiciansForSchedulingApiResponse,
       ListSurgeonPhysiciansForSchedulingApiResponseBuilder,
-      ListSurgeonPhysiciansForSchedulingApiResponseActions> $options;
+      ListSurgeonPhysiciansForSchedulingApiResponseActions> options$;
 
   final ActionDispatcher<ListSurgeonPhysiciansForSchedulingApiResponse>
-      $replace;
+      replace$;
   final FieldDispatcher<BuiltList<Physician>> physicians;
 
-  _$ListSurgeonPhysiciansForSchedulingApiResponseActions._(this.$options)
-      : $replace =
-            $options.action<ListSurgeonPhysiciansForSchedulingApiResponse>(
-                '\$replace', (a) => a?.$replace),
-        physicians = $options.field<BuiltList<Physician>>(
+  _$ListSurgeonPhysiciansForSchedulingApiResponseActions._(this.options$)
+      : replace$ =
+            options$.action<ListSurgeonPhysiciansForSchedulingApiResponse>(
+                'replace\$', (a) => a?.replace$),
+        physicians = options$.field<BuiltList<Physician>>(
             'physicians',
             (a) => a?.physicians,
             (s) => s?.physicians,
@@ -211,34 +211,29 @@ class _$ListSurgeonPhysiciansForSchedulingApiResponseActions
       _$ListSurgeonPhysiciansForSchedulingApiResponseActions._(options());
 
   @override
-  ListSurgeonPhysiciansForSchedulingApiResponse get $initial =>
+  ListSurgeonPhysiciansForSchedulingApiResponse get initialState$ =>
       ListSurgeonPhysiciansForSchedulingApiResponse();
 
   @override
-  ListSurgeonPhysiciansForSchedulingApiResponseBuilder $newBuilder() =>
+  ListSurgeonPhysiciansForSchedulingApiResponseBuilder newBuilder$() =>
       ListSurgeonPhysiciansForSchedulingApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.physicians,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    physicians.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    physicians.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListSurgeonPhysiciansForSchedulingApiResponse);
 }

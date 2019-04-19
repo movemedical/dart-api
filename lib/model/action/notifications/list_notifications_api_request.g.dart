@@ -194,18 +194,18 @@ class _$ListNotificationsApiRequestActions
   final StatefulActionsOptions<
       ListNotificationsApiRequest,
       ListNotificationsApiRequestBuilder,
-      ListNotificationsApiRequestActions> $options;
+      ListNotificationsApiRequestActions> options$;
 
-  final ActionDispatcher<ListNotificationsApiRequest> $replace;
+  final ActionDispatcher<ListNotificationsApiRequest> replace$;
   final FieldDispatcher<bool> read;
   final PaginationParamsActions paging;
 
-  _$ListNotificationsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListNotificationsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        read = $options.field<bool>(
+  _$ListNotificationsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListNotificationsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        read = options$.field<bool>(
             'read', (a) => a?.read, (s) => s?.read, (p, b) => p?.read = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -221,41 +221,37 @@ class _$ListNotificationsApiRequestActions
       _$ListNotificationsApiRequestActions._(options());
 
   @override
-  ListNotificationsApiRequest get $initial => ListNotificationsApiRequest();
+  ListNotificationsApiRequest get initialState$ =>
+      ListNotificationsApiRequest();
 
   @override
-  ListNotificationsApiRequestBuilder $newBuilder() =>
+  ListNotificationsApiRequestBuilder newBuilder$() =>
       ListNotificationsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.read,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    read.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    read.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListNotificationsApiRequest);
 }

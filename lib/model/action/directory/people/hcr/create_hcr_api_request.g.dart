@@ -481,9 +481,9 @@ typedef StatefulActionsOptions<CreateHcrApiRequest, CreateHcrApiRequestBuilder,
 
 class _$CreateHcrApiRequestActions extends CreateHcrApiRequestActions {
   final StatefulActionsOptions<CreateHcrApiRequest, CreateHcrApiRequestBuilder,
-      CreateHcrApiRequestActions> $options;
+      CreateHcrApiRequestActions> options$;
 
-  final ActionDispatcher<CreateHcrApiRequest> $replace;
+  final ActionDispatcher<CreateHcrApiRequest> replace$;
   final FieldDispatcher<String> customerId;
   final FieldDispatcher<String> reference;
   final PersonNameActions name;
@@ -499,67 +499,67 @@ class _$CreateHcrApiRequestActions extends CreateHcrApiRequestActions {
   final FieldDispatcher<DateTime> endDate;
   final FieldDispatcher<bool> active;
 
-  _$CreateHcrApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateHcrApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+  _$CreateHcrApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateHcrApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        hcrType = $options.field<HcrType>('hcrType', (a) => a?.hcrType,
+        hcrType = options$.field<HcrType>('hcrType', (a) => a?.hcrType,
             (s) => s?.hcrType, (p, b) => p?.hcrType = b),
-        workPhoneNumber = PhoneNumberActions(() => $options
+        workPhoneNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'workPhoneNumber',
                 (a) => a.workPhoneNumber,
                 (s) => s?.workPhoneNumber,
                 (b) => b?.workPhoneNumber,
                 (parent, builder) => parent?.workPhoneNumber = builder)),
-        mobilePhoneNumber = PhoneNumberActions(() => $options
+        mobilePhoneNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'mobilePhoneNumber',
                 (a) => a.mobilePhoneNumber,
                 (s) => s?.mobilePhoneNumber,
                 (b) => b?.mobilePhoneNumber,
                 (parent, builder) => parent?.mobilePhoneNumber = builder)),
-        faxNumber = PhoneNumberActions(() => $options
+        faxNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'faxNumber',
                 (a) => a.faxNumber,
                 (s) => s?.faxNumber,
                 (b) => b?.faxNumber,
                 (parent, builder) => parent?.faxNumber = builder)),
-        workingHomeId = $options.field<String>(
+        workingHomeId = options$.field<String>(
             'workingHomeId',
             (a) => a?.workingHomeId,
             (s) => s?.workingHomeId,
             (p, b) => p?.workingHomeId = b),
-        workingAtId = $options.field<String>(
+        workingAtId = options$.field<String>(
             'workingAtId',
             (a) => a?.workingAtId,
             (s) => s?.workingAtId,
             (p, b) => p?.workingAtId = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+        startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
-        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
+        endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -568,14 +568,14 @@ class _$CreateHcrApiRequestActions extends CreateHcrApiRequestActions {
       _$CreateHcrApiRequestActions._(options());
 
   @override
-  CreateHcrApiRequest get $initial => CreateHcrApiRequest();
+  CreateHcrApiRequest get initialState$ => CreateHcrApiRequest();
 
   @override
-  CreateHcrApiRequestBuilder $newBuilder() => CreateHcrApiRequestBuilder();
+  CreateHcrApiRequestBuilder newBuilder$() => CreateHcrApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
         this.workPhoneNumber,
         this.mobilePhoneNumber,
@@ -583,11 +583,11 @@ class _$CreateHcrApiRequestActions extends CreateHcrApiRequestActions {
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customerId,
         this.reference,
         this.hcrType,
@@ -600,35 +600,31 @@ class _$CreateHcrApiRequestActions extends CreateHcrApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    customerId.$reducer(reducer);
-    reference.$reducer(reducer);
-    name.$reducer(reducer);
-    hcrType.$reducer(reducer);
-    workPhoneNumber.$reducer(reducer);
-    mobilePhoneNumber.$reducer(reducer);
-    faxNumber.$reducer(reducer);
-    workingHomeId.$reducer(reducer);
-    workingAtId.$reducer(reducer);
-    email.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    startDate.$reducer(reducer);
-    endDate.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    customerId.reducer$(reducer);
+    reference.reducer$(reducer);
+    name.reducer$(reducer);
+    hcrType.reducer$(reducer);
+    workPhoneNumber.reducer$(reducer);
+    mobilePhoneNumber.reducer$(reducer);
+    faxNumber.reducer$(reducer);
+    workingHomeId.reducer$(reducer);
+    workingAtId.reducer$(reducer);
+    email.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    startDate.reducer$(reducer);
+    endDate.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    name.$middleware(middleware);
-    workPhoneNumber.$middleware(middleware);
-    mobilePhoneNumber.$middleware(middleware);
-    faxNumber.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    name.middleware$(middleware);
+    workPhoneNumber.middleware$(middleware);
+    mobilePhoneNumber.middleware$(middleware);
+    faxNumber.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateHcrApiRequest);
 }

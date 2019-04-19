@@ -393,9 +393,9 @@ class _$EditOrderDetailsApiRequestActions
   final StatefulActionsOptions<
       EditOrderDetailsApiRequest,
       EditOrderDetailsApiRequestBuilder,
-      EditOrderDetailsApiRequestActions> $options;
+      EditOrderDetailsApiRequestActions> options$;
 
-  final ActionDispatcher<EditOrderDetailsApiRequest> $replace;
+  final ActionDispatcher<EditOrderDetailsApiRequest> replace$;
   final FieldDispatcher<String> orderId;
   final LocationDataActions toLocation;
   final FieldDispatcher<String> email;
@@ -407,53 +407,53 @@ class _$EditOrderDetailsApiRequestActions
   final DateRangeActions deliveryWindow;
   final FieldDispatcher<String> poNumber;
 
-  _$EditOrderDetailsApiRequestActions._(this.$options)
-      : $replace = $options.action<EditOrderDetailsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$EditOrderDetailsApiRequestActions._(this.options$)
+      : replace$ = options$.action<EditOrderDetailsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        toLocation = LocationDataActions(() => $options
+        toLocation = LocationDataActions(() => options$
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
                 'toLocation',
                 (a) => a.toLocation,
                 (s) => s?.toLocation,
                 (b) => b?.toLocation,
                 (parent, builder) => parent?.toLocation = builder)),
-        email = $options.field<String>(
+        email = options$.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        attention = $options.field<String>('attention', (a) => a?.attention,
+        attention = options$.field<String>('attention', (a) => a?.attention,
             (s) => s?.attention, (p, b) => p?.attention = b),
-        shipToAddressId = $options.field<String>(
+        shipToAddressId = options$.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
             (p, b) => p?.shipToAddressId = b),
-        deliverToAddressId = $options.field<String>(
+        deliverToAddressId = options$.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
             (p, b) => p?.deliverToAddressId = b),
         deliverToAddressOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToAddressOverride',
                 (a) => a.deliverToAddressOverride,
                 (s) => s?.deliverToAddressOverride,
                 (b) => b?.deliverToAddressOverride,
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
-        shippingServiceId = $options.field<String>(
+        shippingServiceId = options$.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
         deliveryWindow = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'deliveryWindow',
                 (a) => a.deliveryWindow,
                 (s) => s?.deliveryWindow,
                 (b) => b?.deliveryWindow,
                 (parent, builder) => parent?.deliveryWindow = builder)),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
         super._();
 
@@ -462,25 +462,25 @@ class _$EditOrderDetailsApiRequestActions
       _$EditOrderDetailsApiRequestActions._(options());
 
   @override
-  EditOrderDetailsApiRequest get $initial => EditOrderDetailsApiRequest();
+  EditOrderDetailsApiRequest get initialState$ => EditOrderDetailsApiRequest();
 
   @override
-  EditOrderDetailsApiRequestBuilder $newBuilder() =>
+  EditOrderDetailsApiRequestBuilder newBuilder$() =>
       EditOrderDetailsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toLocation,
         this.deliverToAddressOverride,
         this.deliveryWindow,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
         this.email,
         this.attention,
@@ -491,29 +491,25 @@ class _$EditOrderDetailsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
-    toLocation.$reducer(reducer);
-    email.$reducer(reducer);
-    attention.$reducer(reducer);
-    shipToAddressId.$reducer(reducer);
-    deliverToAddressId.$reducer(reducer);
-    deliverToAddressOverride.$reducer(reducer);
-    shippingServiceId.$reducer(reducer);
-    deliveryWindow.$reducer(reducer);
-    poNumber.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
+    toLocation.reducer$(reducer);
+    email.reducer$(reducer);
+    attention.reducer$(reducer);
+    shipToAddressId.reducer$(reducer);
+    deliverToAddressId.reducer$(reducer);
+    deliverToAddressOverride.reducer$(reducer);
+    shippingServiceId.reducer$(reducer);
+    deliveryWindow.reducer$(reducer);
+    poNumber.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    toLocation.$middleware(middleware);
-    deliverToAddressOverride.$middleware(middleware);
-    deliveryWindow.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    toLocation.middleware$(middleware);
+    deliverToAddressOverride.middleware$(middleware);
+    deliveryWindow.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(EditOrderDetailsApiRequest);
 }

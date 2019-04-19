@@ -164,18 +164,18 @@ typedef StatefulActionsOptions<SkipErpApiRequest, SkipErpApiRequestBuilder,
 
 class _$SkipErpApiRequestActions extends SkipErpApiRequestActions {
   final StatefulActionsOptions<SkipErpApiRequest, SkipErpApiRequestBuilder,
-      SkipErpApiRequestActions> $options;
+      SkipErpApiRequestActions> options$;
 
-  final ActionDispatcher<SkipErpApiRequest> $replace;
+  final ActionDispatcher<SkipErpApiRequest> replace$;
   final FieldDispatcher<String> erpOrderId;
   final FieldDispatcher<String> erpReference;
 
-  _$SkipErpApiRequestActions._(this.$options)
-      : $replace =
-            $options.action<SkipErpApiRequest>('\$replace', (a) => a?.$replace),
-        erpOrderId = $options.field<String>('erpOrderId', (a) => a?.erpOrderId,
+  _$SkipErpApiRequestActions._(this.options$)
+      : replace$ =
+            options$.action<SkipErpApiRequest>('replace\$', (a) => a?.replace$),
+        erpOrderId = options$.field<String>('erpOrderId', (a) => a?.erpOrderId,
             (s) => s?.erpOrderId, (p, b) => p?.erpOrderId = b),
-        erpReference = $options.field<String>(
+        erpReference = options$.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
@@ -186,33 +186,29 @@ class _$SkipErpApiRequestActions extends SkipErpApiRequestActions {
       _$SkipErpApiRequestActions._(options());
 
   @override
-  SkipErpApiRequest get $initial => SkipErpApiRequest();
+  SkipErpApiRequest get initialState$ => SkipErpApiRequest();
 
   @override
-  SkipErpApiRequestBuilder $newBuilder() => SkipErpApiRequestBuilder();
+  SkipErpApiRequestBuilder newBuilder$() => SkipErpApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.erpOrderId,
         this.erpReference,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    erpOrderId.$reducer(reducer);
-    erpReference.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    erpOrderId.reducer$(reducer);
+    erpReference.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SkipErpApiRequest);
 }

@@ -23,71 +23,34 @@ class _$GetCaseCustomFieldsForCreateApi
           ApiResult<GetCaseCustomFieldsForCreateApiResponse>>,
       CommandStateBuilder<ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
           ApiResult<GetCaseCustomFieldsForCreateApiResponse>>,
-      GetCaseCustomFieldsForCreateApi> $options;
+      GetCaseCustomFieldsForCreateApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
-          ApiResult<GetCaseCustomFieldsForCreateApiResponse>>> $replace;
+          ApiResult<GetCaseCustomFieldsForCreateApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
-          ApiResult<GetCaseCustomFieldsForCreateApiResponse>,
-          GetCaseCustomFieldsForCreateApi,
-          String>> $cancel;
+      Command<ApiCommand<GetCaseCustomFieldsForCreateApiRequest>>> execute$;
   final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
-              ApiResult<GetCaseCustomFieldsForCreateApiResponse>,
-              GetCaseCustomFieldsForCreateApi,
-              Command<ApiCommand<GetCaseCustomFieldsForCreateApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
-          ApiResult<GetCaseCustomFieldsForCreateApiResponse>,
-          GetCaseCustomFieldsForCreateApi,
-          CommandResult<
-              ApiResult<GetCaseCustomFieldsForCreateApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
-          ApiResult<GetCaseCustomFieldsForCreateApiResponse>,
-          GetCaseCustomFieldsForCreateApi,
-          CommandProgress>> $progress;
+          CommandResult<ApiResult<GetCaseCustomFieldsForCreateApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetCaseCustomFieldsForCreateApi._(this.$options)
-      : $replace = $options.action<
+  _$GetCaseCustomFieldsForCreateApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
                     ApiResult<GetCaseCustomFieldsForCreateApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
-                ApiResult<GetCaseCustomFieldsForCreateApiResponse>,
-                GetCaseCustomFieldsForCreateApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
-                    ApiResult<GetCaseCustomFieldsForCreateApiResponse>,
-                    GetCaseCustomFieldsForCreateApi,
-                    Command<
-                        ApiCommand<GetCaseCustomFieldsForCreateApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
-                    ApiResult<GetCaseCustomFieldsForCreateApiResponse>,
-                    GetCaseCustomFieldsForCreateApi,
-                    CommandResult<
-                        ApiResult<GetCaseCustomFieldsForCreateApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
-                ApiResult<GetCaseCustomFieldsForCreateApiResponse>,
-                GetCaseCustomFieldsForCreateApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<ApiCommand<GetCaseCustomFieldsForCreateApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<GetCaseCustomFieldsForCreateApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetCaseCustomFieldsForCreateApi(
@@ -97,34 +60,26 @@ class _$GetCaseCustomFieldsForCreateApi
   @override
   CommandState<ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
           ApiResult<GetCaseCustomFieldsForCreateApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
           ApiResult<GetCaseCustomFieldsForCreateApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
           ApiResult<GetCaseCustomFieldsForCreateApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetCaseCustomFieldsForCreateApiRequest>,
           ApiResult<GetCaseCustomFieldsForCreateApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(
-            ApiCommand, [FullType(GetCaseCustomFieldsForCreateApiRequest)]),
-        FullType(ApiResult, [FullType(GetCaseCustomFieldsForCreateApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

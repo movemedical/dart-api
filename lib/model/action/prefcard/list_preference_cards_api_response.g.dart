@@ -197,18 +197,18 @@ class _$ListPreferenceCardsApiResponseActions
   final StatefulActionsOptions<
       ListPreferenceCardsApiResponse,
       ListPreferenceCardsApiResponseBuilder,
-      ListPreferenceCardsApiResponseActions> $options;
+      ListPreferenceCardsApiResponseActions> options$;
 
-  final ActionDispatcher<ListPreferenceCardsApiResponse> $replace;
+  final ActionDispatcher<ListPreferenceCardsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListPreferenceCardsApiPreferenceCard>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListPreferenceCardsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListPreferenceCardsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListPreferenceCardsApiPreferenceCard>>(
+  _$ListPreferenceCardsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListPreferenceCardsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListPreferenceCardsApiPreferenceCard>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -217,36 +217,31 @@ class _$ListPreferenceCardsApiResponseActions
       _$ListPreferenceCardsApiResponseActions._(options());
 
   @override
-  ListPreferenceCardsApiResponse get $initial =>
+  ListPreferenceCardsApiResponse get initialState$ =>
       ListPreferenceCardsApiResponse();
 
   @override
-  ListPreferenceCardsApiResponseBuilder $newBuilder() =>
+  ListPreferenceCardsApiResponseBuilder newBuilder$() =>
       ListPreferenceCardsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPreferenceCardsApiResponse);
 }

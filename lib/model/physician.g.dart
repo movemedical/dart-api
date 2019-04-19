@@ -240,32 +240,32 @@ typedef StatefulActionsOptions<Physician, PhysicianBuilder,
 
 class _$PhysicianActions extends PhysicianActions {
   final StatefulActionsOptions<Physician, PhysicianBuilder, PhysicianActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<Physician> $replace;
+  final ActionDispatcher<Physician> replace$;
   final FieldDispatcher<String> id;
   final PersonNameActions name;
   final FieldDispatcher<String> npi;
   final FieldDispatcher<String> display;
   final AddressActions address;
 
-  _$PhysicianActions._(this.$options)
-      : $replace = $options.action<Physician>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$PhysicianActions._(this.options$)
+      : replace$ = options$.action<Physician>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        npi = $options.field<String>(
+        npi = options$.field<String>(
             'npi', (a) => a?.npi, (s) => s?.npi, (p, b) => p?.npi = b),
-        display = $options.field<String>('display', (a) => a?.display,
+        display = options$.field<String>('display', (a) => a?.display,
             (s) => s?.display, (p, b) => p?.display = b),
         address = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'address',
                 (a) => a.address,
                 (s) => s?.address,
@@ -277,46 +277,42 @@ class _$PhysicianActions extends PhysicianActions {
       _$PhysicianActions._(options());
 
   @override
-  Physician get $initial => Physician();
+  Physician get initialState$ => Physician();
 
   @override
-  PhysicianBuilder $newBuilder() => PhysicianBuilder();
+  PhysicianBuilder newBuilder$() => PhysicianBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
         this.address,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.npi,
         this.display,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    npi.$reducer(reducer);
-    display.$reducer(reducer);
-    address.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    npi.reducer$(reducer);
+    display.reducer$(reducer);
+    address.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    name.$middleware(middleware);
-    address.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    name.middleware$(middleware);
+    address.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Physician);
 }

@@ -339,9 +339,9 @@ class _$BuildInspectionApiKitDataKitContainerActions
   final StatefulActionsOptions<
       BuildInspectionApiKitDataKitContainer,
       BuildInspectionApiKitDataKitContainerBuilder,
-      BuildInspectionApiKitDataKitContainerActions> $options;
+      BuildInspectionApiKitDataKitContainerActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiKitDataKitContainer> $replace;
+  final ActionDispatcher<BuildInspectionApiKitDataKitContainer> replace$;
   final FieldDispatcher<String> stockId;
   final FieldDispatcher<bool> receiveNow;
   final FieldDispatcher<bool> inspectNow;
@@ -351,32 +351,32 @@ class _$BuildInspectionApiKitDataKitContainerActions
   final FieldDispatcher<BuiltList<BuildInspectionApiComponentItem>>
       openComponents;
 
-  _$BuildInspectionApiKitDataKitContainerActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiKitDataKitContainer>(
-            '\$replace', (a) => a?.$replace),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+  _$BuildInspectionApiKitDataKitContainerActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiKitDataKitContainer>(
+            'replace\$', (a) => a?.replace$),
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        receiveNow = $options.field<bool>('receiveNow', (a) => a?.receiveNow,
+        receiveNow = options$.field<bool>('receiveNow', (a) => a?.receiveNow,
             (s) => s?.receiveNow, (p, b) => p?.receiveNow = b),
-        inspectNow = $options.field<bool>('inspectNow', (a) => a?.inspectNow,
+        inspectNow = options$.field<bool>('inspectNow', (a) => a?.inspectNow,
             (s) => s?.inspectNow, (p, b) => p?.inspectNow = b),
         firstInspectionData = FirstInspectionDataActions(() =>
-            $options.stateful<FirstInspectionData, FirstInspectionDataBuilder,
+            options$.stateful<FirstInspectionData, FirstInspectionDataBuilder,
                     FirstInspectionDataActions>(
                 'firstInspectionData',
                 (a) => a.firstInspectionData,
                 (s) => s?.firstInspectionData,
                 (b) => b?.firstInspectionData,
                 (parent, builder) => parent?.firstInspectionData = builder)),
-        entryIds = $options.field<BuiltList<String>>('entryIds',
+        entryIds = options$.field<BuiltList<String>>('entryIds',
             (a) => a?.entryIds, (s) => s?.entryIds, (p, b) => p?.entryIds = b),
-        expectedStockIds = $options.field<BuiltList<String>>(
+        expectedStockIds = options$.field<BuiltList<String>>(
             'expectedStockIds',
             (a) => a?.expectedStockIds,
             (s) => s?.expectedStockIds,
             (p, b) => p?.expectedStockIds = b),
         openComponents =
-            $options.field<BuiltList<BuildInspectionApiComponentItem>>(
+            options$.field<BuiltList<BuildInspectionApiComponentItem>>(
                 'openComponents',
                 (a) => a?.openComponents,
                 (s) => s?.openComponents,
@@ -388,24 +388,24 @@ class _$BuildInspectionApiKitDataKitContainerActions
       _$BuildInspectionApiKitDataKitContainerActions._(options());
 
   @override
-  BuildInspectionApiKitDataKitContainer get $initial =>
+  BuildInspectionApiKitDataKitContainer get initialState$ =>
       BuildInspectionApiKitDataKitContainer();
 
   @override
-  BuildInspectionApiKitDataKitContainerBuilder $newBuilder() =>
+  BuildInspectionApiKitDataKitContainerBuilder newBuilder$() =>
       BuildInspectionApiKitDataKitContainerBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.firstInspectionData,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockId,
         this.receiveNow,
         this.inspectNow,
@@ -415,25 +415,20 @@ class _$BuildInspectionApiKitDataKitContainerActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockId.$reducer(reducer);
-    receiveNow.$reducer(reducer);
-    inspectNow.$reducer(reducer);
-    firstInspectionData.$reducer(reducer);
-    entryIds.$reducer(reducer);
-    expectedStockIds.$reducer(reducer);
-    openComponents.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockId.reducer$(reducer);
+    receiveNow.reducer$(reducer);
+    inspectNow.reducer$(reducer);
+    firstInspectionData.reducer$(reducer);
+    entryIds.reducer$(reducer);
+    expectedStockIds.reducer$(reducer);
+    openComponents.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    firstInspectionData.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    firstInspectionData.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiKitDataKitContainer);
 }

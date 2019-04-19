@@ -159,15 +159,15 @@ class _$NoteAddedUpdatedPushMessageActions
   final StatefulActionsOptions<
       NoteAddedUpdatedPushMessage,
       NoteAddedUpdatedPushMessageBuilder,
-      NoteAddedUpdatedPushMessageActions> $options;
+      NoteAddedUpdatedPushMessageActions> options$;
 
-  final ActionDispatcher<NoteAddedUpdatedPushMessage> $replace;
+  final ActionDispatcher<NoteAddedUpdatedPushMessage> replace$;
   final FieldDispatcher<String> noteAttrId;
 
-  _$NoteAddedUpdatedPushMessageActions._(this.$options)
-      : $replace = $options.action<NoteAddedUpdatedPushMessage>(
-            '\$replace', (a) => a?.$replace),
-        noteAttrId = $options.field<String>('noteAttrId', (a) => a?.noteAttrId,
+  _$NoteAddedUpdatedPushMessageActions._(this.options$)
+      : replace$ = options$.action<NoteAddedUpdatedPushMessage>(
+            'replace\$', (a) => a?.replace$),
+        noteAttrId = options$.field<String>('noteAttrId', (a) => a?.noteAttrId,
             (s) => s?.noteAttrId, (p, b) => p?.noteAttrId = b),
         super._();
 
@@ -176,33 +176,29 @@ class _$NoteAddedUpdatedPushMessageActions
       _$NoteAddedUpdatedPushMessageActions._(options());
 
   @override
-  NoteAddedUpdatedPushMessage get $initial => NoteAddedUpdatedPushMessage();
+  NoteAddedUpdatedPushMessage get initialState$ =>
+      NoteAddedUpdatedPushMessage();
 
   @override
-  NoteAddedUpdatedPushMessageBuilder $newBuilder() =>
+  NoteAddedUpdatedPushMessageBuilder newBuilder$() =>
       NoteAddedUpdatedPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.noteAttrId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    noteAttrId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    noteAttrId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(NoteAddedUpdatedPushMessage);
 }

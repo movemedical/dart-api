@@ -22,67 +22,32 @@ class _$SearchContactsApi extends SearchContactsApi {
           ApiResult<SearchContactsApiResponse>>,
       CommandStateBuilder<ApiCommand<SearchContactsApiRequest>,
           ApiResult<SearchContactsApiResponse>>,
-      SearchContactsApi> $options;
+      SearchContactsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SearchContactsApiRequest>,
-          ApiResult<SearchContactsApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchContactsApiRequest>,
-          ApiResult<SearchContactsApiResponse>,
-          SearchContactsApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchContactsApiRequest>,
-          ApiResult<SearchContactsApiResponse>,
-          SearchContactsApi,
-          Command<ApiCommand<SearchContactsApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchContactsApiRequest>,
-          ApiResult<SearchContactsApiResponse>,
-          SearchContactsApi,
-          CommandResult<ApiResult<SearchContactsApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchContactsApiRequest>,
-          ApiResult<SearchContactsApiResponse>,
-          SearchContactsApi,
-          CommandProgress>> $progress;
+          ApiResult<SearchContactsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<SearchContactsApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<SearchContactsApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$SearchContactsApi._(this.$options)
-      : $replace = $options.action<
+  _$SearchContactsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<SearchContactsApiRequest>,
                     ApiResult<SearchContactsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<SearchContactsApiRequest>,
-                ApiResult<SearchContactsApiResponse>,
-                SearchContactsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<SearchContactsApiRequest>,
-                    ApiResult<SearchContactsApiResponse>,
-                    SearchContactsApi,
-                    Command<ApiCommand<SearchContactsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<SearchContactsApiRequest>,
-                    ApiResult<SearchContactsApiResponse>,
-                    SearchContactsApi,
-                    CommandResult<ApiResult<SearchContactsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<SearchContactsApiRequest>,
-                ApiResult<SearchContactsApiResponse>,
-                SearchContactsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<SearchContactsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<SearchContactsApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$SearchContactsApi(SearchContactsApiOptions options) =>
@@ -91,31 +56,24 @@ class _$SearchContactsApi extends SearchContactsApi {
   @override
   CommandState<ApiCommand<SearchContactsApiRequest>,
           ApiResult<SearchContactsApiResponse>>
-      get $initial => CommandState<ApiCommand<SearchContactsApiRequest>,
+      get initialState$ => CommandState<ApiCommand<SearchContactsApiRequest>,
           ApiResult<SearchContactsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<SearchContactsApiRequest>,
           ApiResult<SearchContactsApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<SearchContactsApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<SearchContactsApiRequest>,
           ApiResult<SearchContactsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(SearchContactsApiRequest)]),
-        FullType(ApiResult, [FullType(SearchContactsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

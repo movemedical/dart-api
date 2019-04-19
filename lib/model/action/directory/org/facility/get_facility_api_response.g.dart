@@ -167,15 +167,15 @@ typedef StatefulActionsOptions<
 
 class _$GetFacilityApiResponseActions extends GetFacilityApiResponseActions {
   final StatefulActionsOptions<GetFacilityApiResponse,
-      GetFacilityApiResponseBuilder, GetFacilityApiResponseActions> $options;
+      GetFacilityApiResponseBuilder, GetFacilityApiResponseActions> options$;
 
-  final ActionDispatcher<GetFacilityApiResponse> $replace;
+  final ActionDispatcher<GetFacilityApiResponse> replace$;
   final GetFacilityApiFacilityDetailActions detail;
 
-  _$GetFacilityApiResponseActions._(this.$options)
-      : $replace = $options.action<GetFacilityApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        detail = GetFacilityApiFacilityDetailActions(() => $options.stateful<
+  _$GetFacilityApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetFacilityApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        detail = GetFacilityApiFacilityDetailActions(() => options$.stateful<
                 GetFacilityApiFacilityDetail,
                 GetFacilityApiFacilityDetailBuilder,
                 GetFacilityApiFacilityDetailActions>(
@@ -191,38 +191,34 @@ class _$GetFacilityApiResponseActions extends GetFacilityApiResponseActions {
       _$GetFacilityApiResponseActions._(options());
 
   @override
-  GetFacilityApiResponse get $initial => GetFacilityApiResponse();
+  GetFacilityApiResponse get initialState$ => GetFacilityApiResponse();
 
   @override
-  GetFacilityApiResponseBuilder $newBuilder() =>
+  GetFacilityApiResponseBuilder newBuilder$() =>
       GetFacilityApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.detail,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    detail.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    detail.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    detail.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    detail.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetFacilityApiResponse);
 }

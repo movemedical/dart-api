@@ -269,9 +269,9 @@ typedef StatefulActionsOptions<
 
 class _$GetItemPricingApiItemActions extends GetItemPricingApiItemActions {
   final StatefulActionsOptions<GetItemPricingApiItem,
-      GetItemPricingApiItemBuilder, GetItemPricingApiItemActions> $options;
+      GetItemPricingApiItemBuilder, GetItemPricingApiItemActions> options$;
 
-  final ActionDispatcher<GetItemPricingApiItem> $replace;
+  final ActionDispatcher<GetItemPricingApiItem> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<int> quantity;
@@ -279,26 +279,26 @@ class _$GetItemPricingApiItemActions extends GetItemPricingApiItemActions {
   final FieldDispatcher<String> billingCodeId;
   final FieldDispatcher<bool> construct;
 
-  _$GetItemPricingApiItemActions._(this.$options)
-      : $replace = $options.action<GetItemPricingApiItem>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetItemPricingApiItemActions._(this.options$)
+      : replace$ = options$.action<GetItemPricingApiItem>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        caseUsageDisposition = $options.field<CaseUsageDisposition>(
+        caseUsageDisposition = options$.field<CaseUsageDisposition>(
             'caseUsageDisposition',
             (a) => a?.caseUsageDisposition,
             (s) => s?.caseUsageDisposition,
             (p, b) => p?.caseUsageDisposition = b),
-        billingCodeId = $options.field<String>(
+        billingCodeId = options$.field<String>(
             'billingCodeId',
             (a) => a?.billingCodeId,
             (s) => s?.billingCodeId,
             (p, b) => p?.billingCodeId = b),
-        construct = $options.field<bool>('construct', (a) => a?.construct,
+        construct = options$.field<bool>('construct', (a) => a?.construct,
             (s) => s?.construct, (p, b) => p?.construct = b),
         super._();
 
@@ -307,16 +307,16 @@ class _$GetItemPricingApiItemActions extends GetItemPricingApiItemActions {
       _$GetItemPricingApiItemActions._(options());
 
   @override
-  GetItemPricingApiItem get $initial => GetItemPricingApiItem();
+  GetItemPricingApiItem get initialState$ => GetItemPricingApiItem();
 
   @override
-  GetItemPricingApiItemBuilder $newBuilder() => GetItemPricingApiItemBuilder();
+  GetItemPricingApiItemBuilder newBuilder$() => GetItemPricingApiItemBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.itemId,
         this.quantity,
@@ -326,22 +326,18 @@ class _$GetItemPricingApiItemActions extends GetItemPricingApiItemActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    itemId.$reducer(reducer);
-    quantity.$reducer(reducer);
-    caseUsageDisposition.$reducer(reducer);
-    billingCodeId.$reducer(reducer);
-    construct.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    itemId.reducer$(reducer);
+    quantity.reducer$(reducer);
+    caseUsageDisposition.reducer$(reducer);
+    billingCodeId.reducer$(reducer);
+    construct.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetItemPricingApiItem);
 }

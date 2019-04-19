@@ -190,23 +190,23 @@ class _$SourceStockApiSourceErrorActions
   final StatefulActionsOptions<
       SourceStockApiSourceError,
       SourceStockApiSourceErrorBuilder,
-      SourceStockApiSourceErrorActions> $options;
+      SourceStockApiSourceErrorActions> options$;
 
-  final ActionDispatcher<SourceStockApiSourceError> $replace;
+  final ActionDispatcher<SourceStockApiSourceError> replace$;
   final StockDataActions stockData;
   final FieldDispatcher<String> errorMsg;
 
-  _$SourceStockApiSourceErrorActions._(this.$options)
-      : $replace = $options.action<SourceStockApiSourceError>(
-            '\$replace', (a) => a?.$replace),
+  _$SourceStockApiSourceErrorActions._(this.options$)
+      : replace$ = options$.action<SourceStockApiSourceError>(
+            'replace\$', (a) => a?.replace$),
         stockData = StockDataActions(() =>
-            $options.stateful<StockData, StockDataBuilder, StockDataActions>(
+            options$.stateful<StockData, StockDataBuilder, StockDataActions>(
                 'stockData',
                 (a) => a.stockData,
                 (s) => s?.stockData,
                 (b) => b?.stockData,
                 (parent, builder) => parent?.stockData = builder)),
-        errorMsg = $options.field<String>('errorMsg', (a) => a?.errorMsg,
+        errorMsg = options$.field<String>('errorMsg', (a) => a?.errorMsg,
             (s) => s?.errorMsg, (p, b) => p?.errorMsg = b),
         super._();
 
@@ -215,40 +215,36 @@ class _$SourceStockApiSourceErrorActions
       _$SourceStockApiSourceErrorActions._(options());
 
   @override
-  SourceStockApiSourceError get $initial => SourceStockApiSourceError();
+  SourceStockApiSourceError get initialState$ => SourceStockApiSourceError();
 
   @override
-  SourceStockApiSourceErrorBuilder $newBuilder() =>
+  SourceStockApiSourceErrorBuilder newBuilder$() =>
       SourceStockApiSourceErrorBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockData,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.errorMsg,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockData.$reducer(reducer);
-    errorMsg.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockData.reducer$(reducer);
+    errorMsg.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    stockData.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    stockData.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SourceStockApiSourceError);
 }

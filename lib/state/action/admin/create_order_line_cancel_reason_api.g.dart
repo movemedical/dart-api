@@ -22,70 +22,33 @@ class _$CreateOrderLineCancelReasonApi extends CreateOrderLineCancelReasonApi {
           ApiResult<CreateOrderLineCancelReasonApiResponse>>,
       CommandStateBuilder<ApiCommand<CreateOrderLineCancelReasonApiRequest>,
           ApiResult<CreateOrderLineCancelReasonApiResponse>>,
-      CreateOrderLineCancelReasonApi> $options;
+      CreateOrderLineCancelReasonApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateOrderLineCancelReasonApiRequest>,
-          ApiResult<CreateOrderLineCancelReasonApiResponse>>> $replace;
+          ApiResult<CreateOrderLineCancelReasonApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateOrderLineCancelReasonApiRequest>,
-          ApiResult<CreateOrderLineCancelReasonApiResponse>,
-          CreateOrderLineCancelReasonApi,
-          String>> $cancel;
+      Command<ApiCommand<CreateOrderLineCancelReasonApiRequest>>> execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateOrderLineCancelReasonApiRequest>,
-          ApiResult<CreateOrderLineCancelReasonApiResponse>,
-          CreateOrderLineCancelReasonApi,
-          Command<ApiCommand<CreateOrderLineCancelReasonApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<CreateOrderLineCancelReasonApiRequest>,
-              ApiResult<CreateOrderLineCancelReasonApiResponse>,
-              CreateOrderLineCancelReasonApi,
-              CommandResult<ApiResult<CreateOrderLineCancelReasonApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateOrderLineCancelReasonApiRequest>,
-          ApiResult<CreateOrderLineCancelReasonApiResponse>,
-          CreateOrderLineCancelReasonApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<CreateOrderLineCancelReasonApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CreateOrderLineCancelReasonApi._(this.$options)
-      : $replace = $options.action<
+  _$CreateOrderLineCancelReasonApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<CreateOrderLineCancelReasonApiRequest>,
                     ApiResult<CreateOrderLineCancelReasonApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CreateOrderLineCancelReasonApiRequest>,
-                ApiResult<CreateOrderLineCancelReasonApiResponse>,
-                CreateOrderLineCancelReasonApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateOrderLineCancelReasonApiRequest>,
-                    ApiResult<CreateOrderLineCancelReasonApiResponse>,
-                    CreateOrderLineCancelReasonApi,
-                    Command<
-                        ApiCommand<CreateOrderLineCancelReasonApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateOrderLineCancelReasonApiRequest>,
-                    ApiResult<CreateOrderLineCancelReasonApiResponse>,
-                    CreateOrderLineCancelReasonApi,
-                    CommandResult<
-                        ApiResult<CreateOrderLineCancelReasonApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CreateOrderLineCancelReasonApiRequest>,
-                ApiResult<CreateOrderLineCancelReasonApiResponse>,
-                CreateOrderLineCancelReasonApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<CreateOrderLineCancelReasonApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<CreateOrderLineCancelReasonApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CreateOrderLineCancelReasonApi(
@@ -95,33 +58,26 @@ class _$CreateOrderLineCancelReasonApi extends CreateOrderLineCancelReasonApi {
   @override
   CommandState<ApiCommand<CreateOrderLineCancelReasonApiRequest>,
           ApiResult<CreateOrderLineCancelReasonApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<CreateOrderLineCancelReasonApiRequest>,
           ApiResult<CreateOrderLineCancelReasonApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateOrderLineCancelReasonApiRequest>,
           ApiResult<CreateOrderLineCancelReasonApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<CreateOrderLineCancelReasonApiRequest>,
           ApiResult<CreateOrderLineCancelReasonApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CreateOrderLineCancelReasonApiRequest)]),
-        FullType(ApiResult, [FullType(CreateOrderLineCancelReasonApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

@@ -175,15 +175,15 @@ class _$GetOrderHistoryApiResponseActions
   final StatefulActionsOptions<
       GetOrderHistoryApiResponse,
       GetOrderHistoryApiResponseBuilder,
-      GetOrderHistoryApiResponseActions> $options;
+      GetOrderHistoryApiResponseActions> options$;
 
-  final ActionDispatcher<GetOrderHistoryApiResponse> $replace;
+  final ActionDispatcher<GetOrderHistoryApiResponse> replace$;
   final FieldDispatcher<BuiltList<HistoryEventDisplay>> historyEvents;
 
-  _$GetOrderHistoryApiResponseActions._(this.$options)
-      : $replace = $options.action<GetOrderHistoryApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        historyEvents = $options.field<BuiltList<HistoryEventDisplay>>(
+  _$GetOrderHistoryApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetOrderHistoryApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        historyEvents = options$.field<BuiltList<HistoryEventDisplay>>(
             'historyEvents',
             (a) => a?.historyEvents,
             (s) => s?.historyEvents,
@@ -195,32 +195,28 @@ class _$GetOrderHistoryApiResponseActions
       _$GetOrderHistoryApiResponseActions._(options());
 
   @override
-  GetOrderHistoryApiResponse get $initial => GetOrderHistoryApiResponse();
+  GetOrderHistoryApiResponse get initialState$ => GetOrderHistoryApiResponse();
 
   @override
-  GetOrderHistoryApiResponseBuilder $newBuilder() =>
+  GetOrderHistoryApiResponseBuilder newBuilder$() =>
       GetOrderHistoryApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.historyEvents,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    historyEvents.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    historyEvents.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetOrderHistoryApiResponse);
 }

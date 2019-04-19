@@ -25,76 +25,37 @@ class _$ListSalesOrgUnitItemCategoryOptionsApi
       CommandStateBuilder<
           ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
           ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>>,
-      ListSalesOrgUnitItemCategoryOptionsApi> $options;
+      ListSalesOrgUnitItemCategoryOptionsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-          ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>>> $replace;
+          ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-          ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-          ListSalesOrgUnitItemCategoryOptionsApi,
-          String>> $cancel;
+          Command<ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>>>
+      execute$;
   final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-              ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-              ListSalesOrgUnitItemCategoryOptionsApi,
-              Command<
-                  ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-              ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-              ListSalesOrgUnitItemCategoryOptionsApi,
-              CommandResult<
-                  ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-          ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-          ListSalesOrgUnitItemCategoryOptionsApi,
-          CommandProgress>> $progress;
+      CommandResult<
+          ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListSalesOrgUnitItemCategoryOptionsApi._(this.$options)
-      : $replace = $options.action<
+  _$ListSalesOrgUnitItemCategoryOptionsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<
                     ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
                     ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-                ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-                ListSalesOrgUnitItemCategoryOptionsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-                    ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-                    ListSalesOrgUnitItemCategoryOptionsApi,
-                    Command<
-                        ApiCommand<
-                            ListSalesOrgUnitItemCategoryOptionsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-                    ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-                    ListSalesOrgUnitItemCategoryOptionsApi,
-                    CommandResult<
-                        ApiResult<
-                            ListSalesOrgUnitItemCategoryOptionsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-                ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-                ListSalesOrgUnitItemCategoryOptionsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<
+                    ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListSalesOrgUnitItemCategoryOptionsApi(
@@ -104,35 +65,26 @@ class _$ListSalesOrgUnitItemCategoryOptionsApi
   @override
   CommandState<ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
           ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
           ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
           ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
           ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand,
-            [FullType(ListSalesOrgUnitItemCategoryOptionsApiRequest)]),
-        FullType(ApiResult,
-            [FullType(ListSalesOrgUnitItemCategoryOptionsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

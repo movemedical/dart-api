@@ -22,64 +22,30 @@ class _$SetupSystemApi extends SetupSystemApi {
           ApiResult<SetupSystemApiResponse>>,
       CommandStateBuilder<ApiCommand<SetupSystemApiRequest>,
           ApiResult<SetupSystemApiResponse>>,
-      SetupSystemApi> $options;
+      SetupSystemApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SetupSystemApiRequest>,
-          ApiResult<SetupSystemApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SetupSystemApiRequest>,
-          ApiResult<SetupSystemApiResponse>, SetupSystemApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SetupSystemApiRequest>,
-          ApiResult<SetupSystemApiResponse>,
-          SetupSystemApi,
-          Command<ApiCommand<SetupSystemApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SetupSystemApiRequest>,
-          ApiResult<SetupSystemApiResponse>,
-          SetupSystemApi,
-          CommandResult<ApiResult<SetupSystemApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SetupSystemApiRequest>,
-          ApiResult<SetupSystemApiResponse>,
-          SetupSystemApi,
-          CommandProgress>> $progress;
+          ApiResult<SetupSystemApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<SetupSystemApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<SetupSystemApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$SetupSystemApi._(this.$options)
-      : $replace = $options.action<
+  _$SetupSystemApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<SetupSystemApiRequest>,
                     ApiResult<SetupSystemApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<SetupSystemApiRequest>,
-                ApiResult<SetupSystemApiResponse>,
-                SetupSystemApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<SetupSystemApiRequest>,
-                    ApiResult<SetupSystemApiResponse>,
-                    SetupSystemApi,
-                    Command<ApiCommand<SetupSystemApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<SetupSystemApiRequest>,
-                    ApiResult<SetupSystemApiResponse>,
-                    SetupSystemApi,
-                    CommandResult<ApiResult<SetupSystemApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<SetupSystemApiRequest>,
-                ApiResult<SetupSystemApiResponse>,
-                SetupSystemApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<SetupSystemApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<SetupSystemApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$SetupSystemApi(SetupSystemApiOptions options) =>
@@ -88,31 +54,24 @@ class _$SetupSystemApi extends SetupSystemApi {
   @override
   CommandState<ApiCommand<SetupSystemApiRequest>,
           ApiResult<SetupSystemApiResponse>>
-      get $initial => CommandState<ApiCommand<SetupSystemApiRequest>,
+      get initialState$ => CommandState<ApiCommand<SetupSystemApiRequest>,
           ApiResult<SetupSystemApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<SetupSystemApiRequest>,
           ApiResult<SetupSystemApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<SetupSystemApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<SetupSystemApiRequest>,
           ApiResult<SetupSystemApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(SetupSystemApiRequest)]),
-        FullType(ApiResult, [FullType(SetupSystemApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

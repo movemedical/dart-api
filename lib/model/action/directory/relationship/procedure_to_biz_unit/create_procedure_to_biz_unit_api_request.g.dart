@@ -208,21 +208,21 @@ class _$CreateProcedureToBizUnitApiRequestActions
   final StatefulActionsOptions<
       CreateProcedureToBizUnitApiRequest,
       CreateProcedureToBizUnitApiRequestBuilder,
-      CreateProcedureToBizUnitApiRequestActions> $options;
+      CreateProcedureToBizUnitApiRequestActions> options$;
 
-  final ActionDispatcher<CreateProcedureToBizUnitApiRequest> $replace;
+  final ActionDispatcher<CreateProcedureToBizUnitApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> procedureIds;
   final FieldDispatcher<BuiltList<String>> bizUnitIds;
 
-  _$CreateProcedureToBizUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateProcedureToBizUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        procedureIds = $options.field<BuiltList<String>>(
+  _$CreateProcedureToBizUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateProcedureToBizUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        procedureIds = options$.field<BuiltList<String>>(
             'procedureIds',
             (a) => a?.procedureIds,
             (s) => s?.procedureIds,
             (p, b) => p?.procedureIds = b),
-        bizUnitIds = $options.field<BuiltList<String>>(
+        bizUnitIds = options$.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
@@ -234,36 +234,31 @@ class _$CreateProcedureToBizUnitApiRequestActions
       _$CreateProcedureToBizUnitApiRequestActions._(options());
 
   @override
-  CreateProcedureToBizUnitApiRequest get $initial =>
+  CreateProcedureToBizUnitApiRequest get initialState$ =>
       CreateProcedureToBizUnitApiRequest();
 
   @override
-  CreateProcedureToBizUnitApiRequestBuilder $newBuilder() =>
+  CreateProcedureToBizUnitApiRequestBuilder newBuilder$() =>
       CreateProcedureToBizUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.procedureIds,
         this.bizUnitIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    procedureIds.$reducer(reducer);
-    bizUnitIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    procedureIds.reducer$(reducer);
+    bizUnitIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateProcedureToBizUnitApiRequest);
 }

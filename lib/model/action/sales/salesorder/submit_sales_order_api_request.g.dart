@@ -322,9 +322,9 @@ class _$SubmitSalesOrderApiRequestActions
   final StatefulActionsOptions<
       SubmitSalesOrderApiRequest,
       SubmitSalesOrderApiRequestBuilder,
-      SubmitSalesOrderApiRequestActions> $options;
+      SubmitSalesOrderApiRequestActions> options$;
 
-  final ActionDispatcher<SubmitSalesOrderApiRequest> $replace;
+  final ActionDispatcher<SubmitSalesOrderApiRequest> replace$;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<bool> validateOnly;
   final FieldDispatcher<String> oracleUserId;
@@ -334,36 +334,36 @@ class _$SubmitSalesOrderApiRequestActions
   final FieldDispatcher<int> cc_expiry_month;
   final FieldDispatcher<int> cc_expiry_year;
 
-  _$SubmitSalesOrderApiRequestActions._(this.$options)
-      : $replace = $options.action<SubmitSalesOrderApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$SubmitSalesOrderApiRequestActions._(this.options$)
+      : replace$ = options$.action<SubmitSalesOrderApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        validateOnly = $options.field<bool>(
+        validateOnly = options$.field<bool>(
             'validateOnly',
             (a) => a?.validateOnly,
             (s) => s?.validateOnly,
             (p, b) => p?.validateOnly = b),
-        oracleUserId = $options.field<String>(
+        oracleUserId = options$.field<String>(
             'oracleUserId',
             (a) => a?.oracleUserId,
             (s) => s?.oracleUserId,
             (p, b) => p?.oracleUserId = b),
-        cc_code = $options.field<String>('cc_code', (a) => a?.cc_code,
+        cc_code = options$.field<String>('cc_code', (a) => a?.cc_code,
             (s) => s?.cc_code, (p, b) => p?.cc_code = b),
-        cc_holderName = $options.field<String>(
+        cc_holderName = options$.field<String>(
             'cc_holderName',
             (a) => a?.cc_holderName,
             (s) => s?.cc_holderName,
             (p, b) => p?.cc_holderName = b),
-        cc_number = $options.field<String>('cc_number', (a) => a?.cc_number,
+        cc_number = options$.field<String>('cc_number', (a) => a?.cc_number,
             (s) => s?.cc_number, (p, b) => p?.cc_number = b),
-        cc_expiry_month = $options.field<int>(
+        cc_expiry_month = options$.field<int>(
             'cc_expiry_month',
             (a) => a?.cc_expiry_month,
             (s) => s?.cc_expiry_month,
             (p, b) => p?.cc_expiry_month = b),
-        cc_expiry_year = $options.field<int>(
+        cc_expiry_year = options$.field<int>(
             'cc_expiry_year',
             (a) => a?.cc_expiry_year,
             (s) => s?.cc_expiry_year,
@@ -375,17 +375,17 @@ class _$SubmitSalesOrderApiRequestActions
       _$SubmitSalesOrderApiRequestActions._(options());
 
   @override
-  SubmitSalesOrderApiRequest get $initial => SubmitSalesOrderApiRequest();
+  SubmitSalesOrderApiRequest get initialState$ => SubmitSalesOrderApiRequest();
 
   @override
-  SubmitSalesOrderApiRequestBuilder $newBuilder() =>
+  SubmitSalesOrderApiRequestBuilder newBuilder$() =>
       SubmitSalesOrderApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
         this.validateOnly,
         this.oracleUserId,
@@ -397,24 +397,20 @@ class _$SubmitSalesOrderApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
-    validateOnly.$reducer(reducer);
-    oracleUserId.$reducer(reducer);
-    cc_code.$reducer(reducer);
-    cc_holderName.$reducer(reducer);
-    cc_number.$reducer(reducer);
-    cc_expiry_month.$reducer(reducer);
-    cc_expiry_year.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
+    validateOnly.reducer$(reducer);
+    oracleUserId.reducer$(reducer);
+    cc_code.reducer$(reducer);
+    cc_holderName.reducer$(reducer);
+    cc_number.reducer$(reducer);
+    cc_expiry_month.reducer$(reducer);
+    cc_expiry_year.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SubmitSalesOrderApiRequest);
 }

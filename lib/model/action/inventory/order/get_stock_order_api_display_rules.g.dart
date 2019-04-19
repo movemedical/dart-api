@@ -497,9 +497,9 @@ class _$GetStockOrderApiDisplayRulesActions
   final StatefulActionsOptions<
       GetStockOrderApiDisplayRules,
       GetStockOrderApiDisplayRulesBuilder,
-      GetStockOrderApiDisplayRulesActions> $options;
+      GetStockOrderApiDisplayRulesActions> options$;
 
-  final ActionDispatcher<GetStockOrderApiDisplayRules> $replace;
+  final ActionDispatcher<GetStockOrderApiDisplayRules> replace$;
   final FieldDispatcher<bool> editLineQuantity;
   final FieldDispatcher<bool> requestApproval;
   final FieldDispatcher<bool> approve;
@@ -516,62 +516,62 @@ class _$GetStockOrderApiDisplayRulesActions
   final FieldDispatcher<bool> showShipments;
   final FieldDispatcher<bool> editDeliverTo;
 
-  _$GetStockOrderApiDisplayRulesActions._(this.$options)
-      : $replace = $options.action<GetStockOrderApiDisplayRules>(
-            '\$replace', (a) => a?.$replace),
-        editLineQuantity = $options.field<bool>(
+  _$GetStockOrderApiDisplayRulesActions._(this.options$)
+      : replace$ = options$.action<GetStockOrderApiDisplayRules>(
+            'replace\$', (a) => a?.replace$),
+        editLineQuantity = options$.field<bool>(
             'editLineQuantity',
             (a) => a?.editLineQuantity,
             (s) => s?.editLineQuantity,
             (p, b) => p?.editLineQuantity = b),
-        requestApproval = $options.field<bool>(
+        requestApproval = options$.field<bool>(
             'requestApproval',
             (a) => a?.requestApproval,
             (s) => s?.requestApproval,
             (p, b) => p?.requestApproval = b),
-        approve = $options.field<bool>('approve', (a) => a?.approve,
+        approve = options$.field<bool>('approve', (a) => a?.approve,
             (s) => s?.approve, (p, b) => p?.approve = b),
-        sourcingMatrix = $options.field<bool>(
+        sourcingMatrix = options$.field<bool>(
             'sourcingMatrix',
             (a) => a?.sourcingMatrix,
             (s) => s?.sourcingMatrix,
             (p, b) => p?.sourcingMatrix = b),
-        editDetails = $options.field<bool>('editDetails', (a) => a?.editDetails,
+        editDetails = options$.field<bool>('editDetails', (a) => a?.editDetails,
             (s) => s?.editDetails, (p, b) => p?.editDetails = b),
-        sendToErp = $options.field<bool>('sendToErp', (a) => a?.sendToErp,
+        sendToErp = options$.field<bool>('sendToErp', (a) => a?.sendToErp,
             (s) => s?.sendToErp, (p, b) => p?.sendToErp = b),
-        skipErp = $options.field<bool>('skipErp', (a) => a?.skipErp,
+        skipErp = options$.field<bool>('skipErp', (a) => a?.skipErp,
             (s) => s?.skipErp, (p, b) => p?.skipErp = b),
-        cancel = $options.field<bool>('cancel', (a) => a?.cancel,
+        cancel = options$.field<bool>('cancel', (a) => a?.cancel,
             (s) => s?.cancel, (p, b) => p?.cancel = b),
-        toInventoryType = $options.field<bool>(
+        toInventoryType = options$.field<bool>(
             'toInventoryType',
             (a) => a?.toInventoryType,
             (s) => s?.toInventoryType,
             (p, b) => p?.toInventoryType = b),
-        externalToLocation = $options.field<bool>(
+        externalToLocation = options$.field<bool>(
             'externalToLocation',
             (a) => a?.externalToLocation,
             (s) => s?.externalToLocation,
             (p, b) => p?.externalToLocation = b),
-        createOrderFromOpenLines = $options.field<bool>(
+        createOrderFromOpenLines = options$.field<bool>(
             'createOrderFromOpenLines',
             (a) => a?.createOrderFromOpenLines,
             (s) => s?.createOrderFromOpenLines,
             (p, b) => p?.createOrderFromOpenLines = b),
-        restocksAvailable = $options.field<bool>(
+        restocksAvailable = options$.field<bool>(
             'restocksAvailable',
             (a) => a?.restocksAvailable,
             (s) => s?.restocksAvailable,
             (p, b) => p?.restocksAvailable = b),
-        updatePo = $options.field<bool>('updatePo', (a) => a?.updatePo,
+        updatePo = options$.field<bool>('updatePo', (a) => a?.updatePo,
             (s) => s?.updatePo, (p, b) => p?.updatePo = b),
-        showShipments = $options.field<bool>(
+        showShipments = options$.field<bool>(
             'showShipments',
             (a) => a?.showShipments,
             (s) => s?.showShipments,
             (p, b) => p?.showShipments = b),
-        editDeliverTo = $options.field<bool>(
+        editDeliverTo = options$.field<bool>(
             'editDeliverTo',
             (a) => a?.editDeliverTo,
             (s) => s?.editDeliverTo,
@@ -583,17 +583,18 @@ class _$GetStockOrderApiDisplayRulesActions
       _$GetStockOrderApiDisplayRulesActions._(options());
 
   @override
-  GetStockOrderApiDisplayRules get $initial => GetStockOrderApiDisplayRules();
+  GetStockOrderApiDisplayRules get initialState$ =>
+      GetStockOrderApiDisplayRules();
 
   @override
-  GetStockOrderApiDisplayRulesBuilder $newBuilder() =>
+  GetStockOrderApiDisplayRulesBuilder newBuilder$() =>
       GetStockOrderApiDisplayRulesBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.editLineQuantity,
         this.requestApproval,
         this.approve,
@@ -612,32 +613,27 @@ class _$GetStockOrderApiDisplayRulesActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    editLineQuantity.$reducer(reducer);
-    requestApproval.$reducer(reducer);
-    approve.$reducer(reducer);
-    sourcingMatrix.$reducer(reducer);
-    editDetails.$reducer(reducer);
-    sendToErp.$reducer(reducer);
-    skipErp.$reducer(reducer);
-    cancel.$reducer(reducer);
-    toInventoryType.$reducer(reducer);
-    externalToLocation.$reducer(reducer);
-    createOrderFromOpenLines.$reducer(reducer);
-    restocksAvailable.$reducer(reducer);
-    updatePo.$reducer(reducer);
-    showShipments.$reducer(reducer);
-    editDeliverTo.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    editLineQuantity.reducer$(reducer);
+    requestApproval.reducer$(reducer);
+    approve.reducer$(reducer);
+    sourcingMatrix.reducer$(reducer);
+    editDetails.reducer$(reducer);
+    sendToErp.reducer$(reducer);
+    skipErp.reducer$(reducer);
+    cancel.reducer$(reducer);
+    toInventoryType.reducer$(reducer);
+    externalToLocation.reducer$(reducer);
+    createOrderFromOpenLines.reducer$(reducer);
+    restocksAvailable.reducer$(reducer);
+    updatePo.reducer$(reducer);
+    showShipments.reducer$(reducer);
+    editDeliverTo.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetStockOrderApiDisplayRules);
 }

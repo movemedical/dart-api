@@ -23,72 +23,35 @@ class _$ListStockContainersForLocationApi
           ApiResult<ListStockContainersForLocationApiResponse>>,
       CommandStateBuilder<ApiCommand<ListStockContainersForLocationApiRequest>,
           ApiResult<ListStockContainersForLocationApiResponse>>,
-      ListStockContainersForLocationApi> $options;
+      ListStockContainersForLocationApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListStockContainersForLocationApiRequest>,
-          ApiResult<ListStockContainersForLocationApiResponse>>> $replace;
+          ApiResult<ListStockContainersForLocationApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockContainersForLocationApiRequest>,
-          ApiResult<ListStockContainersForLocationApiResponse>,
-          ListStockContainersForLocationApi,
-          String>> $cancel;
+      Command<ApiCommand<ListStockContainersForLocationApiRequest>>> execute$;
   final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListStockContainersForLocationApiRequest>,
-              ApiResult<ListStockContainersForLocationApiResponse>,
-              ListStockContainersForLocationApi,
-              Command<ApiCommand<ListStockContainersForLocationApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockContainersForLocationApiRequest>,
-          ApiResult<ListStockContainersForLocationApiResponse>,
-          ListStockContainersForLocationApi,
-          CommandResult<
-              ApiResult<ListStockContainersForLocationApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockContainersForLocationApiRequest>,
-          ApiResult<ListStockContainersForLocationApiResponse>,
-          ListStockContainersForLocationApi,
-          CommandProgress>> $progress;
+          CommandResult<ApiResult<ListStockContainersForLocationApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListStockContainersForLocationApi._(this.$options)
-      : $replace = $options.action<
+  _$ListStockContainersForLocationApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<
                     ApiCommand<ListStockContainersForLocationApiRequest>,
                     ApiResult<ListStockContainersForLocationApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockContainersForLocationApiRequest>,
-                ApiResult<ListStockContainersForLocationApiResponse>,
-                ListStockContainersForLocationApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListStockContainersForLocationApiRequest>,
-                    ApiResult<ListStockContainersForLocationApiResponse>,
-                    ListStockContainersForLocationApi,
-                    Command<
-                        ApiCommand<ListStockContainersForLocationApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListStockContainersForLocationApiRequest>,
-                    ApiResult<ListStockContainersForLocationApiResponse>,
-                    ListStockContainersForLocationApi,
-                    CommandResult<
-                        ApiResult<ListStockContainersForLocationApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockContainersForLocationApiRequest>,
-                ApiResult<ListStockContainersForLocationApiResponse>,
-                ListStockContainersForLocationApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<ApiCommand<ListStockContainersForLocationApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<ListStockContainersForLocationApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListStockContainersForLocationApi(
@@ -98,35 +61,26 @@ class _$ListStockContainersForLocationApi
   @override
   CommandState<ApiCommand<ListStockContainersForLocationApiRequest>,
           ApiResult<ListStockContainersForLocationApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListStockContainersForLocationApiRequest>,
           ApiResult<ListStockContainersForLocationApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListStockContainersForLocationApiRequest>,
           ApiResult<ListStockContainersForLocationApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListStockContainersForLocationApiRequest>,
           ApiResult<ListStockContainersForLocationApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(
-            ApiCommand, [FullType(ListStockContainersForLocationApiRequest)]),
-        FullType(
-            ApiResult, [FullType(ListStockContainersForLocationApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

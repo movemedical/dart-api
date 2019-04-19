@@ -306,9 +306,9 @@ typedef StatefulActionsOptions<OrgUnitLink, OrgUnitLinkBuilder,
 
 class _$OrgUnitLinkActions extends OrgUnitLinkActions {
   final StatefulActionsOptions<OrgUnitLink, OrgUnitLinkBuilder,
-      OrgUnitLinkActions> $options;
+      OrgUnitLinkActions> options$;
 
-  final ActionDispatcher<OrgUnitLink> $replace;
+  final ActionDispatcher<OrgUnitLink> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<String> orgUnitName;
@@ -318,39 +318,39 @@ class _$OrgUnitLinkActions extends OrgUnitLinkActions {
   final FieldDispatcher<int> numberOfPermissionsSet;
   final FieldDispatcher<int> numberOfInventoryTypes;
 
-  _$OrgUnitLinkActions._(this.$options)
-      : $replace =
-            $options.action<OrgUnitLink>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$OrgUnitLinkActions._(this.options$)
+      : replace$ =
+            options$.action<OrgUnitLink>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        orgUnitName = $options.field<String>(
+        orgUnitName = options$.field<String>(
             'orgUnitName',
             (a) => a?.orgUnitName,
             (s) => s?.orgUnitName,
             (p, b) => p?.orgUnitName = b),
-        ouAccessType = $options.field<OuAccessType>(
+        ouAccessType = options$.field<OuAccessType>(
             'ouAccessType',
             (a) => a?.ouAccessType,
             (s) => s?.ouAccessType,
             (p, b) => p?.ouAccessType = b),
-        relationshipTypeId = $options.field<String>(
+        relationshipTypeId = options$.field<String>(
             'relationshipTypeId',
             (a) => a?.relationshipTypeId,
             (s) => s?.relationshipTypeId,
             (p, b) => p?.relationshipTypeId = b),
-        relationshipTypeName = $options.field<String>(
+        relationshipTypeName = options$.field<String>(
             'relationshipTypeName',
             (a) => a?.relationshipTypeName,
             (s) => s?.relationshipTypeName,
             (p, b) => p?.relationshipTypeName = b),
-        numberOfPermissionsSet = $options.field<int>(
+        numberOfPermissionsSet = options$.field<int>(
             'numberOfPermissionsSet',
             (a) => a?.numberOfPermissionsSet,
             (s) => s?.numberOfPermissionsSet,
             (p, b) => p?.numberOfPermissionsSet = b),
-        numberOfInventoryTypes = $options.field<int>(
+        numberOfInventoryTypes = options$.field<int>(
             'numberOfInventoryTypes',
             (a) => a?.numberOfInventoryTypes,
             (s) => s?.numberOfInventoryTypes,
@@ -361,16 +361,16 @@ class _$OrgUnitLinkActions extends OrgUnitLinkActions {
       _$OrgUnitLinkActions._(options());
 
   @override
-  OrgUnitLink get $initial => OrgUnitLink();
+  OrgUnitLink get initialState$ => OrgUnitLink();
 
   @override
-  OrgUnitLinkBuilder $newBuilder() => OrgUnitLinkBuilder();
+  OrgUnitLinkBuilder newBuilder$() => OrgUnitLinkBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgUnitId,
         this.orgUnitName,
@@ -382,24 +382,20 @@ class _$OrgUnitLinkActions extends OrgUnitLinkActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    orgUnitName.$reducer(reducer);
-    ouAccessType.$reducer(reducer);
-    relationshipTypeId.$reducer(reducer);
-    relationshipTypeName.$reducer(reducer);
-    numberOfPermissionsSet.$reducer(reducer);
-    numberOfInventoryTypes.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    orgUnitName.reducer$(reducer);
+    ouAccessType.reducer$(reducer);
+    relationshipTypeId.reducer$(reducer);
+    relationshipTypeName.reducer$(reducer);
+    numberOfPermissionsSet.reducer$(reducer);
+    numberOfInventoryTypes.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(OrgUnitLink);
 }

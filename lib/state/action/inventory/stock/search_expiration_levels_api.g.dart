@@ -22,68 +22,32 @@ class _$SearchExpirationLevelsApi extends SearchExpirationLevelsApi {
           ApiResult<SearchExpirationLevelsApiResponse>>,
       CommandStateBuilder<ApiCommand<SearchExpirationLevelsApiRequest>,
           ApiResult<SearchExpirationLevelsApiResponse>>,
-      SearchExpirationLevelsApi> $options;
+      SearchExpirationLevelsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SearchExpirationLevelsApiRequest>,
-          ApiResult<SearchExpirationLevelsApiResponse>>> $replace;
+          ApiResult<SearchExpirationLevelsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<SearchExpirationLevelsApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchExpirationLevelsApiRequest>,
-          ApiResult<SearchExpirationLevelsApiResponse>,
-          SearchExpirationLevelsApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchExpirationLevelsApiRequest>,
-          ApiResult<SearchExpirationLevelsApiResponse>,
-          SearchExpirationLevelsApi,
-          Command<ApiCommand<SearchExpirationLevelsApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchExpirationLevelsApiRequest>,
-          ApiResult<SearchExpirationLevelsApiResponse>,
-          SearchExpirationLevelsApi,
-          CommandResult<ApiResult<SearchExpirationLevelsApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchExpirationLevelsApiRequest>,
-          ApiResult<SearchExpirationLevelsApiResponse>,
-          SearchExpirationLevelsApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<SearchExpirationLevelsApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$SearchExpirationLevelsApi._(this.$options)
-      : $replace = $options.action<
+  _$SearchExpirationLevelsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<SearchExpirationLevelsApiRequest>,
                     ApiResult<SearchExpirationLevelsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<SearchExpirationLevelsApiRequest>,
-                ApiResult<SearchExpirationLevelsApiResponse>,
-                SearchExpirationLevelsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<SearchExpirationLevelsApiRequest>,
-                    ApiResult<SearchExpirationLevelsApiResponse>,
-                    SearchExpirationLevelsApi,
-                    Command<ApiCommand<SearchExpirationLevelsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<SearchExpirationLevelsApiRequest>,
-                    ApiResult<SearchExpirationLevelsApiResponse>,
-                    SearchExpirationLevelsApi,
-                    CommandResult<
-                        ApiResult<SearchExpirationLevelsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<SearchExpirationLevelsApiRequest>,
-                ApiResult<SearchExpirationLevelsApiResponse>,
-                SearchExpirationLevelsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<SearchExpirationLevelsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<SearchExpirationLevelsApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$SearchExpirationLevelsApi(
@@ -93,32 +57,26 @@ class _$SearchExpirationLevelsApi extends SearchExpirationLevelsApi {
   @override
   CommandState<ApiCommand<SearchExpirationLevelsApiRequest>,
           ApiResult<SearchExpirationLevelsApiResponse>>
-      get $initial => CommandState<ApiCommand<SearchExpirationLevelsApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<SearchExpirationLevelsApiRequest>,
           ApiResult<SearchExpirationLevelsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<SearchExpirationLevelsApiRequest>,
           ApiResult<SearchExpirationLevelsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<SearchExpirationLevelsApiRequest>,
           ApiResult<SearchExpirationLevelsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(SearchExpirationLevelsApiRequest)]),
-        FullType(ApiResult, [FullType(SearchExpirationLevelsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

@@ -191,27 +191,27 @@ typedef StatefulActionsOptions<ResponsibleParty, ResponsiblePartyBuilder,
 
 class _$ResponsiblePartyActions extends ResponsiblePartyActions {
   final StatefulActionsOptions<ResponsibleParty, ResponsiblePartyBuilder,
-      ResponsiblePartyActions> $options;
+      ResponsiblePartyActions> options$;
 
-  final ActionDispatcher<ResponsibleParty> $replace;
+  final ActionDispatcher<ResponsibleParty> replace$;
   final FieldDispatcher<ResponsiblePartyType> responsiblePartyType;
   final FieldDispatcher<String> responsiblePartyId;
   final FieldDispatcher<String> displayText;
 
-  _$ResponsiblePartyActions._(this.$options)
-      : $replace =
-            $options.action<ResponsibleParty>('\$replace', (a) => a?.$replace),
-        responsiblePartyType = $options.field<ResponsiblePartyType>(
+  _$ResponsiblePartyActions._(this.options$)
+      : replace$ =
+            options$.action<ResponsibleParty>('replace\$', (a) => a?.replace$),
+        responsiblePartyType = options$.field<ResponsiblePartyType>(
             'responsiblePartyType',
             (a) => a?.responsiblePartyType,
             (s) => s?.responsiblePartyType,
             (p, b) => p?.responsiblePartyType = b),
-        responsiblePartyId = $options.field<String>(
+        responsiblePartyId = options$.field<String>(
             'responsiblePartyId',
             (a) => a?.responsiblePartyId,
             (s) => s?.responsiblePartyId,
             (p, b) => p?.responsiblePartyId = b),
-        displayText = $options.field<String>(
+        displayText = options$.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
@@ -222,35 +222,31 @@ class _$ResponsiblePartyActions extends ResponsiblePartyActions {
       _$ResponsiblePartyActions._(options());
 
   @override
-  ResponsibleParty get $initial => ResponsibleParty();
+  ResponsibleParty get initialState$ => ResponsibleParty();
 
   @override
-  ResponsiblePartyBuilder $newBuilder() => ResponsiblePartyBuilder();
+  ResponsiblePartyBuilder newBuilder$() => ResponsiblePartyBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.responsiblePartyType,
         this.responsiblePartyId,
         this.displayText,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    responsiblePartyType.$reducer(reducer);
-    responsiblePartyId.$reducer(reducer);
-    displayText.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    responsiblePartyType.reducer$(reducer);
+    responsiblePartyId.reducer$(reducer);
+    displayText.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ResponsibleParty);
 }

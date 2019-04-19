@@ -739,9 +739,9 @@ typedef StatefulActionsOptions<ListTagsApiRequest, ListTagsApiRequestBuilder,
 
 class _$ListTagsApiRequestActions extends ListTagsApiRequestActions {
   final StatefulActionsOptions<ListTagsApiRequest, ListTagsApiRequestBuilder,
-      ListTagsApiRequestActions> $options;
+      ListTagsApiRequestActions> options$;
 
-  final ActionDispatcher<ListTagsApiRequest> $replace;
+  final ActionDispatcher<ListTagsApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> itemIds;
   final FieldDispatcher<BuiltList<MoveItemClass>> moveItemClasses;
   final FieldDispatcher<BuiltList<MoveItemType>> moveItemTypes;
@@ -765,95 +765,95 @@ class _$ListTagsApiRequestActions extends ListTagsApiRequestActions {
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListTagsApiOrderBy> orderBy;
 
-  _$ListTagsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListTagsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        itemIds = $options.field<BuiltList<String>>('itemIds',
+  _$ListTagsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListTagsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        itemIds = options$.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        moveItemClasses = $options.field<BuiltList<MoveItemClass>>(
+        moveItemClasses = options$.field<BuiltList<MoveItemClass>>(
             'moveItemClasses',
             (a) => a?.moveItemClasses,
             (s) => s?.moveItemClasses,
             (p, b) => p?.moveItemClasses = b),
-        moveItemTypes = $options.field<BuiltList<MoveItemType>>(
+        moveItemTypes = options$.field<BuiltList<MoveItemType>>(
             'moveItemTypes',
             (a) => a?.moveItemTypes,
             (s) => s?.moveItemTypes,
             (p, b) => p?.moveItemTypes = b),
-        itemVersionIds = $options.field<BuiltList<String>>(
+        itemVersionIds = options$.field<BuiltList<String>>(
             'itemVersionIds',
             (a) => a?.itemVersionIds,
             (s) => s?.itemVersionIds,
             (p, b) => p?.itemVersionIds = b),
-        serialIds = $options.field<BuiltList<String>>(
+        serialIds = options$.field<BuiltList<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
             (p, b) => p?.serialIds = b),
-        lotIds = $options.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
+        lotIds = options$.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
             (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        locationIds = $options.field<BuiltList<String>>(
+        locationIds = options$.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        locationTypes = $options.field<BuiltList<LocationType>>(
+        locationTypes = options$.field<BuiltList<LocationType>>(
             'locationTypes',
             (a) => a?.locationTypes,
             (s) => s?.locationTypes,
             (p, b) => p?.locationTypes = b),
-        facilityTypes = $options.field<BuiltList<FacilityType>>(
+        facilityTypes = options$.field<BuiltList<FacilityType>>(
             'facilityTypes',
             (a) => a?.facilityTypes,
             (s) => s?.facilityTypes,
             (p, b) => p?.facilityTypes = b),
-        anyLocationTypes = $options.field<BuiltList<LocationType>>(
+        anyLocationTypes = options$.field<BuiltList<LocationType>>(
             'anyLocationTypes',
             (a) => a?.anyLocationTypes,
             (s) => s?.anyLocationTypes,
             (p, b) => p?.anyLocationTypes = b),
-        anyLocationIds = $options.field<BuiltList<String>>(
+        anyLocationIds = options$.field<BuiltList<String>>(
             'anyLocationIds',
             (a) => a?.anyLocationIds,
             (s) => s?.anyLocationIds,
             (p, b) => p?.anyLocationIds = b),
-        itemCategoryIds = $options.field<BuiltList<String>>(
+        itemCategoryIds = options$.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
             (p, b) => p?.itemCategoryIds = b),
-        itemActive = $options.field<bool>('itemActive', (a) => a?.itemActive,
+        itemActive = options$.field<bool>('itemActive', (a) => a?.itemActive,
             (s) => s?.itemActive, (p, b) => p?.itemActive = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        locationSearch = $options.field<String>(
+        locationSearch = options$.field<String>(
             'locationSearch',
             (a) => a?.locationSearch,
             (s) => s?.locationSearch,
             (p, b) => p?.locationSearch = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        subProcedureId = $options.field<String>(
+        subProcedureId = options$.field<String>(
             'subProcedureId',
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
             (p, b) => p?.subProcedureId = b),
-        salesOrgUnitId = $options.field<String>(
+        salesOrgUnitId = options$.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
             (p, b) => p?.salesOrgUnitId = b),
-        forExport = $options.field<bool>('forExport', (a) => a?.forExport,
+        forExport = options$.field<bool>('forExport', (a) => a?.forExport,
             (s) => s?.forExport, (p, b) => p?.forExport = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -863,7 +863,7 @@ class _$ListTagsApiRequestActions extends ListTagsApiRequestActions {
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListTagsApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListTagsApiOrderBy>,
                     OrderByParamsBuilder<ListTagsApiOrderBy>,
                     OrderByParamsActions<ListTagsApiOrderBy>>(
@@ -879,23 +879,23 @@ class _$ListTagsApiRequestActions extends ListTagsApiRequestActions {
       _$ListTagsApiRequestActions._(options());
 
   @override
-  ListTagsApiRequest get $initial => ListTagsApiRequest();
+  ListTagsApiRequest get initialState$ => ListTagsApiRequest();
 
   @override
-  ListTagsApiRequestBuilder $newBuilder() => ListTagsApiRequestBuilder();
+  ListTagsApiRequestBuilder newBuilder$() => ListTagsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemIds,
         this.moveItemClasses,
         this.moveItemTypes,
@@ -919,40 +919,36 @@ class _$ListTagsApiRequestActions extends ListTagsApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemIds.$reducer(reducer);
-    moveItemClasses.$reducer(reducer);
-    moveItemTypes.$reducer(reducer);
-    itemVersionIds.$reducer(reducer);
-    serialIds.$reducer(reducer);
-    lotIds.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    locationIds.$reducer(reducer);
-    locationTypes.$reducer(reducer);
-    facilityTypes.$reducer(reducer);
-    anyLocationTypes.$reducer(reducer);
-    anyLocationIds.$reducer(reducer);
-    itemCategoryIds.$reducer(reducer);
-    itemActive.$reducer(reducer);
-    search.$reducer(reducer);
-    locationSearch.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    subProcedureId.$reducer(reducer);
-    salesOrgUnitId.$reducer(reducer);
-    forExport.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemIds.reducer$(reducer);
+    moveItemClasses.reducer$(reducer);
+    moveItemTypes.reducer$(reducer);
+    itemVersionIds.reducer$(reducer);
+    serialIds.reducer$(reducer);
+    lotIds.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    locationIds.reducer$(reducer);
+    locationTypes.reducer$(reducer);
+    facilityTypes.reducer$(reducer);
+    anyLocationTypes.reducer$(reducer);
+    anyLocationIds.reducer$(reducer);
+    itemCategoryIds.reducer$(reducer);
+    itemActive.reducer$(reducer);
+    search.reducer$(reducer);
+    locationSearch.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    subProcedureId.reducer$(reducer);
+    salesOrgUnitId.reducer$(reducer);
+    forExport.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListTagsApiRequest);
 }

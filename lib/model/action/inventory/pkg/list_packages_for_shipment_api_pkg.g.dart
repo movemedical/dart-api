@@ -251,30 +251,30 @@ class _$ListPackagesForShipmentApiPkgActions
   final StatefulActionsOptions<
       ListPackagesForShipmentApiPkg,
       ListPackagesForShipmentApiPkgBuilder,
-      ListPackagesForShipmentApiPkgActions> $options;
+      ListPackagesForShipmentApiPkgActions> options$;
 
-  final ActionDispatcher<ListPackagesForShipmentApiPkg> $replace;
+  final ActionDispatcher<ListPackagesForShipmentApiPkg> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> number;
   final FieldDispatcher<PackageStatus> status;
   final FieldDispatcher<String> trackingNumber;
   final FieldDispatcher<String> trackingNumberUrl;
 
-  _$ListPackagesForShipmentApiPkgActions._(this.$options)
-      : $replace = $options.action<ListPackagesForShipmentApiPkg>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListPackagesForShipmentApiPkgActions._(this.options$)
+      : replace$ = options$.action<ListPackagesForShipmentApiPkg>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<PackageStatus>('status', (a) => a?.status,
+        status = options$.field<PackageStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        trackingNumber = $options.field<String>(
+        trackingNumber = options$.field<String>(
             'trackingNumber',
             (a) => a?.trackingNumber,
             (s) => s?.trackingNumber,
             (p, b) => p?.trackingNumber = b),
-        trackingNumberUrl = $options.field<String>(
+        trackingNumberUrl = options$.field<String>(
             'trackingNumberUrl',
             (a) => a?.trackingNumberUrl,
             (s) => s?.trackingNumberUrl,
@@ -286,17 +286,18 @@ class _$ListPackagesForShipmentApiPkgActions
       _$ListPackagesForShipmentApiPkgActions._(options());
 
   @override
-  ListPackagesForShipmentApiPkg get $initial => ListPackagesForShipmentApiPkg();
+  ListPackagesForShipmentApiPkg get initialState$ =>
+      ListPackagesForShipmentApiPkg();
 
   @override
-  ListPackagesForShipmentApiPkgBuilder $newBuilder() =>
+  ListPackagesForShipmentApiPkgBuilder newBuilder$() =>
       ListPackagesForShipmentApiPkgBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.number,
         this.status,
@@ -305,22 +306,17 @@ class _$ListPackagesForShipmentApiPkgActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
-    trackingNumber.$reducer(reducer);
-    trackingNumberUrl.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
+    trackingNumber.reducer$(reducer);
+    trackingNumberUrl.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPackagesForShipmentApiPkg);
 }

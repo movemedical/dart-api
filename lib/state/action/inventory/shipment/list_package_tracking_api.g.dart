@@ -22,67 +22,32 @@ class _$ListPackageTrackingApi extends ListPackageTrackingApi {
           ApiResult<ListPackageTrackingApiResponse>>,
       CommandStateBuilder<ApiCommand<ListPackageTrackingApiRequest>,
           ApiResult<ListPackageTrackingApiResponse>>,
-      ListPackageTrackingApi> $options;
+      ListPackageTrackingApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListPackageTrackingApiRequest>,
-          ApiResult<ListPackageTrackingApiResponse>>> $replace;
+          ApiResult<ListPackageTrackingApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListPackageTrackingApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPackageTrackingApiRequest>,
-          ApiResult<ListPackageTrackingApiResponse>,
-          ListPackageTrackingApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPackageTrackingApiRequest>,
-          ApiResult<ListPackageTrackingApiResponse>,
-          ListPackageTrackingApi,
-          Command<ApiCommand<ListPackageTrackingApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPackageTrackingApiRequest>,
-          ApiResult<ListPackageTrackingApiResponse>,
-          ListPackageTrackingApi,
-          CommandResult<ApiResult<ListPackageTrackingApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPackageTrackingApiRequest>,
-          ApiResult<ListPackageTrackingApiResponse>,
-          ListPackageTrackingApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListPackageTrackingApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListPackageTrackingApi._(this.$options)
-      : $replace = $options.action<
+  _$ListPackageTrackingApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListPackageTrackingApiRequest>,
                     ApiResult<ListPackageTrackingApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListPackageTrackingApiRequest>,
-                ApiResult<ListPackageTrackingApiResponse>,
-                ListPackageTrackingApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListPackageTrackingApiRequest>,
-                    ApiResult<ListPackageTrackingApiResponse>,
-                    ListPackageTrackingApi,
-                    Command<ApiCommand<ListPackageTrackingApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListPackageTrackingApiRequest>,
-                    ApiResult<ListPackageTrackingApiResponse>,
-                    ListPackageTrackingApi,
-                    CommandResult<ApiResult<ListPackageTrackingApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListPackageTrackingApiRequest>,
-                ApiResult<ListPackageTrackingApiResponse>,
-                ListPackageTrackingApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListPackageTrackingApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListPackageTrackingApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListPackageTrackingApi(ListPackageTrackingApiOptions options) =>
@@ -91,32 +56,26 @@ class _$ListPackageTrackingApi extends ListPackageTrackingApi {
   @override
   CommandState<ApiCommand<ListPackageTrackingApiRequest>,
           ApiResult<ListPackageTrackingApiResponse>>
-      get $initial => CommandState<ApiCommand<ListPackageTrackingApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<ListPackageTrackingApiRequest>,
           ApiResult<ListPackageTrackingApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListPackageTrackingApiRequest>,
           ApiResult<ListPackageTrackingApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListPackageTrackingApiRequest>,
           ApiResult<ListPackageTrackingApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListPackageTrackingApiRequest)]),
-        FullType(ApiResult, [FullType(ListPackageTrackingApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

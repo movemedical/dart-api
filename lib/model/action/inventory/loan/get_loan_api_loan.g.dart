@@ -852,9 +852,9 @@ typedef StatefulActionsOptions<GetLoanApiLoan, GetLoanApiLoanBuilder,
 
 class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
   final StatefulActionsOptions<GetLoanApiLoan, GetLoanApiLoanBuilder,
-      GetLoanApiLoanActions> $options;
+      GetLoanApiLoanActions> options$;
 
-  final ActionDispatcher<GetLoanApiLoan> $replace;
+  final ActionDispatcher<GetLoanApiLoan> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> number;
   final FieldDispatcher<LoanStatus> status;
@@ -885,56 +885,56 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
   final FieldDispatcher<DateTime> approved;
   final GetLoanApiLoanReturnDataActions loanReturnData;
 
-  _$GetLoanApiLoanActions._(this.$options)
-      : $replace =
-            $options.action<GetLoanApiLoan>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetLoanApiLoanActions._(this.options$)
+      : replace$ =
+            options$.action<GetLoanApiLoan>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<LoanStatus>('status', (a) => a?.status,
+        status = options$.field<LoanStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        reason = $options.field<LoanReason>('reason', (a) => a?.reason,
+        reason = options$.field<LoanReason>('reason', (a) => a?.reason,
             (s) => s?.reason, (p, b) => p?.reason = b),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
         location = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
         service = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'service',
                 (a) => a.service,
                 (s) => s?.service,
                 (b) => b?.service,
                 (parent, builder) => parent?.service = builder)),
         opsOrgUnit = OrgUnitActions(() =>
-            $options.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
+            options$.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
                 'opsOrgUnit',
                 (a) => a.opsOrgUnit,
                 (s) => s?.opsOrgUnit,
                 (b) => b?.opsOrgUnit,
                 (parent, builder) => parent?.opsOrgUnit = builder)),
         salesOrgUnit = OrgUnitActions(() =>
-            $options.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
+            options$.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
                 'salesOrgUnit',
                 (a) => a.salesOrgUnit,
                 (s) => s?.salesOrgUnit,
                 (b) => b?.salesOrgUnit,
                 (parent, builder) => parent?.salesOrgUnit = builder)),
-        deliverToAttn = $options.field<String>(
+        deliverToAttn = options$.field<String>(
             'deliverToAttn',
             (a) => a?.deliverToAttn,
             (s) => s?.deliverToAttn,
             (p, b) => p?.deliverToAttn = b),
-        deliverTo = CustomerAddressActions(() => $options.stateful<
+        deliverTo = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -944,13 +944,13 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
             (b) => b?.deliverTo,
             (parent, builder) => parent?.deliverTo = builder)),
         deliverToOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToOverride',
                 (a) => a.deliverToOverride,
                 (s) => s?.deliverToOverride,
                 (b) => b?.deliverToOverride,
                 (parent, builder) => parent?.deliverToOverride = builder)),
-        shippingService = ShippingServiceActions(() => $options.stateful<
+        shippingService = ShippingServiceActions(() => options$.stateful<
                 ShippingService,
                 ShippingServiceBuilder,
                 ShippingServiceActions>(
@@ -959,72 +959,72 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
             (s) => s?.shippingService,
             (b) => b?.shippingService,
             (parent, builder) => parent?.shippingService = builder)),
-        orders = $options.field<BuiltList<OrderHeaderLite>>('orders',
+        orders = options$.field<BuiltList<OrderHeaderLite>>('orders',
             (a) => a?.orders, (s) => s?.orders, (p, b) => p?.orders = b),
-        cases = $options.field<BuiltList<CaseEventLite>>(
+        cases = options$.field<BuiltList<CaseEventLite>>(
             'cases', (a) => a?.cases, (s) => s?.cases, (p, b) => p?.cases = b),
-        loanReturnType = $options.field<LoanReturnType>(
+        loanReturnType = options$.field<LoanReturnType>(
             'loanReturnType',
             (a) => a?.loanReturnType,
             (s) => s?.loanReturnType,
             (p, b) => p?.loanReturnType = b),
         returnLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'returnLocation',
                 (a) => a.returnLocation,
                 (s) => s?.returnLocation,
                 (b) => b?.returnLocation,
                 (parent, builder) => parent?.returnLocation = builder)),
         complianceReturnLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'complianceReturnLocation',
                 (a) => a.complianceReturnLocation,
                 (s) => s?.complianceReturnLocation,
                 (b) => b?.complianceReturnLocation,
                 (parent, builder) =>
                     parent?.complianceReturnLocation = builder)),
-        lateAfterDate = $options.field<DateTime>(
+        lateAfterDate = options$.field<DateTime>(
             'lateAfterDate',
             (a) => a?.lateAfterDate,
             (s) => s?.lateAfterDate,
             (p, b) => p?.lateAfterDate = b),
-        expiredReplenishDays = $options.field<int>(
+        expiredReplenishDays = options$.field<int>(
             'expiredReplenishDays',
             (a) => a?.expiredReplenishDays,
             (s) => s?.expiredReplenishDays,
             (p, b) => p?.expiredReplenishDays = b),
-        nextEvaluateOnHandStockDate = $options.field<DateTime>(
+        nextEvaluateOnHandStockDate = options$.field<DateTime>(
             'nextEvaluateOnHandStockDate',
             (a) => a?.nextEvaluateOnHandStockDate,
             (s) => s?.nextEvaluateOnHandStockDate,
             (p, b) => p?.nextEvaluateOnHandStockDate = b),
-        nextEvaluateComplianceStockDate = $options.field<DateTime>(
+        nextEvaluateComplianceStockDate = options$.field<DateTime>(
             'nextEvaluateComplianceStockDate',
             (a) => a?.nextEvaluateComplianceStockDate,
             (s) => s?.nextEvaluateComplianceStockDate,
             (p, b) => p?.nextEvaluateComplianceStockDate = b),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
         linkedLoan = LoanLiteActions(() =>
-            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+            options$.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
                 'linkedLoan',
                 (a) => a.linkedLoan,
                 (s) => s?.linkedLoan,
                 (b) => b?.linkedLoan,
                 (parent, builder) => parent?.linkedLoan = builder)),
-        created = $options.field<DateTime>('created', (a) => a?.created,
+        created = options$.field<DateTime>('created', (a) => a?.created,
             (s) => s?.created, (p, b) => p?.created = b),
-        approvedBy = $options.field<String>('approvedBy', (a) => a?.approvedBy,
+        approvedBy = options$.field<String>('approvedBy', (a) => a?.approvedBy,
             (s) => s?.approvedBy, (p, b) => p?.approvedBy = b),
-        approved = $options.field<DateTime>('approved', (a) => a?.approved,
+        approved = options$.field<DateTime>('approved', (a) => a?.approved,
             (s) => s?.approved, (p, b) => p?.approved = b),
         loanReturnData = GetLoanApiLoanReturnDataActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetLoanApiLoanReturnData,
                     GetLoanApiLoanReturnDataBuilder,
                     GetLoanApiLoanReturnDataActions>(
@@ -1039,14 +1039,14 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
       _$GetLoanApiLoanActions._(options());
 
   @override
-  GetLoanApiLoan get $initial => GetLoanApiLoan();
+  GetLoanApiLoan get initialState$ => GetLoanApiLoan();
 
   @override
-  GetLoanApiLoanBuilder $newBuilder() => GetLoanApiLoanBuilder();
+  GetLoanApiLoanBuilder newBuilder$() => GetLoanApiLoanBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
         this.service,
         this.opsOrgUnit,
@@ -1060,11 +1060,11 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
         this.loanReturnData,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.number,
         this.status,
@@ -1086,56 +1086,52 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
-    reason.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    location.$reducer(reducer);
-    service.$reducer(reducer);
-    opsOrgUnit.$reducer(reducer);
-    salesOrgUnit.$reducer(reducer);
-    deliverToAttn.$reducer(reducer);
-    deliverTo.$reducer(reducer);
-    deliverToOverride.$reducer(reducer);
-    shippingService.$reducer(reducer);
-    orders.$reducer(reducer);
-    cases.$reducer(reducer);
-    loanReturnType.$reducer(reducer);
-    returnLocation.$reducer(reducer);
-    complianceReturnLocation.$reducer(reducer);
-    lateAfterDate.$reducer(reducer);
-    expiredReplenishDays.$reducer(reducer);
-    nextEvaluateOnHandStockDate.$reducer(reducer);
-    nextEvaluateComplianceStockDate.$reducer(reducer);
-    reference.$reducer(reducer);
-    description.$reducer(reducer);
-    linkedLoan.$reducer(reducer);
-    created.$reducer(reducer);
-    approvedBy.$reducer(reducer);
-    approved.$reducer(reducer);
-    loanReturnData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
+    reason.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    location.reducer$(reducer);
+    service.reducer$(reducer);
+    opsOrgUnit.reducer$(reducer);
+    salesOrgUnit.reducer$(reducer);
+    deliverToAttn.reducer$(reducer);
+    deliverTo.reducer$(reducer);
+    deliverToOverride.reducer$(reducer);
+    shippingService.reducer$(reducer);
+    orders.reducer$(reducer);
+    cases.reducer$(reducer);
+    loanReturnType.reducer$(reducer);
+    returnLocation.reducer$(reducer);
+    complianceReturnLocation.reducer$(reducer);
+    lateAfterDate.reducer$(reducer);
+    expiredReplenishDays.reducer$(reducer);
+    nextEvaluateOnHandStockDate.reducer$(reducer);
+    nextEvaluateComplianceStockDate.reducer$(reducer);
+    reference.reducer$(reducer);
+    description.reducer$(reducer);
+    linkedLoan.reducer$(reducer);
+    created.reducer$(reducer);
+    approvedBy.reducer$(reducer);
+    approved.reducer$(reducer);
+    loanReturnData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    location.$middleware(middleware);
-    service.$middleware(middleware);
-    opsOrgUnit.$middleware(middleware);
-    salesOrgUnit.$middleware(middleware);
-    deliverTo.$middleware(middleware);
-    deliverToOverride.$middleware(middleware);
-    shippingService.$middleware(middleware);
-    returnLocation.$middleware(middleware);
-    complianceReturnLocation.$middleware(middleware);
-    linkedLoan.$middleware(middleware);
-    loanReturnData.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    location.middleware$(middleware);
+    service.middleware$(middleware);
+    opsOrgUnit.middleware$(middleware);
+    salesOrgUnit.middleware$(middleware);
+    deliverTo.middleware$(middleware);
+    deliverToOverride.middleware$(middleware);
+    shippingService.middleware$(middleware);
+    returnLocation.middleware$(middleware);
+    complianceReturnLocation.middleware$(middleware);
+    linkedLoan.middleware$(middleware);
+    loanReturnData.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetLoanApiLoan);
 }

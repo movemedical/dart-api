@@ -161,15 +161,15 @@ class _$GenerateForgotPasswordLinkApiRequestActions
   final StatefulActionsOptions<
       GenerateForgotPasswordLinkApiRequest,
       GenerateForgotPasswordLinkApiRequestBuilder,
-      GenerateForgotPasswordLinkApiRequestActions> $options;
+      GenerateForgotPasswordLinkApiRequestActions> options$;
 
-  final ActionDispatcher<GenerateForgotPasswordLinkApiRequest> $replace;
+  final ActionDispatcher<GenerateForgotPasswordLinkApiRequest> replace$;
   final FieldDispatcher<String> email;
 
-  _$GenerateForgotPasswordLinkApiRequestActions._(this.$options)
-      : $replace = $options.action<GenerateForgotPasswordLinkApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        email = $options.field<String>(
+  _$GenerateForgotPasswordLinkApiRequestActions._(this.options$)
+      : replace$ = options$.action<GenerateForgotPasswordLinkApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        email = options$.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
         super._();
 
@@ -178,34 +178,29 @@ class _$GenerateForgotPasswordLinkApiRequestActions
       _$GenerateForgotPasswordLinkApiRequestActions._(options());
 
   @override
-  GenerateForgotPasswordLinkApiRequest get $initial =>
+  GenerateForgotPasswordLinkApiRequest get initialState$ =>
       GenerateForgotPasswordLinkApiRequest();
 
   @override
-  GenerateForgotPasswordLinkApiRequestBuilder $newBuilder() =>
+  GenerateForgotPasswordLinkApiRequestBuilder newBuilder$() =>
       GenerateForgotPasswordLinkApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.email,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    email.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    email.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GenerateForgotPasswordLinkApiRequest);
 }

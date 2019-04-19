@@ -22,64 +22,30 @@ class _$MoveStock2Api extends MoveStock2Api {
           ApiResult<MoveStock2ApiResponse>>,
       CommandStateBuilder<ApiCommand<MoveStock2ApiRequest>,
           ApiResult<MoveStock2ApiResponse>>,
-      MoveStock2Api> $options;
+      MoveStock2Api> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<MoveStock2ApiRequest>,
-          ApiResult<MoveStock2ApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveStock2ApiRequest>,
-          ApiResult<MoveStock2ApiResponse>, MoveStock2Api, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<MoveStock2ApiRequest>,
-          ApiResult<MoveStock2ApiResponse>,
-          MoveStock2Api,
-          Command<ApiCommand<MoveStock2ApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<MoveStock2ApiRequest>,
-          ApiResult<MoveStock2ApiResponse>,
-          MoveStock2Api,
-          CommandResult<ApiResult<MoveStock2ApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<MoveStock2ApiRequest>,
-          ApiResult<MoveStock2ApiResponse>,
-          MoveStock2Api,
-          CommandProgress>> $progress;
+          ApiResult<MoveStock2ApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<MoveStock2ApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<MoveStock2ApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$MoveStock2Api._(this.$options)
-      : $replace = $options.action<
+  _$MoveStock2Api._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<MoveStock2ApiRequest>,
                     ApiResult<MoveStock2ApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<MoveStock2ApiRequest>,
-                ApiResult<MoveStock2ApiResponse>,
-                MoveStock2Api,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<MoveStock2ApiRequest>,
-                    ApiResult<MoveStock2ApiResponse>,
-                    MoveStock2Api,
-                    Command<ApiCommand<MoveStock2ApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<MoveStock2ApiRequest>,
-                    ApiResult<MoveStock2ApiResponse>,
-                    MoveStock2Api,
-                    CommandResult<ApiResult<MoveStock2ApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<MoveStock2ApiRequest>,
-                ApiResult<MoveStock2ApiResponse>,
-                MoveStock2Api,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<MoveStock2ApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<MoveStock2ApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$MoveStock2Api(MoveStock2ApiOptions options) =>
@@ -88,31 +54,24 @@ class _$MoveStock2Api extends MoveStock2Api {
   @override
   CommandState<ApiCommand<MoveStock2ApiRequest>,
           ApiResult<MoveStock2ApiResponse>>
-      get $initial => CommandState<ApiCommand<MoveStock2ApiRequest>,
+      get initialState$ => CommandState<ApiCommand<MoveStock2ApiRequest>,
           ApiResult<MoveStock2ApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<MoveStock2ApiRequest>,
           ApiResult<MoveStock2ApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<MoveStock2ApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<MoveStock2ApiRequest>,
           ApiResult<MoveStock2ApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(MoveStock2ApiRequest)]),
-        FullType(ApiResult, [FullType(MoveStock2ApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

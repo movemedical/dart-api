@@ -306,9 +306,9 @@ class _$ListProcedureToItemCategoryApiRequestActions
   final StatefulActionsOptions<
       ListProcedureToItemCategoryApiRequest,
       ListProcedureToItemCategoryApiRequestBuilder,
-      ListProcedureToItemCategoryApiRequestActions> $options;
+      ListProcedureToItemCategoryApiRequestActions> options$;
 
-  final ActionDispatcher<ListProcedureToItemCategoryApiRequest> $replace;
+  final ActionDispatcher<ListProcedureToItemCategoryApiRequest> replace$;
   final FieldDispatcher<String> search;
   final FieldDispatcher<String> itemCategoryId;
   final FieldDispatcher<String> procedureId;
@@ -316,27 +316,27 @@ class _$ListProcedureToItemCategoryApiRequestActions
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListProcedureToItemCategoryApiOrderBy> orderBy;
 
-  _$ListProcedureToItemCategoryApiRequestActions._(this.$options)
-      : $replace = $options.action<ListProcedureToItemCategoryApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$ListProcedureToItemCategoryApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListProcedureToItemCategoryApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        itemCategoryId = $options.field<String>(
+        itemCategoryId = options$.field<String>(
             'itemCategoryId',
             (a) => a?.itemCategoryId,
             (s) => s?.itemCategoryId,
             (p, b) => p?.itemCategoryId = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        subProcedureId = $options.field<String>(
+        subProcedureId = options$.field<String>(
             'subProcedureId',
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
             (p, b) => p?.subProcedureId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -346,7 +346,7 @@ class _$ListProcedureToItemCategoryApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<
-            ListProcedureToItemCategoryApiOrderBy>(() => $options.stateful<
+            ListProcedureToItemCategoryApiOrderBy>(() => options$.stateful<
                 OrderByParams<ListProcedureToItemCategoryApiOrderBy>,
                 OrderByParamsBuilder<ListProcedureToItemCategoryApiOrderBy>,
                 OrderByParamsActions<ListProcedureToItemCategoryApiOrderBy>>(
@@ -362,25 +362,25 @@ class _$ListProcedureToItemCategoryApiRequestActions
       _$ListProcedureToItemCategoryApiRequestActions._(options());
 
   @override
-  ListProcedureToItemCategoryApiRequest get $initial =>
+  ListProcedureToItemCategoryApiRequest get initialState$ =>
       ListProcedureToItemCategoryApiRequest();
 
   @override
-  ListProcedureToItemCategoryApiRequestBuilder $newBuilder() =>
+  ListProcedureToItemCategoryApiRequestBuilder newBuilder$() =>
       ListProcedureToItemCategoryApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
         this.itemCategoryId,
         this.procedureId,
@@ -388,25 +388,20 @@ class _$ListProcedureToItemCategoryApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
-    itemCategoryId.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    subProcedureId.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
+    itemCategoryId.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    subProcedureId.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListProcedureToItemCategoryApiRequest);
 }

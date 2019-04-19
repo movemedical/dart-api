@@ -516,9 +516,9 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
   final StatefulActionsOptions<
       BuildStockOrderRestockPlanApiRestockItem,
       BuildStockOrderRestockPlanApiRestockItemBuilder,
-      BuildStockOrderRestockPlanApiRestockItemActions> $options;
+      BuildStockOrderRestockPlanApiRestockItemActions> options$;
 
-  final ActionDispatcher<BuildStockOrderRestockPlanApiRestockItem> $replace;
+  final ActionDispatcher<BuildStockOrderRestockPlanApiRestockItem> replace$;
   final FieldDispatcher<String> pickId;
   final FieldDispatcher<bool> shouldRestock;
   final FieldDispatcher<bool> requirePo;
@@ -535,28 +535,28 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
   final ShippingServiceActions shippingService;
   final BuildStockOrderRestockPlanApiDisplayRuleActions displayRule;
 
-  _$BuildStockOrderRestockPlanApiRestockItemActions._(this.$options)
-      : $replace = $options.action<BuildStockOrderRestockPlanApiRestockItem>(
-            '\$replace', (a) => a?.$replace),
-        pickId = $options.field<String>('pickId', (a) => a?.pickId,
+  _$BuildStockOrderRestockPlanApiRestockItemActions._(this.options$)
+      : replace$ = options$.action<BuildStockOrderRestockPlanApiRestockItem>(
+            'replace\$', (a) => a?.replace$),
+        pickId = options$.field<String>('pickId', (a) => a?.pickId,
             (s) => s?.pickId, (p, b) => p?.pickId = b),
-        shouldRestock = $options.field<bool>(
+        shouldRestock = options$.field<bool>(
             'shouldRestock',
             (a) => a?.shouldRestock,
             (s) => s?.shouldRestock,
             (p, b) => p?.shouldRestock = b),
-        requirePo = $options.field<bool>('requirePo', (a) => a?.requirePo,
+        requirePo = options$.field<bool>('requirePo', (a) => a?.requirePo,
             (s) => s?.requirePo, (p, b) => p?.requirePo = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+        itemNumber = options$.field<String>('itemNumber', (a) => a?.itemNumber,
             (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        inventoryType = InventoryTypeActions(() => $options.stateful<
+        inventoryType = InventoryTypeActions(() => options$.stateful<
                 InventoryType, InventoryTypeBuilder, InventoryTypeActions>(
             'inventoryType',
             (a) => a.inventoryType,
@@ -564,13 +564,13 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
             (b) => b?.inventoryType,
             (parent, builder) => parent?.inventoryType = builder)),
         restockToLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'restockToLocation',
                 (a) => a.restockToLocation,
                 (s) => s?.restockToLocation,
                 (b) => b?.restockToLocation,
                 (parent, builder) => parent?.restockToLocation = builder)),
-        deliverToAddress = CustomerAddressActions(() => $options.stateful<
+        deliverToAddress = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -580,7 +580,7 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
             (b) => b?.deliverToAddress,
             (parent, builder) => parent?.deliverToAddress = builder)),
         deliverToAddressOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToAddressOverride',
                 (a) => a.deliverToAddressOverride,
                 (s) => s?.deliverToAddressOverride,
@@ -588,17 +588,17 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
         restockByDateType =
-            $options.field<BuildStockOrderRestockPlanApiRestockByDateType>(
+            options$.field<BuildStockOrderRestockPlanApiRestockByDateType>(
                 'restockByDateType',
                 (a) => a?.restockByDateType,
                 (s) => s?.restockByDateType,
                 (p, b) => p?.restockByDateType = b),
-        deliverByDate = $options.field<DateTime>(
+        deliverByDate = options$.field<DateTime>(
             'deliverByDate',
             (a) => a?.deliverByDate,
             (s) => s?.deliverByDate,
             (p, b) => p?.deliverByDate = b),
-        shippingService = ShippingServiceActions(() => $options.stateful<
+        shippingService = ShippingServiceActions(() => options$.stateful<
                 ShippingService,
                 ShippingServiceBuilder,
                 ShippingServiceActions>(
@@ -608,7 +608,7 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
             (b) => b?.shippingService,
             (parent, builder) => parent?.shippingService = builder)),
         displayRule = BuildStockOrderRestockPlanApiDisplayRuleActions(() =>
-            $options.stateful<
+            options$.stateful<
                     BuildStockOrderRestockPlanApiDisplayRule,
                     BuildStockOrderRestockPlanApiDisplayRuleBuilder,
                     BuildStockOrderRestockPlanApiDisplayRuleActions>(
@@ -624,16 +624,16 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
       _$BuildStockOrderRestockPlanApiRestockItemActions._(options());
 
   @override
-  BuildStockOrderRestockPlanApiRestockItem get $initial =>
+  BuildStockOrderRestockPlanApiRestockItem get initialState$ =>
       BuildStockOrderRestockPlanApiRestockItem();
 
   @override
-  BuildStockOrderRestockPlanApiRestockItemBuilder $newBuilder() =>
+  BuildStockOrderRestockPlanApiRestockItemBuilder newBuilder$() =>
       BuildStockOrderRestockPlanApiRestockItemBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.inventoryType,
         this.restockToLocation,
         this.deliverToAddress,
@@ -642,11 +642,11 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
         this.displayRule,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.pickId,
         this.shouldRestock,
         this.requirePo,
@@ -658,37 +658,32 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    pickId.$reducer(reducer);
-    shouldRestock.$reducer(reducer);
-    requirePo.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemNumber.$reducer(reducer);
-    description.$reducer(reducer);
-    inventoryType.$reducer(reducer);
-    restockToLocation.$reducer(reducer);
-    deliverToAddress.$reducer(reducer);
-    deliverToAddressOverride.$reducer(reducer);
-    restockByDateType.$reducer(reducer);
-    deliverByDate.$reducer(reducer);
-    shippingService.$reducer(reducer);
-    displayRule.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    pickId.reducer$(reducer);
+    shouldRestock.reducer$(reducer);
+    requirePo.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemNumber.reducer$(reducer);
+    description.reducer$(reducer);
+    inventoryType.reducer$(reducer);
+    restockToLocation.reducer$(reducer);
+    deliverToAddress.reducer$(reducer);
+    deliverToAddressOverride.reducer$(reducer);
+    restockByDateType.reducer$(reducer);
+    deliverByDate.reducer$(reducer);
+    shippingService.reducer$(reducer);
+    displayRule.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    inventoryType.$middleware(middleware);
-    restockToLocation.$middleware(middleware);
-    deliverToAddress.$middleware(middleware);
-    deliverToAddressOverride.$middleware(middleware);
-    shippingService.$middleware(middleware);
-    displayRule.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    inventoryType.middleware$(middleware);
+    restockToLocation.middleware$(middleware);
+    deliverToAddress.middleware$(middleware);
+    deliverToAddressOverride.middleware$(middleware);
+    shippingService.middleware$(middleware);
+    displayRule.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildStockOrderRestockPlanApiRestockItem);
 }

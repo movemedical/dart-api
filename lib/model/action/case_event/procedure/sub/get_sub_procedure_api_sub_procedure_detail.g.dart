@@ -299,9 +299,9 @@ class _$GetSubProcedureApiSubProcedureDetailActions
   final StatefulActionsOptions<
       GetSubProcedureApiSubProcedureDetail,
       GetSubProcedureApiSubProcedureDetailBuilder,
-      GetSubProcedureApiSubProcedureDetailActions> $options;
+      GetSubProcedureApiSubProcedureDetailActions> options$;
 
-  final ActionDispatcher<GetSubProcedureApiSubProcedureDetail> $replace;
+  final ActionDispatcher<GetSubProcedureApiSubProcedureDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> parentId;
   final FieldDispatcher<String> name;
@@ -310,25 +310,25 @@ class _$GetSubProcedureApiSubProcedureDetailActions
   final FieldDispatcher<bool> active;
   final FieldDispatcher<bool> allowDelete;
 
-  _$GetSubProcedureApiSubProcedureDetailActions._(this.$options)
-      : $replace = $options.action<GetSubProcedureApiSubProcedureDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetSubProcedureApiSubProcedureDetailActions._(this.options$)
+      : replace$ = options$.action<GetSubProcedureApiSubProcedureDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        parentId = $options.field<String>('parentId', (a) => a?.parentId,
+        parentId = options$.field<String>('parentId', (a) => a?.parentId,
             (s) => s?.parentId, (p, b) => p?.parentId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        icdCode = $options.field<String>('icdCode', (a) => a?.icdCode,
+        icdCode = options$.field<String>('icdCode', (a) => a?.icdCode,
             (s) => s?.icdCode, (p, b) => p?.icdCode = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        allowDelete = $options.field<bool>('allowDelete', (a) => a?.allowDelete,
+        allowDelete = options$.field<bool>('allowDelete', (a) => a?.allowDelete,
             (s) => s?.allowDelete, (p, b) => p?.allowDelete = b),
         super._();
 
@@ -337,18 +337,18 @@ class _$GetSubProcedureApiSubProcedureDetailActions
       _$GetSubProcedureApiSubProcedureDetailActions._(options());
 
   @override
-  GetSubProcedureApiSubProcedureDetail get $initial =>
+  GetSubProcedureApiSubProcedureDetail get initialState$ =>
       GetSubProcedureApiSubProcedureDetail();
 
   @override
-  GetSubProcedureApiSubProcedureDetailBuilder $newBuilder() =>
+  GetSubProcedureApiSubProcedureDetailBuilder newBuilder$() =>
       GetSubProcedureApiSubProcedureDetailBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.parentId,
         this.name,
@@ -359,24 +359,19 @@ class _$GetSubProcedureApiSubProcedureDetailActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    parentId.$reducer(reducer);
-    name.$reducer(reducer);
-    icdCode.$reducer(reducer);
-    description.$reducer(reducer);
-    active.$reducer(reducer);
-    allowDelete.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    parentId.reducer$(reducer);
+    name.reducer$(reducer);
+    icdCode.reducer$(reducer);
+    description.reducer$(reducer);
+    active.reducer$(reducer);
+    allowDelete.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetSubProcedureApiSubProcedureDetail);
 }

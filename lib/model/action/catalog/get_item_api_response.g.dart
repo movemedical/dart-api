@@ -352,9 +352,9 @@ typedef StatefulActionsOptions<GetItemApiResponse, GetItemApiResponseBuilder,
 
 class _$GetItemApiResponseActions extends GetItemApiResponseActions {
   final StatefulActionsOptions<GetItemApiResponse, GetItemApiResponseBuilder,
-      GetItemApiResponseActions> $options;
+      GetItemApiResponseActions> options$;
 
-  final ActionDispatcher<GetItemApiResponse> $replace;
+  final ActionDispatcher<GetItemApiResponse> replace$;
   final ItemActions item;
   final BizUnitActions bizUnit;
   final UnitOfMeasureActions unitOfMeasure;
@@ -365,43 +365,43 @@ class _$GetItemApiResponseActions extends GetItemApiResponseActions {
   final FieldDispatcher<bool> active;
   final GetItemApiDisplayRuleActions displayRule;
 
-  _$GetItemApiResponseActions._(this.$options)
-      : $replace = $options.action<GetItemApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$GetItemApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetItemApiResponse>(
+            'replace\$', (a) => a?.replace$),
         item = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'item',
                 (a) => a.item,
                 (s) => s?.item,
                 (b) => b?.item,
                 (parent, builder) => parent?.item = builder)),
         bizUnit = BizUnitActions(() =>
-            $options.stateful<BizUnit, BizUnitBuilder, BizUnitActions>(
+            options$.stateful<BizUnit, BizUnitBuilder, BizUnitActions>(
                 'bizUnit',
                 (a) => a.bizUnit,
                 (s) => s?.bizUnit,
                 (b) => b?.bizUnit,
                 (parent, builder) => parent?.bizUnit = builder)),
-        unitOfMeasure = UnitOfMeasureActions(() => $options.stateful<
+        unitOfMeasure = UnitOfMeasureActions(() => options$.stateful<
                 UnitOfMeasure, UnitOfMeasureBuilder, UnitOfMeasureActions>(
             'unitOfMeasure',
             (a) => a.unitOfMeasure,
             (s) => s?.unitOfMeasure,
             (b) => b?.unitOfMeasure,
             (parent, builder) => parent?.unitOfMeasure = builder)),
-        versions = $options.field<BuiltList<ItemVersion>>('versions',
+        versions = options$.field<BuiltList<ItemVersion>>('versions',
             (a) => a?.versions, (s) => s?.versions, (p, b) => p?.versions = b),
-        gtins = $options.field<BuiltList<String>>(
+        gtins = options$.field<BuiltList<String>>(
             'gtins', (a) => a?.gtins, (s) => s?.gtins, (p, b) => p?.gtins = b),
         itemAttributes =
-            $options.field<BuiltList<ListAttributesForItemApiItemAttribute>>(
+            options$.field<BuiltList<ListAttributesForItemApiItemAttribute>>(
                 'itemAttributes',
                 (a) => a?.itemAttributes,
                 (s) => s?.itemAttributes,
                 (p, b) => p?.itemAttributes = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        displayRule = GetItemApiDisplayRuleActions(() => $options.stateful<
+        displayRule = GetItemApiDisplayRuleActions(() => options$.stateful<
                 GetItemApiDisplayRule,
                 GetItemApiDisplayRuleBuilder,
                 GetItemApiDisplayRuleActions>(
@@ -417,25 +417,25 @@ class _$GetItemApiResponseActions extends GetItemApiResponseActions {
       _$GetItemApiResponseActions._(options());
 
   @override
-  GetItemApiResponse get $initial => GetItemApiResponse();
+  GetItemApiResponse get initialState$ => GetItemApiResponse();
 
   @override
-  GetItemApiResponseBuilder $newBuilder() => GetItemApiResponseBuilder();
+  GetItemApiResponseBuilder newBuilder$() => GetItemApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.item,
         this.bizUnit,
         this.unitOfMeasure,
         this.displayRule,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.versions,
         this.gtins,
         this.itemAttributes,
@@ -443,28 +443,24 @@ class _$GetItemApiResponseActions extends GetItemApiResponseActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    item.$reducer(reducer);
-    bizUnit.$reducer(reducer);
-    unitOfMeasure.$reducer(reducer);
-    versions.$reducer(reducer);
-    gtins.$reducer(reducer);
-    itemAttributes.$reducer(reducer);
-    active.$reducer(reducer);
-    displayRule.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    item.reducer$(reducer);
+    bizUnit.reducer$(reducer);
+    unitOfMeasure.reducer$(reducer);
+    versions.reducer$(reducer);
+    gtins.reducer$(reducer);
+    itemAttributes.reducer$(reducer);
+    active.reducer$(reducer);
+    displayRule.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    item.$middleware(middleware);
-    bizUnit.$middleware(middleware);
-    unitOfMeasure.$middleware(middleware);
-    displayRule.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    item.middleware$(middleware);
+    bizUnit.middleware$(middleware);
+    unitOfMeasure.middleware$(middleware);
+    displayRule.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetItemApiResponse);
 }

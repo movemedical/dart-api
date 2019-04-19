@@ -22,63 +22,29 @@ class _$RemoveProcedureFromBizUnitApi extends RemoveProcedureFromBizUnitApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
           ApiResult<Nothing>>,
-      RemoveProcedureFromBizUnitApi> $options;
+      RemoveProcedureFromBizUnitApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Nothing>, RemoveProcedureFromBizUnitApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Nothing>,
-          RemoveProcedureFromBizUnitApi,
-          Command<ApiCommand<RemoveProcedureFromBizUnitApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Nothing>,
-          RemoveProcedureFromBizUnitApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Nothing>,
-          RemoveProcedureFromBizUnitApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<RemoveProcedureFromBizUnitApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RemoveProcedureFromBizUnitApi._(this.$options)
-      : $replace = $options.action<
+  _$RemoveProcedureFromBizUnitApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-                ApiResult<Nothing>,
-                RemoveProcedureFromBizUnitApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-                    ApiResult<Nothing>,
-                    RemoveProcedureFromBizUnitApi,
-                    Command<ApiCommand<RemoveProcedureFromBizUnitApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-                    ApiResult<Nothing>,
-                    RemoveProcedureFromBizUnitApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-                ApiResult<Nothing>,
-                RemoveProcedureFromBizUnitApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<RemoveProcedureFromBizUnitApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RemoveProcedureFromBizUnitApi(
@@ -88,33 +54,26 @@ class _$RemoveProcedureFromBizUnitApi extends RemoveProcedureFromBizUnitApi {
   @override
   CommandState<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RemoveProcedureFromBizUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

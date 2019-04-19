@@ -393,9 +393,9 @@ class _$GetShipmentApiDisplayRuleActions
   final StatefulActionsOptions<
       GetShipmentApiDisplayRule,
       GetShipmentApiDisplayRuleBuilder,
-      GetShipmentApiDisplayRuleActions> $options;
+      GetShipmentApiDisplayRuleActions> options$;
 
-  final ActionDispatcher<GetShipmentApiDisplayRule> $replace;
+  final ActionDispatcher<GetShipmentApiDisplayRule> replace$;
   final FieldDispatcher<bool> cancel;
   final FieldDispatcher<bool> release;
   final FieldDispatcher<bool> processPicks;
@@ -408,48 +408,48 @@ class _$GetShipmentApiDisplayRuleActions
   final FieldDispatcher<bool> autoComplete;
   final FieldDispatcher<bool> deliverAndConfirm;
 
-  _$GetShipmentApiDisplayRuleActions._(this.$options)
-      : $replace = $options.action<GetShipmentApiDisplayRule>(
-            '\$replace', (a) => a?.$replace),
-        cancel = $options.field<bool>('cancel', (a) => a?.cancel,
+  _$GetShipmentApiDisplayRuleActions._(this.options$)
+      : replace$ = options$.action<GetShipmentApiDisplayRule>(
+            'replace\$', (a) => a?.replace$),
+        cancel = options$.field<bool>('cancel', (a) => a?.cancel,
             (s) => s?.cancel, (p, b) => p?.cancel = b),
-        release = $options.field<bool>('release', (a) => a?.release,
+        release = options$.field<bool>('release', (a) => a?.release,
             (s) => s?.release, (p, b) => p?.release = b),
-        processPicks = $options.field<bool>(
+        processPicks = options$.field<bool>(
             'processPicks',
             (a) => a?.processPicks,
             (s) => s?.processPicks,
             (p, b) => p?.processPicks = b),
-        printPackingList = $options.field<bool>(
+        printPackingList = options$.field<bool>(
             'printPackingList',
             (a) => a?.printPackingList,
             (s) => s?.printPackingList,
             (p, b) => p?.printPackingList = b),
-        receiveShipment = $options.field<bool>(
+        receiveShipment = options$.field<bool>(
             'receiveShipment',
             (a) => a?.receiveShipment,
             (s) => s?.receiveShipment,
             (p, b) => p?.receiveShipment = b),
-        assignPick = $options.field<bool>('assignPick', (a) => a?.assignPick,
+        assignPick = options$.field<bool>('assignPick', (a) => a?.assignPick,
             (s) => s?.assignPick, (p, b) => p?.assignPick = b),
-        cancelPick = $options.field<bool>('cancelPick', (a) => a?.cancelPick,
+        cancelPick = options$.field<bool>('cancelPick', (a) => a?.cancelPick,
             (s) => s?.cancelPick, (p, b) => p?.cancelPick = b),
-        updateErpReference = $options.field<bool>(
+        updateErpReference = options$.field<bool>(
             'updateErpReference',
             (a) => a?.updateErpReference,
             (s) => s?.updateErpReference,
             (p, b) => p?.updateErpReference = b),
-        updateShipmentDetails = $options.field<bool>(
+        updateShipmentDetails = options$.field<bool>(
             'updateShipmentDetails',
             (a) => a?.updateShipmentDetails,
             (s) => s?.updateShipmentDetails,
             (p, b) => p?.updateShipmentDetails = b),
-        autoComplete = $options.field<bool>(
+        autoComplete = options$.field<bool>(
             'autoComplete',
             (a) => a?.autoComplete,
             (s) => s?.autoComplete,
             (p, b) => p?.autoComplete = b),
-        deliverAndConfirm = $options.field<bool>(
+        deliverAndConfirm = options$.field<bool>(
             'deliverAndConfirm',
             (a) => a?.deliverAndConfirm,
             (s) => s?.deliverAndConfirm,
@@ -461,17 +461,17 @@ class _$GetShipmentApiDisplayRuleActions
       _$GetShipmentApiDisplayRuleActions._(options());
 
   @override
-  GetShipmentApiDisplayRule get $initial => GetShipmentApiDisplayRule();
+  GetShipmentApiDisplayRule get initialState$ => GetShipmentApiDisplayRule();
 
   @override
-  GetShipmentApiDisplayRuleBuilder $newBuilder() =>
+  GetShipmentApiDisplayRuleBuilder newBuilder$() =>
       GetShipmentApiDisplayRuleBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.cancel,
         this.release,
         this.processPicks,
@@ -486,27 +486,23 @@ class _$GetShipmentApiDisplayRuleActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    cancel.$reducer(reducer);
-    release.$reducer(reducer);
-    processPicks.$reducer(reducer);
-    printPackingList.$reducer(reducer);
-    receiveShipment.$reducer(reducer);
-    assignPick.$reducer(reducer);
-    cancelPick.$reducer(reducer);
-    updateErpReference.$reducer(reducer);
-    updateShipmentDetails.$reducer(reducer);
-    autoComplete.$reducer(reducer);
-    deliverAndConfirm.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    cancel.reducer$(reducer);
+    release.reducer$(reducer);
+    processPicks.reducer$(reducer);
+    printPackingList.reducer$(reducer);
+    receiveShipment.reducer$(reducer);
+    assignPick.reducer$(reducer);
+    cancelPick.reducer$(reducer);
+    updateErpReference.reducer$(reducer);
+    updateShipmentDetails.reducer$(reducer);
+    autoComplete.reducer$(reducer);
+    deliverAndConfirm.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetShipmentApiDisplayRule);
 }

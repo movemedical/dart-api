@@ -178,15 +178,15 @@ class _$CreateAuditEntriesApiResponseActions
   final StatefulActionsOptions<
       CreateAuditEntriesApiResponse,
       CreateAuditEntriesApiResponseBuilder,
-      CreateAuditEntriesApiResponseActions> $options;
+      CreateAuditEntriesApiResponseActions> options$;
 
-  final ActionDispatcher<CreateAuditEntriesApiResponse> $replace;
+  final ActionDispatcher<CreateAuditEntriesApiResponse> replace$;
   final FieldDispatcher<BuiltList<String>> failureReferences;
 
-  _$CreateAuditEntriesApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateAuditEntriesApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        failureReferences = $options.field<BuiltList<String>>(
+  _$CreateAuditEntriesApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateAuditEntriesApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        failureReferences = options$.field<BuiltList<String>>(
             'failureReferences',
             (a) => a?.failureReferences,
             (s) => s?.failureReferences,
@@ -198,33 +198,29 @@ class _$CreateAuditEntriesApiResponseActions
       _$CreateAuditEntriesApiResponseActions._(options());
 
   @override
-  CreateAuditEntriesApiResponse get $initial => CreateAuditEntriesApiResponse();
+  CreateAuditEntriesApiResponse get initialState$ =>
+      CreateAuditEntriesApiResponse();
 
   @override
-  CreateAuditEntriesApiResponseBuilder $newBuilder() =>
+  CreateAuditEntriesApiResponseBuilder newBuilder$() =>
       CreateAuditEntriesApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.failureReferences,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    failureReferences.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    failureReferences.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateAuditEntriesApiResponse);
 }

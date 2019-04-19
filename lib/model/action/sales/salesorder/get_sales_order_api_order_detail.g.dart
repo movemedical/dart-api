@@ -949,9 +949,9 @@ class _$GetSalesOrderApiOrderDetailActions
   final StatefulActionsOptions<
       GetSalesOrderApiOrderDetail,
       GetSalesOrderApiOrderDetailBuilder,
-      GetSalesOrderApiOrderDetailActions> $options;
+      GetSalesOrderApiOrderDetailActions> options$;
 
-  final ActionDispatcher<GetSalesOrderApiOrderDetail> $replace;
+  final ActionDispatcher<GetSalesOrderApiOrderDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> orderNumber;
   final FieldDispatcher<DateTime> createdDate;
@@ -986,77 +986,77 @@ class _$GetSalesOrderApiOrderDetailActions
   final FieldDispatcher<String> lastWebServiceLogId;
   final ShippingServiceActions shippingService;
 
-  _$GetSalesOrderApiOrderDetailActions._(this.$options)
-      : $replace = $options.action<GetSalesOrderApiOrderDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetSalesOrderApiOrderDetailActions._(this.options$)
+      : replace$ = options$.action<GetSalesOrderApiOrderDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orderNumber = $options.field<int>('orderNumber', (a) => a?.orderNumber,
+        orderNumber = options$.field<int>('orderNumber', (a) => a?.orderNumber,
             (s) => s?.orderNumber, (p, b) => p?.orderNumber = b),
-        createdDate = $options.field<DateTime>(
+        createdDate = options$.field<DateTime>(
             'createdDate',
             (a) => a?.createdDate,
             (s) => s?.createdDate,
             (p, b) => p?.createdDate = b),
-        createdBy = $options.field<String>('createdBy', (a) => a?.createdBy,
+        createdBy = options$.field<String>('createdBy', (a) => a?.createdBy,
             (s) => s?.createdBy, (p, b) => p?.createdBy = b),
-        status = $options.field<OrderStatus>('status', (a) => a?.status,
+        status = options$.field<OrderStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        email = $options.field<String>(
+        email = options$.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        attention = $options.field<String>('attention', (a) => a?.attention,
+        attention = options$.field<String>('attention', (a) => a?.attention,
             (s) => s?.attention, (p, b) => p?.attention = b),
-        orderReason = OrderReasonActions(() => $options
+        orderReason = OrderReasonActions(() => options$
             .stateful<OrderReason, OrderReasonBuilder, OrderReasonActions>(
                 'orderReason',
                 (a) => a.orderReason,
                 (s) => s?.orderReason,
                 (b) => b?.orderReason,
                 (parent, builder) => parent?.orderReason = builder)),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
         location = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
         deliveryWindow = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'deliveryWindow',
                 (a) => a.deliveryWindow,
                 (s) => s?.deliveryWindow,
                 (b) => b?.deliveryWindow,
                 (parent, builder) => parent?.deliveryWindow = builder)),
-        sourceStartDate = $options.field<DateTime>(
+        sourceStartDate = options$.field<DateTime>(
             'sourceStartDate',
             (a) => a?.sourceStartDate,
             (s) => s?.sourceStartDate,
             (p, b) => p?.sourceStartDate = b),
         opsOrgUnit = OrgUnitActions(() =>
-            $options.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
+            options$.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
                 'opsOrgUnit',
                 (a) => a.opsOrgUnit,
                 (s) => s?.opsOrgUnit,
                 (b) => b?.opsOrgUnit,
                 (parent, builder) => parent?.opsOrgUnit = builder)),
         salesOrgUnit = OrgUnitActions(() =>
-            $options.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
+            options$.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
                 'salesOrgUnit',
                 (a) => a.salesOrgUnit,
                 (s) => s?.salesOrgUnit,
                 (b) => b?.salesOrgUnit,
                 (parent, builder) => parent?.salesOrgUnit = builder)),
-        restockOrders = $options.field<BuiltList<OrderHeaderLite>>(
+        restockOrders = options$.field<BuiltList<OrderHeaderLite>>(
             'restockOrders',
             (a) => a?.restockOrders,
             (s) => s?.restockOrders,
             (p, b) => p?.restockOrders = b),
-        caseEvent = GetSalesOrderApiCaseEventActions(() => $options.stateful<
+        caseEvent = GetSalesOrderApiCaseEventActions(() => options$.stateful<
                 GetSalesOrderApiCaseEvent,
                 GetSalesOrderApiCaseEventBuilder,
                 GetSalesOrderApiCaseEventActions>(
@@ -1065,7 +1065,7 @@ class _$GetSalesOrderApiOrderDetailActions
             (s) => s?.caseEvent,
             (b) => b?.caseEvent,
             (parent, builder) => parent?.caseEvent = builder)),
-        shipToAddress = CustomerAddressActions(() => $options.stateful<
+        shipToAddress = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -1074,7 +1074,7 @@ class _$GetSalesOrderApiOrderDetailActions
             (s) => s?.shipToAddress,
             (b) => b?.shipToAddress,
             (parent, builder) => parent?.shipToAddress = builder)),
-        billToAddress = CustomerAddressActions(() => $options.stateful<
+        billToAddress = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -1083,7 +1083,7 @@ class _$GetSalesOrderApiOrderDetailActions
             (s) => s?.billToAddress,
             (b) => b?.billToAddress,
             (parent, builder) => parent?.billToAddress = builder)),
-        deliverToAddress = CustomerAddressActions(() => $options.stateful<
+        deliverToAddress = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -1093,20 +1093,20 @@ class _$GetSalesOrderApiOrderDetailActions
             (b) => b?.deliverToAddress,
             (parent, builder) => parent?.deliverToAddress = builder)),
         physician = PhysicianActions(() =>
-            $options.stateful<Physician, PhysicianBuilder, PhysicianActions>(
+            options$.stateful<Physician, PhysicianBuilder, PhysicianActions>(
                 'physician',
                 (a) => a.physician,
                 (s) => s?.physician,
                 (b) => b?.physician,
                 (parent, builder) => parent?.physician = builder)),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        erpReference = $options.field<String>(
+        erpReference = options$.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
-        toInventoryType = InventoryTypeActions(() => $options.stateful<
+        toInventoryType = InventoryTypeActions(() => options$.stateful<
                 InventoryType, InventoryTypeBuilder, InventoryTypeActions>(
             'toInventoryType',
             (a) => a.toInventoryType,
@@ -1114,13 +1114,13 @@ class _$GetSalesOrderApiOrderDetailActions
             (b) => b?.toInventoryType,
             (parent, builder) => parent?.toInventoryType = builder)),
         toHomeLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'toHomeLocation',
                 (a) => a.toHomeLocation,
                 (s) => s?.toHomeLocation,
                 (b) => b?.toHomeLocation,
                 (parent, builder) => parent?.toHomeLocation = builder)),
-        toResponsibleParty = ResponsiblePartyActions(() => $options.stateful<
+        toResponsibleParty = ResponsiblePartyActions(() => options$.stateful<
                 ResponsibleParty,
                 ResponsiblePartyBuilder,
                 ResponsiblePartyActions>(
@@ -1129,15 +1129,15 @@ class _$GetSalesOrderApiOrderDetailActions
             (s) => s?.toResponsibleParty,
             (b) => b?.toResponsibleParty,
             (parent, builder) => parent?.toResponsibleParty = builder)),
-        grandTotal = $options.field<double>('grandTotal', (a) => a?.grandTotal,
+        grandTotal = options$.field<double>('grandTotal', (a) => a?.grandTotal,
             (s) => s?.grandTotal, (p, b) => p?.grandTotal = b),
-        itemQuantity = $options.field<int>(
+        itemQuantity = options$.field<int>(
             'itemQuantity',
             (a) => a?.itemQuantity,
             (s) => s?.itemQuantity,
             (p, b) => p?.itemQuantity = b),
         customer = GetSalesOrderApiCustomerDetailActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetSalesOrderApiCustomerDetail,
                     GetSalesOrderApiCustomerDetailBuilder,
                     GetSalesOrderApiCustomerDetailActions>(
@@ -1147,23 +1147,23 @@ class _$GetSalesOrderApiOrderDetailActions
                 (b) => b?.customer,
                 (parent, builder) => parent?.customer = builder)),
         validationMessages =
-            $options.field<BuiltList<GetSalesOrderApiValidationMsg>>(
+            options$.field<BuiltList<GetSalesOrderApiValidationMsg>>(
                 'validationMessages',
                 (a) => a?.validationMessages,
                 (s) => s?.validationMessages,
                 (p, b) => p?.validationMessages = b),
-        hcr = HcrActions(() => $options.stateful<Hcr, HcrBuilder, HcrActions>(
+        hcr = HcrActions(() => options$.stateful<Hcr, HcrBuilder, HcrActions>(
             'hcr',
             (a) => a.hcr,
             (s) => s?.hcr,
             (b) => b?.hcr,
             (parent, builder) => parent?.hcr = builder)),
-        lastWebServiceLogId = $options.field<String>(
+        lastWebServiceLogId = options$.field<String>(
             'lastWebServiceLogId',
             (a) => a?.lastWebServiceLogId,
             (s) => s?.lastWebServiceLogId,
             (p, b) => p?.lastWebServiceLogId = b),
-        shippingService = ShippingServiceActions(() => $options.stateful<
+        shippingService = ShippingServiceActions(() => options$.stateful<
                 ShippingService,
                 ShippingServiceBuilder,
                 ShippingServiceActions>(
@@ -1179,15 +1179,16 @@ class _$GetSalesOrderApiOrderDetailActions
       _$GetSalesOrderApiOrderDetailActions._(options());
 
   @override
-  GetSalesOrderApiOrderDetail get $initial => GetSalesOrderApiOrderDetail();
+  GetSalesOrderApiOrderDetail get initialState$ =>
+      GetSalesOrderApiOrderDetail();
 
   @override
-  GetSalesOrderApiOrderDetailBuilder $newBuilder() =>
+  GetSalesOrderApiOrderDetailBuilder newBuilder$() =>
       GetSalesOrderApiOrderDetailBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.orderReason,
         this.location,
         this.deliveryWindow,
@@ -1206,11 +1207,11 @@ class _$GetSalesOrderApiOrderDetailActions
         this.shippingService,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orderNumber,
         this.createdDate,
@@ -1230,65 +1231,60 @@ class _$GetSalesOrderApiOrderDetailActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orderNumber.$reducer(reducer);
-    createdDate.$reducer(reducer);
-    createdBy.$reducer(reducer);
-    status.$reducer(reducer);
-    email.$reducer(reducer);
-    attention.$reducer(reducer);
-    orderReason.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    location.$reducer(reducer);
-    deliveryWindow.$reducer(reducer);
-    sourceStartDate.$reducer(reducer);
-    opsOrgUnit.$reducer(reducer);
-    salesOrgUnit.$reducer(reducer);
-    restockOrders.$reducer(reducer);
-    caseEvent.$reducer(reducer);
-    shipToAddress.$reducer(reducer);
-    billToAddress.$reducer(reducer);
-    deliverToAddress.$reducer(reducer);
-    physician.$reducer(reducer);
-    poNumber.$reducer(reducer);
-    erpReference.$reducer(reducer);
-    toInventoryType.$reducer(reducer);
-    toHomeLocation.$reducer(reducer);
-    toResponsibleParty.$reducer(reducer);
-    grandTotal.$reducer(reducer);
-    itemQuantity.$reducer(reducer);
-    customer.$reducer(reducer);
-    validationMessages.$reducer(reducer);
-    hcr.$reducer(reducer);
-    lastWebServiceLogId.$reducer(reducer);
-    shippingService.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orderNumber.reducer$(reducer);
+    createdDate.reducer$(reducer);
+    createdBy.reducer$(reducer);
+    status.reducer$(reducer);
+    email.reducer$(reducer);
+    attention.reducer$(reducer);
+    orderReason.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    location.reducer$(reducer);
+    deliveryWindow.reducer$(reducer);
+    sourceStartDate.reducer$(reducer);
+    opsOrgUnit.reducer$(reducer);
+    salesOrgUnit.reducer$(reducer);
+    restockOrders.reducer$(reducer);
+    caseEvent.reducer$(reducer);
+    shipToAddress.reducer$(reducer);
+    billToAddress.reducer$(reducer);
+    deliverToAddress.reducer$(reducer);
+    physician.reducer$(reducer);
+    poNumber.reducer$(reducer);
+    erpReference.reducer$(reducer);
+    toInventoryType.reducer$(reducer);
+    toHomeLocation.reducer$(reducer);
+    toResponsibleParty.reducer$(reducer);
+    grandTotal.reducer$(reducer);
+    itemQuantity.reducer$(reducer);
+    customer.reducer$(reducer);
+    validationMessages.reducer$(reducer);
+    hcr.reducer$(reducer);
+    lastWebServiceLogId.reducer$(reducer);
+    shippingService.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    orderReason.$middleware(middleware);
-    location.$middleware(middleware);
-    deliveryWindow.$middleware(middleware);
-    opsOrgUnit.$middleware(middleware);
-    salesOrgUnit.$middleware(middleware);
-    caseEvent.$middleware(middleware);
-    shipToAddress.$middleware(middleware);
-    billToAddress.$middleware(middleware);
-    deliverToAddress.$middleware(middleware);
-    physician.$middleware(middleware);
-    toInventoryType.$middleware(middleware);
-    toHomeLocation.$middleware(middleware);
-    toResponsibleParty.$middleware(middleware);
-    customer.$middleware(middleware);
-    hcr.$middleware(middleware);
-    shippingService.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    orderReason.middleware$(middleware);
+    location.middleware$(middleware);
+    deliveryWindow.middleware$(middleware);
+    opsOrgUnit.middleware$(middleware);
+    salesOrgUnit.middleware$(middleware);
+    caseEvent.middleware$(middleware);
+    shipToAddress.middleware$(middleware);
+    billToAddress.middleware$(middleware);
+    deliverToAddress.middleware$(middleware);
+    physician.middleware$(middleware);
+    toInventoryType.middleware$(middleware);
+    toHomeLocation.middleware$(middleware);
+    toResponsibleParty.middleware$(middleware);
+    customer.middleware$(middleware);
+    hcr.middleware$(middleware);
+    shippingService.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetSalesOrderApiOrderDetail);
 }

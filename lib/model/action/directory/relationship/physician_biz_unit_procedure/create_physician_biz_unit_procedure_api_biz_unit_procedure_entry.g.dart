@@ -195,21 +195,21 @@ class _$CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntryActions
   final StatefulActionsOptions<
       CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry,
       CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntryBuilder,
-      CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntryActions> $options;
+      CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntryActions> options$;
 
   final ActionDispatcher<
-      CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry> $replace;
+      CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry> replace$;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> procedureId;
 
   _$CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntryActions._(
-      this.$options)
-      : $replace = $options
+      this.options$)
+      : replace$ = options$
             .action<CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry>(
-                '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+                'replace\$', (a) => a?.replace$),
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
@@ -223,37 +223,32 @@ class _$CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntryActions
           ._(options());
 
   @override
-  CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry get $initial =>
+  CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry get initialState$ =>
       CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry();
 
   @override
   CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntryBuilder
-      $newBuilder() =>
+      newBuilder$() =>
           CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntryBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.bizUnitId,
         this.procedureId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    procedureId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    procedureId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry);
 }

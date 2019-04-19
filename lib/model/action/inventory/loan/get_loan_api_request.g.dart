@@ -163,18 +163,18 @@ typedef StatefulActionsOptions<GetLoanApiRequest, GetLoanApiRequestBuilder,
 
 class _$GetLoanApiRequestActions extends GetLoanApiRequestActions {
   final StatefulActionsOptions<GetLoanApiRequest, GetLoanApiRequestBuilder,
-      GetLoanApiRequestActions> $options;
+      GetLoanApiRequestActions> options$;
 
-  final ActionDispatcher<GetLoanApiRequest> $replace;
+  final ActionDispatcher<GetLoanApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<bool> skipPresence;
 
-  _$GetLoanApiRequestActions._(this.$options)
-      : $replace =
-            $options.action<GetLoanApiRequest>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetLoanApiRequestActions._(this.options$)
+      : replace$ =
+            options$.action<GetLoanApiRequest>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        skipPresence = $options.field<bool>(
+        skipPresence = options$.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -185,33 +185,29 @@ class _$GetLoanApiRequestActions extends GetLoanApiRequestActions {
       _$GetLoanApiRequestActions._(options());
 
   @override
-  GetLoanApiRequest get $initial => GetLoanApiRequest();
+  GetLoanApiRequest get initialState$ => GetLoanApiRequest();
 
   @override
-  GetLoanApiRequestBuilder $newBuilder() => GetLoanApiRequestBuilder();
+  GetLoanApiRequestBuilder newBuilder$() => GetLoanApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.skipPresence,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    skipPresence.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    skipPresence.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetLoanApiRequest);
 }

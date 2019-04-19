@@ -414,9 +414,9 @@ class _$BuildInspectionApiReceiptActions
   final StatefulActionsOptions<
       BuildInspectionApiReceipt,
       BuildInspectionApiReceiptBuilder,
-      BuildInspectionApiReceiptActions> $options;
+      BuildInspectionApiReceiptActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiReceipt> $replace;
+  final ActionDispatcher<BuildInspectionApiReceipt> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> order;
   final FieldDispatcher<BuildInspectionApiReceiptType> type;
@@ -428,27 +428,27 @@ class _$BuildInspectionApiReceiptActions
   final BuildInspectionApiKitDataActions kitInspectionData;
   final BuildInspectionApiTrayDataActions trayInspectionData;
 
-  _$BuildInspectionApiReceiptActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiReceipt>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BuildInspectionApiReceiptActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiReceipt>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        order = $options.field<int>(
+        order = options$.field<int>(
             'order', (a) => a?.order, (s) => s?.order, (p, b) => p?.order = b),
-        type = $options.field<BuildInspectionApiReceiptType>(
+        type = options$.field<BuildInspectionApiReceiptType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        receiveIntoBinId = $options.field<String>(
+        receiveIntoBinId = options$.field<String>(
             'receiveIntoBinId',
             (a) => a?.receiveIntoBinId,
             (s) => s?.receiveIntoBinId,
             (p, b) => p?.receiveIntoBinId = b),
-        allowLostOption = $options.field<bool>(
+        allowLostOption = options$.field<bool>(
             'allowLostOption',
             (a) => a?.allowLostOption,
             (s) => s?.allowLostOption,
             (p, b) => p?.allowLostOption = b),
         shipmentReceiptData = BuildInspectionApiShipmentReceiptDataActions(() =>
-            $options.stateful<
+            options$.stateful<
                     BuildInspectionApiShipmentReceiptData,
                     BuildInspectionApiShipmentReceiptDataBuilder,
                     BuildInspectionApiShipmentReceiptDataActions>(
@@ -458,7 +458,7 @@ class _$BuildInspectionApiReceiptActions
                 (b) => b?.shipmentReceiptData,
                 (parent, builder) => parent?.shipmentReceiptData = builder)),
         loanReceiptData = BuildInspectionApiLoanReceiptDataActions(() =>
-            $options.stateful<
+            options$.stateful<
                     BuildInspectionApiLoanReceiptData,
                     BuildInspectionApiLoanReceiptDataBuilder,
                     BuildInspectionApiLoanReceiptDataActions>(
@@ -468,7 +468,7 @@ class _$BuildInspectionApiReceiptActions
                 (b) => b?.loanReceiptData,
                 (parent, builder) => parent?.loanReceiptData = builder)),
         locationReceiptData = BuildInspectionApiLocationReceiptDataActions(() =>
-            $options.stateful<
+            options$.stateful<
                     BuildInspectionApiLocationReceiptData,
                     BuildInspectionApiLocationReceiptDataBuilder,
                     BuildInspectionApiLocationReceiptDataActions>(
@@ -478,7 +478,7 @@ class _$BuildInspectionApiReceiptActions
                 (b) => b?.locationReceiptData,
                 (parent, builder) => parent?.locationReceiptData = builder)),
         kitInspectionData = BuildInspectionApiKitDataActions(() =>
-            $options.stateful<
+            options$.stateful<
                     BuildInspectionApiKitData,
                     BuildInspectionApiKitDataBuilder,
                     BuildInspectionApiKitDataActions>(
@@ -488,7 +488,7 @@ class _$BuildInspectionApiReceiptActions
                 (b) => b?.kitInspectionData,
                 (parent, builder) => parent?.kitInspectionData = builder)),
         trayInspectionData = BuildInspectionApiTrayDataActions(() =>
-            $options.stateful<
+            options$.stateful<
                     BuildInspectionApiTrayData,
                     BuildInspectionApiTrayDataBuilder,
                     BuildInspectionApiTrayDataActions>(
@@ -504,15 +504,15 @@ class _$BuildInspectionApiReceiptActions
       _$BuildInspectionApiReceiptActions._(options());
 
   @override
-  BuildInspectionApiReceipt get $initial => BuildInspectionApiReceipt();
+  BuildInspectionApiReceipt get initialState$ => BuildInspectionApiReceipt();
 
   @override
-  BuildInspectionApiReceiptBuilder $newBuilder() =>
+  BuildInspectionApiReceiptBuilder newBuilder$() =>
       BuildInspectionApiReceiptBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.shipmentReceiptData,
         this.loanReceiptData,
         this.locationReceiptData,
@@ -520,11 +520,11 @@ class _$BuildInspectionApiReceiptActions
         this.trayInspectionData,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.order,
         this.type,
@@ -533,31 +533,27 @@ class _$BuildInspectionApiReceiptActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    order.$reducer(reducer);
-    type.$reducer(reducer);
-    receiveIntoBinId.$reducer(reducer);
-    allowLostOption.$reducer(reducer);
-    shipmentReceiptData.$reducer(reducer);
-    loanReceiptData.$reducer(reducer);
-    locationReceiptData.$reducer(reducer);
-    kitInspectionData.$reducer(reducer);
-    trayInspectionData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    order.reducer$(reducer);
+    type.reducer$(reducer);
+    receiveIntoBinId.reducer$(reducer);
+    allowLostOption.reducer$(reducer);
+    shipmentReceiptData.reducer$(reducer);
+    loanReceiptData.reducer$(reducer);
+    locationReceiptData.reducer$(reducer);
+    kitInspectionData.reducer$(reducer);
+    trayInspectionData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    shipmentReceiptData.$middleware(middleware);
-    loanReceiptData.$middleware(middleware);
-    locationReceiptData.$middleware(middleware);
-    kitInspectionData.$middleware(middleware);
-    trayInspectionData.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    shipmentReceiptData.middleware$(middleware);
+    loanReceiptData.middleware$(middleware);
+    locationReceiptData.middleware$(middleware);
+    kitInspectionData.middleware$(middleware);
+    trayInspectionData.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(BuildInspectionApiReceipt);
 }

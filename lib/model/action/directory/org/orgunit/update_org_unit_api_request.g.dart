@@ -402,9 +402,9 @@ typedef StatefulActionsOptions<
 
 class _$UpdateOrgUnitApiRequestActions extends UpdateOrgUnitApiRequestActions {
   final StatefulActionsOptions<UpdateOrgUnitApiRequest,
-      UpdateOrgUnitApiRequestBuilder, UpdateOrgUnitApiRequestActions> $options;
+      UpdateOrgUnitApiRequestBuilder, UpdateOrgUnitApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateOrgUnitApiRequest> $replace;
+  final ActionDispatcher<UpdateOrgUnitApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> reference;
   final FieldDispatcher<String> name;
@@ -417,50 +417,50 @@ class _$UpdateOrgUnitApiRequestActions extends UpdateOrgUnitApiRequestActions {
   final FieldDispatcher<bool> allowMixedInventoryTypeUsage;
   final FieldDispatcher<String> opsOrgUnitId;
 
-  _$UpdateOrgUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateOrgUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdateOrgUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateOrgUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        fulfillmentLeadTimeHours = $options.field<int>(
+        fulfillmentLeadTimeHours = options$.field<int>(
             'fulfillmentLeadTimeHours',
             (a) => a?.fulfillmentLeadTimeHours,
             (s) => s?.fulfillmentLeadTimeHours,
             (p, b) => p?.fulfillmentLeadTimeHours = b),
-        requirementsLeadTimeHours = $options.field<int>(
+        requirementsLeadTimeHours = options$.field<int>(
             'requirementsLeadTimeHours',
             (a) => a?.requirementsLeadTimeHours,
             (s) => s?.requirementsLeadTimeHours,
             (p, b) => p?.requirementsLeadTimeHours = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        allowRemoteUsage = $options.field<bool>(
+        allowRemoteUsage = options$.field<bool>(
             'allowRemoteUsage',
             (a) => a?.allowRemoteUsage,
             (s) => s?.allowRemoteUsage,
             (p, b) => p?.allowRemoteUsage = b),
-        allowMixedInventoryTypeUsage = $options.field<bool>(
+        allowMixedInventoryTypeUsage = options$.field<bool>(
             'allowMixedInventoryTypeUsage',
             (a) => a?.allowMixedInventoryTypeUsage,
             (s) => s?.allowMixedInventoryTypeUsage,
             (p, b) => p?.allowMixedInventoryTypeUsage = b),
-        opsOrgUnitId = $options.field<String>(
+        opsOrgUnitId = options$.field<String>(
             'opsOrgUnitId',
             (a) => a?.opsOrgUnitId,
             (s) => s?.opsOrgUnitId,
@@ -472,23 +472,23 @@ class _$UpdateOrgUnitApiRequestActions extends UpdateOrgUnitApiRequestActions {
       _$UpdateOrgUnitApiRequestActions._(options());
 
   @override
-  UpdateOrgUnitApiRequest get $initial => UpdateOrgUnitApiRequest();
+  UpdateOrgUnitApiRequest get initialState$ => UpdateOrgUnitApiRequest();
 
   @override
-  UpdateOrgUnitApiRequestBuilder $newBuilder() =>
+  UpdateOrgUnitApiRequestBuilder newBuilder$() =>
       UpdateOrgUnitApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.reference,
         this.name,
@@ -502,28 +502,24 @@ class _$UpdateOrgUnitApiRequestActions extends UpdateOrgUnitApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    reference.$reducer(reducer);
-    name.$reducer(reducer);
-    email.$reducer(reducer);
-    description.$reducer(reducer);
-    fulfillmentLeadTimeHours.$reducer(reducer);
-    requirementsLeadTimeHours.$reducer(reducer);
-    active.$reducer(reducer);
-    allowRemoteUsage.$reducer(reducer);
-    allowMixedInventoryTypeUsage.$reducer(reducer);
-    opsOrgUnitId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    reference.reducer$(reducer);
+    name.reducer$(reducer);
+    email.reducer$(reducer);
+    description.reducer$(reducer);
+    fulfillmentLeadTimeHours.reducer$(reducer);
+    requirementsLeadTimeHours.reducer$(reducer);
+    active.reducer$(reducer);
+    allowRemoteUsage.reducer$(reducer);
+    allowMixedInventoryTypeUsage.reducer$(reducer);
+    opsOrgUnitId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(UpdateOrgUnitApiRequest);
 }

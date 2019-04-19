@@ -184,18 +184,18 @@ class _$ListUsersForIssueAssignmentApiDisplayUserActions
   final StatefulActionsOptions<
       ListUsersForIssueAssignmentApiDisplayUser,
       ListUsersForIssueAssignmentApiDisplayUserBuilder,
-      ListUsersForIssueAssignmentApiDisplayUserActions> $options;
+      ListUsersForIssueAssignmentApiDisplayUserActions> options$;
 
-  final ActionDispatcher<ListUsersForIssueAssignmentApiDisplayUser> $replace;
+  final ActionDispatcher<ListUsersForIssueAssignmentApiDisplayUser> replace$;
   final FieldDispatcher<String> userId;
   final FieldDispatcher<String> name;
 
-  _$ListUsersForIssueAssignmentApiDisplayUserActions._(this.$options)
-      : $replace = $options.action<ListUsersForIssueAssignmentApiDisplayUser>(
-            '\$replace', (a) => a?.$replace),
-        userId = $options.field<String>('userId', (a) => a?.userId,
+  _$ListUsersForIssueAssignmentApiDisplayUserActions._(this.options$)
+      : replace$ = options$.action<ListUsersForIssueAssignmentApiDisplayUser>(
+            'replace\$', (a) => a?.replace$),
+        userId = options$.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         super._();
 
@@ -204,36 +204,31 @@ class _$ListUsersForIssueAssignmentApiDisplayUserActions
       _$ListUsersForIssueAssignmentApiDisplayUserActions._(options());
 
   @override
-  ListUsersForIssueAssignmentApiDisplayUser get $initial =>
+  ListUsersForIssueAssignmentApiDisplayUser get initialState$ =>
       ListUsersForIssueAssignmentApiDisplayUser();
 
   @override
-  ListUsersForIssueAssignmentApiDisplayUserBuilder $newBuilder() =>
+  ListUsersForIssueAssignmentApiDisplayUserBuilder newBuilder$() =>
       ListUsersForIssueAssignmentApiDisplayUserBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.userId,
         this.name,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    userId.$reducer(reducer);
-    name.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    userId.reducer$(reducer);
+    name.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListUsersForIssueAssignmentApiDisplayUser);
 }

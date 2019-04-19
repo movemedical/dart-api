@@ -408,10 +408,10 @@ class _$ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkActions
   final StatefulActionsOptions<
       ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLink,
       ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkBuilder,
-      ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkActions> $options;
+      ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkActions> options$;
 
   final ActionDispatcher<ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLink>
-      $replace;
+      replace$;
   final FieldDispatcher<String> orgUnitToPhysicianId;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<String> orgUnitName;
@@ -424,55 +424,55 @@ class _$ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkActions
   final FieldDispatcher<String> relationshipTypeId;
   final FieldDispatcher<String> relationshipTypeName;
 
-  _$ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkActions._(this.$options)
-      : $replace =
-            $options.action<ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLink>(
-                '\$replace', (a) => a?.$replace),
-        orgUnitToPhysicianId = $options.field<String>(
+  _$ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkActions._(this.options$)
+      : replace$ =
+            options$.action<ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLink>(
+                'replace\$', (a) => a?.replace$),
+        orgUnitToPhysicianId = options$.field<String>(
             'orgUnitToPhysicianId',
             (a) => a?.orgUnitToPhysicianId,
             (s) => s?.orgUnitToPhysicianId,
             (p, b) => p?.orgUnitToPhysicianId = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        orgUnitName = $options.field<String>(
+        orgUnitName = options$.field<String>(
             'orgUnitName',
             (a) => a?.orgUnitName,
             (s) => s?.orgUnitName,
             (p, b) => p?.orgUnitName = b),
-        orgUnitLabel = $options.field<String>(
+        orgUnitLabel = options$.field<String>(
             'orgUnitLabel',
             (a) => a?.orgUnitLabel,
             (s) => s?.orgUnitLabel,
             (p, b) => p?.orgUnitLabel = b),
-        orgUnitSales = $options.field<bool>(
+        orgUnitSales = options$.field<bool>(
             'orgUnitSales',
             (a) => a?.orgUnitSales,
             (s) => s?.orgUnitSales,
             (p, b) => p?.orgUnitSales = b),
-        orgUnitOps = $options.field<bool>('orgUnitOps', (a) => a?.orgUnitOps,
+        orgUnitOps = options$.field<bool>('orgUnitOps', (a) => a?.orgUnitOps,
             (s) => s?.orgUnitOps, (p, b) => p?.orgUnitOps = b),
-        orgUnitActive = $options.field<bool>(
+        orgUnitActive = options$.field<bool>(
             'orgUnitActive',
             (a) => a?.orgUnitActive,
             (s) => s?.orgUnitActive,
             (p, b) => p?.orgUnitActive = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        procedureName = $options.field<String>(
+        procedureName = options$.field<String>(
             'procedureName',
             (a) => a?.procedureName,
             (s) => s?.procedureName,
             (p, b) => p?.procedureName = b),
-        relationshipTypeId = $options.field<String>(
+        relationshipTypeId = options$.field<String>(
             'relationshipTypeId',
             (a) => a?.relationshipTypeId,
             (s) => s?.relationshipTypeId,
             (p, b) => p?.relationshipTypeId = b),
-        relationshipTypeName = $options.field<String>(
+        relationshipTypeName = options$.field<String>(
             'relationshipTypeName',
             (a) => a?.relationshipTypeName,
             (s) => s?.relationshipTypeName,
@@ -485,18 +485,18 @@ class _$ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkActions
       _$ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkActions._(options());
 
   @override
-  ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLink get $initial =>
+  ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLink get initialState$ =>
       ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLink();
 
   @override
-  ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkBuilder $newBuilder() =>
+  ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkBuilder newBuilder$() =>
       ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orgUnitToPhysicianId,
         this.orgUnitId,
         this.orgUnitName,
@@ -511,28 +511,23 @@ class _$ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orgUnitToPhysicianId.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    orgUnitName.$reducer(reducer);
-    orgUnitLabel.$reducer(reducer);
-    orgUnitSales.$reducer(reducer);
-    orgUnitOps.$reducer(reducer);
-    orgUnitActive.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    procedureName.$reducer(reducer);
-    relationshipTypeId.$reducer(reducer);
-    relationshipTypeName.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orgUnitToPhysicianId.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    orgUnitName.reducer$(reducer);
+    orgUnitLabel.reducer$(reducer);
+    orgUnitSales.reducer$(reducer);
+    orgUnitOps.reducer$(reducer);
+    orgUnitActive.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    procedureName.reducer$(reducer);
+    relationshipTypeId.reducer$(reducer);
+    relationshipTypeName.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLink);
 }

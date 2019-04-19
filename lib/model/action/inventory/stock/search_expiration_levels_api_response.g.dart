@@ -179,17 +179,17 @@ class _$SearchExpirationLevelsApiResponseActions
   final StatefulActionsOptions<
       SearchExpirationLevelsApiResponse,
       SearchExpirationLevelsApiResponseBuilder,
-      SearchExpirationLevelsApiResponseActions> $options;
+      SearchExpirationLevelsApiResponseActions> options$;
 
-  final ActionDispatcher<SearchExpirationLevelsApiResponse> $replace;
+  final ActionDispatcher<SearchExpirationLevelsApiResponse> replace$;
   final FieldDispatcher<BuiltList<SearchExpirationLevelsApiExpirationLevel>>
       levels;
 
-  _$SearchExpirationLevelsApiResponseActions._(this.$options)
-      : $replace = $options.action<SearchExpirationLevelsApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$SearchExpirationLevelsApiResponseActions._(this.options$)
+      : replace$ = options$.action<SearchExpirationLevelsApiResponse>(
+            'replace\$', (a) => a?.replace$),
         levels =
-            $options.field<BuiltList<SearchExpirationLevelsApiExpirationLevel>>(
+            options$.field<BuiltList<SearchExpirationLevelsApiExpirationLevel>>(
                 'levels',
                 (a) => a?.levels,
                 (s) => s?.levels,
@@ -201,34 +201,29 @@ class _$SearchExpirationLevelsApiResponseActions
       _$SearchExpirationLevelsApiResponseActions._(options());
 
   @override
-  SearchExpirationLevelsApiResponse get $initial =>
+  SearchExpirationLevelsApiResponse get initialState$ =>
       SearchExpirationLevelsApiResponse();
 
   @override
-  SearchExpirationLevelsApiResponseBuilder $newBuilder() =>
+  SearchExpirationLevelsApiResponseBuilder newBuilder$() =>
       SearchExpirationLevelsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.levels,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    levels.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    levels.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SearchExpirationLevelsApiResponse);
 }

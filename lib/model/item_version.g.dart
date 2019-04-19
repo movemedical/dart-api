@@ -234,33 +234,33 @@ typedef StatefulActionsOptions<ItemVersion, ItemVersionBuilder,
 
 class _$ItemVersionActions extends ItemVersionActions {
   final StatefulActionsOptions<ItemVersion, ItemVersionBuilder,
-      ItemVersionActions> $options;
+      ItemVersionActions> options$;
 
-  final ActionDispatcher<ItemVersion> $replace;
+  final ActionDispatcher<ItemVersion> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> version;
   final FieldDispatcher<DateTime> startManufactureDate;
   final FieldDispatcher<DateTime> endManufactureDate;
   final FieldDispatcher<bool> definedContainers;
 
-  _$ItemVersionActions._(this.$options)
-      : $replace =
-            $options.action<ItemVersion>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ItemVersionActions._(this.options$)
+      : replace$ =
+            options$.action<ItemVersion>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        version = $options.field<String>('version', (a) => a?.version,
+        version = options$.field<String>('version', (a) => a?.version,
             (s) => s?.version, (p, b) => p?.version = b),
-        startManufactureDate = $options.field<DateTime>(
+        startManufactureDate = options$.field<DateTime>(
             'startManufactureDate',
             (a) => a?.startManufactureDate,
             (s) => s?.startManufactureDate,
             (p, b) => p?.startManufactureDate = b),
-        endManufactureDate = $options.field<DateTime>(
+        endManufactureDate = options$.field<DateTime>(
             'endManufactureDate',
             (a) => a?.endManufactureDate,
             (s) => s?.endManufactureDate,
             (p, b) => p?.endManufactureDate = b),
-        definedContainers = $options.field<bool>(
+        definedContainers = options$.field<bool>(
             'definedContainers',
             (a) => a?.definedContainers,
             (s) => s?.definedContainers,
@@ -271,16 +271,16 @@ class _$ItemVersionActions extends ItemVersionActions {
       _$ItemVersionActions._(options());
 
   @override
-  ItemVersion get $initial => ItemVersion();
+  ItemVersion get initialState$ => ItemVersion();
 
   @override
-  ItemVersionBuilder $newBuilder() => ItemVersionBuilder();
+  ItemVersionBuilder newBuilder$() => ItemVersionBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.version,
         this.startManufactureDate,
@@ -289,21 +289,17 @@ class _$ItemVersionActions extends ItemVersionActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    version.$reducer(reducer);
-    startManufactureDate.$reducer(reducer);
-    endManufactureDate.$reducer(reducer);
-    definedContainers.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    version.reducer$(reducer);
+    startManufactureDate.reducer$(reducer);
+    endManufactureDate.reducer$(reducer);
+    definedContainers.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ItemVersion);
 }

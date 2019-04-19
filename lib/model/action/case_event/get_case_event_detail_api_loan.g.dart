@@ -271,9 +271,9 @@ class _$GetCaseEventDetailApiLoanActions
   final StatefulActionsOptions<
       GetCaseEventDetailApiLoan,
       GetCaseEventDetailApiLoanBuilder,
-      GetCaseEventDetailApiLoanActions> $options;
+      GetCaseEventDetailApiLoanActions> options$;
 
-  final ActionDispatcher<GetCaseEventDetailApiLoan> $replace;
+  final ActionDispatcher<GetCaseEventDetailApiLoan> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> loanNumber;
   final FieldDispatcher<LoanStatus> loanStatus;
@@ -281,23 +281,23 @@ class _$GetCaseEventDetailApiLoanActions
   final FieldDispatcher<int> orderNumber;
   final FieldDispatcher<OrderStatus> orderStatus;
 
-  _$GetCaseEventDetailApiLoanActions._(this.$options)
-      : $replace = $options.action<GetCaseEventDetailApiLoan>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetCaseEventDetailApiLoanActions._(this.options$)
+      : replace$ = options$.action<GetCaseEventDetailApiLoan>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        loanNumber = $options.field<int>('loanNumber', (a) => a?.loanNumber,
+        loanNumber = options$.field<int>('loanNumber', (a) => a?.loanNumber,
             (s) => s?.loanNumber, (p, b) => p?.loanNumber = b),
-        loanStatus = $options.field<LoanStatus>(
+        loanStatus = options$.field<LoanStatus>(
             'loanStatus',
             (a) => a?.loanStatus,
             (s) => s?.loanStatus,
             (p, b) => p?.loanStatus = b),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        orderNumber = $options.field<int>('orderNumber', (a) => a?.orderNumber,
+        orderNumber = options$.field<int>('orderNumber', (a) => a?.orderNumber,
             (s) => s?.orderNumber, (p, b) => p?.orderNumber = b),
-        orderStatus = $options.field<OrderStatus>(
+        orderStatus = options$.field<OrderStatus>(
             'orderStatus',
             (a) => a?.orderStatus,
             (s) => s?.orderStatus,
@@ -309,17 +309,17 @@ class _$GetCaseEventDetailApiLoanActions
       _$GetCaseEventDetailApiLoanActions._(options());
 
   @override
-  GetCaseEventDetailApiLoan get $initial => GetCaseEventDetailApiLoan();
+  GetCaseEventDetailApiLoan get initialState$ => GetCaseEventDetailApiLoan();
 
   @override
-  GetCaseEventDetailApiLoanBuilder $newBuilder() =>
+  GetCaseEventDetailApiLoanBuilder newBuilder$() =>
       GetCaseEventDetailApiLoanBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.loanNumber,
         this.loanStatus,
@@ -329,22 +329,18 @@ class _$GetCaseEventDetailApiLoanActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    loanNumber.$reducer(reducer);
-    loanStatus.$reducer(reducer);
-    orderId.$reducer(reducer);
-    orderNumber.$reducer(reducer);
-    orderStatus.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    loanNumber.reducer$(reducer);
+    loanStatus.reducer$(reducer);
+    orderId.reducer$(reducer);
+    orderNumber.reducer$(reducer);
+    orderStatus.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetCaseEventDetailApiLoan);
 }

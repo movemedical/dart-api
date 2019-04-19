@@ -194,16 +194,16 @@ typedef StatefulActionsOptions<
 
 class _$GetKitStockApiResponseActions extends GetKitStockApiResponseActions {
   final StatefulActionsOptions<GetKitStockApiResponse,
-      GetKitStockApiResponseBuilder, GetKitStockApiResponseActions> $options;
+      GetKitStockApiResponseBuilder, GetKitStockApiResponseActions> options$;
 
-  final ActionDispatcher<GetKitStockApiResponse> $replace;
+  final ActionDispatcher<GetKitStockApiResponse> replace$;
   final GetStockApiStockActions kitStock;
   final FieldDispatcher<BuiltList<GetStockApiStock>> containers;
 
-  _$GetKitStockApiResponseActions._(this.$options)
-      : $replace = $options.action<GetKitStockApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        kitStock = GetStockApiStockActions(() => $options.stateful<
+  _$GetKitStockApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetKitStockApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        kitStock = GetStockApiStockActions(() => options$.stateful<
                 GetStockApiStock,
                 GetStockApiStockBuilder,
                 GetStockApiStockActions>(
@@ -212,7 +212,7 @@ class _$GetKitStockApiResponseActions extends GetKitStockApiResponseActions {
             (s) => s?.kitStock,
             (b) => b?.kitStock,
             (parent, builder) => parent?.kitStock = builder)),
-        containers = $options.field<BuiltList<GetStockApiStock>>(
+        containers = options$.field<BuiltList<GetStockApiStock>>(
             'containers',
             (a) => a?.containers,
             (s) => s?.containers,
@@ -224,40 +224,36 @@ class _$GetKitStockApiResponseActions extends GetKitStockApiResponseActions {
       _$GetKitStockApiResponseActions._(options());
 
   @override
-  GetKitStockApiResponse get $initial => GetKitStockApiResponse();
+  GetKitStockApiResponse get initialState$ => GetKitStockApiResponse();
 
   @override
-  GetKitStockApiResponseBuilder $newBuilder() =>
+  GetKitStockApiResponseBuilder newBuilder$() =>
       GetKitStockApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.kitStock,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.containers,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    kitStock.$reducer(reducer);
-    containers.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    kitStock.reducer$(reducer);
+    containers.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    kitStock.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    kitStock.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetKitStockApiResponse);
 }

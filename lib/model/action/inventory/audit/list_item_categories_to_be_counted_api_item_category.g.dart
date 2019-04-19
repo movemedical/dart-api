@@ -228,25 +228,25 @@ class _$ListItemCategoriesToBeCountedApiItemCategoryActions
   final StatefulActionsOptions<
       ListItemCategoriesToBeCountedApiItemCategory,
       ListItemCategoriesToBeCountedApiItemCategoryBuilder,
-      ListItemCategoriesToBeCountedApiItemCategoryActions> $options;
+      ListItemCategoriesToBeCountedApiItemCategoryActions> options$;
 
-  final ActionDispatcher<ListItemCategoriesToBeCountedApiItemCategory> $replace;
+  final ActionDispatcher<ListItemCategoriesToBeCountedApiItemCategory> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> code;
   final FieldDispatcher<bool> hasChildren;
 
-  _$ListItemCategoriesToBeCountedApiItemCategoryActions._(this.$options)
-      : $replace =
-            $options.action<ListItemCategoriesToBeCountedApiItemCategory>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListItemCategoriesToBeCountedApiItemCategoryActions._(this.options$)
+      : replace$ =
+            options$.action<ListItemCategoriesToBeCountedApiItemCategory>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        code = $options.field<String>(
+        code = options$.field<String>(
             'code', (a) => a?.code, (s) => s?.code, (p, b) => p?.code = b),
-        hasChildren = $options.field<bool>('hasChildren', (a) => a?.hasChildren,
+        hasChildren = options$.field<bool>('hasChildren', (a) => a?.hasChildren,
             (s) => s?.hasChildren, (p, b) => p?.hasChildren = b),
         super._();
 
@@ -255,18 +255,18 @@ class _$ListItemCategoriesToBeCountedApiItemCategoryActions
       _$ListItemCategoriesToBeCountedApiItemCategoryActions._(options());
 
   @override
-  ListItemCategoriesToBeCountedApiItemCategory get $initial =>
+  ListItemCategoriesToBeCountedApiItemCategory get initialState$ =>
       ListItemCategoriesToBeCountedApiItemCategory();
 
   @override
-  ListItemCategoriesToBeCountedApiItemCategoryBuilder $newBuilder() =>
+  ListItemCategoriesToBeCountedApiItemCategoryBuilder newBuilder$() =>
       ListItemCategoriesToBeCountedApiItemCategoryBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.code,
@@ -274,21 +274,16 @@ class _$ListItemCategoriesToBeCountedApiItemCategoryActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    code.$reducer(reducer);
-    hasChildren.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    code.reducer$(reducer);
+    hasChildren.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListItemCategoriesToBeCountedApiItemCategory);
 }

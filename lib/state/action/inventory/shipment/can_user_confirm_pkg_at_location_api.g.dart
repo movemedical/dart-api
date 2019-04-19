@@ -22,70 +22,33 @@ class _$CanUserConfirmPkgAtLocationApi extends CanUserConfirmPkgAtLocationApi {
           ApiResult<CanUserConfirmPkgAtLocationApiResponse>>,
       CommandStateBuilder<ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
           ApiResult<CanUserConfirmPkgAtLocationApiResponse>>,
-      CanUserConfirmPkgAtLocationApi> $options;
+      CanUserConfirmPkgAtLocationApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
-          ApiResult<CanUserConfirmPkgAtLocationApiResponse>>> $replace;
+          ApiResult<CanUserConfirmPkgAtLocationApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
-          ApiResult<CanUserConfirmPkgAtLocationApiResponse>,
-          CanUserConfirmPkgAtLocationApi,
-          String>> $cancel;
+      Command<ApiCommand<CanUserConfirmPkgAtLocationApiRequest>>> execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
-          ApiResult<CanUserConfirmPkgAtLocationApiResponse>,
-          CanUserConfirmPkgAtLocationApi,
-          Command<ApiCommand<CanUserConfirmPkgAtLocationApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
-              ApiResult<CanUserConfirmPkgAtLocationApiResponse>,
-              CanUserConfirmPkgAtLocationApi,
-              CommandResult<ApiResult<CanUserConfirmPkgAtLocationApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
-          ApiResult<CanUserConfirmPkgAtLocationApiResponse>,
-          CanUserConfirmPkgAtLocationApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<CanUserConfirmPkgAtLocationApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CanUserConfirmPkgAtLocationApi._(this.$options)
-      : $replace = $options.action<
+  _$CanUserConfirmPkgAtLocationApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
                     ApiResult<CanUserConfirmPkgAtLocationApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
-                ApiResult<CanUserConfirmPkgAtLocationApiResponse>,
-                CanUserConfirmPkgAtLocationApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
-                    ApiResult<CanUserConfirmPkgAtLocationApiResponse>,
-                    CanUserConfirmPkgAtLocationApi,
-                    Command<
-                        ApiCommand<CanUserConfirmPkgAtLocationApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
-                    ApiResult<CanUserConfirmPkgAtLocationApiResponse>,
-                    CanUserConfirmPkgAtLocationApi,
-                    CommandResult<
-                        ApiResult<CanUserConfirmPkgAtLocationApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
-                ApiResult<CanUserConfirmPkgAtLocationApiResponse>,
-                CanUserConfirmPkgAtLocationApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<CanUserConfirmPkgAtLocationApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<CanUserConfirmPkgAtLocationApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CanUserConfirmPkgAtLocationApi(
@@ -95,33 +58,26 @@ class _$CanUserConfirmPkgAtLocationApi extends CanUserConfirmPkgAtLocationApi {
   @override
   CommandState<ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
           ApiResult<CanUserConfirmPkgAtLocationApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
           ApiResult<CanUserConfirmPkgAtLocationApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
           ApiResult<CanUserConfirmPkgAtLocationApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<CanUserConfirmPkgAtLocationApiRequest>,
           ApiResult<CanUserConfirmPkgAtLocationApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CanUserConfirmPkgAtLocationApiRequest)]),
-        FullType(ApiResult, [FullType(CanUserConfirmPkgAtLocationApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

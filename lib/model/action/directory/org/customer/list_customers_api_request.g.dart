@@ -367,9 +367,9 @@ typedef StatefulActionsOptions<
 
 class _$ListCustomersApiRequestActions extends ListCustomersApiRequestActions {
   final StatefulActionsOptions<ListCustomersApiRequest,
-      ListCustomersApiRequestBuilder, ListCustomersApiRequestActions> $options;
+      ListCustomersApiRequestBuilder, ListCustomersApiRequestActions> options$;
 
-  final ActionDispatcher<ListCustomersApiRequest> $replace;
+  final ActionDispatcher<ListCustomersApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> customerIds;
   final FieldDispatcher<BuiltList<String>> hsOrgIds;
   final FieldDispatcher<String> search;
@@ -380,38 +380,38 @@ class _$ListCustomersApiRequestActions extends ListCustomersApiRequestActions {
   final FieldDispatcher<int> startRecordIdx;
   final FieldDispatcher<int> pageSize;
 
-  _$ListCustomersApiRequestActions._(this.$options)
-      : $replace = $options.action<ListCustomersApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        customerIds = $options.field<BuiltList<String>>(
+  _$ListCustomersApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListCustomersApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        customerIds = options$.field<BuiltList<String>>(
             'customerIds',
             (a) => a?.customerIds,
             (s) => s?.customerIds,
             (p, b) => p?.customerIds = b),
-        hsOrgIds = $options.field<BuiltList<String>>('hsOrgIds',
+        hsOrgIds = options$.field<BuiltList<String>>('hsOrgIds',
             (a) => a?.hsOrgIds, (s) => s?.hsOrgIds, (p, b) => p?.hsOrgIds = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        scopeToLocationVizibility = $options.field<bool>(
+        scopeToLocationVizibility = options$.field<bool>(
             'scopeToLocationVizibility',
             (a) => a?.scopeToLocationVizibility,
             (s) => s?.scopeToLocationVizibility,
             (p, b) => p?.scopeToLocationVizibility = b),
-        sortBy = $options.field<ListCustomersApiSortBy>('sortBy',
+        sortBy = options$.field<ListCustomersApiSortBy>('sortBy',
             (a) => a?.sortBy, (s) => s?.sortBy, (p, b) => p?.sortBy = b),
-        sortAscending = $options.field<bool>(
+        sortAscending = options$.field<bool>(
             'sortAscending',
             (a) => a?.sortAscending,
             (s) => s?.sortAscending,
             (p, b) => p?.sortAscending = b),
-        startRecordIdx = $options.field<int>(
+        startRecordIdx = options$.field<int>(
             'startRecordIdx',
             (a) => a?.startRecordIdx,
             (s) => s?.startRecordIdx,
             (p, b) => p?.startRecordIdx = b),
-        pageSize = $options.field<int>('pageSize', (a) => a?.pageSize,
+        pageSize = options$.field<int>('pageSize', (a) => a?.pageSize,
             (s) => s?.pageSize, (p, b) => p?.pageSize = b),
         super._();
 
@@ -420,17 +420,17 @@ class _$ListCustomersApiRequestActions extends ListCustomersApiRequestActions {
       _$ListCustomersApiRequestActions._(options());
 
   @override
-  ListCustomersApiRequest get $initial => ListCustomersApiRequest();
+  ListCustomersApiRequest get initialState$ => ListCustomersApiRequest();
 
   @override
-  ListCustomersApiRequestBuilder $newBuilder() =>
+  ListCustomersApiRequestBuilder newBuilder$() =>
       ListCustomersApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customerIds,
         this.hsOrgIds,
         this.search,
@@ -443,25 +443,21 @@ class _$ListCustomersApiRequestActions extends ListCustomersApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    customerIds.$reducer(reducer);
-    hsOrgIds.$reducer(reducer);
-    search.$reducer(reducer);
-    active.$reducer(reducer);
-    scopeToLocationVizibility.$reducer(reducer);
-    sortBy.$reducer(reducer);
-    sortAscending.$reducer(reducer);
-    startRecordIdx.$reducer(reducer);
-    pageSize.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    customerIds.reducer$(reducer);
+    hsOrgIds.reducer$(reducer);
+    search.reducer$(reducer);
+    active.reducer$(reducer);
+    scopeToLocationVizibility.reducer$(reducer);
+    sortBy.reducer$(reducer);
+    sortAscending.reducer$(reducer);
+    startRecordIdx.reducer$(reducer);
+    pageSize.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListCustomersApiRequest);
 }

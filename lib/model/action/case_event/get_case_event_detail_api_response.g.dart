@@ -378,9 +378,9 @@ class _$GetCaseEventDetailApiResponseActions
   final StatefulActionsOptions<
       GetCaseEventDetailApiResponse,
       GetCaseEventDetailApiResponseBuilder,
-      GetCaseEventDetailApiResponseActions> $options;
+      GetCaseEventDetailApiResponseActions> options$;
 
-  final ActionDispatcher<GetCaseEventDetailApiResponse> $replace;
+  final ActionDispatcher<GetCaseEventDetailApiResponse> replace$;
   final GetCaseEventDetailApiCaseEventActions caseEvent;
   final GetCaseEventDetailApiEventActions event;
   final GetCaseEventDetailApiDisplayRulesActions displayRules;
@@ -391,11 +391,11 @@ class _$GetCaseEventDetailApiResponseActions
   final FieldDispatcher<int> noteCount;
   final FieldDispatcher<int> conversationCount;
 
-  _$GetCaseEventDetailApiResponseActions._(this.$options)
-      : $replace = $options.action<GetCaseEventDetailApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$GetCaseEventDetailApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetCaseEventDetailApiResponse>(
+            'replace\$', (a) => a?.replace$),
         caseEvent = GetCaseEventDetailApiCaseEventActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetCaseEventDetailApiCaseEvent,
                     GetCaseEventDetailApiCaseEventBuilder,
                     GetCaseEventDetailApiCaseEventActions>(
@@ -404,7 +404,7 @@ class _$GetCaseEventDetailApiResponseActions
                 (s) => s?.caseEvent,
                 (b) => b?.caseEvent,
                 (parent, builder) => parent?.caseEvent = builder)),
-        event = GetCaseEventDetailApiEventActions(() => $options.stateful<
+        event = GetCaseEventDetailApiEventActions(() => options$.stateful<
                 GetCaseEventDetailApiEvent,
                 GetCaseEventDetailApiEventBuilder,
                 GetCaseEventDetailApiEventActions>(
@@ -414,7 +414,7 @@ class _$GetCaseEventDetailApiResponseActions
             (b) => b?.event,
             (parent, builder) => parent?.event = builder)),
         displayRules = GetCaseEventDetailApiDisplayRulesActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetCaseEventDetailApiDisplayRules,
                     GetCaseEventDetailApiDisplayRulesBuilder,
                     GetCaseEventDetailApiDisplayRulesActions>(
@@ -423,23 +423,23 @@ class _$GetCaseEventDetailApiResponseActions
                 (s) => s?.displayRules,
                 (b) => b?.displayRules,
                 (parent, builder) => parent?.displayRules = builder)),
-        caseDocs = $options.field<BuiltList<GetCaseEventDetailApiCaseDoc>>(
+        caseDocs = options$.field<BuiltList<GetCaseEventDetailApiCaseDoc>>(
             'caseDocs',
             (a) => a?.caseDocs,
             (s) => s?.caseDocs,
             (p, b) => p?.caseDocs = b),
-        requirementsCount = $options.field<int>(
+        requirementsCount = options$.field<int>(
             'requirementsCount',
             (a) => a?.requirementsCount,
             (s) => s?.requirementsCount,
             (p, b) => p?.requirementsCount = b),
-        usageCount = $options.field<int>('usageCount', (a) => a?.usageCount,
+        usageCount = options$.field<int>('usageCount', (a) => a?.usageCount,
             (s) => s?.usageCount, (p, b) => p?.usageCount = b),
-        fileCount = $options.field<int>('fileCount', (a) => a?.fileCount,
+        fileCount = options$.field<int>('fileCount', (a) => a?.fileCount,
             (s) => s?.fileCount, (p, b) => p?.fileCount = b),
-        noteCount = $options.field<int>('noteCount', (a) => a?.noteCount,
+        noteCount = options$.field<int>('noteCount', (a) => a?.noteCount,
             (s) => s?.noteCount, (p, b) => p?.noteCount = b),
-        conversationCount = $options.field<int>(
+        conversationCount = options$.field<int>(
             'conversationCount',
             (a) => a?.conversationCount,
             (s) => s?.conversationCount,
@@ -451,25 +451,26 @@ class _$GetCaseEventDetailApiResponseActions
       _$GetCaseEventDetailApiResponseActions._(options());
 
   @override
-  GetCaseEventDetailApiResponse get $initial => GetCaseEventDetailApiResponse();
+  GetCaseEventDetailApiResponse get initialState$ =>
+      GetCaseEventDetailApiResponse();
 
   @override
-  GetCaseEventDetailApiResponseBuilder $newBuilder() =>
+  GetCaseEventDetailApiResponseBuilder newBuilder$() =>
       GetCaseEventDetailApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.caseEvent,
         this.event,
         this.displayRules,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseDocs,
         this.requirementsCount,
         this.usageCount,
@@ -479,29 +480,24 @@ class _$GetCaseEventDetailApiResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEvent.$reducer(reducer);
-    event.$reducer(reducer);
-    displayRules.$reducer(reducer);
-    caseDocs.$reducer(reducer);
-    requirementsCount.$reducer(reducer);
-    usageCount.$reducer(reducer);
-    fileCount.$reducer(reducer);
-    noteCount.$reducer(reducer);
-    conversationCount.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEvent.reducer$(reducer);
+    event.reducer$(reducer);
+    displayRules.reducer$(reducer);
+    caseDocs.reducer$(reducer);
+    requirementsCount.reducer$(reducer);
+    usageCount.reducer$(reducer);
+    fileCount.reducer$(reducer);
+    noteCount.reducer$(reducer);
+    conversationCount.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    caseEvent.$middleware(middleware);
-    event.$middleware(middleware);
-    displayRules.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    caseEvent.middleware$(middleware);
+    event.middleware$(middleware);
+    displayRules.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCaseEventDetailApiResponse);
 }

@@ -159,15 +159,15 @@ class _$RequestOnHandReportApiResponseActions
   final StatefulActionsOptions<
       RequestOnHandReportApiResponse,
       RequestOnHandReportApiResponseBuilder,
-      RequestOnHandReportApiResponseActions> $options;
+      RequestOnHandReportApiResponseActions> options$;
 
-  final ActionDispatcher<RequestOnHandReportApiResponse> $replace;
+  final ActionDispatcher<RequestOnHandReportApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
 
-  _$RequestOnHandReportApiResponseActions._(this.$options)
-      : $replace = $options.action<RequestOnHandReportApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$RequestOnHandReportApiResponseActions._(this.options$)
+      : replace$ = options$.action<RequestOnHandReportApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -179,34 +179,29 @@ class _$RequestOnHandReportApiResponseActions
       _$RequestOnHandReportApiResponseActions._(options());
 
   @override
-  RequestOnHandReportApiResponse get $initial =>
+  RequestOnHandReportApiResponse get initialState$ =>
       RequestOnHandReportApiResponse();
 
   @override
-  RequestOnHandReportApiResponseBuilder $newBuilder() =>
+  RequestOnHandReportApiResponseBuilder newBuilder$() =>
       RequestOnHandReportApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestOnHandReportApiResponse);
 }

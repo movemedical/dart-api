@@ -205,24 +205,24 @@ class _$SubmitSalesOrderApiResponseActions
   final StatefulActionsOptions<
       SubmitSalesOrderApiResponse,
       SubmitSalesOrderApiResponseBuilder,
-      SubmitSalesOrderApiResponseActions> $options;
+      SubmitSalesOrderApiResponseActions> options$;
 
-  final ActionDispatcher<SubmitSalesOrderApiResponse> $replace;
+  final ActionDispatcher<SubmitSalesOrderApiResponse> replace$;
   final FieldDispatcher<bool> validationPassed;
   final FieldDispatcher<bool> soapSuccess;
   final FieldDispatcher<String> erpOrderReference;
 
-  _$SubmitSalesOrderApiResponseActions._(this.$options)
-      : $replace = $options.action<SubmitSalesOrderApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        validationPassed = $options.field<bool>(
+  _$SubmitSalesOrderApiResponseActions._(this.options$)
+      : replace$ = options$.action<SubmitSalesOrderApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        validationPassed = options$.field<bool>(
             'validationPassed',
             (a) => a?.validationPassed,
             (s) => s?.validationPassed,
             (p, b) => p?.validationPassed = b),
-        soapSuccess = $options.field<bool>('soapSuccess', (a) => a?.soapSuccess,
+        soapSuccess = options$.field<bool>('soapSuccess', (a) => a?.soapSuccess,
             (s) => s?.soapSuccess, (p, b) => p?.soapSuccess = b),
-        erpOrderReference = $options.field<String>(
+        erpOrderReference = options$.field<String>(
             'erpOrderReference',
             (a) => a?.erpOrderReference,
             (s) => s?.erpOrderReference,
@@ -234,37 +234,33 @@ class _$SubmitSalesOrderApiResponseActions
       _$SubmitSalesOrderApiResponseActions._(options());
 
   @override
-  SubmitSalesOrderApiResponse get $initial => SubmitSalesOrderApiResponse();
+  SubmitSalesOrderApiResponse get initialState$ =>
+      SubmitSalesOrderApiResponse();
 
   @override
-  SubmitSalesOrderApiResponseBuilder $newBuilder() =>
+  SubmitSalesOrderApiResponseBuilder newBuilder$() =>
       SubmitSalesOrderApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.validationPassed,
         this.soapSuccess,
         this.erpOrderReference,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    validationPassed.$reducer(reducer);
-    soapSuccess.$reducer(reducer);
-    erpOrderReference.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    validationPassed.reducer$(reducer);
+    soapSuccess.reducer$(reducer);
+    erpOrderReference.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SubmitSalesOrderApiResponse);
 }

@@ -190,18 +190,18 @@ typedef StatefulActionsOptions<
 
 class _$ListRootOrgsApiResponseActions extends ListRootOrgsApiResponseActions {
   final StatefulActionsOptions<ListRootOrgsApiResponse,
-      ListRootOrgsApiResponseBuilder, ListRootOrgsApiResponseActions> $options;
+      ListRootOrgsApiResponseBuilder, ListRootOrgsApiResponseActions> options$;
 
-  final ActionDispatcher<ListRootOrgsApiResponse> $replace;
+  final ActionDispatcher<ListRootOrgsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListRootOrgsApiRootOrg>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListRootOrgsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListRootOrgsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListRootOrgsApiRootOrg>>(
+  _$ListRootOrgsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListRootOrgsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListRootOrgsApiRootOrg>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -210,34 +210,30 @@ class _$ListRootOrgsApiResponseActions extends ListRootOrgsApiResponseActions {
       _$ListRootOrgsApiResponseActions._(options());
 
   @override
-  ListRootOrgsApiResponse get $initial => ListRootOrgsApiResponse();
+  ListRootOrgsApiResponse get initialState$ => ListRootOrgsApiResponse();
 
   @override
-  ListRootOrgsApiResponseBuilder $newBuilder() =>
+  ListRootOrgsApiResponseBuilder newBuilder$() =>
       ListRootOrgsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListRootOrgsApiResponse);
 }

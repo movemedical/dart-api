@@ -194,21 +194,21 @@ class _$ListAuditItemStockApiRequestActions
   final StatefulActionsOptions<
       ListAuditItemStockApiRequest,
       ListAuditItemStockApiRequestBuilder,
-      ListAuditItemStockApiRequestActions> $options;
+      ListAuditItemStockApiRequestActions> options$;
 
-  final ActionDispatcher<ListAuditItemStockApiRequest> $replace;
+  final ActionDispatcher<ListAuditItemStockApiRequest> replace$;
   final FieldDispatcher<String> auditItemId;
   final PaginationParamsActions paging;
 
-  _$ListAuditItemStockApiRequestActions._(this.$options)
-      : $replace = $options.action<ListAuditItemStockApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditItemId = $options.field<String>(
+  _$ListAuditItemStockApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListAuditItemStockApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditItemId = options$.field<String>(
             'auditItemId',
             (a) => a?.auditItemId,
             (s) => s?.auditItemId,
             (p, b) => p?.auditItemId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -224,41 +224,37 @@ class _$ListAuditItemStockApiRequestActions
       _$ListAuditItemStockApiRequestActions._(options());
 
   @override
-  ListAuditItemStockApiRequest get $initial => ListAuditItemStockApiRequest();
+  ListAuditItemStockApiRequest get initialState$ =>
+      ListAuditItemStockApiRequest();
 
   @override
-  ListAuditItemStockApiRequestBuilder $newBuilder() =>
+  ListAuditItemStockApiRequestBuilder newBuilder$() =>
       ListAuditItemStockApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditItemId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditItemId.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditItemId.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListAuditItemStockApiRequest);
 }

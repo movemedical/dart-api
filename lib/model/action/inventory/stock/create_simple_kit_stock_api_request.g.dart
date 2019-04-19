@@ -452,9 +452,9 @@ class _$CreateSimpleKitStockApiRequestActions
   final StatefulActionsOptions<
       CreateSimpleKitStockApiRequest,
       CreateSimpleKitStockApiRequestBuilder,
-      CreateSimpleKitStockApiRequestActions> $options;
+      CreateSimpleKitStockApiRequestActions> options$;
 
-  final ActionDispatcher<CreateSimpleKitStockApiRequest> $replace;
+  final ActionDispatcher<CreateSimpleKitStockApiRequest> replace$;
   final FieldDispatcher<String> inventoryTypeId;
   final FieldDispatcher<String> kitItemId;
   final FieldDispatcher<String> kitItemVersionId;
@@ -469,61 +469,61 @@ class _$CreateSimpleKitStockApiRequestActions
   final FieldDispatcher<ResponsiblePartyType> responsiblePartyType;
   final FieldDispatcher<String> responsiblePartyId;
 
-  _$CreateSimpleKitStockApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateSimpleKitStockApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        inventoryTypeId = $options.field<String>(
+  _$CreateSimpleKitStockApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateSimpleKitStockApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        inventoryTypeId = options$.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        kitItemId = $options.field<String>('kitItemId', (a) => a?.kitItemId,
+        kitItemId = options$.field<String>('kitItemId', (a) => a?.kitItemId,
             (s) => s?.kitItemId, (p, b) => p?.kitItemId = b),
-        kitItemVersionId = $options.field<String>(
+        kitItemVersionId = options$.field<String>(
             'kitItemVersionId',
             (a) => a?.kitItemVersionId,
             (s) => s?.kitItemVersionId,
             (p, b) => p?.kitItemVersionId = b),
-        toteItemId = $options.field<String>('toteItemId', (a) => a?.toteItemId,
+        toteItemId = options$.field<String>('toteItemId', (a) => a?.toteItemId,
             (s) => s?.toteItemId, (p, b) => p?.toteItemId = b),
-        toteItemVersionId = $options.field<String>(
+        toteItemVersionId = options$.field<String>(
             'toteItemVersionId',
             (a) => a?.toteItemVersionId,
             (s) => s?.toteItemVersionId,
             (p, b) => p?.toteItemVersionId = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        homeLocationType = $options.field<LocationType>(
+        homeLocationType = options$.field<LocationType>(
             'homeLocationType',
             (a) => a?.homeLocationType,
             (s) => s?.homeLocationType,
             (p, b) => p?.homeLocationType = b),
-        homeLocationId = $options.field<String>(
+        homeLocationId = options$.field<String>(
             'homeLocationId',
             (a) => a?.homeLocationId,
             (s) => s?.homeLocationId,
             (p, b) => p?.homeLocationId = b),
-        containerType = $options.field<StockContainerType>(
+        containerType = options$.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        responsiblePartyType = $options.field<ResponsiblePartyType>(
+        responsiblePartyType = options$.field<ResponsiblePartyType>(
             'responsiblePartyType',
             (a) => a?.responsiblePartyType,
             (s) => s?.responsiblePartyType,
             (p, b) => p?.responsiblePartyType = b),
-        responsiblePartyId = $options.field<String>(
+        responsiblePartyId = options$.field<String>(
             'responsiblePartyId',
             (a) => a?.responsiblePartyId,
             (s) => s?.responsiblePartyId,
@@ -535,18 +535,18 @@ class _$CreateSimpleKitStockApiRequestActions
       _$CreateSimpleKitStockApiRequestActions._(options());
 
   @override
-  CreateSimpleKitStockApiRequest get $initial =>
+  CreateSimpleKitStockApiRequest get initialState$ =>
       CreateSimpleKitStockApiRequest();
 
   @override
-  CreateSimpleKitStockApiRequestBuilder $newBuilder() =>
+  CreateSimpleKitStockApiRequestBuilder newBuilder$() =>
       CreateSimpleKitStockApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.inventoryTypeId,
         this.kitItemId,
         this.kitItemVersionId,
@@ -563,30 +563,25 @@ class _$CreateSimpleKitStockApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    inventoryTypeId.$reducer(reducer);
-    kitItemId.$reducer(reducer);
-    kitItemVersionId.$reducer(reducer);
-    toteItemId.$reducer(reducer);
-    toteItemVersionId.$reducer(reducer);
-    locationType.$reducer(reducer);
-    locationId.$reducer(reducer);
-    homeLocationType.$reducer(reducer);
-    homeLocationId.$reducer(reducer);
-    containerType.$reducer(reducer);
-    containerId.$reducer(reducer);
-    responsiblePartyType.$reducer(reducer);
-    responsiblePartyId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    inventoryTypeId.reducer$(reducer);
+    kitItemId.reducer$(reducer);
+    kitItemVersionId.reducer$(reducer);
+    toteItemId.reducer$(reducer);
+    toteItemVersionId.reducer$(reducer);
+    locationType.reducer$(reducer);
+    locationId.reducer$(reducer);
+    homeLocationType.reducer$(reducer);
+    homeLocationId.reducer$(reducer);
+    containerType.reducer$(reducer);
+    containerId.reducer$(reducer);
+    responsiblePartyType.reducer$(reducer);
+    responsiblePartyId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateSimpleKitStockApiRequest);
 }

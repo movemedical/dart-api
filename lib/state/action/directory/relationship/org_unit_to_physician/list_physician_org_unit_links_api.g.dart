@@ -22,69 +22,32 @@ class _$ListPhysicianOrgUnitLinksApi extends ListPhysicianOrgUnitLinksApi {
           ApiResult<ListPhysicianOrgUnitLinksApiResponse>>,
       CommandStateBuilder<ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
           ApiResult<ListPhysicianOrgUnitLinksApiResponse>>,
-      ListPhysicianOrgUnitLinksApi> $options;
+      ListPhysicianOrgUnitLinksApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
-          ApiResult<ListPhysicianOrgUnitLinksApiResponse>>> $replace;
+          ApiResult<ListPhysicianOrgUnitLinksApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
-          ApiResult<ListPhysicianOrgUnitLinksApiResponse>,
-          ListPhysicianOrgUnitLinksApi,
-          String>> $cancel;
+      Command<ApiCommand<ListPhysicianOrgUnitLinksApiRequest>>> execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
-          ApiResult<ListPhysicianOrgUnitLinksApiResponse>,
-          ListPhysicianOrgUnitLinksApi,
-          Command<ApiCommand<ListPhysicianOrgUnitLinksApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
-              ApiResult<ListPhysicianOrgUnitLinksApiResponse>,
-              ListPhysicianOrgUnitLinksApi,
-              CommandResult<ApiResult<ListPhysicianOrgUnitLinksApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
-          ApiResult<ListPhysicianOrgUnitLinksApiResponse>,
-          ListPhysicianOrgUnitLinksApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListPhysicianOrgUnitLinksApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListPhysicianOrgUnitLinksApi._(this.$options)
-      : $replace = $options.action<
+  _$ListPhysicianOrgUnitLinksApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
                     ApiResult<ListPhysicianOrgUnitLinksApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
-                ApiResult<ListPhysicianOrgUnitLinksApiResponse>,
-                ListPhysicianOrgUnitLinksApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
-                    ApiResult<ListPhysicianOrgUnitLinksApiResponse>,
-                    ListPhysicianOrgUnitLinksApi,
-                    Command<ApiCommand<ListPhysicianOrgUnitLinksApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
-                    ApiResult<ListPhysicianOrgUnitLinksApiResponse>,
-                    ListPhysicianOrgUnitLinksApi,
-                    CommandResult<
-                        ApiResult<ListPhysicianOrgUnitLinksApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
-                ApiResult<ListPhysicianOrgUnitLinksApiResponse>,
-                ListPhysicianOrgUnitLinksApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListPhysicianOrgUnitLinksApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<ListPhysicianOrgUnitLinksApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListPhysicianOrgUnitLinksApi(
@@ -94,33 +57,26 @@ class _$ListPhysicianOrgUnitLinksApi extends ListPhysicianOrgUnitLinksApi {
   @override
   CommandState<ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
           ApiResult<ListPhysicianOrgUnitLinksApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
           ApiResult<ListPhysicianOrgUnitLinksApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
           ApiResult<ListPhysicianOrgUnitLinksApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListPhysicianOrgUnitLinksApiRequest>,
           ApiResult<ListPhysicianOrgUnitLinksApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListPhysicianOrgUnitLinksApiRequest)]),
-        FullType(ApiResult, [FullType(ListPhysicianOrgUnitLinksApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

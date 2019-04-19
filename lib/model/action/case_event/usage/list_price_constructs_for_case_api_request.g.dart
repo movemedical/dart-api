@@ -220,21 +220,21 @@ class _$ListPriceConstructsForCaseApiRequestActions
   final StatefulActionsOptions<
       ListPriceConstructsForCaseApiRequest,
       ListPriceConstructsForCaseApiRequestBuilder,
-      ListPriceConstructsForCaseApiRequestActions> $options;
+      ListPriceConstructsForCaseApiRequestActions> options$;
 
-  final ActionDispatcher<ListPriceConstructsForCaseApiRequest> $replace;
+  final ActionDispatcher<ListPriceConstructsForCaseApiRequest> replace$;
   final FieldDispatcher<String> caseId;
   final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
 
-  _$ListPriceConstructsForCaseApiRequestActions._(this.$options)
-      : $replace = $options.action<ListPriceConstructsForCaseApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseId = $options.field<String>('caseId', (a) => a?.caseId,
+  _$ListPriceConstructsForCaseApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListPriceConstructsForCaseApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseId = options$.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -250,44 +250,39 @@ class _$ListPriceConstructsForCaseApiRequestActions
       _$ListPriceConstructsForCaseApiRequestActions._(options());
 
   @override
-  ListPriceConstructsForCaseApiRequest get $initial =>
+  ListPriceConstructsForCaseApiRequest get initialState$ =>
       ListPriceConstructsForCaseApiRequest();
 
   @override
-  ListPriceConstructsForCaseApiRequestBuilder $newBuilder() =>
+  ListPriceConstructsForCaseApiRequestBuilder newBuilder$() =>
       ListPriceConstructsForCaseApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseId,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseId.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseId.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPriceConstructsForCaseApiRequest);
 }

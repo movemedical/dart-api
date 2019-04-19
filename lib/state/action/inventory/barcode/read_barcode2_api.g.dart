@@ -22,64 +22,30 @@ class _$ReadBarcode2Api extends ReadBarcode2Api {
           ApiResult<ReadBarcode2ApiResponse>>,
       CommandStateBuilder<ApiCommand<ReadBarcode2ApiRequest>,
           ApiResult<ReadBarcode2ApiResponse>>,
-      ReadBarcode2Api> $options;
+      ReadBarcode2Api> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ReadBarcode2ApiRequest>,
-          ApiResult<ReadBarcode2ApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ReadBarcode2ApiRequest>,
-          ApiResult<ReadBarcode2ApiResponse>, ReadBarcode2Api, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ReadBarcode2ApiRequest>,
-          ApiResult<ReadBarcode2ApiResponse>,
-          ReadBarcode2Api,
-          Command<ApiCommand<ReadBarcode2ApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ReadBarcode2ApiRequest>,
-          ApiResult<ReadBarcode2ApiResponse>,
-          ReadBarcode2Api,
-          CommandResult<ApiResult<ReadBarcode2ApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ReadBarcode2ApiRequest>,
-          ApiResult<ReadBarcode2ApiResponse>,
-          ReadBarcode2Api,
-          CommandProgress>> $progress;
+          ApiResult<ReadBarcode2ApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ReadBarcode2ApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<ReadBarcode2ApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ReadBarcode2Api._(this.$options)
-      : $replace = $options.action<
+  _$ReadBarcode2Api._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ReadBarcode2ApiRequest>,
                     ApiResult<ReadBarcode2ApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ReadBarcode2ApiRequest>,
-                ApiResult<ReadBarcode2ApiResponse>,
-                ReadBarcode2Api,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ReadBarcode2ApiRequest>,
-                    ApiResult<ReadBarcode2ApiResponse>,
-                    ReadBarcode2Api,
-                    Command<ApiCommand<ReadBarcode2ApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ReadBarcode2ApiRequest>,
-                    ApiResult<ReadBarcode2ApiResponse>,
-                    ReadBarcode2Api,
-                    CommandResult<ApiResult<ReadBarcode2ApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ReadBarcode2ApiRequest>,
-                ApiResult<ReadBarcode2ApiResponse>,
-                ReadBarcode2Api,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<ReadBarcode2ApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<ReadBarcode2ApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ReadBarcode2Api(ReadBarcode2ApiOptions options) =>
@@ -88,31 +54,24 @@ class _$ReadBarcode2Api extends ReadBarcode2Api {
   @override
   CommandState<ApiCommand<ReadBarcode2ApiRequest>,
           ApiResult<ReadBarcode2ApiResponse>>
-      get $initial => CommandState<ApiCommand<ReadBarcode2ApiRequest>,
+      get initialState$ => CommandState<ApiCommand<ReadBarcode2ApiRequest>,
           ApiResult<ReadBarcode2ApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ReadBarcode2ApiRequest>,
           ApiResult<ReadBarcode2ApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<ReadBarcode2ApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<ReadBarcode2ApiRequest>,
           ApiResult<ReadBarcode2ApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ReadBarcode2ApiRequest)]),
-        FullType(ApiResult, [FullType(ReadBarcode2ApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

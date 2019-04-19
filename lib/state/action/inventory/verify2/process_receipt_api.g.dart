@@ -20,57 +20,29 @@ class _$ProcessReceiptApi extends ProcessReceiptApi {
       CommandState<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<ProcessReceiptApiRequest>,
           ApiResult<Nothing>>,
-      ProcessReceiptApi> $options;
+      ProcessReceiptApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ProcessReceiptApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Nothing>,
-          ProcessReceiptApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ProcessReceiptApiRequest>,
-          ApiResult<Nothing>,
-          ProcessReceiptApi,
-          Command<ApiCommand<ProcessReceiptApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Nothing>,
-          ProcessReceiptApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Nothing>,
-          ProcessReceiptApi, CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ProcessReceiptApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ProcessReceiptApi._(this.$options)
-      : $replace = $options.action<
+  _$ProcessReceiptApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<ProcessReceiptApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ProcessReceiptApiRequest>,
-                ApiResult<Nothing>,
-                ProcessReceiptApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ProcessReceiptApiRequest>,
-                    ApiResult<Nothing>,
-                    ProcessReceiptApi,
-                    Command<ApiCommand<ProcessReceiptApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ProcessReceiptApiRequest>,
-                    ApiResult<Nothing>,
-                    ProcessReceiptApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ProcessReceiptApiRequest>,
-                ApiResult<Nothing>,
-                ProcessReceiptApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ProcessReceiptApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ProcessReceiptApi(ProcessReceiptApiOptions options) =>
@@ -78,30 +50,23 @@ class _$ProcessReceiptApi extends ProcessReceiptApi {
 
   @override
   CommandState<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<ProcessReceiptApiRequest>,
+      get initialState$ => CommandState<ApiCommand<ProcessReceiptApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<ProcessReceiptApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<ProcessReceiptApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ProcessReceiptApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

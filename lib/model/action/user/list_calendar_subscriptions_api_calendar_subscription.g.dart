@@ -253,27 +253,27 @@ class _$ListCalendarSubscriptionsApiCalendarSubscriptionActions
   final StatefulActionsOptions<
       ListCalendarSubscriptionsApiCalendarSubscription,
       ListCalendarSubscriptionsApiCalendarSubscriptionBuilder,
-      ListCalendarSubscriptionsApiCalendarSubscriptionActions> $options;
+      ListCalendarSubscriptionsApiCalendarSubscriptionActions> options$;
 
   final ActionDispatcher<ListCalendarSubscriptionsApiCalendarSubscription>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> calendar;
   final FieldDispatcher<String> url;
   final ListCaseEventsApiRequestActions listCaseEventsRequest;
 
-  _$ListCalendarSubscriptionsApiCalendarSubscriptionActions._(this.$options)
-      : $replace =
-            $options.action<ListCalendarSubscriptionsApiCalendarSubscription>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListCalendarSubscriptionsApiCalendarSubscriptionActions._(this.options$)
+      : replace$ =
+            options$.action<ListCalendarSubscriptionsApiCalendarSubscription>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        calendar = $options.field<String>('calendar', (a) => a?.calendar,
+        calendar = options$.field<String>('calendar', (a) => a?.calendar,
             (s) => s?.calendar, (p, b) => p?.calendar = b),
-        url = $options.field<String>(
+        url = options$.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
         listCaseEventsRequest = ListCaseEventsApiRequestActions(() =>
-            $options.stateful<
+            options$.stateful<
                     ListCaseEventsApiRequest,
                     ListCaseEventsApiRequestBuilder,
                     ListCaseEventsApiRequestActions>(
@@ -290,46 +290,41 @@ class _$ListCalendarSubscriptionsApiCalendarSubscriptionActions
       _$ListCalendarSubscriptionsApiCalendarSubscriptionActions._(options());
 
   @override
-  ListCalendarSubscriptionsApiCalendarSubscription get $initial =>
+  ListCalendarSubscriptionsApiCalendarSubscription get initialState$ =>
       ListCalendarSubscriptionsApiCalendarSubscription();
 
   @override
-  ListCalendarSubscriptionsApiCalendarSubscriptionBuilder $newBuilder() =>
+  ListCalendarSubscriptionsApiCalendarSubscriptionBuilder newBuilder$() =>
       ListCalendarSubscriptionsApiCalendarSubscriptionBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.listCaseEventsRequest,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.calendar,
         this.url,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    calendar.$reducer(reducer);
-    url.$reducer(reducer);
-    listCaseEventsRequest.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    calendar.reducer$(reducer);
+    url.reducer$(reducer);
+    listCaseEventsRequest.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    listCaseEventsRequest.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    listCaseEventsRequest.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListCalendarSubscriptionsApiCalendarSubscription);
 }

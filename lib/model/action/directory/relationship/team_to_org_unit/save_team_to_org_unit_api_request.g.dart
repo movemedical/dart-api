@@ -539,9 +539,9 @@ class _$SaveTeamToOrgUnitApiRequestActions
   final StatefulActionsOptions<
       SaveTeamToOrgUnitApiRequest,
       SaveTeamToOrgUnitApiRequestBuilder,
-      SaveTeamToOrgUnitApiRequestActions> $options;
+      SaveTeamToOrgUnitApiRequestActions> options$;
 
-  final ActionDispatcher<SaveTeamToOrgUnitApiRequest> $replace;
+  final ActionDispatcher<SaveTeamToOrgUnitApiRequest> replace$;
   final FieldDispatcher<String> userRoleId;
   final FieldDispatcher<String> teamId;
   final FieldDispatcher<String> orgUnitId;
@@ -560,55 +560,55 @@ class _$SaveTeamToOrgUnitApiRequestActions
   final FieldDispatcher<BuiltList<SaveTeamToOrgUnitApiInventoryTypePermission>>
       inventoryTypePermissions;
 
-  _$SaveTeamToOrgUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<SaveTeamToOrgUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        userRoleId = $options.field<String>('userRoleId', (a) => a?.userRoleId,
+  _$SaveTeamToOrgUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<SaveTeamToOrgUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        userRoleId = options$.field<String>('userRoleId', (a) => a?.userRoleId,
             (s) => s?.userRoleId, (p, b) => p?.userRoleId = b),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        ouAccessType = $options.field<OuAccessType>(
+        ouAccessType = options$.field<OuAccessType>(
             'ouAccessType',
             (a) => a?.ouAccessType,
             (s) => s?.ouAccessType,
             (p, b) => p?.ouAccessType = b),
-        createCase = $options.field<bool>('createCase', (a) => a?.createCase,
+        createCase = options$.field<bool>('createCase', (a) => a?.createCase,
             (s) => s?.createCase, (p, b) => p?.createCase = b),
-        editCase = $options.field<bool>('editCase', (a) => a?.editCase,
+        editCase = options$.field<bool>('editCase', (a) => a?.editCase,
             (s) => s?.editCase, (p, b) => p?.editCase = b),
-        processOrders = $options.field<bool>(
+        processOrders = options$.field<bool>(
             'processOrders',
             (a) => a?.processOrders,
             (s) => s?.processOrders,
             (p, b) => p?.processOrders = b),
-        manageCatalog = $options.field<bool>(
+        manageCatalog = options$.field<bool>(
             'manageCatalog',
             (a) => a?.manageCatalog,
             (s) => s?.manageCatalog,
             (p, b) => p?.manageCatalog = b),
-        manageUsers = $options.field<bool>('manageUsers', (a) => a?.manageUsers,
+        manageUsers = options$.field<bool>('manageUsers', (a) => a?.manageUsers,
             (s) => s?.manageUsers, (p, b) => p?.manageUsers = b),
-        manageAudit = $options.field<bool>('manageAudit', (a) => a?.manageAudit,
+        manageAudit = options$.field<bool>('manageAudit', (a) => a?.manageAudit,
             (s) => s?.manageAudit, (p, b) => p?.manageAudit = b),
-        performAudit = $options.field<bool>(
+        performAudit = options$.field<bool>(
             'performAudit',
             (a) => a?.performAudit,
             (s) => s?.performAudit,
             (p, b) => p?.performAudit = b),
-        requestLoan = $options.field<bool>('requestLoan', (a) => a?.requestLoan,
+        requestLoan = options$.field<bool>('requestLoan', (a) => a?.requestLoan,
             (s) => s?.requestLoan, (p, b) => p?.requestLoan = b),
-        createAudit = $options.field<bool>('createAudit', (a) => a?.createAudit,
+        createAudit = options$.field<bool>('createAudit', (a) => a?.createAudit,
             (s) => s?.createAudit, (p, b) => p?.createAudit = b),
-        approveLoan = $options.field<bool>('approveLoan', (a) => a?.approveLoan,
+        approveLoan = options$.field<bool>('approveLoan', (a) => a?.approveLoan,
             (s) => s?.approveLoan, (p, b) => p?.approveLoan = b),
-        approveLoanMax = $options.field<double>(
+        approveLoanMax = options$.field<double>(
             'approveLoanMax',
             (a) => a?.approveLoanMax,
             (s) => s?.approveLoanMax,
             (p, b) => p?.approveLoanMax = b),
-        inventoryTypePermissions = $options
+        inventoryTypePermissions = options$
             .field<BuiltList<SaveTeamToOrgUnitApiInventoryTypePermission>>(
                 'inventoryTypePermissions',
                 (a) => a?.inventoryTypePermissions,
@@ -621,17 +621,18 @@ class _$SaveTeamToOrgUnitApiRequestActions
       _$SaveTeamToOrgUnitApiRequestActions._(options());
 
   @override
-  SaveTeamToOrgUnitApiRequest get $initial => SaveTeamToOrgUnitApiRequest();
+  SaveTeamToOrgUnitApiRequest get initialState$ =>
+      SaveTeamToOrgUnitApiRequest();
 
   @override
-  SaveTeamToOrgUnitApiRequestBuilder $newBuilder() =>
+  SaveTeamToOrgUnitApiRequestBuilder newBuilder$() =>
       SaveTeamToOrgUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.userRoleId,
         this.teamId,
         this.orgUnitId,
@@ -651,33 +652,28 @@ class _$SaveTeamToOrgUnitApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    userRoleId.$reducer(reducer);
-    teamId.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    ouAccessType.$reducer(reducer);
-    createCase.$reducer(reducer);
-    editCase.$reducer(reducer);
-    processOrders.$reducer(reducer);
-    manageCatalog.$reducer(reducer);
-    manageUsers.$reducer(reducer);
-    manageAudit.$reducer(reducer);
-    performAudit.$reducer(reducer);
-    requestLoan.$reducer(reducer);
-    createAudit.$reducer(reducer);
-    approveLoan.$reducer(reducer);
-    approveLoanMax.$reducer(reducer);
-    inventoryTypePermissions.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    userRoleId.reducer$(reducer);
+    teamId.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    ouAccessType.reducer$(reducer);
+    createCase.reducer$(reducer);
+    editCase.reducer$(reducer);
+    processOrders.reducer$(reducer);
+    manageCatalog.reducer$(reducer);
+    manageUsers.reducer$(reducer);
+    manageAudit.reducer$(reducer);
+    performAudit.reducer$(reducer);
+    requestLoan.reducer$(reducer);
+    createAudit.reducer$(reducer);
+    approveLoan.reducer$(reducer);
+    approveLoanMax.reducer$(reducer);
+    inventoryTypePermissions.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SaveTeamToOrgUnitApiRequest);
 }

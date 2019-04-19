@@ -157,15 +157,15 @@ class _$CreateInventoryTypeApiResponseActions
   final StatefulActionsOptions<
       CreateInventoryTypeApiResponse,
       CreateInventoryTypeApiResponseBuilder,
-      CreateInventoryTypeApiResponseActions> $options;
+      CreateInventoryTypeApiResponseActions> options$;
 
-  final ActionDispatcher<CreateInventoryTypeApiResponse> $replace;
+  final ActionDispatcher<CreateInventoryTypeApiResponse> replace$;
   final FieldDispatcher<String> id;
 
-  _$CreateInventoryTypeApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateInventoryTypeApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$CreateInventoryTypeApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateInventoryTypeApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -174,34 +174,29 @@ class _$CreateInventoryTypeApiResponseActions
       _$CreateInventoryTypeApiResponseActions._(options());
 
   @override
-  CreateInventoryTypeApiResponse get $initial =>
+  CreateInventoryTypeApiResponse get initialState$ =>
       CreateInventoryTypeApiResponse();
 
   @override
-  CreateInventoryTypeApiResponseBuilder $newBuilder() =>
+  CreateInventoryTypeApiResponseBuilder newBuilder$() =>
       CreateInventoryTypeApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateInventoryTypeApiResponse);
 }

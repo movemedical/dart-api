@@ -237,25 +237,25 @@ class _$ListDelegateOptionsApiDelegateOptionActions
   final StatefulActionsOptions<
       ListDelegateOptionsApiDelegateOption,
       ListDelegateOptionsApiDelegateOptionBuilder,
-      ListDelegateOptionsApiDelegateOptionActions> $options;
+      ListDelegateOptionsApiDelegateOptionActions> options$;
 
-  final ActionDispatcher<ListDelegateOptionsApiDelegateOption> $replace;
+  final ActionDispatcher<ListDelegateOptionsApiDelegateOption> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<DelegateType> type;
   final FieldDispatcher<String> name;
   final EmailActions email;
 
-  _$ListDelegateOptionsApiDelegateOptionActions._(this.$options)
-      : $replace = $options.action<ListDelegateOptionsApiDelegateOption>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListDelegateOptionsApiDelegateOptionActions._(this.options$)
+      : replace$ = options$.action<ListDelegateOptionsApiDelegateOption>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.field<DelegateType>(
+        type = options$.field<DelegateType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
@@ -268,46 +268,41 @@ class _$ListDelegateOptionsApiDelegateOptionActions
       _$ListDelegateOptionsApiDelegateOptionActions._(options());
 
   @override
-  ListDelegateOptionsApiDelegateOption get $initial =>
+  ListDelegateOptionsApiDelegateOption get initialState$ =>
       ListDelegateOptionsApiDelegateOption();
 
   @override
-  ListDelegateOptionsApiDelegateOptionBuilder $newBuilder() =>
+  ListDelegateOptionsApiDelegateOptionBuilder newBuilder$() =>
       ListDelegateOptionsApiDelegateOptionBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.type,
         this.name,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    type.$reducer(reducer);
-    name.$reducer(reducer);
-    email.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    type.reducer$(reducer);
+    name.reducer$(reducer);
+    email.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListDelegateOptionsApiDelegateOption);
 }

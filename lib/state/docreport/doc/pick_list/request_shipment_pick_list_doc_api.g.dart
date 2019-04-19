@@ -22,63 +22,29 @@ class _$RequestShipmentPickListDocApi extends RequestShipmentPickListDocApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestShipmentPickListDocApiRequest>,
           ApiResult<Nothing>>,
-      RequestShipmentPickListDocApi> $options;
+      RequestShipmentPickListDocApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestShipmentPickListDocApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestShipmentPickListDocApiRequest>,
-          ApiResult<Nothing>, RequestShipmentPickListDocApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestShipmentPickListDocApiRequest>,
-          ApiResult<Nothing>,
-          RequestShipmentPickListDocApi,
-          Command<ApiCommand<RequestShipmentPickListDocApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestShipmentPickListDocApiRequest>,
-          ApiResult<Nothing>,
-          RequestShipmentPickListDocApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestShipmentPickListDocApiRequest>,
-          ApiResult<Nothing>,
-          RequestShipmentPickListDocApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<RequestShipmentPickListDocApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RequestShipmentPickListDocApi._(this.$options)
-      : $replace = $options.action<
+  _$RequestShipmentPickListDocApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<RequestShipmentPickListDocApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RequestShipmentPickListDocApiRequest>,
-                ApiResult<Nothing>,
-                RequestShipmentPickListDocApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestShipmentPickListDocApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestShipmentPickListDocApi,
-                    Command<ApiCommand<RequestShipmentPickListDocApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestShipmentPickListDocApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestShipmentPickListDocApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RequestShipmentPickListDocApiRequest>,
-                ApiResult<Nothing>,
-                RequestShipmentPickListDocApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<RequestShipmentPickListDocApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RequestShipmentPickListDocApi(
@@ -88,33 +54,26 @@ class _$RequestShipmentPickListDocApi extends RequestShipmentPickListDocApi {
   @override
   CommandState<ApiCommand<RequestShipmentPickListDocApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<RequestShipmentPickListDocApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestShipmentPickListDocApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RequestShipmentPickListDocApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RequestShipmentPickListDocApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

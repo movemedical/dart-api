@@ -153,50 +153,46 @@ class TagBuilder implements Builder<Tag, TagBuilder> {
 typedef StatefulActionsOptions<Tag, TagBuilder, TagActions> TagActionsOptions();
 
 class _$TagActions extends TagActions {
-  final StatefulActionsOptions<Tag, TagBuilder, TagActions> $options;
+  final StatefulActionsOptions<Tag, TagBuilder, TagActions> options$;
 
-  final ActionDispatcher<Tag> $replace;
+  final ActionDispatcher<Tag> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> tagNumber;
 
-  _$TagActions._(this.$options)
-      : $replace = $options.action<Tag>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$TagActions._(this.options$)
+      : replace$ = options$.action<Tag>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        tagNumber = $options.field<String>('tagNumber', (a) => a?.tagNumber,
+        tagNumber = options$.field<String>('tagNumber', (a) => a?.tagNumber,
             (s) => s?.tagNumber, (p, b) => p?.tagNumber = b),
         super._();
 
   factory _$TagActions(TagActionsOptions options) => _$TagActions._(options());
 
   @override
-  Tag get $initial => Tag();
+  Tag get initialState$ => Tag();
 
   @override
-  TagBuilder $newBuilder() => TagBuilder();
+  TagBuilder newBuilder$() => TagBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.tagNumber,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    tagNumber.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    tagNumber.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Tag);
 }

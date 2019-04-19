@@ -200,23 +200,23 @@ typedef StatefulActionsOptions<TeamOption, TeamOptionBuilder,
 
 class _$TeamOptionActions extends TeamOptionActions {
   final StatefulActionsOptions<TeamOption, TeamOptionBuilder, TeamOptionActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<TeamOption> $replace;
+  final ActionDispatcher<TeamOption> replace$;
   final FieldDispatcher<String> teamId;
   final FieldDispatcher<String> teamName;
   final FieldDispatcher<bool> ops;
   final FieldDispatcher<bool> sales;
 
-  _$TeamOptionActions._(this.$options)
-      : $replace = $options.action<TeamOption>('\$replace', (a) => a?.$replace),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+  _$TeamOptionActions._(this.options$)
+      : replace$ = options$.action<TeamOption>('replace\$', (a) => a?.replace$),
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        teamName = $options.field<String>('teamName', (a) => a?.teamName,
+        teamName = options$.field<String>('teamName', (a) => a?.teamName,
             (s) => s?.teamName, (p, b) => p?.teamName = b),
-        ops = $options.field<bool>(
+        ops = options$.field<bool>(
             'ops', (a) => a?.ops, (s) => s?.ops, (p, b) => p?.ops = b),
-        sales = $options.field<bool>(
+        sales = options$.field<bool>(
             'sales', (a) => a?.sales, (s) => s?.sales, (p, b) => p?.sales = b),
         super._();
 
@@ -224,16 +224,16 @@ class _$TeamOptionActions extends TeamOptionActions {
       _$TeamOptionActions._(options());
 
   @override
-  TeamOption get $initial => TeamOption();
+  TeamOption get initialState$ => TeamOption();
 
   @override
-  TeamOptionBuilder $newBuilder() => TeamOptionBuilder();
+  TeamOptionBuilder newBuilder$() => TeamOptionBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.teamId,
         this.teamName,
         this.ops,
@@ -241,20 +241,16 @@ class _$TeamOptionActions extends TeamOptionActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    teamId.$reducer(reducer);
-    teamName.$reducer(reducer);
-    ops.$reducer(reducer);
-    sales.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    teamId.reducer$(reducer);
+    teamName.reducer$(reducer);
+    ops.reducer$(reducer);
+    sales.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(TeamOption);
 }

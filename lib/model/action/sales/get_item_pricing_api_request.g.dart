@@ -313,9 +313,9 @@ class _$GetItemPricingApiRequestActions
   final StatefulActionsOptions<
       GetItemPricingApiRequest,
       GetItemPricingApiRequestBuilder,
-      GetItemPricingApiRequestActions> $options;
+      GetItemPricingApiRequestActions> options$;
 
-  final ActionDispatcher<GetItemPricingApiRequest> $replace;
+  final ActionDispatcher<GetItemPricingApiRequest> replace$;
   final FieldDispatcher<String> caseId;
   final FieldDispatcher<String> customerId;
   final FieldDispatcher<String> shipToAddressId;
@@ -324,31 +324,31 @@ class _$GetItemPricingApiRequestActions
   final FieldDispatcher<BuiltList<GetItemPricingApiItem>> items;
   final FieldDispatcher<bool> construct;
 
-  _$GetItemPricingApiRequestActions._(this.$options)
-      : $replace = $options.action<GetItemPricingApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseId = $options.field<String>('caseId', (a) => a?.caseId,
+  _$GetItemPricingApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetItemPricingApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseId = options$.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        shipToAddressId = $options.field<String>(
+        shipToAddressId = options$.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
             (p, b) => p?.shipToAddressId = b),
-        billToAddressId = $options.field<String>(
+        billToAddressId = options$.field<String>(
             'billToAddressId',
             (a) => a?.billToAddressId,
             (s) => s?.billToAddressId,
             (p, b) => p?.billToAddressId = b),
-        constructId = $options.field<String>(
+        constructId = options$.field<String>(
             'constructId',
             (a) => a?.constructId,
             (s) => s?.constructId,
             (p, b) => p?.constructId = b),
-        items = $options.field<BuiltList<GetItemPricingApiItem>>(
+        items = options$.field<BuiltList<GetItemPricingApiItem>>(
             'items', (a) => a?.items, (s) => s?.items, (p, b) => p?.items = b),
-        construct = $options.field<bool>('construct', (a) => a?.construct,
+        construct = options$.field<bool>('construct', (a) => a?.construct,
             (s) => s?.construct, (p, b) => p?.construct = b),
         super._();
 
@@ -357,17 +357,17 @@ class _$GetItemPricingApiRequestActions
       _$GetItemPricingApiRequestActions._(options());
 
   @override
-  GetItemPricingApiRequest get $initial => GetItemPricingApiRequest();
+  GetItemPricingApiRequest get initialState$ => GetItemPricingApiRequest();
 
   @override
-  GetItemPricingApiRequestBuilder $newBuilder() =>
+  GetItemPricingApiRequestBuilder newBuilder$() =>
       GetItemPricingApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseId,
         this.customerId,
         this.shipToAddressId,
@@ -378,23 +378,19 @@ class _$GetItemPricingApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseId.$reducer(reducer);
-    customerId.$reducer(reducer);
-    shipToAddressId.$reducer(reducer);
-    billToAddressId.$reducer(reducer);
-    constructId.$reducer(reducer);
-    items.$reducer(reducer);
-    construct.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseId.reducer$(reducer);
+    customerId.reducer$(reducer);
+    shipToAddressId.reducer$(reducer);
+    billToAddressId.reducer$(reducer);
+    constructId.reducer$(reducer);
+    items.reducer$(reducer);
+    construct.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetItemPricingApiRequest);
 }

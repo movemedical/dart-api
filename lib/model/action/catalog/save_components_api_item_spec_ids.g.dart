@@ -255,27 +255,27 @@ class _$SaveComponentsApiItemSpecIdsActions
   final StatefulActionsOptions<
       SaveComponentsApiItemSpecIds,
       SaveComponentsApiItemSpecIdsBuilder,
-      SaveComponentsApiItemSpecIdsActions> $options;
+      SaveComponentsApiItemSpecIdsActions> options$;
 
-  final ActionDispatcher<SaveComponentsApiItemSpecIds> $replace;
+  final ActionDispatcher<SaveComponentsApiItemSpecIds> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<BuiltList<String>> itemVersionIds;
   final FieldDispatcher<BuiltList<String>> lotIds;
   final FieldDispatcher<BuiltList<String>> serialIds;
 
-  _$SaveComponentsApiItemSpecIdsActions._(this.$options)
-      : $replace = $options.action<SaveComponentsApiItemSpecIds>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$SaveComponentsApiItemSpecIdsActions._(this.options$)
+      : replace$ = options$.action<SaveComponentsApiItemSpecIds>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionIds = $options.field<BuiltList<String>>(
+        itemVersionIds = options$.field<BuiltList<String>>(
             'itemVersionIds',
             (a) => a?.itemVersionIds,
             (s) => s?.itemVersionIds,
             (p, b) => p?.itemVersionIds = b),
-        lotIds = $options.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
+        lotIds = options$.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
             (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        serialIds = $options.field<BuiltList<String>>(
+        serialIds = options$.field<BuiltList<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
@@ -287,17 +287,18 @@ class _$SaveComponentsApiItemSpecIdsActions
       _$SaveComponentsApiItemSpecIdsActions._(options());
 
   @override
-  SaveComponentsApiItemSpecIds get $initial => SaveComponentsApiItemSpecIds();
+  SaveComponentsApiItemSpecIds get initialState$ =>
+      SaveComponentsApiItemSpecIds();
 
   @override
-  SaveComponentsApiItemSpecIdsBuilder $newBuilder() =>
+  SaveComponentsApiItemSpecIdsBuilder newBuilder$() =>
       SaveComponentsApiItemSpecIdsBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.itemVersionIds,
         this.lotIds,
@@ -305,21 +306,16 @@ class _$SaveComponentsApiItemSpecIdsActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemVersionIds.$reducer(reducer);
-    lotIds.$reducer(reducer);
-    serialIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemVersionIds.reducer$(reducer);
+    lotIds.reducer$(reducer);
+    serialIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SaveComponentsApiItemSpecIds);
 }

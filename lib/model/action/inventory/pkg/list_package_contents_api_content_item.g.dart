@@ -380,9 +380,9 @@ class _$ListPackageContentsApiContentItemActions
   final StatefulActionsOptions<
       ListPackageContentsApiContentItem,
       ListPackageContentsApiContentItemBuilder,
-      ListPackageContentsApiContentItemActions> $options;
+      ListPackageContentsApiContentItemActions> options$;
 
-  final ActionDispatcher<ListPackageContentsApiContentItem> $replace;
+  final ActionDispatcher<ListPackageContentsApiContentItem> replace$;
   final FieldDispatcher<String> stockSummaryKey;
   final FieldDispatcher<BuiltList<String>> stockIds;
   final StockItemActions stockItem;
@@ -393,50 +393,50 @@ class _$ListPackageContentsApiContentItemActions
   final ItemActions kitItem;
   final SerialActions kitSerial;
 
-  _$ListPackageContentsApiContentItemActions._(this.$options)
-      : $replace = $options.action<ListPackageContentsApiContentItem>(
-            '\$replace', (a) => a?.$replace),
-        stockSummaryKey = $options.field<String>(
+  _$ListPackageContentsApiContentItemActions._(this.options$)
+      : replace$ = options$.action<ListPackageContentsApiContentItem>(
+            'replace\$', (a) => a?.replace$),
+        stockSummaryKey = options$.field<String>(
             'stockSummaryKey',
             (a) => a?.stockSummaryKey,
             (s) => s?.stockSummaryKey,
             (p, b) => p?.stockSummaryKey = b),
-        stockIds = $options.field<BuiltList<String>>('stockIds',
+        stockIds = options$.field<BuiltList<String>>('stockIds',
             (a) => a?.stockIds, (s) => s?.stockIds, (p, b) => p?.stockIds = b),
         stockItem = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
                 (a) => a.stockItem,
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
-        inventoryType = InventoryTypeActions(() => $options.stateful<
+        inventoryType = InventoryTypeActions(() => options$.stateful<
                 InventoryType, InventoryTypeBuilder, InventoryTypeActions>(
             'inventoryType',
             (a) => a.inventoryType,
             (s) => s?.inventoryType,
             (b) => b?.inventoryType,
             (parent, builder) => parent?.inventoryType = builder)),
-        expirationInfo = ExpirationInfoActions(() => $options.stateful<
+        expirationInfo = ExpirationInfoActions(() => options$.stateful<
                 ExpirationInfo, ExpirationInfoBuilder, ExpirationInfoActions>(
             'expirationInfo',
             (a) => a.expirationInfo,
             (s) => s?.expirationInfo,
             (b) => b?.expirationInfo,
             (parent, builder) => parent?.expirationInfo = builder)),
-        qtyShipped = $options.field<int>('qtyShipped', (a) => a?.qtyShipped,
+        qtyShipped = options$.field<int>('qtyShipped', (a) => a?.qtyShipped,
             (s) => s?.qtyShipped, (p, b) => p?.qtyShipped = b),
-        qtyInPkg = $options.field<int>('qtyInPkg', (a) => a?.qtyInPkg,
+        qtyInPkg = options$.field<int>('qtyInPkg', (a) => a?.qtyInPkg,
             (s) => s?.qtyInPkg, (p, b) => p?.qtyInPkg = b),
         kitItem = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'kitItem',
                 (a) => a.kitItem,
                 (s) => s?.kitItem,
                 (b) => b?.kitItem,
                 (parent, builder) => parent?.kitItem = builder)),
         kitSerial = SerialActions(() =>
-            $options.stateful<Serial, SerialBuilder, SerialActions>(
+            options$.stateful<Serial, SerialBuilder, SerialActions>(
                 'kitSerial',
                 (a) => a.kitSerial,
                 (s) => s?.kitSerial,
@@ -449,16 +449,16 @@ class _$ListPackageContentsApiContentItemActions
       _$ListPackageContentsApiContentItemActions._(options());
 
   @override
-  ListPackageContentsApiContentItem get $initial =>
+  ListPackageContentsApiContentItem get initialState$ =>
       ListPackageContentsApiContentItem();
 
   @override
-  ListPackageContentsApiContentItemBuilder $newBuilder() =>
+  ListPackageContentsApiContentItemBuilder newBuilder$() =>
       ListPackageContentsApiContentItemBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
         this.inventoryType,
         this.expirationInfo,
@@ -466,11 +466,11 @@ class _$ListPackageContentsApiContentItemActions
         this.kitSerial,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockSummaryKey,
         this.stockIds,
         this.qtyShipped,
@@ -478,31 +478,26 @@ class _$ListPackageContentsApiContentItemActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockSummaryKey.$reducer(reducer);
-    stockIds.$reducer(reducer);
-    stockItem.$reducer(reducer);
-    inventoryType.$reducer(reducer);
-    expirationInfo.$reducer(reducer);
-    qtyShipped.$reducer(reducer);
-    qtyInPkg.$reducer(reducer);
-    kitItem.$reducer(reducer);
-    kitSerial.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockSummaryKey.reducer$(reducer);
+    stockIds.reducer$(reducer);
+    stockItem.reducer$(reducer);
+    inventoryType.reducer$(reducer);
+    expirationInfo.reducer$(reducer);
+    qtyShipped.reducer$(reducer);
+    qtyInPkg.reducer$(reducer);
+    kitItem.reducer$(reducer);
+    kitSerial.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    stockItem.$middleware(middleware);
-    inventoryType.$middleware(middleware);
-    expirationInfo.$middleware(middleware);
-    kitItem.$middleware(middleware);
-    kitSerial.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    stockItem.middleware$(middleware);
+    inventoryType.middleware$(middleware);
+    expirationInfo.middleware$(middleware);
+    kitItem.middleware$(middleware);
+    kitSerial.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPackageContentsApiContentItem);
 }

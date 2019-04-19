@@ -175,15 +175,15 @@ class _$ListIssueGroupsApiResponseActions
   final StatefulActionsOptions<
       ListIssueGroupsApiResponse,
       ListIssueGroupsApiResponseBuilder,
-      ListIssueGroupsApiResponseActions> $options;
+      ListIssueGroupsApiResponseActions> options$;
 
-  final ActionDispatcher<ListIssueGroupsApiResponse> $replace;
+  final ActionDispatcher<ListIssueGroupsApiResponse> replace$;
   final FieldDispatcher<BuiltList<String>> issueGroups;
 
-  _$ListIssueGroupsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListIssueGroupsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        issueGroups = $options.field<BuiltList<String>>(
+  _$ListIssueGroupsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListIssueGroupsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        issueGroups = options$.field<BuiltList<String>>(
             'issueGroups',
             (a) => a?.issueGroups,
             (s) => s?.issueGroups,
@@ -195,32 +195,28 @@ class _$ListIssueGroupsApiResponseActions
       _$ListIssueGroupsApiResponseActions._(options());
 
   @override
-  ListIssueGroupsApiResponse get $initial => ListIssueGroupsApiResponse();
+  ListIssueGroupsApiResponse get initialState$ => ListIssueGroupsApiResponse();
 
   @override
-  ListIssueGroupsApiResponseBuilder $newBuilder() =>
+  ListIssueGroupsApiResponseBuilder newBuilder$() =>
       ListIssueGroupsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.issueGroups,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    issueGroups.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    issueGroups.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListIssueGroupsApiResponse);
 }

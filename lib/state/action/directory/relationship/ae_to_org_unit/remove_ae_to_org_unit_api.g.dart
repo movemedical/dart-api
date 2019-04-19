@@ -20,60 +20,29 @@ class _$RemoveAeToOrgUnitApi extends RemoveAeToOrgUnitApi {
       CommandState<ApiCommand<RemoveAeToOrgUnitApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RemoveAeToOrgUnitApiRequest>,
           ApiResult<Nothing>>,
-      RemoveAeToOrgUnitApi> $options;
+      RemoveAeToOrgUnitApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemoveAeToOrgUnitApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAeToOrgUnitApiRequest>,
-          ApiResult<Nothing>, RemoveAeToOrgUnitApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveAeToOrgUnitApiRequest>,
-          ApiResult<Nothing>,
-          RemoveAeToOrgUnitApi,
-          Command<ApiCommand<RemoveAeToOrgUnitApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveAeToOrgUnitApiRequest>,
-          ApiResult<Nothing>,
-          RemoveAeToOrgUnitApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAeToOrgUnitApiRequest>,
-          ApiResult<Nothing>, RemoveAeToOrgUnitApi, CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<RemoveAeToOrgUnitApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RemoveAeToOrgUnitApi._(this.$options)
-      : $replace = $options.action<
+  _$RemoveAeToOrgUnitApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<RemoveAeToOrgUnitApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveAeToOrgUnitApiRequest>,
-                ApiResult<Nothing>,
-                RemoveAeToOrgUnitApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RemoveAeToOrgUnitApiRequest>,
-                    ApiResult<Nothing>,
-                    RemoveAeToOrgUnitApi,
-                    Command<ApiCommand<RemoveAeToOrgUnitApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RemoveAeToOrgUnitApiRequest>,
-                    ApiResult<Nothing>,
-                    RemoveAeToOrgUnitApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveAeToOrgUnitApiRequest>,
-                ApiResult<Nothing>,
-                RemoveAeToOrgUnitApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<RemoveAeToOrgUnitApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RemoveAeToOrgUnitApi(RemoveAeToOrgUnitApiOptions options) =>
@@ -81,31 +50,24 @@ class _$RemoveAeToOrgUnitApi extends RemoveAeToOrgUnitApi {
 
   @override
   CommandState<ApiCommand<RemoveAeToOrgUnitApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<RemoveAeToOrgUnitApiRequest>,
+      get initialState$ => CommandState<ApiCommand<RemoveAeToOrgUnitApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RemoveAeToOrgUnitApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RemoveAeToOrgUnitApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RemoveAeToOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

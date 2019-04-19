@@ -179,15 +179,15 @@ class _$MarkNotificationsReadApiRequestActions
   final StatefulActionsOptions<
       MarkNotificationsReadApiRequest,
       MarkNotificationsReadApiRequestBuilder,
-      MarkNotificationsReadApiRequestActions> $options;
+      MarkNotificationsReadApiRequestActions> options$;
 
-  final ActionDispatcher<MarkNotificationsReadApiRequest> $replace;
+  final ActionDispatcher<MarkNotificationsReadApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> notificationIds;
 
-  _$MarkNotificationsReadApiRequestActions._(this.$options)
-      : $replace = $options.action<MarkNotificationsReadApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        notificationIds = $options.field<BuiltList<String>>(
+  _$MarkNotificationsReadApiRequestActions._(this.options$)
+      : replace$ = options$.action<MarkNotificationsReadApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        notificationIds = options$.field<BuiltList<String>>(
             'notificationIds',
             (a) => a?.notificationIds,
             (s) => s?.notificationIds,
@@ -199,34 +199,29 @@ class _$MarkNotificationsReadApiRequestActions
       _$MarkNotificationsReadApiRequestActions._(options());
 
   @override
-  MarkNotificationsReadApiRequest get $initial =>
+  MarkNotificationsReadApiRequest get initialState$ =>
       MarkNotificationsReadApiRequest();
 
   @override
-  MarkNotificationsReadApiRequestBuilder $newBuilder() =>
+  MarkNotificationsReadApiRequestBuilder newBuilder$() =>
       MarkNotificationsReadApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.notificationIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    notificationIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    notificationIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(MarkNotificationsReadApiRequest);
 }

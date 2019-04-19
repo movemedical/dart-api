@@ -315,9 +315,9 @@ typedef StatefulActionsOptions<
 
 class _$ListOrgUnitsApiRequestActions extends ListOrgUnitsApiRequestActions {
   final StatefulActionsOptions<ListOrgUnitsApiRequest,
-      ListOrgUnitsApiRequestBuilder, ListOrgUnitsApiRequestActions> $options;
+      ListOrgUnitsApiRequestBuilder, ListOrgUnitsApiRequestActions> options$;
 
-  final ActionDispatcher<ListOrgUnitsApiRequest> $replace;
+  final ActionDispatcher<ListOrgUnitsApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> locationId;
@@ -327,33 +327,33 @@ class _$ListOrgUnitsApiRequestActions extends ListOrgUnitsApiRequestActions {
   final FieldDispatcher<bool> includeOps;
   final FieldDispatcher<String> search;
 
-  _$ListOrgUnitsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListOrgUnitsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListOrgUnitsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListOrgUnitsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        includeFullAccess = $options.field<bool>(
+        includeFullAccess = options$.field<bool>(
             'includeFullAccess',
             (a) => a?.includeFullAccess,
             (s) => s?.includeFullAccess,
             (p, b) => p?.includeFullAccess = b),
-        includeInventoryOnly = $options.field<bool>(
+        includeInventoryOnly = options$.field<bool>(
             'includeInventoryOnly',
             (a) => a?.includeInventoryOnly,
             (s) => s?.includeInventoryOnly,
             (p, b) => p?.includeInventoryOnly = b),
-        includeSales = $options.field<bool>(
+        includeSales = options$.field<bool>(
             'includeSales',
             (a) => a?.includeSales,
             (s) => s?.includeSales,
             (p, b) => p?.includeSales = b),
-        includeOps = $options.field<bool>('includeOps', (a) => a?.includeOps,
+        includeOps = options$.field<bool>('includeOps', (a) => a?.includeOps,
             (s) => s?.includeOps, (p, b) => p?.includeOps = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -362,17 +362,17 @@ class _$ListOrgUnitsApiRequestActions extends ListOrgUnitsApiRequestActions {
       _$ListOrgUnitsApiRequestActions._(options());
 
   @override
-  ListOrgUnitsApiRequest get $initial => ListOrgUnitsApiRequest();
+  ListOrgUnitsApiRequest get initialState$ => ListOrgUnitsApiRequest();
 
   @override
-  ListOrgUnitsApiRequestBuilder $newBuilder() =>
+  ListOrgUnitsApiRequestBuilder newBuilder$() =>
       ListOrgUnitsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.bizUnitId,
         this.locationId,
@@ -384,24 +384,20 @@ class _$ListOrgUnitsApiRequestActions extends ListOrgUnitsApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    locationId.$reducer(reducer);
-    includeFullAccess.$reducer(reducer);
-    includeInventoryOnly.$reducer(reducer);
-    includeSales.$reducer(reducer);
-    includeOps.$reducer(reducer);
-    search.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    locationId.reducer$(reducer);
+    includeFullAccess.reducer$(reducer);
+    includeInventoryOnly.reducer$(reducer);
+    includeSales.reducer$(reducer);
+    includeOps.reducer$(reducer);
+    search.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListOrgUnitsApiRequest);
 }

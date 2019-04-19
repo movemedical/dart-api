@@ -181,18 +181,18 @@ class _$AutoCompleteShipmentApiRequestActions
   final StatefulActionsOptions<
       AutoCompleteShipmentApiRequest,
       AutoCompleteShipmentApiRequestBuilder,
-      AutoCompleteShipmentApiRequestActions> $options;
+      AutoCompleteShipmentApiRequestActions> options$;
 
-  final ActionDispatcher<AutoCompleteShipmentApiRequest> $replace;
+  final ActionDispatcher<AutoCompleteShipmentApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> trackingNumber;
 
-  _$AutoCompleteShipmentApiRequestActions._(this.$options)
-      : $replace = $options.action<AutoCompleteShipmentApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$AutoCompleteShipmentApiRequestActions._(this.options$)
+      : replace$ = options$.action<AutoCompleteShipmentApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        trackingNumber = $options.field<String>(
+        trackingNumber = options$.field<String>(
             'trackingNumber',
             (a) => a?.trackingNumber,
             (s) => s?.trackingNumber,
@@ -204,36 +204,31 @@ class _$AutoCompleteShipmentApiRequestActions
       _$AutoCompleteShipmentApiRequestActions._(options());
 
   @override
-  AutoCompleteShipmentApiRequest get $initial =>
+  AutoCompleteShipmentApiRequest get initialState$ =>
       AutoCompleteShipmentApiRequest();
 
   @override
-  AutoCompleteShipmentApiRequestBuilder $newBuilder() =>
+  AutoCompleteShipmentApiRequestBuilder newBuilder$() =>
       AutoCompleteShipmentApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.trackingNumber,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    trackingNumber.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    trackingNumber.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AutoCompleteShipmentApiRequest);
 }

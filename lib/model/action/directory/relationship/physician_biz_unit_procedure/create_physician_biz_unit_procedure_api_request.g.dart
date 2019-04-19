@@ -212,23 +212,23 @@ class _$CreatePhysicianBizUnitProcedureApiRequestActions
   final StatefulActionsOptions<
       CreatePhysicianBizUnitProcedureApiRequest,
       CreatePhysicianBizUnitProcedureApiRequestBuilder,
-      CreatePhysicianBizUnitProcedureApiRequestActions> $options;
+      CreatePhysicianBizUnitProcedureApiRequestActions> options$;
 
-  final ActionDispatcher<CreatePhysicianBizUnitProcedureApiRequest> $replace;
+  final ActionDispatcher<CreatePhysicianBizUnitProcedureApiRequest> replace$;
   final FieldDispatcher<String> physicianId;
   final FieldDispatcher<
           BuiltList<CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry>>
       entries;
 
-  _$CreatePhysicianBizUnitProcedureApiRequestActions._(this.$options)
-      : $replace = $options.action<CreatePhysicianBizUnitProcedureApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        physicianId = $options.field<String>(
+  _$CreatePhysicianBizUnitProcedureApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreatePhysicianBizUnitProcedureApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        physicianId = options$.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        entries = $options.field<
+        entries = options$.field<
                 BuiltList<
                     CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry>>(
             'entries',
@@ -242,36 +242,31 @@ class _$CreatePhysicianBizUnitProcedureApiRequestActions
       _$CreatePhysicianBizUnitProcedureApiRequestActions._(options());
 
   @override
-  CreatePhysicianBizUnitProcedureApiRequest get $initial =>
+  CreatePhysicianBizUnitProcedureApiRequest get initialState$ =>
       CreatePhysicianBizUnitProcedureApiRequest();
 
   @override
-  CreatePhysicianBizUnitProcedureApiRequestBuilder $newBuilder() =>
+  CreatePhysicianBizUnitProcedureApiRequestBuilder newBuilder$() =>
       CreatePhysicianBizUnitProcedureApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.physicianId,
         this.entries,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    physicianId.$reducer(reducer);
-    entries.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    physicianId.reducer$(reducer);
+    entries.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreatePhysicianBizUnitProcedureApiRequest);
 }

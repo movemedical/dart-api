@@ -157,15 +157,15 @@ class _$RemoveDceToOrgUnitApiRequestActions
   final StatefulActionsOptions<
       RemoveDceToOrgUnitApiRequest,
       RemoveDceToOrgUnitApiRequestBuilder,
-      RemoveDceToOrgUnitApiRequestActions> $options;
+      RemoveDceToOrgUnitApiRequestActions> options$;
 
-  final ActionDispatcher<RemoveDceToOrgUnitApiRequest> $replace;
+  final ActionDispatcher<RemoveDceToOrgUnitApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$RemoveDceToOrgUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<RemoveDceToOrgUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$RemoveDceToOrgUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<RemoveDceToOrgUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -174,33 +174,29 @@ class _$RemoveDceToOrgUnitApiRequestActions
       _$RemoveDceToOrgUnitApiRequestActions._(options());
 
   @override
-  RemoveDceToOrgUnitApiRequest get $initial => RemoveDceToOrgUnitApiRequest();
+  RemoveDceToOrgUnitApiRequest get initialState$ =>
+      RemoveDceToOrgUnitApiRequest();
 
   @override
-  RemoveDceToOrgUnitApiRequestBuilder $newBuilder() =>
+  RemoveDceToOrgUnitApiRequestBuilder newBuilder$() =>
       RemoveDceToOrgUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RemoveDceToOrgUnitApiRequest);
 }

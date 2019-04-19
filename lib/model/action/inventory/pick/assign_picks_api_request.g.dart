@@ -188,18 +188,18 @@ typedef StatefulActionsOptions<
 
 class _$AssignPicksApiRequestActions extends AssignPicksApiRequestActions {
   final StatefulActionsOptions<AssignPicksApiRequest,
-      AssignPicksApiRequestBuilder, AssignPicksApiRequestActions> $options;
+      AssignPicksApiRequestBuilder, AssignPicksApiRequestActions> options$;
 
-  final ActionDispatcher<AssignPicksApiRequest> $replace;
+  final ActionDispatcher<AssignPicksApiRequest> replace$;
   final FieldDispatcher<String> userId;
   final FieldDispatcher<BuiltList<String>> pickIds;
 
-  _$AssignPicksApiRequestActions._(this.$options)
-      : $replace = $options.action<AssignPicksApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        userId = $options.field<String>('userId', (a) => a?.userId,
+  _$AssignPicksApiRequestActions._(this.options$)
+      : replace$ = options$.action<AssignPicksApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        userId = options$.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        pickIds = $options.field<BuiltList<String>>('pickIds',
+        pickIds = options$.field<BuiltList<String>>('pickIds',
             (a) => a?.pickIds, (s) => s?.pickIds, (p, b) => p?.pickIds = b),
         super._();
 
@@ -208,33 +208,29 @@ class _$AssignPicksApiRequestActions extends AssignPicksApiRequestActions {
       _$AssignPicksApiRequestActions._(options());
 
   @override
-  AssignPicksApiRequest get $initial => AssignPicksApiRequest();
+  AssignPicksApiRequest get initialState$ => AssignPicksApiRequest();
 
   @override
-  AssignPicksApiRequestBuilder $newBuilder() => AssignPicksApiRequestBuilder();
+  AssignPicksApiRequestBuilder newBuilder$() => AssignPicksApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.userId,
         this.pickIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    userId.$reducer(reducer);
-    pickIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    userId.reducer$(reducer);
+    pickIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(AssignPicksApiRequest);
 }

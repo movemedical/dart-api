@@ -182,18 +182,18 @@ typedef StatefulActionsOptions<ListLotsApiResponse, ListLotsApiResponseBuilder,
 
 class _$ListLotsApiResponseActions extends ListLotsApiResponseActions {
   final StatefulActionsOptions<ListLotsApiResponse, ListLotsApiResponseBuilder,
-      ListLotsApiResponseActions> $options;
+      ListLotsApiResponseActions> options$;
 
-  final ActionDispatcher<ListLotsApiResponse> $replace;
+  final ActionDispatcher<ListLotsApiResponse> replace$;
   final FieldDispatcher<BuiltList<Lot>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListLotsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListLotsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<Lot>>(
+  _$ListLotsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListLotsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<Lot>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -202,33 +202,29 @@ class _$ListLotsApiResponseActions extends ListLotsApiResponseActions {
       _$ListLotsApiResponseActions._(options());
 
   @override
-  ListLotsApiResponse get $initial => ListLotsApiResponse();
+  ListLotsApiResponse get initialState$ => ListLotsApiResponse();
 
   @override
-  ListLotsApiResponseBuilder $newBuilder() => ListLotsApiResponseBuilder();
+  ListLotsApiResponseBuilder newBuilder$() => ListLotsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListLotsApiResponse);
 }

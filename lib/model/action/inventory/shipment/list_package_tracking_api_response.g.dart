@@ -176,15 +176,15 @@ class _$ListPackageTrackingApiResponseActions
   final StatefulActionsOptions<
       ListPackageTrackingApiResponse,
       ListPackageTrackingApiResponseBuilder,
-      ListPackageTrackingApiResponseActions> $options;
+      ListPackageTrackingApiResponseActions> options$;
 
-  final ActionDispatcher<ListPackageTrackingApiResponse> $replace;
+  final ActionDispatcher<ListPackageTrackingApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListPackageTrackingApiTrackingEvent>> events;
 
-  _$ListPackageTrackingApiResponseActions._(this.$options)
-      : $replace = $options.action<ListPackageTrackingApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        events = $options.field<BuiltList<ListPackageTrackingApiTrackingEvent>>(
+  _$ListPackageTrackingApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListPackageTrackingApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        events = options$.field<BuiltList<ListPackageTrackingApiTrackingEvent>>(
             'events',
             (a) => a?.events,
             (s) => s?.events,
@@ -196,34 +196,29 @@ class _$ListPackageTrackingApiResponseActions
       _$ListPackageTrackingApiResponseActions._(options());
 
   @override
-  ListPackageTrackingApiResponse get $initial =>
+  ListPackageTrackingApiResponse get initialState$ =>
       ListPackageTrackingApiResponse();
 
   @override
-  ListPackageTrackingApiResponseBuilder $newBuilder() =>
+  ListPackageTrackingApiResponseBuilder newBuilder$() =>
       ListPackageTrackingApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.events,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    events.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    events.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPackageTrackingApiResponse);
 }

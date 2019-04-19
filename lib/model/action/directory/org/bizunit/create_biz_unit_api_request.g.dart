@@ -282,9 +282,9 @@ typedef StatefulActionsOptions<
 
 class _$CreateBizUnitApiRequestActions extends CreateBizUnitApiRequestActions {
   final StatefulActionsOptions<CreateBizUnitApiRequest,
-      CreateBizUnitApiRequestBuilder, CreateBizUnitApiRequestActions> $options;
+      CreateBizUnitApiRequestBuilder, CreateBizUnitApiRequestActions> options$;
 
-  final ActionDispatcher<CreateBizUnitApiRequest> $replace;
+  final ActionDispatcher<CreateBizUnitApiRequest> replace$;
   final FieldDispatcher<String> key;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> description;
@@ -292,31 +292,31 @@ class _$CreateBizUnitApiRequestActions extends CreateBizUnitApiRequestActions {
   final FieldDispatcher<bool> publicListing;
   final FieldDispatcher<bool> active;
 
-  _$CreateBizUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateBizUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        key = $options.field<String>(
+  _$CreateBizUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateBizUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        key = options$.field<String>(
             'key', (a) => a?.key, (s) => s?.key, (p, b) => p?.key = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        publicListing = $options.field<bool>(
+        publicListing = options$.field<bool>(
             'publicListing',
             (a) => a?.publicListing,
             (s) => s?.publicListing,
             (p, b) => p?.publicListing = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -325,23 +325,23 @@ class _$CreateBizUnitApiRequestActions extends CreateBizUnitApiRequestActions {
       _$CreateBizUnitApiRequestActions._(options());
 
   @override
-  CreateBizUnitApiRequest get $initial => CreateBizUnitApiRequest();
+  CreateBizUnitApiRequest get initialState$ => CreateBizUnitApiRequest();
 
   @override
-  CreateBizUnitApiRequestBuilder $newBuilder() =>
+  CreateBizUnitApiRequestBuilder newBuilder$() =>
       CreateBizUnitApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.key,
         this.name,
         this.description,
@@ -350,23 +350,19 @@ class _$CreateBizUnitApiRequestActions extends CreateBizUnitApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    key.$reducer(reducer);
-    name.$reducer(reducer);
-    description.$reducer(reducer);
-    email.$reducer(reducer);
-    publicListing.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    key.reducer$(reducer);
+    name.reducer$(reducer);
+    description.reducer$(reducer);
+    email.reducer$(reducer);
+    publicListing.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateBizUnitApiRequest);
 }

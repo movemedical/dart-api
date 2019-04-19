@@ -277,28 +277,28 @@ class _$ListProceduresForSearchApiRequestActions
   final StatefulActionsOptions<
       ListProceduresForSearchApiRequest,
       ListProceduresForSearchApiRequestBuilder,
-      ListProceduresForSearchApiRequestActions> $options;
+      ListProceduresForSearchApiRequestActions> options$;
 
-  final ActionDispatcher<ListProceduresForSearchApiRequest> $replace;
+  final ActionDispatcher<ListProceduresForSearchApiRequest> replace$;
   final FieldDispatcher<String> search;
   final FieldDispatcher<bool> export;
   final FieldDispatcher<ListProceduresForSearchApiActiveStatus> activeChoice;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListProceduresForSearchApiOrderBy> orderBy;
 
-  _$ListProceduresForSearchApiRequestActions._(this.$options)
-      : $replace = $options.action<ListProceduresForSearchApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$ListProceduresForSearchApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListProceduresForSearchApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        export = $options.field<bool>('export', (a) => a?.export,
+        export = options$.field<bool>('export', (a) => a?.export,
             (s) => s?.export, (p, b) => p?.export = b),
-        activeChoice = $options.field<ListProceduresForSearchApiActiveStatus>(
+        activeChoice = options$.field<ListProceduresForSearchApiActiveStatus>(
             'activeChoice',
             (a) => a?.activeChoice,
             (s) => s?.activeChoice,
             (p, b) => p?.activeChoice = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -308,7 +308,7 @@ class _$ListProceduresForSearchApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListProceduresForSearchApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListProceduresForSearchApiOrderBy>,
                     OrderByParamsBuilder<ListProceduresForSearchApiOrderBy>,
                     OrderByParamsActions<ListProceduresForSearchApiOrderBy>>(
@@ -324,49 +324,44 @@ class _$ListProceduresForSearchApiRequestActions
       _$ListProceduresForSearchApiRequestActions._(options());
 
   @override
-  ListProceduresForSearchApiRequest get $initial =>
+  ListProceduresForSearchApiRequest get initialState$ =>
       ListProceduresForSearchApiRequest();
 
   @override
-  ListProceduresForSearchApiRequestBuilder $newBuilder() =>
+  ListProceduresForSearchApiRequestBuilder newBuilder$() =>
       ListProceduresForSearchApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
         this.export,
         this.activeChoice,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
-    export.$reducer(reducer);
-    activeChoice.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
+    export.reducer$(reducer);
+    activeChoice.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListProceduresForSearchApiRequest);
 }

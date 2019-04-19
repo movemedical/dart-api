@@ -22,63 +22,29 @@ class _$UpdateCaseStatusToCompleteApi extends UpdateCaseStatusToCompleteApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
           ApiResult<Nothing>>,
-      UpdateCaseStatusToCompleteApi> $options;
+      UpdateCaseStatusToCompleteApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Nothing>, UpdateCaseStatusToCompleteApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Nothing>,
-          UpdateCaseStatusToCompleteApi,
-          Command<ApiCommand<UpdateCaseStatusToCompleteApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Nothing>,
-          UpdateCaseStatusToCompleteApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Nothing>,
-          UpdateCaseStatusToCompleteApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<UpdateCaseStatusToCompleteApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$UpdateCaseStatusToCompleteApi._(this.$options)
-      : $replace = $options.action<
+  _$UpdateCaseStatusToCompleteApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-                ApiResult<Nothing>,
-                UpdateCaseStatusToCompleteApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-                    ApiResult<Nothing>,
-                    UpdateCaseStatusToCompleteApi,
-                    Command<ApiCommand<UpdateCaseStatusToCompleteApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-                    ApiResult<Nothing>,
-                    UpdateCaseStatusToCompleteApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-                ApiResult<Nothing>,
-                UpdateCaseStatusToCompleteApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<UpdateCaseStatusToCompleteApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$UpdateCaseStatusToCompleteApi(
@@ -88,33 +54,26 @@ class _$UpdateCaseStatusToCompleteApi extends UpdateCaseStatusToCompleteApi {
   @override
   CommandState<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(UpdateCaseStatusToCompleteApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

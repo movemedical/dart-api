@@ -224,21 +224,21 @@ class _$ListComponentsApiResponseActions
   final StatefulActionsOptions<
       ListComponentsApiResponse,
       ListComponentsApiResponseBuilder,
-      ListComponentsApiResponseActions> $options;
+      ListComponentsApiResponseActions> options$;
 
-  final ActionDispatcher<ListComponentsApiResponse> $replace;
+  final ActionDispatcher<ListComponentsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListComponentsApiComponent>> data;
   final FieldDispatcher<bool> moreData;
   final FieldDispatcher<BuiltList<ListComponentsApiContainerLite>> containers;
 
-  _$ListComponentsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListComponentsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListComponentsApiComponent>>(
+  _$ListComponentsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListComponentsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListComponentsApiComponent>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
-        containers = $options.field<BuiltList<ListComponentsApiContainerLite>>(
+        containers = options$.field<BuiltList<ListComponentsApiContainerLite>>(
             'containers',
             (a) => a?.containers,
             (s) => s?.containers,
@@ -250,36 +250,32 @@ class _$ListComponentsApiResponseActions
       _$ListComponentsApiResponseActions._(options());
 
   @override
-  ListComponentsApiResponse get $initial => ListComponentsApiResponse();
+  ListComponentsApiResponse get initialState$ => ListComponentsApiResponse();
 
   @override
-  ListComponentsApiResponseBuilder $newBuilder() =>
+  ListComponentsApiResponseBuilder newBuilder$() =>
       ListComponentsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
         this.containers,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
-    containers.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
+    containers.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListComponentsApiResponse);
 }

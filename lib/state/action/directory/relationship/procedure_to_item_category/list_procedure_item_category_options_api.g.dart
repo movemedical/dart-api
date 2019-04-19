@@ -24,74 +24,36 @@ class _$ListProcedureItemCategoryOptionsApi
       CommandStateBuilder<
           ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
           ApiResult<ListProcedureItemCategoryOptionsApiResponse>>,
-      ListProcedureItemCategoryOptionsApi> $options;
+      ListProcedureItemCategoryOptionsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
-          ApiResult<ListProcedureItemCategoryOptionsApiResponse>>> $replace;
+          ApiResult<ListProcedureItemCategoryOptionsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
-          ApiResult<ListProcedureItemCategoryOptionsApiResponse>,
-          ListProcedureItemCategoryOptionsApi,
-          String>> $cancel;
+      Command<ApiCommand<ListProcedureItemCategoryOptionsApiRequest>>> execute$;
   final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
-              ApiResult<ListProcedureItemCategoryOptionsApiResponse>,
-              ListProcedureItemCategoryOptionsApi,
-              Command<ApiCommand<ListProcedureItemCategoryOptionsApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
-          ApiResult<ListProcedureItemCategoryOptionsApiResponse>,
-          ListProcedureItemCategoryOptionsApi,
-          CommandResult<
-              ApiResult<ListProcedureItemCategoryOptionsApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
-          ApiResult<ListProcedureItemCategoryOptionsApiResponse>,
-          ListProcedureItemCategoryOptionsApi,
-          CommandProgress>> $progress;
+          CommandResult<ApiResult<ListProcedureItemCategoryOptionsApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListProcedureItemCategoryOptionsApi._(this.$options)
-      : $replace = $options.action<
+  _$ListProcedureItemCategoryOptionsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<
                     ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
                     ApiResult<ListProcedureItemCategoryOptionsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
-                ApiResult<ListProcedureItemCategoryOptionsApiResponse>,
-                ListProcedureItemCategoryOptionsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
-                    ApiResult<ListProcedureItemCategoryOptionsApiResponse>,
-                    ListProcedureItemCategoryOptionsApi,
-                    Command<
-                        ApiCommand<
-                            ListProcedureItemCategoryOptionsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
-                    ApiResult<ListProcedureItemCategoryOptionsApiResponse>,
-                    ListProcedureItemCategoryOptionsApi,
-                    CommandResult<
-                        ApiResult<
-                            ListProcedureItemCategoryOptionsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
-                ApiResult<ListProcedureItemCategoryOptionsApiResponse>,
-                ListProcedureItemCategoryOptionsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<
+                    ApiCommand<ListProcedureItemCategoryOptionsApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<ListProcedureItemCategoryOptionsApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListProcedureItemCategoryOptionsApi(
@@ -101,35 +63,26 @@ class _$ListProcedureItemCategoryOptionsApi
   @override
   CommandState<ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
           ApiResult<ListProcedureItemCategoryOptionsApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
           ApiResult<ListProcedureItemCategoryOptionsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
           ApiResult<ListProcedureItemCategoryOptionsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListProcedureItemCategoryOptionsApiRequest>,
           ApiResult<ListProcedureItemCategoryOptionsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(
-            ApiCommand, [FullType(ListProcedureItemCategoryOptionsApiRequest)]),
-        FullType(
-            ApiResult, [FullType(ListProcedureItemCategoryOptionsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

@@ -161,15 +161,15 @@ class _$RequestShipmentPickListDocApiResponseActions
   final StatefulActionsOptions<
       RequestShipmentPickListDocApiResponse,
       RequestShipmentPickListDocApiResponseBuilder,
-      RequestShipmentPickListDocApiResponseActions> $options;
+      RequestShipmentPickListDocApiResponseActions> options$;
 
-  final ActionDispatcher<RequestShipmentPickListDocApiResponse> $replace;
+  final ActionDispatcher<RequestShipmentPickListDocApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
 
-  _$RequestShipmentPickListDocApiResponseActions._(this.$options)
-      : $replace = $options.action<RequestShipmentPickListDocApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$RequestShipmentPickListDocApiResponseActions._(this.options$)
+      : replace$ = options$.action<RequestShipmentPickListDocApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -181,34 +181,29 @@ class _$RequestShipmentPickListDocApiResponseActions
       _$RequestShipmentPickListDocApiResponseActions._(options());
 
   @override
-  RequestShipmentPickListDocApiResponse get $initial =>
+  RequestShipmentPickListDocApiResponse get initialState$ =>
       RequestShipmentPickListDocApiResponse();
 
   @override
-  RequestShipmentPickListDocApiResponseBuilder $newBuilder() =>
+  RequestShipmentPickListDocApiResponseBuilder newBuilder$() =>
       RequestShipmentPickListDocApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestShipmentPickListDocApiResponse);
 }

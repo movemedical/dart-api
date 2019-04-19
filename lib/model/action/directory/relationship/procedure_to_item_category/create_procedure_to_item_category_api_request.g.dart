@@ -275,33 +275,33 @@ class _$CreateProcedureToItemCategoryApiRequestActions
   final StatefulActionsOptions<
       CreateProcedureToItemCategoryApiRequest,
       CreateProcedureToItemCategoryApiRequestBuilder,
-      CreateProcedureToItemCategoryApiRequestActions> $options;
+      CreateProcedureToItemCategoryApiRequestActions> options$;
 
-  final ActionDispatcher<CreateProcedureToItemCategoryApiRequest> $replace;
+  final ActionDispatcher<CreateProcedureToItemCategoryApiRequest> replace$;
   final FieldDispatcher<String> procedureId;
   final FieldDispatcher<String> subProcedureId;
   final FieldDispatcher<String> reference1;
   final FieldDispatcher<String> reference2;
   final FieldDispatcher<BuiltList<String>> itemCategoryIds;
 
-  _$CreateProcedureToItemCategoryApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateProcedureToItemCategoryApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        procedureId = $options.field<String>(
+  _$CreateProcedureToItemCategoryApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateProcedureToItemCategoryApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        subProcedureId = $options.field<String>(
+        subProcedureId = options$.field<String>(
             'subProcedureId',
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
             (p, b) => p?.subProcedureId = b),
-        reference1 = $options.field<String>('reference1', (a) => a?.reference1,
+        reference1 = options$.field<String>('reference1', (a) => a?.reference1,
             (s) => s?.reference1, (p, b) => p?.reference1 = b),
-        reference2 = $options.field<String>('reference2', (a) => a?.reference2,
+        reference2 = options$.field<String>('reference2', (a) => a?.reference2,
             (s) => s?.reference2, (p, b) => p?.reference2 = b),
-        itemCategoryIds = $options.field<BuiltList<String>>(
+        itemCategoryIds = options$.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
@@ -313,18 +313,18 @@ class _$CreateProcedureToItemCategoryApiRequestActions
       _$CreateProcedureToItemCategoryApiRequestActions._(options());
 
   @override
-  CreateProcedureToItemCategoryApiRequest get $initial =>
+  CreateProcedureToItemCategoryApiRequest get initialState$ =>
       CreateProcedureToItemCategoryApiRequest();
 
   @override
-  CreateProcedureToItemCategoryApiRequestBuilder $newBuilder() =>
+  CreateProcedureToItemCategoryApiRequestBuilder newBuilder$() =>
       CreateProcedureToItemCategoryApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.procedureId,
         this.subProcedureId,
         this.reference1,
@@ -333,22 +333,17 @@ class _$CreateProcedureToItemCategoryApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    subProcedureId.$reducer(reducer);
-    reference1.$reducer(reducer);
-    reference2.$reducer(reducer);
-    itemCategoryIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    subProcedureId.reducer$(reducer);
+    reference1.reducer$(reducer);
+    reference2.reducer$(reducer);
+    itemCategoryIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateProcedureToItemCategoryApiRequest);
 }

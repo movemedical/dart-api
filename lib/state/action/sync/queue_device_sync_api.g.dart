@@ -20,57 +20,29 @@ class _$QueueDeviceSyncApi extends QueueDeviceSyncApi {
       CommandState<ApiCommand<QueueDeviceSyncApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<QueueDeviceSyncApiRequest>,
           ApiResult<Nothing>>,
-      QueueDeviceSyncApi> $options;
+      QueueDeviceSyncApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<QueueDeviceSyncApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<QueueDeviceSyncApiRequest>, ApiResult<Nothing>,
-          QueueDeviceSyncApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<QueueDeviceSyncApiRequest>,
-          ApiResult<Nothing>,
-          QueueDeviceSyncApi,
-          Command<ApiCommand<QueueDeviceSyncApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<QueueDeviceSyncApiRequest>, ApiResult<Nothing>,
-          QueueDeviceSyncApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<QueueDeviceSyncApiRequest>, ApiResult<Nothing>,
-          QueueDeviceSyncApi, CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<QueueDeviceSyncApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$QueueDeviceSyncApi._(this.$options)
-      : $replace = $options.action<
+  _$QueueDeviceSyncApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<QueueDeviceSyncApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<QueueDeviceSyncApiRequest>,
-                ApiResult<Nothing>,
-                QueueDeviceSyncApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<QueueDeviceSyncApiRequest>,
-                    ApiResult<Nothing>,
-                    QueueDeviceSyncApi,
-                    Command<ApiCommand<QueueDeviceSyncApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<QueueDeviceSyncApiRequest>,
-                    ApiResult<Nothing>,
-                    QueueDeviceSyncApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<QueueDeviceSyncApiRequest>,
-                ApiResult<Nothing>,
-                QueueDeviceSyncApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<QueueDeviceSyncApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$QueueDeviceSyncApi(QueueDeviceSyncApiOptions options) =>
@@ -78,30 +50,23 @@ class _$QueueDeviceSyncApi extends QueueDeviceSyncApi {
 
   @override
   CommandState<ApiCommand<QueueDeviceSyncApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<QueueDeviceSyncApiRequest>,
+      get initialState$ => CommandState<ApiCommand<QueueDeviceSyncApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<QueueDeviceSyncApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<QueueDeviceSyncApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(QueueDeviceSyncApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

@@ -157,15 +157,15 @@ typedef StatefulActionsOptions<GetDceApiResponse, GetDceApiResponseBuilder,
 
 class _$GetDceApiResponseActions extends GetDceApiResponseActions {
   final StatefulActionsOptions<GetDceApiResponse, GetDceApiResponseBuilder,
-      GetDceApiResponseActions> $options;
+      GetDceApiResponseActions> options$;
 
-  final ActionDispatcher<GetDceApiResponse> $replace;
+  final ActionDispatcher<GetDceApiResponse> replace$;
   final GetDceApiDceDetailActions detail;
 
-  _$GetDceApiResponseActions._(this.$options)
-      : $replace =
-            $options.action<GetDceApiResponse>('\$replace', (a) => a?.$replace),
-        detail = GetDceApiDceDetailActions(() => $options.stateful<
+  _$GetDceApiResponseActions._(this.options$)
+      : replace$ =
+            options$.action<GetDceApiResponse>('replace\$', (a) => a?.replace$),
+        detail = GetDceApiDceDetailActions(() => options$.stateful<
                 GetDceApiDceDetail,
                 GetDceApiDceDetailBuilder,
                 GetDceApiDceDetailActions>(
@@ -180,37 +180,33 @@ class _$GetDceApiResponseActions extends GetDceApiResponseActions {
       _$GetDceApiResponseActions._(options());
 
   @override
-  GetDceApiResponse get $initial => GetDceApiResponse();
+  GetDceApiResponse get initialState$ => GetDceApiResponse();
 
   @override
-  GetDceApiResponseBuilder $newBuilder() => GetDceApiResponseBuilder();
+  GetDceApiResponseBuilder newBuilder$() => GetDceApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.detail,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    detail.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    detail.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    detail.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    detail.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetDceApiResponse);
 }

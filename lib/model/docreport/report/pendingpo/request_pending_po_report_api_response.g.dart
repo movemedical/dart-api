@@ -219,30 +219,30 @@ class _$RequestPendingPoReportApiResponseActions
   final StatefulActionsOptions<
       RequestPendingPoReportApiResponse,
       RequestPendingPoReportApiResponseBuilder,
-      RequestPendingPoReportApiResponseActions> $options;
+      RequestPendingPoReportApiResponseActions> options$;
 
-  final ActionDispatcher<RequestPendingPoReportApiResponse> $replace;
+  final ActionDispatcher<RequestPendingPoReportApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
   final HcrTeamActions hcrTeam;
   final LocationActions hospital;
 
-  _$RequestPendingPoReportApiResponseActions._(this.$options)
-      : $replace = $options.action<RequestPendingPoReportApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$RequestPendingPoReportApiResponseActions._(this.options$)
+      : replace$ = options$.action<RequestPendingPoReportApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
             (p, b) => p?.docReportId = b),
         hcrTeam = HcrTeamActions(() =>
-            $options.stateful<HcrTeam, HcrTeamBuilder, HcrTeamActions>(
+            options$.stateful<HcrTeam, HcrTeamBuilder, HcrTeamActions>(
                 'hcrTeam',
                 (a) => a.hcrTeam,
                 (s) => s?.hcrTeam,
                 (b) => b?.hcrTeam,
                 (parent, builder) => parent?.hcrTeam = builder)),
         hospital = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'hospital',
                 (a) => a.hospital,
                 (s) => s?.hospital,
@@ -255,45 +255,40 @@ class _$RequestPendingPoReportApiResponseActions
       _$RequestPendingPoReportApiResponseActions._(options());
 
   @override
-  RequestPendingPoReportApiResponse get $initial =>
+  RequestPendingPoReportApiResponse get initialState$ =>
       RequestPendingPoReportApiResponse();
 
   @override
-  RequestPendingPoReportApiResponseBuilder $newBuilder() =>
+  RequestPendingPoReportApiResponseBuilder newBuilder$() =>
       RequestPendingPoReportApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.hcrTeam,
         this.hospital,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
-    hcrTeam.$reducer(reducer);
-    hospital.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
+    hcrTeam.reducer$(reducer);
+    hospital.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    hcrTeam.$middleware(middleware);
-    hospital.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    hcrTeam.middleware$(middleware);
+    hospital.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestPendingPoReportApiResponse);
 }

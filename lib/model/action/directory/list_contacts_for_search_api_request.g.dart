@@ -372,9 +372,9 @@ class _$ListContactsForSearchApiRequestActions
   final StatefulActionsOptions<
       ListContactsForSearchApiRequest,
       ListContactsForSearchApiRequestBuilder,
-      ListContactsForSearchApiRequestActions> $options;
+      ListContactsForSearchApiRequestActions> options$;
 
-  final ActionDispatcher<ListContactsForSearchApiRequest> $replace;
+  final ActionDispatcher<ListContactsForSearchApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> bizUnitIds;
   final FieldDispatcher<BuiltList<String>> orgUnitIds;
   final FieldDispatcher<BuiltList<GeneralContactType>> contactTypes;
@@ -384,34 +384,34 @@ class _$ListContactsForSearchApiRequestActions
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListContactsForSearchApiOrderBy> orderBy;
 
-  _$ListContactsForSearchApiRequestActions._(this.$options)
-      : $replace = $options.action<ListContactsForSearchApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        bizUnitIds = $options.field<BuiltList<String>>(
+  _$ListContactsForSearchApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListContactsForSearchApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        bizUnitIds = options$.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        contactTypes = $options.field<BuiltList<GeneralContactType>>(
+        contactTypes = options$.field<BuiltList<GeneralContactType>>(
             'contactTypes',
             (a) => a?.contactTypes,
             (s) => s?.contactTypes,
             (p, b) => p?.contactTypes = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        export = $options.field<bool>('export', (a) => a?.export,
+        export = options$.field<bool>('export', (a) => a?.export,
             (s) => s?.export, (p, b) => p?.export = b),
-        activeChoice = $options.field<ListContactsForSearchApiActiveStatus>(
+        activeChoice = options$.field<ListContactsForSearchApiActiveStatus>(
             'activeChoice',
             (a) => a?.activeChoice,
             (s) => s?.activeChoice,
             (p, b) => p?.activeChoice = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -421,7 +421,7 @@ class _$ListContactsForSearchApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListContactsForSearchApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListContactsForSearchApiOrderBy>,
                     OrderByParamsBuilder<ListContactsForSearchApiOrderBy>,
                     OrderByParamsActions<ListContactsForSearchApiOrderBy>>(
@@ -437,25 +437,25 @@ class _$ListContactsForSearchApiRequestActions
       _$ListContactsForSearchApiRequestActions._(options());
 
   @override
-  ListContactsForSearchApiRequest get $initial =>
+  ListContactsForSearchApiRequest get initialState$ =>
       ListContactsForSearchApiRequest();
 
   @override
-  ListContactsForSearchApiRequestBuilder $newBuilder() =>
+  ListContactsForSearchApiRequestBuilder newBuilder$() =>
       ListContactsForSearchApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.bizUnitIds,
         this.orgUnitIds,
         this.contactTypes,
@@ -465,27 +465,22 @@ class _$ListContactsForSearchApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    bizUnitIds.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    contactTypes.$reducer(reducer);
-    search.$reducer(reducer);
-    export.$reducer(reducer);
-    activeChoice.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    bizUnitIds.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    contactTypes.reducer$(reducer);
+    search.reducer$(reducer);
+    export.reducer$(reducer);
+    activeChoice.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListContactsForSearchApiRequest);
 }

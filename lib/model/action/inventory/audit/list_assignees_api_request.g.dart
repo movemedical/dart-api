@@ -241,20 +241,20 @@ typedef StatefulActionsOptions<
 
 class _$ListAssigneesApiRequestActions extends ListAssigneesApiRequestActions {
   final StatefulActionsOptions<ListAssigneesApiRequest,
-      ListAssigneesApiRequestBuilder, ListAssigneesApiRequestActions> $options;
+      ListAssigneesApiRequestBuilder, ListAssigneesApiRequestActions> options$;
 
-  final ActionDispatcher<ListAssigneesApiRequest> $replace;
+  final ActionDispatcher<ListAssigneesApiRequest> replace$;
   final FieldDispatcher<String> auditId;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListAssigneesApiOrderBy> sortBy;
   final FieldDispatcher<bool> sortDescending;
 
-  _$ListAssigneesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListAssigneesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+  _$ListAssigneesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListAssigneesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -264,7 +264,7 @@ class _$ListAssigneesApiRequestActions extends ListAssigneesApiRequestActions {
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         sortBy = OrderByParamsActions<ListAssigneesApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListAssigneesApiOrderBy>,
                     OrderByParamsBuilder<ListAssigneesApiOrderBy>,
                     OrderByParamsActions<ListAssigneesApiOrderBy>>(
@@ -273,7 +273,7 @@ class _$ListAssigneesApiRequestActions extends ListAssigneesApiRequestActions {
                 (s) => s?.sortBy,
                 (b) => b?.sortBy,
                 (parent, builder) => parent?.sortBy = builder)),
-        sortDescending = $options.field<bool>(
+        sortDescending = options$.field<bool>(
             'sortDescending',
             (a) => a?.sortDescending,
             (s) => s?.sortDescending,
@@ -285,45 +285,41 @@ class _$ListAssigneesApiRequestActions extends ListAssigneesApiRequestActions {
       _$ListAssigneesApiRequestActions._(options());
 
   @override
-  ListAssigneesApiRequest get $initial => ListAssigneesApiRequest();
+  ListAssigneesApiRequest get initialState$ => ListAssigneesApiRequest();
 
   @override
-  ListAssigneesApiRequestBuilder $newBuilder() =>
+  ListAssigneesApiRequestBuilder newBuilder$() =>
       ListAssigneesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.sortBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
         this.sortDescending,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditId.$reducer(reducer);
-    paging.$reducer(reducer);
-    sortBy.$reducer(reducer);
-    sortDescending.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditId.reducer$(reducer);
+    paging.reducer$(reducer);
+    sortBy.reducer$(reducer);
+    sortDescending.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    sortBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    sortBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListAssigneesApiRequest);
 }

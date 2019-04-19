@@ -231,17 +231,17 @@ class _$RequestAdjustmentExportDocApiRequestActions
   final StatefulActionsOptions<
       RequestAdjustmentExportDocApiRequest,
       RequestAdjustmentExportDocApiRequestBuilder,
-      RequestAdjustmentExportDocApiRequestActions> $options;
+      RequestAdjustmentExportDocApiRequestActions> options$;
 
-  final ActionDispatcher<RequestAdjustmentExportDocApiRequest> $replace;
+  final ActionDispatcher<RequestAdjustmentExportDocApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final ListAdjustmentsApiRequestActions listAdjustmentsRequest;
 
-  _$RequestAdjustmentExportDocApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestAdjustmentExportDocApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestAdjustmentExportDocApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestAdjustmentExportDocApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -250,10 +250,10 @@ class _$RequestAdjustmentExportDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
         listAdjustmentsRequest = ListAdjustmentsApiRequestActions(() =>
-            $options.stateful<
+            options$.stateful<
                     ListAdjustmentsApiRequest,
                     ListAdjustmentsApiRequestBuilder,
                     ListAdjustmentsApiRequestActions>(
@@ -269,45 +269,40 @@ class _$RequestAdjustmentExportDocApiRequestActions
       _$RequestAdjustmentExportDocApiRequestActions._(options());
 
   @override
-  RequestAdjustmentExportDocApiRequest get $initial =>
+  RequestAdjustmentExportDocApiRequest get initialState$ =>
       RequestAdjustmentExportDocApiRequest();
 
   @override
-  RequestAdjustmentExportDocApiRequestBuilder $newBuilder() =>
+  RequestAdjustmentExportDocApiRequestBuilder newBuilder$() =>
       RequestAdjustmentExportDocApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
         this.listAdjustmentsRequest,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.format,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    format.$reducer(reducer);
-    listAdjustmentsRequest.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    format.reducer$(reducer);
+    listAdjustmentsRequest.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
-    listAdjustmentsRequest.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
+    listAdjustmentsRequest.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestAdjustmentExportDocApiRequest);
 }

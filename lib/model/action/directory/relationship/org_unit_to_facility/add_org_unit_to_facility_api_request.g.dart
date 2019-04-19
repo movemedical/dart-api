@@ -253,33 +253,33 @@ class _$AddOrgUnitToFacilityApiRequestActions
   final StatefulActionsOptions<
       AddOrgUnitToFacilityApiRequest,
       AddOrgUnitToFacilityApiRequestBuilder,
-      AddOrgUnitToFacilityApiRequestActions> $options;
+      AddOrgUnitToFacilityApiRequestActions> options$;
 
-  final ActionDispatcher<AddOrgUnitToFacilityApiRequest> $replace;
+  final ActionDispatcher<AddOrgUnitToFacilityApiRequest> replace$;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> customerQualifierId;
   final FieldDispatcher<String> procedureId;
   final FieldDispatcher<String> relationshipTypeId;
 
-  _$AddOrgUnitToFacilityApiRequestActions._(this.$options)
-      : $replace = $options.action<AddOrgUnitToFacilityApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+  _$AddOrgUnitToFacilityApiRequestActions._(this.options$)
+      : replace$ = options$.action<AddOrgUnitToFacilityApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        customerQualifierId = $options.field<String>(
+        customerQualifierId = options$.field<String>(
             'customerQualifierId',
             (a) => a?.customerQualifierId,
             (s) => s?.customerQualifierId,
             (p, b) => p?.customerQualifierId = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        relationshipTypeId = $options.field<String>(
+        relationshipTypeId = options$.field<String>(
             'relationshipTypeId',
             (a) => a?.relationshipTypeId,
             (s) => s?.relationshipTypeId,
@@ -291,18 +291,18 @@ class _$AddOrgUnitToFacilityApiRequestActions
       _$AddOrgUnitToFacilityApiRequestActions._(options());
 
   @override
-  AddOrgUnitToFacilityApiRequest get $initial =>
+  AddOrgUnitToFacilityApiRequest get initialState$ =>
       AddOrgUnitToFacilityApiRequest();
 
   @override
-  AddOrgUnitToFacilityApiRequestBuilder $newBuilder() =>
+  AddOrgUnitToFacilityApiRequestBuilder newBuilder$() =>
       AddOrgUnitToFacilityApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orgUnitId,
         this.facilityId,
         this.customerQualifierId,
@@ -311,22 +311,17 @@ class _$AddOrgUnitToFacilityApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    customerQualifierId.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    relationshipTypeId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    customerQualifierId.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    relationshipTypeId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AddOrgUnitToFacilityApiRequest);
 }

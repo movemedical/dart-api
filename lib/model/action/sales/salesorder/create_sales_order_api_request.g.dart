@@ -648,9 +648,9 @@ class _$CreateSalesOrderApiRequestActions
   final StatefulActionsOptions<
       CreateSalesOrderApiRequest,
       CreateSalesOrderApiRequestBuilder,
-      CreateSalesOrderApiRequestActions> $options;
+      CreateSalesOrderApiRequestActions> options$;
 
-  final ActionDispatcher<CreateSalesOrderApiRequest> $replace;
+  final ActionDispatcher<CreateSalesOrderApiRequest> replace$;
   final FieldDispatcher<String> orderReasonId;
   final FieldDispatcher<String> shipToId;
   final FieldDispatcher<String> billToId;
@@ -674,84 +674,84 @@ class _$CreateSalesOrderApiRequestActions
   final FieldDispatcher<BuiltList<OrderCustomFieldValue>>
       orderCustomFieldValues;
 
-  _$CreateSalesOrderApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateSalesOrderApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderReasonId = $options.field<String>(
+  _$CreateSalesOrderApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateSalesOrderApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderReasonId = options$.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
             (p, b) => p?.orderReasonId = b),
-        shipToId = $options.field<String>('shipToId', (a) => a?.shipToId,
+        shipToId = options$.field<String>('shipToId', (a) => a?.shipToId,
             (s) => s?.shipToId, (p, b) => p?.shipToId = b),
-        billToId = $options.field<String>('billToId', (a) => a?.billToId,
+        billToId = options$.field<String>('billToId', (a) => a?.billToId,
             (s) => s?.billToId, (p, b) => p?.billToId = b),
-        deliverToId = $options.field<String>(
+        deliverToId = options$.field<String>(
             'deliverToId',
             (a) => a?.deliverToId,
             (s) => s?.deliverToId,
             (p, b) => p?.deliverToId = b),
-        physicianId = $options.field<String>(
+        physicianId = options$.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        hcrId = $options.field<String>(
+        hcrId = options$.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        saleDate = $options.field<DateTime>('saleDate', (a) => a?.saleDate,
+        saleDate = options$.field<DateTime>('saleDate', (a) => a?.saleDate,
             (s) => s?.saleDate, (p, b) => p?.saleDate = b),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        salesOrgUnitId = $options.field<String>(
+        salesOrgUnitId = options$.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
             (p, b) => p?.salesOrgUnitId = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        deliverWindowStart = $options.field<DateTime>(
+        deliverWindowStart = options$.field<DateTime>(
             'deliverWindowStart',
             (a) => a?.deliverWindowStart,
             (s) => s?.deliverWindowStart,
             (p, b) => p?.deliverWindowStart = b),
-        deliverWindowEnd = $options.field<DateTime>(
+        deliverWindowEnd = options$.field<DateTime>(
             'deliverWindowEnd',
             (a) => a?.deliverWindowEnd,
             (s) => s?.deliverWindowEnd,
             (p, b) => p?.deliverWindowEnd = b),
         deliverToAddressOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToAddressOverride',
                 (a) => a.deliverToAddressOverride,
                 (s) => s?.deliverToAddressOverride,
                 (b) => b?.deliverToAddressOverride,
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
-        poId = $options.field<String>(
+        poId = options$.field<String>(
             'poId', (a) => a?.poId, (s) => s?.poId, (p, b) => p?.poId = b),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        shippingServiceId = $options.field<String>(
+        shippingServiceId = options$.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
-        email = $options.field<String>(
+        email = options$.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        attention = $options.field<String>('attention', (a) => a?.attention,
+        attention = options$.field<String>('attention', (a) => a?.attention,
             (s) => s?.attention, (p, b) => p?.attention = b),
         orderCustomFieldValues =
-            $options.field<BuiltList<OrderCustomFieldValue>>(
+            options$.field<BuiltList<OrderCustomFieldValue>>(
                 'orderCustomFieldValues',
                 (a) => a?.orderCustomFieldValues,
                 (s) => s?.orderCustomFieldValues,
@@ -763,23 +763,23 @@ class _$CreateSalesOrderApiRequestActions
       _$CreateSalesOrderApiRequestActions._(options());
 
   @override
-  CreateSalesOrderApiRequest get $initial => CreateSalesOrderApiRequest();
+  CreateSalesOrderApiRequest get initialState$ => CreateSalesOrderApiRequest();
 
   @override
-  CreateSalesOrderApiRequestBuilder $newBuilder() =>
+  CreateSalesOrderApiRequestBuilder newBuilder$() =>
       CreateSalesOrderApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderReasonId,
         this.shipToId,
         this.billToId,
@@ -803,38 +803,34 @@ class _$CreateSalesOrderApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderReasonId.$reducer(reducer);
-    shipToId.$reducer(reducer);
-    billToId.$reducer(reducer);
-    deliverToId.$reducer(reducer);
-    physicianId.$reducer(reducer);
-    hcrId.$reducer(reducer);
-    saleDate.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    salesOrgUnitId.$reducer(reducer);
-    locationType.$reducer(reducer);
-    locationId.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    deliverWindowStart.$reducer(reducer);
-    deliverWindowEnd.$reducer(reducer);
-    deliverToAddressOverride.$reducer(reducer);
-    poId.$reducer(reducer);
-    poNumber.$reducer(reducer);
-    shippingServiceId.$reducer(reducer);
-    email.$reducer(reducer);
-    attention.$reducer(reducer);
-    orderCustomFieldValues.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
+    shipToId.reducer$(reducer);
+    billToId.reducer$(reducer);
+    deliverToId.reducer$(reducer);
+    physicianId.reducer$(reducer);
+    hcrId.reducer$(reducer);
+    saleDate.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    salesOrgUnitId.reducer$(reducer);
+    locationType.reducer$(reducer);
+    locationId.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    deliverWindowStart.reducer$(reducer);
+    deliverWindowEnd.reducer$(reducer);
+    deliverToAddressOverride.reducer$(reducer);
+    poId.reducer$(reducer);
+    poNumber.reducer$(reducer);
+    shippingServiceId.reducer$(reducer);
+    email.reducer$(reducer);
+    attention.reducer$(reducer);
+    orderCustomFieldValues.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    deliverToAddressOverride.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    deliverToAddressOverride.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateSalesOrderApiRequest);
 }

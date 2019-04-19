@@ -286,9 +286,9 @@ typedef StatefulActionsOptions<StockPlace, StockPlaceBuilder,
 
 class _$StockPlaceActions extends StockPlaceActions {
   final StatefulActionsOptions<StockPlace, StockPlaceBuilder, StockPlaceActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<StockPlace> $replace;
+  final ActionDispatcher<StockPlace> replace$;
   final LocationActions location;
   final LocationActions fromLocation;
   final LocationActions toLocation;
@@ -296,44 +296,44 @@ class _$StockPlaceActions extends StockPlaceActions {
   final StockContainerActions rootContainer;
   final StockContainerActions container;
 
-  _$StockPlaceActions._(this.$options)
-      : $replace = $options.action<StockPlace>('\$replace', (a) => a?.$replace),
+  _$StockPlaceActions._(this.options$)
+      : replace$ = options$.action<StockPlace>('replace\$', (a) => a?.replace$),
         location = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
         fromLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'fromLocation',
                 (a) => a.fromLocation,
                 (s) => s?.fromLocation,
                 (b) => b?.fromLocation,
                 (parent, builder) => parent?.fromLocation = builder)),
         toLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'toLocation',
                 (a) => a.toLocation,
                 (s) => s?.toLocation,
                 (b) => b?.toLocation,
                 (parent, builder) => parent?.toLocation = builder)),
         homeLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'homeLocation',
                 (a) => a.homeLocation,
                 (s) => s?.homeLocation,
                 (b) => b?.homeLocation,
                 (parent, builder) => parent?.homeLocation = builder)),
-        rootContainer = StockContainerActions(() => $options.stateful<
+        rootContainer = StockContainerActions(() => options$.stateful<
                 StockContainer, StockContainerBuilder, StockContainerActions>(
             'rootContainer',
             (a) => a.rootContainer,
             (s) => s?.rootContainer,
             (b) => b?.rootContainer,
             (parent, builder) => parent?.rootContainer = builder)),
-        container = StockContainerActions(() => $options.stateful<
+        container = StockContainerActions(() => options$.stateful<
                 StockContainer, StockContainerBuilder, StockContainerActions>(
             'container',
             (a) => a.container,
@@ -346,14 +346,14 @@ class _$StockPlaceActions extends StockPlaceActions {
       _$StockPlaceActions._(options());
 
   @override
-  StockPlace get $initial => StockPlace();
+  StockPlace get initialState$ => StockPlace();
 
   @override
-  StockPlaceBuilder $newBuilder() => StockPlaceBuilder();
+  StockPlaceBuilder newBuilder$() => StockPlaceBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
         this.fromLocation,
         this.toLocation,
@@ -362,36 +362,32 @@ class _$StockPlaceActions extends StockPlaceActions {
         this.container,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    location.$reducer(reducer);
-    fromLocation.$reducer(reducer);
-    toLocation.$reducer(reducer);
-    homeLocation.$reducer(reducer);
-    rootContainer.$reducer(reducer);
-    container.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    location.reducer$(reducer);
+    fromLocation.reducer$(reducer);
+    toLocation.reducer$(reducer);
+    homeLocation.reducer$(reducer);
+    rootContainer.reducer$(reducer);
+    container.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    location.$middleware(middleware);
-    fromLocation.$middleware(middleware);
-    toLocation.$middleware(middleware);
-    homeLocation.$middleware(middleware);
-    rootContainer.$middleware(middleware);
-    container.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    location.middleware$(middleware);
+    fromLocation.middleware$(middleware);
+    toLocation.middleware$(middleware);
+    homeLocation.middleware$(middleware);
+    rootContainer.middleware$(middleware);
+    container.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(StockPlace);
 }

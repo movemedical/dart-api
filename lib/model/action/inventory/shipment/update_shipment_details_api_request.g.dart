@@ -269,37 +269,37 @@ class _$UpdateShipmentDetailsApiRequestActions
   final StatefulActionsOptions<
       UpdateShipmentDetailsApiRequest,
       UpdateShipmentDetailsApiRequestBuilder,
-      UpdateShipmentDetailsApiRequestActions> $options;
+      UpdateShipmentDetailsApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateShipmentDetailsApiRequest> $replace;
+  final ActionDispatcher<UpdateShipmentDetailsApiRequest> replace$;
   final FieldDispatcher<String> shipmentId;
   final FieldDispatcher<String> erpReference;
   final FieldDispatcher<String> shippingServiceId;
   final FieldDispatcher<String> deliverToAddressId;
   final AddressActions deliverToOverrideAddress;
 
-  _$UpdateShipmentDetailsApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateShipmentDetailsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+  _$UpdateShipmentDetailsApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateShipmentDetailsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        shipmentId = options$.field<String>('shipmentId', (a) => a?.shipmentId,
             (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
-        erpReference = $options.field<String>(
+        erpReference = options$.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
-        shippingServiceId = $options.field<String>(
+        shippingServiceId = options$.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
-        deliverToAddressId = $options.field<String>(
+        deliverToAddressId = options$.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
             (p, b) => p?.deliverToAddressId = b),
         deliverToOverrideAddress = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToOverrideAddress',
                 (a) => a.deliverToOverrideAddress,
                 (s) => s?.deliverToOverrideAddress,
@@ -313,24 +313,24 @@ class _$UpdateShipmentDetailsApiRequestActions
       _$UpdateShipmentDetailsApiRequestActions._(options());
 
   @override
-  UpdateShipmentDetailsApiRequest get $initial =>
+  UpdateShipmentDetailsApiRequest get initialState$ =>
       UpdateShipmentDetailsApiRequest();
 
   @override
-  UpdateShipmentDetailsApiRequestBuilder $newBuilder() =>
+  UpdateShipmentDetailsApiRequestBuilder newBuilder$() =>
       UpdateShipmentDetailsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliverToOverrideAddress,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.shipmentId,
         this.erpReference,
         this.shippingServiceId,
@@ -338,23 +338,18 @@ class _$UpdateShipmentDetailsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    shipmentId.$reducer(reducer);
-    erpReference.$reducer(reducer);
-    shippingServiceId.$reducer(reducer);
-    deliverToAddressId.$reducer(reducer);
-    deliverToOverrideAddress.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    shipmentId.reducer$(reducer);
+    erpReference.reducer$(reducer);
+    shippingServiceId.reducer$(reducer);
+    deliverToAddressId.reducer$(reducer);
+    deliverToOverrideAddress.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    deliverToOverrideAddress.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    deliverToOverrideAddress.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateShipmentDetailsApiRequest);
 }

@@ -439,9 +439,9 @@ class _$ListCaseFilesApiCaseFileActions
   final StatefulActionsOptions<
       ListCaseFilesApiCaseFile,
       ListCaseFilesApiCaseFileBuilder,
-      ListCaseFilesApiCaseFileActions> $options;
+      ListCaseFilesApiCaseFileActions> options$;
 
-  final ActionDispatcher<ListCaseFilesApiCaseFile> $replace;
+  final ActionDispatcher<ListCaseFilesApiCaseFile> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> fileId;
   final FieldDispatcher<String> name;
@@ -456,52 +456,52 @@ class _$ListCaseFilesApiCaseFileActions
   final FieldDispatcher<String> ownerOrgUnitId;
   final FieldDispatcher<String> ownerOrgUnitName;
 
-  _$ListCaseFilesApiCaseFileActions._(this.$options)
-      : $replace = $options.action<ListCaseFilesApiCaseFile>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListCaseFilesApiCaseFileActions._(this.options$)
+      : replace$ = options$.action<ListCaseFilesApiCaseFile>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        fileType = $options.field<CaseFileType>('fileType', (a) => a?.fileType,
+        fileType = options$.field<CaseFileType>('fileType', (a) => a?.fileType,
             (s) => s?.fileType, (p, b) => p?.fileType = b),
-        uploadedByName = $options.field<String>(
+        uploadedByName = options$.field<String>(
             'uploadedByName',
             (a) => a?.uploadedByName,
             (s) => s?.uploadedByName,
             (p, b) => p?.uploadedByName = b),
-        uploadedByInitials = $options.field<String>(
+        uploadedByInitials = options$.field<String>(
             'uploadedByInitials',
             (a) => a?.uploadedByInitials,
             (s) => s?.uploadedByInitials,
             (p, b) => p?.uploadedByInitials = b),
-        createdDate = $options.field<DateTime>(
+        createdDate = options$.field<DateTime>(
             'createdDate',
             (a) => a?.createdDate,
             (s) => s?.createdDate,
             (p, b) => p?.createdDate = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        uploaded = $options.field<bool>('uploaded', (a) => a?.uploaded,
+        uploaded = options$.field<bool>('uploaded', (a) => a?.uploaded,
             (s) => s?.uploaded, (p, b) => p?.uploaded = b),
-        orgVisible = $options.field<bool>('orgVisible', (a) => a?.orgVisible,
+        orgVisible = options$.field<bool>('orgVisible', (a) => a?.orgVisible,
             (s) => s?.orgVisible, (p, b) => p?.orgVisible = b),
-        publicVisible = $options.field<bool>(
+        publicVisible = options$.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
             (p, b) => p?.publicVisible = b),
-        ownerOrgUnitId = $options.field<String>(
+        ownerOrgUnitId = options$.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        ownerOrgUnitName = $options.field<String>(
+        ownerOrgUnitName = options$.field<String>(
             'ownerOrgUnitName',
             (a) => a?.ownerOrgUnitName,
             (s) => s?.ownerOrgUnitName,
@@ -513,17 +513,17 @@ class _$ListCaseFilesApiCaseFileActions
       _$ListCaseFilesApiCaseFileActions._(options());
 
   @override
-  ListCaseFilesApiCaseFile get $initial => ListCaseFilesApiCaseFile();
+  ListCaseFilesApiCaseFile get initialState$ => ListCaseFilesApiCaseFile();
 
   @override
-  ListCaseFilesApiCaseFileBuilder $newBuilder() =>
+  ListCaseFilesApiCaseFileBuilder newBuilder$() =>
       ListCaseFilesApiCaseFileBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.fileId,
         this.name,
@@ -540,29 +540,25 @@ class _$ListCaseFilesApiCaseFileActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    fileId.$reducer(reducer);
-    name.$reducer(reducer);
-    fileType.$reducer(reducer);
-    uploadedByName.$reducer(reducer);
-    uploadedByInitials.$reducer(reducer);
-    createdDate.$reducer(reducer);
-    description.$reducer(reducer);
-    uploaded.$reducer(reducer);
-    orgVisible.$reducer(reducer);
-    publicVisible.$reducer(reducer);
-    ownerOrgUnitId.$reducer(reducer);
-    ownerOrgUnitName.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    fileId.reducer$(reducer);
+    name.reducer$(reducer);
+    fileType.reducer$(reducer);
+    uploadedByName.reducer$(reducer);
+    uploadedByInitials.reducer$(reducer);
+    createdDate.reducer$(reducer);
+    description.reducer$(reducer);
+    uploaded.reducer$(reducer);
+    orgVisible.reducer$(reducer);
+    publicVisible.reducer$(reducer);
+    ownerOrgUnitId.reducer$(reducer);
+    ownerOrgUnitName.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListCaseFilesApiCaseFile);
 }

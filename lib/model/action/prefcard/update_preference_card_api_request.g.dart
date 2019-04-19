@@ -263,33 +263,33 @@ class _$UpdatePreferenceCardApiRequestActions
   final StatefulActionsOptions<
       UpdatePreferenceCardApiRequest,
       UpdatePreferenceCardApiRequestBuilder,
-      UpdatePreferenceCardApiRequestActions> $options;
+      UpdatePreferenceCardApiRequestActions> options$;
 
-  final ActionDispatcher<UpdatePreferenceCardApiRequest> $replace;
+  final ActionDispatcher<UpdatePreferenceCardApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> description;
   final FieldDispatcher<BuiltList<String>> orgUnitIds;
   final FieldDispatcher<bool> active;
 
-  _$UpdatePreferenceCardApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdatePreferenceCardApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdatePreferenceCardApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdatePreferenceCardApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -298,18 +298,18 @@ class _$UpdatePreferenceCardApiRequestActions
       _$UpdatePreferenceCardApiRequestActions._(options());
 
   @override
-  UpdatePreferenceCardApiRequest get $initial =>
+  UpdatePreferenceCardApiRequest get initialState$ =>
       UpdatePreferenceCardApiRequest();
 
   @override
-  UpdatePreferenceCardApiRequestBuilder $newBuilder() =>
+  UpdatePreferenceCardApiRequestBuilder newBuilder$() =>
       UpdatePreferenceCardApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.description,
@@ -318,22 +318,17 @@ class _$UpdatePreferenceCardApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    description.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    description.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdatePreferenceCardApiRequest);
 }

@@ -445,9 +445,9 @@ class _$UpdateUserProfileApiRequestActions
   final StatefulActionsOptions<
       UpdateUserProfileApiRequest,
       UpdateUserProfileApiRequestBuilder,
-      UpdateUserProfileApiRequestActions> $options;
+      UpdateUserProfileApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateUserProfileApiRequest> $replace;
+  final ActionDispatcher<UpdateUserProfileApiRequest> replace$;
   final FieldDispatcher<String> currentPassword;
   final FieldDispatcher<String> newPassword;
   final FieldDispatcher<String> timezone;
@@ -462,49 +462,49 @@ class _$UpdateUserProfileApiRequestActions
   final FieldDispatcher<String> mfaId;
   final FieldDispatcher<MfaType> mfaType;
 
-  _$UpdateUserProfileApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateUserProfileApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        currentPassword = $options.field<String>(
+  _$UpdateUserProfileApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateUserProfileApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        currentPassword = options$.field<String>(
             'currentPassword',
             (a) => a?.currentPassword,
             (s) => s?.currentPassword,
             (p, b) => p?.currentPassword = b),
-        newPassword = $options.field<String>(
+        newPassword = options$.field<String>(
             'newPassword',
             (a) => a?.newPassword,
             (s) => s?.newPassword,
             (p, b) => p?.newPassword = b),
-        timezone = $options.field<String>('timezone', (a) => a?.timezone,
+        timezone = options$.field<String>('timezone', (a) => a?.timezone,
             (s) => s?.timezone, (p, b) => p?.timezone = b),
-        erpUserId = $options.field<String>('erpUserId', (a) => a?.erpUserId,
+        erpUserId = options$.field<String>('erpUserId', (a) => a?.erpUserId,
             (s) => s?.erpUserId, (p, b) => p?.erpUserId = b),
-        defaultOpsOrgUnitId = $options.field<String>(
+        defaultOpsOrgUnitId = options$.field<String>(
             'defaultOpsOrgUnitId',
             (a) => a?.defaultOpsOrgUnitId,
             (s) => s?.defaultOpsOrgUnitId,
             (p, b) => p?.defaultOpsOrgUnitId = b),
-        defaultSalesOrgUnitId = $options.field<String>(
+        defaultSalesOrgUnitId = options$.field<String>(
             'defaultSalesOrgUnitId',
             (a) => a?.defaultSalesOrgUnitId,
             (s) => s?.defaultSalesOrgUnitId,
             (p, b) => p?.defaultSalesOrgUnitId = b),
-        defaultBizUnitId = $options.field<String>(
+        defaultBizUnitId = options$.field<String>(
             'defaultBizUnitId',
             (a) => a?.defaultBizUnitId,
             (s) => s?.defaultBizUnitId,
             (p, b) => p?.defaultBizUnitId = b),
-        ssoId = $options.field<String>(
+        ssoId = options$.field<String>(
             'ssoId', (a) => a?.ssoId, (s) => s?.ssoId, (p, b) => p?.ssoId = b),
-        ssoName = $options.field<String>('ssoName', (a) => a?.ssoName,
+        ssoName = options$.field<String>('ssoName', (a) => a?.ssoName,
             (s) => s?.ssoName, (p, b) => p?.ssoName = b),
-        ssoType = $options.field<SSOType>('ssoType', (a) => a?.ssoType,
+        ssoType = options$.field<SSOType>('ssoType', (a) => a?.ssoType,
             (s) => s?.ssoType, (p, b) => p?.ssoType = b),
-        mfaEnabled = $options.field<bool>('mfaEnabled', (a) => a?.mfaEnabled,
+        mfaEnabled = options$.field<bool>('mfaEnabled', (a) => a?.mfaEnabled,
             (s) => s?.mfaEnabled, (p, b) => p?.mfaEnabled = b),
-        mfaId = $options.field<String>(
+        mfaId = options$.field<String>(
             'mfaId', (a) => a?.mfaId, (s) => s?.mfaId, (p, b) => p?.mfaId = b),
-        mfaType = $options.field<MfaType>('mfaType', (a) => a?.mfaType,
+        mfaType = options$.field<MfaType>('mfaType', (a) => a?.mfaType,
             (s) => s?.mfaType, (p, b) => p?.mfaType = b),
         super._();
 
@@ -513,17 +513,18 @@ class _$UpdateUserProfileApiRequestActions
       _$UpdateUserProfileApiRequestActions._(options());
 
   @override
-  UpdateUserProfileApiRequest get $initial => UpdateUserProfileApiRequest();
+  UpdateUserProfileApiRequest get initialState$ =>
+      UpdateUserProfileApiRequest();
 
   @override
-  UpdateUserProfileApiRequestBuilder $newBuilder() =>
+  UpdateUserProfileApiRequestBuilder newBuilder$() =>
       UpdateUserProfileApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.currentPassword,
         this.newPassword,
         this.timezone,
@@ -540,30 +541,25 @@ class _$UpdateUserProfileApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    currentPassword.$reducer(reducer);
-    newPassword.$reducer(reducer);
-    timezone.$reducer(reducer);
-    erpUserId.$reducer(reducer);
-    defaultOpsOrgUnitId.$reducer(reducer);
-    defaultSalesOrgUnitId.$reducer(reducer);
-    defaultBizUnitId.$reducer(reducer);
-    ssoId.$reducer(reducer);
-    ssoName.$reducer(reducer);
-    ssoType.$reducer(reducer);
-    mfaEnabled.$reducer(reducer);
-    mfaId.$reducer(reducer);
-    mfaType.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    currentPassword.reducer$(reducer);
+    newPassword.reducer$(reducer);
+    timezone.reducer$(reducer);
+    erpUserId.reducer$(reducer);
+    defaultOpsOrgUnitId.reducer$(reducer);
+    defaultSalesOrgUnitId.reducer$(reducer);
+    defaultBizUnitId.reducer$(reducer);
+    ssoId.reducer$(reducer);
+    ssoName.reducer$(reducer);
+    ssoType.reducer$(reducer);
+    mfaEnabled.reducer$(reducer);
+    mfaId.reducer$(reducer);
+    mfaType.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateUserProfileApiRequest);
 }

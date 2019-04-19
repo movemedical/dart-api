@@ -22,63 +22,29 @@ class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<ReprocessIntegrationIssueApiRequest>,
           ApiResult<Nothing>>,
-      ReprocessIntegrationIssueApi> $options;
+      ReprocessIntegrationIssueApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Nothing>, ReprocessIntegrationIssueApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Nothing>,
-          ReprocessIntegrationIssueApi,
-          Command<ApiCommand<ReprocessIntegrationIssueApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Nothing>,
-          ReprocessIntegrationIssueApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Nothing>,
-          ReprocessIntegrationIssueApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<ReprocessIntegrationIssueApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ReprocessIntegrationIssueApi._(this.$options)
-      : $replace = $options.action<
+  _$ReprocessIntegrationIssueApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ReprocessIntegrationIssueApiRequest>,
-                ApiResult<Nothing>,
-                ReprocessIntegrationIssueApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ReprocessIntegrationIssueApiRequest>,
-                    ApiResult<Nothing>,
-                    ReprocessIntegrationIssueApi,
-                    Command<ApiCommand<ReprocessIntegrationIssueApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ReprocessIntegrationIssueApiRequest>,
-                    ApiResult<Nothing>,
-                    ReprocessIntegrationIssueApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ReprocessIntegrationIssueApiRequest>,
-                ApiResult<Nothing>,
-                ReprocessIntegrationIssueApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ReprocessIntegrationIssueApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ReprocessIntegrationIssueApi(
@@ -88,33 +54,26 @@ class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
   @override
   CommandState<ApiCommand<ReprocessIntegrationIssueApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ReprocessIntegrationIssueApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<ReprocessIntegrationIssueApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ReprocessIntegrationIssueApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ReprocessIntegrationIssueApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

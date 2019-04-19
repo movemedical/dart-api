@@ -267,9 +267,9 @@ class _$UpdatePreferenceCardItemsApiRequestActions
   final StatefulActionsOptions<
       UpdatePreferenceCardItemsApiRequest,
       UpdatePreferenceCardItemsApiRequestBuilder,
-      UpdatePreferenceCardItemsApiRequestActions> $options;
+      UpdatePreferenceCardItemsApiRequestActions> options$;
 
-  final ActionDispatcher<UpdatePreferenceCardItemsApiRequest> $replace;
+  final ActionDispatcher<UpdatePreferenceCardItemsApiRequest> replace$;
   final FieldDispatcher<String> preferenceCardId;
   final FieldDispatcher<BuiltList<UpdatePreferenceCardItemsApiItemAdd>>
       itemsToAdd;
@@ -277,27 +277,27 @@ class _$UpdatePreferenceCardItemsApiRequestActions
       itemsToUpdate;
   final FieldDispatcher<BuiltList<String>> itemsToRemove;
 
-  _$UpdatePreferenceCardItemsApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdatePreferenceCardItemsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        preferenceCardId = $options.field<String>(
+  _$UpdatePreferenceCardItemsApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdatePreferenceCardItemsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        preferenceCardId = options$.field<String>(
             'preferenceCardId',
             (a) => a?.preferenceCardId,
             (s) => s?.preferenceCardId,
             (p, b) => p?.preferenceCardId = b),
         itemsToAdd =
-            $options.field<BuiltList<UpdatePreferenceCardItemsApiItemAdd>>(
+            options$.field<BuiltList<UpdatePreferenceCardItemsApiItemAdd>>(
                 'itemsToAdd',
                 (a) => a?.itemsToAdd,
                 (s) => s?.itemsToAdd,
                 (p, b) => p?.itemsToAdd = b),
         itemsToUpdate =
-            $options.field<BuiltList<UpdatePreferenceCardItemsApiItemUpdate>>(
+            options$.field<BuiltList<UpdatePreferenceCardItemsApiItemUpdate>>(
                 'itemsToUpdate',
                 (a) => a?.itemsToUpdate,
                 (s) => s?.itemsToUpdate,
                 (p, b) => p?.itemsToUpdate = b),
-        itemsToRemove = $options.field<BuiltList<String>>(
+        itemsToRemove = options$.field<BuiltList<String>>(
             'itemsToRemove',
             (a) => a?.itemsToRemove,
             (s) => s?.itemsToRemove,
@@ -309,18 +309,18 @@ class _$UpdatePreferenceCardItemsApiRequestActions
       _$UpdatePreferenceCardItemsApiRequestActions._(options());
 
   @override
-  UpdatePreferenceCardItemsApiRequest get $initial =>
+  UpdatePreferenceCardItemsApiRequest get initialState$ =>
       UpdatePreferenceCardItemsApiRequest();
 
   @override
-  UpdatePreferenceCardItemsApiRequestBuilder $newBuilder() =>
+  UpdatePreferenceCardItemsApiRequestBuilder newBuilder$() =>
       UpdatePreferenceCardItemsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.preferenceCardId,
         this.itemsToAdd,
         this.itemsToUpdate,
@@ -328,21 +328,16 @@ class _$UpdatePreferenceCardItemsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    preferenceCardId.$reducer(reducer);
-    itemsToAdd.$reducer(reducer);
-    itemsToUpdate.$reducer(reducer);
-    itemsToRemove.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    preferenceCardId.reducer$(reducer);
+    itemsToAdd.reducer$(reducer);
+    itemsToUpdate.reducer$(reducer);
+    itemsToRemove.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdatePreferenceCardItemsApiRequest);
 }

@@ -562,9 +562,9 @@ typedef StatefulActionsOptions<
 
 class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
   final StatefulActionsOptions<GetShipmentApiShipment,
-      GetShipmentApiShipmentBuilder, GetShipmentApiShipmentActions> $options;
+      GetShipmentApiShipmentBuilder, GetShipmentApiShipmentActions> options$;
 
-  final ActionDispatcher<GetShipmentApiShipment> $replace;
+  final ActionDispatcher<GetShipmentApiShipment> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> number;
   final FieldDispatcher<ShipmentStatus> status;
@@ -583,23 +583,23 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
       validationMessages;
   final FieldDispatcher<DateTime> deliverWindowEnd;
 
-  _$GetShipmentApiShipmentActions._(this.$options)
-      : $replace = $options.action<GetShipmentApiShipment>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetShipmentApiShipmentActions._(this.options$)
+      : replace$ = options$.action<GetShipmentApiShipment>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<ShipmentStatus>('status', (a) => a?.status,
+        status = options$.field<ShipmentStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        order = OrderHeaderLiteActions(() => $options.stateful<OrderHeaderLite,
+        order = OrderHeaderLiteActions(() => options$.stateful<OrderHeaderLite,
                 OrderHeaderLiteBuilder, OrderHeaderLiteActions>(
             'order',
             (a) => a.order,
             (s) => s?.order,
             (b) => b?.order,
             (parent, builder) => parent?.order = builder)),
-        transferType = TransferTypeLiteActions(() => $options.stateful<
+        transferType = TransferTypeLiteActions(() => options$.stateful<
                 TransferTypeLite,
                 TransferTypeLiteBuilder,
                 TransferTypeLiteActions>(
@@ -609,32 +609,32 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
             (b) => b?.transferType,
             (parent, builder) => parent?.transferType = builder)),
         loan = LoanLiteActions(() =>
-            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+            options$.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
                 'loan',
                 (a) => a.loan,
                 (s) => s?.loan,
                 (b) => b?.loan,
                 (parent, builder) => parent?.loan = builder)),
-        caseEvents = $options.field<BuiltList<CaseEventLite>>(
+        caseEvents = options$.field<BuiltList<CaseEventLite>>(
             'caseEvents',
             (a) => a?.caseEvents,
             (s) => s?.caseEvents,
             (p, b) => p?.caseEvents = b),
         fromLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'fromLocation',
                 (a) => a.fromLocation,
                 (s) => s?.fromLocation,
                 (b) => b?.fromLocation,
                 (parent, builder) => parent?.fromLocation = builder)),
         toLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'toLocation',
                 (a) => a.toLocation,
                 (s) => s?.toLocation,
                 (b) => b?.toLocation,
                 (parent, builder) => parent?.toLocation = builder)),
-        deliverTo = CustomerAddressActions(() => $options.stateful<
+        deliverTo = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -644,13 +644,13 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
             (b) => b?.deliverTo,
             (parent, builder) => parent?.deliverTo = builder)),
         deliverToOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToOverride',
                 (a) => a.deliverToOverride,
                 (s) => s?.deliverToOverride,
                 (b) => b?.deliverToOverride,
                 (parent, builder) => parent?.deliverToOverride = builder)),
-        shippingService = ShippingServiceActions(() => $options.stateful<
+        shippingService = ShippingServiceActions(() => options$.stateful<
                 ShippingService,
                 ShippingServiceBuilder,
                 ShippingServiceActions>(
@@ -659,20 +659,20 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
             (s) => s?.shippingService,
             (b) => b?.shippingService,
             (parent, builder) => parent?.shippingService = builder)),
-        erpReference = $options.field<String>(
+        erpReference = options$.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
-        erpStatus = $options.field<ErpStatus>('erpStatus', (a) => a?.erpStatus,
+        erpStatus = options$.field<ErpStatus>('erpStatus', (a) => a?.erpStatus,
             (s) => s?.erpStatus, (p, b) => p?.erpStatus = b),
         validationMessages =
-            $options.field<BuiltList<GetShipmentApiValidationMsg>>(
+            options$.field<BuiltList<GetShipmentApiValidationMsg>>(
                 'validationMessages',
                 (a) => a?.validationMessages,
                 (s) => s?.validationMessages,
                 (p, b) => p?.validationMessages = b),
-        deliverWindowEnd = $options.field<DateTime>(
+        deliverWindowEnd = options$.field<DateTime>(
             'deliverWindowEnd',
             (a) => a?.deliverWindowEnd,
             (s) => s?.deliverWindowEnd,
@@ -684,15 +684,15 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
       _$GetShipmentApiShipmentActions._(options());
 
   @override
-  GetShipmentApiShipment get $initial => GetShipmentApiShipment();
+  GetShipmentApiShipment get initialState$ => GetShipmentApiShipment();
 
   @override
-  GetShipmentApiShipmentBuilder $newBuilder() =>
+  GetShipmentApiShipmentBuilder newBuilder$() =>
       GetShipmentApiShipmentBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.order,
         this.transferType,
         this.loan,
@@ -703,11 +703,11 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
         this.shippingService,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.number,
         this.status,
@@ -719,40 +719,36 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
-    order.$reducer(reducer);
-    transferType.$reducer(reducer);
-    loan.$reducer(reducer);
-    caseEvents.$reducer(reducer);
-    fromLocation.$reducer(reducer);
-    toLocation.$reducer(reducer);
-    deliverTo.$reducer(reducer);
-    deliverToOverride.$reducer(reducer);
-    shippingService.$reducer(reducer);
-    erpReference.$reducer(reducer);
-    erpStatus.$reducer(reducer);
-    validationMessages.$reducer(reducer);
-    deliverWindowEnd.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
+    order.reducer$(reducer);
+    transferType.reducer$(reducer);
+    loan.reducer$(reducer);
+    caseEvents.reducer$(reducer);
+    fromLocation.reducer$(reducer);
+    toLocation.reducer$(reducer);
+    deliverTo.reducer$(reducer);
+    deliverToOverride.reducer$(reducer);
+    shippingService.reducer$(reducer);
+    erpReference.reducer$(reducer);
+    erpStatus.reducer$(reducer);
+    validationMessages.reducer$(reducer);
+    deliverWindowEnd.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    order.$middleware(middleware);
-    transferType.$middleware(middleware);
-    loan.$middleware(middleware);
-    fromLocation.$middleware(middleware);
-    toLocation.$middleware(middleware);
-    deliverTo.$middleware(middleware);
-    deliverToOverride.$middleware(middleware);
-    shippingService.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    order.middleware$(middleware);
+    transferType.middleware$(middleware);
+    loan.middleware$(middleware);
+    fromLocation.middleware$(middleware);
+    toLocation.middleware$(middleware);
+    deliverTo.middleware$(middleware);
+    deliverToOverride.middleware$(middleware);
+    shippingService.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetShipmentApiShipment);
 }

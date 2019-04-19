@@ -201,21 +201,21 @@ class _$ListKitContentsApiResponseActions
   final StatefulActionsOptions<
       ListKitContentsApiResponse,
       ListKitContentsApiResponseBuilder,
-      ListKitContentsApiResponseActions> $options;
+      ListKitContentsApiResponseActions> options$;
 
-  final ActionDispatcher<ListKitContentsApiResponse> $replace;
+  final ActionDispatcher<ListKitContentsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListStockSummaryApiStockSummary>> contents;
   final FieldDispatcher<BuiltList<ListKitContentsApiDiff>> missing;
 
-  _$ListKitContentsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListKitContentsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        contents = $options.field<BuiltList<ListStockSummaryApiStockSummary>>(
+  _$ListKitContentsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListKitContentsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        contents = options$.field<BuiltList<ListStockSummaryApiStockSummary>>(
             'contents',
             (a) => a?.contents,
             (s) => s?.contents,
             (p, b) => p?.contents = b),
-        missing = $options.field<BuiltList<ListKitContentsApiDiff>>('missing',
+        missing = options$.field<BuiltList<ListKitContentsApiDiff>>('missing',
             (a) => a?.missing, (s) => s?.missing, (p, b) => p?.missing = b),
         super._();
 
@@ -224,34 +224,30 @@ class _$ListKitContentsApiResponseActions
       _$ListKitContentsApiResponseActions._(options());
 
   @override
-  ListKitContentsApiResponse get $initial => ListKitContentsApiResponse();
+  ListKitContentsApiResponse get initialState$ => ListKitContentsApiResponse();
 
   @override
-  ListKitContentsApiResponseBuilder $newBuilder() =>
+  ListKitContentsApiResponseBuilder newBuilder$() =>
       ListKitContentsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.contents,
         this.missing,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    contents.$reducer(reducer);
-    missing.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    contents.reducer$(reducer);
+    missing.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListKitContentsApiResponse);
 }

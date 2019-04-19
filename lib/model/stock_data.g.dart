@@ -806,9 +806,9 @@ typedef StatefulActionsOptions<StockData, StockDataBuilder,
 
 class _$StockDataActions extends StockDataActions {
   final StatefulActionsOptions<StockData, StockDataBuilder, StockDataActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<StockData> $replace;
+  final ActionDispatcher<StockData> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> itemVersionId;
@@ -840,121 +840,121 @@ class _$StockDataActions extends StockDataActions {
   final FieldDispatcher<String> demandLoanId;
   final FieldDispatcher<String> consignmentLoanId;
 
-  _$StockDataActions._(this.$options)
-      : $replace = $options.action<StockData>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$StockDataActions._(this.options$)
+      : replace$ = options$.action<StockData>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionId = $options.field<String>(
+        itemVersionId = options$.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        tagId = $options.field<String>(
+        tagId = options$.field<String>(
             'tagId', (a) => a?.tagId, (s) => s?.tagId, (p, b) => p?.tagId = b),
-        kitId = $options.field<String>(
+        kitId = options$.field<String>(
             'kitId', (a) => a?.kitId, (s) => s?.kitId, (p, b) => p?.kitId = b),
-        kitContainer = $options.field<bool>(
+        kitContainer = options$.field<bool>(
             'kitContainer',
             (a) => a?.kitContainer,
             (s) => s?.kitContainer,
             (p, b) => p?.kitContainer = b),
-        virtual = $options.field<bool>('virtual', (a) => a?.virtual,
+        virtual = options$.field<bool>('virtual', (a) => a?.virtual,
             (s) => s?.virtual, (p, b) => p?.virtual = b),
-        verified = $options.field<bool>('verified', (a) => a?.verified,
+        verified = options$.field<bool>('verified', (a) => a?.verified,
             (s) => s?.verified, (p, b) => p?.verified = b),
-        hasExtras = $options.field<bool>('hasExtras', (a) => a?.hasExtras,
+        hasExtras = options$.field<bool>('hasExtras', (a) => a?.hasExtras,
             (s) => s?.hasExtras, (p, b) => p?.hasExtras = b),
-        hasMissing = $options.field<bool>('hasMissing', (a) => a?.hasMissing,
+        hasMissing = options$.field<bool>('hasMissing', (a) => a?.hasMissing,
             (s) => s?.hasMissing, (p, b) => p?.hasMissing = b),
-        hasUnverified = $options.field<bool>(
+        hasUnverified = options$.field<bool>(
             'hasUnverified',
             (a) => a?.hasUnverified,
             (s) => s?.hasUnverified,
             (p, b) => p?.hasUnverified = b),
-        inventoryTypeId = $options.field<String>(
+        inventoryTypeId = options$.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        fromLocationType = $options.field<LocationType>(
+        fromLocationType = options$.field<LocationType>(
             'fromLocationType',
             (a) => a?.fromLocationType,
             (s) => s?.fromLocationType,
             (p, b) => p?.fromLocationType = b),
-        fromLocationId = $options.field<String>(
+        fromLocationId = options$.field<String>(
             'fromLocationId',
             (a) => a?.fromLocationId,
             (s) => s?.fromLocationId,
             (p, b) => p?.fromLocationId = b),
-        toLocationType = $options.field<LocationType>(
+        toLocationType = options$.field<LocationType>(
             'toLocationType',
             (a) => a?.toLocationType,
             (s) => s?.toLocationType,
             (p, b) => p?.toLocationType = b),
-        toLocationId = $options.field<String>(
+        toLocationId = options$.field<String>(
             'toLocationId',
             (a) => a?.toLocationId,
             (s) => s?.toLocationId,
             (p, b) => p?.toLocationId = b),
-        homeLocationType = $options.field<LocationType>(
+        homeLocationType = options$.field<LocationType>(
             'homeLocationType',
             (a) => a?.homeLocationType,
             (s) => s?.homeLocationType,
             (p, b) => p?.homeLocationType = b),
-        homeLocationId = $options.field<String>(
+        homeLocationId = options$.field<String>(
             'homeLocationId',
             (a) => a?.homeLocationId,
             (s) => s?.homeLocationId,
             (p, b) => p?.homeLocationId = b),
-        rootContainerType = $options.field<StockContainerType>(
+        rootContainerType = options$.field<StockContainerType>(
             'rootContainerType',
             (a) => a?.rootContainerType,
             (s) => s?.rootContainerType,
             (p, b) => p?.rootContainerType = b),
-        rootContainerId = $options.field<String>(
+        rootContainerId = options$.field<String>(
             'rootContainerId',
             (a) => a?.rootContainerId,
             (s) => s?.rootContainerId,
             (p, b) => p?.rootContainerId = b),
-        containerType = $options.field<StockContainerType>(
+        containerType = options$.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        responsiblePartyType = $options.field<ResponsiblePartyType>(
+        responsiblePartyType = options$.field<ResponsiblePartyType>(
             'responsiblePartyType',
             (a) => a?.responsiblePartyType,
             (s) => s?.responsiblePartyType,
             (p, b) => p?.responsiblePartyType = b),
-        responsiblePartyId = $options.field<String>(
+        responsiblePartyId = options$.field<String>(
             'responsiblePartyId',
             (a) => a?.responsiblePartyId,
             (s) => s?.responsiblePartyId,
             (p, b) => p?.responsiblePartyId = b),
-        demandLoanId = $options.field<String>(
+        demandLoanId = options$.field<String>(
             'demandLoanId',
             (a) => a?.demandLoanId,
             (s) => s?.demandLoanId,
             (p, b) => p?.demandLoanId = b),
-        consignmentLoanId = $options.field<String>(
+        consignmentLoanId = options$.field<String>(
             'consignmentLoanId',
             (a) => a?.consignmentLoanId,
             (s) => s?.consignmentLoanId,
@@ -965,16 +965,16 @@ class _$StockDataActions extends StockDataActions {
       _$StockDataActions._(options());
 
   @override
-  StockData get $initial => StockData();
+  StockData get initialState$ => StockData();
 
   @override
-  StockDataBuilder $newBuilder() => StockDataBuilder();
+  StockDataBuilder newBuilder$() => StockDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.itemId,
         this.itemVersionId,
@@ -1008,46 +1008,42 @@ class _$StockDataActions extends StockDataActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemVersionId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    tagId.$reducer(reducer);
-    kitId.$reducer(reducer);
-    kitContainer.$reducer(reducer);
-    virtual.$reducer(reducer);
-    verified.$reducer(reducer);
-    hasExtras.$reducer(reducer);
-    hasMissing.$reducer(reducer);
-    hasUnverified.$reducer(reducer);
-    inventoryTypeId.$reducer(reducer);
-    locationType.$reducer(reducer);
-    locationId.$reducer(reducer);
-    fromLocationType.$reducer(reducer);
-    fromLocationId.$reducer(reducer);
-    toLocationType.$reducer(reducer);
-    toLocationId.$reducer(reducer);
-    homeLocationType.$reducer(reducer);
-    homeLocationId.$reducer(reducer);
-    rootContainerType.$reducer(reducer);
-    rootContainerId.$reducer(reducer);
-    containerType.$reducer(reducer);
-    containerId.$reducer(reducer);
-    responsiblePartyType.$reducer(reducer);
-    responsiblePartyId.$reducer(reducer);
-    demandLoanId.$reducer(reducer);
-    consignmentLoanId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemVersionId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    tagId.reducer$(reducer);
+    kitId.reducer$(reducer);
+    kitContainer.reducer$(reducer);
+    virtual.reducer$(reducer);
+    verified.reducer$(reducer);
+    hasExtras.reducer$(reducer);
+    hasMissing.reducer$(reducer);
+    hasUnverified.reducer$(reducer);
+    inventoryTypeId.reducer$(reducer);
+    locationType.reducer$(reducer);
+    locationId.reducer$(reducer);
+    fromLocationType.reducer$(reducer);
+    fromLocationId.reducer$(reducer);
+    toLocationType.reducer$(reducer);
+    toLocationId.reducer$(reducer);
+    homeLocationType.reducer$(reducer);
+    homeLocationId.reducer$(reducer);
+    rootContainerType.reducer$(reducer);
+    rootContainerId.reducer$(reducer);
+    containerType.reducer$(reducer);
+    containerId.reducer$(reducer);
+    responsiblePartyType.reducer$(reducer);
+    responsiblePartyId.reducer$(reducer);
+    demandLoanId.reducer$(reducer);
+    consignmentLoanId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(StockData);
 }

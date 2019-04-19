@@ -192,18 +192,18 @@ class _$ListCaseTypesApiResponseActions
   final StatefulActionsOptions<
       ListCaseTypesApiResponse,
       ListCaseTypesApiResponseBuilder,
-      ListCaseTypesApiResponseActions> $options;
+      ListCaseTypesApiResponseActions> options$;
 
-  final ActionDispatcher<ListCaseTypesApiResponse> $replace;
+  final ActionDispatcher<ListCaseTypesApiResponse> replace$;
   final FieldDispatcher<BuiltList<CaseType>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListCaseTypesApiResponseActions._(this.$options)
-      : $replace = $options.action<ListCaseTypesApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<CaseType>>(
+  _$ListCaseTypesApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListCaseTypesApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<CaseType>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -212,34 +212,30 @@ class _$ListCaseTypesApiResponseActions
       _$ListCaseTypesApiResponseActions._(options());
 
   @override
-  ListCaseTypesApiResponse get $initial => ListCaseTypesApiResponse();
+  ListCaseTypesApiResponse get initialState$ => ListCaseTypesApiResponse();
 
   @override
-  ListCaseTypesApiResponseBuilder $newBuilder() =>
+  ListCaseTypesApiResponseBuilder newBuilder$() =>
       ListCaseTypesApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListCaseTypesApiResponse);
 }

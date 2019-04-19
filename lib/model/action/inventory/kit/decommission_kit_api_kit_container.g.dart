@@ -258,36 +258,36 @@ class _$DecommissionKitApiKitContainerActions
   final StatefulActionsOptions<
       DecommissionKitApiKitContainer,
       DecommissionKitApiKitContainerBuilder,
-      DecommissionKitApiKitContainerActions> $options;
+      DecommissionKitApiKitContainerActions> options$;
 
-  final ActionDispatcher<DecommissionKitApiKitContainer> $replace;
+  final ActionDispatcher<DecommissionKitApiKitContainer> replace$;
   final FieldDispatcher<String> stockId;
   final FieldDispatcher<StockContainerType> toContainerType;
   final FieldDispatcher<String> toContainerId;
   final FieldDispatcher<StockContainerType> contentsToContainerType;
   final FieldDispatcher<String> contentsToContainerId;
 
-  _$DecommissionKitApiKitContainerActions._(this.$options)
-      : $replace = $options.action<DecommissionKitApiKitContainer>(
-            '\$replace', (a) => a?.$replace),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+  _$DecommissionKitApiKitContainerActions._(this.options$)
+      : replace$ = options$.action<DecommissionKitApiKitContainer>(
+            'replace\$', (a) => a?.replace$),
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        toContainerType = $options.field<StockContainerType>(
+        toContainerType = options$.field<StockContainerType>(
             'toContainerType',
             (a) => a?.toContainerType,
             (s) => s?.toContainerType,
             (p, b) => p?.toContainerType = b),
-        toContainerId = $options.field<String>(
+        toContainerId = options$.field<String>(
             'toContainerId',
             (a) => a?.toContainerId,
             (s) => s?.toContainerId,
             (p, b) => p?.toContainerId = b),
-        contentsToContainerType = $options.field<StockContainerType>(
+        contentsToContainerType = options$.field<StockContainerType>(
             'contentsToContainerType',
             (a) => a?.contentsToContainerType,
             (s) => s?.contentsToContainerType,
             (p, b) => p?.contentsToContainerType = b),
-        contentsToContainerId = $options.field<String>(
+        contentsToContainerId = options$.field<String>(
             'contentsToContainerId',
             (a) => a?.contentsToContainerId,
             (s) => s?.contentsToContainerId,
@@ -299,18 +299,18 @@ class _$DecommissionKitApiKitContainerActions
       _$DecommissionKitApiKitContainerActions._(options());
 
   @override
-  DecommissionKitApiKitContainer get $initial =>
+  DecommissionKitApiKitContainer get initialState$ =>
       DecommissionKitApiKitContainer();
 
   @override
-  DecommissionKitApiKitContainerBuilder $newBuilder() =>
+  DecommissionKitApiKitContainerBuilder newBuilder$() =>
       DecommissionKitApiKitContainerBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockId,
         this.toContainerType,
         this.toContainerId,
@@ -319,22 +319,17 @@ class _$DecommissionKitApiKitContainerActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockId.$reducer(reducer);
-    toContainerType.$reducer(reducer);
-    toContainerId.$reducer(reducer);
-    contentsToContainerType.$reducer(reducer);
-    contentsToContainerId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockId.reducer$(reducer);
+    toContainerType.reducer$(reducer);
+    toContainerId.reducer$(reducer);
+    contentsToContainerType.reducer$(reducer);
+    contentsToContainerId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(DecommissionKitApiKitContainer);
 }

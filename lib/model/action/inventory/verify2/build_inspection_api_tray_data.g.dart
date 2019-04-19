@@ -309,9 +309,9 @@ class _$BuildInspectionApiTrayDataActions
   final StatefulActionsOptions<
       BuildInspectionApiTrayData,
       BuildInspectionApiTrayDataBuilder,
-      BuildInspectionApiTrayDataActions> $options;
+      BuildInspectionApiTrayDataActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiTrayData> $replace;
+  final ActionDispatcher<BuildInspectionApiTrayData> replace$;
   final FieldDispatcher<String> stockId;
   final FieldDispatcher<bool> inspectNow;
   final FirstInspectionDataActions firstInspectionData;
@@ -320,30 +320,30 @@ class _$BuildInspectionApiTrayDataActions
   final FieldDispatcher<BuiltList<BuildInspectionApiComponentItem>>
       openComponents;
 
-  _$BuildInspectionApiTrayDataActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiTrayData>(
-            '\$replace', (a) => a?.$replace),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+  _$BuildInspectionApiTrayDataActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiTrayData>(
+            'replace\$', (a) => a?.replace$),
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        inspectNow = $options.field<bool>('inspectNow', (a) => a?.inspectNow,
+        inspectNow = options$.field<bool>('inspectNow', (a) => a?.inspectNow,
             (s) => s?.inspectNow, (p, b) => p?.inspectNow = b),
         firstInspectionData = FirstInspectionDataActions(() =>
-            $options.stateful<FirstInspectionData, FirstInspectionDataBuilder,
+            options$.stateful<FirstInspectionData, FirstInspectionDataBuilder,
                     FirstInspectionDataActions>(
                 'firstInspectionData',
                 (a) => a.firstInspectionData,
                 (s) => s?.firstInspectionData,
                 (b) => b?.firstInspectionData,
                 (parent, builder) => parent?.firstInspectionData = builder)),
-        entryIds = $options.field<BuiltList<String>>('entryIds',
+        entryIds = options$.field<BuiltList<String>>('entryIds',
             (a) => a?.entryIds, (s) => s?.entryIds, (p, b) => p?.entryIds = b),
-        expectedStockIds = $options.field<BuiltList<String>>(
+        expectedStockIds = options$.field<BuiltList<String>>(
             'expectedStockIds',
             (a) => a?.expectedStockIds,
             (s) => s?.expectedStockIds,
             (p, b) => p?.expectedStockIds = b),
         openComponents =
-            $options.field<BuiltList<BuildInspectionApiComponentItem>>(
+            options$.field<BuiltList<BuildInspectionApiComponentItem>>(
                 'openComponents',
                 (a) => a?.openComponents,
                 (s) => s?.openComponents,
@@ -355,23 +355,23 @@ class _$BuildInspectionApiTrayDataActions
       _$BuildInspectionApiTrayDataActions._(options());
 
   @override
-  BuildInspectionApiTrayData get $initial => BuildInspectionApiTrayData();
+  BuildInspectionApiTrayData get initialState$ => BuildInspectionApiTrayData();
 
   @override
-  BuildInspectionApiTrayDataBuilder $newBuilder() =>
+  BuildInspectionApiTrayDataBuilder newBuilder$() =>
       BuildInspectionApiTrayDataBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.firstInspectionData,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockId,
         this.inspectNow,
         this.entryIds,
@@ -380,23 +380,19 @@ class _$BuildInspectionApiTrayDataActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockId.$reducer(reducer);
-    inspectNow.$reducer(reducer);
-    firstInspectionData.$reducer(reducer);
-    entryIds.$reducer(reducer);
-    expectedStockIds.$reducer(reducer);
-    openComponents.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockId.reducer$(reducer);
+    inspectNow.reducer$(reducer);
+    firstInspectionData.reducer$(reducer);
+    entryIds.reducer$(reducer);
+    expectedStockIds.reducer$(reducer);
+    openComponents.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    firstInspectionData.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    firstInspectionData.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(BuildInspectionApiTrayData);
 }

@@ -114,13 +114,13 @@ class _$ListOpenBillingsApiRequestActions
   final StatefulActionsOptions<
       ListOpenBillingsApiRequest,
       ListOpenBillingsApiRequestBuilder,
-      ListOpenBillingsApiRequestActions> $options;
+      ListOpenBillingsApiRequestActions> options$;
 
-  final ActionDispatcher<ListOpenBillingsApiRequest> $replace;
+  final ActionDispatcher<ListOpenBillingsApiRequest> replace$;
 
-  _$ListOpenBillingsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListOpenBillingsApiRequest>(
-            '\$replace', (a) => a?.$replace),
+  _$ListOpenBillingsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListOpenBillingsApiRequest>(
+            'replace\$', (a) => a?.replace$),
         super._();
 
   factory _$ListOpenBillingsApiRequestActions(
@@ -128,20 +128,16 @@ class _$ListOpenBillingsApiRequestActions
       _$ListOpenBillingsApiRequestActions._(options());
 
   @override
-  ListOpenBillingsApiRequest get $initial => ListOpenBillingsApiRequest();
+  ListOpenBillingsApiRequest get initialState$ => ListOpenBillingsApiRequest();
 
   @override
-  ListOpenBillingsApiRequestBuilder $newBuilder() =>
+  ListOpenBillingsApiRequestBuilder newBuilder$() =>
       ListOpenBillingsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListOpenBillingsApiRequest);
 }

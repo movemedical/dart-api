@@ -267,9 +267,9 @@ typedef StatefulActionsOptions<
 
 class _$UiClientConfigurationActions extends UiClientConfigurationActions {
   final StatefulActionsOptions<UiClientConfiguration,
-      UiClientConfigurationBuilder, UiClientConfigurationActions> $options;
+      UiClientConfigurationBuilder, UiClientConfigurationActions> options$;
 
-  final ActionDispatcher<UiClientConfiguration> $replace;
+  final ActionDispatcher<UiClientConfiguration> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<UiClientConfigurationType> configType;
   final FieldDispatcher<bool> valueBool;
@@ -277,26 +277,26 @@ class _$UiClientConfigurationActions extends UiClientConfigurationActions {
   final FieldDispatcher<int> valueLong;
   final FieldDispatcher<double> valueDouble;
 
-  _$UiClientConfigurationActions._(this.$options)
-      : $replace = $options.action<UiClientConfiguration>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UiClientConfigurationActions._(this.options$)
+      : replace$ = options$.action<UiClientConfiguration>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        configType = $options.field<UiClientConfigurationType>(
+        configType = options$.field<UiClientConfigurationType>(
             'configType',
             (a) => a?.configType,
             (s) => s?.configType,
             (p, b) => p?.configType = b),
-        valueBool = $options.field<bool>('valueBool', (a) => a?.valueBool,
+        valueBool = options$.field<bool>('valueBool', (a) => a?.valueBool,
             (s) => s?.valueBool, (p, b) => p?.valueBool = b),
-        valueString = $options.field<String>(
+        valueString = options$.field<String>(
             'valueString',
             (a) => a?.valueString,
             (s) => s?.valueString,
             (p, b) => p?.valueString = b),
-        valueLong = $options.field<int>('valueLong', (a) => a?.valueLong,
+        valueLong = options$.field<int>('valueLong', (a) => a?.valueLong,
             (s) => s?.valueLong, (p, b) => p?.valueLong = b),
-        valueDouble = $options.field<double>(
+        valueDouble = options$.field<double>(
             'valueDouble',
             (a) => a?.valueDouble,
             (s) => s?.valueDouble,
@@ -308,16 +308,16 @@ class _$UiClientConfigurationActions extends UiClientConfigurationActions {
       _$UiClientConfigurationActions._(options());
 
   @override
-  UiClientConfiguration get $initial => UiClientConfiguration();
+  UiClientConfiguration get initialState$ => UiClientConfiguration();
 
   @override
-  UiClientConfigurationBuilder $newBuilder() => UiClientConfigurationBuilder();
+  UiClientConfigurationBuilder newBuilder$() => UiClientConfigurationBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.configType,
         this.valueBool,
@@ -327,22 +327,18 @@ class _$UiClientConfigurationActions extends UiClientConfigurationActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    configType.$reducer(reducer);
-    valueBool.$reducer(reducer);
-    valueString.$reducer(reducer);
-    valueLong.$reducer(reducer);
-    valueDouble.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    configType.reducer$(reducer);
+    valueBool.reducer$(reducer);
+    valueString.reducer$(reducer);
+    valueLong.reducer$(reducer);
+    valueDouble.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(UiClientConfiguration);
 }

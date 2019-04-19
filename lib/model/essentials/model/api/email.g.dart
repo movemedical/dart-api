@@ -177,20 +177,20 @@ typedef StatefulActionsOptions<Email, EmailBuilder,
     EmailActions> EmailActionsOptions();
 
 class _$EmailActions extends EmailActions {
-  final StatefulActionsOptions<Email, EmailBuilder, EmailActions> $options;
+  final StatefulActionsOptions<Email, EmailBuilder, EmailActions> options$;
 
-  final ActionDispatcher<Email> $replace;
+  final ActionDispatcher<Email> replace$;
   final FieldDispatcher<String> user;
   final FieldDispatcher<String> domain;
   final FieldDispatcher<String> suffix;
 
-  _$EmailActions._(this.$options)
-      : $replace = $options.action<Email>('\$replace', (a) => a?.$replace),
-        user = $options.field<String>(
+  _$EmailActions._(this.options$)
+      : replace$ = options$.action<Email>('replace\$', (a) => a?.replace$),
+        user = options$.field<String>(
             'user', (a) => a?.user, (s) => s?.user, (p, b) => p?.user = b),
-        domain = $options.field<String>('domain', (a) => a?.domain,
+        domain = options$.field<String>('domain', (a) => a?.domain,
             (s) => s?.domain, (p, b) => p?.domain = b),
-        suffix = $options.field<String>('suffix', (a) => a?.suffix,
+        suffix = options$.field<String>('suffix', (a) => a?.suffix,
             (s) => s?.suffix, (p, b) => p?.suffix = b),
         super._();
 
@@ -198,35 +198,31 @@ class _$EmailActions extends EmailActions {
       _$EmailActions._(options());
 
   @override
-  Email get $initial => Email();
+  Email get initialState$ => Email();
 
   @override
-  EmailBuilder $newBuilder() => EmailBuilder();
+  EmailBuilder newBuilder$() => EmailBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.user,
         this.domain,
         this.suffix,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    user.$reducer(reducer);
-    domain.$reducer(reducer);
-    suffix.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    user.reducer$(reducer);
+    domain.reducer$(reducer);
+    suffix.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Email);
 }

@@ -200,21 +200,21 @@ class _$LoanLinesUpdatedPushMessageActions
   final StatefulActionsOptions<
       LoanLinesUpdatedPushMessage,
       LoanLinesUpdatedPushMessageBuilder,
-      LoanLinesUpdatedPushMessageActions> $options;
+      LoanLinesUpdatedPushMessageActions> options$;
 
-  final ActionDispatcher<LoanLinesUpdatedPushMessage> $replace;
+  final ActionDispatcher<LoanLinesUpdatedPushMessage> replace$;
   final FieldDispatcher<String> loanId;
   final FieldDispatcher<bool> success;
   final FieldDispatcher<String> failureMsg;
 
-  _$LoanLinesUpdatedPushMessageActions._(this.$options)
-      : $replace = $options.action<LoanLinesUpdatedPushMessage>(
-            '\$replace', (a) => a?.$replace),
-        loanId = $options.field<String>('loanId', (a) => a?.loanId,
+  _$LoanLinesUpdatedPushMessageActions._(this.options$)
+      : replace$ = options$.action<LoanLinesUpdatedPushMessage>(
+            'replace\$', (a) => a?.replace$),
+        loanId = options$.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
-        success = $options.field<bool>('success', (a) => a?.success,
+        success = options$.field<bool>('success', (a) => a?.success,
             (s) => s?.success, (p, b) => p?.success = b),
-        failureMsg = $options.field<String>('failureMsg', (a) => a?.failureMsg,
+        failureMsg = options$.field<String>('failureMsg', (a) => a?.failureMsg,
             (s) => s?.failureMsg, (p, b) => p?.failureMsg = b),
         super._();
 
@@ -223,37 +223,33 @@ class _$LoanLinesUpdatedPushMessageActions
       _$LoanLinesUpdatedPushMessageActions._(options());
 
   @override
-  LoanLinesUpdatedPushMessage get $initial => LoanLinesUpdatedPushMessage();
+  LoanLinesUpdatedPushMessage get initialState$ =>
+      LoanLinesUpdatedPushMessage();
 
   @override
-  LoanLinesUpdatedPushMessageBuilder $newBuilder() =>
+  LoanLinesUpdatedPushMessageBuilder newBuilder$() =>
       LoanLinesUpdatedPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.loanId,
         this.success,
         this.failureMsg,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    loanId.$reducer(reducer);
-    success.$reducer(reducer);
-    failureMsg.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    loanId.reducer$(reducer);
+    success.reducer$(reducer);
+    failureMsg.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(LoanLinesUpdatedPushMessage);
 }

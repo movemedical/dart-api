@@ -47,7 +47,7 @@ void main() {
   });
 
   test('setupJson', () async {
-    final store = createStore((a) => a.$initialBuilder
+    final store = createStore((a) => a.initialBuilder$
       ..url = 'https://dev.movemedical.com'
       ..appVersion = 'Move Dart - 1.0.0');
 
@@ -75,7 +75,7 @@ void main() {
   });
 
   test('ApiService login', () async {
-    final store = createStore((a) => a.$initialBuilder
+    final store = createStore((a) => a.initialBuilder$
       ..url = 'https://dev.movemedical.com'
       ..appVersion = 'Move Dart - 1.0.0');
     final api = store.service<ApiService>();

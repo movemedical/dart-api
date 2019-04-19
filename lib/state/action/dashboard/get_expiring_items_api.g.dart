@@ -22,67 +22,32 @@ class _$GetExpiringItemsApi extends GetExpiringItemsApi {
           ApiResult<GetExpiringItemsApiResponse>>,
       CommandStateBuilder<ApiCommand<GetExpiringItemsApiRequest>,
           ApiResult<GetExpiringItemsApiResponse>>,
-      GetExpiringItemsApi> $options;
+      GetExpiringItemsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetExpiringItemsApiRequest>,
-          ApiResult<GetExpiringItemsApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetExpiringItemsApiRequest>,
-          ApiResult<GetExpiringItemsApiResponse>,
-          GetExpiringItemsApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetExpiringItemsApiRequest>,
-          ApiResult<GetExpiringItemsApiResponse>,
-          GetExpiringItemsApi,
-          Command<ApiCommand<GetExpiringItemsApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetExpiringItemsApiRequest>,
-          ApiResult<GetExpiringItemsApiResponse>,
-          GetExpiringItemsApi,
-          CommandResult<ApiResult<GetExpiringItemsApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetExpiringItemsApiRequest>,
-          ApiResult<GetExpiringItemsApiResponse>,
-          GetExpiringItemsApi,
-          CommandProgress>> $progress;
+          ApiResult<GetExpiringItemsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetExpiringItemsApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<GetExpiringItemsApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetExpiringItemsApi._(this.$options)
-      : $replace = $options.action<
+  _$GetExpiringItemsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetExpiringItemsApiRequest>,
                     ApiResult<GetExpiringItemsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetExpiringItemsApiRequest>,
-                ApiResult<GetExpiringItemsApiResponse>,
-                GetExpiringItemsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetExpiringItemsApiRequest>,
-                    ApiResult<GetExpiringItemsApiResponse>,
-                    GetExpiringItemsApi,
-                    Command<ApiCommand<GetExpiringItemsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetExpiringItemsApiRequest>,
-                    ApiResult<GetExpiringItemsApiResponse>,
-                    GetExpiringItemsApi,
-                    CommandResult<ApiResult<GetExpiringItemsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetExpiringItemsApiRequest>,
-                ApiResult<GetExpiringItemsApiResponse>,
-                GetExpiringItemsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<GetExpiringItemsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<GetExpiringItemsApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetExpiringItemsApi(GetExpiringItemsApiOptions options) =>
@@ -91,32 +56,25 @@ class _$GetExpiringItemsApi extends GetExpiringItemsApi {
   @override
   CommandState<ApiCommand<GetExpiringItemsApiRequest>,
           ApiResult<GetExpiringItemsApiResponse>>
-      get $initial => CommandState<ApiCommand<GetExpiringItemsApiRequest>,
+      get initialState$ => CommandState<ApiCommand<GetExpiringItemsApiRequest>,
           ApiResult<GetExpiringItemsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetExpiringItemsApiRequest>,
           ApiResult<GetExpiringItemsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetExpiringItemsApiRequest>,
           ApiResult<GetExpiringItemsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetExpiringItemsApiRequest)]),
-        FullType(ApiResult, [FullType(GetExpiringItemsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

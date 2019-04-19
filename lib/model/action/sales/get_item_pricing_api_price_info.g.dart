@@ -175,18 +175,18 @@ class _$GetItemPricingApiPriceInfoActions
   final StatefulActionsOptions<
       GetItemPricingApiPriceInfo,
       GetItemPricingApiPriceInfoBuilder,
-      GetItemPricingApiPriceInfoActions> $options;
+      GetItemPricingApiPriceInfoActions> options$;
 
-  final ActionDispatcher<GetItemPricingApiPriceInfo> $replace;
+  final ActionDispatcher<GetItemPricingApiPriceInfo> replace$;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> value;
 
-  _$GetItemPricingApiPriceInfoActions._(this.$options)
-      : $replace = $options.action<GetItemPricingApiPriceInfo>(
-            '\$replace', (a) => a?.$replace),
-        name = $options.field<String>(
+  _$GetItemPricingApiPriceInfoActions._(this.options$)
+      : replace$ = options$.action<GetItemPricingApiPriceInfo>(
+            'replace\$', (a) => a?.replace$),
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        value = $options.field<String>(
+        value = options$.field<String>(
             'value', (a) => a?.value, (s) => s?.value, (p, b) => p?.value = b),
         super._();
 
@@ -195,34 +195,30 @@ class _$GetItemPricingApiPriceInfoActions
       _$GetItemPricingApiPriceInfoActions._(options());
 
   @override
-  GetItemPricingApiPriceInfo get $initial => GetItemPricingApiPriceInfo();
+  GetItemPricingApiPriceInfo get initialState$ => GetItemPricingApiPriceInfo();
 
   @override
-  GetItemPricingApiPriceInfoBuilder $newBuilder() =>
+  GetItemPricingApiPriceInfoBuilder newBuilder$() =>
       GetItemPricingApiPriceInfoBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.name,
         this.value,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    name.$reducer(reducer);
-    value.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    name.reducer$(reducer);
+    value.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetItemPricingApiPriceInfo);
 }

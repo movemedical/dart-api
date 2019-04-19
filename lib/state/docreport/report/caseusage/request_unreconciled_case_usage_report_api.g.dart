@@ -25,71 +25,32 @@ class _$RequestUnreconciledCaseUsageReportApi
       CommandStateBuilder<
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
           ApiResult<Nothing>>,
-      RequestUnreconciledCaseUsageReportApi> $options;
+      RequestUnreconciledCaseUsageReportApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestUnreconciledCaseUsageReportApi,
-          String>> $cancel;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-              ApiResult<Nothing>,
-              RequestUnreconciledCaseUsageReportApi,
-              Command<
-                  ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestUnreconciledCaseUsageReportApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestUnreconciledCaseUsageReportApi,
-          CommandProgress>> $progress;
+          Command<ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RequestUnreconciledCaseUsageReportApi._(this.$options)
-      : $replace = $options.action<
+  _$RequestUnreconciledCaseUsageReportApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<
                 ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                ApiResult<Nothing>,
-                RequestUnreconciledCaseUsageReportApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestUnreconciledCaseUsageReportApi,
-                    Command<
-                        ApiCommand<
-                            RequestUnreconciledCaseUsageReportApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestUnreconciledCaseUsageReportApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                ApiResult<Nothing>,
-                RequestUnreconciledCaseUsageReportApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<
+                    ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RequestUnreconciledCaseUsageReportApi(
@@ -99,34 +60,26 @@ class _$RequestUnreconciledCaseUsageReportApi
   @override
   CommandState<ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand,
-            [FullType(RequestUnreconciledCaseUsageReportApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

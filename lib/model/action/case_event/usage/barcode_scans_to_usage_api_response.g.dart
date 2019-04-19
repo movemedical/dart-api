@@ -176,15 +176,15 @@ class _$BarcodeScansToUsageApiResponseActions
   final StatefulActionsOptions<
       BarcodeScansToUsageApiResponse,
       BarcodeScansToUsageApiResponseBuilder,
-      BarcodeScansToUsageApiResponseActions> $options;
+      BarcodeScansToUsageApiResponseActions> options$;
 
-  final ActionDispatcher<BarcodeScansToUsageApiResponse> $replace;
+  final ActionDispatcher<BarcodeScansToUsageApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListCaseUsageApiUsage>> usages;
 
-  _$BarcodeScansToUsageApiResponseActions._(this.$options)
-      : $replace = $options.action<BarcodeScansToUsageApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        usages = $options.field<BuiltList<ListCaseUsageApiUsage>>('usages',
+  _$BarcodeScansToUsageApiResponseActions._(this.options$)
+      : replace$ = options$.action<BarcodeScansToUsageApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        usages = options$.field<BuiltList<ListCaseUsageApiUsage>>('usages',
             (a) => a?.usages, (s) => s?.usages, (p, b) => p?.usages = b),
         super._();
 
@@ -193,34 +193,29 @@ class _$BarcodeScansToUsageApiResponseActions
       _$BarcodeScansToUsageApiResponseActions._(options());
 
   @override
-  BarcodeScansToUsageApiResponse get $initial =>
+  BarcodeScansToUsageApiResponse get initialState$ =>
       BarcodeScansToUsageApiResponse();
 
   @override
-  BarcodeScansToUsageApiResponseBuilder $newBuilder() =>
+  BarcodeScansToUsageApiResponseBuilder newBuilder$() =>
       BarcodeScansToUsageApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.usages,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    usages.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    usages.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BarcodeScansToUsageApiResponse);
 }

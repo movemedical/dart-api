@@ -191,22 +191,22 @@ class _$GetLoanApiLoanReturnDataActions
   final StatefulActionsOptions<
       GetLoanApiLoanReturnData,
       GetLoanApiLoanReturnDataBuilder,
-      GetLoanApiLoanReturnDataActions> $options;
+      GetLoanApiLoanReturnDataActions> options$;
 
-  final ActionDispatcher<GetLoanApiLoanReturnData> $replace;
+  final ActionDispatcher<GetLoanApiLoanReturnData> replace$;
   final FieldDispatcher<String> transferTypeId;
   final LocationActions returnTo;
 
-  _$GetLoanApiLoanReturnDataActions._(this.$options)
-      : $replace = $options.action<GetLoanApiLoanReturnData>(
-            '\$replace', (a) => a?.$replace),
-        transferTypeId = $options.field<String>(
+  _$GetLoanApiLoanReturnDataActions._(this.options$)
+      : replace$ = options$.action<GetLoanApiLoanReturnData>(
+            'replace\$', (a) => a?.replace$),
+        transferTypeId = options$.field<String>(
             'transferTypeId',
             (a) => a?.transferTypeId,
             (s) => s?.transferTypeId,
             (p, b) => p?.transferTypeId = b),
         returnTo = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'returnTo',
                 (a) => a.returnTo,
                 (s) => s?.returnTo,
@@ -219,40 +219,36 @@ class _$GetLoanApiLoanReturnDataActions
       _$GetLoanApiLoanReturnDataActions._(options());
 
   @override
-  GetLoanApiLoanReturnData get $initial => GetLoanApiLoanReturnData();
+  GetLoanApiLoanReturnData get initialState$ => GetLoanApiLoanReturnData();
 
   @override
-  GetLoanApiLoanReturnDataBuilder $newBuilder() =>
+  GetLoanApiLoanReturnDataBuilder newBuilder$() =>
       GetLoanApiLoanReturnDataBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.returnTo,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.transferTypeId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    transferTypeId.$reducer(reducer);
-    returnTo.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    transferTypeId.reducer$(reducer);
+    returnTo.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    returnTo.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    returnTo.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetLoanApiLoanReturnData);
 }

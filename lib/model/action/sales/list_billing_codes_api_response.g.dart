@@ -179,16 +179,16 @@ class _$ListBillingCodesApiResponseActions
   final StatefulActionsOptions<
       ListBillingCodesApiResponse,
       ListBillingCodesApiResponseBuilder,
-      ListBillingCodesApiResponseActions> $options;
+      ListBillingCodesApiResponseActions> options$;
 
-  final ActionDispatcher<ListBillingCodesApiResponse> $replace;
+  final ActionDispatcher<ListBillingCodesApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListBillingCodesApiBillingCode>> billingCodes;
 
-  _$ListBillingCodesApiResponseActions._(this.$options)
-      : $replace = $options.action<ListBillingCodesApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$ListBillingCodesApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListBillingCodesApiResponse>(
+            'replace\$', (a) => a?.replace$),
         billingCodes =
-            $options.field<BuiltList<ListBillingCodesApiBillingCode>>(
+            options$.field<BuiltList<ListBillingCodesApiBillingCode>>(
                 'billingCodes',
                 (a) => a?.billingCodes,
                 (s) => s?.billingCodes,
@@ -200,33 +200,29 @@ class _$ListBillingCodesApiResponseActions
       _$ListBillingCodesApiResponseActions._(options());
 
   @override
-  ListBillingCodesApiResponse get $initial => ListBillingCodesApiResponse();
+  ListBillingCodesApiResponse get initialState$ =>
+      ListBillingCodesApiResponse();
 
   @override
-  ListBillingCodesApiResponseBuilder $newBuilder() =>
+  ListBillingCodesApiResponseBuilder newBuilder$() =>
       ListBillingCodesApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.billingCodes,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    billingCodes.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    billingCodes.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListBillingCodesApiResponse);
 }

@@ -22,67 +22,32 @@ class _$BuildInspectionApi extends BuildInspectionApi {
           ApiResult<BuildInspectionApiResponse>>,
       CommandStateBuilder<ApiCommand<BuildInspectionApiRequest>,
           ApiResult<BuildInspectionApiResponse>>,
-      BuildInspectionApi> $options;
+      BuildInspectionApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<BuildInspectionApiRequest>,
-          ApiResult<BuildInspectionApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BuildInspectionApiRequest>,
-          ApiResult<BuildInspectionApiResponse>,
-          BuildInspectionApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BuildInspectionApiRequest>,
-          ApiResult<BuildInspectionApiResponse>,
-          BuildInspectionApi,
-          Command<ApiCommand<BuildInspectionApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BuildInspectionApiRequest>,
-          ApiResult<BuildInspectionApiResponse>,
-          BuildInspectionApi,
-          CommandResult<ApiResult<BuildInspectionApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BuildInspectionApiRequest>,
-          ApiResult<BuildInspectionApiResponse>,
-          BuildInspectionApi,
-          CommandProgress>> $progress;
+          ApiResult<BuildInspectionApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<BuildInspectionApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<BuildInspectionApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$BuildInspectionApi._(this.$options)
-      : $replace = $options.action<
+  _$BuildInspectionApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<BuildInspectionApiRequest>,
                     ApiResult<BuildInspectionApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<BuildInspectionApiRequest>,
-                ApiResult<BuildInspectionApiResponse>,
-                BuildInspectionApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<BuildInspectionApiRequest>,
-                    ApiResult<BuildInspectionApiResponse>,
-                    BuildInspectionApi,
-                    Command<ApiCommand<BuildInspectionApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<BuildInspectionApiRequest>,
-                    ApiResult<BuildInspectionApiResponse>,
-                    BuildInspectionApi,
-                    CommandResult<ApiResult<BuildInspectionApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<BuildInspectionApiRequest>,
-                ApiResult<BuildInspectionApiResponse>,
-                BuildInspectionApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<BuildInspectionApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<BuildInspectionApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$BuildInspectionApi(BuildInspectionApiOptions options) =>
@@ -91,32 +56,25 @@ class _$BuildInspectionApi extends BuildInspectionApi {
   @override
   CommandState<ApiCommand<BuildInspectionApiRequest>,
           ApiResult<BuildInspectionApiResponse>>
-      get $initial => CommandState<ApiCommand<BuildInspectionApiRequest>,
+      get initialState$ => CommandState<ApiCommand<BuildInspectionApiRequest>,
           ApiResult<BuildInspectionApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<BuildInspectionApiRequest>,
           ApiResult<BuildInspectionApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<BuildInspectionApiRequest>,
           ApiResult<BuildInspectionApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(BuildInspectionApiRequest)]),
-        FullType(ApiResult, [FullType(BuildInspectionApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

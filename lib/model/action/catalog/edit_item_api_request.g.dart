@@ -405,9 +405,9 @@ typedef StatefulActionsOptions<EditItemApiRequest, EditItemApiRequestBuilder,
 
 class _$EditItemApiRequestActions extends EditItemApiRequestActions {
   final StatefulActionsOptions<EditItemApiRequest, EditItemApiRequestBuilder,
-      EditItemApiRequestActions> $options;
+      EditItemApiRequestActions> options$;
 
-  final ActionDispatcher<EditItemApiRequest> $replace;
+  final ActionDispatcher<EditItemApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> itemNumber;
@@ -421,53 +421,53 @@ class _$EditItemApiRequestActions extends EditItemApiRequestActions {
   final FieldDispatcher<bool> forceContainersOnDelivery;
   final FieldDispatcher<AuditCode> auditCode;
 
-  _$EditItemApiRequestActions._(this.$options)
-      : $replace = $options.action<EditItemApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$EditItemApiRequestActions._(this.options$)
+      : replace$ = options$.action<EditItemApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+        itemNumber = options$.field<String>('itemNumber', (a) => a?.itemNumber,
             (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
-        skuNumber = $options.field<String>('skuNumber', (a) => a?.skuNumber,
+        skuNumber = options$.field<String>('skuNumber', (a) => a?.skuNumber,
             (s) => s?.skuNumber, (p, b) => p?.skuNumber = b),
-        longDescription = $options.field<String>(
+        longDescription = options$.field<String>(
             'longDescription',
             (a) => a?.longDescription,
             (s) => s?.longDescription,
             (p, b) => p?.longDescription = b),
-        shortDescription = $options.field<String>(
+        shortDescription = options$.field<String>(
             'shortDescription',
             (a) => a?.shortDescription,
             (s) => s?.shortDescription,
             (p, b) => p?.shortDescription = b),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        moveItemType = $options.field<MoveItemType>(
+        moveItemType = options$.field<MoveItemType>(
             'moveItemType',
             (a) => a?.moveItemType,
             (s) => s?.moveItemType,
             (p, b) => p?.moveItemType = b),
-        sizeSequence = $options.field<int>(
+        sizeSequence = options$.field<int>(
             'sizeSequence',
             (a) => a?.sizeSequence,
             (s) => s?.sizeSequence,
             (p, b) => p?.sizeSequence = b),
-        unitOfMeasureId = $options.field<String>(
+        unitOfMeasureId = options$.field<String>(
             'unitOfMeasureId',
             (a) => a?.unitOfMeasureId,
             (s) => s?.unitOfMeasureId,
             (p, b) => p?.unitOfMeasureId = b),
-        forceContainersOnDelivery = $options.field<bool>(
+        forceContainersOnDelivery = options$.field<bool>(
             'forceContainersOnDelivery',
             (a) => a?.forceContainersOnDelivery,
             (s) => s?.forceContainersOnDelivery,
             (p, b) => p?.forceContainersOnDelivery = b),
-        auditCode = $options.field<AuditCode>('auditCode', (a) => a?.auditCode,
+        auditCode = options$.field<AuditCode>('auditCode', (a) => a?.auditCode,
             (s) => s?.auditCode, (p, b) => p?.auditCode = b),
         super._();
 
@@ -476,16 +476,16 @@ class _$EditItemApiRequestActions extends EditItemApiRequestActions {
       _$EditItemApiRequestActions._(options());
 
   @override
-  EditItemApiRequest get $initial => EditItemApiRequest();
+  EditItemApiRequest get initialState$ => EditItemApiRequest();
 
   @override
-  EditItemApiRequestBuilder $newBuilder() => EditItemApiRequestBuilder();
+  EditItemApiRequestBuilder newBuilder$() => EditItemApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.bizUnitId,
         this.itemNumber,
@@ -501,28 +501,24 @@ class _$EditItemApiRequestActions extends EditItemApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    itemNumber.$reducer(reducer);
-    skuNumber.$reducer(reducer);
-    longDescription.$reducer(reducer);
-    shortDescription.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    moveItemType.$reducer(reducer);
-    sizeSequence.$reducer(reducer);
-    unitOfMeasureId.$reducer(reducer);
-    forceContainersOnDelivery.$reducer(reducer);
-    auditCode.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    itemNumber.reducer$(reducer);
+    skuNumber.reducer$(reducer);
+    longDescription.reducer$(reducer);
+    shortDescription.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    moveItemType.reducer$(reducer);
+    sizeSequence.reducer$(reducer);
+    unitOfMeasureId.reducer$(reducer);
+    forceContainersOnDelivery.reducer$(reducer);
+    auditCode.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(EditItemApiRequest);
 }

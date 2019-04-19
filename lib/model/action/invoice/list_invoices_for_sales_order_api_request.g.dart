@@ -161,15 +161,15 @@ class _$ListInvoicesForSalesOrderApiRequestActions
   final StatefulActionsOptions<
       ListInvoicesForSalesOrderApiRequest,
       ListInvoicesForSalesOrderApiRequestBuilder,
-      ListInvoicesForSalesOrderApiRequestActions> $options;
+      ListInvoicesForSalesOrderApiRequestActions> options$;
 
-  final ActionDispatcher<ListInvoicesForSalesOrderApiRequest> $replace;
+  final ActionDispatcher<ListInvoicesForSalesOrderApiRequest> replace$;
   final FieldDispatcher<String> salesOrderId;
 
-  _$ListInvoicesForSalesOrderApiRequestActions._(this.$options)
-      : $replace = $options.action<ListInvoicesForSalesOrderApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        salesOrderId = $options.field<String>(
+  _$ListInvoicesForSalesOrderApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListInvoicesForSalesOrderApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        salesOrderId = options$.field<String>(
             'salesOrderId',
             (a) => a?.salesOrderId,
             (s) => s?.salesOrderId,
@@ -181,34 +181,29 @@ class _$ListInvoicesForSalesOrderApiRequestActions
       _$ListInvoicesForSalesOrderApiRequestActions._(options());
 
   @override
-  ListInvoicesForSalesOrderApiRequest get $initial =>
+  ListInvoicesForSalesOrderApiRequest get initialState$ =>
       ListInvoicesForSalesOrderApiRequest();
 
   @override
-  ListInvoicesForSalesOrderApiRequestBuilder $newBuilder() =>
+  ListInvoicesForSalesOrderApiRequestBuilder newBuilder$() =>
       ListInvoicesForSalesOrderApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.salesOrderId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    salesOrderId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    salesOrderId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListInvoicesForSalesOrderApiRequest);
 }

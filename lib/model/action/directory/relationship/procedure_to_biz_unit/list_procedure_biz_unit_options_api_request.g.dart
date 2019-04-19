@@ -255,25 +255,25 @@ class _$ListProcedureBizUnitOptionsApiRequestActions
   final StatefulActionsOptions<
       ListProcedureBizUnitOptionsApiRequest,
       ListProcedureBizUnitOptionsApiRequestBuilder,
-      ListProcedureBizUnitOptionsApiRequestActions> $options;
+      ListProcedureBizUnitOptionsApiRequestActions> options$;
 
-  final ActionDispatcher<ListProcedureBizUnitOptionsApiRequest> $replace;
+  final ActionDispatcher<ListProcedureBizUnitOptionsApiRequest> replace$;
   final FieldDispatcher<String> procedureId;
   final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListProcedureBizUnitOptionsApiOrderBy> orderBy;
 
-  _$ListProcedureBizUnitOptionsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListProcedureBizUnitOptionsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        procedureId = $options.field<String>(
+  _$ListProcedureBizUnitOptionsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListProcedureBizUnitOptionsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -283,7 +283,7 @@ class _$ListProcedureBizUnitOptionsApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<
-            ListProcedureBizUnitOptionsApiOrderBy>(() => $options.stateful<
+            ListProcedureBizUnitOptionsApiOrderBy>(() => options$.stateful<
                 OrderByParams<ListProcedureBizUnitOptionsApiOrderBy>,
                 OrderByParamsBuilder<ListProcedureBizUnitOptionsApiOrderBy>,
                 OrderByParamsActions<ListProcedureBizUnitOptionsApiOrderBy>>(
@@ -299,47 +299,42 @@ class _$ListProcedureBizUnitOptionsApiRequestActions
       _$ListProcedureBizUnitOptionsApiRequestActions._(options());
 
   @override
-  ListProcedureBizUnitOptionsApiRequest get $initial =>
+  ListProcedureBizUnitOptionsApiRequest get initialState$ =>
       ListProcedureBizUnitOptionsApiRequest();
 
   @override
-  ListProcedureBizUnitOptionsApiRequestBuilder $newBuilder() =>
+  ListProcedureBizUnitOptionsApiRequestBuilder newBuilder$() =>
       ListProcedureBizUnitOptionsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.procedureId,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListProcedureBizUnitOptionsApiRequest);
 }

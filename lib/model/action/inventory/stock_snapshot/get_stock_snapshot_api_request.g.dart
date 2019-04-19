@@ -175,18 +175,18 @@ class _$GetStockSnapshotApiRequestActions
   final StatefulActionsOptions<
       GetStockSnapshotApiRequest,
       GetStockSnapshotApiRequestBuilder,
-      GetStockSnapshotApiRequestActions> $options;
+      GetStockSnapshotApiRequestActions> options$;
 
-  final ActionDispatcher<GetStockSnapshotApiRequest> $replace;
+  final ActionDispatcher<GetStockSnapshotApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<bool> skipPresence;
 
-  _$GetStockSnapshotApiRequestActions._(this.$options)
-      : $replace = $options.action<GetStockSnapshotApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetStockSnapshotApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetStockSnapshotApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        skipPresence = $options.field<bool>(
+        skipPresence = options$.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -198,34 +198,30 @@ class _$GetStockSnapshotApiRequestActions
       _$GetStockSnapshotApiRequestActions._(options());
 
   @override
-  GetStockSnapshotApiRequest get $initial => GetStockSnapshotApiRequest();
+  GetStockSnapshotApiRequest get initialState$ => GetStockSnapshotApiRequest();
 
   @override
-  GetStockSnapshotApiRequestBuilder $newBuilder() =>
+  GetStockSnapshotApiRequestBuilder newBuilder$() =>
       GetStockSnapshotApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.skipPresence,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    skipPresence.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    skipPresence.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetStockSnapshotApiRequest);
 }

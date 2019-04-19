@@ -528,9 +528,9 @@ class _$ListShipmentsApiShipmentActions
   final StatefulActionsOptions<
       ListShipmentsApiShipment,
       ListShipmentsApiShipmentBuilder,
-      ListShipmentsApiShipmentActions> $options;
+      ListShipmentsApiShipmentActions> options$;
 
-  final ActionDispatcher<ListShipmentsApiShipment> $replace;
+  final ActionDispatcher<ListShipmentsApiShipment> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<DateTime> created;
@@ -548,68 +548,68 @@ class _$ListShipmentsApiShipmentActions
   final FieldDispatcher<int> picksComplete;
   final FieldDispatcher<int> packageCount;
 
-  _$ListShipmentsApiShipmentActions._(this.$options)
-      : $replace = $options.action<ListShipmentsApiShipment>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListShipmentsApiShipmentActions._(this.options$)
+      : replace$ = options$.action<ListShipmentsApiShipment>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        created = $options.field<DateTime>('created', (a) => a?.created,
+        created = options$.field<DateTime>('created', (a) => a?.created,
             (s) => s?.created, (p, b) => p?.created = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<ShipmentStatus>('status', (a) => a?.status,
+        status = options$.field<ShipmentStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        orderNumber = $options.field<int>('orderNumber', (a) => a?.orderNumber,
+        orderNumber = options$.field<int>('orderNumber', (a) => a?.orderNumber,
             (s) => s?.orderNumber, (p, b) => p?.orderNumber = b),
         fromLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'fromLocation',
                 (a) => a.fromLocation,
                 (s) => s?.fromLocation,
                 (b) => b?.fromLocation,
                 (parent, builder) => parent?.fromLocation = builder)),
         toLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'toLocation',
                 (a) => a.toLocation,
                 (s) => s?.toLocation,
                 (b) => b?.toLocation,
                 (parent, builder) => parent?.toLocation = builder)),
-        carrier = $options.field<MoveShippingCarrier>('carrier',
+        carrier = options$.field<MoveShippingCarrier>('carrier',
             (a) => a?.carrier, (s) => s?.carrier, (p, b) => p?.carrier = b),
-        shippingServiceName = $options.field<String>(
+        shippingServiceName = options$.field<String>(
             'shippingServiceName',
             (a) => a?.shippingServiceName,
             (s) => s?.shippingServiceName,
             (p, b) => p?.shippingServiceName = b),
-        deliverWindowEnd = $options.field<DateTime>(
+        deliverWindowEnd = options$.field<DateTime>(
             'deliverWindowEnd',
             (a) => a?.deliverWindowEnd,
             (s) => s?.deliverWindowEnd,
             (p, b) => p?.deliverWindowEnd = b),
-        fulfillmentCutoff = $options.field<DateTime>(
+        fulfillmentCutoff = options$.field<DateTime>(
             'fulfillmentCutoff',
             (a) => a?.fulfillmentCutoff,
             (s) => s?.fulfillmentCutoff,
             (p, b) => p?.fulfillmentCutoff = b),
-        picksUnassigned = $options.field<int>(
+        picksUnassigned = options$.field<int>(
             'picksUnassigned',
             (a) => a?.picksUnassigned,
             (s) => s?.picksUnassigned,
             (p, b) => p?.picksUnassigned = b),
-        picksAssigned = $options.field<int>(
+        picksAssigned = options$.field<int>(
             'picksAssigned',
             (a) => a?.picksAssigned,
             (s) => s?.picksAssigned,
             (p, b) => p?.picksAssigned = b),
-        picksComplete = $options.field<int>(
+        picksComplete = options$.field<int>(
             'picksComplete',
             (a) => a?.picksComplete,
             (s) => s?.picksComplete,
             (p, b) => p?.picksComplete = b),
-        packageCount = $options.field<int>(
+        packageCount = options$.field<int>(
             'packageCount',
             (a) => a?.packageCount,
             (s) => s?.packageCount,
@@ -621,24 +621,24 @@ class _$ListShipmentsApiShipmentActions
       _$ListShipmentsApiShipmentActions._(options());
 
   @override
-  ListShipmentsApiShipment get $initial => ListShipmentsApiShipment();
+  ListShipmentsApiShipment get initialState$ => ListShipmentsApiShipment();
 
   @override
-  ListShipmentsApiShipmentBuilder $newBuilder() =>
+  ListShipmentsApiShipmentBuilder newBuilder$() =>
       ListShipmentsApiShipmentBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.fromLocation,
         this.toLocation,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orderId,
         this.created,
@@ -656,34 +656,30 @@ class _$ListShipmentsApiShipmentActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orderId.$reducer(reducer);
-    created.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
-    orderNumber.$reducer(reducer);
-    fromLocation.$reducer(reducer);
-    toLocation.$reducer(reducer);
-    carrier.$reducer(reducer);
-    shippingServiceName.$reducer(reducer);
-    deliverWindowEnd.$reducer(reducer);
-    fulfillmentCutoff.$reducer(reducer);
-    picksUnassigned.$reducer(reducer);
-    picksAssigned.$reducer(reducer);
-    picksComplete.$reducer(reducer);
-    packageCount.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orderId.reducer$(reducer);
+    created.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
+    orderNumber.reducer$(reducer);
+    fromLocation.reducer$(reducer);
+    toLocation.reducer$(reducer);
+    carrier.reducer$(reducer);
+    shippingServiceName.reducer$(reducer);
+    deliverWindowEnd.reducer$(reducer);
+    fulfillmentCutoff.reducer$(reducer);
+    picksUnassigned.reducer$(reducer);
+    picksAssigned.reducer$(reducer);
+    picksComplete.reducer$(reducer);
+    packageCount.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    fromLocation.$middleware(middleware);
-    toLocation.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    fromLocation.middleware$(middleware);
+    toLocation.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListShipmentsApiShipment);
 }

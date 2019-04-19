@@ -205,20 +205,20 @@ class _$ListFacilityPhysicianOptionsApiResponseActions
   final StatefulActionsOptions<
       ListFacilityPhysicianOptionsApiResponse,
       ListFacilityPhysicianOptionsApiResponseBuilder,
-      ListFacilityPhysicianOptionsApiResponseActions> $options;
+      ListFacilityPhysicianOptionsApiResponseActions> options$;
 
-  final ActionDispatcher<ListFacilityPhysicianOptionsApiResponse> $replace;
+  final ActionDispatcher<ListFacilityPhysicianOptionsApiResponse> replace$;
   final FieldDispatcher<
       BuiltList<ListFacilityPhysicianOptionsApiPhysicianOption>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListFacilityPhysicianOptionsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListFacilityPhysicianOptionsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options
+  _$ListFacilityPhysicianOptionsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListFacilityPhysicianOptionsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$
             .field<BuiltList<ListFacilityPhysicianOptionsApiPhysicianOption>>(
                 'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -227,36 +227,31 @@ class _$ListFacilityPhysicianOptionsApiResponseActions
       _$ListFacilityPhysicianOptionsApiResponseActions._(options());
 
   @override
-  ListFacilityPhysicianOptionsApiResponse get $initial =>
+  ListFacilityPhysicianOptionsApiResponse get initialState$ =>
       ListFacilityPhysicianOptionsApiResponse();
 
   @override
-  ListFacilityPhysicianOptionsApiResponseBuilder $newBuilder() =>
+  ListFacilityPhysicianOptionsApiResponseBuilder newBuilder$() =>
       ListFacilityPhysicianOptionsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListFacilityPhysicianOptionsApiResponse);
 }

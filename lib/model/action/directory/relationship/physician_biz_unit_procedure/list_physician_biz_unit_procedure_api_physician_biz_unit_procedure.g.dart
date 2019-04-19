@@ -293,10 +293,10 @@ class _$ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureActions
           ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure,
           ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureBuilder,
           ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureActions>
-      $options;
+      options$;
 
   final ActionDispatcher<
-      ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure> $replace;
+      ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> bizUnitName;
@@ -305,30 +305,30 @@ class _$ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureActions
   final FieldDispatcher<String> procedureIcdCode;
 
   _$ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureActions._(
-      this.$options)
-      : $replace = $options
+      this.options$)
+      : replace$ = options$
             .action<ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        bizUnitName = $options.field<String>(
+        bizUnitName = options$.field<String>(
             'bizUnitName',
             (a) => a?.bizUnitName,
             (s) => s?.bizUnitName,
             (p, b) => p?.bizUnitName = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        procedureName = $options.field<String>(
+        procedureName = options$.field<String>(
             'procedureName',
             (a) => a?.procedureName,
             (s) => s?.procedureName,
             (p, b) => p?.procedureName = b),
-        procedureIcdCode = $options.field<String>(
+        procedureIcdCode = options$.field<String>(
             'procedureIcdCode',
             (a) => a?.procedureIcdCode,
             (s) => s?.procedureIcdCode,
@@ -342,19 +342,19 @@ class _$ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureActions
           ._(options());
 
   @override
-  ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure get $initial =>
+  ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure get initialState$ =>
       ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure();
 
   @override
   ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureBuilder
-      $newBuilder() =>
+      newBuilder$() =>
           ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.bizUnitId,
         this.bizUnitName,
@@ -364,23 +364,18 @@ class _$ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    bizUnitName.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    procedureName.$reducer(reducer);
-    procedureIcdCode.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    bizUnitName.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    procedureName.reducer$(reducer);
+    procedureIcdCode.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure);
 }

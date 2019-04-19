@@ -538,9 +538,9 @@ class _$ListImportLogsApiImportLogActions
   final StatefulActionsOptions<
       ListImportLogsApiImportLog,
       ListImportLogsApiImportLogBuilder,
-      ListImportLogsApiImportLogActions> $options;
+      ListImportLogsApiImportLogActions> options$;
 
-  final ActionDispatcher<ListImportLogsApiImportLog> $replace;
+  final ActionDispatcher<ListImportLogsApiImportLog> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> importLogNumber;
   final FieldDispatcher<String> orgId;
@@ -559,63 +559,63 @@ class _$ListImportLogsApiImportLogActions
   final FieldDispatcher<int> skipCount;
   final FieldDispatcher<int> successCount;
 
-  _$ListImportLogsApiImportLogActions._(this.$options)
-      : $replace = $options.action<ListImportLogsApiImportLog>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListImportLogsApiImportLogActions._(this.options$)
+      : replace$ = options$.action<ListImportLogsApiImportLog>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        importLogNumber = $options.field<int>(
+        importLogNumber = options$.field<int>(
             'importLogNumber',
             (a) => a?.importLogNumber,
             (s) => s?.importLogNumber,
             (p, b) => p?.importLogNumber = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        jobKey = $options.field<String>('jobKey', (a) => a?.jobKey,
+        jobKey = options$.field<String>('jobKey', (a) => a?.jobKey,
             (s) => s?.jobKey, (p, b) => p?.jobKey = b),
-        jobId = $options.field<String>(
+        jobId = options$.field<String>(
             'jobId', (a) => a?.jobId, (s) => s?.jobId, (p, b) => p?.jobId = b),
-        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+        startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
-        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
+        endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        processingTimeSec = $options.field<int>(
+        processingTimeSec = options$.field<int>(
             'processingTimeSec',
             (a) => a?.processingTimeSec,
             (s) => s?.processingTimeSec,
             (p, b) => p?.processingTimeSec = b),
-        currentState = $options.field<ImportStatus>(
+        currentState = options$.field<ImportStatus>(
             'currentState',
             (a) => a?.currentState,
             (s) => s?.currentState,
             (p, b) => p?.currentState = b),
-        currentStateEnteredTime = $options.field<DateTime>(
+        currentStateEnteredTime = options$.field<DateTime>(
             'currentStateEnteredTime',
             (a) => a?.currentStateEnteredTime,
             (s) => s?.currentStateEnteredTime,
             (p, b) => p?.currentStateEnteredTime = b),
-        currentStateTimeOut = $options.field<DateTime>(
+        currentStateTimeOut = options$.field<DateTime>(
             'currentStateTimeOut',
             (a) => a?.currentStateTimeOut,
             (s) => s?.currentStateTimeOut,
             (p, b) => p?.currentStateTimeOut = b),
-        statusMessage = $options.field<String>(
+        statusMessage = options$.field<String>(
             'statusMessage',
             (a) => a?.statusMessage,
             (s) => s?.statusMessage,
             (p, b) => p?.statusMessage = b),
-        outcome = $options.field<bool>('outcome', (a) => a?.outcome,
+        outcome = options$.field<bool>('outcome', (a) => a?.outcome,
             (s) => s?.outcome, (p, b) => p?.outcome = b),
-        outcomeMessage = $options.field<String>(
+        outcomeMessage = options$.field<String>(
             'outcomeMessage',
             (a) => a?.outcomeMessage,
             (s) => s?.outcomeMessage,
             (p, b) => p?.outcomeMessage = b),
-        issueCount = $options.field<int>('issueCount', (a) => a?.issueCount,
+        issueCount = options$.field<int>('issueCount', (a) => a?.issueCount,
             (s) => s?.issueCount, (p, b) => p?.issueCount = b),
-        skipCount = $options.field<int>('skipCount', (a) => a?.skipCount,
+        skipCount = options$.field<int>('skipCount', (a) => a?.skipCount,
             (s) => s?.skipCount, (p, b) => p?.skipCount = b),
-        successCount = $options.field<int>(
+        successCount = options$.field<int>(
             'successCount',
             (a) => a?.successCount,
             (s) => s?.successCount,
@@ -627,17 +627,17 @@ class _$ListImportLogsApiImportLogActions
       _$ListImportLogsApiImportLogActions._(options());
 
   @override
-  ListImportLogsApiImportLog get $initial => ListImportLogsApiImportLog();
+  ListImportLogsApiImportLog get initialState$ => ListImportLogsApiImportLog();
 
   @override
-  ListImportLogsApiImportLogBuilder $newBuilder() =>
+  ListImportLogsApiImportLogBuilder newBuilder$() =>
       ListImportLogsApiImportLogBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.importLogNumber,
         this.orgId,
@@ -658,33 +658,29 @@ class _$ListImportLogsApiImportLogActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    importLogNumber.$reducer(reducer);
-    orgId.$reducer(reducer);
-    jobKey.$reducer(reducer);
-    jobId.$reducer(reducer);
-    startDate.$reducer(reducer);
-    endDate.$reducer(reducer);
-    processingTimeSec.$reducer(reducer);
-    currentState.$reducer(reducer);
-    currentStateEnteredTime.$reducer(reducer);
-    currentStateTimeOut.$reducer(reducer);
-    statusMessage.$reducer(reducer);
-    outcome.$reducer(reducer);
-    outcomeMessage.$reducer(reducer);
-    issueCount.$reducer(reducer);
-    skipCount.$reducer(reducer);
-    successCount.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    importLogNumber.reducer$(reducer);
+    orgId.reducer$(reducer);
+    jobKey.reducer$(reducer);
+    jobId.reducer$(reducer);
+    startDate.reducer$(reducer);
+    endDate.reducer$(reducer);
+    processingTimeSec.reducer$(reducer);
+    currentState.reducer$(reducer);
+    currentStateEnteredTime.reducer$(reducer);
+    currentStateTimeOut.reducer$(reducer);
+    statusMessage.reducer$(reducer);
+    outcome.reducer$(reducer);
+    outcomeMessage.reducer$(reducer);
+    issueCount.reducer$(reducer);
+    skipCount.reducer$(reducer);
+    successCount.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListImportLogsApiImportLog);
 }

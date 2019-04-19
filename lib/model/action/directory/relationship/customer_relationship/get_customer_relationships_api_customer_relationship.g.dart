@@ -243,35 +243,35 @@ class _$GetCustomerRelationshipsApiCustomerRelationshipActions
   final StatefulActionsOptions<
       GetCustomerRelationshipsApiCustomerRelationship,
       GetCustomerRelationshipsApiCustomerRelationshipBuilder,
-      GetCustomerRelationshipsApiCustomerRelationshipActions> $options;
+      GetCustomerRelationshipsApiCustomerRelationshipActions> options$;
 
   final ActionDispatcher<GetCustomerRelationshipsApiCustomerRelationship>
-      $replace;
+      replace$;
   final FieldDispatcher<GetCustomerRelationshipsApiDirection> direction;
   final FieldDispatcher<String> relatedCustomerId;
   final FieldDispatcher<String> relatedCustomerName;
   final FieldDispatcher<String> comments;
 
-  _$GetCustomerRelationshipsApiCustomerRelationshipActions._(this.$options)
-      : $replace =
-            $options.action<GetCustomerRelationshipsApiCustomerRelationship>(
-                '\$replace', (a) => a?.$replace),
-        direction = $options.field<GetCustomerRelationshipsApiDirection>(
+  _$GetCustomerRelationshipsApiCustomerRelationshipActions._(this.options$)
+      : replace$ =
+            options$.action<GetCustomerRelationshipsApiCustomerRelationship>(
+                'replace\$', (a) => a?.replace$),
+        direction = options$.field<GetCustomerRelationshipsApiDirection>(
             'direction',
             (a) => a?.direction,
             (s) => s?.direction,
             (p, b) => p?.direction = b),
-        relatedCustomerId = $options.field<String>(
+        relatedCustomerId = options$.field<String>(
             'relatedCustomerId',
             (a) => a?.relatedCustomerId,
             (s) => s?.relatedCustomerId,
             (p, b) => p?.relatedCustomerId = b),
-        relatedCustomerName = $options.field<String>(
+        relatedCustomerName = options$.field<String>(
             'relatedCustomerName',
             (a) => a?.relatedCustomerName,
             (s) => s?.relatedCustomerName,
             (p, b) => p?.relatedCustomerName = b),
-        comments = $options.field<String>('comments', (a) => a?.comments,
+        comments = options$.field<String>('comments', (a) => a?.comments,
             (s) => s?.comments, (p, b) => p?.comments = b),
         super._();
 
@@ -281,18 +281,18 @@ class _$GetCustomerRelationshipsApiCustomerRelationshipActions
       _$GetCustomerRelationshipsApiCustomerRelationshipActions._(options());
 
   @override
-  GetCustomerRelationshipsApiCustomerRelationship get $initial =>
+  GetCustomerRelationshipsApiCustomerRelationship get initialState$ =>
       GetCustomerRelationshipsApiCustomerRelationship();
 
   @override
-  GetCustomerRelationshipsApiCustomerRelationshipBuilder $newBuilder() =>
+  GetCustomerRelationshipsApiCustomerRelationshipBuilder newBuilder$() =>
       GetCustomerRelationshipsApiCustomerRelationshipBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.direction,
         this.relatedCustomerId,
         this.relatedCustomerName,
@@ -300,21 +300,16 @@ class _$GetCustomerRelationshipsApiCustomerRelationshipActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    direction.$reducer(reducer);
-    relatedCustomerId.$reducer(reducer);
-    relatedCustomerName.$reducer(reducer);
-    comments.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    direction.reducer$(reducer);
+    relatedCustomerId.reducer$(reducer);
+    relatedCustomerName.reducer$(reducer);
+    comments.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCustomerRelationshipsApiCustomerRelationship);
 }

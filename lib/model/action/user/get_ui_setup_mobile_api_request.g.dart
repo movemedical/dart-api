@@ -275,9 +275,9 @@ class _$GetUiSetupMobileApiRequestActions
   final StatefulActionsOptions<
       GetUiSetupMobileApiRequest,
       GetUiSetupMobileApiRequestBuilder,
-      GetUiSetupMobileApiRequestActions> $options;
+      GetUiSetupMobileApiRequestActions> options$;
 
-  final ActionDispatcher<GetUiSetupMobileApiRequest> $replace;
+  final ActionDispatcher<GetUiSetupMobileApiRequest> replace$;
   final FieldDispatcher<String> appVersion;
   final FieldDispatcher<MobilePlatform> platform;
   final FieldDispatcher<String> platformVersion;
@@ -285,29 +285,29 @@ class _$GetUiSetupMobileApiRequestActions
   final FieldDispatcher<String> existingDeviceId;
   final FieldDispatcher<bool> useSandboxPushNotifications;
 
-  _$GetUiSetupMobileApiRequestActions._(this.$options)
-      : $replace = $options.action<GetUiSetupMobileApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        appVersion = $options.field<String>('appVersion', (a) => a?.appVersion,
+  _$GetUiSetupMobileApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetUiSetupMobileApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        appVersion = options$.field<String>('appVersion', (a) => a?.appVersion,
             (s) => s?.appVersion, (p, b) => p?.appVersion = b),
-        platform = $options.field<MobilePlatform>('platform',
+        platform = options$.field<MobilePlatform>('platform',
             (a) => a?.platform, (s) => s?.platform, (p, b) => p?.platform = b),
-        platformVersion = $options.field<String>(
+        platformVersion = options$.field<String>(
             'platformVersion',
             (a) => a?.platformVersion,
             (s) => s?.platformVersion,
             (p, b) => p?.platformVersion = b),
-        pushNotificationToken = $options.field<String>(
+        pushNotificationToken = options$.field<String>(
             'pushNotificationToken',
             (a) => a?.pushNotificationToken,
             (s) => s?.pushNotificationToken,
             (p, b) => p?.pushNotificationToken = b),
-        existingDeviceId = $options.field<String>(
+        existingDeviceId = options$.field<String>(
             'existingDeviceId',
             (a) => a?.existingDeviceId,
             (s) => s?.existingDeviceId,
             (p, b) => p?.existingDeviceId = b),
-        useSandboxPushNotifications = $options.field<bool>(
+        useSandboxPushNotifications = options$.field<bool>(
             'useSandboxPushNotifications',
             (a) => a?.useSandboxPushNotifications,
             (s) => s?.useSandboxPushNotifications,
@@ -319,17 +319,17 @@ class _$GetUiSetupMobileApiRequestActions
       _$GetUiSetupMobileApiRequestActions._(options());
 
   @override
-  GetUiSetupMobileApiRequest get $initial => GetUiSetupMobileApiRequest();
+  GetUiSetupMobileApiRequest get initialState$ => GetUiSetupMobileApiRequest();
 
   @override
-  GetUiSetupMobileApiRequestBuilder $newBuilder() =>
+  GetUiSetupMobileApiRequestBuilder newBuilder$() =>
       GetUiSetupMobileApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.appVersion,
         this.platform,
         this.platformVersion,
@@ -339,22 +339,18 @@ class _$GetUiSetupMobileApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    appVersion.$reducer(reducer);
-    platform.$reducer(reducer);
-    platformVersion.$reducer(reducer);
-    pushNotificationToken.$reducer(reducer);
-    existingDeviceId.$reducer(reducer);
-    useSandboxPushNotifications.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    appVersion.reducer$(reducer);
+    platform.reducer$(reducer);
+    platformVersion.reducer$(reducer);
+    pushNotificationToken.reducer$(reducer);
+    existingDeviceId.reducer$(reducer);
+    useSandboxPushNotifications.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetUiSetupMobileApiRequest);
 }

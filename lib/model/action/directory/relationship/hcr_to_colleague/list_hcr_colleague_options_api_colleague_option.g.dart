@@ -275,37 +275,37 @@ class _$ListHcrColleagueOptionsApiColleagueOptionActions
   final StatefulActionsOptions<
       ListHcrColleagueOptionsApiColleagueOption,
       ListHcrColleagueOptionsApiColleagueOptionBuilder,
-      ListHcrColleagueOptionsApiColleagueOptionActions> $options;
+      ListHcrColleagueOptionsApiColleagueOptionActions> options$;
 
-  final ActionDispatcher<ListHcrColleagueOptionsApiColleagueOption> $replace;
+  final ActionDispatcher<ListHcrColleagueOptionsApiColleagueOption> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> colleagueHcrId;
   final FieldDispatcher<HcrType> colleagueHcrType;
   final FieldDispatcher<String> colleagueName;
   final EmailActions colleagueEmail;
 
-  _$ListHcrColleagueOptionsApiColleagueOptionActions._(this.$options)
-      : $replace = $options.action<ListHcrColleagueOptionsApiColleagueOption>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListHcrColleagueOptionsApiColleagueOptionActions._(this.options$)
+      : replace$ = options$.action<ListHcrColleagueOptionsApiColleagueOption>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        colleagueHcrId = $options.field<String>(
+        colleagueHcrId = options$.field<String>(
             'colleagueHcrId',
             (a) => a?.colleagueHcrId,
             (s) => s?.colleagueHcrId,
             (p, b) => p?.colleagueHcrId = b),
-        colleagueHcrType = $options.field<HcrType>(
+        colleagueHcrType = options$.field<HcrType>(
             'colleagueHcrType',
             (a) => a?.colleagueHcrType,
             (s) => s?.colleagueHcrType,
             (p, b) => p?.colleagueHcrType = b),
-        colleagueName = $options.field<String>(
+        colleagueName = options$.field<String>(
             'colleagueName',
             (a) => a?.colleagueName,
             (s) => s?.colleagueName,
             (p, b) => p?.colleagueName = b),
         colleagueEmail = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'colleagueEmail',
                 (a) => a.colleagueEmail,
                 (s) => s?.colleagueEmail,
@@ -318,24 +318,24 @@ class _$ListHcrColleagueOptionsApiColleagueOptionActions
       _$ListHcrColleagueOptionsApiColleagueOptionActions._(options());
 
   @override
-  ListHcrColleagueOptionsApiColleagueOption get $initial =>
+  ListHcrColleagueOptionsApiColleagueOption get initialState$ =>
       ListHcrColleagueOptionsApiColleagueOption();
 
   @override
-  ListHcrColleagueOptionsApiColleagueOptionBuilder $newBuilder() =>
+  ListHcrColleagueOptionsApiColleagueOptionBuilder newBuilder$() =>
       ListHcrColleagueOptionsApiColleagueOptionBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.colleagueEmail,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.colleagueHcrId,
         this.colleagueHcrType,
@@ -343,23 +343,18 @@ class _$ListHcrColleagueOptionsApiColleagueOptionActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    colleagueHcrId.$reducer(reducer);
-    colleagueHcrType.$reducer(reducer);
-    colleagueName.$reducer(reducer);
-    colleagueEmail.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    colleagueHcrId.reducer$(reducer);
+    colleagueHcrType.reducer$(reducer);
+    colleagueName.reducer$(reducer);
+    colleagueEmail.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    colleagueEmail.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    colleagueEmail.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListHcrColleagueOptionsApiColleagueOption);
 }

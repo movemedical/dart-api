@@ -22,63 +22,29 @@ class _$MarkNotificationsReadApi extends MarkNotificationsReadApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<MarkNotificationsReadApiRequest>,
           ApiResult<Nothing>>,
-      MarkNotificationsReadApi> $options;
+      MarkNotificationsReadApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Nothing>, MarkNotificationsReadApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Nothing>,
-          MarkNotificationsReadApi,
-          Command<ApiCommand<MarkNotificationsReadApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Nothing>,
-          MarkNotificationsReadApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Nothing>,
-          MarkNotificationsReadApi,
-          CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<MarkNotificationsReadApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$MarkNotificationsReadApi._(this.$options)
-      : $replace = $options.action<
+  _$MarkNotificationsReadApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<MarkNotificationsReadApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<MarkNotificationsReadApiRequest>,
-                ApiResult<Nothing>,
-                MarkNotificationsReadApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<MarkNotificationsReadApiRequest>,
-                    ApiResult<Nothing>,
-                    MarkNotificationsReadApi,
-                    Command<ApiCommand<MarkNotificationsReadApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<MarkNotificationsReadApiRequest>,
-                    ApiResult<Nothing>,
-                    MarkNotificationsReadApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<MarkNotificationsReadApiRequest>,
-                ApiResult<Nothing>,
-                MarkNotificationsReadApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<MarkNotificationsReadApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$MarkNotificationsReadApi(MarkNotificationsReadApiOptions options) =>
@@ -86,31 +52,24 @@ class _$MarkNotificationsReadApi extends MarkNotificationsReadApi {
 
   @override
   CommandState<ApiCommand<MarkNotificationsReadApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Nothing>>();
+      get initialState$ => CommandState<
+          ApiCommand<MarkNotificationsReadApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<MarkNotificationsReadApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<MarkNotificationsReadApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(MarkNotificationsReadApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

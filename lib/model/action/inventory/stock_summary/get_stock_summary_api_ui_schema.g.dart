@@ -154,15 +154,15 @@ class _$GetStockSummaryApiUiSchemaActions
   final StatefulActionsOptions<
       GetStockSummaryApiUiSchema,
       GetStockSummaryApiUiSchemaBuilder,
-      GetStockSummaryApiUiSchemaActions> $options;
+      GetStockSummaryApiUiSchemaActions> options$;
 
-  final ActionDispatcher<GetStockSummaryApiUiSchema> $replace;
+  final ActionDispatcher<GetStockSummaryApiUiSchema> replace$;
   final FieldDispatcher<bool> adjust;
 
-  _$GetStockSummaryApiUiSchemaActions._(this.$options)
-      : $replace = $options.action<GetStockSummaryApiUiSchema>(
-            '\$replace', (a) => a?.$replace),
-        adjust = $options.field<bool>('adjust', (a) => a?.adjust,
+  _$GetStockSummaryApiUiSchemaActions._(this.options$)
+      : replace$ = options$.action<GetStockSummaryApiUiSchema>(
+            'replace\$', (a) => a?.replace$),
+        adjust = options$.field<bool>('adjust', (a) => a?.adjust,
             (s) => s?.adjust, (p, b) => p?.adjust = b),
         super._();
 
@@ -171,32 +171,28 @@ class _$GetStockSummaryApiUiSchemaActions
       _$GetStockSummaryApiUiSchemaActions._(options());
 
   @override
-  GetStockSummaryApiUiSchema get $initial => GetStockSummaryApiUiSchema();
+  GetStockSummaryApiUiSchema get initialState$ => GetStockSummaryApiUiSchema();
 
   @override
-  GetStockSummaryApiUiSchemaBuilder $newBuilder() =>
+  GetStockSummaryApiUiSchemaBuilder newBuilder$() =>
       GetStockSummaryApiUiSchemaBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.adjust,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    adjust.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    adjust.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetStockSummaryApiUiSchema);
 }

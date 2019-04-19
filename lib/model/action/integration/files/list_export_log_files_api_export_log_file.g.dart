@@ -398,9 +398,9 @@ class _$ListExportLogFilesApiExportLogFileActions
   final StatefulActionsOptions<
       ListExportLogFilesApiExportLogFile,
       ListExportLogFilesApiExportLogFileBuilder,
-      ListExportLogFilesApiExportLogFileActions> $options;
+      ListExportLogFilesApiExportLogFileActions> options$;
 
-  final ActionDispatcher<ListExportLogFilesApiExportLogFile> $replace;
+  final ActionDispatcher<ListExportLogFilesApiExportLogFile> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> jobKey;
   final FieldDispatcher<String> exportLogId;
@@ -413,45 +413,45 @@ class _$ListExportLogFilesApiExportLogFileActions
   final FieldDispatcher<ExportLogFileOutcome> outcome;
   final FieldDispatcher<String> message;
 
-  _$ListExportLogFilesApiExportLogFileActions._(this.$options)
-      : $replace = $options.action<ListExportLogFilesApiExportLogFile>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListExportLogFilesApiExportLogFileActions._(this.options$)
+      : replace$ = options$.action<ListExportLogFilesApiExportLogFile>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        jobKey = $options.field<String>('jobKey', (a) => a?.jobKey,
+        jobKey = options$.field<String>('jobKey', (a) => a?.jobKey,
             (s) => s?.jobKey, (p, b) => p?.jobKey = b),
-        exportLogId = $options.field<String>(
+        exportLogId = options$.field<String>(
             'exportLogId',
             (a) => a?.exportLogId,
             (s) => s?.exportLogId,
             (p, b) => p?.exportLogId = b),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        fileName = $options.field<String>('fileName', (a) => a?.fileName,
+        fileName = options$.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
-        fileContentType = $options.field<String>(
+        fileContentType = options$.field<String>(
             'fileContentType',
             (a) => a?.fileContentType,
             (s) => s?.fileContentType,
             (p, b) => p?.fileContentType = b),
-        fileCreatedDate = $options.field<DateTime>(
+        fileCreatedDate = options$.field<DateTime>(
             'fileCreatedDate',
             (a) => a?.fileCreatedDate,
             (s) => s?.fileCreatedDate,
             (p, b) => p?.fileCreatedDate = b),
-        fileExpiresDate = $options.field<DateTime>(
+        fileExpiresDate = options$.field<DateTime>(
             'fileExpiresDate',
             (a) => a?.fileExpiresDate,
             (s) => s?.fileExpiresDate,
             (p, b) => p?.fileExpiresDate = b),
-        totalRecordCount = $options.field<int>(
+        totalRecordCount = options$.field<int>(
             'totalRecordCount',
             (a) => a?.totalRecordCount,
             (s) => s?.totalRecordCount,
             (p, b) => p?.totalRecordCount = b),
-        outcome = $options.field<ExportLogFileOutcome>('outcome',
+        outcome = options$.field<ExportLogFileOutcome>('outcome',
             (a) => a?.outcome, (s) => s?.outcome, (p, b) => p?.outcome = b),
-        message = $options.field<String>('message', (a) => a?.message,
+        message = options$.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
         super._();
 
@@ -460,18 +460,18 @@ class _$ListExportLogFilesApiExportLogFileActions
       _$ListExportLogFilesApiExportLogFileActions._(options());
 
   @override
-  ListExportLogFilesApiExportLogFile get $initial =>
+  ListExportLogFilesApiExportLogFile get initialState$ =>
       ListExportLogFilesApiExportLogFile();
 
   @override
-  ListExportLogFilesApiExportLogFileBuilder $newBuilder() =>
+  ListExportLogFilesApiExportLogFileBuilder newBuilder$() =>
       ListExportLogFilesApiExportLogFileBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.jobKey,
         this.exportLogId,
@@ -486,28 +486,23 @@ class _$ListExportLogFilesApiExportLogFileActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    jobKey.$reducer(reducer);
-    exportLogId.$reducer(reducer);
-    fileId.$reducer(reducer);
-    fileName.$reducer(reducer);
-    fileContentType.$reducer(reducer);
-    fileCreatedDate.$reducer(reducer);
-    fileExpiresDate.$reducer(reducer);
-    totalRecordCount.$reducer(reducer);
-    outcome.$reducer(reducer);
-    message.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    jobKey.reducer$(reducer);
+    exportLogId.reducer$(reducer);
+    fileId.reducer$(reducer);
+    fileName.reducer$(reducer);
+    fileContentType.reducer$(reducer);
+    fileCreatedDate.reducer$(reducer);
+    fileExpiresDate.reducer$(reducer);
+    totalRecordCount.reducer$(reducer);
+    outcome.reducer$(reducer);
+    message.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListExportLogFilesApiExportLogFile);
 }

@@ -194,17 +194,17 @@ typedef StatefulActionsOptions<
 
 class _$GetInvoiceApiResponseActions extends GetInvoiceApiResponseActions {
   final StatefulActionsOptions<GetInvoiceApiResponse,
-      GetInvoiceApiResponseBuilder, GetInvoiceApiResponseActions> $options;
+      GetInvoiceApiResponseBuilder, GetInvoiceApiResponseActions> options$;
 
-  final ActionDispatcher<GetInvoiceApiResponse> $replace;
+  final ActionDispatcher<GetInvoiceApiResponse> replace$;
   final GetInvoiceApiInvoiceDetailActions invoiceDetail;
   final GetInvoiceApiDisplayRulesActions displayRules;
 
-  _$GetInvoiceApiResponseActions._(this.$options)
-      : $replace = $options.action<GetInvoiceApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$GetInvoiceApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetInvoiceApiResponse>(
+            'replace\$', (a) => a?.replace$),
         invoiceDetail = GetInvoiceApiInvoiceDetailActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetInvoiceApiInvoiceDetail,
                     GetInvoiceApiInvoiceDetailBuilder,
                     GetInvoiceApiInvoiceDetailActions>(
@@ -213,7 +213,7 @@ class _$GetInvoiceApiResponseActions extends GetInvoiceApiResponseActions {
                 (s) => s?.invoiceDetail,
                 (b) => b?.invoiceDetail,
                 (parent, builder) => parent?.invoiceDetail = builder)),
-        displayRules = GetInvoiceApiDisplayRulesActions(() => $options.stateful<
+        displayRules = GetInvoiceApiDisplayRulesActions(() => options$.stateful<
                 GetInvoiceApiDisplayRules,
                 GetInvoiceApiDisplayRulesBuilder,
                 GetInvoiceApiDisplayRulesActions>(
@@ -229,40 +229,36 @@ class _$GetInvoiceApiResponseActions extends GetInvoiceApiResponseActions {
       _$GetInvoiceApiResponseActions._(options());
 
   @override
-  GetInvoiceApiResponse get $initial => GetInvoiceApiResponse();
+  GetInvoiceApiResponse get initialState$ => GetInvoiceApiResponse();
 
   @override
-  GetInvoiceApiResponseBuilder $newBuilder() => GetInvoiceApiResponseBuilder();
+  GetInvoiceApiResponseBuilder newBuilder$() => GetInvoiceApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.invoiceDetail,
         this.displayRules,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    invoiceDetail.$reducer(reducer);
-    displayRules.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    invoiceDetail.reducer$(reducer);
+    displayRules.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    invoiceDetail.$middleware(middleware);
-    displayRules.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    invoiceDetail.middleware$(middleware);
+    displayRules.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetInvoiceApiResponse);
 }

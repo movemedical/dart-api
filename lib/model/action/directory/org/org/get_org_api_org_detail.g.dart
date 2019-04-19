@@ -321,9 +321,9 @@ typedef StatefulActionsOptions<GetOrgApiOrgDetail, GetOrgApiOrgDetailBuilder,
 
 class _$GetOrgApiOrgDetailActions extends GetOrgApiOrgDetailActions {
   final StatefulActionsOptions<GetOrgApiOrgDetail, GetOrgApiOrgDetailBuilder,
-      GetOrgApiOrgDetailActions> $options;
+      GetOrgApiOrgDetailActions> options$;
 
-  final ActionDispatcher<GetOrgApiOrgDetail> $replace;
+  final ActionDispatcher<GetOrgApiOrgDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> reference;
   final FieldDispatcher<String> name;
@@ -333,37 +333,37 @@ class _$GetOrgApiOrgDetailActions extends GetOrgApiOrgDetailActions {
   final FieldDispatcher<bool> publicVisible;
   final FieldDispatcher<bool> active;
 
-  _$GetOrgApiOrgDetailActions._(this.$options)
-      : $replace = $options.action<GetOrgApiOrgDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetOrgApiOrgDetailActions._(this.options$)
+      : replace$ = options$.action<GetOrgApiOrgDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        type = $options.field<OrgType>(
+        type = options$.field<OrgType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
         address = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'address',
                 (a) => a.address,
                 (s) => s?.address,
                 (b) => b?.address,
                 (parent, builder) => parent?.address = builder)),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        publicVisible = $options.field<bool>(
+        publicVisible = options$.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
             (p, b) => p?.publicVisible = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -372,23 +372,23 @@ class _$GetOrgApiOrgDetailActions extends GetOrgApiOrgDetailActions {
       _$GetOrgApiOrgDetailActions._(options());
 
   @override
-  GetOrgApiOrgDetail get $initial => GetOrgApiOrgDetail();
+  GetOrgApiOrgDetail get initialState$ => GetOrgApiOrgDetail();
 
   @override
-  GetOrgApiOrgDetailBuilder $newBuilder() => GetOrgApiOrgDetailBuilder();
+  GetOrgApiOrgDetailBuilder newBuilder$() => GetOrgApiOrgDetailBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.address,
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.reference,
         this.name,
@@ -398,26 +398,22 @@ class _$GetOrgApiOrgDetailActions extends GetOrgApiOrgDetailActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    reference.$reducer(reducer);
-    name.$reducer(reducer);
-    type.$reducer(reducer);
-    address.$reducer(reducer);
-    email.$reducer(reducer);
-    publicVisible.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    reference.reducer$(reducer);
+    name.reducer$(reducer);
+    type.reducer$(reducer);
+    address.reducer$(reducer);
+    email.reducer$(reducer);
+    publicVisible.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    address.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    address.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetOrgApiOrgDetail);
 }

@@ -482,9 +482,9 @@ typedef StatefulActionsOptions<
 
 class _$CreateAuditApiRequestActions extends CreateAuditApiRequestActions {
   final StatefulActionsOptions<CreateAuditApiRequest,
-      CreateAuditApiRequestBuilder, CreateAuditApiRequestActions> $options;
+      CreateAuditApiRequestBuilder, CreateAuditApiRequestActions> options$;
 
-  final ActionDispatcher<CreateAuditApiRequest> $replace;
+  final ActionDispatcher<CreateAuditApiRequest> replace$;
   final FieldDispatcher<String> referenceString;
   final FieldDispatcher<AuditCountType> countType;
   final FieldDispatcher<AuditType> type;
@@ -500,66 +500,66 @@ class _$CreateAuditApiRequestActions extends CreateAuditApiRequestActions {
   final FieldDispatcher<bool> blind;
   final FieldDispatcher<BuiltList<String>> categoryIds;
 
-  _$CreateAuditApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateAuditApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        referenceString = $options.field<String>(
+  _$CreateAuditApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateAuditApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        referenceString = options$.field<String>(
             'referenceString',
             (a) => a?.referenceString,
             (s) => s?.referenceString,
             (p, b) => p?.referenceString = b),
-        countType = $options.field<AuditCountType>(
+        countType = options$.field<AuditCountType>(
             'countType',
             (a) => a?.countType,
             (s) => s?.countType,
             (p, b) => p?.countType = b),
-        type = $options.field<AuditType>(
+        type = options$.field<AuditType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        countingBins = $options.field<bool>(
+        countingBins = options$.field<bool>(
             'countingBins',
             (a) => a?.countingBins,
             (s) => s?.countingBins,
             (p, b) => p?.countingBins = b),
-        toteContentsRequired = $options.field<bool>(
+        toteContentsRequired = options$.field<bool>(
             'toteContentsRequired',
             (a) => a?.toteContentsRequired,
             (s) => s?.toteContentsRequired,
             (p, b) => p?.toteContentsRequired = b),
-        kitToteContentsRequired = $options.field<bool>(
+        kitToteContentsRequired = options$.field<bool>(
             'kitToteContentsRequired',
             (a) => a?.kitToteContentsRequired,
             (s) => s?.kitToteContentsRequired,
             (p, b) => p?.kitToteContentsRequired = b),
-        pkgContentsRequired = $options.field<bool>(
+        pkgContentsRequired = options$.field<bool>(
             'pkgContentsRequired',
             (a) => a?.pkgContentsRequired,
             (s) => s?.pkgContentsRequired,
             (p, b) => p?.pkgContentsRequired = b),
-        trayContentsRequired = $options.field<bool>(
+        trayContentsRequired = options$.field<bool>(
             'trayContentsRequired',
             (a) => a?.trayContentsRequired,
             (s) => s?.trayContentsRequired,
             (p, b) => p?.trayContentsRequired = b),
-        scheduledWindowStart = $options.field<DateTime>(
+        scheduledWindowStart = options$.field<DateTime>(
             'scheduledWindowStart',
             (a) => a?.scheduledWindowStart,
             (s) => s?.scheduledWindowStart,
             (p, b) => p?.scheduledWindowStart = b),
-        scheduledWindowEnd = $options.field<DateTime>(
+        scheduledWindowEnd = options$.field<DateTime>(
             'scheduledWindowEnd',
             (a) => a?.scheduledWindowEnd,
             (s) => s?.scheduledWindowEnd,
             (p, b) => p?.scheduledWindowEnd = b),
-        blind = $options.field<bool>(
+        blind = options$.field<bool>(
             'blind', (a) => a?.blind, (s) => s?.blind, (p, b) => p?.blind = b),
-        categoryIds = $options.field<BuiltList<String>>(
+        categoryIds = options$.field<BuiltList<String>>(
             'categoryIds',
             (a) => a?.categoryIds,
             (s) => s?.categoryIds,
@@ -571,16 +571,16 @@ class _$CreateAuditApiRequestActions extends CreateAuditApiRequestActions {
       _$CreateAuditApiRequestActions._(options());
 
   @override
-  CreateAuditApiRequest get $initial => CreateAuditApiRequest();
+  CreateAuditApiRequest get initialState$ => CreateAuditApiRequest();
 
   @override
-  CreateAuditApiRequestBuilder $newBuilder() => CreateAuditApiRequestBuilder();
+  CreateAuditApiRequestBuilder newBuilder$() => CreateAuditApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.referenceString,
         this.countType,
         this.type,
@@ -598,30 +598,26 @@ class _$CreateAuditApiRequestActions extends CreateAuditApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    referenceString.$reducer(reducer);
-    countType.$reducer(reducer);
-    type.$reducer(reducer);
-    locationType.$reducer(reducer);
-    locationId.$reducer(reducer);
-    countingBins.$reducer(reducer);
-    toteContentsRequired.$reducer(reducer);
-    kitToteContentsRequired.$reducer(reducer);
-    pkgContentsRequired.$reducer(reducer);
-    trayContentsRequired.$reducer(reducer);
-    scheduledWindowStart.$reducer(reducer);
-    scheduledWindowEnd.$reducer(reducer);
-    blind.$reducer(reducer);
-    categoryIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    referenceString.reducer$(reducer);
+    countType.reducer$(reducer);
+    type.reducer$(reducer);
+    locationType.reducer$(reducer);
+    locationId.reducer$(reducer);
+    countingBins.reducer$(reducer);
+    toteContentsRequired.reducer$(reducer);
+    kitToteContentsRequired.reducer$(reducer);
+    pkgContentsRequired.reducer$(reducer);
+    trayContentsRequired.reducer$(reducer);
+    scheduledWindowStart.reducer$(reducer);
+    scheduledWindowEnd.reducer$(reducer);
+    blind.reducer$(reducer);
+    categoryIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateAuditApiRequest);
 }

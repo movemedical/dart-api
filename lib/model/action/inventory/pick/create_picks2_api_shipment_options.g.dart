@@ -294,9 +294,9 @@ class _$CreatePicks2ApiShipmentOptionsActions
   final StatefulActionsOptions<
       CreatePicks2ApiShipmentOptions,
       CreatePicks2ApiShipmentOptionsBuilder,
-      CreatePicks2ApiShipmentOptionsActions> $options;
+      CreatePicks2ApiShipmentOptionsActions> options$;
 
-  final ActionDispatcher<CreatePicks2ApiShipmentOptions> $replace;
+  final ActionDispatcher<CreatePicks2ApiShipmentOptions> replace$;
   final FieldDispatcher<String> shipmentId;
   final FieldDispatcher<String> shippingServiceId;
   final FieldDispatcher<bool> skipProxyShipment;
@@ -304,33 +304,33 @@ class _$CreatePicks2ApiShipmentOptionsActions
   final FieldDispatcher<String> deliverToAddressId;
   final AddressActions deliverToAddressOverride;
 
-  _$CreatePicks2ApiShipmentOptionsActions._(this.$options)
-      : $replace = $options.action<CreatePicks2ApiShipmentOptions>(
-            '\$replace', (a) => a?.$replace),
-        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+  _$CreatePicks2ApiShipmentOptionsActions._(this.options$)
+      : replace$ = options$.action<CreatePicks2ApiShipmentOptions>(
+            'replace\$', (a) => a?.replace$),
+        shipmentId = options$.field<String>('shipmentId', (a) => a?.shipmentId,
             (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
-        shippingServiceId = $options.field<String>(
+        shippingServiceId = options$.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
-        skipProxyShipment = $options.field<bool>(
+        skipProxyShipment = options$.field<bool>(
             'skipProxyShipment',
             (a) => a?.skipProxyShipment,
             (s) => s?.skipProxyShipment,
             (p, b) => p?.skipProxyShipment = b),
-        erpReference = $options.field<String>(
+        erpReference = options$.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
-        deliverToAddressId = $options.field<String>(
+        deliverToAddressId = options$.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
             (p, b) => p?.deliverToAddressId = b),
         deliverToAddressOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToAddressOverride',
                 (a) => a.deliverToAddressOverride,
                 (s) => s?.deliverToAddressOverride,
@@ -344,24 +344,24 @@ class _$CreatePicks2ApiShipmentOptionsActions
       _$CreatePicks2ApiShipmentOptionsActions._(options());
 
   @override
-  CreatePicks2ApiShipmentOptions get $initial =>
+  CreatePicks2ApiShipmentOptions get initialState$ =>
       CreatePicks2ApiShipmentOptions();
 
   @override
-  CreatePicks2ApiShipmentOptionsBuilder $newBuilder() =>
+  CreatePicks2ApiShipmentOptionsBuilder newBuilder$() =>
       CreatePicks2ApiShipmentOptionsBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.shipmentId,
         this.shippingServiceId,
         this.skipProxyShipment,
@@ -370,24 +370,19 @@ class _$CreatePicks2ApiShipmentOptionsActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    shipmentId.$reducer(reducer);
-    shippingServiceId.$reducer(reducer);
-    skipProxyShipment.$reducer(reducer);
-    erpReference.$reducer(reducer);
-    deliverToAddressId.$reducer(reducer);
-    deliverToAddressOverride.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    shipmentId.reducer$(reducer);
+    shippingServiceId.reducer$(reducer);
+    skipProxyShipment.reducer$(reducer);
+    erpReference.reducer$(reducer);
+    deliverToAddressId.reducer$(reducer);
+    deliverToAddressOverride.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    deliverToAddressOverride.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    deliverToAddressOverride.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreatePicks2ApiShipmentOptions);
 }

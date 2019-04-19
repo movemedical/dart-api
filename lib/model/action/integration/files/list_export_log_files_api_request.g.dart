@@ -194,21 +194,21 @@ class _$ListExportLogFilesApiRequestActions
   final StatefulActionsOptions<
       ListExportLogFilesApiRequest,
       ListExportLogFilesApiRequestBuilder,
-      ListExportLogFilesApiRequestActions> $options;
+      ListExportLogFilesApiRequestActions> options$;
 
-  final ActionDispatcher<ListExportLogFilesApiRequest> $replace;
+  final ActionDispatcher<ListExportLogFilesApiRequest> replace$;
   final FieldDispatcher<String> exportLogId;
   final PaginationParamsActions paging;
 
-  _$ListExportLogFilesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListExportLogFilesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        exportLogId = $options.field<String>(
+  _$ListExportLogFilesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListExportLogFilesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        exportLogId = options$.field<String>(
             'exportLogId',
             (a) => a?.exportLogId,
             (s) => s?.exportLogId,
             (p, b) => p?.exportLogId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -224,41 +224,37 @@ class _$ListExportLogFilesApiRequestActions
       _$ListExportLogFilesApiRequestActions._(options());
 
   @override
-  ListExportLogFilesApiRequest get $initial => ListExportLogFilesApiRequest();
+  ListExportLogFilesApiRequest get initialState$ =>
+      ListExportLogFilesApiRequest();
 
   @override
-  ListExportLogFilesApiRequestBuilder $newBuilder() =>
+  ListExportLogFilesApiRequestBuilder newBuilder$() =>
       ListExportLogFilesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.exportLogId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    exportLogId.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    exportLogId.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListExportLogFilesApiRequest);
 }

@@ -227,30 +227,30 @@ typedef StatefulActionsOptions<SubProcedure, SubProcedureBuilder,
 
 class _$SubProcedureActions extends SubProcedureActions {
   final StatefulActionsOptions<SubProcedure, SubProcedureBuilder,
-      SubProcedureActions> $options;
+      SubProcedureActions> options$;
 
-  final ActionDispatcher<SubProcedure> $replace;
+  final ActionDispatcher<SubProcedure> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> description;
   final FieldDispatcher<String> icdCode;
   final FieldDispatcher<bool> active;
 
-  _$SubProcedureActions._(this.$options)
-      : $replace =
-            $options.action<SubProcedure>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$SubProcedureActions._(this.options$)
+      : replace$ =
+            options$.action<SubProcedure>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        icdCode = $options.field<String>('icdCode', (a) => a?.icdCode,
+        icdCode = options$.field<String>('icdCode', (a) => a?.icdCode,
             (s) => s?.icdCode, (p, b) => p?.icdCode = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -258,16 +258,16 @@ class _$SubProcedureActions extends SubProcedureActions {
       _$SubProcedureActions._(options());
 
   @override
-  SubProcedure get $initial => SubProcedure();
+  SubProcedure get initialState$ => SubProcedure();
 
   @override
-  SubProcedureBuilder $newBuilder() => SubProcedureBuilder();
+  SubProcedureBuilder newBuilder$() => SubProcedureBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.description,
@@ -276,21 +276,17 @@ class _$SubProcedureActions extends SubProcedureActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    description.$reducer(reducer);
-    icdCode.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    description.reducer$(reducer);
+    icdCode.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SubProcedure);
 }

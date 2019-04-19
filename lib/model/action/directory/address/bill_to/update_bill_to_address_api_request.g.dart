@@ -181,21 +181,21 @@ class _$UpdateBillToAddressApiRequestActions
   final StatefulActionsOptions<
       UpdateBillToAddressApiRequest,
       UpdateBillToAddressApiRequestBuilder,
-      UpdateBillToAddressApiRequestActions> $options;
+      UpdateBillToAddressApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateBillToAddressApiRequest> $replace;
+  final ActionDispatcher<UpdateBillToAddressApiRequest> replace$;
   final FieldDispatcher<String> billToAddressId;
   final FieldDispatcher<bool> active;
 
-  _$UpdateBillToAddressApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateBillToAddressApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        billToAddressId = $options.field<String>(
+  _$UpdateBillToAddressApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateBillToAddressApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        billToAddressId = options$.field<String>(
             'billToAddressId',
             (a) => a?.billToAddressId,
             (s) => s?.billToAddressId,
             (p, b) => p?.billToAddressId = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -204,35 +204,31 @@ class _$UpdateBillToAddressApiRequestActions
       _$UpdateBillToAddressApiRequestActions._(options());
 
   @override
-  UpdateBillToAddressApiRequest get $initial => UpdateBillToAddressApiRequest();
+  UpdateBillToAddressApiRequest get initialState$ =>
+      UpdateBillToAddressApiRequest();
 
   @override
-  UpdateBillToAddressApiRequestBuilder $newBuilder() =>
+  UpdateBillToAddressApiRequestBuilder newBuilder$() =>
       UpdateBillToAddressApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.billToAddressId,
         this.active,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    billToAddressId.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    billToAddressId.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateBillToAddressApiRequest);
 }

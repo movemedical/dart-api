@@ -440,9 +440,9 @@ class _$ListStockForUsageApiUsageStockSummaryActions
   final StatefulActionsOptions<
       ListStockForUsageApiUsageStockSummary,
       ListStockForUsageApiUsageStockSummaryBuilder,
-      ListStockForUsageApiUsageStockSummaryActions> $options;
+      ListStockForUsageApiUsageStockSummaryActions> options$;
 
-  final ActionDispatcher<ListStockForUsageApiUsageStockSummary> $replace;
+  final ActionDispatcher<ListStockForUsageApiUsageStockSummary> replace$;
   final FieldDispatcher<String> key;
   final FieldDispatcher<BuiltList<String>> stockIds;
   final StockItemActions stockItem;
@@ -455,35 +455,35 @@ class _$ListStockForUsageApiUsageStockSummaryActions
   final FieldDispatcher<String> attributeValue;
   final ResponsiblePartyActions responsibleParty;
 
-  _$ListStockForUsageApiUsageStockSummaryActions._(this.$options)
-      : $replace = $options.action<ListStockForUsageApiUsageStockSummary>(
-            '\$replace', (a) => a?.$replace),
-        key = $options.field<String>(
+  _$ListStockForUsageApiUsageStockSummaryActions._(this.options$)
+      : replace$ = options$.action<ListStockForUsageApiUsageStockSummary>(
+            'replace\$', (a) => a?.replace$),
+        key = options$.field<String>(
             'key', (a) => a?.key, (s) => s?.key, (p, b) => p?.key = b),
-        stockIds = $options.field<BuiltList<String>>('stockIds',
+        stockIds = options$.field<BuiltList<String>>('stockIds',
             (a) => a?.stockIds, (s) => s?.stockIds, (p, b) => p?.stockIds = b),
         stockItem = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
                 (a) => a.stockItem,
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
         place = StockPlaceActions(() =>
-            $options.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
+            options$.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
                 'place',
                 (a) => a.place,
                 (s) => s?.place,
                 (b) => b?.place,
                 (parent, builder) => parent?.place = builder)),
-        expirationInfo = ExpirationInfoActions(() => $options.stateful<
+        expirationInfo = ExpirationInfoActions(() => options$.stateful<
                 ExpirationInfo, ExpirationInfoBuilder, ExpirationInfoActions>(
             'expirationInfo',
             (a) => a.expirationInfo,
             (s) => s?.expirationInfo,
             (b) => b?.expirationInfo,
             (parent, builder) => parent?.expirationInfo = builder)),
-        inventoryType = InventoryTypeActions(() => $options.stateful<
+        inventoryType = InventoryTypeActions(() => options$.stateful<
                 InventoryType, InventoryTypeBuilder, InventoryTypeActions>(
             'inventoryType',
             (a) => a.inventoryType,
@@ -491,30 +491,30 @@ class _$ListStockForUsageApiUsageStockSummaryActions
             (b) => b?.inventoryType,
             (parent, builder) => parent?.inventoryType = builder)),
         demandLoan = LoanLiteActions(() =>
-            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+            options$.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
                 'demandLoan',
                 (a) => a.demandLoan,
                 (s) => s?.demandLoan,
                 (b) => b?.demandLoan,
                 (parent, builder) => parent?.demandLoan = builder)),
         consignmentLoan = LoanLiteActions(() =>
-            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+            options$.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
                 'consignmentLoan',
                 (a) => a.consignmentLoan,
                 (s) => s?.consignmentLoan,
                 (b) => b?.consignmentLoan,
                 (parent, builder) => parent?.consignmentLoan = builder)),
-        attributeLabel = $options.field<String>(
+        attributeLabel = options$.field<String>(
             'attributeLabel',
             (a) => a?.attributeLabel,
             (s) => s?.attributeLabel,
             (p, b) => p?.attributeLabel = b),
-        attributeValue = $options.field<String>(
+        attributeValue = options$.field<String>(
             'attributeValue',
             (a) => a?.attributeValue,
             (s) => s?.attributeValue,
             (p, b) => p?.attributeValue = b),
-        responsibleParty = ResponsiblePartyActions(() => $options.stateful<
+        responsibleParty = ResponsiblePartyActions(() => options$.stateful<
                 ResponsibleParty,
                 ResponsiblePartyBuilder,
                 ResponsiblePartyActions>(
@@ -530,16 +530,16 @@ class _$ListStockForUsageApiUsageStockSummaryActions
       _$ListStockForUsageApiUsageStockSummaryActions._(options());
 
   @override
-  ListStockForUsageApiUsageStockSummary get $initial =>
+  ListStockForUsageApiUsageStockSummary get initialState$ =>
       ListStockForUsageApiUsageStockSummary();
 
   @override
-  ListStockForUsageApiUsageStockSummaryBuilder $newBuilder() =>
+  ListStockForUsageApiUsageStockSummaryBuilder newBuilder$() =>
       ListStockForUsageApiUsageStockSummaryBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
         this.place,
         this.expirationInfo,
@@ -549,11 +549,11 @@ class _$ListStockForUsageApiUsageStockSummaryActions
         this.responsibleParty,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.key,
         this.stockIds,
         this.attributeLabel,
@@ -561,35 +561,30 @@ class _$ListStockForUsageApiUsageStockSummaryActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    key.$reducer(reducer);
-    stockIds.$reducer(reducer);
-    stockItem.$reducer(reducer);
-    place.$reducer(reducer);
-    expirationInfo.$reducer(reducer);
-    inventoryType.$reducer(reducer);
-    demandLoan.$reducer(reducer);
-    consignmentLoan.$reducer(reducer);
-    attributeLabel.$reducer(reducer);
-    attributeValue.$reducer(reducer);
-    responsibleParty.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    key.reducer$(reducer);
+    stockIds.reducer$(reducer);
+    stockItem.reducer$(reducer);
+    place.reducer$(reducer);
+    expirationInfo.reducer$(reducer);
+    inventoryType.reducer$(reducer);
+    demandLoan.reducer$(reducer);
+    consignmentLoan.reducer$(reducer);
+    attributeLabel.reducer$(reducer);
+    attributeValue.reducer$(reducer);
+    responsibleParty.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    stockItem.$middleware(middleware);
-    place.$middleware(middleware);
-    expirationInfo.$middleware(middleware);
-    inventoryType.$middleware(middleware);
-    demandLoan.$middleware(middleware);
-    consignmentLoan.$middleware(middleware);
-    responsibleParty.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    stockItem.middleware$(middleware);
+    place.middleware$(middleware);
+    expirationInfo.middleware$(middleware);
+    inventoryType.middleware$(middleware);
+    demandLoan.middleware$(middleware);
+    consignmentLoan.middleware$(middleware);
+    responsibleParty.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListStockForUsageApiUsageStockSummary);
 }

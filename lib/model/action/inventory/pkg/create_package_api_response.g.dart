@@ -167,15 +167,15 @@ class _$CreatePackageApiResponseActions
   final StatefulActionsOptions<
       CreatePackageApiResponse,
       CreatePackageApiResponseBuilder,
-      CreatePackageApiResponseActions> $options;
+      CreatePackageApiResponseActions> options$;
 
-  final ActionDispatcher<CreatePackageApiResponse> $replace;
+  final ActionDispatcher<CreatePackageApiResponse> replace$;
   final PkgActions pkg;
 
-  _$CreatePackageApiResponseActions._(this.$options)
-      : $replace = $options.action<CreatePackageApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        pkg = PkgActions(() => $options.stateful<Pkg, PkgBuilder, PkgActions>(
+  _$CreatePackageApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreatePackageApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        pkg = PkgActions(() => options$.stateful<Pkg, PkgBuilder, PkgActions>(
             'pkg',
             (a) => a.pkg,
             (s) => s?.pkg,
@@ -188,38 +188,34 @@ class _$CreatePackageApiResponseActions
       _$CreatePackageApiResponseActions._(options());
 
   @override
-  CreatePackageApiResponse get $initial => CreatePackageApiResponse();
+  CreatePackageApiResponse get initialState$ => CreatePackageApiResponse();
 
   @override
-  CreatePackageApiResponseBuilder $newBuilder() =>
+  CreatePackageApiResponseBuilder newBuilder$() =>
       CreatePackageApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.pkg,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    pkg.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    pkg.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    pkg.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    pkg.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreatePackageApiResponse);
 }

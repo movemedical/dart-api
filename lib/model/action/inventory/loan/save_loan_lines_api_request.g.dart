@@ -190,18 +190,18 @@ typedef StatefulActionsOptions<
 
 class _$SaveLoanLinesApiRequestActions extends SaveLoanLinesApiRequestActions {
   final StatefulActionsOptions<SaveLoanLinesApiRequest,
-      SaveLoanLinesApiRequestBuilder, SaveLoanLinesApiRequestActions> $options;
+      SaveLoanLinesApiRequestBuilder, SaveLoanLinesApiRequestActions> options$;
 
-  final ActionDispatcher<SaveLoanLinesApiRequest> $replace;
+  final ActionDispatcher<SaveLoanLinesApiRequest> replace$;
   final FieldDispatcher<String> loanId;
   final FieldDispatcher<BuiltList<SaveLoanLinesApiLine>> lines;
 
-  _$SaveLoanLinesApiRequestActions._(this.$options)
-      : $replace = $options.action<SaveLoanLinesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        loanId = $options.field<String>('loanId', (a) => a?.loanId,
+  _$SaveLoanLinesApiRequestActions._(this.options$)
+      : replace$ = options$.action<SaveLoanLinesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        loanId = options$.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
-        lines = $options.field<BuiltList<SaveLoanLinesApiLine>>(
+        lines = options$.field<BuiltList<SaveLoanLinesApiLine>>(
             'lines', (a) => a?.lines, (s) => s?.lines, (p, b) => p?.lines = b),
         super._();
 
@@ -210,34 +210,30 @@ class _$SaveLoanLinesApiRequestActions extends SaveLoanLinesApiRequestActions {
       _$SaveLoanLinesApiRequestActions._(options());
 
   @override
-  SaveLoanLinesApiRequest get $initial => SaveLoanLinesApiRequest();
+  SaveLoanLinesApiRequest get initialState$ => SaveLoanLinesApiRequest();
 
   @override
-  SaveLoanLinesApiRequestBuilder $newBuilder() =>
+  SaveLoanLinesApiRequestBuilder newBuilder$() =>
       SaveLoanLinesApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.loanId,
         this.lines,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    loanId.$reducer(reducer);
-    lines.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    loanId.reducer$(reducer);
+    lines.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SaveLoanLinesApiRequest);
 }

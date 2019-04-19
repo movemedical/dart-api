@@ -185,23 +185,23 @@ typedef StatefulActionsOptions<
 
 class _$ListTrayContentsApiDiffActions extends ListTrayContentsApiDiffActions {
   final StatefulActionsOptions<ListTrayContentsApiDiff,
-      ListTrayContentsApiDiffBuilder, ListTrayContentsApiDiffActions> $options;
+      ListTrayContentsApiDiffBuilder, ListTrayContentsApiDiffActions> options$;
 
-  final ActionDispatcher<ListTrayContentsApiDiff> $replace;
+  final ActionDispatcher<ListTrayContentsApiDiff> replace$;
   final ItemActions item;
   final FieldDispatcher<int> qty;
 
-  _$ListTrayContentsApiDiffActions._(this.$options)
-      : $replace = $options.action<ListTrayContentsApiDiff>(
-            '\$replace', (a) => a?.$replace),
+  _$ListTrayContentsApiDiffActions._(this.options$)
+      : replace$ = options$.action<ListTrayContentsApiDiff>(
+            'replace\$', (a) => a?.replace$),
         item = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'item',
                 (a) => a.item,
                 (s) => s?.item,
                 (b) => b?.item,
                 (parent, builder) => parent?.item = builder)),
-        qty = $options.field<int>(
+        qty = options$.field<int>(
             'qty', (a) => a?.qty, (s) => s?.qty, (p, b) => p?.qty = b),
         super._();
 
@@ -210,40 +210,36 @@ class _$ListTrayContentsApiDiffActions extends ListTrayContentsApiDiffActions {
       _$ListTrayContentsApiDiffActions._(options());
 
   @override
-  ListTrayContentsApiDiff get $initial => ListTrayContentsApiDiff();
+  ListTrayContentsApiDiff get initialState$ => ListTrayContentsApiDiff();
 
   @override
-  ListTrayContentsApiDiffBuilder $newBuilder() =>
+  ListTrayContentsApiDiffBuilder newBuilder$() =>
       ListTrayContentsApiDiffBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.item,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.qty,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    item.$reducer(reducer);
-    qty.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    item.reducer$(reducer);
+    qty.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    item.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    item.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListTrayContentsApiDiff);
 }

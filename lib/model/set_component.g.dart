@@ -265,35 +265,35 @@ typedef StatefulActionsOptions<SetComponent, SetComponentBuilder,
 
 class _$SetComponentActions extends SetComponentActions {
   final StatefulActionsOptions<SetComponent, SetComponentBuilder,
-      SetComponentActions> $options;
+      SetComponentActions> options$;
 
-  final ActionDispatcher<SetComponent> $replace;
+  final ActionDispatcher<SetComponent> replace$;
   final FieldDispatcher<int> qtyOpen;
   final DBComponentActions component;
   final FieldDispatcher<BuiltSet<String>> versionIds;
   final FieldDispatcher<BuiltSet<String>> lotIds;
   final FieldDispatcher<BuiltSet<String>> serialIds;
 
-  _$SetComponentActions._(this.$options)
-      : $replace =
-            $options.action<SetComponent>('\$replace', (a) => a?.$replace),
-        qtyOpen = $options.field<int>('qtyOpen', (a) => a?.qtyOpen,
+  _$SetComponentActions._(this.options$)
+      : replace$ =
+            options$.action<SetComponent>('replace\$', (a) => a?.replace$),
+        qtyOpen = options$.field<int>('qtyOpen', (a) => a?.qtyOpen,
             (s) => s?.qtyOpen, (p, b) => p?.qtyOpen = b),
-        component = DBComponentActions(() => $options
+        component = DBComponentActions(() => options$
             .stateful<DBComponent, DBComponentBuilder, DBComponentActions>(
                 'component',
                 (a) => a.component,
                 (s) => s?.component,
                 (b) => b?.component,
                 (parent, builder) => parent?.component = builder)),
-        versionIds = $options.field<BuiltSet<String>>(
+        versionIds = options$.field<BuiltSet<String>>(
             'versionIds',
             (a) => a?.versionIds,
             (s) => s?.versionIds,
             (p, b) => p?.versionIds = b),
-        lotIds = $options.field<BuiltSet<String>>('lotIds', (a) => a?.lotIds,
+        lotIds = options$.field<BuiltSet<String>>('lotIds', (a) => a?.lotIds,
             (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        serialIds = $options.field<BuiltSet<String>>(
+        serialIds = options$.field<BuiltSet<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
@@ -304,22 +304,22 @@ class _$SetComponentActions extends SetComponentActions {
       _$SetComponentActions._(options());
 
   @override
-  SetComponent get $initial => SetComponent();
+  SetComponent get initialState$ => SetComponent();
 
   @override
-  SetComponentBuilder $newBuilder() => SetComponentBuilder();
+  SetComponentBuilder newBuilder$() => SetComponentBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.component,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.qtyOpen,
         this.versionIds,
         this.lotIds,
@@ -327,22 +327,18 @@ class _$SetComponentActions extends SetComponentActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    qtyOpen.$reducer(reducer);
-    component.$reducer(reducer);
-    versionIds.$reducer(reducer);
-    lotIds.$reducer(reducer);
-    serialIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    qtyOpen.reducer$(reducer);
+    component.reducer$(reducer);
+    versionIds.reducer$(reducer);
+    lotIds.reducer$(reducer);
+    serialIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    component.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    component.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SetComponent);
 }

@@ -20,60 +20,29 @@ class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
       CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<AddHcrToColleagueApiRequest>,
           ApiResult<Nothing>>,
-      AddHcrToColleagueApi> $options;
+      AddHcrToColleagueApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AddHcrToColleagueApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>,
-          ApiResult<Nothing>, AddHcrToColleagueApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AddHcrToColleagueApiRequest>,
-          ApiResult<Nothing>,
-          AddHcrToColleagueApi,
-          Command<ApiCommand<AddHcrToColleagueApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AddHcrToColleagueApiRequest>,
-          ApiResult<Nothing>,
-          AddHcrToColleagueApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>,
-          ApiResult<Nothing>, AddHcrToColleagueApi, CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<AddHcrToColleagueApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$AddHcrToColleagueApi._(this.$options)
-      : $replace = $options.action<
+  _$AddHcrToColleagueApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Nothing>,
-                AddHcrToColleagueApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<AddHcrToColleagueApiRequest>,
-                    ApiResult<Nothing>,
-                    AddHcrToColleagueApi,
-                    Command<ApiCommand<AddHcrToColleagueApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<AddHcrToColleagueApiRequest>,
-                    ApiResult<Nothing>,
-                    AddHcrToColleagueApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Nothing>,
-                AddHcrToColleagueApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<AddHcrToColleagueApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$AddHcrToColleagueApi(AddHcrToColleagueApiOptions options) =>
@@ -81,31 +50,24 @@ class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
 
   @override
   CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<AddHcrToColleagueApiRequest>,
+      get initialState$ => CommandState<ApiCommand<AddHcrToColleagueApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<AddHcrToColleagueApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(AddHcrToColleagueApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

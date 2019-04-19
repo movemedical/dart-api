@@ -227,27 +227,27 @@ class _$BuildKitTrayRestockPlanApiRestockItemActions
   final StatefulActionsOptions<
       BuildKitTrayRestockPlanApiRestockItem,
       BuildKitTrayRestockPlanApiRestockItemBuilder,
-      BuildKitTrayRestockPlanApiRestockItemActions> $options;
+      BuildKitTrayRestockPlanApiRestockItemActions> options$;
 
-  final ActionDispatcher<BuildKitTrayRestockPlanApiRestockItem> $replace;
+  final ActionDispatcher<BuildKitTrayRestockPlanApiRestockItem> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> itemNumber;
   final FieldDispatcher<String> description;
   final FieldDispatcher<int> quantity;
 
-  _$BuildKitTrayRestockPlanApiRestockItemActions._(this.$options)
-      : $replace = $options.action<BuildKitTrayRestockPlanApiRestockItem>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$BuildKitTrayRestockPlanApiRestockItemActions._(this.options$)
+      : replace$ = options$.action<BuildKitTrayRestockPlanApiRestockItem>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+        itemNumber = options$.field<String>('itemNumber', (a) => a?.itemNumber,
             (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -256,18 +256,18 @@ class _$BuildKitTrayRestockPlanApiRestockItemActions
       _$BuildKitTrayRestockPlanApiRestockItemActions._(options());
 
   @override
-  BuildKitTrayRestockPlanApiRestockItem get $initial =>
+  BuildKitTrayRestockPlanApiRestockItem get initialState$ =>
       BuildKitTrayRestockPlanApiRestockItem();
 
   @override
-  BuildKitTrayRestockPlanApiRestockItemBuilder $newBuilder() =>
+  BuildKitTrayRestockPlanApiRestockItemBuilder newBuilder$() =>
       BuildKitTrayRestockPlanApiRestockItemBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.itemNumber,
         this.description,
@@ -275,21 +275,16 @@ class _$BuildKitTrayRestockPlanApiRestockItemActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemNumber.$reducer(reducer);
-    description.$reducer(reducer);
-    quantity.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemNumber.reducer$(reducer);
+    description.reducer$(reducer);
+    quantity.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildKitTrayRestockPlanApiRestockItem);
 }

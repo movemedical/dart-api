@@ -303,9 +303,9 @@ class _$BuildUsageRestockPlanApiDisplayRuleActions
   final StatefulActionsOptions<
       BuildUsageRestockPlanApiDisplayRule,
       BuildUsageRestockPlanApiDisplayRuleBuilder,
-      BuildUsageRestockPlanApiDisplayRuleActions> $options;
+      BuildUsageRestockPlanApiDisplayRuleActions> options$;
 
-  final ActionDispatcher<BuildUsageRestockPlanApiDisplayRule> $replace;
+  final ActionDispatcher<BuildUsageRestockPlanApiDisplayRule> replace$;
   final FieldDispatcher<bool> allowUserOverrideDoNotRestock;
   final FieldDispatcher<bool> allowUserOverrideRestockLocation;
   final FieldDispatcher<bool> allowUserOverrideRestockDeliverTo;
@@ -313,35 +313,35 @@ class _$BuildUsageRestockPlanApiDisplayRuleActions
   final FieldDispatcher<bool> allowOverridePrice;
   final FieldDispatcher<bool> poRequired;
 
-  _$BuildUsageRestockPlanApiDisplayRuleActions._(this.$options)
-      : $replace = $options.action<BuildUsageRestockPlanApiDisplayRule>(
-            '\$replace', (a) => a?.$replace),
-        allowUserOverrideDoNotRestock = $options.field<bool>(
+  _$BuildUsageRestockPlanApiDisplayRuleActions._(this.options$)
+      : replace$ = options$.action<BuildUsageRestockPlanApiDisplayRule>(
+            'replace\$', (a) => a?.replace$),
+        allowUserOverrideDoNotRestock = options$.field<bool>(
             'allowUserOverrideDoNotRestock',
             (a) => a?.allowUserOverrideDoNotRestock,
             (s) => s?.allowUserOverrideDoNotRestock,
             (p, b) => p?.allowUserOverrideDoNotRestock = b),
-        allowUserOverrideRestockLocation = $options.field<bool>(
+        allowUserOverrideRestockLocation = options$.field<bool>(
             'allowUserOverrideRestockLocation',
             (a) => a?.allowUserOverrideRestockLocation,
             (s) => s?.allowUserOverrideRestockLocation,
             (p, b) => p?.allowUserOverrideRestockLocation = b),
-        allowUserOverrideRestockDeliverTo = $options.field<bool>(
+        allowUserOverrideRestockDeliverTo = options$.field<bool>(
             'allowUserOverrideRestockDeliverTo',
             (a) => a?.allowUserOverrideRestockDeliverTo,
             (s) => s?.allowUserOverrideRestockDeliverTo,
             (p, b) => p?.allowUserOverrideRestockDeliverTo = b),
-        allowUserOverrideRestockByDateShippingService = $options.field<bool>(
+        allowUserOverrideRestockByDateShippingService = options$.field<bool>(
             'allowUserOverrideRestockByDateShippingService',
             (a) => a?.allowUserOverrideRestockByDateShippingService,
             (s) => s?.allowUserOverrideRestockByDateShippingService,
             (p, b) => p?.allowUserOverrideRestockByDateShippingService = b),
-        allowOverridePrice = $options.field<bool>(
+        allowOverridePrice = options$.field<bool>(
             'allowOverridePrice',
             (a) => a?.allowOverridePrice,
             (s) => s?.allowOverridePrice,
             (p, b) => p?.allowOverridePrice = b),
-        poRequired = $options.field<bool>('poRequired', (a) => a?.poRequired,
+        poRequired = options$.field<bool>('poRequired', (a) => a?.poRequired,
             (s) => s?.poRequired, (p, b) => p?.poRequired = b),
         super._();
 
@@ -350,18 +350,18 @@ class _$BuildUsageRestockPlanApiDisplayRuleActions
       _$BuildUsageRestockPlanApiDisplayRuleActions._(options());
 
   @override
-  BuildUsageRestockPlanApiDisplayRule get $initial =>
+  BuildUsageRestockPlanApiDisplayRule get initialState$ =>
       BuildUsageRestockPlanApiDisplayRule();
 
   @override
-  BuildUsageRestockPlanApiDisplayRuleBuilder $newBuilder() =>
+  BuildUsageRestockPlanApiDisplayRuleBuilder newBuilder$() =>
       BuildUsageRestockPlanApiDisplayRuleBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.allowUserOverrideDoNotRestock,
         this.allowUserOverrideRestockLocation,
         this.allowUserOverrideRestockDeliverTo,
@@ -371,23 +371,18 @@ class _$BuildUsageRestockPlanApiDisplayRuleActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    allowUserOverrideDoNotRestock.$reducer(reducer);
-    allowUserOverrideRestockLocation.$reducer(reducer);
-    allowUserOverrideRestockDeliverTo.$reducer(reducer);
-    allowUserOverrideRestockByDateShippingService.$reducer(reducer);
-    allowOverridePrice.$reducer(reducer);
-    poRequired.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    allowUserOverrideDoNotRestock.reducer$(reducer);
+    allowUserOverrideRestockLocation.reducer$(reducer);
+    allowUserOverrideRestockDeliverTo.reducer$(reducer);
+    allowUserOverrideRestockByDateShippingService.reducer$(reducer);
+    allowOverridePrice.reducer$(reducer);
+    poRequired.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildUsageRestockPlanApiDisplayRule);
 }

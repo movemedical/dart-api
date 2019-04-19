@@ -208,25 +208,25 @@ class _$PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationActio
           PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification,
           PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationBuilder,
           PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationActions>
-      $options;
+      options$;
 
   final ActionDispatcher<
           PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification>
-      $replace;
+      replace$;
   final FieldDispatcher<String> preferenceCardItemId;
   final FieldDispatcher<int> quantity;
 
   _$PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationActions._(
-      this.$options)
-      : $replace = $options.action<
+      this.options$)
+      : replace$ = options$.action<
                 PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification>(
-            '\$replace', (a) => a?.$replace),
-        preferenceCardItemId = $options.field<String>(
+            'replace\$', (a) => a?.replace$),
+        preferenceCardItemId = options$.field<String>(
             'preferenceCardItemId',
             (a) => a?.preferenceCardItemId,
             (s) => s?.preferenceCardItemId,
             (p, b) => p?.preferenceCardItemId = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -238,37 +238,32 @@ class _$PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationActio
 
   @override
   PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification
-      get $initial =>
+      get initialState$ =>
           PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification();
 
   @override
   PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationBuilder
-      $newBuilder() =>
+      newBuilder$() =>
           PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.preferenceCardItemId,
         this.quantity,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    preferenceCardItemId.$reducer(reducer);
-    quantity.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    preferenceCardItemId.reducer$(reducer);
+    quantity.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(
-      PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification);
 }

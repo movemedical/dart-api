@@ -310,10 +310,10 @@ class _$UpdateCaseRequirementsDeliveryInfoApiResponseActions
   final StatefulActionsOptions<
       UpdateCaseRequirementsDeliveryInfoApiResponse,
       UpdateCaseRequirementsDeliveryInfoApiResponseBuilder,
-      UpdateCaseRequirementsDeliveryInfoApiResponseActions> $options;
+      UpdateCaseRequirementsDeliveryInfoApiResponseActions> options$;
 
   final ActionDispatcher<UpdateCaseRequirementsDeliveryInfoApiResponse>
-      $replace;
+      replace$;
   final FieldDispatcher<DateTime> deliverByDate;
   final FieldDispatcher<String> deliverByDateTz;
   final FieldDispatcher<String> deliverToAttn;
@@ -321,26 +321,26 @@ class _$UpdateCaseRequirementsDeliveryInfoApiResponseActions
   final AddressActions deliverToOverride;
   final FieldDispatcher<bool> editDeliverTo;
 
-  _$UpdateCaseRequirementsDeliveryInfoApiResponseActions._(this.$options)
-      : $replace =
-            $options.action<UpdateCaseRequirementsDeliveryInfoApiResponse>(
-                '\$replace', (a) => a?.$replace),
-        deliverByDate = $options.field<DateTime>(
+  _$UpdateCaseRequirementsDeliveryInfoApiResponseActions._(this.options$)
+      : replace$ =
+            options$.action<UpdateCaseRequirementsDeliveryInfoApiResponse>(
+                'replace\$', (a) => a?.replace$),
+        deliverByDate = options$.field<DateTime>(
             'deliverByDate',
             (a) => a?.deliverByDate,
             (s) => s?.deliverByDate,
             (p, b) => p?.deliverByDate = b),
-        deliverByDateTz = $options.field<String>(
+        deliverByDateTz = options$.field<String>(
             'deliverByDateTz',
             (a) => a?.deliverByDateTz,
             (s) => s?.deliverByDateTz,
             (p, b) => p?.deliverByDateTz = b),
-        deliverToAttn = $options.field<String>(
+        deliverToAttn = options$.field<String>(
             'deliverToAttn',
             (a) => a?.deliverToAttn,
             (s) => s?.deliverToAttn,
             (p, b) => p?.deliverToAttn = b),
-        deliverTo = CustomerAddressActions(() => $options.stateful<
+        deliverTo = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -350,13 +350,13 @@ class _$UpdateCaseRequirementsDeliveryInfoApiResponseActions
             (b) => b?.deliverTo,
             (parent, builder) => parent?.deliverTo = builder)),
         deliverToOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToOverride',
                 (a) => a.deliverToOverride,
                 (s) => s?.deliverToOverride,
                 (b) => b?.deliverToOverride,
                 (parent, builder) => parent?.deliverToOverride = builder)),
-        editDeliverTo = $options.field<bool>(
+        editDeliverTo = options$.field<bool>(
             'editDeliverTo',
             (a) => a?.editDeliverTo,
             (s) => s?.editDeliverTo,
@@ -369,25 +369,25 @@ class _$UpdateCaseRequirementsDeliveryInfoApiResponseActions
       _$UpdateCaseRequirementsDeliveryInfoApiResponseActions._(options());
 
   @override
-  UpdateCaseRequirementsDeliveryInfoApiResponse get $initial =>
+  UpdateCaseRequirementsDeliveryInfoApiResponse get initialState$ =>
       UpdateCaseRequirementsDeliveryInfoApiResponse();
 
   @override
-  UpdateCaseRequirementsDeliveryInfoApiResponseBuilder $newBuilder() =>
+  UpdateCaseRequirementsDeliveryInfoApiResponseBuilder newBuilder$() =>
       UpdateCaseRequirementsDeliveryInfoApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliverTo,
         this.deliverToOverride,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.deliverByDate,
         this.deliverByDateTz,
         this.deliverToAttn,
@@ -395,25 +395,20 @@ class _$UpdateCaseRequirementsDeliveryInfoApiResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    deliverByDate.$reducer(reducer);
-    deliverByDateTz.$reducer(reducer);
-    deliverToAttn.$reducer(reducer);
-    deliverTo.$reducer(reducer);
-    deliverToOverride.$reducer(reducer);
-    editDeliverTo.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    deliverByDate.reducer$(reducer);
+    deliverByDateTz.reducer$(reducer);
+    deliverToAttn.reducer$(reducer);
+    deliverTo.reducer$(reducer);
+    deliverToOverride.reducer$(reducer);
+    editDeliverTo.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    deliverTo.$middleware(middleware);
-    deliverToOverride.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    deliverTo.middleware$(middleware);
+    deliverToOverride.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateCaseRequirementsDeliveryInfoApiResponse);
 }

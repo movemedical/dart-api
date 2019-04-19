@@ -269,9 +269,9 @@ class _$GetOrgUnitChildrenApiOrgUnitDetailActions
   final StatefulActionsOptions<
       GetOrgUnitChildrenApiOrgUnitDetail,
       GetOrgUnitChildrenApiOrgUnitDetailBuilder,
-      GetOrgUnitChildrenApiOrgUnitDetailActions> $options;
+      GetOrgUnitChildrenApiOrgUnitDetailActions> options$;
 
-  final ActionDispatcher<GetOrgUnitChildrenApiOrgUnitDetail> $replace;
+  final ActionDispatcher<GetOrgUnitChildrenApiOrgUnitDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<bool> ops;
@@ -279,20 +279,20 @@ class _$GetOrgUnitChildrenApiOrgUnitDetailActions
   final FieldDispatcher<bool> hasChildren;
   final FieldDispatcher<bool> active;
 
-  _$GetOrgUnitChildrenApiOrgUnitDetailActions._(this.$options)
-      : $replace = $options.action<GetOrgUnitChildrenApiOrgUnitDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetOrgUnitChildrenApiOrgUnitDetailActions._(this.options$)
+      : replace$ = options$.action<GetOrgUnitChildrenApiOrgUnitDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        ops = $options.field<bool>(
+        ops = options$.field<bool>(
             'ops', (a) => a?.ops, (s) => s?.ops, (p, b) => p?.ops = b),
-        sales = $options.field<bool>(
+        sales = options$.field<bool>(
             'sales', (a) => a?.sales, (s) => s?.sales, (p, b) => p?.sales = b),
-        hasChildren = $options.field<bool>('hasChildren', (a) => a?.hasChildren,
+        hasChildren = options$.field<bool>('hasChildren', (a) => a?.hasChildren,
             (s) => s?.hasChildren, (p, b) => p?.hasChildren = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -301,18 +301,18 @@ class _$GetOrgUnitChildrenApiOrgUnitDetailActions
       _$GetOrgUnitChildrenApiOrgUnitDetailActions._(options());
 
   @override
-  GetOrgUnitChildrenApiOrgUnitDetail get $initial =>
+  GetOrgUnitChildrenApiOrgUnitDetail get initialState$ =>
       GetOrgUnitChildrenApiOrgUnitDetail();
 
   @override
-  GetOrgUnitChildrenApiOrgUnitDetailBuilder $newBuilder() =>
+  GetOrgUnitChildrenApiOrgUnitDetailBuilder newBuilder$() =>
       GetOrgUnitChildrenApiOrgUnitDetailBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.ops,
@@ -322,23 +322,18 @@ class _$GetOrgUnitChildrenApiOrgUnitDetailActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    ops.$reducer(reducer);
-    sales.$reducer(reducer);
-    hasChildren.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    ops.reducer$(reducer);
+    sales.reducer$(reducer);
+    hasChildren.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetOrgUnitChildrenApiOrgUnitDetail);
 }

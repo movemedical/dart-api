@@ -148,15 +148,15 @@ typedef StatefulActionsOptions<
 
 class _$UnlockUserApiRequestActions extends UnlockUserApiRequestActions {
   final StatefulActionsOptions<UnlockUserApiRequest,
-      UnlockUserApiRequestBuilder, UnlockUserApiRequestActions> $options;
+      UnlockUserApiRequestBuilder, UnlockUserApiRequestActions> options$;
 
-  final ActionDispatcher<UnlockUserApiRequest> $replace;
+  final ActionDispatcher<UnlockUserApiRequest> replace$;
   final FieldDispatcher<String> linkedId;
 
-  _$UnlockUserApiRequestActions._(this.$options)
-      : $replace = $options.action<UnlockUserApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
+  _$UnlockUserApiRequestActions._(this.options$)
+      : replace$ = options$.action<UnlockUserApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        linkedId = options$.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
         super._();
 
@@ -165,31 +165,27 @@ class _$UnlockUserApiRequestActions extends UnlockUserApiRequestActions {
       _$UnlockUserApiRequestActions._(options());
 
   @override
-  UnlockUserApiRequest get $initial => UnlockUserApiRequest();
+  UnlockUserApiRequest get initialState$ => UnlockUserApiRequest();
 
   @override
-  UnlockUserApiRequestBuilder $newBuilder() => UnlockUserApiRequestBuilder();
+  UnlockUserApiRequestBuilder newBuilder$() => UnlockUserApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.linkedId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    linkedId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    linkedId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(UnlockUserApiRequest);
 }

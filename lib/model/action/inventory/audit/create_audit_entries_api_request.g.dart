@@ -176,15 +176,15 @@ class _$CreateAuditEntriesApiRequestActions
   final StatefulActionsOptions<
       CreateAuditEntriesApiRequest,
       CreateAuditEntriesApiRequestBuilder,
-      CreateAuditEntriesApiRequestActions> $options;
+      CreateAuditEntriesApiRequestActions> options$;
 
-  final ActionDispatcher<CreateAuditEntriesApiRequest> $replace;
+  final ActionDispatcher<CreateAuditEntriesApiRequest> replace$;
   final FieldDispatcher<BuiltList<CreateAuditEntriesApiAuditEntry>> entries;
 
-  _$CreateAuditEntriesApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateAuditEntriesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        entries = $options.field<BuiltList<CreateAuditEntriesApiAuditEntry>>(
+  _$CreateAuditEntriesApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateAuditEntriesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        entries = options$.field<BuiltList<CreateAuditEntriesApiAuditEntry>>(
             'entries',
             (a) => a?.entries,
             (s) => s?.entries,
@@ -196,33 +196,29 @@ class _$CreateAuditEntriesApiRequestActions
       _$CreateAuditEntriesApiRequestActions._(options());
 
   @override
-  CreateAuditEntriesApiRequest get $initial => CreateAuditEntriesApiRequest();
+  CreateAuditEntriesApiRequest get initialState$ =>
+      CreateAuditEntriesApiRequest();
 
   @override
-  CreateAuditEntriesApiRequestBuilder $newBuilder() =>
+  CreateAuditEntriesApiRequestBuilder newBuilder$() =>
       CreateAuditEntriesApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.entries,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    entries.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    entries.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateAuditEntriesApiRequest);
 }

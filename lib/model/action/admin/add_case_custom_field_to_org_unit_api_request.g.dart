@@ -207,24 +207,24 @@ class _$AddCaseCustomFieldToOrgUnitApiRequestActions
   final StatefulActionsOptions<
       AddCaseCustomFieldToOrgUnitApiRequest,
       AddCaseCustomFieldToOrgUnitApiRequestBuilder,
-      AddCaseCustomFieldToOrgUnitApiRequestActions> $options;
+      AddCaseCustomFieldToOrgUnitApiRequestActions> options$;
 
-  final ActionDispatcher<AddCaseCustomFieldToOrgUnitApiRequest> $replace;
+  final ActionDispatcher<AddCaseCustomFieldToOrgUnitApiRequest> replace$;
   final FieldDispatcher<String> caseTypeCustomFieldId;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<bool> required;
 
-  _$AddCaseCustomFieldToOrgUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<AddCaseCustomFieldToOrgUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseTypeCustomFieldId = $options.field<String>(
+  _$AddCaseCustomFieldToOrgUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<AddCaseCustomFieldToOrgUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseTypeCustomFieldId = options$.field<String>(
             'caseTypeCustomFieldId',
             (a) => a?.caseTypeCustomFieldId,
             (s) => s?.caseTypeCustomFieldId,
             (p, b) => p?.caseTypeCustomFieldId = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        required = $options.field<bool>('required', (a) => a?.required,
+        required = options$.field<bool>('required', (a) => a?.required,
             (s) => s?.required, (p, b) => p?.required = b),
         super._();
 
@@ -233,38 +233,33 @@ class _$AddCaseCustomFieldToOrgUnitApiRequestActions
       _$AddCaseCustomFieldToOrgUnitApiRequestActions._(options());
 
   @override
-  AddCaseCustomFieldToOrgUnitApiRequest get $initial =>
+  AddCaseCustomFieldToOrgUnitApiRequest get initialState$ =>
       AddCaseCustomFieldToOrgUnitApiRequest();
 
   @override
-  AddCaseCustomFieldToOrgUnitApiRequestBuilder $newBuilder() =>
+  AddCaseCustomFieldToOrgUnitApiRequestBuilder newBuilder$() =>
       AddCaseCustomFieldToOrgUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseTypeCustomFieldId,
         this.orgUnitId,
         this.required,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseTypeCustomFieldId.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    required.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseTypeCustomFieldId.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    required.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AddCaseCustomFieldToOrgUnitApiRequest);
 }

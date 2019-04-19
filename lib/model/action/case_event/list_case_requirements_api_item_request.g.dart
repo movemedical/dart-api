@@ -293,9 +293,9 @@ class _$ListCaseRequirementsApiItemRequestActions
   final StatefulActionsOptions<
       ListCaseRequirementsApiItemRequest,
       ListCaseRequirementsApiItemRequestBuilder,
-      ListCaseRequirementsApiItemRequestActions> $options;
+      ListCaseRequirementsApiItemRequestActions> options$;
 
-  final ActionDispatcher<ListCaseRequirementsApiItemRequest> $replace;
+  final ActionDispatcher<ListCaseRequirementsApiItemRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> quantityRequested;
   final FieldDispatcher<int> quantityOnHand;
@@ -303,31 +303,31 @@ class _$ListCaseRequirementsApiItemRequestActions
   final FieldDispatcher<CaseRequirementSource> source;
   final FieldDispatcher<String> sourceId;
 
-  _$ListCaseRequirementsApiItemRequestActions._(this.$options)
-      : $replace = $options.action<ListCaseRequirementsApiItemRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListCaseRequirementsApiItemRequestActions._(this.options$)
+      : replace$ = options$.action<ListCaseRequirementsApiItemRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        quantityRequested = $options.field<int>(
+        quantityRequested = options$.field<int>(
             'quantityRequested',
             (a) => a?.quantityRequested,
             (s) => s?.quantityRequested,
             (p, b) => p?.quantityRequested = b),
-        quantityOnHand = $options.field<int>(
+        quantityOnHand = options$.field<int>(
             'quantityOnHand',
             (a) => a?.quantityOnHand,
             (s) => s?.quantityOnHand,
             (p, b) => p?.quantityOnHand = b),
         stockItem = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
                 (a) => a.stockItem,
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
-        source = $options.field<CaseRequirementSource>('source',
+        source = options$.field<CaseRequirementSource>('source',
             (a) => a?.source, (s) => s?.source, (p, b) => p?.source = b),
-        sourceId = $options.field<String>('sourceId', (a) => a?.sourceId,
+        sourceId = options$.field<String>('sourceId', (a) => a?.sourceId,
             (s) => s?.sourceId, (p, b) => p?.sourceId = b),
         super._();
 
@@ -336,24 +336,24 @@ class _$ListCaseRequirementsApiItemRequestActions
       _$ListCaseRequirementsApiItemRequestActions._(options());
 
   @override
-  ListCaseRequirementsApiItemRequest get $initial =>
+  ListCaseRequirementsApiItemRequest get initialState$ =>
       ListCaseRequirementsApiItemRequest();
 
   @override
-  ListCaseRequirementsApiItemRequestBuilder $newBuilder() =>
+  ListCaseRequirementsApiItemRequestBuilder newBuilder$() =>
       ListCaseRequirementsApiItemRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.quantityRequested,
         this.quantityOnHand,
@@ -362,24 +362,19 @@ class _$ListCaseRequirementsApiItemRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    quantityRequested.$reducer(reducer);
-    quantityOnHand.$reducer(reducer);
-    stockItem.$reducer(reducer);
-    source.$reducer(reducer);
-    sourceId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    quantityRequested.reducer$(reducer);
+    quantityOnHand.reducer$(reducer);
+    stockItem.reducer$(reducer);
+    source.reducer$(reducer);
+    sourceId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    stockItem.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    stockItem.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListCaseRequirementsApiItemRequest);
 }

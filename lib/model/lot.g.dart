@@ -255,9 +255,9 @@ class LotBuilder implements Builder<Lot, LotBuilder> {
 typedef StatefulActionsOptions<Lot, LotBuilder, LotActions> LotActionsOptions();
 
 class _$LotActions extends LotActions {
-  final StatefulActionsOptions<Lot, LotBuilder, LotActions> $options;
+  final StatefulActionsOptions<Lot, LotBuilder, LotActions> options$;
 
-  final ActionDispatcher<Lot> $replace;
+  final ActionDispatcher<Lot> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> lotNumber;
   final FieldDispatcher<DateTime> expirationDate;
@@ -265,44 +265,44 @@ class _$LotActions extends LotActions {
   final FieldDispatcher<int> manufacturedQuantity;
   final FieldDispatcher<bool> active;
 
-  _$LotActions._(this.$options)
-      : $replace = $options.action<Lot>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$LotActions._(this.options$)
+      : replace$ = options$.action<Lot>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        lotNumber = $options.field<String>('lotNumber', (a) => a?.lotNumber,
+        lotNumber = options$.field<String>('lotNumber', (a) => a?.lotNumber,
             (s) => s?.lotNumber, (p, b) => p?.lotNumber = b),
-        expirationDate = $options.field<DateTime>(
+        expirationDate = options$.field<DateTime>(
             'expirationDate',
             (a) => a?.expirationDate,
             (s) => s?.expirationDate,
             (p, b) => p?.expirationDate = b),
-        manufactureDate = $options.field<DateTime>(
+        manufactureDate = options$.field<DateTime>(
             'manufactureDate',
             (a) => a?.manufactureDate,
             (s) => s?.manufactureDate,
             (p, b) => p?.manufactureDate = b),
-        manufacturedQuantity = $options.field<int>(
+        manufacturedQuantity = options$.field<int>(
             'manufacturedQuantity',
             (a) => a?.manufacturedQuantity,
             (s) => s?.manufacturedQuantity,
             (p, b) => p?.manufacturedQuantity = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
   factory _$LotActions(LotActionsOptions options) => _$LotActions._(options());
 
   @override
-  Lot get $initial => Lot();
+  Lot get initialState$ => Lot();
 
   @override
-  LotBuilder $newBuilder() => LotBuilder();
+  LotBuilder newBuilder$() => LotBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.lotNumber,
         this.expirationDate,
@@ -312,22 +312,18 @@ class _$LotActions extends LotActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    lotNumber.$reducer(reducer);
-    expirationDate.$reducer(reducer);
-    manufactureDate.$reducer(reducer);
-    manufacturedQuantity.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    lotNumber.reducer$(reducer);
+    expirationDate.reducer$(reducer);
+    manufactureDate.reducer$(reducer);
+    manufacturedQuantity.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Lot);
 }

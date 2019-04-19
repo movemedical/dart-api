@@ -20,57 +20,28 @@ class _$ResetPasswordApi extends ResetPasswordApi {
       CommandState<ApiCommand<ResetPasswordApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<ResetPasswordApiRequest>,
           ApiResult<Nothing>>,
-      ResetPasswordApi> $options;
+      ResetPasswordApi> options$;
 
   final ActionDispatcher<
           CommandState<ApiCommand<ResetPasswordApiRequest>, ApiResult<Nothing>>>
-      $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Nothing>,
-          ResetPasswordApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ResetPasswordApiRequest>,
-          ApiResult<Nothing>,
-          ResetPasswordApi,
-          Command<ApiCommand<ResetPasswordApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Nothing>,
-          ResetPasswordApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Nothing>,
-          ResetPasswordApi, CommandProgress>> $progress;
+      replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ResetPasswordApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ResetPasswordApi._(this.$options)
-      : $replace = $options.action<
+  _$ResetPasswordApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<ResetPasswordApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ResetPasswordApiRequest>,
-                ApiResult<Nothing>,
-                ResetPasswordApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ResetPasswordApiRequest>,
-                    ApiResult<Nothing>,
-                    ResetPasswordApi,
-                    Command<ApiCommand<ResetPasswordApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ResetPasswordApiRequest>,
-                    ApiResult<Nothing>,
-                    ResetPasswordApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ResetPasswordApiRequest>,
-                ApiResult<Nothing>,
-                ResetPasswordApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ResetPasswordApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ResetPasswordApi(ResetPasswordApiOptions options) =>
@@ -78,30 +49,23 @@ class _$ResetPasswordApi extends ResetPasswordApi {
 
   @override
   CommandState<ApiCommand<ResetPasswordApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<ResetPasswordApiRequest>,
+      get initialState$ => CommandState<ApiCommand<ResetPasswordApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<ResetPasswordApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<ResetPasswordApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<ResetPasswordApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ResetPasswordApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

@@ -163,15 +163,15 @@ class _$RequestKitBillOfMaterialsDocApiResponseActions
   final StatefulActionsOptions<
       RequestKitBillOfMaterialsDocApiResponse,
       RequestKitBillOfMaterialsDocApiResponseBuilder,
-      RequestKitBillOfMaterialsDocApiResponseActions> $options;
+      RequestKitBillOfMaterialsDocApiResponseActions> options$;
 
-  final ActionDispatcher<RequestKitBillOfMaterialsDocApiResponse> $replace;
+  final ActionDispatcher<RequestKitBillOfMaterialsDocApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
 
-  _$RequestKitBillOfMaterialsDocApiResponseActions._(this.$options)
-      : $replace = $options.action<RequestKitBillOfMaterialsDocApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$RequestKitBillOfMaterialsDocApiResponseActions._(this.options$)
+      : replace$ = options$.action<RequestKitBillOfMaterialsDocApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -183,34 +183,29 @@ class _$RequestKitBillOfMaterialsDocApiResponseActions
       _$RequestKitBillOfMaterialsDocApiResponseActions._(options());
 
   @override
-  RequestKitBillOfMaterialsDocApiResponse get $initial =>
+  RequestKitBillOfMaterialsDocApiResponse get initialState$ =>
       RequestKitBillOfMaterialsDocApiResponse();
 
   @override
-  RequestKitBillOfMaterialsDocApiResponseBuilder $newBuilder() =>
+  RequestKitBillOfMaterialsDocApiResponseBuilder newBuilder$() =>
       RequestKitBillOfMaterialsDocApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestKitBillOfMaterialsDocApiResponse);
 }

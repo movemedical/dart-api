@@ -22,63 +22,29 @@ class _$RequestStockHistoryReportApi extends RequestStockHistoryReportApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestStockHistoryReportApiRequest>,
           ApiResult<Nothing>>,
-      RequestStockHistoryReportApi> $options;
+      RequestStockHistoryReportApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Nothing>, RequestStockHistoryReportApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestStockHistoryReportApi,
-          Command<ApiCommand<RequestStockHistoryReportApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestStockHistoryReportApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestStockHistoryReportApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<RequestStockHistoryReportApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RequestStockHistoryReportApi._(this.$options)
-      : $replace = $options.action<
+  _$RequestStockHistoryReportApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<RequestStockHistoryReportApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RequestStockHistoryReportApiRequest>,
-                ApiResult<Nothing>,
-                RequestStockHistoryReportApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestStockHistoryReportApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestStockHistoryReportApi,
-                    Command<ApiCommand<RequestStockHistoryReportApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestStockHistoryReportApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestStockHistoryReportApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RequestStockHistoryReportApiRequest>,
-                ApiResult<Nothing>,
-                RequestStockHistoryReportApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<RequestStockHistoryReportApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RequestStockHistoryReportApi(
@@ -88,33 +54,26 @@ class _$RequestStockHistoryReportApi extends RequestStockHistoryReportApi {
   @override
   CommandState<ApiCommand<RequestStockHistoryReportApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<RequestStockHistoryReportApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestStockHistoryReportApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RequestStockHistoryReportApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RequestStockHistoryReportApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

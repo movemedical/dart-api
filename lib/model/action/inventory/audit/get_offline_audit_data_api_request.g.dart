@@ -118,13 +118,13 @@ class _$GetOfflineAuditDataApiRequestActions
   final StatefulActionsOptions<
       GetOfflineAuditDataApiRequest,
       GetOfflineAuditDataApiRequestBuilder,
-      GetOfflineAuditDataApiRequestActions> $options;
+      GetOfflineAuditDataApiRequestActions> options$;
 
-  final ActionDispatcher<GetOfflineAuditDataApiRequest> $replace;
+  final ActionDispatcher<GetOfflineAuditDataApiRequest> replace$;
 
-  _$GetOfflineAuditDataApiRequestActions._(this.$options)
-      : $replace = $options.action<GetOfflineAuditDataApiRequest>(
-            '\$replace', (a) => a?.$replace),
+  _$GetOfflineAuditDataApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetOfflineAuditDataApiRequest>(
+            'replace\$', (a) => a?.replace$),
         super._();
 
   factory _$GetOfflineAuditDataApiRequestActions(
@@ -132,21 +132,17 @@ class _$GetOfflineAuditDataApiRequestActions
       _$GetOfflineAuditDataApiRequestActions._(options());
 
   @override
-  GetOfflineAuditDataApiRequest get $initial => GetOfflineAuditDataApiRequest();
+  GetOfflineAuditDataApiRequest get initialState$ =>
+      GetOfflineAuditDataApiRequest();
 
   @override
-  GetOfflineAuditDataApiRequestBuilder $newBuilder() =>
+  GetOfflineAuditDataApiRequestBuilder newBuilder$() =>
       GetOfflineAuditDataApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetOfflineAuditDataApiRequest);
 }

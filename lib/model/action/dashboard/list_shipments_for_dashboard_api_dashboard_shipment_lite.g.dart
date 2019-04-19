@@ -255,33 +255,33 @@ class _$ListShipmentsForDashboardApiDashboardShipmentLiteActions
   final StatefulActionsOptions<
       ListShipmentsForDashboardApiDashboardShipmentLite,
       ListShipmentsForDashboardApiDashboardShipmentLiteBuilder,
-      ListShipmentsForDashboardApiDashboardShipmentLiteActions> $options;
+      ListShipmentsForDashboardApiDashboardShipmentLiteActions> options$;
 
   final ActionDispatcher<ListShipmentsForDashboardApiDashboardShipmentLite>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> shipmentNumber;
   final FieldDispatcher<ShipmentStatus> shipmentStatus;
   final LocationActions toLocation;
 
-  _$ListShipmentsForDashboardApiDashboardShipmentLiteActions._(this.$options)
-      : $replace =
-            $options.action<ListShipmentsForDashboardApiDashboardShipmentLite>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListShipmentsForDashboardApiDashboardShipmentLiteActions._(this.options$)
+      : replace$ =
+            options$.action<ListShipmentsForDashboardApiDashboardShipmentLite>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        shipmentNumber = $options.field<int>(
+        shipmentNumber = options$.field<int>(
             'shipmentNumber',
             (a) => a?.shipmentNumber,
             (s) => s?.shipmentNumber,
             (p, b) => p?.shipmentNumber = b),
-        shipmentStatus = $options.field<ShipmentStatus>(
+        shipmentStatus = options$.field<ShipmentStatus>(
             'shipmentStatus',
             (a) => a?.shipmentStatus,
             (s) => s?.shipmentStatus,
             (p, b) => p?.shipmentStatus = b),
         toLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'toLocation',
                 (a) => a.toLocation,
                 (s) => s?.toLocation,
@@ -295,46 +295,41 @@ class _$ListShipmentsForDashboardApiDashboardShipmentLiteActions
       _$ListShipmentsForDashboardApiDashboardShipmentLiteActions._(options());
 
   @override
-  ListShipmentsForDashboardApiDashboardShipmentLite get $initial =>
+  ListShipmentsForDashboardApiDashboardShipmentLite get initialState$ =>
       ListShipmentsForDashboardApiDashboardShipmentLite();
 
   @override
-  ListShipmentsForDashboardApiDashboardShipmentLiteBuilder $newBuilder() =>
+  ListShipmentsForDashboardApiDashboardShipmentLiteBuilder newBuilder$() =>
       ListShipmentsForDashboardApiDashboardShipmentLiteBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toLocation,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.shipmentNumber,
         this.shipmentStatus,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    shipmentNumber.$reducer(reducer);
-    shipmentStatus.$reducer(reducer);
-    toLocation.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    shipmentNumber.reducer$(reducer);
+    shipmentStatus.reducer$(reducer);
+    toLocation.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    toLocation.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    toLocation.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(ListShipmentsForDashboardApiDashboardShipmentLite);
 }

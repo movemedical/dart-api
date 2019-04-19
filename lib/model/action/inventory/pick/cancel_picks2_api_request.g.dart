@@ -168,15 +168,15 @@ typedef StatefulActionsOptions<
 
 class _$CancelPicks2ApiRequestActions extends CancelPicks2ApiRequestActions {
   final StatefulActionsOptions<CancelPicks2ApiRequest,
-      CancelPicks2ApiRequestBuilder, CancelPicks2ApiRequestActions> $options;
+      CancelPicks2ApiRequestBuilder, CancelPicks2ApiRequestActions> options$;
 
-  final ActionDispatcher<CancelPicks2ApiRequest> $replace;
+  final ActionDispatcher<CancelPicks2ApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> pickIds;
 
-  _$CancelPicks2ApiRequestActions._(this.$options)
-      : $replace = $options.action<CancelPicks2ApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        pickIds = $options.field<BuiltList<String>>('pickIds',
+  _$CancelPicks2ApiRequestActions._(this.options$)
+      : replace$ = options$.action<CancelPicks2ApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        pickIds = options$.field<BuiltList<String>>('pickIds',
             (a) => a?.pickIds, (s) => s?.pickIds, (p, b) => p?.pickIds = b),
         super._();
 
@@ -185,32 +185,28 @@ class _$CancelPicks2ApiRequestActions extends CancelPicks2ApiRequestActions {
       _$CancelPicks2ApiRequestActions._(options());
 
   @override
-  CancelPicks2ApiRequest get $initial => CancelPicks2ApiRequest();
+  CancelPicks2ApiRequest get initialState$ => CancelPicks2ApiRequest();
 
   @override
-  CancelPicks2ApiRequestBuilder $newBuilder() =>
+  CancelPicks2ApiRequestBuilder newBuilder$() =>
       CancelPicks2ApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.pickIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    pickIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    pickIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CancelPicks2ApiRequest);
 }

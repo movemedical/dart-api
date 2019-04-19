@@ -151,15 +151,15 @@ typedef StatefulActionsOptions<
 
 class _$FinalizeUsageApiRequestActions extends FinalizeUsageApiRequestActions {
   final StatefulActionsOptions<FinalizeUsageApiRequest,
-      FinalizeUsageApiRequestBuilder, FinalizeUsageApiRequestActions> $options;
+      FinalizeUsageApiRequestBuilder, FinalizeUsageApiRequestActions> options$;
 
-  final ActionDispatcher<FinalizeUsageApiRequest> $replace;
+  final ActionDispatcher<FinalizeUsageApiRequest> replace$;
   final FieldDispatcher<String> orderId;
 
-  _$FinalizeUsageApiRequestActions._(this.$options)
-      : $replace = $options.action<FinalizeUsageApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$FinalizeUsageApiRequestActions._(this.options$)
+      : replace$ = options$.action<FinalizeUsageApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         super._();
 
@@ -168,32 +168,28 @@ class _$FinalizeUsageApiRequestActions extends FinalizeUsageApiRequestActions {
       _$FinalizeUsageApiRequestActions._(options());
 
   @override
-  FinalizeUsageApiRequest get $initial => FinalizeUsageApiRequest();
+  FinalizeUsageApiRequest get initialState$ => FinalizeUsageApiRequest();
 
   @override
-  FinalizeUsageApiRequestBuilder $newBuilder() =>
+  FinalizeUsageApiRequestBuilder newBuilder$() =>
       FinalizeUsageApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(FinalizeUsageApiRequest);
 }

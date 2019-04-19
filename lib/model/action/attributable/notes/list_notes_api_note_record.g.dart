@@ -460,9 +460,9 @@ typedef StatefulActionsOptions<
 
 class _$ListNotesApiNoteRecordActions extends ListNotesApiNoteRecordActions {
   final StatefulActionsOptions<ListNotesApiNoteRecord,
-      ListNotesApiNoteRecordBuilder, ListNotesApiNoteRecordActions> $options;
+      ListNotesApiNoteRecordBuilder, ListNotesApiNoteRecordActions> options$;
 
-  final ActionDispatcher<ListNotesApiNoteRecord> $replace;
+  final ActionDispatcher<ListNotesApiNoteRecord> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<String> ownerOrgUnitId;
@@ -478,57 +478,57 @@ class _$ListNotesApiNoteRecordActions extends ListNotesApiNoteRecordActions {
   final FieldDispatcher<String> ownerOrgUnitLabel;
   final FieldDispatcher<String> createdByInitials;
 
-  _$ListNotesApiNoteRecordActions._(this.$options)
-      : $replace = $options.action<ListNotesApiNoteRecord>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListNotesApiNoteRecordActions._(this.options$)
+      : replace$ = options$.action<ListNotesApiNoteRecord>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        ownerOrgUnitId = $options.field<String>(
+        ownerOrgUnitId = options$.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        attrType = $options.field<AttributableType>('attrType',
+        attrType = options$.field<AttributableType>('attrType',
             (a) => a?.attrType, (s) => s?.attrType, (p, b) => p?.attrType = b),
-        attrId = $options.field<String>('attrId', (a) => a?.attrId,
+        attrId = options$.field<String>('attrId', (a) => a?.attrId,
             (s) => s?.attrId, (p, b) => p?.attrId = b),
-        orgVisible = $options.field<bool>('orgVisible', (a) => a?.orgVisible,
+        orgVisible = options$.field<bool>('orgVisible', (a) => a?.orgVisible,
             (s) => s?.orgVisible, (p, b) => p?.orgVisible = b),
-        publicVisible = $options.field<bool>(
+        publicVisible = options$.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
             (p, b) => p?.publicVisible = b),
-        noteValue = $options.field<String>('noteValue', (a) => a?.noteValue,
+        noteValue = options$.field<String>('noteValue', (a) => a?.noteValue,
             (s) => s?.noteValue, (p, b) => p?.noteValue = b),
-        createdById = $options.field<String>(
+        createdById = options$.field<String>(
             'createdById',
             (a) => a?.createdById,
             (s) => s?.createdById,
             (p, b) => p?.createdById = b),
-        dateCreated = $options.field<DateTime>(
+        dateCreated = options$.field<DateTime>(
             'dateCreated',
             (a) => a?.dateCreated,
             (s) => s?.dateCreated,
             (p, b) => p?.dateCreated = b),
-        createdByDisplayName = $options.field<String>(
+        createdByDisplayName = options$.field<String>(
             'createdByDisplayName',
             (a) => a?.createdByDisplayName,
             (s) => s?.createdByDisplayName,
             (p, b) => p?.createdByDisplayName = b),
-        ownerOrgUnitName = $options.field<String>(
+        ownerOrgUnitName = options$.field<String>(
             'ownerOrgUnitName',
             (a) => a?.ownerOrgUnitName,
             (s) => s?.ownerOrgUnitName,
             (p, b) => p?.ownerOrgUnitName = b),
-        ownerOrgUnitLabel = $options.field<String>(
+        ownerOrgUnitLabel = options$.field<String>(
             'ownerOrgUnitLabel',
             (a) => a?.ownerOrgUnitLabel,
             (s) => s?.ownerOrgUnitLabel,
             (p, b) => p?.ownerOrgUnitLabel = b),
-        createdByInitials = $options.field<String>(
+        createdByInitials = options$.field<String>(
             'createdByInitials',
             (a) => a?.createdByInitials,
             (s) => s?.createdByInitials,
@@ -540,17 +540,17 @@ class _$ListNotesApiNoteRecordActions extends ListNotesApiNoteRecordActions {
       _$ListNotesApiNoteRecordActions._(options());
 
   @override
-  ListNotesApiNoteRecord get $initial => ListNotesApiNoteRecord();
+  ListNotesApiNoteRecord get initialState$ => ListNotesApiNoteRecord();
 
   @override
-  ListNotesApiNoteRecordBuilder $newBuilder() =>
+  ListNotesApiNoteRecordBuilder newBuilder$() =>
       ListNotesApiNoteRecordBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgId,
         this.ownerOrgUnitId,
@@ -568,30 +568,26 @@ class _$ListNotesApiNoteRecordActions extends ListNotesApiNoteRecordActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgId.$reducer(reducer);
-    ownerOrgUnitId.$reducer(reducer);
-    attrType.$reducer(reducer);
-    attrId.$reducer(reducer);
-    orgVisible.$reducer(reducer);
-    publicVisible.$reducer(reducer);
-    noteValue.$reducer(reducer);
-    createdById.$reducer(reducer);
-    dateCreated.$reducer(reducer);
-    createdByDisplayName.$reducer(reducer);
-    ownerOrgUnitName.$reducer(reducer);
-    ownerOrgUnitLabel.$reducer(reducer);
-    createdByInitials.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgId.reducer$(reducer);
+    ownerOrgUnitId.reducer$(reducer);
+    attrType.reducer$(reducer);
+    attrId.reducer$(reducer);
+    orgVisible.reducer$(reducer);
+    publicVisible.reducer$(reducer);
+    noteValue.reducer$(reducer);
+    createdById.reducer$(reducer);
+    dateCreated.reducer$(reducer);
+    createdByDisplayName.reducer$(reducer);
+    ownerOrgUnitName.reducer$(reducer);
+    ownerOrgUnitLabel.reducer$(reducer);
+    createdByInitials.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListNotesApiNoteRecord);
 }

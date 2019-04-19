@@ -377,9 +377,9 @@ class _$ListLoanLinesApiLoanLineActions
   final StatefulActionsOptions<
       ListLoanLinesApiLoanLine,
       ListLoanLinesApiLoanLineBuilder,
-      ListLoanLinesApiLoanLineActions> $options;
+      ListLoanLinesApiLoanLineActions> options$;
 
-  final ActionDispatcher<ListLoanLinesApiLoanLine> $replace;
+  final ActionDispatcher<ListLoanLinesApiLoanLine> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<LoanLineStatus> status;
   final StockItemActions stockItem;
@@ -391,39 +391,39 @@ class _$ListLoanLinesApiLoanLineActions
   final FieldDispatcher<int> qtyOutbound;
   final FieldDispatcher<int> qtyReturned;
 
-  _$ListLoanLinesApiLoanLineActions._(this.$options)
-      : $replace = $options.action<ListLoanLinesApiLoanLine>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListLoanLinesApiLoanLineActions._(this.options$)
+      : replace$ = options$.action<ListLoanLinesApiLoanLine>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        status = $options.field<LoanLineStatus>('status', (a) => a?.status,
+        status = options$.field<LoanLineStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
         stockItem = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
                 (a) => a.stockItem,
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
-        qtyRequested = $options.field<int>(
+        qtyRequested = options$.field<int>(
             'qtyRequested',
             (a) => a?.qtyRequested,
             (s) => s?.qtyRequested,
             (p, b) => p?.qtyRequested = b),
-        qtyCommitted = $options.field<int>(
+        qtyCommitted = options$.field<int>(
             'qtyCommitted',
             (a) => a?.qtyCommitted,
             (s) => s?.qtyCommitted,
             (p, b) => p?.qtyCommitted = b),
-        qtyInbound = $options.field<int>('qtyInbound', (a) => a?.qtyInbound,
+        qtyInbound = options$.field<int>('qtyInbound', (a) => a?.qtyInbound,
             (s) => s?.qtyInbound, (p, b) => p?.qtyInbound = b),
-        qtyOnHand = $options.field<int>('qtyOnHand', (a) => a?.qtyOnHand,
+        qtyOnHand = options$.field<int>('qtyOnHand', (a) => a?.qtyOnHand,
             (s) => s?.qtyOnHand, (p, b) => p?.qtyOnHand = b),
-        qtyUsed = $options.field<int>('qtyUsed', (a) => a?.qtyUsed,
+        qtyUsed = options$.field<int>('qtyUsed', (a) => a?.qtyUsed,
             (s) => s?.qtyUsed, (p, b) => p?.qtyUsed = b),
-        qtyOutbound = $options.field<int>('qtyOutbound', (a) => a?.qtyOutbound,
+        qtyOutbound = options$.field<int>('qtyOutbound', (a) => a?.qtyOutbound,
             (s) => s?.qtyOutbound, (p, b) => p?.qtyOutbound = b),
-        qtyReturned = $options.field<int>('qtyReturned', (a) => a?.qtyReturned,
+        qtyReturned = options$.field<int>('qtyReturned', (a) => a?.qtyReturned,
             (s) => s?.qtyReturned, (p, b) => p?.qtyReturned = b),
         super._();
 
@@ -432,23 +432,23 @@ class _$ListLoanLinesApiLoanLineActions
       _$ListLoanLinesApiLoanLineActions._(options());
 
   @override
-  ListLoanLinesApiLoanLine get $initial => ListLoanLinesApiLoanLine();
+  ListLoanLinesApiLoanLine get initialState$ => ListLoanLinesApiLoanLine();
 
   @override
-  ListLoanLinesApiLoanLineBuilder $newBuilder() =>
+  ListLoanLinesApiLoanLineBuilder newBuilder$() =>
       ListLoanLinesApiLoanLineBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.status,
         this.qtyRequested,
@@ -461,27 +461,23 @@ class _$ListLoanLinesApiLoanLineActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    status.$reducer(reducer);
-    stockItem.$reducer(reducer);
-    qtyRequested.$reducer(reducer);
-    qtyCommitted.$reducer(reducer);
-    qtyInbound.$reducer(reducer);
-    qtyOnHand.$reducer(reducer);
-    qtyUsed.$reducer(reducer);
-    qtyOutbound.$reducer(reducer);
-    qtyReturned.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    status.reducer$(reducer);
+    stockItem.reducer$(reducer);
+    qtyRequested.reducer$(reducer);
+    qtyCommitted.reducer$(reducer);
+    qtyInbound.reducer$(reducer);
+    qtyOnHand.reducer$(reducer);
+    qtyUsed.reducer$(reducer);
+    qtyOutbound.reducer$(reducer);
+    qtyReturned.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    stockItem.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    stockItem.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListLoanLinesApiLoanLine);
 }

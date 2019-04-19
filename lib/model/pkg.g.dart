@@ -277,9 +277,9 @@ class PkgBuilder implements Builder<Pkg, PkgBuilder> {
 typedef StatefulActionsOptions<Pkg, PkgBuilder, PkgActions> PkgActionsOptions();
 
 class _$PkgActions extends PkgActions {
-  final StatefulActionsOptions<Pkg, PkgBuilder, PkgActions> $options;
+  final StatefulActionsOptions<Pkg, PkgBuilder, PkgActions> options$;
 
-  final ActionDispatcher<Pkg> $replace;
+  final ActionDispatcher<Pkg> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> shipmentId;
   final FieldDispatcher<int> number;
@@ -288,24 +288,24 @@ class _$PkgActions extends PkgActions {
   final FieldDispatcher<String> locationId;
   final FieldDispatcher<String> trackingNumber;
 
-  _$PkgActions._(this.$options)
-      : $replace = $options.action<Pkg>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$PkgActions._(this.options$)
+      : replace$ = options$.action<Pkg>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+        shipmentId = options$.field<String>('shipmentId', (a) => a?.shipmentId,
             (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<PackageStatus>('status', (a) => a?.status,
+        status = options$.field<PackageStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        trackingNumber = $options.field<String>(
+        trackingNumber = options$.field<String>(
             'trackingNumber',
             (a) => a?.trackingNumber,
             (s) => s?.trackingNumber,
@@ -315,16 +315,16 @@ class _$PkgActions extends PkgActions {
   factory _$PkgActions(PkgActionsOptions options) => _$PkgActions._(options());
 
   @override
-  Pkg get $initial => Pkg();
+  Pkg get initialState$ => Pkg();
 
   @override
-  PkgBuilder $newBuilder() => PkgBuilder();
+  PkgBuilder newBuilder$() => PkgBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.shipmentId,
         this.number,
@@ -335,23 +335,19 @@ class _$PkgActions extends PkgActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    shipmentId.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
-    locationType.$reducer(reducer);
-    locationId.$reducer(reducer);
-    trackingNumber.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    shipmentId.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
+    locationType.reducer$(reducer);
+    locationId.reducer$(reducer);
+    trackingNumber.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Pkg);
 }

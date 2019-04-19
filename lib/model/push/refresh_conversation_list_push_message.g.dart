@@ -120,13 +120,13 @@ class _$RefreshConversationListPushMessageActions
   final StatefulActionsOptions<
       RefreshConversationListPushMessage,
       RefreshConversationListPushMessageBuilder,
-      RefreshConversationListPushMessageActions> $options;
+      RefreshConversationListPushMessageActions> options$;
 
-  final ActionDispatcher<RefreshConversationListPushMessage> $replace;
+  final ActionDispatcher<RefreshConversationListPushMessage> replace$;
 
-  _$RefreshConversationListPushMessageActions._(this.$options)
-      : $replace = $options.action<RefreshConversationListPushMessage>(
-            '\$replace', (a) => a?.$replace),
+  _$RefreshConversationListPushMessageActions._(this.options$)
+      : replace$ = options$.action<RefreshConversationListPushMessage>(
+            'replace\$', (a) => a?.replace$),
         super._();
 
   factory _$RefreshConversationListPushMessageActions(
@@ -134,22 +134,17 @@ class _$RefreshConversationListPushMessageActions
       _$RefreshConversationListPushMessageActions._(options());
 
   @override
-  RefreshConversationListPushMessage get $initial =>
+  RefreshConversationListPushMessage get initialState$ =>
       RefreshConversationListPushMessage();
 
   @override
-  RefreshConversationListPushMessageBuilder $newBuilder() =>
+  RefreshConversationListPushMessageBuilder newBuilder$() =>
       RefreshConversationListPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RefreshConversationListPushMessage);
 }

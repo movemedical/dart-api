@@ -160,15 +160,15 @@ class _$ConfirmMfaSmsEnrollmentApiRequestActions
   final StatefulActionsOptions<
       ConfirmMfaSmsEnrollmentApiRequest,
       ConfirmMfaSmsEnrollmentApiRequestBuilder,
-      ConfirmMfaSmsEnrollmentApiRequestActions> $options;
+      ConfirmMfaSmsEnrollmentApiRequestActions> options$;
 
-  final ActionDispatcher<ConfirmMfaSmsEnrollmentApiRequest> $replace;
+  final ActionDispatcher<ConfirmMfaSmsEnrollmentApiRequest> replace$;
   final FieldDispatcher<String> smsCode;
 
-  _$ConfirmMfaSmsEnrollmentApiRequestActions._(this.$options)
-      : $replace = $options.action<ConfirmMfaSmsEnrollmentApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        smsCode = $options.field<String>('smsCode', (a) => a?.smsCode,
+  _$ConfirmMfaSmsEnrollmentApiRequestActions._(this.options$)
+      : replace$ = options$.action<ConfirmMfaSmsEnrollmentApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        smsCode = options$.field<String>('smsCode', (a) => a?.smsCode,
             (s) => s?.smsCode, (p, b) => p?.smsCode = b),
         super._();
 
@@ -177,34 +177,29 @@ class _$ConfirmMfaSmsEnrollmentApiRequestActions
       _$ConfirmMfaSmsEnrollmentApiRequestActions._(options());
 
   @override
-  ConfirmMfaSmsEnrollmentApiRequest get $initial =>
+  ConfirmMfaSmsEnrollmentApiRequest get initialState$ =>
       ConfirmMfaSmsEnrollmentApiRequest();
 
   @override
-  ConfirmMfaSmsEnrollmentApiRequestBuilder $newBuilder() =>
+  ConfirmMfaSmsEnrollmentApiRequestBuilder newBuilder$() =>
       ConfirmMfaSmsEnrollmentApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.smsCode,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    smsCode.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    smsCode.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ConfirmMfaSmsEnrollmentApiRequest);
 }

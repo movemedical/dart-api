@@ -268,9 +268,9 @@ class _$PreviewApplyPreferenceCardsToCaseApiRequestActions
   final StatefulActionsOptions<
       PreviewApplyPreferenceCardsToCaseApiRequest,
       PreviewApplyPreferenceCardsToCaseApiRequestBuilder,
-      PreviewApplyPreferenceCardsToCaseApiRequestActions> $options;
+      PreviewApplyPreferenceCardsToCaseApiRequestActions> options$;
 
-  final ActionDispatcher<PreviewApplyPreferenceCardsToCaseApiRequest> $replace;
+  final ActionDispatcher<PreviewApplyPreferenceCardsToCaseApiRequest> replace$;
   final FieldDispatcher<String> caseId;
   final FieldDispatcher<String> preferenceCardId;
   final FieldDispatcher<
@@ -279,24 +279,24 @@ class _$PreviewApplyPreferenceCardsToCaseApiRequestActions
       preferenceCardItems;
   final FieldDispatcher<bool> deduplicate;
 
-  _$PreviewApplyPreferenceCardsToCaseApiRequestActions._(this.$options)
-      : $replace = $options.action<PreviewApplyPreferenceCardsToCaseApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseId = $options.field<String>('caseId', (a) => a?.caseId,
+  _$PreviewApplyPreferenceCardsToCaseApiRequestActions._(this.options$)
+      : replace$ = options$.action<PreviewApplyPreferenceCardsToCaseApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseId = options$.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        preferenceCardId = $options.field<String>(
+        preferenceCardId = options$.field<String>(
             'preferenceCardId',
             (a) => a?.preferenceCardId,
             (s) => s?.preferenceCardId,
             (p, b) => p?.preferenceCardId = b),
-        preferenceCardItems = $options.field<
+        preferenceCardItems = options$.field<
                 BuiltList<
                     PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification>>(
             'preferenceCardItems',
             (a) => a?.preferenceCardItems,
             (s) => s?.preferenceCardItems,
             (p, b) => p?.preferenceCardItems = b),
-        deduplicate = $options.field<bool>('deduplicate', (a) => a?.deduplicate,
+        deduplicate = options$.field<bool>('deduplicate', (a) => a?.deduplicate,
             (s) => s?.deduplicate, (p, b) => p?.deduplicate = b),
         super._();
 
@@ -305,18 +305,18 @@ class _$PreviewApplyPreferenceCardsToCaseApiRequestActions
       _$PreviewApplyPreferenceCardsToCaseApiRequestActions._(options());
 
   @override
-  PreviewApplyPreferenceCardsToCaseApiRequest get $initial =>
+  PreviewApplyPreferenceCardsToCaseApiRequest get initialState$ =>
       PreviewApplyPreferenceCardsToCaseApiRequest();
 
   @override
-  PreviewApplyPreferenceCardsToCaseApiRequestBuilder $newBuilder() =>
+  PreviewApplyPreferenceCardsToCaseApiRequestBuilder newBuilder$() =>
       PreviewApplyPreferenceCardsToCaseApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseId,
         this.preferenceCardId,
         this.preferenceCardItems,
@@ -324,21 +324,16 @@ class _$PreviewApplyPreferenceCardsToCaseApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseId.$reducer(reducer);
-    preferenceCardId.$reducer(reducer);
-    preferenceCardItems.$reducer(reducer);
-    deduplicate.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseId.reducer$(reducer);
+    preferenceCardId.reducer$(reducer);
+    preferenceCardItems.reducer$(reducer);
+    deduplicate.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(PreviewApplyPreferenceCardsToCaseApiRequest);
 }

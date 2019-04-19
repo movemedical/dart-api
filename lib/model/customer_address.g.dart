@@ -389,9 +389,9 @@ typedef StatefulActionsOptions<CustomerAddress, CustomerAddressBuilder,
 
 class _$CustomerAddressActions extends CustomerAddressActions {
   final StatefulActionsOptions<CustomerAddress, CustomerAddressBuilder,
-      CustomerAddressActions> $options;
+      CustomerAddressActions> options$;
 
-  final ActionDispatcher<CustomerAddress> $replace;
+  final ActionDispatcher<CustomerAddress> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> facilityName;
@@ -404,44 +404,44 @@ class _$CustomerAddressActions extends CustomerAddressActions {
   final AddressActions address;
   final FieldDispatcher<String> displayText;
 
-  _$CustomerAddressActions._(this.$options)
-      : $replace =
-            $options.action<CustomerAddress>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$CustomerAddressActions._(this.options$)
+      : replace$ =
+            options$.action<CustomerAddress>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        facilityName = $options.field<String>(
+        facilityName = options$.field<String>(
             'facilityName',
             (a) => a?.facilityName,
             (s) => s?.facilityName,
             (p, b) => p?.facilityName = b),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        customerReference = $options.field<String>(
+        customerReference = options$.field<String>(
             'customerReference',
             (a) => a?.customerReference,
             (s) => s?.customerReference,
             (p, b) => p?.customerReference = b),
-        customerKey = $options.field<String>(
+        customerKey = options$.field<String>(
             'customerKey',
             (a) => a?.customerKey,
             (s) => s?.customerKey,
             (p, b) => p?.customerKey = b),
-        reference1 = $options.field<String>('reference1', (a) => a?.reference1,
+        reference1 = options$.field<String>('reference1', (a) => a?.reference1,
             (s) => s?.reference1, (p, b) => p?.reference1 = b),
-        reference2 = $options.field<String>('reference2', (a) => a?.reference2,
+        reference2 = options$.field<String>('reference2', (a) => a?.reference2,
             (s) => s?.reference2, (p, b) => p?.reference2 = b),
-        addressId = $options.field<String>('addressId', (a) => a?.addressId,
+        addressId = options$.field<String>('addressId', (a) => a?.addressId,
             (s) => s?.addressId, (p, b) => p?.addressId = b),
         address = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'address',
                 (a) => a.address,
                 (s) => s?.address,
                 (b) => b?.address,
                 (parent, builder) => parent?.address = builder)),
-        displayText = $options.field<String>(
+        displayText = options$.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
@@ -452,22 +452,22 @@ class _$CustomerAddressActions extends CustomerAddressActions {
       _$CustomerAddressActions._(options());
 
   @override
-  CustomerAddress get $initial => CustomerAddress();
+  CustomerAddress get initialState$ => CustomerAddress();
 
   @override
-  CustomerAddressBuilder $newBuilder() => CustomerAddressBuilder();
+  CustomerAddressBuilder newBuilder$() => CustomerAddressBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.address,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.facilityId,
         this.facilityName,
@@ -481,28 +481,24 @@ class _$CustomerAddressActions extends CustomerAddressActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    facilityName.$reducer(reducer);
-    customerId.$reducer(reducer);
-    customerReference.$reducer(reducer);
-    customerKey.$reducer(reducer);
-    reference1.$reducer(reducer);
-    reference2.$reducer(reducer);
-    addressId.$reducer(reducer);
-    address.$reducer(reducer);
-    displayText.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    facilityName.reducer$(reducer);
+    customerId.reducer$(reducer);
+    customerReference.reducer$(reducer);
+    customerKey.reducer$(reducer);
+    reference1.reducer$(reducer);
+    reference2.reducer$(reducer);
+    addressId.reducer$(reducer);
+    address.reducer$(reducer);
+    displayText.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    address.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    address.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CustomerAddress);
 }

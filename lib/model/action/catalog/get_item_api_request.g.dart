@@ -142,15 +142,15 @@ typedef StatefulActionsOptions<GetItemApiRequest, GetItemApiRequestBuilder,
 
 class _$GetItemApiRequestActions extends GetItemApiRequestActions {
   final StatefulActionsOptions<GetItemApiRequest, GetItemApiRequestBuilder,
-      GetItemApiRequestActions> $options;
+      GetItemApiRequestActions> options$;
 
-  final ActionDispatcher<GetItemApiRequest> $replace;
+  final ActionDispatcher<GetItemApiRequest> replace$;
   final FieldDispatcher<String> itemId;
 
-  _$GetItemApiRequestActions._(this.$options)
-      : $replace =
-            $options.action<GetItemApiRequest>('\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$GetItemApiRequestActions._(this.options$)
+      : replace$ =
+            options$.action<GetItemApiRequest>('replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
         super._();
 
@@ -158,31 +158,27 @@ class _$GetItemApiRequestActions extends GetItemApiRequestActions {
       _$GetItemApiRequestActions._(options());
 
   @override
-  GetItemApiRequest get $initial => GetItemApiRequest();
+  GetItemApiRequest get initialState$ => GetItemApiRequest();
 
   @override
-  GetItemApiRequestBuilder $newBuilder() => GetItemApiRequestBuilder();
+  GetItemApiRequestBuilder newBuilder$() => GetItemApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetItemApiRequest);
 }

@@ -250,37 +250,37 @@ class _$ListAuditsForDashboardApiDashboardAuditLiteActions
   final StatefulActionsOptions<
       ListAuditsForDashboardApiDashboardAuditLite,
       ListAuditsForDashboardApiDashboardAuditLiteBuilder,
-      ListAuditsForDashboardApiDashboardAuditLiteActions> $options;
+      ListAuditsForDashboardApiDashboardAuditLiteActions> options$;
 
-  final ActionDispatcher<ListAuditsForDashboardApiDashboardAuditLite> $replace;
+  final ActionDispatcher<ListAuditsForDashboardApiDashboardAuditLite> replace$;
   final AuditActions audit;
   final LocationActions location;
   final FieldDispatcher<int> daysUntilDue;
   final FieldDispatcher<bool> displayDaysUntilDue;
 
-  _$ListAuditsForDashboardApiDashboardAuditLiteActions._(this.$options)
-      : $replace = $options.action<ListAuditsForDashboardApiDashboardAuditLite>(
-            '\$replace', (a) => a?.$replace),
+  _$ListAuditsForDashboardApiDashboardAuditLiteActions._(this.options$)
+      : replace$ = options$.action<ListAuditsForDashboardApiDashboardAuditLite>(
+            'replace\$', (a) => a?.replace$),
         audit = AuditActions(() =>
-            $options.stateful<Audit, AuditBuilder, AuditActions>(
+            options$.stateful<Audit, AuditBuilder, AuditActions>(
                 'audit',
                 (a) => a.audit,
                 (s) => s?.audit,
                 (b) => b?.audit,
                 (parent, builder) => parent?.audit = builder)),
         location = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        daysUntilDue = $options.field<int>(
+        daysUntilDue = options$.field<int>(
             'daysUntilDue',
             (a) => a?.daysUntilDue,
             (s) => s?.daysUntilDue,
             (p, b) => p?.daysUntilDue = b),
-        displayDaysUntilDue = $options.field<bool>(
+        displayDaysUntilDue = options$.field<bool>(
             'displayDaysUntilDue',
             (a) => a?.displayDaysUntilDue,
             (s) => s?.displayDaysUntilDue,
@@ -292,47 +292,42 @@ class _$ListAuditsForDashboardApiDashboardAuditLiteActions
       _$ListAuditsForDashboardApiDashboardAuditLiteActions._(options());
 
   @override
-  ListAuditsForDashboardApiDashboardAuditLite get $initial =>
+  ListAuditsForDashboardApiDashboardAuditLite get initialState$ =>
       ListAuditsForDashboardApiDashboardAuditLite();
 
   @override
-  ListAuditsForDashboardApiDashboardAuditLiteBuilder $newBuilder() =>
+  ListAuditsForDashboardApiDashboardAuditLiteBuilder newBuilder$() =>
       ListAuditsForDashboardApiDashboardAuditLiteBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.audit,
         this.location,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.daysUntilDue,
         this.displayDaysUntilDue,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    audit.$reducer(reducer);
-    location.$reducer(reducer);
-    daysUntilDue.$reducer(reducer);
-    displayDaysUntilDue.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    audit.reducer$(reducer);
+    location.reducer$(reducer);
+    daysUntilDue.reducer$(reducer);
+    displayDaysUntilDue.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    audit.$middleware(middleware);
-    location.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    audit.middleware$(middleware);
+    location.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListAuditsForDashboardApiDashboardAuditLite);
 }

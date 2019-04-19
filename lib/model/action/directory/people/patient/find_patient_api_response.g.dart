@@ -167,15 +167,15 @@ typedef StatefulActionsOptions<
 
 class _$FindPatientApiResponseActions extends FindPatientApiResponseActions {
   final StatefulActionsOptions<FindPatientApiResponse,
-      FindPatientApiResponseBuilder, FindPatientApiResponseActions> $options;
+      FindPatientApiResponseBuilder, FindPatientApiResponseActions> options$;
 
-  final ActionDispatcher<FindPatientApiResponse> $replace;
+  final ActionDispatcher<FindPatientApiResponse> replace$;
   final FieldDispatcher<BuiltList<Patient>> patients;
 
-  _$FindPatientApiResponseActions._(this.$options)
-      : $replace = $options.action<FindPatientApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        patients = $options.field<BuiltList<Patient>>('patients',
+  _$FindPatientApiResponseActions._(this.options$)
+      : replace$ = options$.action<FindPatientApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        patients = options$.field<BuiltList<Patient>>('patients',
             (a) => a?.patients, (s) => s?.patients, (p, b) => p?.patients = b),
         super._();
 
@@ -184,32 +184,28 @@ class _$FindPatientApiResponseActions extends FindPatientApiResponseActions {
       _$FindPatientApiResponseActions._(options());
 
   @override
-  FindPatientApiResponse get $initial => FindPatientApiResponse();
+  FindPatientApiResponse get initialState$ => FindPatientApiResponse();
 
   @override
-  FindPatientApiResponseBuilder $newBuilder() =>
+  FindPatientApiResponseBuilder newBuilder$() =>
       FindPatientApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.patients,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    patients.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    patients.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(FindPatientApiResponse);
 }

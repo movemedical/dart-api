@@ -160,15 +160,15 @@ class _$GetCaseEventHistoryApiRequestActions
   final StatefulActionsOptions<
       GetCaseEventHistoryApiRequest,
       GetCaseEventHistoryApiRequestBuilder,
-      GetCaseEventHistoryApiRequestActions> $options;
+      GetCaseEventHistoryApiRequestActions> options$;
 
-  final ActionDispatcher<GetCaseEventHistoryApiRequest> $replace;
+  final ActionDispatcher<GetCaseEventHistoryApiRequest> replace$;
   final FieldDispatcher<String> mdcCaseEventId;
 
-  _$GetCaseEventHistoryApiRequestActions._(this.$options)
-      : $replace = $options.action<GetCaseEventHistoryApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        mdcCaseEventId = $options.field<String>(
+  _$GetCaseEventHistoryApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetCaseEventHistoryApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        mdcCaseEventId = options$.field<String>(
             'mdcCaseEventId',
             (a) => a?.mdcCaseEventId,
             (s) => s?.mdcCaseEventId,
@@ -180,33 +180,29 @@ class _$GetCaseEventHistoryApiRequestActions
       _$GetCaseEventHistoryApiRequestActions._(options());
 
   @override
-  GetCaseEventHistoryApiRequest get $initial => GetCaseEventHistoryApiRequest();
+  GetCaseEventHistoryApiRequest get initialState$ =>
+      GetCaseEventHistoryApiRequest();
 
   @override
-  GetCaseEventHistoryApiRequestBuilder $newBuilder() =>
+  GetCaseEventHistoryApiRequestBuilder newBuilder$() =>
       GetCaseEventHistoryApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.mdcCaseEventId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    mdcCaseEventId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    mdcCaseEventId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCaseEventHistoryApiRequest);
 }

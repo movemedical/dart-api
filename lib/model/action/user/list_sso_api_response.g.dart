@@ -159,15 +159,15 @@ typedef StatefulActionsOptions<ListSSOApiResponse, ListSSOApiResponseBuilder,
 
 class _$ListSSOApiResponseActions extends ListSSOApiResponseActions {
   final StatefulActionsOptions<ListSSOApiResponse, ListSSOApiResponseBuilder,
-      ListSSOApiResponseActions> $options;
+      ListSSOApiResponseActions> options$;
 
-  final ActionDispatcher<ListSSOApiResponse> $replace;
+  final ActionDispatcher<ListSSOApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListSSOApiSSO>> ssos;
 
-  _$ListSSOApiResponseActions._(this.$options)
-      : $replace = $options.action<ListSSOApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        ssos = $options.field<BuiltList<ListSSOApiSSO>>(
+  _$ListSSOApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListSSOApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        ssos = options$.field<BuiltList<ListSSOApiSSO>>(
             'ssos', (a) => a?.ssos, (s) => s?.ssos, (p, b) => p?.ssos = b),
         super._();
 
@@ -176,31 +176,27 @@ class _$ListSSOApiResponseActions extends ListSSOApiResponseActions {
       _$ListSSOApiResponseActions._(options());
 
   @override
-  ListSSOApiResponse get $initial => ListSSOApiResponse();
+  ListSSOApiResponse get initialState$ => ListSSOApiResponse();
 
   @override
-  ListSSOApiResponseBuilder $newBuilder() => ListSSOApiResponseBuilder();
+  ListSSOApiResponseBuilder newBuilder$() => ListSSOApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.ssos,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    ssos.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    ssos.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListSSOApiResponse);
 }

@@ -20,57 +20,28 @@ class _$CustomCaseDocApi extends CustomCaseDocApi {
       CommandState<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<CustomCaseDocApiRequest>,
           ApiResult<Nothing>>,
-      CustomCaseDocApi> $options;
+      CustomCaseDocApi> options$;
 
   final ActionDispatcher<
           CommandState<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Nothing>>>
-      $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Nothing>,
-          CustomCaseDocApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<Nothing>,
-          CustomCaseDocApi,
-          Command<ApiCommand<CustomCaseDocApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Nothing>,
-          CustomCaseDocApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Nothing>,
-          CustomCaseDocApi, CommandProgress>> $progress;
+      replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<CustomCaseDocApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CustomCaseDocApi._(this.$options)
-      : $replace = $options.action<
+  _$CustomCaseDocApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<CustomCaseDocApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CustomCaseDocApiRequest>,
-                ApiResult<Nothing>,
-                CustomCaseDocApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CustomCaseDocApiRequest>,
-                    ApiResult<Nothing>,
-                    CustomCaseDocApi,
-                    Command<ApiCommand<CustomCaseDocApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CustomCaseDocApiRequest>,
-                    ApiResult<Nothing>,
-                    CustomCaseDocApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CustomCaseDocApiRequest>,
-                ApiResult<Nothing>,
-                CustomCaseDocApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<CustomCaseDocApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CustomCaseDocApi(CustomCaseDocApiOptions options) =>
@@ -78,30 +49,23 @@ class _$CustomCaseDocApi extends CustomCaseDocApi {
 
   @override
   CommandState<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<CustomCaseDocApiRequest>,
+      get initialState$ => CommandState<ApiCommand<CustomCaseDocApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<CustomCaseDocApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<CustomCaseDocApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CustomCaseDocApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

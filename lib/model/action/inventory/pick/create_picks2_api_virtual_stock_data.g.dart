@@ -232,30 +232,30 @@ class _$CreatePicks2ApiVirtualStockDataActions
   final StatefulActionsOptions<
       CreatePicks2ApiVirtualStockData,
       CreatePicks2ApiVirtualStockDataBuilder,
-      CreatePicks2ApiVirtualStockDataActions> $options;
+      CreatePicks2ApiVirtualStockDataActions> options$;
 
-  final ActionDispatcher<CreatePicks2ApiVirtualStockData> $replace;
+  final ActionDispatcher<CreatePicks2ApiVirtualStockData> replace$;
   final FieldDispatcher<String> locationId;
   final FieldDispatcher<LocationType> locationType;
   final FieldDispatcher<String> containerId;
   final FieldDispatcher<StockContainerType> containerType;
 
-  _$CreatePicks2ApiVirtualStockDataActions._(this.$options)
-      : $replace = $options.action<CreatePicks2ApiVirtualStockData>(
-            '\$replace', (a) => a?.$replace),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+  _$CreatePicks2ApiVirtualStockDataActions._(this.options$)
+      : replace$ = options$.action<CreatePicks2ApiVirtualStockData>(
+            'replace\$', (a) => a?.replace$),
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        containerType = $options.field<StockContainerType>(
+        containerType = options$.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
@@ -267,18 +267,18 @@ class _$CreatePicks2ApiVirtualStockDataActions
       _$CreatePicks2ApiVirtualStockDataActions._(options());
 
   @override
-  CreatePicks2ApiVirtualStockData get $initial =>
+  CreatePicks2ApiVirtualStockData get initialState$ =>
       CreatePicks2ApiVirtualStockData();
 
   @override
-  CreatePicks2ApiVirtualStockDataBuilder $newBuilder() =>
+  CreatePicks2ApiVirtualStockDataBuilder newBuilder$() =>
       CreatePicks2ApiVirtualStockDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.locationId,
         this.locationType,
         this.containerId,
@@ -286,21 +286,16 @@ class _$CreatePicks2ApiVirtualStockDataActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    locationId.$reducer(reducer);
-    locationType.$reducer(reducer);
-    containerId.$reducer(reducer);
-    containerType.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    locationId.reducer$(reducer);
+    locationType.reducer$(reducer);
+    containerId.reducer$(reducer);
+    containerType.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreatePicks2ApiVirtualStockData);
 }

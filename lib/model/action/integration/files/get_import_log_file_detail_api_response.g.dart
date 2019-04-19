@@ -446,9 +446,9 @@ class _$GetImportLogFileDetailApiResponseActions
   final StatefulActionsOptions<
       GetImportLogFileDetailApiResponse,
       GetImportLogFileDetailApiResponseBuilder,
-      GetImportLogFileDetailApiResponseActions> $options;
+      GetImportLogFileDetailApiResponseActions> options$;
 
-  final ActionDispatcher<GetImportLogFileDetailApiResponse> $replace;
+  final ActionDispatcher<GetImportLogFileDetailApiResponse> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> jobKey;
   final FieldDispatcher<String> importLogId;
@@ -463,58 +463,58 @@ class _$GetImportLogFileDetailApiResponseActions
   final FieldDispatcher<int> skipRecordCount;
   final FieldDispatcher<ImportLogFileOutcome> outcome;
 
-  _$GetImportLogFileDetailApiResponseActions._(this.$options)
-      : $replace = $options.action<GetImportLogFileDetailApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetImportLogFileDetailApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetImportLogFileDetailApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        jobKey = $options.field<String>('jobKey', (a) => a?.jobKey,
+        jobKey = options$.field<String>('jobKey', (a) => a?.jobKey,
             (s) => s?.jobKey, (p, b) => p?.jobKey = b),
-        importLogId = $options.field<String>(
+        importLogId = options$.field<String>(
             'importLogId',
             (a) => a?.importLogId,
             (s) => s?.importLogId,
             (p, b) => p?.importLogId = b),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        fileName = $options.field<String>('fileName', (a) => a?.fileName,
+        fileName = options$.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
-        fileContentType = $options.field<String>(
+        fileContentType = options$.field<String>(
             'fileContentType',
             (a) => a?.fileContentType,
             (s) => s?.fileContentType,
             (p, b) => p?.fileContentType = b),
-        fileCreatedDate = $options.field<DateTime>(
+        fileCreatedDate = options$.field<DateTime>(
             'fileCreatedDate',
             (a) => a?.fileCreatedDate,
             (s) => s?.fileCreatedDate,
             (p, b) => p?.fileCreatedDate = b),
-        fileExpiresDate = $options.field<DateTime>(
+        fileExpiresDate = options$.field<DateTime>(
             'fileExpiresDate',
             (a) => a?.fileExpiresDate,
             (s) => s?.fileExpiresDate,
             (p, b) => p?.fileExpiresDate = b),
-        totalRecordCount = $options.field<int>(
+        totalRecordCount = options$.field<int>(
             'totalRecordCount',
             (a) => a?.totalRecordCount,
             (s) => s?.totalRecordCount,
             (p, b) => p?.totalRecordCount = b),
-        successRecordCount = $options.field<int>(
+        successRecordCount = options$.field<int>(
             'successRecordCount',
             (a) => a?.successRecordCount,
             (s) => s?.successRecordCount,
             (p, b) => p?.successRecordCount = b),
-        failRecordCount = $options.field<int>(
+        failRecordCount = options$.field<int>(
             'failRecordCount',
             (a) => a?.failRecordCount,
             (s) => s?.failRecordCount,
             (p, b) => p?.failRecordCount = b),
-        skipRecordCount = $options.field<int>(
+        skipRecordCount = options$.field<int>(
             'skipRecordCount',
             (a) => a?.skipRecordCount,
             (s) => s?.skipRecordCount,
             (p, b) => p?.skipRecordCount = b),
-        outcome = $options.field<ImportLogFileOutcome>('outcome',
+        outcome = options$.field<ImportLogFileOutcome>('outcome',
             (a) => a?.outcome, (s) => s?.outcome, (p, b) => p?.outcome = b),
         super._();
 
@@ -523,18 +523,18 @@ class _$GetImportLogFileDetailApiResponseActions
       _$GetImportLogFileDetailApiResponseActions._(options());
 
   @override
-  GetImportLogFileDetailApiResponse get $initial =>
+  GetImportLogFileDetailApiResponse get initialState$ =>
       GetImportLogFileDetailApiResponse();
 
   @override
-  GetImportLogFileDetailApiResponseBuilder $newBuilder() =>
+  GetImportLogFileDetailApiResponseBuilder newBuilder$() =>
       GetImportLogFileDetailApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.jobKey,
         this.importLogId,
@@ -551,30 +551,25 @@ class _$GetImportLogFileDetailApiResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    jobKey.$reducer(reducer);
-    importLogId.$reducer(reducer);
-    fileId.$reducer(reducer);
-    fileName.$reducer(reducer);
-    fileContentType.$reducer(reducer);
-    fileCreatedDate.$reducer(reducer);
-    fileExpiresDate.$reducer(reducer);
-    totalRecordCount.$reducer(reducer);
-    successRecordCount.$reducer(reducer);
-    failRecordCount.$reducer(reducer);
-    skipRecordCount.$reducer(reducer);
-    outcome.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    jobKey.reducer$(reducer);
+    importLogId.reducer$(reducer);
+    fileId.reducer$(reducer);
+    fileName.reducer$(reducer);
+    fileContentType.reducer$(reducer);
+    fileCreatedDate.reducer$(reducer);
+    fileExpiresDate.reducer$(reducer);
+    totalRecordCount.reducer$(reducer);
+    successRecordCount.reducer$(reducer);
+    failRecordCount.reducer$(reducer);
+    skipRecordCount.reducer$(reducer);
+    outcome.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetImportLogFileDetailApiResponse);
 }

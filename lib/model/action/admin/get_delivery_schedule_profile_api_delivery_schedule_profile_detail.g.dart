@@ -372,10 +372,10 @@ class _$GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailActions
           GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetail,
           GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailBuilder,
           GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailActions>
-      $options;
+      options$;
 
   final ActionDispatcher<
-      GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetail> $replace;
+      GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> orgId;
@@ -387,36 +387,36 @@ class _$GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailActions
   final FieldDispatcher<int> implantDeliveryLeadTimeHours;
 
   _$GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailActions._(
-      this.$options)
-      : $replace = $options
+      this.options$)
+      : replace$ = options$
             .action<GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetail>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgName = $options.field<String>('orgName', (a) => a?.orgName,
+        orgName = options$.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        instrumentDeliveryLeadTimeDays = $options.field<int>(
+        instrumentDeliveryLeadTimeDays = options$.field<int>(
             'instrumentDeliveryLeadTimeDays',
             (a) => a?.instrumentDeliveryLeadTimeDays,
             (s) => s?.instrumentDeliveryLeadTimeDays,
             (p, b) => p?.instrumentDeliveryLeadTimeDays = b),
-        instrumentDeliveryLeadTimeHours = $options.field<int>(
+        instrumentDeliveryLeadTimeHours = options$.field<int>(
             'instrumentDeliveryLeadTimeHours',
             (a) => a?.instrumentDeliveryLeadTimeHours,
             (s) => s?.instrumentDeliveryLeadTimeHours,
             (p, b) => p?.instrumentDeliveryLeadTimeHours = b),
-        implantDeliveryLeadTimeDays = $options.field<int>(
+        implantDeliveryLeadTimeDays = options$.field<int>(
             'implantDeliveryLeadTimeDays',
             (a) => a?.implantDeliveryLeadTimeDays,
             (s) => s?.implantDeliveryLeadTimeDays,
             (p, b) => p?.implantDeliveryLeadTimeDays = b),
-        implantDeliveryLeadTimeHours = $options.field<int>(
+        implantDeliveryLeadTimeHours = options$.field<int>(
             'implantDeliveryLeadTimeHours',
             (a) => a?.implantDeliveryLeadTimeHours,
             (s) => s?.implantDeliveryLeadTimeHours,
@@ -430,19 +430,20 @@ class _$GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailActions
           ._(options());
 
   @override
-  GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetail get $initial =>
-      GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetail();
+  GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetail
+      get initialState$ =>
+          GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetail();
 
   @override
   GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailBuilder
-      $newBuilder() =>
+      newBuilder$() =>
           GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.orgId,
@@ -455,26 +456,21 @@ class _$GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    orgId.$reducer(reducer);
-    orgName.$reducer(reducer);
-    active.$reducer(reducer);
-    instrumentDeliveryLeadTimeDays.$reducer(reducer);
-    instrumentDeliveryLeadTimeHours.$reducer(reducer);
-    implantDeliveryLeadTimeDays.$reducer(reducer);
-    implantDeliveryLeadTimeHours.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    orgId.reducer$(reducer);
+    orgName.reducer$(reducer);
+    active.reducer$(reducer);
+    instrumentDeliveryLeadTimeDays.reducer$(reducer);
+    instrumentDeliveryLeadTimeHours.reducer$(reducer);
+    implantDeliveryLeadTimeDays.reducer$(reducer);
+    implantDeliveryLeadTimeHours.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetail);
 }

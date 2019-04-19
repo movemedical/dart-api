@@ -198,16 +198,16 @@ class _$RequestAuditItemExportDocApiRequestActions
   final StatefulActionsOptions<
       RequestAuditItemExportDocApiRequest,
       RequestAuditItemExportDocApiRequestBuilder,
-      RequestAuditItemExportDocApiRequestActions> $options;
+      RequestAuditItemExportDocApiRequestActions> options$;
 
-  final ActionDispatcher<RequestAuditItemExportDocApiRequest> $replace;
+  final ActionDispatcher<RequestAuditItemExportDocApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<String> auditId;
 
-  _$RequestAuditItemExportDocApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestAuditItemExportDocApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestAuditItemExportDocApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestAuditItemExportDocApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -216,7 +216,7 @@ class _$RequestAuditItemExportDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         super._();
 
@@ -225,42 +225,37 @@ class _$RequestAuditItemExportDocApiRequestActions
       _$RequestAuditItemExportDocApiRequestActions._(options());
 
   @override
-  RequestAuditItemExportDocApiRequest get $initial =>
+  RequestAuditItemExportDocApiRequest get initialState$ =>
       RequestAuditItemExportDocApiRequest();
 
   @override
-  RequestAuditItemExportDocApiRequestBuilder $newBuilder() =>
+  RequestAuditItemExportDocApiRequestBuilder newBuilder$() =>
       RequestAuditItemExportDocApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    auditId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    auditId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestAuditItemExportDocApiRequest);
 }

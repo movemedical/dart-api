@@ -189,19 +189,19 @@ class _$ListSurgeonPhysiciansForSchedulingApiRequestActions
   final StatefulActionsOptions<
       ListSurgeonPhysiciansForSchedulingApiRequest,
       ListSurgeonPhysiciansForSchedulingApiRequestBuilder,
-      ListSurgeonPhysiciansForSchedulingApiRequestActions> $options;
+      ListSurgeonPhysiciansForSchedulingApiRequestActions> options$;
 
-  final ActionDispatcher<ListSurgeonPhysiciansForSchedulingApiRequest> $replace;
+  final ActionDispatcher<ListSurgeonPhysiciansForSchedulingApiRequest> replace$;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> search;
 
-  _$ListSurgeonPhysiciansForSchedulingApiRequestActions._(this.$options)
-      : $replace =
-            $options.action<ListSurgeonPhysiciansForSchedulingApiRequest>(
-                '\$replace', (a) => a?.$replace),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+  _$ListSurgeonPhysiciansForSchedulingApiRequestActions._(this.options$)
+      : replace$ =
+            options$.action<ListSurgeonPhysiciansForSchedulingApiRequest>(
+                'replace\$', (a) => a?.replace$),
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -210,36 +210,31 @@ class _$ListSurgeonPhysiciansForSchedulingApiRequestActions
       _$ListSurgeonPhysiciansForSchedulingApiRequestActions._(options());
 
   @override
-  ListSurgeonPhysiciansForSchedulingApiRequest get $initial =>
+  ListSurgeonPhysiciansForSchedulingApiRequest get initialState$ =>
       ListSurgeonPhysiciansForSchedulingApiRequest();
 
   @override
-  ListSurgeonPhysiciansForSchedulingApiRequestBuilder $newBuilder() =>
+  ListSurgeonPhysiciansForSchedulingApiRequestBuilder newBuilder$() =>
       ListSurgeonPhysiciansForSchedulingApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.facilityId,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    search.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    search.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListSurgeonPhysiciansForSchedulingApiRequest);
 }

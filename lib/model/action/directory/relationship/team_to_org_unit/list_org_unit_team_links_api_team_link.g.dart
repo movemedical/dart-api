@@ -278,9 +278,9 @@ class _$ListOrgUnitTeamLinksApiTeamLinkActions
   final StatefulActionsOptions<
       ListOrgUnitTeamLinksApiTeamLink,
       ListOrgUnitTeamLinksApiTeamLinkBuilder,
-      ListOrgUnitTeamLinksApiTeamLinkActions> $options;
+      ListOrgUnitTeamLinksApiTeamLinkActions> options$;
 
-  final ActionDispatcher<ListOrgUnitTeamLinksApiTeamLink> $replace;
+  final ActionDispatcher<ListOrgUnitTeamLinksApiTeamLink> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> teamId;
   final FieldDispatcher<String> teamName;
@@ -288,26 +288,26 @@ class _$ListOrgUnitTeamLinksApiTeamLinkActions
   final FieldDispatcher<int> numberOfPermissionsSet;
   final FieldDispatcher<int> numberOfInventoryTypes;
 
-  _$ListOrgUnitTeamLinksApiTeamLinkActions._(this.$options)
-      : $replace = $options.action<ListOrgUnitTeamLinksApiTeamLink>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListOrgUnitTeamLinksApiTeamLinkActions._(this.options$)
+      : replace$ = options$.action<ListOrgUnitTeamLinksApiTeamLink>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        teamName = $options.field<String>('teamName', (a) => a?.teamName,
+        teamName = options$.field<String>('teamName', (a) => a?.teamName,
             (s) => s?.teamName, (p, b) => p?.teamName = b),
-        ouAccessType = $options.field<OuAccessType>(
+        ouAccessType = options$.field<OuAccessType>(
             'ouAccessType',
             (a) => a?.ouAccessType,
             (s) => s?.ouAccessType,
             (p, b) => p?.ouAccessType = b),
-        numberOfPermissionsSet = $options.field<int>(
+        numberOfPermissionsSet = options$.field<int>(
             'numberOfPermissionsSet',
             (a) => a?.numberOfPermissionsSet,
             (s) => s?.numberOfPermissionsSet,
             (p, b) => p?.numberOfPermissionsSet = b),
-        numberOfInventoryTypes = $options.field<int>(
+        numberOfInventoryTypes = options$.field<int>(
             'numberOfInventoryTypes',
             (a) => a?.numberOfInventoryTypes,
             (s) => s?.numberOfInventoryTypes,
@@ -319,18 +319,18 @@ class _$ListOrgUnitTeamLinksApiTeamLinkActions
       _$ListOrgUnitTeamLinksApiTeamLinkActions._(options());
 
   @override
-  ListOrgUnitTeamLinksApiTeamLink get $initial =>
+  ListOrgUnitTeamLinksApiTeamLink get initialState$ =>
       ListOrgUnitTeamLinksApiTeamLink();
 
   @override
-  ListOrgUnitTeamLinksApiTeamLinkBuilder $newBuilder() =>
+  ListOrgUnitTeamLinksApiTeamLinkBuilder newBuilder$() =>
       ListOrgUnitTeamLinksApiTeamLinkBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.teamId,
         this.teamName,
@@ -340,23 +340,18 @@ class _$ListOrgUnitTeamLinksApiTeamLinkActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    teamId.$reducer(reducer);
-    teamName.$reducer(reducer);
-    ouAccessType.$reducer(reducer);
-    numberOfPermissionsSet.$reducer(reducer);
-    numberOfInventoryTypes.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    teamId.reducer$(reducer);
+    teamName.reducer$(reducer);
+    ouAccessType.reducer$(reducer);
+    numberOfPermissionsSet.reducer$(reducer);
+    numberOfInventoryTypes.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListOrgUnitTeamLinksApiTeamLink);
 }

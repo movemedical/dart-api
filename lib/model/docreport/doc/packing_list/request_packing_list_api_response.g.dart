@@ -159,15 +159,15 @@ class _$RequestPackingListApiResponseActions
   final StatefulActionsOptions<
       RequestPackingListApiResponse,
       RequestPackingListApiResponseBuilder,
-      RequestPackingListApiResponseActions> $options;
+      RequestPackingListApiResponseActions> options$;
 
-  final ActionDispatcher<RequestPackingListApiResponse> $replace;
+  final ActionDispatcher<RequestPackingListApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
 
-  _$RequestPackingListApiResponseActions._(this.$options)
-      : $replace = $options.action<RequestPackingListApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$RequestPackingListApiResponseActions._(this.options$)
+      : replace$ = options$.action<RequestPackingListApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -179,33 +179,29 @@ class _$RequestPackingListApiResponseActions
       _$RequestPackingListApiResponseActions._(options());
 
   @override
-  RequestPackingListApiResponse get $initial => RequestPackingListApiResponse();
+  RequestPackingListApiResponse get initialState$ =>
+      RequestPackingListApiResponse();
 
   @override
-  RequestPackingListApiResponseBuilder $newBuilder() =>
+  RequestPackingListApiResponseBuilder newBuilder$() =>
       RequestPackingListApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestPackingListApiResponse);
 }

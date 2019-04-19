@@ -215,21 +215,21 @@ class _$SaveOrderLinesApiRequestActions
   final StatefulActionsOptions<
       SaveOrderLinesApiRequest,
       SaveOrderLinesApiRequestBuilder,
-      SaveOrderLinesApiRequestActions> $options;
+      SaveOrderLinesApiRequestActions> options$;
 
-  final ActionDispatcher<SaveOrderLinesApiRequest> $replace;
+  final ActionDispatcher<SaveOrderLinesApiRequest> replace$;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<bool> sendToErp;
   final FieldDispatcher<BuiltList<SaveOrderLinesApiOrderLine>> lines;
 
-  _$SaveOrderLinesApiRequestActions._(this.$options)
-      : $replace = $options.action<SaveOrderLinesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$SaveOrderLinesApiRequestActions._(this.options$)
+      : replace$ = options$.action<SaveOrderLinesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        sendToErp = $options.field<bool>('sendToErp', (a) => a?.sendToErp,
+        sendToErp = options$.field<bool>('sendToErp', (a) => a?.sendToErp,
             (s) => s?.sendToErp, (p, b) => p?.sendToErp = b),
-        lines = $options.field<BuiltList<SaveOrderLinesApiOrderLine>>(
+        lines = options$.field<BuiltList<SaveOrderLinesApiOrderLine>>(
             'lines', (a) => a?.lines, (s) => s?.lines, (p, b) => p?.lines = b),
         super._();
 
@@ -238,36 +238,32 @@ class _$SaveOrderLinesApiRequestActions
       _$SaveOrderLinesApiRequestActions._(options());
 
   @override
-  SaveOrderLinesApiRequest get $initial => SaveOrderLinesApiRequest();
+  SaveOrderLinesApiRequest get initialState$ => SaveOrderLinesApiRequest();
 
   @override
-  SaveOrderLinesApiRequestBuilder $newBuilder() =>
+  SaveOrderLinesApiRequestBuilder newBuilder$() =>
       SaveOrderLinesApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
         this.sendToErp,
         this.lines,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
-    sendToErp.$reducer(reducer);
-    lines.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
+    sendToErp.reducer$(reducer);
+    lines.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SaveOrderLinesApiRequest);
 }

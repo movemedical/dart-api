@@ -203,21 +203,21 @@ class _$GetDeliveryScheduleProfileApiRequestActions
   final StatefulActionsOptions<
       GetDeliveryScheduleProfileApiRequest,
       GetDeliveryScheduleProfileApiRequestBuilder,
-      GetDeliveryScheduleProfileApiRequestActions> $options;
+      GetDeliveryScheduleProfileApiRequestActions> options$;
 
-  final ActionDispatcher<GetDeliveryScheduleProfileApiRequest> $replace;
+  final ActionDispatcher<GetDeliveryScheduleProfileApiRequest> replace$;
   final FieldDispatcher<String> profileId;
   final FieldDispatcher<String> search;
   final FieldDispatcher<bool> active;
 
-  _$GetDeliveryScheduleProfileApiRequestActions._(this.$options)
-      : $replace = $options.action<GetDeliveryScheduleProfileApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        profileId = $options.field<String>('profileId', (a) => a?.profileId,
+  _$GetDeliveryScheduleProfileApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetDeliveryScheduleProfileApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        profileId = options$.field<String>('profileId', (a) => a?.profileId,
             (s) => s?.profileId, (p, b) => p?.profileId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -226,38 +226,33 @@ class _$GetDeliveryScheduleProfileApiRequestActions
       _$GetDeliveryScheduleProfileApiRequestActions._(options());
 
   @override
-  GetDeliveryScheduleProfileApiRequest get $initial =>
+  GetDeliveryScheduleProfileApiRequest get initialState$ =>
       GetDeliveryScheduleProfileApiRequest();
 
   @override
-  GetDeliveryScheduleProfileApiRequestBuilder $newBuilder() =>
+  GetDeliveryScheduleProfileApiRequestBuilder newBuilder$() =>
       GetDeliveryScheduleProfileApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.profileId,
         this.search,
         this.active,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    profileId.$reducer(reducer);
-    search.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    profileId.reducer$(reducer);
+    search.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetDeliveryScheduleProfileApiRequest);
 }

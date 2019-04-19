@@ -276,9 +276,9 @@ class _$SaveRelationshipTypeApiRequestActions
   final StatefulActionsOptions<
       SaveRelationshipTypeApiRequest,
       SaveRelationshipTypeApiRequestBuilder,
-      SaveRelationshipTypeApiRequestActions> $options;
+      SaveRelationshipTypeApiRequestActions> options$;
 
-  final ActionDispatcher<SaveRelationshipTypeApiRequest> $replace;
+  final ActionDispatcher<SaveRelationshipTypeApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> rootOrgUnitId;
   final FieldDispatcher<String> name;
@@ -286,23 +286,23 @@ class _$SaveRelationshipTypeApiRequestActions
   final FieldDispatcher<RelationshipLinkType> linkType;
   final FieldDispatcher<bool> active;
 
-  _$SaveRelationshipTypeApiRequestActions._(this.$options)
-      : $replace = $options.action<SaveRelationshipTypeApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$SaveRelationshipTypeApiRequestActions._(this.options$)
+      : replace$ = options$.action<SaveRelationshipTypeApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        rootOrgUnitId = $options.field<String>(
+        rootOrgUnitId = options$.field<String>(
             'rootOrgUnitId',
             (a) => a?.rootOrgUnitId,
             (s) => s?.rootOrgUnitId,
             (p, b) => p?.rootOrgUnitId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        code = $options.field<String>(
+        code = options$.field<String>(
             'code', (a) => a?.code, (s) => s?.code, (p, b) => p?.code = b),
-        linkType = $options.field<RelationshipLinkType>('linkType',
+        linkType = options$.field<RelationshipLinkType>('linkType',
             (a) => a?.linkType, (s) => s?.linkType, (p, b) => p?.linkType = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -311,18 +311,18 @@ class _$SaveRelationshipTypeApiRequestActions
       _$SaveRelationshipTypeApiRequestActions._(options());
 
   @override
-  SaveRelationshipTypeApiRequest get $initial =>
+  SaveRelationshipTypeApiRequest get initialState$ =>
       SaveRelationshipTypeApiRequest();
 
   @override
-  SaveRelationshipTypeApiRequestBuilder $newBuilder() =>
+  SaveRelationshipTypeApiRequestBuilder newBuilder$() =>
       SaveRelationshipTypeApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.rootOrgUnitId,
         this.name,
@@ -332,23 +332,18 @@ class _$SaveRelationshipTypeApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    rootOrgUnitId.$reducer(reducer);
-    name.$reducer(reducer);
-    code.$reducer(reducer);
-    linkType.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    rootOrgUnitId.reducer$(reducer);
+    name.reducer$(reducer);
+    code.reducer$(reducer);
+    linkType.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SaveRelationshipTypeApiRequest);
 }

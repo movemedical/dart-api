@@ -176,21 +176,21 @@ typedef StatefulActionsOptions<
 
 class _$GetKitStockApiRequestActions extends GetKitStockApiRequestActions {
   final StatefulActionsOptions<GetKitStockApiRequest,
-      GetKitStockApiRequestBuilder, GetKitStockApiRequestActions> $options;
+      GetKitStockApiRequestBuilder, GetKitStockApiRequestActions> options$;
 
-  final ActionDispatcher<GetKitStockApiRequest> $replace;
+  final ActionDispatcher<GetKitStockApiRequest> replace$;
   final FieldDispatcher<String> kitStockIdOrStockSummaryId;
   final FieldDispatcher<bool> skipPresence;
 
-  _$GetKitStockApiRequestActions._(this.$options)
-      : $replace = $options.action<GetKitStockApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        kitStockIdOrStockSummaryId = $options.field<String>(
+  _$GetKitStockApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetKitStockApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        kitStockIdOrStockSummaryId = options$.field<String>(
             'kitStockIdOrStockSummaryId',
             (a) => a?.kitStockIdOrStockSummaryId,
             (s) => s?.kitStockIdOrStockSummaryId,
             (p, b) => p?.kitStockIdOrStockSummaryId = b),
-        skipPresence = $options.field<bool>(
+        skipPresence = options$.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -202,33 +202,29 @@ class _$GetKitStockApiRequestActions extends GetKitStockApiRequestActions {
       _$GetKitStockApiRequestActions._(options());
 
   @override
-  GetKitStockApiRequest get $initial => GetKitStockApiRequest();
+  GetKitStockApiRequest get initialState$ => GetKitStockApiRequest();
 
   @override
-  GetKitStockApiRequestBuilder $newBuilder() => GetKitStockApiRequestBuilder();
+  GetKitStockApiRequestBuilder newBuilder$() => GetKitStockApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.kitStockIdOrStockSummaryId,
         this.skipPresence,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    kitStockIdOrStockSummaryId.$reducer(reducer);
-    skipPresence.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    kitStockIdOrStockSummaryId.reducer$(reducer);
+    skipPresence.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetKitStockApiRequest);
 }

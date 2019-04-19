@@ -208,20 +208,20 @@ class _$ListContainersToBeCountedApiContainerToBeCountedActions
   final StatefulActionsOptions<
       ListContainersToBeCountedApiContainerToBeCounted,
       ListContainersToBeCountedApiContainerToBeCountedBuilder,
-      ListContainersToBeCountedApiContainerToBeCountedActions> $options;
+      ListContainersToBeCountedApiContainerToBeCountedActions> options$;
 
   final ActionDispatcher<ListContainersToBeCountedApiContainerToBeCounted>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
   final StockContainerActions container;
 
-  _$ListContainersToBeCountedApiContainerToBeCountedActions._(this.$options)
-      : $replace =
-            $options.action<ListContainersToBeCountedApiContainerToBeCounted>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListContainersToBeCountedApiContainerToBeCountedActions._(this.options$)
+      : replace$ =
+            options$.action<ListContainersToBeCountedApiContainerToBeCounted>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        container = StockContainerActions(() => $options.stateful<
+        container = StockContainerActions(() => options$.stateful<
                 StockContainer, StockContainerBuilder, StockContainerActions>(
             'container',
             (a) => a.container,
@@ -236,42 +236,37 @@ class _$ListContainersToBeCountedApiContainerToBeCountedActions
       _$ListContainersToBeCountedApiContainerToBeCountedActions._(options());
 
   @override
-  ListContainersToBeCountedApiContainerToBeCounted get $initial =>
+  ListContainersToBeCountedApiContainerToBeCounted get initialState$ =>
       ListContainersToBeCountedApiContainerToBeCounted();
 
   @override
-  ListContainersToBeCountedApiContainerToBeCountedBuilder $newBuilder() =>
+  ListContainersToBeCountedApiContainerToBeCountedBuilder newBuilder$() =>
       ListContainersToBeCountedApiContainerToBeCountedBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.container,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    container.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    container.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    container.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    container.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListContainersToBeCountedApiContainerToBeCounted);
 }

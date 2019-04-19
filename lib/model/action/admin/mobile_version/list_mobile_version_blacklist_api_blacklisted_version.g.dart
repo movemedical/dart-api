@@ -211,23 +211,23 @@ class _$ListMobileVersionBlacklistApiBlacklistedVersionActions
   final StatefulActionsOptions<
       ListMobileVersionBlacklistApiBlacklistedVersion,
       ListMobileVersionBlacklistApiBlacklistedVersionBuilder,
-      ListMobileVersionBlacklistApiBlacklistedVersionActions> $options;
+      ListMobileVersionBlacklistApiBlacklistedVersionActions> options$;
 
   final ActionDispatcher<ListMobileVersionBlacklistApiBlacklistedVersion>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<MobilePlatform> platform;
   final FieldDispatcher<String> versionNumber;
 
-  _$ListMobileVersionBlacklistApiBlacklistedVersionActions._(this.$options)
-      : $replace =
-            $options.action<ListMobileVersionBlacklistApiBlacklistedVersion>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListMobileVersionBlacklistApiBlacklistedVersionActions._(this.options$)
+      : replace$ =
+            options$.action<ListMobileVersionBlacklistApiBlacklistedVersion>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        platform = $options.field<MobilePlatform>('platform',
+        platform = options$.field<MobilePlatform>('platform',
             (a) => a?.platform, (s) => s?.platform, (p, b) => p?.platform = b),
-        versionNumber = $options.field<String>(
+        versionNumber = options$.field<String>(
             'versionNumber',
             (a) => a?.versionNumber,
             (s) => s?.versionNumber,
@@ -240,38 +240,33 @@ class _$ListMobileVersionBlacklistApiBlacklistedVersionActions
       _$ListMobileVersionBlacklistApiBlacklistedVersionActions._(options());
 
   @override
-  ListMobileVersionBlacklistApiBlacklistedVersion get $initial =>
+  ListMobileVersionBlacklistApiBlacklistedVersion get initialState$ =>
       ListMobileVersionBlacklistApiBlacklistedVersion();
 
   @override
-  ListMobileVersionBlacklistApiBlacklistedVersionBuilder $newBuilder() =>
+  ListMobileVersionBlacklistApiBlacklistedVersionBuilder newBuilder$() =>
       ListMobileVersionBlacklistApiBlacklistedVersionBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.platform,
         this.versionNumber,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    platform.$reducer(reducer);
-    versionNumber.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    platform.reducer$(reducer);
+    versionNumber.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListMobileVersionBlacklistApiBlacklistedVersion);
 }

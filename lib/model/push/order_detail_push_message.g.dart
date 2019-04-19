@@ -149,15 +149,15 @@ typedef StatefulActionsOptions<
 
 class _$OrderDetailPushMessageActions extends OrderDetailPushMessageActions {
   final StatefulActionsOptions<OrderDetailPushMessage,
-      OrderDetailPushMessageBuilder, OrderDetailPushMessageActions> $options;
+      OrderDetailPushMessageBuilder, OrderDetailPushMessageActions> options$;
 
-  final ActionDispatcher<OrderDetailPushMessage> $replace;
+  final ActionDispatcher<OrderDetailPushMessage> replace$;
   final FieldDispatcher<String> content;
 
-  _$OrderDetailPushMessageActions._(this.$options)
-      : $replace = $options.action<OrderDetailPushMessage>(
-            '\$replace', (a) => a?.$replace),
-        content = $options.field<String>('content', (a) => a?.content,
+  _$OrderDetailPushMessageActions._(this.options$)
+      : replace$ = options$.action<OrderDetailPushMessage>(
+            'replace\$', (a) => a?.replace$),
+        content = options$.field<String>('content', (a) => a?.content,
             (s) => s?.content, (p, b) => p?.content = b),
         super._();
 
@@ -166,32 +166,28 @@ class _$OrderDetailPushMessageActions extends OrderDetailPushMessageActions {
       _$OrderDetailPushMessageActions._(options());
 
   @override
-  OrderDetailPushMessage get $initial => OrderDetailPushMessage();
+  OrderDetailPushMessage get initialState$ => OrderDetailPushMessage();
 
   @override
-  OrderDetailPushMessageBuilder $newBuilder() =>
+  OrderDetailPushMessageBuilder newBuilder$() =>
       OrderDetailPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.content,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    content.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    content.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(OrderDetailPushMessage);
 }

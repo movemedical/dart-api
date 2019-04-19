@@ -183,18 +183,18 @@ class _$EditOrderShippingServiceApiRequestActions
   final StatefulActionsOptions<
       EditOrderShippingServiceApiRequest,
       EditOrderShippingServiceApiRequestBuilder,
-      EditOrderShippingServiceApiRequestActions> $options;
+      EditOrderShippingServiceApiRequestActions> options$;
 
-  final ActionDispatcher<EditOrderShippingServiceApiRequest> $replace;
+  final ActionDispatcher<EditOrderShippingServiceApiRequest> replace$;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<String> shippingServiceId;
 
-  _$EditOrderShippingServiceApiRequestActions._(this.$options)
-      : $replace = $options.action<EditOrderShippingServiceApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$EditOrderShippingServiceApiRequestActions._(this.options$)
+      : replace$ = options$.action<EditOrderShippingServiceApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        shippingServiceId = $options.field<String>(
+        shippingServiceId = options$.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
@@ -206,36 +206,31 @@ class _$EditOrderShippingServiceApiRequestActions
       _$EditOrderShippingServiceApiRequestActions._(options());
 
   @override
-  EditOrderShippingServiceApiRequest get $initial =>
+  EditOrderShippingServiceApiRequest get initialState$ =>
       EditOrderShippingServiceApiRequest();
 
   @override
-  EditOrderShippingServiceApiRequestBuilder $newBuilder() =>
+  EditOrderShippingServiceApiRequestBuilder newBuilder$() =>
       EditOrderShippingServiceApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
         this.shippingServiceId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
-    shippingServiceId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
+    shippingServiceId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(EditOrderShippingServiceApiRequest);
 }

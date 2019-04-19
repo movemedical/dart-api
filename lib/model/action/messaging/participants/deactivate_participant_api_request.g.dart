@@ -161,15 +161,15 @@ class _$DeactivateParticipantApiRequestActions
   final StatefulActionsOptions<
       DeactivateParticipantApiRequest,
       DeactivateParticipantApiRequestBuilder,
-      DeactivateParticipantApiRequestActions> $options;
+      DeactivateParticipantApiRequestActions> options$;
 
-  final ActionDispatcher<DeactivateParticipantApiRequest> $replace;
+  final ActionDispatcher<DeactivateParticipantApiRequest> replace$;
   final FieldDispatcher<String> participantId;
 
-  _$DeactivateParticipantApiRequestActions._(this.$options)
-      : $replace = $options.action<DeactivateParticipantApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        participantId = $options.field<String>(
+  _$DeactivateParticipantApiRequestActions._(this.options$)
+      : replace$ = options$.action<DeactivateParticipantApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        participantId = options$.field<String>(
             'participantId',
             (a) => a?.participantId,
             (s) => s?.participantId,
@@ -181,34 +181,29 @@ class _$DeactivateParticipantApiRequestActions
       _$DeactivateParticipantApiRequestActions._(options());
 
   @override
-  DeactivateParticipantApiRequest get $initial =>
+  DeactivateParticipantApiRequest get initialState$ =>
       DeactivateParticipantApiRequest();
 
   @override
-  DeactivateParticipantApiRequestBuilder $newBuilder() =>
+  DeactivateParticipantApiRequestBuilder newBuilder$() =>
       DeactivateParticipantApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.participantId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    participantId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    participantId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(DeactivateParticipantApiRequest);
 }

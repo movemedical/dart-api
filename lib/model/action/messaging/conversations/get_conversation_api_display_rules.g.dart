@@ -205,24 +205,24 @@ class _$GetConversationApiDisplayRulesActions
   final StatefulActionsOptions<
       GetConversationApiDisplayRules,
       GetConversationApiDisplayRulesBuilder,
-      GetConversationApiDisplayRulesActions> $options;
+      GetConversationApiDisplayRulesActions> options$;
 
-  final ActionDispatcher<GetConversationApiDisplayRules> $replace;
+  final ActionDispatcher<GetConversationApiDisplayRules> replace$;
   final FieldDispatcher<bool> canStop;
   final FieldDispatcher<bool> canAddMessage;
   final FieldDispatcher<bool> canAddParticipants;
 
-  _$GetConversationApiDisplayRulesActions._(this.$options)
-      : $replace = $options.action<GetConversationApiDisplayRules>(
-            '\$replace', (a) => a?.$replace),
-        canStop = $options.field<bool>('canStop', (a) => a?.canStop,
+  _$GetConversationApiDisplayRulesActions._(this.options$)
+      : replace$ = options$.action<GetConversationApiDisplayRules>(
+            'replace\$', (a) => a?.replace$),
+        canStop = options$.field<bool>('canStop', (a) => a?.canStop,
             (s) => s?.canStop, (p, b) => p?.canStop = b),
-        canAddMessage = $options.field<bool>(
+        canAddMessage = options$.field<bool>(
             'canAddMessage',
             (a) => a?.canAddMessage,
             (s) => s?.canAddMessage,
             (p, b) => p?.canAddMessage = b),
-        canAddParticipants = $options.field<bool>(
+        canAddParticipants = options$.field<bool>(
             'canAddParticipants',
             (a) => a?.canAddParticipants,
             (s) => s?.canAddParticipants,
@@ -234,38 +234,33 @@ class _$GetConversationApiDisplayRulesActions
       _$GetConversationApiDisplayRulesActions._(options());
 
   @override
-  GetConversationApiDisplayRules get $initial =>
+  GetConversationApiDisplayRules get initialState$ =>
       GetConversationApiDisplayRules();
 
   @override
-  GetConversationApiDisplayRulesBuilder $newBuilder() =>
+  GetConversationApiDisplayRulesBuilder newBuilder$() =>
       GetConversationApiDisplayRulesBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.canStop,
         this.canAddMessage,
         this.canAddParticipants,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    canStop.$reducer(reducer);
-    canAddMessage.$reducer(reducer);
-    canAddParticipants.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    canStop.reducer$(reducer);
+    canAddMessage.reducer$(reducer);
+    canAddParticipants.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetConversationApiDisplayRules);
 }

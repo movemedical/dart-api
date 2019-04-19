@@ -488,9 +488,9 @@ class _$CreateDeliverToAddressApiRequestActions
   final StatefulActionsOptions<
       CreateDeliverToAddressApiRequest,
       CreateDeliverToAddressApiRequestBuilder,
-      CreateDeliverToAddressApiRequestActions> $options;
+      CreateDeliverToAddressApiRequestActions> options$;
 
-  final ActionDispatcher<CreateDeliverToAddressApiRequest> $replace;
+  final ActionDispatcher<CreateDeliverToAddressApiRequest> replace$;
   final FieldDispatcher<String> hcrId;
   final FieldDispatcher<String> customerId;
   final FieldDispatcher<String> facilityId;
@@ -507,44 +507,44 @@ class _$CreateDeliverToAddressApiRequestActions
   final FieldDispatcher<double> latitude;
   final FieldDispatcher<double> longitude;
 
-  _$CreateDeliverToAddressApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateDeliverToAddressApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        hcrId = $options.field<String>(
+  _$CreateDeliverToAddressApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateDeliverToAddressApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        hcrId = options$.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        customerReference = $options.field<String>(
+        customerReference = options$.field<String>(
             'customerReference',
             (a) => a?.customerReference,
             (s) => s?.customerReference,
             (p, b) => p?.customerReference = b),
-        customerKey = $options.field<String>(
+        customerKey = options$.field<String>(
             'customerKey',
             (a) => a?.customerKey,
             (s) => s?.customerKey,
             (p, b) => p?.customerKey = b),
-        line1 = $options.field<String>(
+        line1 = options$.field<String>(
             'line1', (a) => a?.line1, (s) => s?.line1, (p, b) => p?.line1 = b),
-        line2 = $options.field<String>(
+        line2 = options$.field<String>(
             'line2', (a) => a?.line2, (s) => s?.line2, (p, b) => p?.line2 = b),
-        line3 = $options.field<String>(
+        line3 = options$.field<String>(
             'line3', (a) => a?.line3, (s) => s?.line3, (p, b) => p?.line3 = b),
-        city = $options.field<String>(
+        city = options$.field<String>(
             'city', (a) => a?.city, (s) => s?.city, (p, b) => p?.city = b),
-        county = $options.field<String>('county', (a) => a?.county,
+        county = options$.field<String>('county', (a) => a?.county,
             (s) => s?.county, (p, b) => p?.county = b),
-        state = $options.field<String>(
+        state = options$.field<String>(
             'state', (a) => a?.state, (s) => s?.state, (p, b) => p?.state = b),
-        postalCode = $options.field<String>('postalCode', (a) => a?.postalCode,
+        postalCode = options$.field<String>('postalCode', (a) => a?.postalCode,
             (s) => s?.postalCode, (p, b) => p?.postalCode = b),
-        country = $options.field<String>('country', (a) => a?.country,
+        country = options$.field<String>('country', (a) => a?.country,
             (s) => s?.country, (p, b) => p?.country = b),
-        latitude = $options.field<double>('latitude', (a) => a?.latitude,
+        latitude = options$.field<double>('latitude', (a) => a?.latitude,
             (s) => s?.latitude, (p, b) => p?.latitude = b),
-        longitude = $options.field<double>('longitude', (a) => a?.longitude,
+        longitude = options$.field<double>('longitude', (a) => a?.longitude,
             (s) => s?.longitude, (p, b) => p?.longitude = b),
         super._();
 
@@ -553,18 +553,18 @@ class _$CreateDeliverToAddressApiRequestActions
       _$CreateDeliverToAddressApiRequestActions._(options());
 
   @override
-  CreateDeliverToAddressApiRequest get $initial =>
+  CreateDeliverToAddressApiRequest get initialState$ =>
       CreateDeliverToAddressApiRequest();
 
   @override
-  CreateDeliverToAddressApiRequestBuilder $newBuilder() =>
+  CreateDeliverToAddressApiRequestBuilder newBuilder$() =>
       CreateDeliverToAddressApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.hcrId,
         this.customerId,
         this.facilityId,
@@ -583,32 +583,27 @@ class _$CreateDeliverToAddressApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    hcrId.$reducer(reducer);
-    customerId.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    customerReference.$reducer(reducer);
-    customerKey.$reducer(reducer);
-    line1.$reducer(reducer);
-    line2.$reducer(reducer);
-    line3.$reducer(reducer);
-    city.$reducer(reducer);
-    county.$reducer(reducer);
-    state.$reducer(reducer);
-    postalCode.$reducer(reducer);
-    country.$reducer(reducer);
-    latitude.$reducer(reducer);
-    longitude.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    hcrId.reducer$(reducer);
+    customerId.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    customerReference.reducer$(reducer);
+    customerKey.reducer$(reducer);
+    line1.reducer$(reducer);
+    line2.reducer$(reducer);
+    line3.reducer$(reducer);
+    city.reducer$(reducer);
+    county.reducer$(reducer);
+    state.reducer$(reducer);
+    postalCode.reducer$(reducer);
+    country.reducer$(reducer);
+    latitude.reducer$(reducer);
+    longitude.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateDeliverToAddressApiRequest);
 }

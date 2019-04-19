@@ -425,9 +425,9 @@ class _$UpdateOrderReasonApiRequestActions
   final StatefulActionsOptions<
       UpdateOrderReasonApiRequest,
       UpdateOrderReasonApiRequestBuilder,
-      UpdateOrderReasonApiRequestActions> $options;
+      UpdateOrderReasonApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateOrderReasonApiRequest> $replace;
+  final ActionDispatcher<UpdateOrderReasonApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> name;
@@ -441,50 +441,50 @@ class _$UpdateOrderReasonApiRequestActions
   final FieldDispatcher<String> toInventoryTypeId;
   final FieldDispatcher<String> defaultShippingServiceId;
 
-  _$UpdateOrderReasonApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateOrderReasonApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdateOrderReasonApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateOrderReasonApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        reasonGroup = $options.field<OrderReasonGroup>(
+        reasonGroup = options$.field<OrderReasonGroup>(
             'reasonGroup',
             (a) => a?.reasonGroup,
             (s) => s?.reasonGroup,
             (p, b) => p?.reasonGroup = b),
-        approvalRequired = $options.field<bool>(
+        approvalRequired = options$.field<bool>(
             'approvalRequired',
             (a) => a?.approvalRequired,
             (s) => s?.approvalRequired,
             (p, b) => p?.approvalRequired = b),
-        erp = $options.field<bool>(
+        erp = options$.field<bool>(
             'erp', (a) => a?.erp, (s) => s?.erp, (p, b) => p?.erp = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        salesOrderInventorySource = $options.field<SalesOrderInventorySource>(
+        salesOrderInventorySource = options$.field<SalesOrderInventorySource>(
             'salesOrderInventorySource',
             (a) => a?.salesOrderInventorySource,
             (s) => s?.salesOrderInventorySource,
             (p, b) => p?.salesOrderInventorySource = b),
-        changesResponsibleParty = $options.field<bool>(
+        changesResponsibleParty = options$.field<bool>(
             'changesResponsibleParty',
             (a) => a?.changesResponsibleParty,
             (s) => s?.changesResponsibleParty,
             (p, b) => p?.changesResponsibleParty = b),
-        changesHomeLocation = $options.field<bool>(
+        changesHomeLocation = options$.field<bool>(
             'changesHomeLocation',
             (a) => a?.changesHomeLocation,
             (s) => s?.changesHomeLocation,
             (p, b) => p?.changesHomeLocation = b),
-        toInventoryTypeId = $options.field<String>(
+        toInventoryTypeId = options$.field<String>(
             'toInventoryTypeId',
             (a) => a?.toInventoryTypeId,
             (s) => s?.toInventoryTypeId,
             (p, b) => p?.toInventoryTypeId = b),
-        defaultShippingServiceId = $options.field<String>(
+        defaultShippingServiceId = options$.field<String>(
             'defaultShippingServiceId',
             (a) => a?.defaultShippingServiceId,
             (s) => s?.defaultShippingServiceId,
@@ -496,17 +496,18 @@ class _$UpdateOrderReasonApiRequestActions
       _$UpdateOrderReasonApiRequestActions._(options());
 
   @override
-  UpdateOrderReasonApiRequest get $initial => UpdateOrderReasonApiRequest();
+  UpdateOrderReasonApiRequest get initialState$ =>
+      UpdateOrderReasonApiRequest();
 
   @override
-  UpdateOrderReasonApiRequestBuilder $newBuilder() =>
+  UpdateOrderReasonApiRequestBuilder newBuilder$() =>
       UpdateOrderReasonApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.bizUnitId,
         this.name,
@@ -522,29 +523,24 @@ class _$UpdateOrderReasonApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    name.$reducer(reducer);
-    reasonGroup.$reducer(reducer);
-    approvalRequired.$reducer(reducer);
-    erp.$reducer(reducer);
-    active.$reducer(reducer);
-    salesOrderInventorySource.$reducer(reducer);
-    changesResponsibleParty.$reducer(reducer);
-    changesHomeLocation.$reducer(reducer);
-    toInventoryTypeId.$reducer(reducer);
-    defaultShippingServiceId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    name.reducer$(reducer);
+    reasonGroup.reducer$(reducer);
+    approvalRequired.reducer$(reducer);
+    erp.reducer$(reducer);
+    active.reducer$(reducer);
+    salesOrderInventorySource.reducer$(reducer);
+    changesResponsibleParty.reducer$(reducer);
+    changesHomeLocation.reducer$(reducer);
+    toInventoryTypeId.reducer$(reducer);
+    defaultShippingServiceId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateOrderReasonApiRequest);
 }

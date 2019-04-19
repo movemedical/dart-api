@@ -156,15 +156,15 @@ class _$CustomOrderDocApiResponseActions
   final StatefulActionsOptions<
       CustomOrderDocApiResponse,
       CustomOrderDocApiResponseBuilder,
-      CustomOrderDocApiResponseActions> $options;
+      CustomOrderDocApiResponseActions> options$;
 
-  final ActionDispatcher<CustomOrderDocApiResponse> $replace;
+  final ActionDispatcher<CustomOrderDocApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
 
-  _$CustomOrderDocApiResponseActions._(this.$options)
-      : $replace = $options.action<CustomOrderDocApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$CustomOrderDocApiResponseActions._(this.options$)
+      : replace$ = options$.action<CustomOrderDocApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -176,32 +176,28 @@ class _$CustomOrderDocApiResponseActions
       _$CustomOrderDocApiResponseActions._(options());
 
   @override
-  CustomOrderDocApiResponse get $initial => CustomOrderDocApiResponse();
+  CustomOrderDocApiResponse get initialState$ => CustomOrderDocApiResponse();
 
   @override
-  CustomOrderDocApiResponseBuilder $newBuilder() =>
+  CustomOrderDocApiResponseBuilder newBuilder$() =>
       CustomOrderDocApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CustomOrderDocApiResponse);
 }

@@ -170,17 +170,17 @@ class _$GetWebServiceLogRequestResponseUrlsApiRequestActions
   final StatefulActionsOptions<
       GetWebServiceLogRequestResponseUrlsApiRequest,
       GetWebServiceLogRequestResponseUrlsApiRequestBuilder,
-      GetWebServiceLogRequestResponseUrlsApiRequestActions> $options;
+      GetWebServiceLogRequestResponseUrlsApiRequestActions> options$;
 
   final ActionDispatcher<GetWebServiceLogRequestResponseUrlsApiRequest>
-      $replace;
+      replace$;
   final FieldDispatcher<String> webServiceLogId;
 
-  _$GetWebServiceLogRequestResponseUrlsApiRequestActions._(this.$options)
-      : $replace =
-            $options.action<GetWebServiceLogRequestResponseUrlsApiRequest>(
-                '\$replace', (a) => a?.$replace),
-        webServiceLogId = $options.field<String>(
+  _$GetWebServiceLogRequestResponseUrlsApiRequestActions._(this.options$)
+      : replace$ =
+            options$.action<GetWebServiceLogRequestResponseUrlsApiRequest>(
+                'replace\$', (a) => a?.replace$),
+        webServiceLogId = options$.field<String>(
             'webServiceLogId',
             (a) => a?.webServiceLogId,
             (s) => s?.webServiceLogId,
@@ -193,34 +193,29 @@ class _$GetWebServiceLogRequestResponseUrlsApiRequestActions
       _$GetWebServiceLogRequestResponseUrlsApiRequestActions._(options());
 
   @override
-  GetWebServiceLogRequestResponseUrlsApiRequest get $initial =>
+  GetWebServiceLogRequestResponseUrlsApiRequest get initialState$ =>
       GetWebServiceLogRequestResponseUrlsApiRequest();
 
   @override
-  GetWebServiceLogRequestResponseUrlsApiRequestBuilder $newBuilder() =>
+  GetWebServiceLogRequestResponseUrlsApiRequestBuilder newBuilder$() =>
       GetWebServiceLogRequestResponseUrlsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.webServiceLogId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    webServiceLogId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    webServiceLogId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetWebServiceLogRequestResponseUrlsApiRequest);
 }

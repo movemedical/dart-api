@@ -22,69 +22,32 @@ class _$GetGeneratedDocReportUrlsApi extends GetGeneratedDocReportUrlsApi {
           ApiResult<GetGeneratedDocReportUrlsApiResponse>>,
       CommandStateBuilder<ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
           ApiResult<GetGeneratedDocReportUrlsApiResponse>>,
-      GetGeneratedDocReportUrlsApi> $options;
+      GetGeneratedDocReportUrlsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-          ApiResult<GetGeneratedDocReportUrlsApiResponse>>> $replace;
+          ApiResult<GetGeneratedDocReportUrlsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-          ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-          GetGeneratedDocReportUrlsApi,
-          String>> $cancel;
+      Command<ApiCommand<GetGeneratedDocReportUrlsApiRequest>>> execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-          ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-          GetGeneratedDocReportUrlsApi,
-          Command<ApiCommand<GetGeneratedDocReportUrlsApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-              ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-              GetGeneratedDocReportUrlsApi,
-              CommandResult<ApiResult<GetGeneratedDocReportUrlsApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-          ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-          GetGeneratedDocReportUrlsApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<GetGeneratedDocReportUrlsApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetGeneratedDocReportUrlsApi._(this.$options)
-      : $replace = $options.action<
+  _$GetGeneratedDocReportUrlsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
                     ApiResult<GetGeneratedDocReportUrlsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-                ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-                GetGeneratedDocReportUrlsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-                    ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-                    GetGeneratedDocReportUrlsApi,
-                    Command<ApiCommand<GetGeneratedDocReportUrlsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-                    ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-                    GetGeneratedDocReportUrlsApi,
-                    CommandResult<
-                        ApiResult<GetGeneratedDocReportUrlsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-                ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-                GetGeneratedDocReportUrlsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<GetGeneratedDocReportUrlsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<GetGeneratedDocReportUrlsApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetGeneratedDocReportUrlsApi(
@@ -94,33 +57,26 @@ class _$GetGeneratedDocReportUrlsApi extends GetGeneratedDocReportUrlsApi {
   @override
   CommandState<ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
           ApiResult<GetGeneratedDocReportUrlsApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
           ApiResult<GetGeneratedDocReportUrlsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
           ApiResult<GetGeneratedDocReportUrlsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
           ApiResult<GetGeneratedDocReportUrlsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetGeneratedDocReportUrlsApiRequest)]),
-        FullType(ApiResult, [FullType(GetGeneratedDocReportUrlsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

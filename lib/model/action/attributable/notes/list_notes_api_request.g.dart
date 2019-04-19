@@ -210,21 +210,21 @@ typedef StatefulActionsOptions<ListNotesApiRequest, ListNotesApiRequestBuilder,
 
 class _$ListNotesApiRequestActions extends ListNotesApiRequestActions {
   final StatefulActionsOptions<ListNotesApiRequest, ListNotesApiRequestBuilder,
-      ListNotesApiRequestActions> $options;
+      ListNotesApiRequestActions> options$;
 
-  final ActionDispatcher<ListNotesApiRequest> $replace;
+  final ActionDispatcher<ListNotesApiRequest> replace$;
   final FieldDispatcher<String> attrId;
   final FieldDispatcher<BuiltList<String>> noteIds;
   final PaginationParamsActions paging;
 
-  _$ListNotesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListNotesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        attrId = $options.field<String>('attrId', (a) => a?.attrId,
+  _$ListNotesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListNotesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        attrId = options$.field<String>('attrId', (a) => a?.attrId,
             (s) => s?.attrId, (p, b) => p?.attrId = b),
-        noteIds = $options.field<BuiltList<String>>('noteIds',
+        noteIds = options$.field<BuiltList<String>>('noteIds',
             (a) => a?.noteIds, (s) => s?.noteIds, (p, b) => p?.noteIds = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -240,41 +240,37 @@ class _$ListNotesApiRequestActions extends ListNotesApiRequestActions {
       _$ListNotesApiRequestActions._(options());
 
   @override
-  ListNotesApiRequest get $initial => ListNotesApiRequest();
+  ListNotesApiRequest get initialState$ => ListNotesApiRequest();
 
   @override
-  ListNotesApiRequestBuilder $newBuilder() => ListNotesApiRequestBuilder();
+  ListNotesApiRequestBuilder newBuilder$() => ListNotesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.attrId,
         this.noteIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    attrId.$reducer(reducer);
-    noteIds.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    attrId.reducer$(reducer);
+    noteIds.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListNotesApiRequest);
 }

@@ -232,30 +232,30 @@ class _$UpdateImportLogErrorApiImportLogErrorActions
   final StatefulActionsOptions<
       UpdateImportLogErrorApiImportLogError,
       UpdateImportLogErrorApiImportLogErrorBuilder,
-      UpdateImportLogErrorApiImportLogErrorActions> $options;
+      UpdateImportLogErrorApiImportLogErrorActions> options$;
 
-  final ActionDispatcher<UpdateImportLogErrorApiImportLogError> $replace;
+  final ActionDispatcher<UpdateImportLogErrorApiImportLogError> replace$;
   final FieldDispatcher<String> importLogErrorId;
   final FieldDispatcher<String> updatedData;
   final FieldDispatcher<bool> ignore;
   final FieldDispatcher<String> resolutionMessage;
 
-  _$UpdateImportLogErrorApiImportLogErrorActions._(this.$options)
-      : $replace = $options.action<UpdateImportLogErrorApiImportLogError>(
-            '\$replace', (a) => a?.$replace),
-        importLogErrorId = $options.field<String>(
+  _$UpdateImportLogErrorApiImportLogErrorActions._(this.options$)
+      : replace$ = options$.action<UpdateImportLogErrorApiImportLogError>(
+            'replace\$', (a) => a?.replace$),
+        importLogErrorId = options$.field<String>(
             'importLogErrorId',
             (a) => a?.importLogErrorId,
             (s) => s?.importLogErrorId,
             (p, b) => p?.importLogErrorId = b),
-        updatedData = $options.field<String>(
+        updatedData = options$.field<String>(
             'updatedData',
             (a) => a?.updatedData,
             (s) => s?.updatedData,
             (p, b) => p?.updatedData = b),
-        ignore = $options.field<bool>('ignore', (a) => a?.ignore,
+        ignore = options$.field<bool>('ignore', (a) => a?.ignore,
             (s) => s?.ignore, (p, b) => p?.ignore = b),
-        resolutionMessage = $options.field<String>(
+        resolutionMessage = options$.field<String>(
             'resolutionMessage',
             (a) => a?.resolutionMessage,
             (s) => s?.resolutionMessage,
@@ -267,18 +267,18 @@ class _$UpdateImportLogErrorApiImportLogErrorActions
       _$UpdateImportLogErrorApiImportLogErrorActions._(options());
 
   @override
-  UpdateImportLogErrorApiImportLogError get $initial =>
+  UpdateImportLogErrorApiImportLogError get initialState$ =>
       UpdateImportLogErrorApiImportLogError();
 
   @override
-  UpdateImportLogErrorApiImportLogErrorBuilder $newBuilder() =>
+  UpdateImportLogErrorApiImportLogErrorBuilder newBuilder$() =>
       UpdateImportLogErrorApiImportLogErrorBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.importLogErrorId,
         this.updatedData,
         this.ignore,
@@ -286,21 +286,16 @@ class _$UpdateImportLogErrorApiImportLogErrorActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    importLogErrorId.$reducer(reducer);
-    updatedData.$reducer(reducer);
-    ignore.$reducer(reducer);
-    resolutionMessage.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    importLogErrorId.reducer$(reducer);
+    updatedData.reducer$(reducer);
+    ignore.reducer$(reducer);
+    resolutionMessage.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateImportLogErrorApiImportLogError);
 }

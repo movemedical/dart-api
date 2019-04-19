@@ -374,9 +374,9 @@ class _$BuildUsageRestockPlanApiUsageActions
   final StatefulActionsOptions<
       BuildUsageRestockPlanApiUsage,
       BuildUsageRestockPlanApiUsageBuilder,
-      BuildUsageRestockPlanApiUsageActions> $options;
+      BuildUsageRestockPlanApiUsageActions> options$;
 
-  final ActionDispatcher<BuildUsageRestockPlanApiUsage> $replace;
+  final ActionDispatcher<BuildUsageRestockPlanApiUsage> replace$;
   final FieldDispatcher<String> guid;
   final FieldDispatcher<String> stockId;
   final FieldDispatcher<String> itemId;
@@ -388,37 +388,37 @@ class _$BuildUsageRestockPlanApiUsageActions
   final FieldDispatcher<int> quantity;
   final FieldDispatcher<LocationHint> locationHint;
 
-  _$BuildUsageRestockPlanApiUsageActions._(this.$options)
-      : $replace = $options.action<BuildUsageRestockPlanApiUsage>(
-            '\$replace', (a) => a?.$replace),
-        guid = $options.field<String>(
+  _$BuildUsageRestockPlanApiUsageActions._(this.options$)
+      : replace$ = options$.action<BuildUsageRestockPlanApiUsage>(
+            'replace\$', (a) => a?.replace$),
+        guid = options$.field<String>(
             'guid', (a) => a?.guid, (s) => s?.guid, (p, b) => p?.guid = b),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        rawBarcodeData = $options.field<String>(
+        rawBarcodeData = options$.field<String>(
             'rawBarcodeData',
             (a) => a?.rawBarcodeData,
             (s) => s?.rawBarcodeData,
             (p, b) => p?.rawBarcodeData = b),
-        caseUsageDisposition = $options.field<CaseUsageDisposition>(
+        caseUsageDisposition = options$.field<CaseUsageDisposition>(
             'caseUsageDisposition',
             (a) => a?.caseUsageDisposition,
             (s) => s?.caseUsageDisposition,
             (p, b) => p?.caseUsageDisposition = b),
-        usageCaptureType = $options.field<ItemCaptureType>(
+        usageCaptureType = options$.field<ItemCaptureType>(
             'usageCaptureType',
             (a) => a?.usageCaptureType,
             (s) => s?.usageCaptureType,
             (p, b) => p?.usageCaptureType = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        locationHint = $options.field<LocationHint>(
+        locationHint = options$.field<LocationHint>(
             'locationHint',
             (a) => a?.locationHint,
             (s) => s?.locationHint,
@@ -430,17 +430,18 @@ class _$BuildUsageRestockPlanApiUsageActions
       _$BuildUsageRestockPlanApiUsageActions._(options());
 
   @override
-  BuildUsageRestockPlanApiUsage get $initial => BuildUsageRestockPlanApiUsage();
+  BuildUsageRestockPlanApiUsage get initialState$ =>
+      BuildUsageRestockPlanApiUsage();
 
   @override
-  BuildUsageRestockPlanApiUsageBuilder $newBuilder() =>
+  BuildUsageRestockPlanApiUsageBuilder newBuilder$() =>
       BuildUsageRestockPlanApiUsageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.guid,
         this.stockId,
         this.itemId,
@@ -454,27 +455,22 @@ class _$BuildUsageRestockPlanApiUsageActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    guid.$reducer(reducer);
-    stockId.$reducer(reducer);
-    itemId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    rawBarcodeData.$reducer(reducer);
-    caseUsageDisposition.$reducer(reducer);
-    usageCaptureType.$reducer(reducer);
-    quantity.$reducer(reducer);
-    locationHint.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    guid.reducer$(reducer);
+    stockId.reducer$(reducer);
+    itemId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    rawBarcodeData.reducer$(reducer);
+    caseUsageDisposition.reducer$(reducer);
+    usageCaptureType.reducer$(reducer);
+    quantity.reducer$(reducer);
+    locationHint.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildUsageRestockPlanApiUsage);
 }

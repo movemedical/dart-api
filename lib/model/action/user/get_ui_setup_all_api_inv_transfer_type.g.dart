@@ -623,9 +623,9 @@ class _$GetUiSetupAllApiInvTransferTypeActions
   final StatefulActionsOptions<
       GetUiSetupAllApiInvTransferType,
       GetUiSetupAllApiInvTransferTypeBuilder,
-      GetUiSetupAllApiInvTransferTypeActions> $options;
+      GetUiSetupAllApiInvTransferTypeActions> options$;
 
-  final ActionDispatcher<GetUiSetupAllApiInvTransferType> $replace;
+  final ActionDispatcher<GetUiSetupAllApiInvTransferType> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> orderReasonId;
@@ -644,86 +644,86 @@ class _$GetUiSetupAllApiInvTransferTypeActions
   final FieldDispatcher<String> directDeliveryShippingServiceId;
   final FieldDispatcher<bool> fromAllLocations;
 
-  _$GetUiSetupAllApiInvTransferTypeActions._(this.$options)
-      : $replace = $options.action<GetUiSetupAllApiInvTransferType>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetUiSetupAllApiInvTransferTypeActions._(this.options$)
+      : replace$ = options$.action<GetUiSetupAllApiInvTransferType>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        orderReasonId = $options.field<String>(
+        orderReasonId = options$.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
             (p, b) => p?.orderReasonId = b),
-        orderReason = OrderReasonActions(() => $options
+        orderReason = OrderReasonActions(() => options$
             .stateful<OrderReason, OrderReasonBuilder, OrderReasonActions>(
                 'orderReason',
                 (a) => a.orderReason,
                 (s) => s?.orderReason,
                 (b) => b?.orderReason,
                 (parent, builder) => parent?.orderReason = builder)),
-        fromInventoryTypes = $options.field<BuiltList<InventoryType>>(
+        fromInventoryTypes = options$.field<BuiltList<InventoryType>>(
             'fromInventoryTypes',
             (a) => a?.fromInventoryTypes,
             (s) => s?.fromInventoryTypes,
             (p, b) => p?.fromInventoryTypes = b),
-        moveItemClasses = $options.field<BuiltList<MoveItemClass>>(
+        moveItemClasses = options$.field<BuiltList<MoveItemClass>>(
             'moveItemClasses',
             (a) => a?.moveItemClasses,
             (s) => s?.moveItemClasses,
             (p, b) => p?.moveItemClasses = b),
-        moveItemTypes = $options.field<BuiltList<MoveItemType>>(
+        moveItemTypes = options$.field<BuiltList<MoveItemType>>(
             'moveItemTypes',
             (a) => a?.moveItemTypes,
             (s) => s?.moveItemTypes,
             (p, b) => p?.moveItemTypes = b),
-        fromLocationTypes = $options.field<BuiltList<LocationType>>(
+        fromLocationTypes = options$.field<BuiltList<LocationType>>(
             'fromLocationTypes',
             (a) => a?.fromLocationTypes,
             (s) => s?.fromLocationTypes,
             (p, b) => p?.fromLocationTypes = b),
-        fromFacilityTypes = $options.field<BuiltList<FacilityType>>(
+        fromFacilityTypes = options$.field<BuiltList<FacilityType>>(
             'fromFacilityTypes',
             (a) => a?.fromFacilityTypes,
             (s) => s?.fromFacilityTypes,
             (p, b) => p?.fromFacilityTypes = b),
-        fromLocations = $options.field<BuiltList<Location>>(
+        fromLocations = options$.field<BuiltList<Location>>(
             'fromLocations',
             (a) => a?.fromLocations,
             (s) => s?.fromLocations,
             (p, b) => p?.fromLocations = b),
-        toLocationTypes = $options.field<BuiltList<LocationType>>(
+        toLocationTypes = options$.field<BuiltList<LocationType>>(
             'toLocationTypes',
             (a) => a?.toLocationTypes,
             (s) => s?.toLocationTypes,
             (p, b) => p?.toLocationTypes = b),
-        toFacilityTypes = $options.field<BuiltList<FacilityType>>(
+        toFacilityTypes = options$.field<BuiltList<FacilityType>>(
             'toFacilityTypes',
             (a) => a?.toFacilityTypes,
             (s) => s?.toFacilityTypes,
             (p, b) => p?.toFacilityTypes = b),
-        toLocations = $options.field<BuiltList<Location>>(
+        toLocations = options$.field<BuiltList<Location>>(
             'toLocations',
             (a) => a?.toLocations,
             (s) => s?.toLocations,
             (p, b) => p?.toLocations = b),
-        scopeToLocation = $options.field<bool>(
+        scopeToLocation = options$.field<bool>(
             'scopeToLocation',
             (a) => a?.scopeToLocation,
             (s) => s?.scopeToLocation,
             (p, b) => p?.scopeToLocation = b),
-        shipAndConfirmEnabled = $options.field<bool>(
+        shipAndConfirmEnabled = options$.field<bool>(
             'shipAndConfirmEnabled',
             (a) => a?.shipAndConfirmEnabled,
             (s) => s?.shipAndConfirmEnabled,
             (p, b) => p?.shipAndConfirmEnabled = b),
-        directDeliveryShippingServiceId = $options.field<String>(
+        directDeliveryShippingServiceId = options$.field<String>(
             'directDeliveryShippingServiceId',
             (a) => a?.directDeliveryShippingServiceId,
             (s) => s?.directDeliveryShippingServiceId,
             (p, b) => p?.directDeliveryShippingServiceId = b),
-        fromAllLocations = $options.field<bool>(
+        fromAllLocations = options$.field<bool>(
             'fromAllLocations',
             (a) => a?.fromAllLocations,
             (s) => s?.fromAllLocations,
@@ -735,24 +735,24 @@ class _$GetUiSetupAllApiInvTransferTypeActions
       _$GetUiSetupAllApiInvTransferTypeActions._(options());
 
   @override
-  GetUiSetupAllApiInvTransferType get $initial =>
+  GetUiSetupAllApiInvTransferType get initialState$ =>
       GetUiSetupAllApiInvTransferType();
 
   @override
-  GetUiSetupAllApiInvTransferTypeBuilder $newBuilder() =>
+  GetUiSetupAllApiInvTransferTypeBuilder newBuilder$() =>
       GetUiSetupAllApiInvTransferTypeBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.orderReason,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.orderReasonId,
@@ -772,35 +772,30 @@ class _$GetUiSetupAllApiInvTransferTypeActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    orderReasonId.$reducer(reducer);
-    orderReason.$reducer(reducer);
-    fromInventoryTypes.$reducer(reducer);
-    moveItemClasses.$reducer(reducer);
-    moveItemTypes.$reducer(reducer);
-    fromLocationTypes.$reducer(reducer);
-    fromFacilityTypes.$reducer(reducer);
-    fromLocations.$reducer(reducer);
-    toLocationTypes.$reducer(reducer);
-    toFacilityTypes.$reducer(reducer);
-    toLocations.$reducer(reducer);
-    scopeToLocation.$reducer(reducer);
-    shipAndConfirmEnabled.$reducer(reducer);
-    directDeliveryShippingServiceId.$reducer(reducer);
-    fromAllLocations.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
+    orderReason.reducer$(reducer);
+    fromInventoryTypes.reducer$(reducer);
+    moveItemClasses.reducer$(reducer);
+    moveItemTypes.reducer$(reducer);
+    fromLocationTypes.reducer$(reducer);
+    fromFacilityTypes.reducer$(reducer);
+    fromLocations.reducer$(reducer);
+    toLocationTypes.reducer$(reducer);
+    toFacilityTypes.reducer$(reducer);
+    toLocations.reducer$(reducer);
+    scopeToLocation.reducer$(reducer);
+    shipAndConfirmEnabled.reducer$(reducer);
+    directDeliveryShippingServiceId.reducer$(reducer);
+    fromAllLocations.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    orderReason.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    orderReason.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetUiSetupAllApiInvTransferType);
 }

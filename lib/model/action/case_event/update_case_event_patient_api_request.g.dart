@@ -445,9 +445,9 @@ class _$UpdateCaseEventPatientApiRequestActions
   final StatefulActionsOptions<
       UpdateCaseEventPatientApiRequest,
       UpdateCaseEventPatientApiRequestBuilder,
-      UpdateCaseEventPatientApiRequestActions> $options;
+      UpdateCaseEventPatientApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateCaseEventPatientApiRequest> $replace;
+  final ActionDispatcher<UpdateCaseEventPatientApiRequest> replace$;
   final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<String> ssn;
   final FieldDispatcher<String> mrn;
@@ -461,56 +461,56 @@ class _$UpdateCaseEventPatientApiRequestActions
   final FieldDispatcher<Ethnicity> ethnicity;
   final UpdateCaseEventInsuranceApiRequestActions updateInsuranceRequest;
 
-  _$UpdateCaseEventPatientApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateCaseEventPatientApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$UpdateCaseEventPatientApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateCaseEventPatientApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        ssn = $options.field<String>(
+        ssn = options$.field<String>(
             'ssn', (a) => a?.ssn, (s) => s?.ssn, (p, b) => p?.ssn = b),
-        mrn = $options.field<String>(
+        mrn = options$.field<String>(
             'mrn', (a) => a?.mrn, (s) => s?.mrn, (p, b) => p?.mrn = b),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        dateOfBirth = $options.field<DateTime>(
+        dateOfBirth = options$.field<DateTime>(
             'dateOfBirth',
             (a) => a?.dateOfBirth,
             (s) => s?.dateOfBirth,
             (p, b) => p?.dateOfBirth = b),
-        gender = $options.field<Gender>('gender', (a) => a?.gender,
+        gender = options$.field<Gender>('gender', (a) => a?.gender,
             (s) => s?.gender, (p, b) => p?.gender = b),
-        heightMeasurement = $options.field<double>(
+        heightMeasurement = options$.field<double>(
             'heightMeasurement',
             (a) => a?.heightMeasurement,
             (s) => s?.heightMeasurement,
             (p, b) => p?.heightMeasurement = b),
-        heightMeasurementType = $options.field<LengthMeasurementType>(
+        heightMeasurementType = options$.field<LengthMeasurementType>(
             'heightMeasurementType',
             (a) => a?.heightMeasurementType,
             (s) => s?.heightMeasurementType,
             (p, b) => p?.heightMeasurementType = b),
-        weightMeasurement = $options.field<double>(
+        weightMeasurement = options$.field<double>(
             'weightMeasurement',
             (a) => a?.weightMeasurement,
             (s) => s?.weightMeasurement,
             (p, b) => p?.weightMeasurement = b),
-        weightMeasurementType = $options.field<WeightMeasurementType>(
+        weightMeasurementType = options$.field<WeightMeasurementType>(
             'weightMeasurementType',
             (a) => a?.weightMeasurementType,
             (s) => s?.weightMeasurementType,
             (p, b) => p?.weightMeasurementType = b),
-        ethnicity = $options.field<Ethnicity>('ethnicity', (a) => a?.ethnicity,
+        ethnicity = options$.field<Ethnicity>('ethnicity', (a) => a?.ethnicity,
             (s) => s?.ethnicity, (p, b) => p?.ethnicity = b),
         updateInsuranceRequest = UpdateCaseEventInsuranceApiRequestActions(() =>
-            $options.stateful<
+            options$.stateful<
                     UpdateCaseEventInsuranceApiRequest,
                     UpdateCaseEventInsuranceApiRequestBuilder,
                     UpdateCaseEventInsuranceApiRequestActions>(
@@ -526,25 +526,25 @@ class _$UpdateCaseEventPatientApiRequestActions
       _$UpdateCaseEventPatientApiRequestActions._(options());
 
   @override
-  UpdateCaseEventPatientApiRequest get $initial =>
+  UpdateCaseEventPatientApiRequest get initialState$ =>
       UpdateCaseEventPatientApiRequest();
 
   @override
-  UpdateCaseEventPatientApiRequestBuilder $newBuilder() =>
+  UpdateCaseEventPatientApiRequestBuilder newBuilder$() =>
       UpdateCaseEventPatientApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
         this.updateInsuranceRequest,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
         this.ssn,
         this.mrn,
@@ -558,31 +558,26 @@ class _$UpdateCaseEventPatientApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
-    ssn.$reducer(reducer);
-    mrn.$reducer(reducer);
-    name.$reducer(reducer);
-    dateOfBirth.$reducer(reducer);
-    gender.$reducer(reducer);
-    heightMeasurement.$reducer(reducer);
-    heightMeasurementType.$reducer(reducer);
-    weightMeasurement.$reducer(reducer);
-    weightMeasurementType.$reducer(reducer);
-    ethnicity.$reducer(reducer);
-    updateInsuranceRequest.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
+    ssn.reducer$(reducer);
+    mrn.reducer$(reducer);
+    name.reducer$(reducer);
+    dateOfBirth.reducer$(reducer);
+    gender.reducer$(reducer);
+    heightMeasurement.reducer$(reducer);
+    heightMeasurementType.reducer$(reducer);
+    weightMeasurement.reducer$(reducer);
+    weightMeasurementType.reducer$(reducer);
+    ethnicity.reducer$(reducer);
+    updateInsuranceRequest.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    name.$middleware(middleware);
-    updateInsuranceRequest.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    name.middleware$(middleware);
+    updateInsuranceRequest.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateCaseEventPatientApiRequest);
 }

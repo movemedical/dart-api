@@ -353,9 +353,9 @@ class _$GetFoundInventoryTypeApiRequestActions
   final StatefulActionsOptions<
       GetFoundInventoryTypeApiRequest,
       GetFoundInventoryTypeApiRequestBuilder,
-      GetFoundInventoryTypeApiRequestActions> $options;
+      GetFoundInventoryTypeApiRequestActions> options$;
 
-  final ActionDispatcher<GetFoundInventoryTypeApiRequest> $replace;
+  final ActionDispatcher<GetFoundInventoryTypeApiRequest> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> itemVersionId;
   final FieldDispatcher<String> lotId;
@@ -366,38 +366,38 @@ class _$GetFoundInventoryTypeApiRequestActions
   final FieldDispatcher<String> containerId;
   final FieldDispatcher<GetFoundInventoryTypeApiProcess> process;
 
-  _$GetFoundInventoryTypeApiRequestActions._(this.$options)
-      : $replace = $options.action<GetFoundInventoryTypeApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$GetFoundInventoryTypeApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetFoundInventoryTypeApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionId = $options.field<String>(
+        itemVersionId = options$.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        containerType = $options.field<StockContainerType>(
+        containerType = options$.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        process = $options.field<GetFoundInventoryTypeApiProcess>('process',
+        process = options$.field<GetFoundInventoryTypeApiProcess>('process',
             (a) => a?.process, (s) => s?.process, (p, b) => p?.process = b),
         super._();
 
@@ -406,18 +406,18 @@ class _$GetFoundInventoryTypeApiRequestActions
       _$GetFoundInventoryTypeApiRequestActions._(options());
 
   @override
-  GetFoundInventoryTypeApiRequest get $initial =>
+  GetFoundInventoryTypeApiRequest get initialState$ =>
       GetFoundInventoryTypeApiRequest();
 
   @override
-  GetFoundInventoryTypeApiRequestBuilder $newBuilder() =>
+  GetFoundInventoryTypeApiRequestBuilder newBuilder$() =>
       GetFoundInventoryTypeApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.itemVersionId,
         this.lotId,
@@ -430,26 +430,21 @@ class _$GetFoundInventoryTypeApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemVersionId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    locationType.$reducer(reducer);
-    locationId.$reducer(reducer);
-    containerType.$reducer(reducer);
-    containerId.$reducer(reducer);
-    process.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemVersionId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    locationType.reducer$(reducer);
+    locationId.reducer$(reducer);
+    containerType.reducer$(reducer);
+    containerId.reducer$(reducer);
+    process.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetFoundInventoryTypeApiRequest);
 }

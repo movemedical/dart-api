@@ -272,9 +272,9 @@ class _$UpdateSubProcedureApiRequestActions
   final StatefulActionsOptions<
       UpdateSubProcedureApiRequest,
       UpdateSubProcedureApiRequestBuilder,
-      UpdateSubProcedureApiRequestActions> $options;
+      UpdateSubProcedureApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateSubProcedureApiRequest> $replace;
+  final ActionDispatcher<UpdateSubProcedureApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> parentId;
   final FieldDispatcher<String> name;
@@ -282,23 +282,23 @@ class _$UpdateSubProcedureApiRequestActions
   final FieldDispatcher<String> description;
   final FieldDispatcher<bool> active;
 
-  _$UpdateSubProcedureApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateSubProcedureApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdateSubProcedureApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateSubProcedureApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        parentId = $options.field<String>('parentId', (a) => a?.parentId,
+        parentId = options$.field<String>('parentId', (a) => a?.parentId,
             (s) => s?.parentId, (p, b) => p?.parentId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        icdCode = $options.field<String>('icdCode', (a) => a?.icdCode,
+        icdCode = options$.field<String>('icdCode', (a) => a?.icdCode,
             (s) => s?.icdCode, (p, b) => p?.icdCode = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -307,17 +307,18 @@ class _$UpdateSubProcedureApiRequestActions
       _$UpdateSubProcedureApiRequestActions._(options());
 
   @override
-  UpdateSubProcedureApiRequest get $initial => UpdateSubProcedureApiRequest();
+  UpdateSubProcedureApiRequest get initialState$ =>
+      UpdateSubProcedureApiRequest();
 
   @override
-  UpdateSubProcedureApiRequestBuilder $newBuilder() =>
+  UpdateSubProcedureApiRequestBuilder newBuilder$() =>
       UpdateSubProcedureApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.parentId,
         this.name,
@@ -327,23 +328,18 @@ class _$UpdateSubProcedureApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    parentId.$reducer(reducer);
-    name.$reducer(reducer);
-    icdCode.$reducer(reducer);
-    description.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    parentId.reducer$(reducer);
+    name.reducer$(reducer);
+    icdCode.reducer$(reducer);
+    description.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateSubProcedureApiRequest);
 }

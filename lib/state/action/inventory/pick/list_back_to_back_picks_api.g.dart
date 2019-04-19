@@ -22,67 +22,32 @@ class _$ListBackToBackPicksApi extends ListBackToBackPicksApi {
           ApiResult<ListBackToBackPicksApiResponse>>,
       CommandStateBuilder<ApiCommand<ListBackToBackPicksApiRequest>,
           ApiResult<ListBackToBackPicksApiResponse>>,
-      ListBackToBackPicksApi> $options;
+      ListBackToBackPicksApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListBackToBackPicksApiRequest>,
-          ApiResult<ListBackToBackPicksApiResponse>>> $replace;
+          ApiResult<ListBackToBackPicksApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListBackToBackPicksApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBackToBackPicksApiRequest>,
-          ApiResult<ListBackToBackPicksApiResponse>,
-          ListBackToBackPicksApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBackToBackPicksApiRequest>,
-          ApiResult<ListBackToBackPicksApiResponse>,
-          ListBackToBackPicksApi,
-          Command<ApiCommand<ListBackToBackPicksApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBackToBackPicksApiRequest>,
-          ApiResult<ListBackToBackPicksApiResponse>,
-          ListBackToBackPicksApi,
-          CommandResult<ApiResult<ListBackToBackPicksApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBackToBackPicksApiRequest>,
-          ApiResult<ListBackToBackPicksApiResponse>,
-          ListBackToBackPicksApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListBackToBackPicksApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListBackToBackPicksApi._(this.$options)
-      : $replace = $options.action<
+  _$ListBackToBackPicksApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListBackToBackPicksApiRequest>,
                     ApiResult<ListBackToBackPicksApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListBackToBackPicksApiRequest>,
-                ApiResult<ListBackToBackPicksApiResponse>,
-                ListBackToBackPicksApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListBackToBackPicksApiRequest>,
-                    ApiResult<ListBackToBackPicksApiResponse>,
-                    ListBackToBackPicksApi,
-                    Command<ApiCommand<ListBackToBackPicksApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListBackToBackPicksApiRequest>,
-                    ApiResult<ListBackToBackPicksApiResponse>,
-                    ListBackToBackPicksApi,
-                    CommandResult<ApiResult<ListBackToBackPicksApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListBackToBackPicksApiRequest>,
-                ApiResult<ListBackToBackPicksApiResponse>,
-                ListBackToBackPicksApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListBackToBackPicksApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListBackToBackPicksApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListBackToBackPicksApi(ListBackToBackPicksApiOptions options) =>
@@ -91,32 +56,26 @@ class _$ListBackToBackPicksApi extends ListBackToBackPicksApi {
   @override
   CommandState<ApiCommand<ListBackToBackPicksApiRequest>,
           ApiResult<ListBackToBackPicksApiResponse>>
-      get $initial => CommandState<ApiCommand<ListBackToBackPicksApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<ListBackToBackPicksApiRequest>,
           ApiResult<ListBackToBackPicksApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListBackToBackPicksApiRequest>,
           ApiResult<ListBackToBackPicksApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListBackToBackPicksApiRequest>,
           ApiResult<ListBackToBackPicksApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListBackToBackPicksApiRequest)]),
-        FullType(ApiResult, [FullType(ListBackToBackPicksApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

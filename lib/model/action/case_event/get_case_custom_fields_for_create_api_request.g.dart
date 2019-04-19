@@ -182,16 +182,16 @@ class _$GetCaseCustomFieldsForCreateApiRequestActions
   final StatefulActionsOptions<
       GetCaseCustomFieldsForCreateApiRequest,
       GetCaseCustomFieldsForCreateApiRequestBuilder,
-      GetCaseCustomFieldsForCreateApiRequestActions> $options;
+      GetCaseCustomFieldsForCreateApiRequestActions> options$;
 
-  final ActionDispatcher<GetCaseCustomFieldsForCreateApiRequest> $replace;
+  final ActionDispatcher<GetCaseCustomFieldsForCreateApiRequest> replace$;
   final CreateCaseEventApiRequestActions caseEventRequest;
 
-  _$GetCaseCustomFieldsForCreateApiRequestActions._(this.$options)
-      : $replace = $options.action<GetCaseCustomFieldsForCreateApiRequest>(
-            '\$replace', (a) => a?.$replace),
+  _$GetCaseCustomFieldsForCreateApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetCaseCustomFieldsForCreateApiRequest>(
+            'replace\$', (a) => a?.replace$),
         caseEventRequest = CreateCaseEventApiRequestActions(() =>
-            $options.stateful<
+            options$.stateful<
                     CreateCaseEventApiRequest,
                     CreateCaseEventApiRequestBuilder,
                     CreateCaseEventApiRequestActions>(
@@ -207,40 +207,35 @@ class _$GetCaseCustomFieldsForCreateApiRequestActions
       _$GetCaseCustomFieldsForCreateApiRequestActions._(options());
 
   @override
-  GetCaseCustomFieldsForCreateApiRequest get $initial =>
+  GetCaseCustomFieldsForCreateApiRequest get initialState$ =>
       GetCaseCustomFieldsForCreateApiRequest();
 
   @override
-  GetCaseCustomFieldsForCreateApiRequestBuilder $newBuilder() =>
+  GetCaseCustomFieldsForCreateApiRequestBuilder newBuilder$() =>
       GetCaseCustomFieldsForCreateApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.caseEventRequest,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventRequest.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventRequest.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    caseEventRequest.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    caseEventRequest.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCaseCustomFieldsForCreateApiRequest);
 }

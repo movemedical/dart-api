@@ -22,68 +22,32 @@ class _$ListAuditsForDashboardApi extends ListAuditsForDashboardApi {
           ApiResult<ListAuditsForDashboardApiResponse>>,
       CommandStateBuilder<ApiCommand<ListAuditsForDashboardApiRequest>,
           ApiResult<ListAuditsForDashboardApiResponse>>,
-      ListAuditsForDashboardApi> $options;
+      ListAuditsForDashboardApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListAuditsForDashboardApiRequest>,
-          ApiResult<ListAuditsForDashboardApiResponse>>> $replace;
+          ApiResult<ListAuditsForDashboardApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListAuditsForDashboardApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditsForDashboardApiRequest>,
-          ApiResult<ListAuditsForDashboardApiResponse>,
-          ListAuditsForDashboardApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditsForDashboardApiRequest>,
-          ApiResult<ListAuditsForDashboardApiResponse>,
-          ListAuditsForDashboardApi,
-          Command<ApiCommand<ListAuditsForDashboardApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditsForDashboardApiRequest>,
-          ApiResult<ListAuditsForDashboardApiResponse>,
-          ListAuditsForDashboardApi,
-          CommandResult<ApiResult<ListAuditsForDashboardApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditsForDashboardApiRequest>,
-          ApiResult<ListAuditsForDashboardApiResponse>,
-          ListAuditsForDashboardApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListAuditsForDashboardApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListAuditsForDashboardApi._(this.$options)
-      : $replace = $options.action<
+  _$ListAuditsForDashboardApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListAuditsForDashboardApiRequest>,
                     ApiResult<ListAuditsForDashboardApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListAuditsForDashboardApiRequest>,
-                ApiResult<ListAuditsForDashboardApiResponse>,
-                ListAuditsForDashboardApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListAuditsForDashboardApiRequest>,
-                    ApiResult<ListAuditsForDashboardApiResponse>,
-                    ListAuditsForDashboardApi,
-                    Command<ApiCommand<ListAuditsForDashboardApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListAuditsForDashboardApiRequest>,
-                    ApiResult<ListAuditsForDashboardApiResponse>,
-                    ListAuditsForDashboardApi,
-                    CommandResult<
-                        ApiResult<ListAuditsForDashboardApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListAuditsForDashboardApiRequest>,
-                ApiResult<ListAuditsForDashboardApiResponse>,
-                ListAuditsForDashboardApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListAuditsForDashboardApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<ListAuditsForDashboardApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListAuditsForDashboardApi(
@@ -93,32 +57,26 @@ class _$ListAuditsForDashboardApi extends ListAuditsForDashboardApi {
   @override
   CommandState<ApiCommand<ListAuditsForDashboardApiRequest>,
           ApiResult<ListAuditsForDashboardApiResponse>>
-      get $initial => CommandState<ApiCommand<ListAuditsForDashboardApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<ListAuditsForDashboardApiRequest>,
           ApiResult<ListAuditsForDashboardApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListAuditsForDashboardApiRequest>,
           ApiResult<ListAuditsForDashboardApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListAuditsForDashboardApiRequest>,
           ApiResult<ListAuditsForDashboardApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListAuditsForDashboardApiRequest)]),
-        FullType(ApiResult, [FullType(ListAuditsForDashboardApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

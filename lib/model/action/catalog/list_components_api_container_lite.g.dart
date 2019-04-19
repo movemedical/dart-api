@@ -214,25 +214,25 @@ class _$ListComponentsApiContainerLiteActions
   final StatefulActionsOptions<
       ListComponentsApiContainerLite,
       ListComponentsApiContainerLiteBuilder,
-      ListComponentsApiContainerLiteActions> $options;
+      ListComponentsApiContainerLiteActions> options$;
 
-  final ActionDispatcher<ListComponentsApiContainerLite> $replace;
+  final ActionDispatcher<ListComponentsApiContainerLite> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> containerNumber;
   final ItemActions item;
 
-  _$ListComponentsApiContainerLiteActions._(this.$options)
-      : $replace = $options.action<ListComponentsApiContainerLite>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListComponentsApiContainerLiteActions._(this.options$)
+      : replace$ = options$.action<ListComponentsApiContainerLite>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        containerNumber = $options.field<int>(
+        containerNumber = options$.field<int>(
             'containerNumber',
             (a) => a?.containerNumber,
             (s) => s?.containerNumber,
             (p, b) => p?.containerNumber = b),
         item = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'item',
                 (a) => a.item,
                 (s) => s?.item,
@@ -245,44 +245,39 @@ class _$ListComponentsApiContainerLiteActions
       _$ListComponentsApiContainerLiteActions._(options());
 
   @override
-  ListComponentsApiContainerLite get $initial =>
+  ListComponentsApiContainerLite get initialState$ =>
       ListComponentsApiContainerLite();
 
   @override
-  ListComponentsApiContainerLiteBuilder $newBuilder() =>
+  ListComponentsApiContainerLiteBuilder newBuilder$() =>
       ListComponentsApiContainerLiteBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.item,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.containerNumber,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    containerNumber.$reducer(reducer);
-    item.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    containerNumber.reducer$(reducer);
+    item.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    item.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    item.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListComponentsApiContainerLite);
 }

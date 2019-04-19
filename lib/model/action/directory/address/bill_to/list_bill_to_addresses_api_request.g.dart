@@ -297,9 +297,9 @@ class _$ListBillToAddressesApiRequestActions
   final StatefulActionsOptions<
       ListBillToAddressesApiRequest,
       ListBillToAddressesApiRequestBuilder,
-      ListBillToAddressesApiRequestActions> $options;
+      ListBillToAddressesApiRequestActions> options$;
 
-  final ActionDispatcher<ListBillToAddressesApiRequest> $replace;
+  final ActionDispatcher<ListBillToAddressesApiRequest> replace$;
   final FieldDispatcher<String> customerId;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> search;
@@ -307,18 +307,18 @@ class _$ListBillToAddressesApiRequestActions
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListBillToAddressesApiOrderBy> orderBy;
 
-  _$ListBillToAddressesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListBillToAddressesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+  _$ListBillToAddressesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListBillToAddressesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -328,7 +328,7 @@ class _$ListBillToAddressesApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListBillToAddressesApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListBillToAddressesApiOrderBy>,
                     OrderByParamsBuilder<ListBillToAddressesApiOrderBy>,
                     OrderByParamsActions<ListBillToAddressesApiOrderBy>>(
@@ -344,24 +344,25 @@ class _$ListBillToAddressesApiRequestActions
       _$ListBillToAddressesApiRequestActions._(options());
 
   @override
-  ListBillToAddressesApiRequest get $initial => ListBillToAddressesApiRequest();
+  ListBillToAddressesApiRequest get initialState$ =>
+      ListBillToAddressesApiRequest();
 
   @override
-  ListBillToAddressesApiRequestBuilder $newBuilder() =>
+  ListBillToAddressesApiRequestBuilder newBuilder$() =>
       ListBillToAddressesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customerId,
         this.facilityId,
         this.search,
@@ -369,25 +370,20 @@ class _$ListBillToAddressesApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    customerId.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    search.$reducer(reducer);
-    active.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    customerId.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    search.reducer$(reducer);
+    active.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListBillToAddressesApiRequest);
 }

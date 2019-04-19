@@ -439,9 +439,9 @@ typedef StatefulActionsOptions<
 
 class _$GetLoanApiDisplayRulesActions extends GetLoanApiDisplayRulesActions {
   final StatefulActionsOptions<GetLoanApiDisplayRules,
-      GetLoanApiDisplayRulesBuilder, GetLoanApiDisplayRulesActions> $options;
+      GetLoanApiDisplayRulesBuilder, GetLoanApiDisplayRulesActions> options$;
 
-  final ActionDispatcher<GetLoanApiDisplayRules> $replace;
+  final ActionDispatcher<GetLoanApiDisplayRules> replace$;
   final FieldDispatcher<bool> editDetails;
   final FieldDispatcher<bool> editLoanLines;
   final FieldDispatcher<bool> moveBackToPlanning;
@@ -456,55 +456,55 @@ class _$GetLoanApiDisplayRulesActions extends GetLoanApiDisplayRulesActions {
   final FieldDispatcher<bool> print;
   final FieldDispatcher<bool> loanReturn;
 
-  _$GetLoanApiDisplayRulesActions._(this.$options)
-      : $replace = $options.action<GetLoanApiDisplayRules>(
-            '\$replace', (a) => a?.$replace),
-        editDetails = $options.field<bool>('editDetails', (a) => a?.editDetails,
+  _$GetLoanApiDisplayRulesActions._(this.options$)
+      : replace$ = options$.action<GetLoanApiDisplayRules>(
+            'replace\$', (a) => a?.replace$),
+        editDetails = options$.field<bool>('editDetails', (a) => a?.editDetails,
             (s) => s?.editDetails, (p, b) => p?.editDetails = b),
-        editLoanLines = $options.field<bool>(
+        editLoanLines = options$.field<bool>(
             'editLoanLines',
             (a) => a?.editLoanLines,
             (s) => s?.editLoanLines,
             (p, b) => p?.editLoanLines = b),
-        moveBackToPlanning = $options.field<bool>(
+        moveBackToPlanning = options$.field<bool>(
             'moveBackToPlanning',
             (a) => a?.moveBackToPlanning,
             (s) => s?.moveBackToPlanning,
             (p, b) => p?.moveBackToPlanning = b),
-        submitForApproval = $options.field<bool>(
+        submitForApproval = options$.field<bool>(
             'submitForApproval',
             (a) => a?.submitForApproval,
             (s) => s?.submitForApproval,
             (p, b) => p?.submitForApproval = b),
-        approve = $options.field<bool>('approve', (a) => a?.approve,
+        approve = options$.field<bool>('approve', (a) => a?.approve,
             (s) => s?.approve, (p, b) => p?.approve = b),
-        clone = $options.field<bool>(
+        clone = options$.field<bool>(
             'clone', (a) => a?.clone, (s) => s?.clone, (p, b) => p?.clone = b),
-        sendForExtension = $options.field<bool>(
+        sendForExtension = options$.field<bool>(
             'sendForExtension',
             (a) => a?.sendForExtension,
             (s) => s?.sendForExtension,
             (p, b) => p?.sendForExtension = b),
-        cancelExtension = $options.field<bool>(
+        cancelExtension = options$.field<bool>(
             'cancelExtension',
             (a) => a?.cancelExtension,
             (s) => s?.cancelExtension,
             (p, b) => p?.cancelExtension = b),
-        approveExtension = $options.field<bool>(
+        approveExtension = options$.field<bool>(
             'approveExtension',
             (a) => a?.approveExtension,
             (s) => s?.approveExtension,
             (p, b) => p?.approveExtension = b),
-        generateReturn = $options.field<bool>(
+        generateReturn = options$.field<bool>(
             'generateReturn',
             (a) => a?.generateReturn,
             (s) => s?.generateReturn,
             (p, b) => p?.generateReturn = b),
-        cancel = $options.field<bool>('cancel', (a) => a?.cancel,
+        cancel = options$.field<bool>('cancel', (a) => a?.cancel,
             (s) => s?.cancel, (p, b) => p?.cancel = b),
-        print = $options.field<bool>(
+        print = options$.field<bool>(
             'print', (a) => a?.print, (s) => s?.print, (p, b) => p?.print = b),
-        loanReturn = $options.field<bool>('loanReturn', (a) => a?.loanReturn,
+        loanReturn = options$.field<bool>('loanReturn', (a) => a?.loanReturn,
             (s) => s?.loanReturn, (p, b) => p?.loanReturn = b),
         super._();
 
@@ -513,17 +513,17 @@ class _$GetLoanApiDisplayRulesActions extends GetLoanApiDisplayRulesActions {
       _$GetLoanApiDisplayRulesActions._(options());
 
   @override
-  GetLoanApiDisplayRules get $initial => GetLoanApiDisplayRules();
+  GetLoanApiDisplayRules get initialState$ => GetLoanApiDisplayRules();
 
   @override
-  GetLoanApiDisplayRulesBuilder $newBuilder() =>
+  GetLoanApiDisplayRulesBuilder newBuilder$() =>
       GetLoanApiDisplayRulesBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.editDetails,
         this.editLoanLines,
         this.moveBackToPlanning,
@@ -540,29 +540,25 @@ class _$GetLoanApiDisplayRulesActions extends GetLoanApiDisplayRulesActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    editDetails.$reducer(reducer);
-    editLoanLines.$reducer(reducer);
-    moveBackToPlanning.$reducer(reducer);
-    submitForApproval.$reducer(reducer);
-    approve.$reducer(reducer);
-    clone.$reducer(reducer);
-    sendForExtension.$reducer(reducer);
-    cancelExtension.$reducer(reducer);
-    approveExtension.$reducer(reducer);
-    generateReturn.$reducer(reducer);
-    cancel.$reducer(reducer);
-    print.$reducer(reducer);
-    loanReturn.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    editDetails.reducer$(reducer);
+    editLoanLines.reducer$(reducer);
+    moveBackToPlanning.reducer$(reducer);
+    submitForApproval.reducer$(reducer);
+    approve.reducer$(reducer);
+    clone.reducer$(reducer);
+    sendForExtension.reducer$(reducer);
+    cancelExtension.reducer$(reducer);
+    approveExtension.reducer$(reducer);
+    generateReturn.reducer$(reducer);
+    cancel.reducer$(reducer);
+    print.reducer$(reducer);
+    loanReturn.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetLoanApiDisplayRules);
 }

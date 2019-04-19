@@ -182,15 +182,15 @@ class _$ListProceduresForSchedulingApiResponseActions
   final StatefulActionsOptions<
       ListProceduresForSchedulingApiResponse,
       ListProceduresForSchedulingApiResponseBuilder,
-      ListProceduresForSchedulingApiResponseActions> $options;
+      ListProceduresForSchedulingApiResponseActions> options$;
 
-  final ActionDispatcher<ListProceduresForSchedulingApiResponse> $replace;
+  final ActionDispatcher<ListProceduresForSchedulingApiResponse> replace$;
   final FieldDispatcher<BuiltList<Procedure>> procedures;
 
-  _$ListProceduresForSchedulingApiResponseActions._(this.$options)
-      : $replace = $options.action<ListProceduresForSchedulingApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        procedures = $options.field<BuiltList<Procedure>>(
+  _$ListProceduresForSchedulingApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListProceduresForSchedulingApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        procedures = options$.field<BuiltList<Procedure>>(
             'procedures',
             (a) => a?.procedures,
             (s) => s?.procedures,
@@ -202,34 +202,29 @@ class _$ListProceduresForSchedulingApiResponseActions
       _$ListProceduresForSchedulingApiResponseActions._(options());
 
   @override
-  ListProceduresForSchedulingApiResponse get $initial =>
+  ListProceduresForSchedulingApiResponse get initialState$ =>
       ListProceduresForSchedulingApiResponse();
 
   @override
-  ListProceduresForSchedulingApiResponseBuilder $newBuilder() =>
+  ListProceduresForSchedulingApiResponseBuilder newBuilder$() =>
       ListProceduresForSchedulingApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.procedures,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    procedures.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    procedures.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListProceduresForSchedulingApiResponse);
 }

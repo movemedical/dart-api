@@ -161,15 +161,15 @@ class _$RemoveMobileVersionBlacklistApiRequestActions
   final StatefulActionsOptions<
       RemoveMobileVersionBlacklistApiRequest,
       RemoveMobileVersionBlacklistApiRequestBuilder,
-      RemoveMobileVersionBlacklistApiRequestActions> $options;
+      RemoveMobileVersionBlacklistApiRequestActions> options$;
 
-  final ActionDispatcher<RemoveMobileVersionBlacklistApiRequest> $replace;
+  final ActionDispatcher<RemoveMobileVersionBlacklistApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$RemoveMobileVersionBlacklistApiRequestActions._(this.$options)
-      : $replace = $options.action<RemoveMobileVersionBlacklistApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$RemoveMobileVersionBlacklistApiRequestActions._(this.options$)
+      : replace$ = options$.action<RemoveMobileVersionBlacklistApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -178,34 +178,29 @@ class _$RemoveMobileVersionBlacklistApiRequestActions
       _$RemoveMobileVersionBlacklistApiRequestActions._(options());
 
   @override
-  RemoveMobileVersionBlacklistApiRequest get $initial =>
+  RemoveMobileVersionBlacklistApiRequest get initialState$ =>
       RemoveMobileVersionBlacklistApiRequest();
 
   @override
-  RemoveMobileVersionBlacklistApiRequestBuilder $newBuilder() =>
+  RemoveMobileVersionBlacklistApiRequestBuilder newBuilder$() =>
       RemoveMobileVersionBlacklistApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RemoveMobileVersionBlacklistApiRequest);
 }

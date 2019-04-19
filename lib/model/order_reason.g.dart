@@ -471,9 +471,9 @@ typedef StatefulActionsOptions<OrderReason, OrderReasonBuilder,
 
 class _$OrderReasonActions extends OrderReasonActions {
   final StatefulActionsOptions<OrderReason, OrderReasonBuilder,
-      OrderReasonActions> $options;
+      OrderReasonActions> options$;
 
-  final ActionDispatcher<OrderReason> $replace;
+  final ActionDispatcher<OrderReason> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<OrderReasonGroup> reasonGroup;
@@ -489,31 +489,31 @@ class _$OrderReasonActions extends OrderReasonActions {
   final FieldDispatcher<bool> erp;
   final FieldDispatcher<bool> active;
 
-  _$OrderReasonActions._(this.$options)
-      : $replace =
-            $options.action<OrderReason>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$OrderReasonActions._(this.options$)
+      : replace$ =
+            options$.action<OrderReason>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        reasonGroup = $options.field<OrderReasonGroup>(
+        reasonGroup = options$.field<OrderReasonGroup>(
             'reasonGroup',
             (a) => a?.reasonGroup,
             (s) => s?.reasonGroup,
             (p, b) => p?.reasonGroup = b),
-        toInventoryType = InventoryTypeActions(() => $options.stateful<
+        toInventoryType = InventoryTypeActions(() => options$.stateful<
                 InventoryType, InventoryTypeBuilder, InventoryTypeActions>(
             'toInventoryType',
             (a) => a.toInventoryType,
             (s) => s?.toInventoryType,
             (b) => b?.toInventoryType,
             (parent, builder) => parent?.toInventoryType = builder)),
-        salesOrderInventorySource = $options.field<SalesOrderInventorySource>(
+        salesOrderInventorySource = options$.field<SalesOrderInventorySource>(
             'salesOrderInventorySource',
             (a) => a?.salesOrderInventorySource,
             (s) => s?.salesOrderInventorySource,
             (p, b) => p?.salesOrderInventorySource = b),
-        defaultShippingService = ShippingServiceActions(() => $options.stateful<
+        defaultShippingService = ShippingServiceActions(() => options$.stateful<
                 ShippingService,
                 ShippingServiceBuilder,
                 ShippingServiceActions>(
@@ -522,36 +522,36 @@ class _$OrderReasonActions extends OrderReasonActions {
             (s) => s?.defaultShippingService,
             (b) => b?.defaultShippingService,
             (parent, builder) => parent?.defaultShippingService = builder)),
-        approvalRequired = $options.field<bool>(
+        approvalRequired = options$.field<bool>(
             'approvalRequired',
             (a) => a?.approvalRequired,
             (s) => s?.approvalRequired,
             (p, b) => p?.approvalRequired = b),
-        changesResponsibleParty = $options.field<bool>(
+        changesResponsibleParty = options$.field<bool>(
             'changesResponsibleParty',
             (a) => a?.changesResponsibleParty,
             (s) => s?.changesResponsibleParty,
             (p, b) => p?.changesResponsibleParty = b),
-        changesHomeLocation = $options.field<bool>(
+        changesHomeLocation = options$.field<bool>(
             'changesHomeLocation',
             (a) => a?.changesHomeLocation,
             (s) => s?.changesHomeLocation,
             (p, b) => p?.changesHomeLocation = b),
-        creditCardAllowed = $options.field<bool>(
+        creditCardAllowed = options$.field<bool>(
             'creditCardAllowed',
             (a) => a?.creditCardAllowed,
             (s) => s?.creditCardAllowed,
             (p, b) => p?.creditCardAllowed = b),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        bizUnitName = $options.field<String>(
+        bizUnitName = options$.field<String>(
             'bizUnitName',
             (a) => a?.bizUnitName,
             (s) => s?.bizUnitName,
             (p, b) => p?.bizUnitName = b),
-        erp = $options.field<bool>(
+        erp = options$.field<bool>(
             'erp', (a) => a?.erp, (s) => s?.erp, (p, b) => p?.erp = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -559,23 +559,23 @@ class _$OrderReasonActions extends OrderReasonActions {
       _$OrderReasonActions._(options());
 
   @override
-  OrderReason get $initial => OrderReason();
+  OrderReason get initialState$ => OrderReason();
 
   @override
-  OrderReasonBuilder $newBuilder() => OrderReasonBuilder();
+  OrderReasonBuilder newBuilder$() => OrderReasonBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toInventoryType,
         this.defaultShippingService,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.reasonGroup,
@@ -591,32 +591,28 @@ class _$OrderReasonActions extends OrderReasonActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    reasonGroup.$reducer(reducer);
-    toInventoryType.$reducer(reducer);
-    salesOrderInventorySource.$reducer(reducer);
-    defaultShippingService.$reducer(reducer);
-    approvalRequired.$reducer(reducer);
-    changesResponsibleParty.$reducer(reducer);
-    changesHomeLocation.$reducer(reducer);
-    creditCardAllowed.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    bizUnitName.$reducer(reducer);
-    erp.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    reasonGroup.reducer$(reducer);
+    toInventoryType.reducer$(reducer);
+    salesOrderInventorySource.reducer$(reducer);
+    defaultShippingService.reducer$(reducer);
+    approvalRequired.reducer$(reducer);
+    changesResponsibleParty.reducer$(reducer);
+    changesHomeLocation.reducer$(reducer);
+    creditCardAllowed.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    bizUnitName.reducer$(reducer);
+    erp.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    toInventoryType.$middleware(middleware);
-    defaultShippingService.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    toInventoryType.middleware$(middleware);
+    defaultShippingService.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(OrderReason);
 }

@@ -244,22 +244,22 @@ class _$ListOrgDelegatesApiRequestActions
   final StatefulActionsOptions<
       ListOrgDelegatesApiRequest,
       ListOrgDelegatesApiRequestBuilder,
-      ListOrgDelegatesApiRequestActions> $options;
+      ListOrgDelegatesApiRequestActions> options$;
 
-  final ActionDispatcher<ListOrgDelegatesApiRequest> $replace;
+  final ActionDispatcher<ListOrgDelegatesApiRequest> replace$;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListOrgDelegatesApiOrderBy> orderBy;
 
-  _$ListOrgDelegatesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListOrgDelegatesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orgId = $options.field<String>(
+  _$ListOrgDelegatesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListOrgDelegatesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -269,7 +269,7 @@ class _$ListOrgDelegatesApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListOrgDelegatesApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListOrgDelegatesApiOrderBy>,
                     OrderByParamsBuilder<ListOrgDelegatesApiOrderBy>,
                     OrderByParamsActions<ListOrgDelegatesApiOrderBy>>(
@@ -285,45 +285,41 @@ class _$ListOrgDelegatesApiRequestActions
       _$ListOrgDelegatesApiRequestActions._(options());
 
   @override
-  ListOrgDelegatesApiRequest get $initial => ListOrgDelegatesApiRequest();
+  ListOrgDelegatesApiRequest get initialState$ => ListOrgDelegatesApiRequest();
 
   @override
-  ListOrgDelegatesApiRequestBuilder $newBuilder() =>
+  ListOrgDelegatesApiRequestBuilder newBuilder$() =>
       ListOrgDelegatesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orgId,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orgId.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orgId.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListOrgDelegatesApiRequest);
 }

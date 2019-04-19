@@ -22,67 +22,32 @@ class _$SearchIssueGroupsApi extends SearchIssueGroupsApi {
           ApiResult<SearchIssueGroupsApiResponse>>,
       CommandStateBuilder<ApiCommand<SearchIssueGroupsApiRequest>,
           ApiResult<SearchIssueGroupsApiResponse>>,
-      SearchIssueGroupsApi> $options;
+      SearchIssueGroupsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SearchIssueGroupsApiRequest>,
-          ApiResult<SearchIssueGroupsApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchIssueGroupsApiRequest>,
-          ApiResult<SearchIssueGroupsApiResponse>,
-          SearchIssueGroupsApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchIssueGroupsApiRequest>,
-          ApiResult<SearchIssueGroupsApiResponse>,
-          SearchIssueGroupsApi,
-          Command<ApiCommand<SearchIssueGroupsApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchIssueGroupsApiRequest>,
-          ApiResult<SearchIssueGroupsApiResponse>,
-          SearchIssueGroupsApi,
-          CommandResult<ApiResult<SearchIssueGroupsApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchIssueGroupsApiRequest>,
-          ApiResult<SearchIssueGroupsApiResponse>,
-          SearchIssueGroupsApi,
-          CommandProgress>> $progress;
+          ApiResult<SearchIssueGroupsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<SearchIssueGroupsApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<SearchIssueGroupsApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$SearchIssueGroupsApi._(this.$options)
-      : $replace = $options.action<
+  _$SearchIssueGroupsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<SearchIssueGroupsApiRequest>,
                     ApiResult<SearchIssueGroupsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<SearchIssueGroupsApiRequest>,
-                ApiResult<SearchIssueGroupsApiResponse>,
-                SearchIssueGroupsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<SearchIssueGroupsApiRequest>,
-                    ApiResult<SearchIssueGroupsApiResponse>,
-                    SearchIssueGroupsApi,
-                    Command<ApiCommand<SearchIssueGroupsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<SearchIssueGroupsApiRequest>,
-                    ApiResult<SearchIssueGroupsApiResponse>,
-                    SearchIssueGroupsApi,
-                    CommandResult<ApiResult<SearchIssueGroupsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<SearchIssueGroupsApiRequest>,
-                ApiResult<SearchIssueGroupsApiResponse>,
-                SearchIssueGroupsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<SearchIssueGroupsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<SearchIssueGroupsApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$SearchIssueGroupsApi(SearchIssueGroupsApiOptions options) =>
@@ -91,32 +56,25 @@ class _$SearchIssueGroupsApi extends SearchIssueGroupsApi {
   @override
   CommandState<ApiCommand<SearchIssueGroupsApiRequest>,
           ApiResult<SearchIssueGroupsApiResponse>>
-      get $initial => CommandState<ApiCommand<SearchIssueGroupsApiRequest>,
+      get initialState$ => CommandState<ApiCommand<SearchIssueGroupsApiRequest>,
           ApiResult<SearchIssueGroupsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<SearchIssueGroupsApiRequest>,
           ApiResult<SearchIssueGroupsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<SearchIssueGroupsApiRequest>,
           ApiResult<SearchIssueGroupsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(SearchIssueGroupsApiRequest)]),
-        FullType(ApiResult, [FullType(SearchIssueGroupsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

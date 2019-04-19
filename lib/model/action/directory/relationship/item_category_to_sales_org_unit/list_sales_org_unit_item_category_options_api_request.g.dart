@@ -265,28 +265,28 @@ class _$ListSalesOrgUnitItemCategoryOptionsApiRequestActions
   final StatefulActionsOptions<
       ListSalesOrgUnitItemCategoryOptionsApiRequest,
       ListSalesOrgUnitItemCategoryOptionsApiRequestBuilder,
-      ListSalesOrgUnitItemCategoryOptionsApiRequestActions> $options;
+      ListSalesOrgUnitItemCategoryOptionsApiRequestActions> options$;
 
   final ActionDispatcher<ListSalesOrgUnitItemCategoryOptionsApiRequest>
-      $replace;
+      replace$;
   final FieldDispatcher<String> salesOrgUnitId;
   final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListSalesOrgUnitItemCategoryOptionsApiOrderBy>
       orderBy;
 
-  _$ListSalesOrgUnitItemCategoryOptionsApiRequestActions._(this.$options)
-      : $replace =
-            $options.action<ListSalesOrgUnitItemCategoryOptionsApiRequest>(
-                '\$replace', (a) => a?.$replace),
-        salesOrgUnitId = $options.field<String>(
+  _$ListSalesOrgUnitItemCategoryOptionsApiRequestActions._(this.options$)
+      : replace$ =
+            options$.action<ListSalesOrgUnitItemCategoryOptionsApiRequest>(
+                'replace\$', (a) => a?.replace$),
+        salesOrgUnitId = options$.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
             (p, b) => p?.salesOrgUnitId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -297,7 +297,7 @@ class _$ListSalesOrgUnitItemCategoryOptionsApiRequestActions
             (parent, builder) => parent?.paging = builder)),
         orderBy =
             OrderByParamsActions<ListSalesOrgUnitItemCategoryOptionsApiOrderBy>(
-                () => $options.stateful<
+                () => options$.stateful<
                         OrderByParams<
                             ListSalesOrgUnitItemCategoryOptionsApiOrderBy>,
                         OrderByParamsBuilder<
@@ -317,47 +317,42 @@ class _$ListSalesOrgUnitItemCategoryOptionsApiRequestActions
       _$ListSalesOrgUnitItemCategoryOptionsApiRequestActions._(options());
 
   @override
-  ListSalesOrgUnitItemCategoryOptionsApiRequest get $initial =>
+  ListSalesOrgUnitItemCategoryOptionsApiRequest get initialState$ =>
       ListSalesOrgUnitItemCategoryOptionsApiRequest();
 
   @override
-  ListSalesOrgUnitItemCategoryOptionsApiRequestBuilder $newBuilder() =>
+  ListSalesOrgUnitItemCategoryOptionsApiRequestBuilder newBuilder$() =>
       ListSalesOrgUnitItemCategoryOptionsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.salesOrgUnitId,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    salesOrgUnitId.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    salesOrgUnitId.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListSalesOrgUnitItemCategoryOptionsApiRequest);
 }

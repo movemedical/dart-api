@@ -273,42 +273,42 @@ class _$UpdateCaseEventInsuranceApiRequestActions
   final StatefulActionsOptions<
       UpdateCaseEventInsuranceApiRequest,
       UpdateCaseEventInsuranceApiRequestBuilder,
-      UpdateCaseEventInsuranceApiRequestActions> $options;
+      UpdateCaseEventInsuranceApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateCaseEventInsuranceApiRequest> $replace;
+  final ActionDispatcher<UpdateCaseEventInsuranceApiRequest> replace$;
   final FieldDispatcher<String> mdcCaseEventId;
   final FieldDispatcher<bool> removePrimary;
   final InsuranceActions primary;
   final FieldDispatcher<bool> removeSecondary;
   final InsuranceActions secondary;
 
-  _$UpdateCaseEventInsuranceApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateCaseEventInsuranceApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        mdcCaseEventId = $options.field<String>(
+  _$UpdateCaseEventInsuranceApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateCaseEventInsuranceApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        mdcCaseEventId = options$.field<String>(
             'mdcCaseEventId',
             (a) => a?.mdcCaseEventId,
             (s) => s?.mdcCaseEventId,
             (p, b) => p?.mdcCaseEventId = b),
-        removePrimary = $options.field<bool>(
+        removePrimary = options$.field<bool>(
             'removePrimary',
             (a) => a?.removePrimary,
             (s) => s?.removePrimary,
             (p, b) => p?.removePrimary = b),
         primary = InsuranceActions(() =>
-            $options.stateful<Insurance, InsuranceBuilder, InsuranceActions>(
+            options$.stateful<Insurance, InsuranceBuilder, InsuranceActions>(
                 'primary',
                 (a) => a.primary,
                 (s) => s?.primary,
                 (b) => b?.primary,
                 (parent, builder) => parent?.primary = builder)),
-        removeSecondary = $options.field<bool>(
+        removeSecondary = options$.field<bool>(
             'removeSecondary',
             (a) => a?.removeSecondary,
             (s) => s?.removeSecondary,
             (p, b) => p?.removeSecondary = b),
         secondary = InsuranceActions(() =>
-            $options.stateful<Insurance, InsuranceBuilder, InsuranceActions>(
+            options$.stateful<Insurance, InsuranceBuilder, InsuranceActions>(
                 'secondary',
                 (a) => a.secondary,
                 (s) => s?.secondary,
@@ -321,49 +321,44 @@ class _$UpdateCaseEventInsuranceApiRequestActions
       _$UpdateCaseEventInsuranceApiRequestActions._(options());
 
   @override
-  UpdateCaseEventInsuranceApiRequest get $initial =>
+  UpdateCaseEventInsuranceApiRequest get initialState$ =>
       UpdateCaseEventInsuranceApiRequest();
 
   @override
-  UpdateCaseEventInsuranceApiRequestBuilder $newBuilder() =>
+  UpdateCaseEventInsuranceApiRequestBuilder newBuilder$() =>
       UpdateCaseEventInsuranceApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.primary,
         this.secondary,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.mdcCaseEventId,
         this.removePrimary,
         this.removeSecondary,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    mdcCaseEventId.$reducer(reducer);
-    removePrimary.$reducer(reducer);
-    primary.$reducer(reducer);
-    removeSecondary.$reducer(reducer);
-    secondary.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    mdcCaseEventId.reducer$(reducer);
+    removePrimary.reducer$(reducer);
+    primary.reducer$(reducer);
+    removeSecondary.reducer$(reducer);
+    secondary.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    primary.$middleware(middleware);
-    secondary.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    primary.middleware$(middleware);
+    secondary.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateCaseEventInsuranceApiRequest);
 }

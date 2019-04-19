@@ -227,17 +227,17 @@ class _$RequestStockExportDocApiRequestActions
   final StatefulActionsOptions<
       RequestStockExportDocApiRequest,
       RequestStockExportDocApiRequestBuilder,
-      RequestStockExportDocApiRequestActions> $options;
+      RequestStockExportDocApiRequestActions> options$;
 
-  final ActionDispatcher<RequestStockExportDocApiRequest> $replace;
+  final ActionDispatcher<RequestStockExportDocApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final ListStockSummaryApiRequestActions stockRequest;
 
-  _$RequestStockExportDocApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestStockExportDocApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestStockExportDocApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestStockExportDocApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -246,10 +246,10 @@ class _$RequestStockExportDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
         stockRequest = ListStockSummaryApiRequestActions(() =>
-            $options.stateful<
+            options$.stateful<
                     ListStockSummaryApiRequest,
                     ListStockSummaryApiRequestBuilder,
                     ListStockSummaryApiRequestActions>(
@@ -265,45 +265,40 @@ class _$RequestStockExportDocApiRequestActions
       _$RequestStockExportDocApiRequestActions._(options());
 
   @override
-  RequestStockExportDocApiRequest get $initial =>
+  RequestStockExportDocApiRequest get initialState$ =>
       RequestStockExportDocApiRequest();
 
   @override
-  RequestStockExportDocApiRequestBuilder $newBuilder() =>
+  RequestStockExportDocApiRequestBuilder newBuilder$() =>
       RequestStockExportDocApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
         this.stockRequest,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.format,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    format.$reducer(reducer);
-    stockRequest.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    format.reducer$(reducer);
+    stockRequest.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
-    stockRequest.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
+    stockRequest.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestStockExportDocApiRequest);
 }

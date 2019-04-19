@@ -22,68 +22,32 @@ class _$RequestStockExportDocApi extends RequestStockExportDocApi {
           ApiResult<RequestStockExportDocApiResponse>>,
       CommandStateBuilder<ApiCommand<RequestStockExportDocApiRequest>,
           ApiResult<RequestStockExportDocApiResponse>>,
-      RequestStockExportDocApi> $options;
+      RequestStockExportDocApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestStockExportDocApiRequest>,
-          ApiResult<RequestStockExportDocApiResponse>>> $replace;
+          ApiResult<RequestStockExportDocApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<RequestStockExportDocApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestStockExportDocApiRequest>,
-          ApiResult<RequestStockExportDocApiResponse>,
-          RequestStockExportDocApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestStockExportDocApiRequest>,
-          ApiResult<RequestStockExportDocApiResponse>,
-          RequestStockExportDocApi,
-          Command<ApiCommand<RequestStockExportDocApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestStockExportDocApiRequest>,
-          ApiResult<RequestStockExportDocApiResponse>,
-          RequestStockExportDocApi,
-          CommandResult<ApiResult<RequestStockExportDocApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestStockExportDocApiRequest>,
-          ApiResult<RequestStockExportDocApiResponse>,
-          RequestStockExportDocApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<RequestStockExportDocApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RequestStockExportDocApi._(this.$options)
-      : $replace = $options.action<
+  _$RequestStockExportDocApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<RequestStockExportDocApiRequest>,
                     ApiResult<RequestStockExportDocApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RequestStockExportDocApiRequest>,
-                ApiResult<RequestStockExportDocApiResponse>,
-                RequestStockExportDocApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestStockExportDocApiRequest>,
-                    ApiResult<RequestStockExportDocApiResponse>,
-                    RequestStockExportDocApi,
-                    Command<ApiCommand<RequestStockExportDocApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestStockExportDocApiRequest>,
-                    ApiResult<RequestStockExportDocApiResponse>,
-                    RequestStockExportDocApi,
-                    CommandResult<
-                        ApiResult<RequestStockExportDocApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RequestStockExportDocApiRequest>,
-                ApiResult<RequestStockExportDocApiResponse>,
-                RequestStockExportDocApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<RequestStockExportDocApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<RequestStockExportDocApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RequestStockExportDocApi(RequestStockExportDocApiOptions options) =>
@@ -92,32 +56,26 @@ class _$RequestStockExportDocApi extends RequestStockExportDocApi {
   @override
   CommandState<ApiCommand<RequestStockExportDocApiRequest>,
           ApiResult<RequestStockExportDocApiResponse>>
-      get $initial => CommandState<ApiCommand<RequestStockExportDocApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<RequestStockExportDocApiRequest>,
           ApiResult<RequestStockExportDocApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestStockExportDocApiRequest>,
           ApiResult<RequestStockExportDocApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RequestStockExportDocApiRequest>,
           ApiResult<RequestStockExportDocApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RequestStockExportDocApiRequest)]),
-        FullType(ApiResult, [FullType(RequestStockExportDocApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

@@ -221,24 +221,24 @@ class _$UpdateConversationApiRequestActions
   final StatefulActionsOptions<
       UpdateConversationApiRequest,
       UpdateConversationApiRequestBuilder,
-      UpdateConversationApiRequestActions> $options;
+      UpdateConversationApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateConversationApiRequest> $replace;
+  final ActionDispatcher<UpdateConversationApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<bool> stop;
   final FieldDispatcher<String> purpose;
   final FieldDispatcher<DateTime> urgency;
 
-  _$UpdateConversationApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateConversationApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdateConversationApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateConversationApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        stop = $options.field<bool>(
+        stop = options$.field<bool>(
             'stop', (a) => a?.stop, (s) => s?.stop, (p, b) => p?.stop = b),
-        purpose = $options.field<String>('purpose', (a) => a?.purpose,
+        purpose = options$.field<String>('purpose', (a) => a?.purpose,
             (s) => s?.purpose, (p, b) => p?.purpose = b),
-        urgency = $options.field<DateTime>('urgency', (a) => a?.urgency,
+        urgency = options$.field<DateTime>('urgency', (a) => a?.urgency,
             (s) => s?.urgency, (p, b) => p?.urgency = b),
         super._();
 
@@ -247,17 +247,18 @@ class _$UpdateConversationApiRequestActions
       _$UpdateConversationApiRequestActions._(options());
 
   @override
-  UpdateConversationApiRequest get $initial => UpdateConversationApiRequest();
+  UpdateConversationApiRequest get initialState$ =>
+      UpdateConversationApiRequest();
 
   @override
-  UpdateConversationApiRequestBuilder $newBuilder() =>
+  UpdateConversationApiRequestBuilder newBuilder$() =>
       UpdateConversationApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.stop,
         this.purpose,
@@ -265,21 +266,16 @@ class _$UpdateConversationApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    stop.$reducer(reducer);
-    purpose.$reducer(reducer);
-    urgency.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    stop.reducer$(reducer);
+    purpose.reducer$(reducer);
+    urgency.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateConversationApiRequest);
 }

@@ -312,9 +312,9 @@ class _$GetInvoiceApiInvoiceDetailActions
   final StatefulActionsOptions<
       GetInvoiceApiInvoiceDetail,
       GetInvoiceApiInvoiceDetailBuilder,
-      GetInvoiceApiInvoiceDetailActions> $options;
+      GetInvoiceApiInvoiceDetailActions> options$;
 
-  final ActionDispatcher<GetInvoiceApiInvoiceDetail> $replace;
+  final ActionDispatcher<GetInvoiceApiInvoiceDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> invoiceNumber;
   final FieldDispatcher<DateTime> invoiceDate;
@@ -323,37 +323,37 @@ class _$GetInvoiceApiInvoiceDetailActions
   final FieldDispatcher<String> erpInvoiceNumber;
   final OrderHeaderLiteActions order;
 
-  _$GetInvoiceApiInvoiceDetailActions._(this.$options)
-      : $replace = $options.action<GetInvoiceApiInvoiceDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetInvoiceApiInvoiceDetailActions._(this.options$)
+      : replace$ = options$.action<GetInvoiceApiInvoiceDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        invoiceNumber = $options.field<int>(
+        invoiceNumber = options$.field<int>(
             'invoiceNumber',
             (a) => a?.invoiceNumber,
             (s) => s?.invoiceNumber,
             (p, b) => p?.invoiceNumber = b),
-        invoiceDate = $options.field<DateTime>(
+        invoiceDate = options$.field<DateTime>(
             'invoiceDate',
             (a) => a?.invoiceDate,
             (s) => s?.invoiceDate,
             (p, b) => p?.invoiceDate = b),
-        invoiceCreatedDate = $options.field<DateTime>(
+        invoiceCreatedDate = options$.field<DateTime>(
             'invoiceCreatedDate',
             (a) => a?.invoiceCreatedDate,
             (s) => s?.invoiceCreatedDate,
             (p, b) => p?.invoiceCreatedDate = b),
-        erpOrderNumber = $options.field<String>(
+        erpOrderNumber = options$.field<String>(
             'erpOrderNumber',
             (a) => a?.erpOrderNumber,
             (s) => s?.erpOrderNumber,
             (p, b) => p?.erpOrderNumber = b),
-        erpInvoiceNumber = $options.field<String>(
+        erpInvoiceNumber = options$.field<String>(
             'erpInvoiceNumber',
             (a) => a?.erpInvoiceNumber,
             (s) => s?.erpInvoiceNumber,
             (p, b) => p?.erpInvoiceNumber = b),
-        order = OrderHeaderLiteActions(() => $options.stateful<OrderHeaderLite,
+        order = OrderHeaderLiteActions(() => options$.stateful<OrderHeaderLite,
                 OrderHeaderLiteBuilder, OrderHeaderLiteActions>(
             'order',
             (a) => a.order,
@@ -367,23 +367,23 @@ class _$GetInvoiceApiInvoiceDetailActions
       _$GetInvoiceApiInvoiceDetailActions._(options());
 
   @override
-  GetInvoiceApiInvoiceDetail get $initial => GetInvoiceApiInvoiceDetail();
+  GetInvoiceApiInvoiceDetail get initialState$ => GetInvoiceApiInvoiceDetail();
 
   @override
-  GetInvoiceApiInvoiceDetailBuilder $newBuilder() =>
+  GetInvoiceApiInvoiceDetailBuilder newBuilder$() =>
       GetInvoiceApiInvoiceDetailBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.order,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.invoiceNumber,
         this.invoiceDate,
@@ -393,24 +393,20 @@ class _$GetInvoiceApiInvoiceDetailActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    invoiceNumber.$reducer(reducer);
-    invoiceDate.$reducer(reducer);
-    invoiceCreatedDate.$reducer(reducer);
-    erpOrderNumber.$reducer(reducer);
-    erpInvoiceNumber.$reducer(reducer);
-    order.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    invoiceNumber.reducer$(reducer);
+    invoiceDate.reducer$(reducer);
+    invoiceCreatedDate.reducer$(reducer);
+    erpOrderNumber.reducer$(reducer);
+    erpInvoiceNumber.reducer$(reducer);
+    order.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    order.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    order.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetInvoiceApiInvoiceDetail);
 }

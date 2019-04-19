@@ -199,18 +199,18 @@ class _$SaveItemCategoryLinksApiRequestActions
   final StatefulActionsOptions<
       SaveItemCategoryLinksApiRequest,
       SaveItemCategoryLinksApiRequestBuilder,
-      SaveItemCategoryLinksApiRequestActions> $options;
+      SaveItemCategoryLinksApiRequestActions> options$;
 
-  final ActionDispatcher<SaveItemCategoryLinksApiRequest> $replace;
+  final ActionDispatcher<SaveItemCategoryLinksApiRequest> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<BuiltList<String>> itemCategoryIds;
 
-  _$SaveItemCategoryLinksApiRequestActions._(this.$options)
-      : $replace = $options.action<SaveItemCategoryLinksApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$SaveItemCategoryLinksApiRequestActions._(this.options$)
+      : replace$ = options$.action<SaveItemCategoryLinksApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemCategoryIds = $options.field<BuiltList<String>>(
+        itemCategoryIds = options$.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
@@ -222,36 +222,31 @@ class _$SaveItemCategoryLinksApiRequestActions
       _$SaveItemCategoryLinksApiRequestActions._(options());
 
   @override
-  SaveItemCategoryLinksApiRequest get $initial =>
+  SaveItemCategoryLinksApiRequest get initialState$ =>
       SaveItemCategoryLinksApiRequest();
 
   @override
-  SaveItemCategoryLinksApiRequestBuilder $newBuilder() =>
+  SaveItemCategoryLinksApiRequestBuilder newBuilder$() =>
       SaveItemCategoryLinksApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.itemCategoryIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemCategoryIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemCategoryIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SaveItemCategoryLinksApiRequest);
 }

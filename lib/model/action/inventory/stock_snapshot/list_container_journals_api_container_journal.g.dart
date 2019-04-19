@@ -372,9 +372,9 @@ class _$ListContainerJournalsApiContainerJournalActions
   final StatefulActionsOptions<
       ListContainerJournalsApiContainerJournal,
       ListContainerJournalsApiContainerJournalBuilder,
-      ListContainerJournalsApiContainerJournalActions> $options;
+      ListContainerJournalsApiContainerJournalActions> options$;
 
-  final ActionDispatcher<ListContainerJournalsApiContainerJournal> $replace;
+  final ActionDispatcher<ListContainerJournalsApiContainerJournal> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> number;
   final FieldDispatcher<DateTime> date;
@@ -385,45 +385,45 @@ class _$ListContainerJournalsApiContainerJournalActions
   final FieldDispatcher<StockReferenceType> transactionReferenceType;
   final FieldDispatcher<String> transactionReferenceId;
 
-  _$ListContainerJournalsApiContainerJournalActions._(this.$options)
-      : $replace = $options.action<ListContainerJournalsApiContainerJournal>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListContainerJournalsApiContainerJournalActions._(this.options$)
+      : replace$ = options$.action<ListContainerJournalsApiContainerJournal>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        date = $options.field<DateTime>(
+        date = options$.field<DateTime>(
             'date', (a) => a?.date, (s) => s?.date, (p, b) => p?.date = b),
-        stockTransactionType = $options.field<StockTransactionType>(
+        stockTransactionType = options$.field<StockTransactionType>(
             'stockTransactionType',
             (a) => a?.stockTransactionType,
             (s) => s?.stockTransactionType,
             (p, b) => p?.stockTransactionType = b),
         location = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        container = StockContainerActions(() => $options.stateful<
+        container = StockContainerActions(() => options$.stateful<
                 StockContainer, StockContainerBuilder, StockContainerActions>(
             'container',
             (a) => a.container,
             (s) => s?.container,
             (b) => b?.container,
             (parent, builder) => parent?.container = builder)),
-        quantityChange = $options.field<int>(
+        quantityChange = options$.field<int>(
             'quantityChange',
             (a) => a?.quantityChange,
             (s) => s?.quantityChange,
             (p, b) => p?.quantityChange = b),
-        transactionReferenceType = $options.field<StockReferenceType>(
+        transactionReferenceType = options$.field<StockReferenceType>(
             'transactionReferenceType',
             (a) => a?.transactionReferenceType,
             (s) => s?.transactionReferenceType,
             (p, b) => p?.transactionReferenceType = b),
-        transactionReferenceId = $options.field<String>(
+        transactionReferenceId = options$.field<String>(
             'transactionReferenceId',
             (a) => a?.transactionReferenceId,
             (s) => s?.transactionReferenceId,
@@ -435,25 +435,25 @@ class _$ListContainerJournalsApiContainerJournalActions
       _$ListContainerJournalsApiContainerJournalActions._(options());
 
   @override
-  ListContainerJournalsApiContainerJournal get $initial =>
+  ListContainerJournalsApiContainerJournal get initialState$ =>
       ListContainerJournalsApiContainerJournal();
 
   @override
-  ListContainerJournalsApiContainerJournalBuilder $newBuilder() =>
+  ListContainerJournalsApiContainerJournalBuilder newBuilder$() =>
       ListContainerJournalsApiContainerJournalBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
         this.container,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.number,
         this.date,
@@ -464,28 +464,23 @@ class _$ListContainerJournalsApiContainerJournalActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    number.$reducer(reducer);
-    date.$reducer(reducer);
-    stockTransactionType.$reducer(reducer);
-    location.$reducer(reducer);
-    container.$reducer(reducer);
-    quantityChange.$reducer(reducer);
-    transactionReferenceType.$reducer(reducer);
-    transactionReferenceId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    number.reducer$(reducer);
+    date.reducer$(reducer);
+    stockTransactionType.reducer$(reducer);
+    location.reducer$(reducer);
+    container.reducer$(reducer);
+    quantityChange.reducer$(reducer);
+    transactionReferenceType.reducer$(reducer);
+    transactionReferenceId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    location.$middleware(middleware);
-    container.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    location.middleware$(middleware);
+    container.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListContainerJournalsApiContainerJournal);
 }

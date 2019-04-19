@@ -22,67 +22,32 @@ class _$BarcodeScansToStockApi extends BarcodeScansToStockApi {
           ApiResult<BarcodeScansToStockApiResponse>>,
       CommandStateBuilder<ApiCommand<BarcodeScansToStockApiRequest>,
           ApiResult<BarcodeScansToStockApiResponse>>,
-      BarcodeScansToStockApi> $options;
+      BarcodeScansToStockApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<BarcodeScansToStockApiRequest>,
-          ApiResult<BarcodeScansToStockApiResponse>>> $replace;
+          ApiResult<BarcodeScansToStockApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<BarcodeScansToStockApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BarcodeScansToStockApiRequest>,
-          ApiResult<BarcodeScansToStockApiResponse>,
-          BarcodeScansToStockApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BarcodeScansToStockApiRequest>,
-          ApiResult<BarcodeScansToStockApiResponse>,
-          BarcodeScansToStockApi,
-          Command<ApiCommand<BarcodeScansToStockApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BarcodeScansToStockApiRequest>,
-          ApiResult<BarcodeScansToStockApiResponse>,
-          BarcodeScansToStockApi,
-          CommandResult<ApiResult<BarcodeScansToStockApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BarcodeScansToStockApiRequest>,
-          ApiResult<BarcodeScansToStockApiResponse>,
-          BarcodeScansToStockApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<BarcodeScansToStockApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$BarcodeScansToStockApi._(this.$options)
-      : $replace = $options.action<
+  _$BarcodeScansToStockApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<BarcodeScansToStockApiRequest>,
                     ApiResult<BarcodeScansToStockApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<BarcodeScansToStockApiRequest>,
-                ApiResult<BarcodeScansToStockApiResponse>,
-                BarcodeScansToStockApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<BarcodeScansToStockApiRequest>,
-                    ApiResult<BarcodeScansToStockApiResponse>,
-                    BarcodeScansToStockApi,
-                    Command<ApiCommand<BarcodeScansToStockApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<BarcodeScansToStockApiRequest>,
-                    ApiResult<BarcodeScansToStockApiResponse>,
-                    BarcodeScansToStockApi,
-                    CommandResult<ApiResult<BarcodeScansToStockApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<BarcodeScansToStockApiRequest>,
-                ApiResult<BarcodeScansToStockApiResponse>,
-                BarcodeScansToStockApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<BarcodeScansToStockApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<BarcodeScansToStockApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$BarcodeScansToStockApi(BarcodeScansToStockApiOptions options) =>
@@ -91,32 +56,26 @@ class _$BarcodeScansToStockApi extends BarcodeScansToStockApi {
   @override
   CommandState<ApiCommand<BarcodeScansToStockApiRequest>,
           ApiResult<BarcodeScansToStockApiResponse>>
-      get $initial => CommandState<ApiCommand<BarcodeScansToStockApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<BarcodeScansToStockApiRequest>,
           ApiResult<BarcodeScansToStockApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<BarcodeScansToStockApiRequest>,
           ApiResult<BarcodeScansToStockApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<BarcodeScansToStockApiRequest>,
           ApiResult<BarcodeScansToStockApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(BarcodeScansToStockApiRequest)]),
-        FullType(ApiResult, [FullType(BarcodeScansToStockApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

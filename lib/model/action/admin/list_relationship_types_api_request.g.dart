@@ -174,15 +174,15 @@ class _$ListRelationshipTypesApiRequestActions
   final StatefulActionsOptions<
       ListRelationshipTypesApiRequest,
       ListRelationshipTypesApiRequestBuilder,
-      ListRelationshipTypesApiRequestActions> $options;
+      ListRelationshipTypesApiRequestActions> options$;
 
-  final ActionDispatcher<ListRelationshipTypesApiRequest> $replace;
+  final ActionDispatcher<ListRelationshipTypesApiRequest> replace$;
   final PaginationParamsActions paging;
 
-  _$ListRelationshipTypesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListRelationshipTypesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        paging = PaginationParamsActions(() => $options.stateful<
+  _$ListRelationshipTypesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListRelationshipTypesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -198,40 +198,35 @@ class _$ListRelationshipTypesApiRequestActions
       _$ListRelationshipTypesApiRequestActions._(options());
 
   @override
-  ListRelationshipTypesApiRequest get $initial =>
+  ListRelationshipTypesApiRequest get initialState$ =>
       ListRelationshipTypesApiRequest();
 
   @override
-  ListRelationshipTypesApiRequestBuilder $newBuilder() =>
+  ListRelationshipTypesApiRequestBuilder newBuilder$() =>
       ListRelationshipTypesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListRelationshipTypesApiRequest);
 }

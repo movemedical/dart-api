@@ -185,15 +185,15 @@ class _$ListStockContainersForLocationApiResponseActions
   final StatefulActionsOptions<
       ListStockContainersForLocationApiResponse,
       ListStockContainersForLocationApiResponseBuilder,
-      ListStockContainersForLocationApiResponseActions> $options;
+      ListStockContainersForLocationApiResponseActions> options$;
 
-  final ActionDispatcher<ListStockContainersForLocationApiResponse> $replace;
+  final ActionDispatcher<ListStockContainersForLocationApiResponse> replace$;
   final FieldDispatcher<BuiltList<StockContainer>> stockContainers;
 
-  _$ListStockContainersForLocationApiResponseActions._(this.$options)
-      : $replace = $options.action<ListStockContainersForLocationApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        stockContainers = $options.field<BuiltList<StockContainer>>(
+  _$ListStockContainersForLocationApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListStockContainersForLocationApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        stockContainers = options$.field<BuiltList<StockContainer>>(
             'stockContainers',
             (a) => a?.stockContainers,
             (s) => s?.stockContainers,
@@ -205,34 +205,29 @@ class _$ListStockContainersForLocationApiResponseActions
       _$ListStockContainersForLocationApiResponseActions._(options());
 
   @override
-  ListStockContainersForLocationApiResponse get $initial =>
+  ListStockContainersForLocationApiResponse get initialState$ =>
       ListStockContainersForLocationApiResponse();
 
   @override
-  ListStockContainersForLocationApiResponseBuilder $newBuilder() =>
+  ListStockContainersForLocationApiResponseBuilder newBuilder$() =>
       ListStockContainersForLocationApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockContainers,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockContainers.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockContainers.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListStockContainersForLocationApiResponse);
 }

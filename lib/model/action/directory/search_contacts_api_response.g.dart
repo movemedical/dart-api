@@ -171,15 +171,15 @@ class _$SearchContactsApiResponseActions
   final StatefulActionsOptions<
       SearchContactsApiResponse,
       SearchContactsApiResponseBuilder,
-      SearchContactsApiResponseActions> $options;
+      SearchContactsApiResponseActions> options$;
 
-  final ActionDispatcher<SearchContactsApiResponse> $replace;
+  final ActionDispatcher<SearchContactsApiResponse> replace$;
   final FieldDispatcher<BuiltList<Contact>> contacts;
 
-  _$SearchContactsApiResponseActions._(this.$options)
-      : $replace = $options.action<SearchContactsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        contacts = $options.field<BuiltList<Contact>>('contacts',
+  _$SearchContactsApiResponseActions._(this.options$)
+      : replace$ = options$.action<SearchContactsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        contacts = options$.field<BuiltList<Contact>>('contacts',
             (a) => a?.contacts, (s) => s?.contacts, (p, b) => p?.contacts = b),
         super._();
 
@@ -188,32 +188,28 @@ class _$SearchContactsApiResponseActions
       _$SearchContactsApiResponseActions._(options());
 
   @override
-  SearchContactsApiResponse get $initial => SearchContactsApiResponse();
+  SearchContactsApiResponse get initialState$ => SearchContactsApiResponse();
 
   @override
-  SearchContactsApiResponseBuilder $newBuilder() =>
+  SearchContactsApiResponseBuilder newBuilder$() =>
       SearchContactsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.contacts,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    contacts.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    contacts.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SearchContactsApiResponse);
 }

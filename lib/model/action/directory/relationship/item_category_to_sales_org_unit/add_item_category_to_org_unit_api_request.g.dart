@@ -228,27 +228,27 @@ class _$AddItemCategoryToOrgUnitApiRequestActions
   final StatefulActionsOptions<
       AddItemCategoryToOrgUnitApiRequest,
       AddItemCategoryToOrgUnitApiRequestBuilder,
-      AddItemCategoryToOrgUnitApiRequestActions> $options;
+      AddItemCategoryToOrgUnitApiRequestActions> options$;
 
-  final ActionDispatcher<AddItemCategoryToOrgUnitApiRequest> $replace;
+  final ActionDispatcher<AddItemCategoryToOrgUnitApiRequest> replace$;
   final FieldDispatcher<String> itemCategoryId;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<bool> canStock;
   final FieldDispatcher<bool> canSell;
 
-  _$AddItemCategoryToOrgUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<AddItemCategoryToOrgUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        itemCategoryId = $options.field<String>(
+  _$AddItemCategoryToOrgUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<AddItemCategoryToOrgUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        itemCategoryId = options$.field<String>(
             'itemCategoryId',
             (a) => a?.itemCategoryId,
             (s) => s?.itemCategoryId,
             (p, b) => p?.itemCategoryId = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        canStock = $options.field<bool>('canStock', (a) => a?.canStock,
+        canStock = options$.field<bool>('canStock', (a) => a?.canStock,
             (s) => s?.canStock, (p, b) => p?.canStock = b),
-        canSell = $options.field<bool>('canSell', (a) => a?.canSell,
+        canSell = options$.field<bool>('canSell', (a) => a?.canSell,
             (s) => s?.canSell, (p, b) => p?.canSell = b),
         super._();
 
@@ -257,18 +257,18 @@ class _$AddItemCategoryToOrgUnitApiRequestActions
       _$AddItemCategoryToOrgUnitApiRequestActions._(options());
 
   @override
-  AddItemCategoryToOrgUnitApiRequest get $initial =>
+  AddItemCategoryToOrgUnitApiRequest get initialState$ =>
       AddItemCategoryToOrgUnitApiRequest();
 
   @override
-  AddItemCategoryToOrgUnitApiRequestBuilder $newBuilder() =>
+  AddItemCategoryToOrgUnitApiRequestBuilder newBuilder$() =>
       AddItemCategoryToOrgUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemCategoryId,
         this.orgUnitId,
         this.canStock,
@@ -276,21 +276,16 @@ class _$AddItemCategoryToOrgUnitApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemCategoryId.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    canStock.$reducer(reducer);
-    canSell.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemCategoryId.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    canStock.reducer$(reducer);
+    canSell.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AddItemCategoryToOrgUnitApiRequest);
 }

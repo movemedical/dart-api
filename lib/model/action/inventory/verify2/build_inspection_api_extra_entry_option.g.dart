@@ -294,9 +294,9 @@ class _$BuildInspectionApiExtraEntryOptionActions
   final StatefulActionsOptions<
       BuildInspectionApiExtraEntryOption,
       BuildInspectionApiExtraEntryOptionBuilder,
-      BuildInspectionApiExtraEntryOptionActions> $options;
+      BuildInspectionApiExtraEntryOptionActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiExtraEntryOption> $replace;
+  final ActionDispatcher<BuildInspectionApiExtraEntryOption> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<BuildInspectionApiExtraEntryOptionType> type;
   final FieldDispatcher<String> stockId;
@@ -304,28 +304,28 @@ class _$BuildInspectionApiExtraEntryOptionActions
   final FieldDispatcher<bool> multipleOptionForLocation;
   final FieldDispatcher<String> swappedOutExpectedStockId;
 
-  _$BuildInspectionApiExtraEntryOptionActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiExtraEntryOption>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BuildInspectionApiExtraEntryOptionActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiExtraEntryOption>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.field<BuildInspectionApiExtraEntryOptionType>(
+        type = options$.field<BuildInspectionApiExtraEntryOptionType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        locationData = LocationDataActions(() => $options
+        locationData = LocationDataActions(() => options$
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
                 'locationData',
                 (a) => a.locationData,
                 (s) => s?.locationData,
                 (b) => b?.locationData,
                 (parent, builder) => parent?.locationData = builder)),
-        multipleOptionForLocation = $options.field<bool>(
+        multipleOptionForLocation = options$.field<bool>(
             'multipleOptionForLocation',
             (a) => a?.multipleOptionForLocation,
             (s) => s?.multipleOptionForLocation,
             (p, b) => p?.multipleOptionForLocation = b),
-        swappedOutExpectedStockId = $options.field<String>(
+        swappedOutExpectedStockId = options$.field<String>(
             'swappedOutExpectedStockId',
             (a) => a?.swappedOutExpectedStockId,
             (s) => s?.swappedOutExpectedStockId,
@@ -337,24 +337,24 @@ class _$BuildInspectionApiExtraEntryOptionActions
       _$BuildInspectionApiExtraEntryOptionActions._(options());
 
   @override
-  BuildInspectionApiExtraEntryOption get $initial =>
+  BuildInspectionApiExtraEntryOption get initialState$ =>
       BuildInspectionApiExtraEntryOption();
 
   @override
-  BuildInspectionApiExtraEntryOptionBuilder $newBuilder() =>
+  BuildInspectionApiExtraEntryOptionBuilder newBuilder$() =>
       BuildInspectionApiExtraEntryOptionBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.locationData,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.type,
         this.stockId,
@@ -363,24 +363,19 @@ class _$BuildInspectionApiExtraEntryOptionActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    type.$reducer(reducer);
-    stockId.$reducer(reducer);
-    locationData.$reducer(reducer);
-    multipleOptionForLocation.$reducer(reducer);
-    swappedOutExpectedStockId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    type.reducer$(reducer);
+    stockId.reducer$(reducer);
+    locationData.reducer$(reducer);
+    multipleOptionForLocation.reducer$(reducer);
+    swappedOutExpectedStockId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    locationData.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    locationData.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiExtraEntryOption);
 }

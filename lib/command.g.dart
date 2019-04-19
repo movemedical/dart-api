@@ -879,9 +879,9 @@ typedef StatefulActionsOptions<ApiState, ApiStateBuilder,
     ApiActions> ApiActionsOptions();
 
 class _$ApiActions extends ApiActions {
-  final StatefulActionsOptions<ApiState, ApiStateBuilder, ApiActions> $options;
+  final StatefulActionsOptions<ApiState, ApiStateBuilder, ApiActions> options$;
 
-  final ActionDispatcher<ApiState> $replace;
+  final ActionDispatcher<ApiState> replace$;
   final PushDispatcher push;
   final FieldDispatcher<String> appVersion;
   final FieldDispatcher<String> platformVersion;
@@ -895,35 +895,35 @@ class _$ApiActions extends ApiActions {
   final GetUiSetupMobileApi setupCommand;
   final FieldDispatcher<GetUiSetupMobileApiResponse> activeSetup;
 
-  _$ApiActions._(this.$options)
-      : $replace = $options.action<ApiState>('\$replace', (a) => a?.$replace),
+  _$ApiActions._(this.options$)
+      : replace$ = options$.action<ApiState>('replace\$', (a) => a?.replace$),
         push = PushDispatcher(
-            () => $options.stateless<PushDispatcher>('push', (a) => a.push)),
-        appVersion = $options.field<String>('appVersion', (a) => a?.appVersion,
+            () => options$.stateless<PushDispatcher>('push', (a) => a.push)),
+        appVersion = options$.field<String>('appVersion', (a) => a?.appVersion,
             (s) => s?.appVersion, (p, b) => p?.appVersion = b),
-        platformVersion = $options.field<String>(
+        platformVersion = options$.field<String>(
             'platformVersion',
             (a) => a?.platformVersion,
             (s) => s?.platformVersion,
             (p, b) => p?.platformVersion = b),
-        url = $options.field<String>(
+        url = options$.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
-        wsUrl = $options.field<String>(
+        wsUrl = options$.field<String>(
             'wsUrl', (a) => a?.wsUrl, (s) => s?.wsUrl, (p, b) => p?.wsUrl = b),
-        wsConnected = $options.field<DateTime>(
+        wsConnected = options$.field<DateTime>(
             'wsConnected',
             (a) => a?.wsConnected,
             (s) => s?.wsConnected,
             (p, b) => p?.wsConnected = b),
-        wsDisconnected = $options.field<DateTime>(
+        wsDisconnected = options$.field<DateTime>(
             'wsDisconnected',
             (a) => a?.wsDisconnected,
             (s) => s?.wsDisconnected,
             (p, b) => p?.wsDisconnected = b),
-        wsError = $options.field<String>('wsError', (a) => a?.wsError,
+        wsError = options$.field<String>('wsError', (a) => a?.wsError,
             (s) => s?.wsError, (p, b) => p?.wsError = b),
         loginCommand = LoginDispatcher(() =>
-            $options.stateful<
+            options$.stateful<
                     CommandState<ApiCommand<LoginRequest>,
                         ApiResult<LoginResponse>>,
                     CommandStateBuilder<ApiCommand<LoginRequest>,
@@ -934,12 +934,12 @@ class _$ApiActions extends ApiActions {
                 (s) => s?.loginCommand,
                 (b) => b?.loginCommand,
                 (parent, builder) => parent?.loginCommand = builder)),
-        activeLogin = $options.field<LoginResponse>(
+        activeLogin = options$.field<LoginResponse>(
             'activeLogin',
             (a) => a?.activeLogin,
             (s) => s?.activeLogin,
             (p, b) => p?.activeLogin = b),
-        setupCommand = GetUiSetupMobileApi(() => $options.stateful<
+        setupCommand = GetUiSetupMobileApi(() => options$.stateful<
                 CommandState<ApiCommand<GetUiSetupMobileApiRequest>,
                     ApiResult<GetUiSetupMobileApiResponse>>,
                 CommandStateBuilder<ApiCommand<GetUiSetupMobileApiRequest>,
@@ -950,7 +950,7 @@ class _$ApiActions extends ApiActions {
             (s) => s?.setupCommand,
             (b) => b?.setupCommand,
             (parent, builder) => parent?.setupCommand = builder)),
-        activeSetup = $options.field<GetUiSetupMobileApiResponse>(
+        activeSetup = options$.field<GetUiSetupMobileApiResponse>(
             'activeSetup',
             (a) => a?.activeSetup,
             (s) => s?.activeSetup,
@@ -960,24 +960,24 @@ class _$ApiActions extends ApiActions {
   factory _$ApiActions(ApiActionsOptions options) => _$ApiActions._(options());
 
   @override
-  ApiState get $initial => ApiState();
+  ApiState get initialState$ => ApiState();
 
   @override
-  ApiStateBuilder $newBuilder() => ApiStateBuilder();
+  ApiStateBuilder newBuilder$() => ApiStateBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.push,
         this.loginCommand,
         this.setupCommand,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.appVersion,
         this.platformVersion,
         this.url,
@@ -990,31 +990,27 @@ class _$ApiActions extends ApiActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    push.$reducer(reducer);
-    appVersion.$reducer(reducer);
-    platformVersion.$reducer(reducer);
-    url.$reducer(reducer);
-    wsUrl.$reducer(reducer);
-    wsConnected.$reducer(reducer);
-    wsDisconnected.$reducer(reducer);
-    wsError.$reducer(reducer);
-    loginCommand.$reducer(reducer);
-    activeLogin.$reducer(reducer);
-    setupCommand.$reducer(reducer);
-    activeSetup.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    push.reducer$(reducer);
+    appVersion.reducer$(reducer);
+    platformVersion.reducer$(reducer);
+    url.reducer$(reducer);
+    wsUrl.reducer$(reducer);
+    wsConnected.reducer$(reducer);
+    wsDisconnected.reducer$(reducer);
+    wsError.reducer$(reducer);
+    loginCommand.reducer$(reducer);
+    activeLogin.reducer$(reducer);
+    setupCommand.reducer$(reducer);
+    activeSetup.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    push.$middleware(middleware);
-    loginCommand.$middleware(middleware);
-    setupCommand.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    push.middleware$(middleware);
+    loginCommand.middleware$(middleware);
+    setupCommand.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ApiState);
 }

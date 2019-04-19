@@ -181,18 +181,18 @@ class _$CreateBizUnitToOrgUnitApiRequestActions
   final StatefulActionsOptions<
       CreateBizUnitToOrgUnitApiRequest,
       CreateBizUnitToOrgUnitApiRequestBuilder,
-      CreateBizUnitToOrgUnitApiRequestActions> $options;
+      CreateBizUnitToOrgUnitApiRequestActions> options$;
 
-  final ActionDispatcher<CreateBizUnitToOrgUnitApiRequest> $replace;
+  final ActionDispatcher<CreateBizUnitToOrgUnitApiRequest> replace$;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> orgUnitId;
 
-  _$CreateBizUnitToOrgUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateBizUnitToOrgUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+  _$CreateBizUnitToOrgUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateBizUnitToOrgUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
         super._();
 
@@ -201,36 +201,31 @@ class _$CreateBizUnitToOrgUnitApiRequestActions
       _$CreateBizUnitToOrgUnitApiRequestActions._(options());
 
   @override
-  CreateBizUnitToOrgUnitApiRequest get $initial =>
+  CreateBizUnitToOrgUnitApiRequest get initialState$ =>
       CreateBizUnitToOrgUnitApiRequest();
 
   @override
-  CreateBizUnitToOrgUnitApiRequestBuilder $newBuilder() =>
+  CreateBizUnitToOrgUnitApiRequestBuilder newBuilder$() =>
       CreateBizUnitToOrgUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.bizUnitId,
         this.orgUnitId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateBizUnitToOrgUnitApiRequest);
 }

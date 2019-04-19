@@ -1044,7 +1044,7 @@ class PushPayloadsBuilder
 typedef StatelessActionsOptions<PushDispatcher> PushDispatcherOptions();
 
 class _$PushDispatcher extends PushDispatcher {
-  final StatelessActionsOptions<PushDispatcher> $options;
+  final StatelessActionsOptions<PushDispatcher> options$;
 
   final ActionDispatcher<AuditFilePushMessage> auditFilePushMessage;
   final ActionDispatcher<AuditFileUpdatePushMessage> auditFileUpdatePushMessage;
@@ -1088,106 +1088,106 @@ class _$PushDispatcher extends PushDispatcher {
   final ActionDispatcher<UiSetupUpdatedPushMessage> uiSetupUpdatedPushMessage;
   final ActionDispatcher<MovePresenceEvent> movePresenceEvent;
 
-  _$PushDispatcher._(this.$options)
-      : auditFilePushMessage = $options.action<AuditFilePushMessage>(
+  _$PushDispatcher._(this.options$)
+      : auditFilePushMessage = options$.action<AuditFilePushMessage>(
             'auditFilePushMessage', (a) => a?.auditFilePushMessage),
         auditFileUpdatePushMessage =
-            $options.action<AuditFileUpdatePushMessage>(
+            options$.action<AuditFileUpdatePushMessage>(
                 'auditFileUpdatePushMessage',
                 (a) => a?.auditFileUpdatePushMessage),
-        auditUpdatedPushMessage = $options.action<AuditUpdatedPushMessage>(
+        auditUpdatedPushMessage = options$.action<AuditUpdatedPushMessage>(
             'auditUpdatedPushMessage', (a) => a?.auditUpdatedPushMessage),
         caseEventFileUpdatePushMessage =
-            $options.action<CaseEventFileUpdatePushMessage>(
+            options$.action<CaseEventFileUpdatePushMessage>(
                 'caseEventFileUpdatePushMessage',
                 (a) => a?.caseEventFileUpdatePushMessage),
         caseEventUpdatePushMessage =
-            $options.action<CaseEventUpdatePushMessage>(
+            options$.action<CaseEventUpdatePushMessage>(
                 'caseEventUpdatePushMessage',
                 (a) => a?.caseEventUpdatePushMessage),
         caseRequirementsUpdatedPushMessage =
-            $options.action<CaseRequirementsUpdatedPushMessage>(
+            options$.action<CaseRequirementsUpdatedPushMessage>(
                 'caseRequirementsUpdatedPushMessage',
                 (a) => a?.caseRequirementsUpdatedPushMessage),
         caseScheduleUpdatePushMessage =
-            $options.action<CaseScheduleUpdatePushMessage>(
+            options$.action<CaseScheduleUpdatePushMessage>(
                 'caseScheduleUpdatePushMessage',
                 (a) => a?.caseScheduleUpdatePushMessage),
         conversationUpdatedPushMessage =
-            $options.action<ConversationUpdatedPushMessage>(
+            options$.action<ConversationUpdatedPushMessage>(
                 'conversationUpdatedPushMessage',
                 (a) => a?.conversationUpdatedPushMessage),
         createPickFinishedPushMessage =
-            $options.action<CreatePickFinishedPushMessage>(
+            options$.action<CreatePickFinishedPushMessage>(
                 'createPickFinishedPushMessage',
                 (a) => a?.createPickFinishedPushMessage),
-        exportLogFilePushMessage = $options.action<ExportLogFilePushMessage>(
+        exportLogFilePushMessage = options$.action<ExportLogFilePushMessage>(
             'exportLogFilePushMessage', (a) => a?.exportLogFilePushMessage),
         facilityUpdatedPushMessage =
-            $options.action<FacilityUpdatedPushMessage>(
+            options$.action<FacilityUpdatedPushMessage>(
                 'facilityUpdatedPushMessage',
                 (a) => a?.facilityUpdatedPushMessage),
-        importLogFilePushMessage = $options.action<ImportLogFilePushMessage>(
+        importLogFilePushMessage = options$.action<ImportLogFilePushMessage>(
             'importLogFilePushMessage', (a) => a?.importLogFilePushMessage),
         issueRegeneratedPushMessage =
-            $options.action<IssueRegeneratedPushMessage>(
+            options$.action<IssueRegeneratedPushMessage>(
                 'issueRegeneratedPushMessage',
                 (a) => a?.issueRegeneratedPushMessage),
-        itemFileUpdatePushMessage = $options.action<ItemFileUpdatePushMessage>(
+        itemFileUpdatePushMessage = options$.action<ItemFileUpdatePushMessage>(
             'itemFileUpdatePushMessage', (a) => a?.itemFileUpdatePushMessage),
-        loanDetailPushMessage = $options.action<LoanDetailPushMessage>(
+        loanDetailPushMessage = options$.action<LoanDetailPushMessage>(
             'loanDetailPushMessage', (a) => a?.loanDetailPushMessage),
         loanLinesUpdatedPushMessage =
-            $options.action<LoanLinesUpdatedPushMessage>(
+            options$.action<LoanLinesUpdatedPushMessage>(
                 'loanLinesUpdatedPushMessage',
                 (a) => a?.loanLinesUpdatedPushMessage),
-        messageAddedPushMessage = $options.action<MessageAddedPushMessage>(
+        messageAddedPushMessage = options$.action<MessageAddedPushMessage>(
             'messageAddedPushMessage', (a) => a?.messageAddedPushMessage),
         messagesReadUnreadPushMessage =
-            $options.action<MessagesReadUnreadPushMessage>(
+            options$.action<MessagesReadUnreadPushMessage>(
                 'messagesReadUnreadPushMessage',
                 (a) => a?.messagesReadUnreadPushMessage),
         messagingBadgeUpdatedPushMessage =
-            $options.action<MessagingBadgeUpdatedPushMessage>(
+            options$.action<MessagingBadgeUpdatedPushMessage>(
                 'messagingBadgeUpdatedPushMessage',
                 (a) => a?.messagingBadgeUpdatedPushMessage),
         noteAddedUpdatedPushMessage =
-            $options.action<NoteAddedUpdatedPushMessage>(
+            options$.action<NoteAddedUpdatedPushMessage>(
                 'noteAddedUpdatedPushMessage',
                 (a) => a?.noteAddedUpdatedPushMessage),
-        orderDetailPushMessage = $options.action<OrderDetailPushMessage>(
+        orderDetailPushMessage = options$.action<OrderDetailPushMessage>(
             'orderDetailPushMessage', (a) => a?.orderDetailPushMessage),
-        orderFilePushMessage = $options.action<OrderFilePushMessage>(
+        orderFilePushMessage = options$.action<OrderFilePushMessage>(
             'orderFilePushMessage', (a) => a?.orderFilePushMessage),
         refreshConversationListPushMessage =
-            $options.action<RefreshConversationListPushMessage>(
+            options$.action<RefreshConversationListPushMessage>(
                 'refreshConversationListPushMessage',
                 (a) => a?.refreshConversationListPushMessage),
         shipmentFileUpdatePushMessage =
-            $options.action<ShipmentFileUpdatePushMessage>(
+            options$.action<ShipmentFileUpdatePushMessage>(
                 'shipmentFileUpdatePushMessage',
                 (a) => a?.shipmentFileUpdatePushMessage),
         shipmentUpdatedPushMessage =
-            $options.action<ShipmentUpdatedPushMessage>(
+            options$.action<ShipmentUpdatedPushMessage>(
                 'shipmentUpdatedPushMessage',
                 (a) => a?.shipmentUpdatedPushMessage),
         stockSummaryKeyUpdatedPushMessage =
-            $options.action<StockSummaryKeyUpdatedPushMessage>(
+            options$.action<StockSummaryKeyUpdatedPushMessage>(
                 'stockSummaryKeyUpdatedPushMessage',
                 (a) => a?.stockSummaryKeyUpdatedPushMessage),
-        uiSetupUpdatedPushMessage = $options.action<UiSetupUpdatedPushMessage>(
+        uiSetupUpdatedPushMessage = options$.action<UiSetupUpdatedPushMessage>(
             'uiSetupUpdatedPushMessage', (a) => a?.uiSetupUpdatedPushMessage),
-        movePresenceEvent = $options.action<MovePresenceEvent>(
+        movePresenceEvent = options$.action<MovePresenceEvent>(
             'movePresenceEvent', (a) => a?.movePresenceEvent),
         super._();
 
   factory _$PushDispatcher(PushDispatcherOptions options) =>
       _$PushDispatcher._(options());
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
         this.auditFilePushMessage,
         this.auditFileUpdatePushMessage,
         this.auditUpdatedPushMessage,

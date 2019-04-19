@@ -287,9 +287,9 @@ class _$UpdatePreferenceCardProductGroupsApiRequestActions
   final StatefulActionsOptions<
       UpdatePreferenceCardProductGroupsApiRequest,
       UpdatePreferenceCardProductGroupsApiRequestBuilder,
-      UpdatePreferenceCardProductGroupsApiRequestActions> $options;
+      UpdatePreferenceCardProductGroupsApiRequestActions> options$;
 
-  final ActionDispatcher<UpdatePreferenceCardProductGroupsApiRequest> $replace;
+  final ActionDispatcher<UpdatePreferenceCardProductGroupsApiRequest> replace$;
   final FieldDispatcher<String> preferenceCardId;
   final FieldDispatcher<
           BuiltList<UpdatePreferenceCardProductGroupsApiProductGroupAdd>>
@@ -299,28 +299,28 @@ class _$UpdatePreferenceCardProductGroupsApiRequestActions
       productGroupsToUpdate;
   final FieldDispatcher<BuiltList<String>> productGroupsToRemove;
 
-  _$UpdatePreferenceCardProductGroupsApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdatePreferenceCardProductGroupsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        preferenceCardId = $options.field<String>(
+  _$UpdatePreferenceCardProductGroupsApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdatePreferenceCardProductGroupsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        preferenceCardId = options$.field<String>(
             'preferenceCardId',
             (a) => a?.preferenceCardId,
             (s) => s?.preferenceCardId,
             (p, b) => p?.preferenceCardId = b),
-        productGroupsToAdd = $options.field<
+        productGroupsToAdd = options$.field<
                 BuiltList<UpdatePreferenceCardProductGroupsApiProductGroupAdd>>(
             'productGroupsToAdd',
             (a) => a?.productGroupsToAdd,
             (s) => s?.productGroupsToAdd,
             (p, b) => p?.productGroupsToAdd = b),
-        productGroupsToUpdate = $options.field<
+        productGroupsToUpdate = options$.field<
                 BuiltList<
                     UpdatePreferenceCardProductGroupsApiProductGroupUpdate>>(
             'productGroupsToUpdate',
             (a) => a?.productGroupsToUpdate,
             (s) => s?.productGroupsToUpdate,
             (p, b) => p?.productGroupsToUpdate = b),
-        productGroupsToRemove = $options.field<BuiltList<String>>(
+        productGroupsToRemove = options$.field<BuiltList<String>>(
             'productGroupsToRemove',
             (a) => a?.productGroupsToRemove,
             (s) => s?.productGroupsToRemove,
@@ -332,18 +332,18 @@ class _$UpdatePreferenceCardProductGroupsApiRequestActions
       _$UpdatePreferenceCardProductGroupsApiRequestActions._(options());
 
   @override
-  UpdatePreferenceCardProductGroupsApiRequest get $initial =>
+  UpdatePreferenceCardProductGroupsApiRequest get initialState$ =>
       UpdatePreferenceCardProductGroupsApiRequest();
 
   @override
-  UpdatePreferenceCardProductGroupsApiRequestBuilder $newBuilder() =>
+  UpdatePreferenceCardProductGroupsApiRequestBuilder newBuilder$() =>
       UpdatePreferenceCardProductGroupsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.preferenceCardId,
         this.productGroupsToAdd,
         this.productGroupsToUpdate,
@@ -351,21 +351,16 @@ class _$UpdatePreferenceCardProductGroupsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    preferenceCardId.$reducer(reducer);
-    productGroupsToAdd.$reducer(reducer);
-    productGroupsToUpdate.$reducer(reducer);
-    productGroupsToRemove.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    preferenceCardId.reducer$(reducer);
+    productGroupsToAdd.reducer$(reducer);
+    productGroupsToUpdate.reducer$(reducer);
+    productGroupsToRemove.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdatePreferenceCardProductGroupsApiRequest);
 }

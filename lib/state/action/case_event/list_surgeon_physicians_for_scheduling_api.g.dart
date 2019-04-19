@@ -25,76 +25,37 @@ class _$ListSurgeonPhysiciansForSchedulingApi
       CommandStateBuilder<
           ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
           ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>>,
-      ListSurgeonPhysiciansForSchedulingApi> $options;
+      ListSurgeonPhysiciansForSchedulingApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
-          ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>>> $replace;
+          ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
-          ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>,
-          ListSurgeonPhysiciansForSchedulingApi,
-          String>> $cancel;
+          Command<ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>>>
+      execute$;
   final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
-              ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>,
-              ListSurgeonPhysiciansForSchedulingApi,
-              Command<
-                  ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
-              ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>,
-              ListSurgeonPhysiciansForSchedulingApi,
-              CommandResult<
-                  ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
-          ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>,
-          ListSurgeonPhysiciansForSchedulingApi,
-          CommandProgress>> $progress;
+      CommandResult<
+          ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListSurgeonPhysiciansForSchedulingApi._(this.$options)
-      : $replace = $options.action<
+  _$ListSurgeonPhysiciansForSchedulingApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<
                     ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
                     ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
-                ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>,
-                ListSurgeonPhysiciansForSchedulingApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
-                    ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>,
-                    ListSurgeonPhysiciansForSchedulingApi,
-                    Command<
-                        ApiCommand<
-                            ListSurgeonPhysiciansForSchedulingApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
-                    ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>,
-                    ListSurgeonPhysiciansForSchedulingApi,
-                    CommandResult<
-                        ApiResult<
-                            ListSurgeonPhysiciansForSchedulingApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
-                ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>,
-                ListSurgeonPhysiciansForSchedulingApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<
+                    ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListSurgeonPhysiciansForSchedulingApi(
@@ -104,35 +65,26 @@ class _$ListSurgeonPhysiciansForSchedulingApi
   @override
   CommandState<ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
           ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
           ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
           ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>,
           ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand,
-            [FullType(ListSurgeonPhysiciansForSchedulingApiRequest)]),
-        FullType(ApiResult,
-            [FullType(ListSurgeonPhysiciansForSchedulingApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

@@ -718,9 +718,9 @@ class _$GetOfflineAuditDataApiAuditItemActions
   final StatefulActionsOptions<
       GetOfflineAuditDataApiAuditItem,
       GetOfflineAuditDataApiAuditItemBuilder,
-      GetOfflineAuditDataApiAuditItemActions> $options;
+      GetOfflineAuditDataApiAuditItemActions> options$;
 
-  final ActionDispatcher<GetOfflineAuditDataApiAuditItem> $replace;
+  final ActionDispatcher<GetOfflineAuditDataApiAuditItem> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> auditId;
   final FieldDispatcher<int> auditItemNumber;
@@ -747,97 +747,97 @@ class _$GetOfflineAuditDataApiAuditItemActions
   final FieldDispatcher<int> quantityExpected;
   final FieldDispatcher<int> quantityDiff;
 
-  _$GetOfflineAuditDataApiAuditItemActions._(this.$options)
-      : $replace = $options.action<GetOfflineAuditDataApiAuditItem>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetOfflineAuditDataApiAuditItemActions._(this.options$)
+      : replace$ = options$.action<GetOfflineAuditDataApiAuditItem>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        auditItemNumber = $options.field<int>(
+        auditItemNumber = options$.field<int>(
             'auditItemNumber',
             (a) => a?.auditItemNumber,
             (s) => s?.auditItemNumber,
             (p, b) => p?.auditItemNumber = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        lotSerialExpirationDate = $options.field<DateTime>(
+        lotSerialExpirationDate = options$.field<DateTime>(
             'lotSerialExpirationDate',
             (a) => a?.lotSerialExpirationDate,
             (s) => s?.lotSerialExpirationDate,
             (p, b) => p?.lotSerialExpirationDate = b),
-        tagId = $options.field<String>(
+        tagId = options$.field<String>(
             'tagId', (a) => a?.tagId, (s) => s?.tagId, (p, b) => p?.tagId = b),
-        containerString = $options.field<String>(
+        containerString = options$.field<String>(
             'containerString',
             (a) => a?.containerString,
             (s) => s?.containerString,
             (p, b) => p?.containerString = b),
-        containerType = $options.field<StockContainerType>(
+        containerType = options$.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        unknown = $options.field<bool>('unknown', (a) => a?.unknown,
+        unknown = options$.field<bool>('unknown', (a) => a?.unknown,
             (s) => s?.unknown, (p, b) => p?.unknown = b),
-        unknownItemNumber = $options.field<String>(
+        unknownItemNumber = options$.field<String>(
             'unknownItemNumber',
             (a) => a?.unknownItemNumber,
             (s) => s?.unknownItemNumber,
             (p, b) => p?.unknownItemNumber = b),
-        unknownLotSerialNumber = $options.field<String>(
+        unknownLotSerialNumber = options$.field<String>(
             'unknownLotSerialNumber',
             (a) => a?.unknownLotSerialNumber,
             (s) => s?.unknownLotSerialNumber,
             (p, b) => p?.unknownLotSerialNumber = b),
-        unknownScanValue = $options.field<String>(
+        unknownScanValue = options$.field<String>(
             'unknownScanValue',
             (a) => a?.unknownScanValue,
             (s) => s?.unknownScanValue,
             (p, b) => p?.unknownScanValue = b),
-        status = $options.field<AuditItemStatus>('status', (a) => a?.status,
+        status = options$.field<AuditItemStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        closedByUserId = $options.field<String>(
+        closedByUserId = options$.field<String>(
             'closedByUserId',
             (a) => a?.closedByUserId,
             (s) => s?.closedByUserId,
             (p, b) => p?.closedByUserId = b),
-        closeDate = $options.field<DateTime>('closeDate', (a) => a?.closeDate,
+        closeDate = options$.field<DateTime>('closeDate', (a) => a?.closeDate,
             (s) => s?.closeDate, (p, b) => p?.closeDate = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        closeNote = $options.field<String>('closeNote', (a) => a?.closeNote,
+        closeNote = options$.field<String>('closeNote', (a) => a?.closeNote,
             (s) => s?.closeNote, (p, b) => p?.closeNote = b),
-        quantityDamaged = $options.field<int>(
+        quantityDamaged = options$.field<int>(
             'quantityDamaged',
             (a) => a?.quantityDamaged,
             (s) => s?.quantityDamaged,
             (p, b) => p?.quantityDamaged = b),
-        quantityCounted = $options.field<int>(
+        quantityCounted = options$.field<int>(
             'quantityCounted',
             (a) => a?.quantityCounted,
             (s) => s?.quantityCounted,
             (p, b) => p?.quantityCounted = b),
-        quantityExpected = $options.field<int>(
+        quantityExpected = options$.field<int>(
             'quantityExpected',
             (a) => a?.quantityExpected,
             (s) => s?.quantityExpected,
             (p, b) => p?.quantityExpected = b),
-        quantityDiff = $options.field<int>(
+        quantityDiff = options$.field<int>(
             'quantityDiff',
             (a) => a?.quantityDiff,
             (s) => s?.quantityDiff,
@@ -849,18 +849,18 @@ class _$GetOfflineAuditDataApiAuditItemActions
       _$GetOfflineAuditDataApiAuditItemActions._(options());
 
   @override
-  GetOfflineAuditDataApiAuditItem get $initial =>
+  GetOfflineAuditDataApiAuditItem get initialState$ =>
       GetOfflineAuditDataApiAuditItem();
 
   @override
-  GetOfflineAuditDataApiAuditItemBuilder $newBuilder() =>
+  GetOfflineAuditDataApiAuditItemBuilder newBuilder$() =>
       GetOfflineAuditDataApiAuditItemBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.auditId,
         this.auditItemNumber,
@@ -889,42 +889,37 @@ class _$GetOfflineAuditDataApiAuditItemActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    auditId.$reducer(reducer);
-    auditItemNumber.$reducer(reducer);
-    itemId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    lotSerialExpirationDate.$reducer(reducer);
-    tagId.$reducer(reducer);
-    containerString.$reducer(reducer);
-    containerType.$reducer(reducer);
-    containerId.$reducer(reducer);
-    unknown.$reducer(reducer);
-    unknownItemNumber.$reducer(reducer);
-    unknownLotSerialNumber.$reducer(reducer);
-    unknownScanValue.$reducer(reducer);
-    status.$reducer(reducer);
-    closedByUserId.$reducer(reducer);
-    closeDate.$reducer(reducer);
-    locationType.$reducer(reducer);
-    locationId.$reducer(reducer);
-    closeNote.$reducer(reducer);
-    quantityDamaged.$reducer(reducer);
-    quantityCounted.$reducer(reducer);
-    quantityExpected.$reducer(reducer);
-    quantityDiff.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    auditId.reducer$(reducer);
+    auditItemNumber.reducer$(reducer);
+    itemId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    lotSerialExpirationDate.reducer$(reducer);
+    tagId.reducer$(reducer);
+    containerString.reducer$(reducer);
+    containerType.reducer$(reducer);
+    containerId.reducer$(reducer);
+    unknown.reducer$(reducer);
+    unknownItemNumber.reducer$(reducer);
+    unknownLotSerialNumber.reducer$(reducer);
+    unknownScanValue.reducer$(reducer);
+    status.reducer$(reducer);
+    closedByUserId.reducer$(reducer);
+    closeDate.reducer$(reducer);
+    locationType.reducer$(reducer);
+    locationId.reducer$(reducer);
+    closeNote.reducer$(reducer);
+    quantityDamaged.reducer$(reducer);
+    quantityCounted.reducer$(reducer);
+    quantityExpected.reducer$(reducer);
+    quantityDiff.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetOfflineAuditDataApiAuditItem);
 }

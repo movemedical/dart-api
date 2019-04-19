@@ -268,41 +268,41 @@ class _$UpdatePreferenceCardProductGroupsApiProductGroupAddActions
   final StatefulActionsOptions<
       UpdatePreferenceCardProductGroupsApiProductGroupAdd,
       UpdatePreferenceCardProductGroupsApiProductGroupAddBuilder,
-      UpdatePreferenceCardProductGroupsApiProductGroupAddActions> $options;
+      UpdatePreferenceCardProductGroupsApiProductGroupAddActions> options$;
 
   final ActionDispatcher<UpdatePreferenceCardProductGroupsApiProductGroupAdd>
-      $replace;
+      replace$;
   final FieldDispatcher<String> productGroupId;
   final FieldDispatcher<int> quantityPrimary;
   final FieldDispatcher<int> quantityPlusMinus1;
   final FieldDispatcher<int> quantityPlusMinus2;
   final FieldDispatcher<int> quantityPlusMinus3;
 
-  _$UpdatePreferenceCardProductGroupsApiProductGroupAddActions._(this.$options)
-      : $replace = $options
+  _$UpdatePreferenceCardProductGroupsApiProductGroupAddActions._(this.options$)
+      : replace$ = options$
             .action<UpdatePreferenceCardProductGroupsApiProductGroupAdd>(
-                '\$replace', (a) => a?.$replace),
-        productGroupId = $options.field<String>(
+                'replace\$', (a) => a?.replace$),
+        productGroupId = options$.field<String>(
             'productGroupId',
             (a) => a?.productGroupId,
             (s) => s?.productGroupId,
             (p, b) => p?.productGroupId = b),
-        quantityPrimary = $options.field<int>(
+        quantityPrimary = options$.field<int>(
             'quantityPrimary',
             (a) => a?.quantityPrimary,
             (s) => s?.quantityPrimary,
             (p, b) => p?.quantityPrimary = b),
-        quantityPlusMinus1 = $options.field<int>(
+        quantityPlusMinus1 = options$.field<int>(
             'quantityPlusMinus1',
             (a) => a?.quantityPlusMinus1,
             (s) => s?.quantityPlusMinus1,
             (p, b) => p?.quantityPlusMinus1 = b),
-        quantityPlusMinus2 = $options.field<int>(
+        quantityPlusMinus2 = options$.field<int>(
             'quantityPlusMinus2',
             (a) => a?.quantityPlusMinus2,
             (s) => s?.quantityPlusMinus2,
             (p, b) => p?.quantityPlusMinus2 = b),
-        quantityPlusMinus3 = $options.field<int>(
+        quantityPlusMinus3 = options$.field<int>(
             'quantityPlusMinus3',
             (a) => a?.quantityPlusMinus3,
             (s) => s?.quantityPlusMinus3,
@@ -315,18 +315,18 @@ class _$UpdatePreferenceCardProductGroupsApiProductGroupAddActions
       _$UpdatePreferenceCardProductGroupsApiProductGroupAddActions._(options());
 
   @override
-  UpdatePreferenceCardProductGroupsApiProductGroupAdd get $initial =>
+  UpdatePreferenceCardProductGroupsApiProductGroupAdd get initialState$ =>
       UpdatePreferenceCardProductGroupsApiProductGroupAdd();
 
   @override
-  UpdatePreferenceCardProductGroupsApiProductGroupAddBuilder $newBuilder() =>
+  UpdatePreferenceCardProductGroupsApiProductGroupAddBuilder newBuilder$() =>
       UpdatePreferenceCardProductGroupsApiProductGroupAddBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.productGroupId,
         this.quantityPrimary,
         this.quantityPlusMinus1,
@@ -335,22 +335,17 @@ class _$UpdatePreferenceCardProductGroupsApiProductGroupAddActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    productGroupId.$reducer(reducer);
-    quantityPrimary.$reducer(reducer);
-    quantityPlusMinus1.$reducer(reducer);
-    quantityPlusMinus2.$reducer(reducer);
-    quantityPlusMinus3.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    productGroupId.reducer$(reducer);
+    quantityPrimary.reducer$(reducer);
+    quantityPlusMinus1.reducer$(reducer);
+    quantityPlusMinus2.reducer$(reducer);
+    quantityPlusMinus3.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(UpdatePreferenceCardProductGroupsApiProductGroupAdd);
 }

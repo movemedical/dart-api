@@ -401,9 +401,9 @@ typedef StatefulActionsOptions<GetPackageApiPkg, GetPackageApiPkgBuilder,
 
 class _$GetPackageApiPkgActions extends GetPackageApiPkgActions {
   final StatefulActionsOptions<GetPackageApiPkg, GetPackageApiPkgBuilder,
-      GetPackageApiPkgActions> $options;
+      GetPackageApiPkgActions> options$;
 
-  final ActionDispatcher<GetPackageApiPkg> $replace;
+  final ActionDispatcher<GetPackageApiPkg> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> number;
   final FieldDispatcher<PackageStatus> status;
@@ -416,57 +416,57 @@ class _$GetPackageApiPkgActions extends GetPackageApiPkgActions {
   final FieldDispatcher<String> trackingNumber;
   final FieldDispatcher<String> trackingNumberUrl;
 
-  _$GetPackageApiPkgActions._(this.$options)
-      : $replace =
-            $options.action<GetPackageApiPkg>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetPackageApiPkgActions._(this.options$)
+      : replace$ =
+            options$.action<GetPackageApiPkg>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<PackageStatus>('status', (a) => a?.status,
+        status = options$.field<PackageStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
         location = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        order = OrderHeaderLiteActions(() => $options.stateful<OrderHeaderLite,
+        order = OrderHeaderLiteActions(() => options$.stateful<OrderHeaderLite,
                 OrderHeaderLiteBuilder, OrderHeaderLiteActions>(
             'order',
             (a) => a.order,
             (s) => s?.order,
             (b) => b?.order,
             (parent, builder) => parent?.order = builder)),
-        shipment = ShipmentLiteActions(() => $options
+        shipment = ShipmentLiteActions(() => options$
             .stateful<ShipmentLite, ShipmentLiteBuilder, ShipmentLiteActions>(
                 'shipment',
                 (a) => a.shipment,
                 (s) => s?.shipment,
                 (b) => b?.shipment,
                 (parent, builder) => parent?.shipment = builder)),
-        estimatedDeliveryDate = $options.field<DateTime>(
+        estimatedDeliveryDate = options$.field<DateTime>(
             'estimatedDeliveryDate',
             (a) => a?.estimatedDeliveryDate,
             (s) => s?.estimatedDeliveryDate,
             (p, b) => p?.estimatedDeliveryDate = b),
-        actualDeliveryDate = $options.field<DateTime>(
+        actualDeliveryDate = options$.field<DateTime>(
             'actualDeliveryDate',
             (a) => a?.actualDeliveryDate,
             (s) => s?.actualDeliveryDate,
             (p, b) => p?.actualDeliveryDate = b),
-        actualShipDate = $options.field<DateTime>(
+        actualShipDate = options$.field<DateTime>(
             'actualShipDate',
             (a) => a?.actualShipDate,
             (s) => s?.actualShipDate,
             (p, b) => p?.actualShipDate = b),
-        trackingNumber = $options.field<String>(
+        trackingNumber = options$.field<String>(
             'trackingNumber',
             (a) => a?.trackingNumber,
             (s) => s?.trackingNumber,
             (p, b) => p?.trackingNumber = b),
-        trackingNumberUrl = $options.field<String>(
+        trackingNumberUrl = options$.field<String>(
             'trackingNumberUrl',
             (a) => a?.trackingNumberUrl,
             (s) => s?.trackingNumberUrl,
@@ -477,24 +477,24 @@ class _$GetPackageApiPkgActions extends GetPackageApiPkgActions {
       _$GetPackageApiPkgActions._(options());
 
   @override
-  GetPackageApiPkg get $initial => GetPackageApiPkg();
+  GetPackageApiPkg get initialState$ => GetPackageApiPkg();
 
   @override
-  GetPackageApiPkgBuilder $newBuilder() => GetPackageApiPkgBuilder();
+  GetPackageApiPkgBuilder newBuilder$() => GetPackageApiPkgBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
         this.order,
         this.shipment,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.number,
         this.status,
@@ -506,30 +506,26 @@ class _$GetPackageApiPkgActions extends GetPackageApiPkgActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
-    location.$reducer(reducer);
-    order.$reducer(reducer);
-    shipment.$reducer(reducer);
-    estimatedDeliveryDate.$reducer(reducer);
-    actualDeliveryDate.$reducer(reducer);
-    actualShipDate.$reducer(reducer);
-    trackingNumber.$reducer(reducer);
-    trackingNumberUrl.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
+    location.reducer$(reducer);
+    order.reducer$(reducer);
+    shipment.reducer$(reducer);
+    estimatedDeliveryDate.reducer$(reducer);
+    actualDeliveryDate.reducer$(reducer);
+    actualShipDate.reducer$(reducer);
+    trackingNumber.reducer$(reducer);
+    trackingNumberUrl.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    location.$middleware(middleware);
-    order.$middleware(middleware);
-    shipment.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    location.middleware$(middleware);
+    order.middleware$(middleware);
+    shipment.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetPackageApiPkg);
 }

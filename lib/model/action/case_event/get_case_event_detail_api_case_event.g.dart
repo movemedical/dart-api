@@ -926,9 +926,9 @@ class _$GetCaseEventDetailApiCaseEventActions
   final StatefulActionsOptions<
       GetCaseEventDetailApiCaseEvent,
       GetCaseEventDetailApiCaseEventBuilder,
-      GetCaseEventDetailApiCaseEventActions> $options;
+      GetCaseEventDetailApiCaseEventActions> options$;
 
-  final ActionDispatcher<GetCaseEventDetailApiCaseEvent> $replace;
+  final ActionDispatcher<GetCaseEventDetailApiCaseEvent> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<CaseEventStatus> status;
   final FieldDispatcher<BodySide> bodySide;
@@ -960,105 +960,105 @@ class _$GetCaseEventDetailApiCaseEventActions
   final GetCaseEventDetailApiLoanReturnDataActions implantLoanReturnData;
   final GetCaseEventDetailApiLoanReturnDataActions instrumentLoanReturnData;
 
-  _$GetCaseEventDetailApiCaseEventActions._(this.$options)
-      : $replace = $options.action<GetCaseEventDetailApiCaseEvent>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetCaseEventDetailApiCaseEventActions._(this.options$)
+      : replace$ = options$.action<GetCaseEventDetailApiCaseEvent>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        status = $options.field<CaseEventStatus>('status', (a) => a?.status,
+        status = options$.field<CaseEventStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        bodySide = $options.field<BodySide>('bodySide', (a) => a?.bodySide,
+        bodySide = options$.field<BodySide>('bodySide', (a) => a?.bodySide,
             (s) => s?.bodySide, (p, b) => p?.bodySide = b),
         caseType = CaseTypeActions(() =>
-            $options.stateful<CaseType, CaseTypeBuilder, CaseTypeActions>(
+            options$.stateful<CaseType, CaseTypeBuilder, CaseTypeActions>(
                 'caseType',
                 (a) => a.caseType,
                 (s) => s?.caseType,
                 (b) => b?.caseType,
                 (parent, builder) => parent?.caseType = builder)),
         bizUnit = BizUnitActions(() =>
-            $options.stateful<BizUnit, BizUnitBuilder, BizUnitActions>(
+            options$.stateful<BizUnit, BizUnitBuilder, BizUnitActions>(
                 'bizUnit',
                 (a) => a.bizUnit,
                 (s) => s?.bizUnit,
                 (b) => b?.bizUnit,
                 (parent, builder) => parent?.bizUnit = builder)),
         salesOu = OrgUnitActions(() =>
-            $options.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
+            options$.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
                 'salesOu',
                 (a) => a.salesOu,
                 (s) => s?.salesOu,
                 (b) => b?.salesOu,
                 (parent, builder) => parent?.salesOu = builder)),
         opsOu = OrgUnitActions(() =>
-            $options.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
+            options$.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
                 'opsOu',
                 (a) => a.opsOu,
                 (s) => s?.opsOu,
                 (b) => b?.opsOu,
                 (parent, builder) => parent?.opsOu = builder)),
         hospital = HospitalActions(() =>
-            $options.stateful<Hospital, HospitalBuilder, HospitalActions>(
+            options$.stateful<Hospital, HospitalBuilder, HospitalActions>(
                 'hospital',
                 (a) => a.hospital,
                 (s) => s?.hospital,
                 (b) => b?.hospital,
                 (parent, builder) => parent?.hospital = builder)),
         physician = PhysicianActions(() =>
-            $options.stateful<Physician, PhysicianBuilder, PhysicianActions>(
+            options$.stateful<Physician, PhysicianBuilder, PhysicianActions>(
                 'physician',
                 (a) => a.physician,
                 (s) => s?.physician,
                 (b) => b?.physician,
                 (parent, builder) => parent?.physician = builder)),
-        physicianTemp = $options.field<String>(
+        physicianTemp = options$.field<String>(
             'physicianTemp',
             (a) => a?.physicianTemp,
             (s) => s?.physicianTemp,
             (p, b) => p?.physicianTemp = b),
         patient = PatientActions(() =>
-            $options.stateful<Patient, PatientBuilder, PatientActions>(
+            options$.stateful<Patient, PatientBuilder, PatientActions>(
                 'patient',
                 (a) => a.patient,
                 (s) => s?.patient,
                 (b) => b?.patient,
                 (parent, builder) => parent?.patient = builder)),
         hcr = HcrTeamActions(() =>
-            $options.stateful<HcrTeam, HcrTeamBuilder, HcrTeamActions>(
+            options$.stateful<HcrTeam, HcrTeamBuilder, HcrTeamActions>(
                 'hcr',
                 (a) => a.hcr,
                 (s) => s?.hcr,
                 (b) => b?.hcr,
                 (parent, builder) => parent?.hcr = builder)),
         team = HcrTeamActions(() =>
-            $options.stateful<HcrTeam, HcrTeamBuilder, HcrTeamActions>(
+            options$.stateful<HcrTeam, HcrTeamBuilder, HcrTeamActions>(
                 'team',
                 (a) => a.team,
                 (s) => s?.team,
                 (b) => b?.team,
                 (parent, builder) => parent?.team = builder)),
         coverage = HcrTeamActions(() =>
-            $options.stateful<HcrTeam, HcrTeamBuilder, HcrTeamActions>(
+            options$.stateful<HcrTeam, HcrTeamBuilder, HcrTeamActions>(
                 'coverage',
                 (a) => a.coverage,
                 (s) => s?.coverage,
                 (b) => b?.coverage,
                 (parent, builder) => parent?.coverage = builder)),
         procedure = ProcedureActions(() =>
-            $options.stateful<Procedure, ProcedureBuilder, ProcedureActions>(
+            options$.stateful<Procedure, ProcedureBuilder, ProcedureActions>(
                 'procedure',
                 (a) => a.procedure,
                 (s) => s?.procedure,
                 (b) => b?.procedure,
                 (parent, builder) => parent?.procedure = builder)),
-        subProcedure = SubProcedureActions(() => $options
+        subProcedure = SubProcedureActions(() => options$
             .stateful<SubProcedure, SubProcedureBuilder, SubProcedureActions>(
                 'subProcedure',
                 (a) => a.subProcedure,
                 (s) => s?.subProcedure,
                 (b) => b?.subProcedure,
                 (parent, builder) => parent?.subProcedure = builder)),
-        implantLoan = GetCaseEventDetailApiLoanActions(() => $options.stateful<
+        implantLoan = GetCaseEventDetailApiLoanActions(() => options$.stateful<
                 GetCaseEventDetailApiLoan,
                 GetCaseEventDetailApiLoanBuilder,
                 GetCaseEventDetailApiLoanActions>(
@@ -1068,7 +1068,7 @@ class _$GetCaseEventDetailApiCaseEventActions
             (b) => b?.implantLoan,
             (parent, builder) => parent?.implantLoan = builder)),
         instrumentLoan = GetCaseEventDetailApiLoanActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetCaseEventDetailApiLoan,
                     GetCaseEventDetailApiLoanBuilder,
                     GetCaseEventDetailApiLoanActions>(
@@ -1078,41 +1078,41 @@ class _$GetCaseEventDetailApiCaseEventActions
                 (b) => b?.instrumentLoan,
                 (parent, builder) => parent?.instrumentLoan = builder)),
         primaryInsurance = InsuranceActions(() =>
-            $options.stateful<Insurance, InsuranceBuilder, InsuranceActions>(
+            options$.stateful<Insurance, InsuranceBuilder, InsuranceActions>(
                 'primaryInsurance',
                 (a) => a.primaryInsurance,
                 (s) => s?.primaryInsurance,
                 (b) => b?.primaryInsurance,
                 (parent, builder) => parent?.primaryInsurance = builder)),
         secondaryInsurance = InsuranceActions(() =>
-            $options.stateful<Insurance, InsuranceBuilder, InsuranceActions>(
+            options$.stateful<Insurance, InsuranceBuilder, InsuranceActions>(
                 'secondaryInsurance',
                 (a) => a.secondaryInsurance,
                 (s) => s?.secondaryInsurance,
                 (b) => b?.secondaryInsurance,
                 (parent, builder) => parent?.secondaryInsurance = builder)),
-        linkedOrders = $options.field<BuiltList<OrderHeaderLite>>(
+        linkedOrders = options$.field<BuiltList<OrderHeaderLite>>(
             'linkedOrders',
             (a) => a?.linkedOrders,
             (s) => s?.linkedOrders,
             (p, b) => p?.linkedOrders = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        requirementsDeliverBy = $options.field<DateTime>(
+        requirementsDeliverBy = options$.field<DateTime>(
             'requirementsDeliverBy',
             (a) => a?.requirementsDeliverBy,
             (s) => s?.requirementsDeliverBy,
             (p, b) => p?.requirementsDeliverBy = b),
-        requirementsDeliverToAttn = $options.field<String>(
+        requirementsDeliverToAttn = options$.field<String>(
             'requirementsDeliverToAttn',
             (a) => a?.requirementsDeliverToAttn,
             (s) => s?.requirementsDeliverToAttn,
             (p, b) => p?.requirementsDeliverToAttn = b),
         requirementsDeliverToAddress = CustomerAddressActions(() =>
-            $options.stateful<CustomerAddress, CustomerAddressBuilder,
+            options$.stateful<CustomerAddress, CustomerAddressBuilder,
                     CustomerAddressActions>(
                 'requirementsDeliverToAddress',
                 (a) => a.requirementsDeliverToAddress,
@@ -1121,22 +1121,22 @@ class _$GetCaseEventDetailApiCaseEventActions
                 (parent, builder) =>
                     parent?.requirementsDeliverToAddress = builder)),
         requirementsDeliverToOverrideAddress = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'requirementsDeliverToOverrideAddress',
                 (a) => a.requirementsDeliverToOverrideAddress,
                 (s) => s?.requirementsDeliverToOverrideAddress,
                 (b) => b?.requirementsDeliverToOverrideAddress,
                 (parent, builder) =>
                     parent?.requirementsDeliverToOverrideAddress = builder)),
-        caseCustomFieldValues = $options.field<BuiltList<CaseCustomFieldValue>>(
+        caseCustomFieldValues = options$.field<BuiltList<CaseCustomFieldValue>>(
             'caseCustomFieldValues',
             (a) => a?.caseCustomFieldValues,
             (s) => s?.caseCustomFieldValues,
             (p, b) => p?.caseCustomFieldValues = b),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
         implantLoanReturnData = GetCaseEventDetailApiLoanReturnDataActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetCaseEventDetailApiLoanReturnData,
                     GetCaseEventDetailApiLoanReturnDataBuilder,
                     GetCaseEventDetailApiLoanReturnDataActions>(
@@ -1146,7 +1146,7 @@ class _$GetCaseEventDetailApiCaseEventActions
                 (b) => b?.implantLoanReturnData,
                 (parent, builder) => parent?.implantLoanReturnData = builder)),
         instrumentLoanReturnData = GetCaseEventDetailApiLoanReturnDataActions(
-            () => $options.stateful<
+            () => options$.stateful<
                     GetCaseEventDetailApiLoanReturnData,
                     GetCaseEventDetailApiLoanReturnDataBuilder,
                     GetCaseEventDetailApiLoanReturnDataActions>(
@@ -1163,16 +1163,16 @@ class _$GetCaseEventDetailApiCaseEventActions
       _$GetCaseEventDetailApiCaseEventActions._(options());
 
   @override
-  GetCaseEventDetailApiCaseEvent get $initial =>
+  GetCaseEventDetailApiCaseEvent get initialState$ =>
       GetCaseEventDetailApiCaseEvent();
 
   @override
-  GetCaseEventDetailApiCaseEventBuilder $newBuilder() =>
+  GetCaseEventDetailApiCaseEventBuilder newBuilder$() =>
       GetCaseEventDetailApiCaseEventBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.caseType,
         this.bizUnit,
         this.salesOu,
@@ -1195,11 +1195,11 @@ class _$GetCaseEventDetailApiCaseEventActions
         this.instrumentLoanReturnData,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.status,
         this.bodySide,
@@ -1213,67 +1213,62 @@ class _$GetCaseEventDetailApiCaseEventActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    status.$reducer(reducer);
-    bodySide.$reducer(reducer);
-    caseType.$reducer(reducer);
-    bizUnit.$reducer(reducer);
-    salesOu.$reducer(reducer);
-    opsOu.$reducer(reducer);
-    hospital.$reducer(reducer);
-    physician.$reducer(reducer);
-    physicianTemp.$reducer(reducer);
-    patient.$reducer(reducer);
-    hcr.$reducer(reducer);
-    team.$reducer(reducer);
-    coverage.$reducer(reducer);
-    procedure.$reducer(reducer);
-    subProcedure.$reducer(reducer);
-    implantLoan.$reducer(reducer);
-    instrumentLoan.$reducer(reducer);
-    primaryInsurance.$reducer(reducer);
-    secondaryInsurance.$reducer(reducer);
-    linkedOrders.$reducer(reducer);
-    description.$reducer(reducer);
-    requirementsDeliverBy.$reducer(reducer);
-    requirementsDeliverToAttn.$reducer(reducer);
-    requirementsDeliverToAddress.$reducer(reducer);
-    requirementsDeliverToOverrideAddress.$reducer(reducer);
-    caseCustomFieldValues.$reducer(reducer);
-    poNumber.$reducer(reducer);
-    implantLoanReturnData.$reducer(reducer);
-    instrumentLoanReturnData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    status.reducer$(reducer);
+    bodySide.reducer$(reducer);
+    caseType.reducer$(reducer);
+    bizUnit.reducer$(reducer);
+    salesOu.reducer$(reducer);
+    opsOu.reducer$(reducer);
+    hospital.reducer$(reducer);
+    physician.reducer$(reducer);
+    physicianTemp.reducer$(reducer);
+    patient.reducer$(reducer);
+    hcr.reducer$(reducer);
+    team.reducer$(reducer);
+    coverage.reducer$(reducer);
+    procedure.reducer$(reducer);
+    subProcedure.reducer$(reducer);
+    implantLoan.reducer$(reducer);
+    instrumentLoan.reducer$(reducer);
+    primaryInsurance.reducer$(reducer);
+    secondaryInsurance.reducer$(reducer);
+    linkedOrders.reducer$(reducer);
+    description.reducer$(reducer);
+    requirementsDeliverBy.reducer$(reducer);
+    requirementsDeliverToAttn.reducer$(reducer);
+    requirementsDeliverToAddress.reducer$(reducer);
+    requirementsDeliverToOverrideAddress.reducer$(reducer);
+    caseCustomFieldValues.reducer$(reducer);
+    poNumber.reducer$(reducer);
+    implantLoanReturnData.reducer$(reducer);
+    instrumentLoanReturnData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    caseType.$middleware(middleware);
-    bizUnit.$middleware(middleware);
-    salesOu.$middleware(middleware);
-    opsOu.$middleware(middleware);
-    hospital.$middleware(middleware);
-    physician.$middleware(middleware);
-    patient.$middleware(middleware);
-    hcr.$middleware(middleware);
-    team.$middleware(middleware);
-    coverage.$middleware(middleware);
-    procedure.$middleware(middleware);
-    subProcedure.$middleware(middleware);
-    implantLoan.$middleware(middleware);
-    instrumentLoan.$middleware(middleware);
-    primaryInsurance.$middleware(middleware);
-    secondaryInsurance.$middleware(middleware);
-    requirementsDeliverToAddress.$middleware(middleware);
-    requirementsDeliverToOverrideAddress.$middleware(middleware);
-    implantLoanReturnData.$middleware(middleware);
-    instrumentLoanReturnData.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    caseType.middleware$(middleware);
+    bizUnit.middleware$(middleware);
+    salesOu.middleware$(middleware);
+    opsOu.middleware$(middleware);
+    hospital.middleware$(middleware);
+    physician.middleware$(middleware);
+    patient.middleware$(middleware);
+    hcr.middleware$(middleware);
+    team.middleware$(middleware);
+    coverage.middleware$(middleware);
+    procedure.middleware$(middleware);
+    subProcedure.middleware$(middleware);
+    implantLoan.middleware$(middleware);
+    instrumentLoan.middleware$(middleware);
+    primaryInsurance.middleware$(middleware);
+    secondaryInsurance.middleware$(middleware);
+    requirementsDeliverToAddress.middleware$(middleware);
+    requirementsDeliverToOverrideAddress.middleware$(middleware);
+    implantLoanReturnData.middleware$(middleware);
+    instrumentLoanReturnData.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCaseEventDetailApiCaseEvent);
 }

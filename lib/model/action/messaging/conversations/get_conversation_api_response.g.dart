@@ -376,9 +376,9 @@ class _$GetConversationApiResponseActions
   final StatefulActionsOptions<
       GetConversationApiResponse,
       GetConversationApiResponseBuilder,
-      GetConversationApiResponseActions> $options;
+      GetConversationApiResponseActions> options$;
 
-  final ActionDispatcher<GetConversationApiResponse> $replace;
+  final ActionDispatcher<GetConversationApiResponse> replace$;
   final FieldDispatcher<DateTime> urgency;
   final FieldDispatcher<String> purpose;
   final FieldDispatcher<bool> stopped;
@@ -389,36 +389,36 @@ class _$GetConversationApiResponseActions
   final FieldDispatcher<bool> moreMessages;
   final GetConversationApiDisplayRulesActions displayRules;
 
-  _$GetConversationApiResponseActions._(this.$options)
-      : $replace = $options.action<GetConversationApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        urgency = $options.field<DateTime>('urgency', (a) => a?.urgency,
+  _$GetConversationApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetConversationApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        urgency = options$.field<DateTime>('urgency', (a) => a?.urgency,
             (s) => s?.urgency, (p, b) => p?.urgency = b),
-        purpose = $options.field<String>('purpose', (a) => a?.purpose,
+        purpose = options$.field<String>('purpose', (a) => a?.purpose,
             (s) => s?.purpose, (p, b) => p?.purpose = b),
-        stopped = $options.field<bool>('stopped', (a) => a?.stopped,
+        stopped = options$.field<bool>('stopped', (a) => a?.stopped,
             (s) => s?.stopped, (p, b) => p?.stopped = b),
-        defaultParticipantId = $options.field<String>(
+        defaultParticipantId = options$.field<String>(
             'defaultParticipantId',
             (a) => a?.defaultParticipantId,
             (s) => s?.defaultParticipantId,
             (p, b) => p?.defaultParticipantId = b),
-        participants = $options.field<BuiltList<GetConversationApiParticipant>>(
+        participants = options$.field<BuiltList<GetConversationApiParticipant>>(
             'participants',
             (a) => a?.participants,
             (s) => s?.participants,
             (p, b) => p?.participants = b),
-        links = $options.field<BuiltList<AttributableObject>>(
+        links = options$.field<BuiltList<AttributableObject>>(
             'links', (a) => a?.links, (s) => s?.links, (p, b) => p?.links = b),
-        messages = $options.field<BuiltList<Message>>('messages',
+        messages = options$.field<BuiltList<Message>>('messages',
             (a) => a?.messages, (s) => s?.messages, (p, b) => p?.messages = b),
-        moreMessages = $options.field<bool>(
+        moreMessages = options$.field<bool>(
             'moreMessages',
             (a) => a?.moreMessages,
             (s) => s?.moreMessages,
             (p, b) => p?.moreMessages = b),
         displayRules = GetConversationApiDisplayRulesActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetConversationApiDisplayRules,
                     GetConversationApiDisplayRulesBuilder,
                     GetConversationApiDisplayRulesActions>(
@@ -434,23 +434,23 @@ class _$GetConversationApiResponseActions
       _$GetConversationApiResponseActions._(options());
 
   @override
-  GetConversationApiResponse get $initial => GetConversationApiResponse();
+  GetConversationApiResponse get initialState$ => GetConversationApiResponse();
 
   @override
-  GetConversationApiResponseBuilder $newBuilder() =>
+  GetConversationApiResponseBuilder newBuilder$() =>
       GetConversationApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.displayRules,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.urgency,
         this.purpose,
         this.stopped,
@@ -462,26 +462,22 @@ class _$GetConversationApiResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    urgency.$reducer(reducer);
-    purpose.$reducer(reducer);
-    stopped.$reducer(reducer);
-    defaultParticipantId.$reducer(reducer);
-    participants.$reducer(reducer);
-    links.$reducer(reducer);
-    messages.$reducer(reducer);
-    moreMessages.$reducer(reducer);
-    displayRules.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    urgency.reducer$(reducer);
+    purpose.reducer$(reducer);
+    stopped.reducer$(reducer);
+    defaultParticipantId.reducer$(reducer);
+    participants.reducer$(reducer);
+    links.reducer$(reducer);
+    messages.reducer$(reducer);
+    moreMessages.reducer$(reducer);
+    displayRules.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    displayRules.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    displayRules.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetConversationApiResponse);
 }

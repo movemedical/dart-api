@@ -328,9 +328,9 @@ class _$GetSalesOrderApiCustomerDetailActions
   final StatefulActionsOptions<
       GetSalesOrderApiCustomerDetail,
       GetSalesOrderApiCustomerDetailBuilder,
-      GetSalesOrderApiCustomerDetailActions> $options;
+      GetSalesOrderApiCustomerDetailActions> options$;
 
-  final ActionDispatcher<GetSalesOrderApiCustomerDetail> $replace;
+  final ActionDispatcher<GetSalesOrderApiCustomerDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> customerReference;
@@ -339,19 +339,19 @@ class _$GetSalesOrderApiCustomerDetailActions
   final CustomerAddressActions deliverToAddress;
   final PhoneNumberActions customerPhoneNumber;
 
-  _$GetSalesOrderApiCustomerDetailActions._(this.$options)
-      : $replace = $options.action<GetSalesOrderApiCustomerDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetSalesOrderApiCustomerDetailActions._(this.options$)
+      : replace$ = options$.action<GetSalesOrderApiCustomerDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        customerReference = $options.field<String>(
+        customerReference = options$.field<String>(
             'customerReference',
             (a) => a?.customerReference,
             (s) => s?.customerReference,
             (p, b) => p?.customerReference = b),
-        shipToAddress = CustomerAddressActions(() => $options.stateful<
+        shipToAddress = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -360,7 +360,7 @@ class _$GetSalesOrderApiCustomerDetailActions
             (s) => s?.shipToAddress,
             (b) => b?.shipToAddress,
             (parent, builder) => parent?.shipToAddress = builder)),
-        billToAddress = CustomerAddressActions(() => $options.stateful<
+        billToAddress = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -369,7 +369,7 @@ class _$GetSalesOrderApiCustomerDetailActions
             (s) => s?.billToAddress,
             (b) => b?.billToAddress,
             (parent, builder) => parent?.billToAddress = builder)),
-        deliverToAddress = CustomerAddressActions(() => $options.stateful<
+        deliverToAddress = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -378,7 +378,7 @@ class _$GetSalesOrderApiCustomerDetailActions
             (s) => s?.deliverToAddress,
             (b) => b?.deliverToAddress,
             (parent, builder) => parent?.deliverToAddress = builder)),
-        customerPhoneNumber = PhoneNumberActions(() => $options
+        customerPhoneNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'customerPhoneNumber',
                 (a) => a.customerPhoneNumber,
@@ -392,55 +392,50 @@ class _$GetSalesOrderApiCustomerDetailActions
       _$GetSalesOrderApiCustomerDetailActions._(options());
 
   @override
-  GetSalesOrderApiCustomerDetail get $initial =>
+  GetSalesOrderApiCustomerDetail get initialState$ =>
       GetSalesOrderApiCustomerDetail();
 
   @override
-  GetSalesOrderApiCustomerDetailBuilder $newBuilder() =>
+  GetSalesOrderApiCustomerDetailBuilder newBuilder$() =>
       GetSalesOrderApiCustomerDetailBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.shipToAddress,
         this.billToAddress,
         this.deliverToAddress,
         this.customerPhoneNumber,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.customerReference,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    customerReference.$reducer(reducer);
-    shipToAddress.$reducer(reducer);
-    billToAddress.$reducer(reducer);
-    deliverToAddress.$reducer(reducer);
-    customerPhoneNumber.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    customerReference.reducer$(reducer);
+    shipToAddress.reducer$(reducer);
+    billToAddress.reducer$(reducer);
+    deliverToAddress.reducer$(reducer);
+    customerPhoneNumber.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    shipToAddress.$middleware(middleware);
-    billToAddress.$middleware(middleware);
-    deliverToAddress.$middleware(middleware);
-    customerPhoneNumber.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    shipToAddress.middleware$(middleware);
+    billToAddress.middleware$(middleware);
+    deliverToAddress.middleware$(middleware);
+    customerPhoneNumber.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetSalesOrderApiCustomerDetail);
 }

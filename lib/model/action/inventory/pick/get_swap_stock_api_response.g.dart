@@ -172,18 +172,18 @@ typedef StatefulActionsOptions<
 
 class _$GetSwapStockApiResponseActions extends GetSwapStockApiResponseActions {
   final StatefulActionsOptions<GetSwapStockApiResponse,
-      GetSwapStockApiResponseBuilder, GetSwapStockApiResponseActions> $options;
+      GetSwapStockApiResponseBuilder, GetSwapStockApiResponseActions> options$;
 
-  final ActionDispatcher<GetSwapStockApiResponse> $replace;
+  final ActionDispatcher<GetSwapStockApiResponse> replace$;
   final FieldDispatcher<String> pickId;
   final FieldDispatcher<String> stockId;
 
-  _$GetSwapStockApiResponseActions._(this.$options)
-      : $replace = $options.action<GetSwapStockApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        pickId = $options.field<String>('pickId', (a) => a?.pickId,
+  _$GetSwapStockApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetSwapStockApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        pickId = options$.field<String>('pickId', (a) => a?.pickId,
             (s) => s?.pickId, (p, b) => p?.pickId = b),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
         super._();
 
@@ -192,34 +192,30 @@ class _$GetSwapStockApiResponseActions extends GetSwapStockApiResponseActions {
       _$GetSwapStockApiResponseActions._(options());
 
   @override
-  GetSwapStockApiResponse get $initial => GetSwapStockApiResponse();
+  GetSwapStockApiResponse get initialState$ => GetSwapStockApiResponse();
 
   @override
-  GetSwapStockApiResponseBuilder $newBuilder() =>
+  GetSwapStockApiResponseBuilder newBuilder$() =>
       GetSwapStockApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.pickId,
         this.stockId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    pickId.$reducer(reducer);
-    stockId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    pickId.reducer$(reducer);
+    stockId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetSwapStockApiResponse);
 }

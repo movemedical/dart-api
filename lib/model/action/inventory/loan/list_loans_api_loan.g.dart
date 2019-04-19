@@ -298,9 +298,9 @@ typedef StatefulActionsOptions<ListLoansApiLoan, ListLoansApiLoanBuilder,
 
 class _$ListLoansApiLoanActions extends ListLoansApiLoanActions {
   final StatefulActionsOptions<ListLoansApiLoan, ListLoansApiLoanBuilder,
-      ListLoansApiLoanActions> $options;
+      ListLoansApiLoanActions> options$;
 
-  final ActionDispatcher<ListLoansApiLoan> $replace;
+  final ActionDispatcher<ListLoansApiLoan> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> number;
   final FieldDispatcher<LoanStatus> status;
@@ -309,31 +309,31 @@ class _$ListLoansApiLoanActions extends ListLoansApiLoanActions {
   final LocationActions location;
   final DateRangeActions service;
 
-  _$ListLoansApiLoanActions._(this.$options)
-      : $replace =
-            $options.action<ListLoansApiLoan>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListLoansApiLoanActions._(this.options$)
+      : replace$ =
+            options$.action<ListLoansApiLoan>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<LoanStatus>('status', (a) => a?.status,
+        status = options$.field<LoanStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        reason = $options.field<LoanReason>('reason', (a) => a?.reason,
+        reason = options$.field<LoanReason>('reason', (a) => a?.reason,
             (s) => s?.reason, (p, b) => p?.reason = b),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
         location = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
         service = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'service',
                 (a) => a.service,
                 (s) => s?.service,
@@ -345,23 +345,23 @@ class _$ListLoansApiLoanActions extends ListLoansApiLoanActions {
       _$ListLoansApiLoanActions._(options());
 
   @override
-  ListLoansApiLoan get $initial => ListLoansApiLoan();
+  ListLoansApiLoan get initialState$ => ListLoansApiLoan();
 
   @override
-  ListLoansApiLoanBuilder $newBuilder() => ListLoansApiLoanBuilder();
+  ListLoansApiLoanBuilder newBuilder$() => ListLoansApiLoanBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
         this.service,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.number,
         this.status,
@@ -370,25 +370,21 @@ class _$ListLoansApiLoanActions extends ListLoansApiLoanActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
-    reason.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    location.$reducer(reducer);
-    service.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
+    reason.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    location.reducer$(reducer);
+    service.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    location.$middleware(middleware);
-    service.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    location.middleware$(middleware);
+    service.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListLoansApiLoan);
 }

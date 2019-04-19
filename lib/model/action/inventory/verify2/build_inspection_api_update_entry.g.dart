@@ -243,27 +243,27 @@ class _$BuildInspectionApiUpdateEntryActions
   final StatefulActionsOptions<
       BuildInspectionApiUpdateEntry,
       BuildInspectionApiUpdateEntryBuilder,
-      BuildInspectionApiUpdateEntryActions> $options;
+      BuildInspectionApiUpdateEntryActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiUpdateEntry> $replace;
+  final ActionDispatcher<BuildInspectionApiUpdateEntry> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<BuildInspectionApiUpdateEntryType> type;
   final FieldDispatcher<String> selectedOptionId;
   final StockContainerDataActions toContainerOverride;
 
-  _$BuildInspectionApiUpdateEntryActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiUpdateEntry>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BuildInspectionApiUpdateEntryActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiUpdateEntry>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.field<BuildInspectionApiUpdateEntryType>(
+        type = options$.field<BuildInspectionApiUpdateEntryType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        selectedOptionId = $options.field<String>(
+        selectedOptionId = options$.field<String>(
             'selectedOptionId',
             (a) => a?.selectedOptionId,
             (s) => s?.selectedOptionId,
             (p, b) => p?.selectedOptionId = b),
-        toContainerOverride = StockContainerDataActions(() => $options.stateful<
+        toContainerOverride = StockContainerDataActions(() => options$.stateful<
                 StockContainerData,
                 StockContainerDataBuilder,
                 StockContainerDataActions>(
@@ -279,45 +279,41 @@ class _$BuildInspectionApiUpdateEntryActions
       _$BuildInspectionApiUpdateEntryActions._(options());
 
   @override
-  BuildInspectionApiUpdateEntry get $initial => BuildInspectionApiUpdateEntry();
+  BuildInspectionApiUpdateEntry get initialState$ =>
+      BuildInspectionApiUpdateEntry();
 
   @override
-  BuildInspectionApiUpdateEntryBuilder $newBuilder() =>
+  BuildInspectionApiUpdateEntryBuilder newBuilder$() =>
       BuildInspectionApiUpdateEntryBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toContainerOverride,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.type,
         this.selectedOptionId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    type.$reducer(reducer);
-    selectedOptionId.$reducer(reducer);
-    toContainerOverride.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    type.reducer$(reducer);
+    selectedOptionId.reducer$(reducer);
+    toContainerOverride.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    toContainerOverride.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    toContainerOverride.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiUpdateEntry);
 }

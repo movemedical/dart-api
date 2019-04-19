@@ -179,21 +179,21 @@ typedef StatefulActionsOptions<UnitOfMeasure, UnitOfMeasureBuilder,
 
 class _$UnitOfMeasureActions extends UnitOfMeasureActions {
   final StatefulActionsOptions<UnitOfMeasure, UnitOfMeasureBuilder,
-      UnitOfMeasureActions> $options;
+      UnitOfMeasureActions> options$;
 
-  final ActionDispatcher<UnitOfMeasure> $replace;
+  final ActionDispatcher<UnitOfMeasure> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<int> quantity;
 
-  _$UnitOfMeasureActions._(this.$options)
-      : $replace =
-            $options.action<UnitOfMeasure>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UnitOfMeasureActions._(this.options$)
+      : replace$ =
+            options$.action<UnitOfMeasure>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -201,35 +201,31 @@ class _$UnitOfMeasureActions extends UnitOfMeasureActions {
       _$UnitOfMeasureActions._(options());
 
   @override
-  UnitOfMeasure get $initial => UnitOfMeasure();
+  UnitOfMeasure get initialState$ => UnitOfMeasure();
 
   @override
-  UnitOfMeasureBuilder $newBuilder() => UnitOfMeasureBuilder();
+  UnitOfMeasureBuilder newBuilder$() => UnitOfMeasureBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.quantity,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    quantity.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    quantity.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(UnitOfMeasure);
 }

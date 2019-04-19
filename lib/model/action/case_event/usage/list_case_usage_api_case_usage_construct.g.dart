@@ -255,33 +255,33 @@ class _$ListCaseUsageApiCaseUsageConstructActions
   final StatefulActionsOptions<
       ListCaseUsageApiCaseUsageConstruct,
       ListCaseUsageApiCaseUsageConstructBuilder,
-      ListCaseUsageApiCaseUsageConstructActions> $options;
+      ListCaseUsageApiCaseUsageConstructActions> options$;
 
-  final ActionDispatcher<ListCaseUsageApiCaseUsageConstruct> $replace;
+  final ActionDispatcher<ListCaseUsageApiCaseUsageConstruct> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<String> priceConstructId;
   final FieldDispatcher<String> priceConstructNumber;
   final FieldDispatcher<String> description;
 
-  _$ListCaseUsageApiCaseUsageConstructActions._(this.$options)
-      : $replace = $options.action<ListCaseUsageApiCaseUsageConstruct>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListCaseUsageApiCaseUsageConstructActions._(this.options$)
+      : replace$ = options$.action<ListCaseUsageApiCaseUsageConstruct>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        priceConstructId = $options.field<String>(
+        priceConstructId = options$.field<String>(
             'priceConstructId',
             (a) => a?.priceConstructId,
             (s) => s?.priceConstructId,
             (p, b) => p?.priceConstructId = b),
-        priceConstructNumber = $options.field<String>(
+        priceConstructNumber = options$.field<String>(
             'priceConstructNumber',
             (a) => a?.priceConstructNumber,
             (s) => s?.priceConstructNumber,
             (p, b) => p?.priceConstructNumber = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -293,18 +293,18 @@ class _$ListCaseUsageApiCaseUsageConstructActions
       _$ListCaseUsageApiCaseUsageConstructActions._(options());
 
   @override
-  ListCaseUsageApiCaseUsageConstruct get $initial =>
+  ListCaseUsageApiCaseUsageConstruct get initialState$ =>
       ListCaseUsageApiCaseUsageConstruct();
 
   @override
-  ListCaseUsageApiCaseUsageConstructBuilder $newBuilder() =>
+  ListCaseUsageApiCaseUsageConstructBuilder newBuilder$() =>
       ListCaseUsageApiCaseUsageConstructBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orderId,
         this.priceConstructId,
@@ -313,22 +313,17 @@ class _$ListCaseUsageApiCaseUsageConstructActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orderId.$reducer(reducer);
-    priceConstructId.$reducer(reducer);
-    priceConstructNumber.$reducer(reducer);
-    description.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orderId.reducer$(reducer);
+    priceConstructId.reducer$(reducer);
+    priceConstructNumber.reducer$(reducer);
+    description.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListCaseUsageApiCaseUsageConstruct);
 }

@@ -22,67 +22,32 @@ class _$SearchLotsSerialsApi extends SearchLotsSerialsApi {
           ApiResult<SearchLotsSerialsApiResponse>>,
       CommandStateBuilder<ApiCommand<SearchLotsSerialsApiRequest>,
           ApiResult<SearchLotsSerialsApiResponse>>,
-      SearchLotsSerialsApi> $options;
+      SearchLotsSerialsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SearchLotsSerialsApiRequest>,
-          ApiResult<SearchLotsSerialsApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchLotsSerialsApiRequest>,
-          ApiResult<SearchLotsSerialsApiResponse>,
-          SearchLotsSerialsApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchLotsSerialsApiRequest>,
-          ApiResult<SearchLotsSerialsApiResponse>,
-          SearchLotsSerialsApi,
-          Command<ApiCommand<SearchLotsSerialsApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchLotsSerialsApiRequest>,
-          ApiResult<SearchLotsSerialsApiResponse>,
-          SearchLotsSerialsApi,
-          CommandResult<ApiResult<SearchLotsSerialsApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchLotsSerialsApiRequest>,
-          ApiResult<SearchLotsSerialsApiResponse>,
-          SearchLotsSerialsApi,
-          CommandProgress>> $progress;
+          ApiResult<SearchLotsSerialsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<SearchLotsSerialsApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<SearchLotsSerialsApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$SearchLotsSerialsApi._(this.$options)
-      : $replace = $options.action<
+  _$SearchLotsSerialsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<SearchLotsSerialsApiRequest>,
                     ApiResult<SearchLotsSerialsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<SearchLotsSerialsApiRequest>,
-                ApiResult<SearchLotsSerialsApiResponse>,
-                SearchLotsSerialsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<SearchLotsSerialsApiRequest>,
-                    ApiResult<SearchLotsSerialsApiResponse>,
-                    SearchLotsSerialsApi,
-                    Command<ApiCommand<SearchLotsSerialsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<SearchLotsSerialsApiRequest>,
-                    ApiResult<SearchLotsSerialsApiResponse>,
-                    SearchLotsSerialsApi,
-                    CommandResult<ApiResult<SearchLotsSerialsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<SearchLotsSerialsApiRequest>,
-                ApiResult<SearchLotsSerialsApiResponse>,
-                SearchLotsSerialsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<SearchLotsSerialsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<SearchLotsSerialsApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$SearchLotsSerialsApi(SearchLotsSerialsApiOptions options) =>
@@ -91,32 +56,25 @@ class _$SearchLotsSerialsApi extends SearchLotsSerialsApi {
   @override
   CommandState<ApiCommand<SearchLotsSerialsApiRequest>,
           ApiResult<SearchLotsSerialsApiResponse>>
-      get $initial => CommandState<ApiCommand<SearchLotsSerialsApiRequest>,
+      get initialState$ => CommandState<ApiCommand<SearchLotsSerialsApiRequest>,
           ApiResult<SearchLotsSerialsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<SearchLotsSerialsApiRequest>,
           ApiResult<SearchLotsSerialsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<SearchLotsSerialsApiRequest>,
           ApiResult<SearchLotsSerialsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(SearchLotsSerialsApiRequest)]),
-        FullType(ApiResult, [FullType(SearchLotsSerialsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

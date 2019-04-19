@@ -156,15 +156,15 @@ class _$CreateCaseEventApiResponseActions
   final StatefulActionsOptions<
       CreateCaseEventApiResponse,
       CreateCaseEventApiResponseBuilder,
-      CreateCaseEventApiResponseActions> $options;
+      CreateCaseEventApiResponseActions> options$;
 
-  final ActionDispatcher<CreateCaseEventApiResponse> $replace;
+  final ActionDispatcher<CreateCaseEventApiResponse> replace$;
   final FieldDispatcher<String> caseEventId;
 
-  _$CreateCaseEventApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateCaseEventApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$CreateCaseEventApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateCaseEventApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
@@ -176,32 +176,28 @@ class _$CreateCaseEventApiResponseActions
       _$CreateCaseEventApiResponseActions._(options());
 
   @override
-  CreateCaseEventApiResponse get $initial => CreateCaseEventApiResponse();
+  CreateCaseEventApiResponse get initialState$ => CreateCaseEventApiResponse();
 
   @override
-  CreateCaseEventApiResponseBuilder $newBuilder() =>
+  CreateCaseEventApiResponseBuilder newBuilder$() =>
       CreateCaseEventApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateCaseEventApiResponse);
 }

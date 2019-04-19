@@ -15,6 +15,7 @@ import 'login.dart';
 import 'state/action/user/get_ui_setup_mobile_api.dart';
 
 export 'login.dart';
+export 'package:modux/modux.dart';
 
 part 'command.g.dart';
 
@@ -46,10 +47,10 @@ abstract class ApiActions
   FieldDispatcher<GetUiSetupMobileApiResponse> get activeSetup;
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
 //    middleware
-//      ..add(loginCommand.$result, (api, next, action) {
+//      ..add(loginCommand.result$, (api, next, action) {
 //        next(action);
 //        final payload = action.payload?.payload;
 //        if (payload is CommandResult<ApiResult<LoginResponse>>) {
@@ -57,7 +58,7 @@ abstract class ApiActions
 //          activeLogin(response);
 //        }
 //      })
-//      ..add(setupCommand.$result, (api, next, action) {
+//      ..add(setupCommand.result$, (api, next, action) {
 //        next(action);
 //        final payload = action.payload?.payload;
 //        if (payload is CommandResult<ApiResult<GetUiSetupMobileApiResponse>>) {
@@ -149,7 +150,7 @@ class ApiFuture<
   HttpCall<Req, Resp> _call;
 
   ApiFuture(this.service, Actions dispatcher, Command<ApiCommand<Req>> command)
-      : id = '${dispatcher.$name}:${command.id}',
+      : id = '${dispatcher.name$}:${command.id}',
         super(dispatcher, command);
 
   @override
@@ -199,7 +200,7 @@ abstract class ApiDispatcher<
       Duration timeout = const Duration(seconds: 30)}) {
     final r = create(
         request: request, builder: builder, timeout: timeout, path: path);
-    return $store.execute(this, r, timeout: timeout);
+    return store$.execute(this, r, timeout: timeout);
   }
 
   ApiCommand<Req> create(
@@ -225,39 +226,32 @@ abstract class ApiDispatcher<
   ApiFuture<Req, ReqBuilder, Resp, RespBuilder, Actions> newFuture(
           Command<ApiCommand<Req>> command) =>
       ApiFuture<Req, ReqBuilder, Resp, RespBuilder, Actions>(
-          $store.service<ApiService>(), this, command);
+          store$.service<ApiService>(), this, command);
 
   @override
-  void $middleware(MiddlewareBuilder builder) {
-    super.$middleware(builder);
+  void middleware$(MiddlewareBuilder builder) {
+    super.middleware$(builder);
   }
 
   StoreSubscription<Resp> onResponse(Function(Resp response) handler) {
     if (handler != null) {
-      return $store.listenMap<
-          CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
-              CommandResult<ApiResult<Resp>>>,
-          Resp>($result, (p) => p?.payload?.value?.value, handler);
+      return store$.listenMap<CommandResult<ApiResult<Resp>>, Resp>(
+          result$, (p) => p?.payload?.value?.value, handler);
     } else {
-      return $store.subscribeMap<
-          CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
-              CommandResult<ApiResult<Resp>>>,
-          Resp>($result, (p) => p?.payload?.value?.value);
+      return store$.subscribeMap<CommandResult<ApiResult<Resp>>, Resp>(
+          result$, (p) => p?.payload?.value?.value);
     }
   }
 
   StoreSubscription<ApiResult<Resp>> onApiResult(
       Function(ApiResult<Resp> response) handler) {
     if (handler != null) {
-      return $store.listenMap<
-          CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
-              CommandResult<ApiResult<Resp>>>,
-          ApiResult<Resp>>($result, (p) => p?.payload?.value, handler);
+      return store$.listenMap<CommandResult<ApiResult<Resp>>, ApiResult<Resp>>(
+          result$, (p) => p?.payload?.value, handler);
     } else {
-      return $store.subscribeMap<
-          CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
-              CommandResult<ApiResult<Resp>>>,
-          ApiResult<Resp>>($result, (p) => p?.payload?.value);
+      return store$
+          .subscribeMap<CommandResult<ApiResult<Resp>>, ApiResult<Resp>>(
+              result$, (p) => p?.payload?.value);
     }
   }
 }

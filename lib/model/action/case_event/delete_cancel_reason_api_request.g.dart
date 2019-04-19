@@ -157,15 +157,15 @@ class _$DeleteCancelReasonApiRequestActions
   final StatefulActionsOptions<
       DeleteCancelReasonApiRequest,
       DeleteCancelReasonApiRequestBuilder,
-      DeleteCancelReasonApiRequestActions> $options;
+      DeleteCancelReasonApiRequestActions> options$;
 
-  final ActionDispatcher<DeleteCancelReasonApiRequest> $replace;
+  final ActionDispatcher<DeleteCancelReasonApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$DeleteCancelReasonApiRequestActions._(this.$options)
-      : $replace = $options.action<DeleteCancelReasonApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$DeleteCancelReasonApiRequestActions._(this.options$)
+      : replace$ = options$.action<DeleteCancelReasonApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -174,33 +174,29 @@ class _$DeleteCancelReasonApiRequestActions
       _$DeleteCancelReasonApiRequestActions._(options());
 
   @override
-  DeleteCancelReasonApiRequest get $initial => DeleteCancelReasonApiRequest();
+  DeleteCancelReasonApiRequest get initialState$ =>
+      DeleteCancelReasonApiRequest();
 
   @override
-  DeleteCancelReasonApiRequestBuilder $newBuilder() =>
+  DeleteCancelReasonApiRequestBuilder newBuilder$() =>
       DeleteCancelReasonApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(DeleteCancelReasonApiRequest);
 }

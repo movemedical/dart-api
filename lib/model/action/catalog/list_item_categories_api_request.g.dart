@@ -205,27 +205,27 @@ class _$ListItemCategoriesApiRequestActions
   final StatefulActionsOptions<
       ListItemCategoriesApiRequest,
       ListItemCategoriesApiRequestBuilder,
-      ListItemCategoriesApiRequestActions> $options;
+      ListItemCategoriesApiRequestActions> options$;
 
-  final ActionDispatcher<ListItemCategoriesApiRequest> $replace;
+  final ActionDispatcher<ListItemCategoriesApiRequest> replace$;
   final FieldDispatcher<String> parentCategoryId;
   final FieldDispatcher<String> linkedItemId;
   final FieldDispatcher<String> procedureId;
 
-  _$ListItemCategoriesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListItemCategoriesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        parentCategoryId = $options.field<String>(
+  _$ListItemCategoriesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListItemCategoriesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        parentCategoryId = options$.field<String>(
             'parentCategoryId',
             (a) => a?.parentCategoryId,
             (s) => s?.parentCategoryId,
             (p, b) => p?.parentCategoryId = b),
-        linkedItemId = $options.field<String>(
+        linkedItemId = options$.field<String>(
             'linkedItemId',
             (a) => a?.linkedItemId,
             (s) => s?.linkedItemId,
             (p, b) => p?.linkedItemId = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
@@ -237,37 +237,33 @@ class _$ListItemCategoriesApiRequestActions
       _$ListItemCategoriesApiRequestActions._(options());
 
   @override
-  ListItemCategoriesApiRequest get $initial => ListItemCategoriesApiRequest();
+  ListItemCategoriesApiRequest get initialState$ =>
+      ListItemCategoriesApiRequest();
 
   @override
-  ListItemCategoriesApiRequestBuilder $newBuilder() =>
+  ListItemCategoriesApiRequestBuilder newBuilder$() =>
       ListItemCategoriesApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.parentCategoryId,
         this.linkedItemId,
         this.procedureId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    parentCategoryId.$reducer(reducer);
-    linkedItemId.$reducer(reducer);
-    procedureId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    parentCategoryId.reducer$(reducer);
+    linkedItemId.reducer$(reducer);
+    procedureId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListItemCategoriesApiRequest);
 }

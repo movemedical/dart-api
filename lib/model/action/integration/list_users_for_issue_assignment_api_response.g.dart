@@ -185,16 +185,16 @@ class _$ListUsersForIssueAssignmentApiResponseActions
   final StatefulActionsOptions<
       ListUsersForIssueAssignmentApiResponse,
       ListUsersForIssueAssignmentApiResponseBuilder,
-      ListUsersForIssueAssignmentApiResponseActions> $options;
+      ListUsersForIssueAssignmentApiResponseActions> options$;
 
-  final ActionDispatcher<ListUsersForIssueAssignmentApiResponse> $replace;
+  final ActionDispatcher<ListUsersForIssueAssignmentApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListUsersForIssueAssignmentApiDisplayUser>>
       users;
 
-  _$ListUsersForIssueAssignmentApiResponseActions._(this.$options)
-      : $replace = $options.action<ListUsersForIssueAssignmentApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        users = $options
+  _$ListUsersForIssueAssignmentApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListUsersForIssueAssignmentApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        users = options$
             .field<BuiltList<ListUsersForIssueAssignmentApiDisplayUser>>(
                 'users',
                 (a) => a?.users,
@@ -207,34 +207,29 @@ class _$ListUsersForIssueAssignmentApiResponseActions
       _$ListUsersForIssueAssignmentApiResponseActions._(options());
 
   @override
-  ListUsersForIssueAssignmentApiResponse get $initial =>
+  ListUsersForIssueAssignmentApiResponse get initialState$ =>
       ListUsersForIssueAssignmentApiResponse();
 
   @override
-  ListUsersForIssueAssignmentApiResponseBuilder $newBuilder() =>
+  ListUsersForIssueAssignmentApiResponseBuilder newBuilder$() =>
       ListUsersForIssueAssignmentApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.users,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    users.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    users.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListUsersForIssueAssignmentApiResponse);
 }

@@ -166,15 +166,15 @@ typedef StatefulActionsOptions<
 
 class _$GetProcedureApiResponseActions extends GetProcedureApiResponseActions {
   final StatefulActionsOptions<GetProcedureApiResponse,
-      GetProcedureApiResponseBuilder, GetProcedureApiResponseActions> $options;
+      GetProcedureApiResponseBuilder, GetProcedureApiResponseActions> options$;
 
-  final ActionDispatcher<GetProcedureApiResponse> $replace;
+  final ActionDispatcher<GetProcedureApiResponse> replace$;
   final GetProcedureApiProcedureDetailActions data;
 
-  _$GetProcedureApiResponseActions._(this.$options)
-      : $replace = $options.action<GetProcedureApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = GetProcedureApiProcedureDetailActions(() => $options.stateful<
+  _$GetProcedureApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetProcedureApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = GetProcedureApiProcedureDetailActions(() => options$.stateful<
                 GetProcedureApiProcedureDetail,
                 GetProcedureApiProcedureDetailBuilder,
                 GetProcedureApiProcedureDetailActions>(
@@ -190,38 +190,34 @@ class _$GetProcedureApiResponseActions extends GetProcedureApiResponseActions {
       _$GetProcedureApiResponseActions._(options());
 
   @override
-  GetProcedureApiResponse get $initial => GetProcedureApiResponse();
+  GetProcedureApiResponse get initialState$ => GetProcedureApiResponse();
 
   @override
-  GetProcedureApiResponseBuilder $newBuilder() =>
+  GetProcedureApiResponseBuilder newBuilder$() =>
       GetProcedureApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.data,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    data.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    data.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetProcedureApiResponse);
 }

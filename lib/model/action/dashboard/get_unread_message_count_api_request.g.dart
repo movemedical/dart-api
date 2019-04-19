@@ -119,13 +119,13 @@ class _$GetUnreadMessageCountApiRequestActions
   final StatefulActionsOptions<
       GetUnreadMessageCountApiRequest,
       GetUnreadMessageCountApiRequestBuilder,
-      GetUnreadMessageCountApiRequestActions> $options;
+      GetUnreadMessageCountApiRequestActions> options$;
 
-  final ActionDispatcher<GetUnreadMessageCountApiRequest> $replace;
+  final ActionDispatcher<GetUnreadMessageCountApiRequest> replace$;
 
-  _$GetUnreadMessageCountApiRequestActions._(this.$options)
-      : $replace = $options.action<GetUnreadMessageCountApiRequest>(
-            '\$replace', (a) => a?.$replace),
+  _$GetUnreadMessageCountApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetUnreadMessageCountApiRequest>(
+            'replace\$', (a) => a?.replace$),
         super._();
 
   factory _$GetUnreadMessageCountApiRequestActions(
@@ -133,22 +133,17 @@ class _$GetUnreadMessageCountApiRequestActions
       _$GetUnreadMessageCountApiRequestActions._(options());
 
   @override
-  GetUnreadMessageCountApiRequest get $initial =>
+  GetUnreadMessageCountApiRequest get initialState$ =>
       GetUnreadMessageCountApiRequest();
 
   @override
-  GetUnreadMessageCountApiRequestBuilder $newBuilder() =>
+  GetUnreadMessageCountApiRequestBuilder newBuilder$() =>
       GetUnreadMessageCountApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetUnreadMessageCountApiRequest);
 }

@@ -190,25 +190,25 @@ typedef StatefulActionsOptions<Consumer, ConsumerBuilder,
 
 class _$ConsumerActions extends ConsumerActions {
   final StatefulActionsOptions<Consumer, ConsumerBuilder, ConsumerActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<Consumer> $replace;
+  final ActionDispatcher<Consumer> replace$;
   final FieldDispatcher<String> id;
   final PersonNameActions name;
   final FieldDispatcher<bool> active;
 
-  _$ConsumerActions._(this.$options)
-      : $replace = $options.action<Consumer>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ConsumerActions._(this.options$)
+      : replace$ = options$.action<Consumer>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -216,41 +216,37 @@ class _$ConsumerActions extends ConsumerActions {
       _$ConsumerActions._(options());
 
   @override
-  Consumer get $initial => Consumer();
+  Consumer get initialState$ => Consumer();
 
   @override
-  ConsumerBuilder $newBuilder() => ConsumerBuilder();
+  ConsumerBuilder newBuilder$() => ConsumerBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.active,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    name.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    name.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Consumer);
 }

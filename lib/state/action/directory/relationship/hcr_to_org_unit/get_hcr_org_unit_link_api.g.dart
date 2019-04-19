@@ -22,67 +22,32 @@ class _$GetHcrOrgUnitLinkApi extends GetHcrOrgUnitLinkApi {
           ApiResult<GetHcrOrgUnitLinkApiResponse>>,
       CommandStateBuilder<ApiCommand<GetHcrOrgUnitLinkApiRequest>,
           ApiResult<GetHcrOrgUnitLinkApiResponse>>,
-      GetHcrOrgUnitLinkApi> $options;
+      GetHcrOrgUnitLinkApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetHcrOrgUnitLinkApiRequest>,
-          ApiResult<GetHcrOrgUnitLinkApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetHcrOrgUnitLinkApiRequest>,
-          ApiResult<GetHcrOrgUnitLinkApiResponse>,
-          GetHcrOrgUnitLinkApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetHcrOrgUnitLinkApiRequest>,
-          ApiResult<GetHcrOrgUnitLinkApiResponse>,
-          GetHcrOrgUnitLinkApi,
-          Command<ApiCommand<GetHcrOrgUnitLinkApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetHcrOrgUnitLinkApiRequest>,
-          ApiResult<GetHcrOrgUnitLinkApiResponse>,
-          GetHcrOrgUnitLinkApi,
-          CommandResult<ApiResult<GetHcrOrgUnitLinkApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetHcrOrgUnitLinkApiRequest>,
-          ApiResult<GetHcrOrgUnitLinkApiResponse>,
-          GetHcrOrgUnitLinkApi,
-          CommandProgress>> $progress;
+          ApiResult<GetHcrOrgUnitLinkApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetHcrOrgUnitLinkApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<GetHcrOrgUnitLinkApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetHcrOrgUnitLinkApi._(this.$options)
-      : $replace = $options.action<
+  _$GetHcrOrgUnitLinkApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetHcrOrgUnitLinkApiRequest>,
                     ApiResult<GetHcrOrgUnitLinkApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetHcrOrgUnitLinkApiRequest>,
-                ApiResult<GetHcrOrgUnitLinkApiResponse>,
-                GetHcrOrgUnitLinkApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetHcrOrgUnitLinkApiRequest>,
-                    ApiResult<GetHcrOrgUnitLinkApiResponse>,
-                    GetHcrOrgUnitLinkApi,
-                    Command<ApiCommand<GetHcrOrgUnitLinkApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetHcrOrgUnitLinkApiRequest>,
-                    ApiResult<GetHcrOrgUnitLinkApiResponse>,
-                    GetHcrOrgUnitLinkApi,
-                    CommandResult<ApiResult<GetHcrOrgUnitLinkApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetHcrOrgUnitLinkApiRequest>,
-                ApiResult<GetHcrOrgUnitLinkApiResponse>,
-                GetHcrOrgUnitLinkApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<GetHcrOrgUnitLinkApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<GetHcrOrgUnitLinkApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetHcrOrgUnitLinkApi(GetHcrOrgUnitLinkApiOptions options) =>
@@ -91,32 +56,25 @@ class _$GetHcrOrgUnitLinkApi extends GetHcrOrgUnitLinkApi {
   @override
   CommandState<ApiCommand<GetHcrOrgUnitLinkApiRequest>,
           ApiResult<GetHcrOrgUnitLinkApiResponse>>
-      get $initial => CommandState<ApiCommand<GetHcrOrgUnitLinkApiRequest>,
+      get initialState$ => CommandState<ApiCommand<GetHcrOrgUnitLinkApiRequest>,
           ApiResult<GetHcrOrgUnitLinkApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetHcrOrgUnitLinkApiRequest>,
           ApiResult<GetHcrOrgUnitLinkApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetHcrOrgUnitLinkApiRequest>,
           ApiResult<GetHcrOrgUnitLinkApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetHcrOrgUnitLinkApiRequest)]),
-        FullType(ApiResult, [FullType(GetHcrOrgUnitLinkApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

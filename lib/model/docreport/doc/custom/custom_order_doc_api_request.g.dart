@@ -316,9 +316,9 @@ class _$CustomOrderDocApiRequestActions
   final StatefulActionsOptions<
       CustomOrderDocApiRequest,
       CustomOrderDocApiRequestBuilder,
-      CustomOrderDocApiRequestActions> $options;
+      CustomOrderDocApiRequestActions> options$;
 
-  final ActionDispatcher<CustomOrderDocApiRequest> $replace;
+  final ActionDispatcher<CustomOrderDocApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<String> orderReasonDocId;
   final FieldDispatcher<String> orderId;
@@ -327,10 +327,10 @@ class _$CustomOrderDocApiRequestActions
   final FieldDispatcher<DocReportDisplayType> displayType;
   final FieldDispatcher<DocReportFormat> format;
 
-  _$CustomOrderDocApiRequestActions._(this.$options)
-      : $replace = $options.action<CustomOrderDocApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$CustomOrderDocApiRequestActions._(this.options$)
+      : replace$ = options$.action<CustomOrderDocApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -339,23 +339,23 @@ class _$CustomOrderDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        orderReasonDocId = $options.field<String>(
+        orderReasonDocId = options$.field<String>(
             'orderReasonDocId',
             (a) => a?.orderReasonDocId,
             (s) => s?.orderReasonDocId,
             (p, b) => p?.orderReasonDocId = b),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+        shipmentId = options$.field<String>('shipmentId', (a) => a?.shipmentId,
             (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
-        packageId = $options.field<String>('packageId', (a) => a?.packageId,
+        packageId = options$.field<String>('packageId', (a) => a?.packageId,
             (s) => s?.packageId, (p, b) => p?.packageId = b),
-        displayType = $options.field<DocReportDisplayType>(
+        displayType = options$.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
         super._();
 
@@ -364,23 +364,23 @@ class _$CustomOrderDocApiRequestActions
       _$CustomOrderDocApiRequestActions._(options());
 
   @override
-  CustomOrderDocApiRequest get $initial => CustomOrderDocApiRequest();
+  CustomOrderDocApiRequest get initialState$ => CustomOrderDocApiRequest();
 
   @override
-  CustomOrderDocApiRequestBuilder $newBuilder() =>
+  CustomOrderDocApiRequestBuilder newBuilder$() =>
       CustomOrderDocApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderReasonDocId,
         this.orderId,
         this.shipmentId,
@@ -390,24 +390,20 @@ class _$CustomOrderDocApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    orderReasonDocId.$reducer(reducer);
-    orderId.$reducer(reducer);
-    shipmentId.$reducer(reducer);
-    packageId.$reducer(reducer);
-    displayType.$reducer(reducer);
-    format.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    orderReasonDocId.reducer$(reducer);
+    orderId.reducer$(reducer);
+    shipmentId.reducer$(reducer);
+    packageId.reducer$(reducer);
+    displayType.reducer$(reducer);
+    format.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CustomOrderDocApiRequest);
 }

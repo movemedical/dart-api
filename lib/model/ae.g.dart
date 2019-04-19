@@ -394,9 +394,9 @@ class AeBuilder implements Builder<Ae, AeBuilder> {
 typedef StatefulActionsOptions<Ae, AeBuilder, AeActions> AeActionsOptions();
 
 class _$AeActions extends AeActions {
-  final StatefulActionsOptions<Ae, AeBuilder, AeActions> $options;
+  final StatefulActionsOptions<Ae, AeBuilder, AeActions> options$;
 
-  final ActionDispatcher<Ae> $replace;
+  final ActionDispatcher<Ae> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<OrgType> orgType;
@@ -409,68 +409,68 @@ class _$AeActions extends AeActions {
   final FieldDispatcher<DateTime> endDate;
   final FieldDispatcher<bool> active;
 
-  _$AeActions._(this.$options)
-      : $replace = $options.action<Ae>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$AeActions._(this.options$)
+      : replace$ = options$.action<Ae>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
+        orgType = options$.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        workPhoneNumber = PhoneNumberActions(() => $options
+        workPhoneNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'workPhoneNumber',
                 (a) => a.workPhoneNumber,
                 (s) => s?.workPhoneNumber,
                 (b) => b?.workPhoneNumber,
                 (parent, builder) => parent?.workPhoneNumber = builder)),
-        mobilePhoneNumber = PhoneNumberActions(() => $options
+        mobilePhoneNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'mobilePhoneNumber',
                 (a) => a.mobilePhoneNumber,
                 (s) => s?.mobilePhoneNumber,
                 (b) => b?.mobilePhoneNumber,
                 (parent, builder) => parent?.mobilePhoneNumber = builder)),
-        faxNumber = PhoneNumberActions(() => $options
+        faxNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'faxNumber',
                 (a) => a.faxNumber,
                 (s) => s?.faxNumber,
                 (b) => b?.faxNumber,
                 (parent, builder) => parent?.faxNumber = builder)),
-        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+        startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
-        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
+        endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
   factory _$AeActions(AeActionsOptions options) => _$AeActions._(options());
 
   @override
-  Ae get $initial => Ae();
+  Ae get initialState$ => Ae();
 
   @override
-  AeBuilder $newBuilder() => AeBuilder();
+  AeBuilder newBuilder$() => AeBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
         this.email,
         this.workPhoneNumber,
@@ -478,11 +478,11 @@ class _$AeActions extends AeActions {
         this.faxNumber,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgId,
         this.orgType,
@@ -492,32 +492,28 @@ class _$AeActions extends AeActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgId.$reducer(reducer);
-    orgType.$reducer(reducer);
-    name.$reducer(reducer);
-    email.$reducer(reducer);
-    workPhoneNumber.$reducer(reducer);
-    mobilePhoneNumber.$reducer(reducer);
-    faxNumber.$reducer(reducer);
-    startDate.$reducer(reducer);
-    endDate.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgId.reducer$(reducer);
+    orgType.reducer$(reducer);
+    name.reducer$(reducer);
+    email.reducer$(reducer);
+    workPhoneNumber.reducer$(reducer);
+    mobilePhoneNumber.reducer$(reducer);
+    faxNumber.reducer$(reducer);
+    startDate.reducer$(reducer);
+    endDate.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    name.$middleware(middleware);
-    email.$middleware(middleware);
-    workPhoneNumber.$middleware(middleware);
-    mobilePhoneNumber.$middleware(middleware);
-    faxNumber.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    name.middleware$(middleware);
+    email.middleware$(middleware);
+    workPhoneNumber.middleware$(middleware);
+    mobilePhoneNumber.middleware$(middleware);
+    faxNumber.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Ae);
 }

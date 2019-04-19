@@ -294,9 +294,9 @@ class _$ListOrderReasonsApiRequestActions
   final StatefulActionsOptions<
       ListOrderReasonsApiRequest,
       ListOrderReasonsApiRequestBuilder,
-      ListOrderReasonsApiRequestActions> $options;
+      ListOrderReasonsApiRequestActions> options$;
 
-  final ActionDispatcher<ListOrderReasonsApiRequest> $replace;
+  final ActionDispatcher<ListOrderReasonsApiRequest> replace$;
   final FieldDispatcher<String> search;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<BuiltList<OrderReasonGroup>> reasonGroups;
@@ -304,23 +304,23 @@ class _$ListOrderReasonsApiRequestActions
   final FieldDispatcher<bool> forCreate;
   final PaginationParamsActions paging;
 
-  _$ListOrderReasonsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListOrderReasonsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$ListOrderReasonsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListOrderReasonsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        reasonGroups = $options.field<BuiltList<OrderReasonGroup>>(
+        reasonGroups = options$.field<BuiltList<OrderReasonGroup>>(
             'reasonGroups',
             (a) => a?.reasonGroups,
             (s) => s?.reasonGroups,
             (p, b) => p?.reasonGroups = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        forCreate = $options.field<bool>('forCreate', (a) => a?.forCreate,
+        forCreate = options$.field<bool>('forCreate', (a) => a?.forCreate,
             (s) => s?.forCreate, (p, b) => p?.forCreate = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -336,23 +336,23 @@ class _$ListOrderReasonsApiRequestActions
       _$ListOrderReasonsApiRequestActions._(options());
 
   @override
-  ListOrderReasonsApiRequest get $initial => ListOrderReasonsApiRequest();
+  ListOrderReasonsApiRequest get initialState$ => ListOrderReasonsApiRequest();
 
   @override
-  ListOrderReasonsApiRequestBuilder $newBuilder() =>
+  ListOrderReasonsApiRequestBuilder newBuilder$() =>
       ListOrderReasonsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
         this.bizUnitId,
         this.reasonGroups,
@@ -361,23 +361,19 @@ class _$ListOrderReasonsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    reasonGroups.$reducer(reducer);
-    active.$reducer(reducer);
-    forCreate.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    reasonGroups.reducer$(reducer);
+    active.reducer$(reducer);
+    forCreate.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListOrderReasonsApiRequest);
 }

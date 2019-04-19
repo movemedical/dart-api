@@ -181,18 +181,18 @@ class _$ListAuditItemStockApiAuditStockActions
   final StatefulActionsOptions<
       ListAuditItemStockApiAuditStock,
       ListAuditItemStockApiAuditStockBuilder,
-      ListAuditItemStockApiAuditStockActions> $options;
+      ListAuditItemStockApiAuditStockActions> options$;
 
-  final ActionDispatcher<ListAuditItemStockApiAuditStock> $replace;
+  final ActionDispatcher<ListAuditItemStockApiAuditStock> replace$;
   final FieldDispatcher<String> stockId;
   final FieldDispatcher<AuditStockOutcome> outcome;
 
-  _$ListAuditItemStockApiAuditStockActions._(this.$options)
-      : $replace = $options.action<ListAuditItemStockApiAuditStock>(
-            '\$replace', (a) => a?.$replace),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+  _$ListAuditItemStockApiAuditStockActions._(this.options$)
+      : replace$ = options$.action<ListAuditItemStockApiAuditStock>(
+            'replace\$', (a) => a?.replace$),
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        outcome = $options.field<AuditStockOutcome>('outcome',
+        outcome = options$.field<AuditStockOutcome>('outcome',
             (a) => a?.outcome, (s) => s?.outcome, (p, b) => p?.outcome = b),
         super._();
 
@@ -201,36 +201,31 @@ class _$ListAuditItemStockApiAuditStockActions
       _$ListAuditItemStockApiAuditStockActions._(options());
 
   @override
-  ListAuditItemStockApiAuditStock get $initial =>
+  ListAuditItemStockApiAuditStock get initialState$ =>
       ListAuditItemStockApiAuditStock();
 
   @override
-  ListAuditItemStockApiAuditStockBuilder $newBuilder() =>
+  ListAuditItemStockApiAuditStockBuilder newBuilder$() =>
       ListAuditItemStockApiAuditStockBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockId,
         this.outcome,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockId.$reducer(reducer);
-    outcome.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockId.reducer$(reducer);
+    outcome.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListAuditItemStockApiAuditStock);
 }

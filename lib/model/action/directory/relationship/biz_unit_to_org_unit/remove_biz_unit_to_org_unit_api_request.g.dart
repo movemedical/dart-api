@@ -162,15 +162,15 @@ class _$RemoveBizUnitToOrgUnitApiRequestActions
   final StatefulActionsOptions<
       RemoveBizUnitToOrgUnitApiRequest,
       RemoveBizUnitToOrgUnitApiRequestBuilder,
-      RemoveBizUnitToOrgUnitApiRequestActions> $options;
+      RemoveBizUnitToOrgUnitApiRequestActions> options$;
 
-  final ActionDispatcher<RemoveBizUnitToOrgUnitApiRequest> $replace;
+  final ActionDispatcher<RemoveBizUnitToOrgUnitApiRequest> replace$;
   final FieldDispatcher<String> bizUnitToOrgUnitId;
 
-  _$RemoveBizUnitToOrgUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<RemoveBizUnitToOrgUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        bizUnitToOrgUnitId = $options.field<String>(
+  _$RemoveBizUnitToOrgUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<RemoveBizUnitToOrgUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        bizUnitToOrgUnitId = options$.field<String>(
             'bizUnitToOrgUnitId',
             (a) => a?.bizUnitToOrgUnitId,
             (s) => s?.bizUnitToOrgUnitId,
@@ -182,34 +182,29 @@ class _$RemoveBizUnitToOrgUnitApiRequestActions
       _$RemoveBizUnitToOrgUnitApiRequestActions._(options());
 
   @override
-  RemoveBizUnitToOrgUnitApiRequest get $initial =>
+  RemoveBizUnitToOrgUnitApiRequest get initialState$ =>
       RemoveBizUnitToOrgUnitApiRequest();
 
   @override
-  RemoveBizUnitToOrgUnitApiRequestBuilder $newBuilder() =>
+  RemoveBizUnitToOrgUnitApiRequestBuilder newBuilder$() =>
       RemoveBizUnitToOrgUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.bizUnitToOrgUnitId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    bizUnitToOrgUnitId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    bizUnitToOrgUnitId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RemoveBizUnitToOrgUnitApiRequest);
 }

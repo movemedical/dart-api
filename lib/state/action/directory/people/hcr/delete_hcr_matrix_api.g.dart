@@ -20,57 +20,29 @@ class _$DeleteHcrMatrixApi extends DeleteHcrMatrixApi {
       CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<DeleteHcrMatrixApiRequest>,
           ApiResult<Nothing>>,
-      DeleteHcrMatrixApi> $options;
+      DeleteHcrMatrixApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<DeleteHcrMatrixApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>,
-          DeleteHcrMatrixApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<DeleteHcrMatrixApiRequest>,
-          ApiResult<Nothing>,
-          DeleteHcrMatrixApi,
-          Command<ApiCommand<DeleteHcrMatrixApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>,
-          DeleteHcrMatrixApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>,
-          DeleteHcrMatrixApi, CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<DeleteHcrMatrixApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$DeleteHcrMatrixApi._(this.$options)
-      : $replace = $options.action<
+  _$DeleteHcrMatrixApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<DeleteHcrMatrixApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<DeleteHcrMatrixApiRequest>,
-                ApiResult<Nothing>,
-                DeleteHcrMatrixApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<DeleteHcrMatrixApiRequest>,
-                    ApiResult<Nothing>,
-                    DeleteHcrMatrixApi,
-                    Command<ApiCommand<DeleteHcrMatrixApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<DeleteHcrMatrixApiRequest>,
-                    ApiResult<Nothing>,
-                    DeleteHcrMatrixApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<DeleteHcrMatrixApiRequest>,
-                ApiResult<Nothing>,
-                DeleteHcrMatrixApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<DeleteHcrMatrixApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$DeleteHcrMatrixApi(DeleteHcrMatrixApiOptions options) =>
@@ -78,30 +50,23 @@ class _$DeleteHcrMatrixApi extends DeleteHcrMatrixApi {
 
   @override
   CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<DeleteHcrMatrixApiRequest>,
+      get initialState$ => CommandState<ApiCommand<DeleteHcrMatrixApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(DeleteHcrMatrixApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

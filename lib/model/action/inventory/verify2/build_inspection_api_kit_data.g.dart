@@ -242,26 +242,26 @@ class _$BuildInspectionApiKitDataActions
   final StatefulActionsOptions<
       BuildInspectionApiKitData,
       BuildInspectionApiKitDataBuilder,
-      BuildInspectionApiKitDataActions> $options;
+      BuildInspectionApiKitDataActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiKitData> $replace;
+  final ActionDispatcher<BuildInspectionApiKitData> replace$;
   final FieldDispatcher<String> stockId;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> serialId;
   final FieldDispatcher<BuiltList<BuildInspectionApiKitDataKitContainer>>
       containers;
 
-  _$BuildInspectionApiKitDataActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiKitData>(
-            '\$replace', (a) => a?.$replace),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+  _$BuildInspectionApiKitDataActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiKitData>(
+            'replace\$', (a) => a?.replace$),
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
         containers =
-            $options.field<BuiltList<BuildInspectionApiKitDataKitContainer>>(
+            options$.field<BuiltList<BuildInspectionApiKitDataKitContainer>>(
                 'containers',
                 (a) => a?.containers,
                 (s) => s?.containers,
@@ -273,17 +273,17 @@ class _$BuildInspectionApiKitDataActions
       _$BuildInspectionApiKitDataActions._(options());
 
   @override
-  BuildInspectionApiKitData get $initial => BuildInspectionApiKitData();
+  BuildInspectionApiKitData get initialState$ => BuildInspectionApiKitData();
 
   @override
-  BuildInspectionApiKitDataBuilder $newBuilder() =>
+  BuildInspectionApiKitDataBuilder newBuilder$() =>
       BuildInspectionApiKitDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockId,
         this.itemId,
         this.serialId,
@@ -291,20 +291,16 @@ class _$BuildInspectionApiKitDataActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockId.$reducer(reducer);
-    itemId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    containers.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockId.reducer$(reducer);
+    itemId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    containers.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(BuildInspectionApiKitData);
 }

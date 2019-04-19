@@ -163,15 +163,15 @@ class _$DeleteCalendarSubscriptionApiRequestActions
   final StatefulActionsOptions<
       DeleteCalendarSubscriptionApiRequest,
       DeleteCalendarSubscriptionApiRequestBuilder,
-      DeleteCalendarSubscriptionApiRequestActions> $options;
+      DeleteCalendarSubscriptionApiRequestActions> options$;
 
-  final ActionDispatcher<DeleteCalendarSubscriptionApiRequest> $replace;
+  final ActionDispatcher<DeleteCalendarSubscriptionApiRequest> replace$;
   final FieldDispatcher<String> subscriptionId;
 
-  _$DeleteCalendarSubscriptionApiRequestActions._(this.$options)
-      : $replace = $options.action<DeleteCalendarSubscriptionApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        subscriptionId = $options.field<String>(
+  _$DeleteCalendarSubscriptionApiRequestActions._(this.options$)
+      : replace$ = options$.action<DeleteCalendarSubscriptionApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        subscriptionId = options$.field<String>(
             'subscriptionId',
             (a) => a?.subscriptionId,
             (s) => s?.subscriptionId,
@@ -183,34 +183,29 @@ class _$DeleteCalendarSubscriptionApiRequestActions
       _$DeleteCalendarSubscriptionApiRequestActions._(options());
 
   @override
-  DeleteCalendarSubscriptionApiRequest get $initial =>
+  DeleteCalendarSubscriptionApiRequest get initialState$ =>
       DeleteCalendarSubscriptionApiRequest();
 
   @override
-  DeleteCalendarSubscriptionApiRequestBuilder $newBuilder() =>
+  DeleteCalendarSubscriptionApiRequestBuilder newBuilder$() =>
       DeleteCalendarSubscriptionApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.subscriptionId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    subscriptionId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    subscriptionId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(DeleteCalendarSubscriptionApiRequest);
 }

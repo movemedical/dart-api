@@ -441,9 +441,9 @@ class _$EditCaseEventSchedulingApiRequestActions
   final StatefulActionsOptions<
       EditCaseEventSchedulingApiRequest,
       EditCaseEventSchedulingApiRequestBuilder,
-      EditCaseEventSchedulingApiRequestActions> $options;
+      EditCaseEventSchedulingApiRequestActions> options$;
 
-  final ActionDispatcher<EditCaseEventSchedulingApiRequest> $replace;
+  final ActionDispatcher<EditCaseEventSchedulingApiRequest> replace$;
   final FieldDispatcher<String> caseTypeId;
   final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<String> salesOuId;
@@ -458,49 +458,49 @@ class _$EditCaseEventSchedulingApiRequestActions
   final FieldDispatcher<BodySide> bodySide;
   final FieldDispatcher<String> procedureDesc;
 
-  _$EditCaseEventSchedulingApiRequestActions._(this.$options)
-      : $replace = $options.action<EditCaseEventSchedulingApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseTypeId = $options.field<String>('caseTypeId', (a) => a?.caseTypeId,
+  _$EditCaseEventSchedulingApiRequestActions._(this.options$)
+      : replace$ = options$.action<EditCaseEventSchedulingApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseTypeId = options$.field<String>('caseTypeId', (a) => a?.caseTypeId,
             (s) => s?.caseTypeId, (p, b) => p?.caseTypeId = b),
-        caseEventId = $options.field<String>(
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        salesOuId = $options.field<String>('salesOuId', (a) => a?.salesOuId,
+        salesOuId = options$.field<String>('salesOuId', (a) => a?.salesOuId,
             (s) => s?.salesOuId, (p, b) => p?.salesOuId = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        subProcedureId = $options.field<String>(
+        subProcedureId = options$.field<String>(
             'subProcedureId',
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
             (p, b) => p?.subProcedureId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        physicianId = $options.field<String>(
+        physicianId = options$.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        physicianTemp = $options.field<String>(
+        physicianTemp = options$.field<String>(
             'physicianTemp',
             (a) => a?.physicianTemp,
             (s) => s?.physicianTemp,
             (p, b) => p?.physicianTemp = b),
-        hcrId = $options.field<String>(
+        hcrId = options$.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        coverageId = $options.field<String>('coverageId', (a) => a?.coverageId,
+        coverageId = options$.field<String>('coverageId', (a) => a?.coverageId,
             (s) => s?.coverageId, (p, b) => p?.coverageId = b),
-        bodySide = $options.field<BodySide>('bodySide', (a) => a?.bodySide,
+        bodySide = options$.field<BodySide>('bodySide', (a) => a?.bodySide,
             (s) => s?.bodySide, (p, b) => p?.bodySide = b),
-        procedureDesc = $options.field<String>(
+        procedureDesc = options$.field<String>(
             'procedureDesc',
             (a) => a?.procedureDesc,
             (s) => s?.procedureDesc,
@@ -512,18 +512,18 @@ class _$EditCaseEventSchedulingApiRequestActions
       _$EditCaseEventSchedulingApiRequestActions._(options());
 
   @override
-  EditCaseEventSchedulingApiRequest get $initial =>
+  EditCaseEventSchedulingApiRequest get initialState$ =>
       EditCaseEventSchedulingApiRequest();
 
   @override
-  EditCaseEventSchedulingApiRequestBuilder $newBuilder() =>
+  EditCaseEventSchedulingApiRequestBuilder newBuilder$() =>
       EditCaseEventSchedulingApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseTypeId,
         this.caseEventId,
         this.salesOuId,
@@ -540,30 +540,25 @@ class _$EditCaseEventSchedulingApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseTypeId.$reducer(reducer);
-    caseEventId.$reducer(reducer);
-    salesOuId.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    subProcedureId.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    physicianId.$reducer(reducer);
-    physicianTemp.$reducer(reducer);
-    hcrId.$reducer(reducer);
-    teamId.$reducer(reducer);
-    coverageId.$reducer(reducer);
-    bodySide.$reducer(reducer);
-    procedureDesc.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseTypeId.reducer$(reducer);
+    caseEventId.reducer$(reducer);
+    salesOuId.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    subProcedureId.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    physicianId.reducer$(reducer);
+    physicianTemp.reducer$(reducer);
+    hcrId.reducer$(reducer);
+    teamId.reducer$(reducer);
+    coverageId.reducer$(reducer);
+    bodySide.reducer$(reducer);
+    procedureDesc.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(EditCaseEventSchedulingApiRequest);
 }

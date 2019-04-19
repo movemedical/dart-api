@@ -241,27 +241,27 @@ class _$ListShippingServicesApiRequestActions
   final StatefulActionsOptions<
       ListShippingServicesApiRequest,
       ListShippingServicesApiRequestBuilder,
-      ListShippingServicesApiRequestActions> $options;
+      ListShippingServicesApiRequestActions> options$;
 
-  final ActionDispatcher<ListShippingServicesApiRequest> $replace;
+  final ActionDispatcher<ListShippingServicesApiRequest> replace$;
   final FieldDispatcher<String> orderReasonId;
   final FieldDispatcher<String> search;
   final FieldDispatcher<bool> active;
   final PaginationParamsActions paging;
 
-  _$ListShippingServicesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListShippingServicesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderReasonId = $options.field<String>(
+  _$ListShippingServicesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListShippingServicesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderReasonId = options$.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
             (p, b) => p?.orderReasonId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -277,46 +277,41 @@ class _$ListShippingServicesApiRequestActions
       _$ListShippingServicesApiRequestActions._(options());
 
   @override
-  ListShippingServicesApiRequest get $initial =>
+  ListShippingServicesApiRequest get initialState$ =>
       ListShippingServicesApiRequest();
 
   @override
-  ListShippingServicesApiRequestBuilder $newBuilder() =>
+  ListShippingServicesApiRequestBuilder newBuilder$() =>
       ListShippingServicesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderReasonId,
         this.search,
         this.active,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderReasonId.$reducer(reducer);
-    search.$reducer(reducer);
-    active.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
+    search.reducer$(reducer);
+    active.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListShippingServicesApiRequest);
 }

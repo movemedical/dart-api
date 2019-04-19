@@ -178,18 +178,18 @@ class _$GetCaseCountByDayApiCaseCountActions
   final StatefulActionsOptions<
       GetCaseCountByDayApiCaseCount,
       GetCaseCountByDayApiCaseCountBuilder,
-      GetCaseCountByDayApiCaseCountActions> $options;
+      GetCaseCountByDayApiCaseCountActions> options$;
 
-  final ActionDispatcher<GetCaseCountByDayApiCaseCount> $replace;
+  final ActionDispatcher<GetCaseCountByDayApiCaseCount> replace$;
   final FieldDispatcher<DateTime> date;
   final FieldDispatcher<int> count;
 
-  _$GetCaseCountByDayApiCaseCountActions._(this.$options)
-      : $replace = $options.action<GetCaseCountByDayApiCaseCount>(
-            '\$replace', (a) => a?.$replace),
-        date = $options.field<DateTime>(
+  _$GetCaseCountByDayApiCaseCountActions._(this.options$)
+      : replace$ = options$.action<GetCaseCountByDayApiCaseCount>(
+            'replace\$', (a) => a?.replace$),
+        date = options$.field<DateTime>(
             'date', (a) => a?.date, (s) => s?.date, (p, b) => p?.date = b),
-        count = $options.field<int>(
+        count = options$.field<int>(
             'count', (a) => a?.count, (s) => s?.count, (p, b) => p?.count = b),
         super._();
 
@@ -198,35 +198,31 @@ class _$GetCaseCountByDayApiCaseCountActions
       _$GetCaseCountByDayApiCaseCountActions._(options());
 
   @override
-  GetCaseCountByDayApiCaseCount get $initial => GetCaseCountByDayApiCaseCount();
+  GetCaseCountByDayApiCaseCount get initialState$ =>
+      GetCaseCountByDayApiCaseCount();
 
   @override
-  GetCaseCountByDayApiCaseCountBuilder $newBuilder() =>
+  GetCaseCountByDayApiCaseCountBuilder newBuilder$() =>
       GetCaseCountByDayApiCaseCountBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.date,
         this.count,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    date.$reducer(reducer);
-    count.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    date.reducer$(reducer);
+    count.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCaseCountByDayApiCaseCount);
 }

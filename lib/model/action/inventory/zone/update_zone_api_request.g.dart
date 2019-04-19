@@ -265,9 +265,9 @@ typedef StatefulActionsOptions<
 
 class _$UpdateZoneApiRequestActions extends UpdateZoneApiRequestActions {
   final StatefulActionsOptions<UpdateZoneApiRequest,
-      UpdateZoneApiRequestBuilder, UpdateZoneApiRequestActions> $options;
+      UpdateZoneApiRequestBuilder, UpdateZoneApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateZoneApiRequest> $replace;
+  final ActionDispatcher<UpdateZoneApiRequest> replace$;
   final FieldDispatcher<String> zoneId;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> description;
@@ -275,23 +275,23 @@ class _$UpdateZoneApiRequestActions extends UpdateZoneApiRequestActions {
   final FieldDispatcher<bool> sourceable;
   final FieldDispatcher<bool> receivable;
 
-  _$UpdateZoneApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateZoneApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        zoneId = $options.field<String>('zoneId', (a) => a?.zoneId,
+  _$UpdateZoneApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateZoneApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        zoneId = options$.field<String>('zoneId', (a) => a?.zoneId,
             (s) => s?.zoneId, (p, b) => p?.zoneId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        sourceable = $options.field<bool>('sourceable', (a) => a?.sourceable,
+        sourceable = options$.field<bool>('sourceable', (a) => a?.sourceable,
             (s) => s?.sourceable, (p, b) => p?.sourceable = b),
-        receivable = $options.field<bool>('receivable', (a) => a?.receivable,
+        receivable = options$.field<bool>('receivable', (a) => a?.receivable,
             (s) => s?.receivable, (p, b) => p?.receivable = b),
         super._();
 
@@ -300,16 +300,16 @@ class _$UpdateZoneApiRequestActions extends UpdateZoneApiRequestActions {
       _$UpdateZoneApiRequestActions._(options());
 
   @override
-  UpdateZoneApiRequest get $initial => UpdateZoneApiRequest();
+  UpdateZoneApiRequest get initialState$ => UpdateZoneApiRequest();
 
   @override
-  UpdateZoneApiRequestBuilder $newBuilder() => UpdateZoneApiRequestBuilder();
+  UpdateZoneApiRequestBuilder newBuilder$() => UpdateZoneApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.zoneId,
         this.name,
         this.description,
@@ -319,22 +319,18 @@ class _$UpdateZoneApiRequestActions extends UpdateZoneApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    zoneId.$reducer(reducer);
-    name.$reducer(reducer);
-    description.$reducer(reducer);
-    active.$reducer(reducer);
-    sourceable.$reducer(reducer);
-    receivable.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    zoneId.reducer$(reducer);
+    name.reducer$(reducer);
+    description.reducer$(reducer);
+    active.reducer$(reducer);
+    sourceable.reducer$(reducer);
+    receivable.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(UpdateZoneApiRequest);
 }

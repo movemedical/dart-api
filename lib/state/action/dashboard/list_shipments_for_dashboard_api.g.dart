@@ -22,69 +22,32 @@ class _$ListShipmentsForDashboardApi extends ListShipmentsForDashboardApi {
           ApiResult<ListShipmentsForDashboardApiResponse>>,
       CommandStateBuilder<ApiCommand<ListShipmentsForDashboardApiRequest>,
           ApiResult<ListShipmentsForDashboardApiResponse>>,
-      ListShipmentsForDashboardApi> $options;
+      ListShipmentsForDashboardApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListShipmentsForDashboardApiRequest>,
-          ApiResult<ListShipmentsForDashboardApiResponse>>> $replace;
+          ApiResult<ListShipmentsForDashboardApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListShipmentsForDashboardApiRequest>,
-          ApiResult<ListShipmentsForDashboardApiResponse>,
-          ListShipmentsForDashboardApi,
-          String>> $cancel;
+      Command<ApiCommand<ListShipmentsForDashboardApiRequest>>> execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListShipmentsForDashboardApiRequest>,
-          ApiResult<ListShipmentsForDashboardApiResponse>,
-          ListShipmentsForDashboardApi,
-          Command<ApiCommand<ListShipmentsForDashboardApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListShipmentsForDashboardApiRequest>,
-              ApiResult<ListShipmentsForDashboardApiResponse>,
-              ListShipmentsForDashboardApi,
-              CommandResult<ApiResult<ListShipmentsForDashboardApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListShipmentsForDashboardApiRequest>,
-          ApiResult<ListShipmentsForDashboardApiResponse>,
-          ListShipmentsForDashboardApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListShipmentsForDashboardApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListShipmentsForDashboardApi._(this.$options)
-      : $replace = $options.action<
+  _$ListShipmentsForDashboardApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListShipmentsForDashboardApiRequest>,
                     ApiResult<ListShipmentsForDashboardApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListShipmentsForDashboardApiRequest>,
-                ApiResult<ListShipmentsForDashboardApiResponse>,
-                ListShipmentsForDashboardApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListShipmentsForDashboardApiRequest>,
-                    ApiResult<ListShipmentsForDashboardApiResponse>,
-                    ListShipmentsForDashboardApi,
-                    Command<ApiCommand<ListShipmentsForDashboardApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListShipmentsForDashboardApiRequest>,
-                    ApiResult<ListShipmentsForDashboardApiResponse>,
-                    ListShipmentsForDashboardApi,
-                    CommandResult<
-                        ApiResult<ListShipmentsForDashboardApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListShipmentsForDashboardApiRequest>,
-                ApiResult<ListShipmentsForDashboardApiResponse>,
-                ListShipmentsForDashboardApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListShipmentsForDashboardApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<ListShipmentsForDashboardApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListShipmentsForDashboardApi(
@@ -94,33 +57,26 @@ class _$ListShipmentsForDashboardApi extends ListShipmentsForDashboardApi {
   @override
   CommandState<ApiCommand<ListShipmentsForDashboardApiRequest>,
           ApiResult<ListShipmentsForDashboardApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListShipmentsForDashboardApiRequest>,
           ApiResult<ListShipmentsForDashboardApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListShipmentsForDashboardApiRequest>,
           ApiResult<ListShipmentsForDashboardApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListShipmentsForDashboardApiRequest>,
           ApiResult<ListShipmentsForDashboardApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListShipmentsForDashboardApiRequest)]),
-        FullType(ApiResult, [FullType(ListShipmentsForDashboardApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

@@ -184,23 +184,23 @@ typedef StatefulActionsOptions<
 
 class _$ListKitContentsApiDiffActions extends ListKitContentsApiDiffActions {
   final StatefulActionsOptions<ListKitContentsApiDiff,
-      ListKitContentsApiDiffBuilder, ListKitContentsApiDiffActions> $options;
+      ListKitContentsApiDiffBuilder, ListKitContentsApiDiffActions> options$;
 
-  final ActionDispatcher<ListKitContentsApiDiff> $replace;
+  final ActionDispatcher<ListKitContentsApiDiff> replace$;
   final ItemActions item;
   final FieldDispatcher<int> qty;
 
-  _$ListKitContentsApiDiffActions._(this.$options)
-      : $replace = $options.action<ListKitContentsApiDiff>(
-            '\$replace', (a) => a?.$replace),
+  _$ListKitContentsApiDiffActions._(this.options$)
+      : replace$ = options$.action<ListKitContentsApiDiff>(
+            'replace\$', (a) => a?.replace$),
         item = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'item',
                 (a) => a.item,
                 (s) => s?.item,
                 (b) => b?.item,
                 (parent, builder) => parent?.item = builder)),
-        qty = $options.field<int>(
+        qty = options$.field<int>(
             'qty', (a) => a?.qty, (s) => s?.qty, (p, b) => p?.qty = b),
         super._();
 
@@ -209,40 +209,36 @@ class _$ListKitContentsApiDiffActions extends ListKitContentsApiDiffActions {
       _$ListKitContentsApiDiffActions._(options());
 
   @override
-  ListKitContentsApiDiff get $initial => ListKitContentsApiDiff();
+  ListKitContentsApiDiff get initialState$ => ListKitContentsApiDiff();
 
   @override
-  ListKitContentsApiDiffBuilder $newBuilder() =>
+  ListKitContentsApiDiffBuilder newBuilder$() =>
       ListKitContentsApiDiffBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.item,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.qty,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    item.$reducer(reducer);
-    qty.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    item.reducer$(reducer);
+    qty.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    item.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    item.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListKitContentsApiDiff);
 }

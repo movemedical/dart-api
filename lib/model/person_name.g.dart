@@ -300,9 +300,9 @@ typedef StatefulActionsOptions<PersonName, PersonNameBuilder,
 
 class _$PersonNameActions extends PersonNameActions {
   final StatefulActionsOptions<PersonName, PersonNameBuilder, PersonNameActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<PersonName> $replace;
+  final ActionDispatcher<PersonName> replace$;
   final FieldDispatcher<String> title;
   final FieldDispatcher<String> givenName;
   final FieldDispatcher<String> middleName;
@@ -312,26 +312,26 @@ class _$PersonNameActions extends PersonNameActions {
   final FieldDispatcher<String> displayName;
   final FieldDispatcher<int> locale;
 
-  _$PersonNameActions._(this.$options)
-      : $replace = $options.action<PersonName>('\$replace', (a) => a?.$replace),
-        title = $options.field<String>(
+  _$PersonNameActions._(this.options$)
+      : replace$ = options$.action<PersonName>('replace\$', (a) => a?.replace$),
+        title = options$.field<String>(
             'title', (a) => a?.title, (s) => s?.title, (p, b) => p?.title = b),
-        givenName = $options.field<String>('givenName', (a) => a?.givenName,
+        givenName = options$.field<String>('givenName', (a) => a?.givenName,
             (s) => s?.givenName, (p, b) => p?.givenName = b),
-        middleName = $options.field<String>('middleName', (a) => a?.middleName,
+        middleName = options$.field<String>('middleName', (a) => a?.middleName,
             (s) => s?.middleName, (p, b) => p?.middleName = b),
-        familyName = $options.field<String>('familyName', (a) => a?.familyName,
+        familyName = options$.field<String>('familyName', (a) => a?.familyName,
             (s) => s?.familyName, (p, b) => p?.familyName = b),
-        suffix = $options.field<String>('suffix', (a) => a?.suffix,
+        suffix = options$.field<String>('suffix', (a) => a?.suffix,
             (s) => s?.suffix, (p, b) => p?.suffix = b),
-        fullName = $options.field<String>('fullName', (a) => a?.fullName,
+        fullName = options$.field<String>('fullName', (a) => a?.fullName,
             (s) => s?.fullName, (p, b) => p?.fullName = b),
-        displayName = $options.field<String>(
+        displayName = options$.field<String>(
             'displayName',
             (a) => a?.displayName,
             (s) => s?.displayName,
             (p, b) => p?.displayName = b),
-        locale = $options.field<int>('locale', (a) => a?.locale,
+        locale = options$.field<int>('locale', (a) => a?.locale,
             (s) => s?.locale, (p, b) => p?.locale = b),
         super._();
 
@@ -339,16 +339,16 @@ class _$PersonNameActions extends PersonNameActions {
       _$PersonNameActions._(options());
 
   @override
-  PersonName get $initial => PersonName();
+  PersonName get initialState$ => PersonName();
 
   @override
-  PersonNameBuilder $newBuilder() => PersonNameBuilder();
+  PersonNameBuilder newBuilder$() => PersonNameBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.title,
         this.givenName,
         this.middleName,
@@ -360,24 +360,20 @@ class _$PersonNameActions extends PersonNameActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    title.$reducer(reducer);
-    givenName.$reducer(reducer);
-    middleName.$reducer(reducer);
-    familyName.$reducer(reducer);
-    suffix.$reducer(reducer);
-    fullName.$reducer(reducer);
-    displayName.$reducer(reducer);
-    locale.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    title.reducer$(reducer);
+    givenName.reducer$(reducer);
+    middleName.reducer$(reducer);
+    familyName.reducer$(reducer);
+    suffix.reducer$(reducer);
+    fullName.reducer$(reducer);
+    displayName.reducer$(reducer);
+    locale.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(PersonName);
 }

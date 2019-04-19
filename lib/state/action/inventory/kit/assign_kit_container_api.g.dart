@@ -21,63 +21,29 @@ class _$AssignKitContainerApi extends AssignKitContainerApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<AssignKitContainerApiRequest>,
           ApiResult<Nothing>>,
-      AssignKitContainerApi> $options;
+      AssignKitContainerApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AssignKitContainerApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AssignKitContainerApiRequest>,
-          ApiResult<Nothing>, AssignKitContainerApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AssignKitContainerApiRequest>,
-          ApiResult<Nothing>,
-          AssignKitContainerApi,
-          Command<ApiCommand<AssignKitContainerApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AssignKitContainerApiRequest>,
-          ApiResult<Nothing>,
-          AssignKitContainerApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AssignKitContainerApiRequest>,
-          ApiResult<Nothing>,
-          AssignKitContainerApi,
-          CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<AssignKitContainerApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$AssignKitContainerApi._(this.$options)
-      : $replace = $options.action<
+  _$AssignKitContainerApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<AssignKitContainerApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<AssignKitContainerApiRequest>,
-                ApiResult<Nothing>,
-                AssignKitContainerApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<AssignKitContainerApiRequest>,
-                    ApiResult<Nothing>,
-                    AssignKitContainerApi,
-                    Command<ApiCommand<AssignKitContainerApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<AssignKitContainerApiRequest>,
-                    ApiResult<Nothing>,
-                    AssignKitContainerApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<AssignKitContainerApiRequest>,
-                ApiResult<Nothing>,
-                AssignKitContainerApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<AssignKitContainerApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$AssignKitContainerApi(AssignKitContainerApiOptions options) =>
@@ -85,31 +51,24 @@ class _$AssignKitContainerApi extends AssignKitContainerApi {
 
   @override
   CommandState<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<AssignKitContainerApiRequest>,
-          ApiResult<Nothing>>();
+      get initialState$ => CommandState<
+          ApiCommand<AssignKitContainerApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<AssignKitContainerApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<AssignKitContainerApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(AssignKitContainerApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

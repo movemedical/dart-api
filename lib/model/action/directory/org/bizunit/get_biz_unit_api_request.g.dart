@@ -147,15 +147,15 @@ typedef StatefulActionsOptions<
 
 class _$GetBizUnitApiRequestActions extends GetBizUnitApiRequestActions {
   final StatefulActionsOptions<GetBizUnitApiRequest,
-      GetBizUnitApiRequestBuilder, GetBizUnitApiRequestActions> $options;
+      GetBizUnitApiRequestBuilder, GetBizUnitApiRequestActions> options$;
 
-  final ActionDispatcher<GetBizUnitApiRequest> $replace;
+  final ActionDispatcher<GetBizUnitApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$GetBizUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<GetBizUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetBizUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetBizUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -164,31 +164,27 @@ class _$GetBizUnitApiRequestActions extends GetBizUnitApiRequestActions {
       _$GetBizUnitApiRequestActions._(options());
 
   @override
-  GetBizUnitApiRequest get $initial => GetBizUnitApiRequest();
+  GetBizUnitApiRequest get initialState$ => GetBizUnitApiRequest();
 
   @override
-  GetBizUnitApiRequestBuilder $newBuilder() => GetBizUnitApiRequestBuilder();
+  GetBizUnitApiRequestBuilder newBuilder$() => GetBizUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetBizUnitApiRequest);
 }

@@ -176,15 +176,15 @@ class _$BarcodeScansToStockApiResponseActions
   final StatefulActionsOptions<
       BarcodeScansToStockApiResponse,
       BarcodeScansToStockApiResponseBuilder,
-      BarcodeScansToStockApiResponseActions> $options;
+      BarcodeScansToStockApiResponseActions> options$;
 
-  final ActionDispatcher<BarcodeScansToStockApiResponse> $replace;
+  final ActionDispatcher<BarcodeScansToStockApiResponse> replace$;
   final FieldDispatcher<BuiltList<BarcodeScansToStockApiBarcodeStock>> stocks;
 
-  _$BarcodeScansToStockApiResponseActions._(this.$options)
-      : $replace = $options.action<BarcodeScansToStockApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        stocks = $options.field<BuiltList<BarcodeScansToStockApiBarcodeStock>>(
+  _$BarcodeScansToStockApiResponseActions._(this.options$)
+      : replace$ = options$.action<BarcodeScansToStockApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        stocks = options$.field<BuiltList<BarcodeScansToStockApiBarcodeStock>>(
             'stocks',
             (a) => a?.stocks,
             (s) => s?.stocks,
@@ -196,34 +196,29 @@ class _$BarcodeScansToStockApiResponseActions
       _$BarcodeScansToStockApiResponseActions._(options());
 
   @override
-  BarcodeScansToStockApiResponse get $initial =>
+  BarcodeScansToStockApiResponse get initialState$ =>
       BarcodeScansToStockApiResponse();
 
   @override
-  BarcodeScansToStockApiResponseBuilder $newBuilder() =>
+  BarcodeScansToStockApiResponseBuilder newBuilder$() =>
       BarcodeScansToStockApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stocks,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stocks.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stocks.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BarcodeScansToStockApiResponse);
 }

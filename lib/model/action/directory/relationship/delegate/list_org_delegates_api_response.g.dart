@@ -195,18 +195,18 @@ class _$ListOrgDelegatesApiResponseActions
   final StatefulActionsOptions<
       ListOrgDelegatesApiResponse,
       ListOrgDelegatesApiResponseBuilder,
-      ListOrgDelegatesApiResponseActions> $options;
+      ListOrgDelegatesApiResponseActions> options$;
 
-  final ActionDispatcher<ListOrgDelegatesApiResponse> $replace;
+  final ActionDispatcher<ListOrgDelegatesApiResponse> replace$;
   final FieldDispatcher<BuiltList<Delegate>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListOrgDelegatesApiResponseActions._(this.$options)
-      : $replace = $options.action<ListOrgDelegatesApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<Delegate>>(
+  _$ListOrgDelegatesApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListOrgDelegatesApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<Delegate>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -215,35 +215,31 @@ class _$ListOrgDelegatesApiResponseActions
       _$ListOrgDelegatesApiResponseActions._(options());
 
   @override
-  ListOrgDelegatesApiResponse get $initial => ListOrgDelegatesApiResponse();
+  ListOrgDelegatesApiResponse get initialState$ =>
+      ListOrgDelegatesApiResponse();
 
   @override
-  ListOrgDelegatesApiResponseBuilder $newBuilder() =>
+  ListOrgDelegatesApiResponseBuilder newBuilder$() =>
       ListOrgDelegatesApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListOrgDelegatesApiResponse);
 }

@@ -22,69 +22,32 @@ class _$ListReservationsForStockApi extends ListReservationsForStockApi {
           ApiResult<ListReservationsForStockApiResponse>>,
       CommandStateBuilder<ApiCommand<ListReservationsForStockApiRequest>,
           ApiResult<ListReservationsForStockApiResponse>>,
-      ListReservationsForStockApi> $options;
+      ListReservationsForStockApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListReservationsForStockApiRequest>,
-          ApiResult<ListReservationsForStockApiResponse>>> $replace;
+          ApiResult<ListReservationsForStockApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListReservationsForStockApiRequest>,
-          ApiResult<ListReservationsForStockApiResponse>,
-          ListReservationsForStockApi,
-          String>> $cancel;
+      Command<ApiCommand<ListReservationsForStockApiRequest>>> execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListReservationsForStockApiRequest>,
-          ApiResult<ListReservationsForStockApiResponse>,
-          ListReservationsForStockApi,
-          Command<ApiCommand<ListReservationsForStockApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListReservationsForStockApiRequest>,
-              ApiResult<ListReservationsForStockApiResponse>,
-              ListReservationsForStockApi,
-              CommandResult<ApiResult<ListReservationsForStockApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListReservationsForStockApiRequest>,
-          ApiResult<ListReservationsForStockApiResponse>,
-          ListReservationsForStockApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListReservationsForStockApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListReservationsForStockApi._(this.$options)
-      : $replace = $options.action<
+  _$ListReservationsForStockApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListReservationsForStockApiRequest>,
                     ApiResult<ListReservationsForStockApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListReservationsForStockApiRequest>,
-                ApiResult<ListReservationsForStockApiResponse>,
-                ListReservationsForStockApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListReservationsForStockApiRequest>,
-                    ApiResult<ListReservationsForStockApiResponse>,
-                    ListReservationsForStockApi,
-                    Command<ApiCommand<ListReservationsForStockApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListReservationsForStockApiRequest>,
-                    ApiResult<ListReservationsForStockApiResponse>,
-                    ListReservationsForStockApi,
-                    CommandResult<
-                        ApiResult<ListReservationsForStockApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListReservationsForStockApiRequest>,
-                ApiResult<ListReservationsForStockApiResponse>,
-                ListReservationsForStockApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListReservationsForStockApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<ListReservationsForStockApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListReservationsForStockApi(
@@ -94,33 +57,26 @@ class _$ListReservationsForStockApi extends ListReservationsForStockApi {
   @override
   CommandState<ApiCommand<ListReservationsForStockApiRequest>,
           ApiResult<ListReservationsForStockApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListReservationsForStockApiRequest>,
           ApiResult<ListReservationsForStockApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListReservationsForStockApiRequest>,
           ApiResult<ListReservationsForStockApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListReservationsForStockApiRequest>,
           ApiResult<ListReservationsForStockApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListReservationsForStockApiRequest)]),
-        FullType(ApiResult, [FullType(ListReservationsForStockApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

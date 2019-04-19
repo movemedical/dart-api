@@ -198,24 +198,24 @@ class _$MessageMessageParticipantActions
   final StatefulActionsOptions<
       MessageMessageParticipant,
       MessageMessageParticipantBuilder,
-      MessageMessageParticipantActions> $options;
+      MessageMessageParticipantActions> options$;
 
-  final ActionDispatcher<MessageMessageParticipant> $replace;
+  final ActionDispatcher<MessageMessageParticipant> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> participantId;
   final FieldDispatcher<bool> read;
 
-  _$MessageMessageParticipantActions._(this.$options)
-      : $replace = $options.action<MessageMessageParticipant>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$MessageMessageParticipantActions._(this.options$)
+      : replace$ = options$.action<MessageMessageParticipant>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        participantId = $options.field<String>(
+        participantId = options$.field<String>(
             'participantId',
             (a) => a?.participantId,
             (s) => s?.participantId,
             (p, b) => p?.participantId = b),
-        read = $options.field<bool>(
+        read = options$.field<bool>(
             'read', (a) => a?.read, (s) => s?.read, (p, b) => p?.read = b),
         super._();
 
@@ -224,36 +224,32 @@ class _$MessageMessageParticipantActions
       _$MessageMessageParticipantActions._(options());
 
   @override
-  MessageMessageParticipant get $initial => MessageMessageParticipant();
+  MessageMessageParticipant get initialState$ => MessageMessageParticipant();
 
   @override
-  MessageMessageParticipantBuilder $newBuilder() =>
+  MessageMessageParticipantBuilder newBuilder$() =>
       MessageMessageParticipantBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.participantId,
         this.read,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    participantId.$reducer(reducer);
-    read.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    participantId.reducer$(reducer);
+    read.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(MessageMessageParticipant);
 }

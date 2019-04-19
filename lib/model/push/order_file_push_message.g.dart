@@ -222,30 +222,30 @@ typedef StatefulActionsOptions<
 
 class _$OrderFilePushMessageActions extends OrderFilePushMessageActions {
   final StatefulActionsOptions<OrderFilePushMessage,
-      OrderFilePushMessageBuilder, OrderFilePushMessageActions> $options;
+      OrderFilePushMessageBuilder, OrderFilePushMessageActions> options$;
 
-  final ActionDispatcher<OrderFilePushMessage> $replace;
+  final ActionDispatcher<OrderFilePushMessage> replace$;
   final FieldDispatcher<String> orderFileId;
   final FieldDispatcher<String> fileId;
   final FieldDispatcher<OrderFilePushMessageFileUpdateType> updateType;
   final FieldDispatcher<double> percentUploadedDecimalForm;
 
-  _$OrderFilePushMessageActions._(this.$options)
-      : $replace = $options.action<OrderFilePushMessage>(
-            '\$replace', (a) => a?.$replace),
-        orderFileId = $options.field<String>(
+  _$OrderFilePushMessageActions._(this.options$)
+      : replace$ = options$.action<OrderFilePushMessage>(
+            'replace\$', (a) => a?.replace$),
+        orderFileId = options$.field<String>(
             'orderFileId',
             (a) => a?.orderFileId,
             (s) => s?.orderFileId,
             (p, b) => p?.orderFileId = b),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        updateType = $options.field<OrderFilePushMessageFileUpdateType>(
+        updateType = options$.field<OrderFilePushMessageFileUpdateType>(
             'updateType',
             (a) => a?.updateType,
             (s) => s?.updateType,
             (p, b) => p?.updateType = b),
-        percentUploadedDecimalForm = $options.field<double>(
+        percentUploadedDecimalForm = options$.field<double>(
             'percentUploadedDecimalForm',
             (a) => a?.percentUploadedDecimalForm,
             (s) => s?.percentUploadedDecimalForm,
@@ -257,16 +257,16 @@ class _$OrderFilePushMessageActions extends OrderFilePushMessageActions {
       _$OrderFilePushMessageActions._(options());
 
   @override
-  OrderFilePushMessage get $initial => OrderFilePushMessage();
+  OrderFilePushMessage get initialState$ => OrderFilePushMessage();
 
   @override
-  OrderFilePushMessageBuilder $newBuilder() => OrderFilePushMessageBuilder();
+  OrderFilePushMessageBuilder newBuilder$() => OrderFilePushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderFileId,
         this.fileId,
         this.updateType,
@@ -274,20 +274,16 @@ class _$OrderFilePushMessageActions extends OrderFilePushMessageActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderFileId.$reducer(reducer);
-    fileId.$reducer(reducer);
-    updateType.$reducer(reducer);
-    percentUploadedDecimalForm.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderFileId.reducer$(reducer);
+    fileId.reducer$(reducer);
+    updateType.reducer$(reducer);
+    percentUploadedDecimalForm.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(OrderFilePushMessage);
 }

@@ -260,36 +260,36 @@ class _$ListOpenBillingsApiOpenBillingActions
   final StatefulActionsOptions<
       ListOpenBillingsApiOpenBilling,
       ListOpenBillingsApiOpenBillingBuilder,
-      ListOpenBillingsApiOpenBillingActions> $options;
+      ListOpenBillingsApiOpenBillingActions> options$;
 
-  final ActionDispatcher<ListOpenBillingsApiOpenBilling> $replace;
+  final ActionDispatcher<ListOpenBillingsApiOpenBilling> replace$;
   final FieldDispatcher<String> name;
   final FieldDispatcher<ListOpenBillingsApiOpenBillingSummaryType> summaryType;
   final FieldDispatcher<ListOpenBillingsApiOpenBillingDataType> dataType;
   final FieldDispatcher<double> doubleValue;
   final FieldDispatcher<int> longValue;
 
-  _$ListOpenBillingsApiOpenBillingActions._(this.$options)
-      : $replace = $options.action<ListOpenBillingsApiOpenBilling>(
-            '\$replace', (a) => a?.$replace),
-        name = $options.field<String>(
+  _$ListOpenBillingsApiOpenBillingActions._(this.options$)
+      : replace$ = options$.action<ListOpenBillingsApiOpenBilling>(
+            'replace\$', (a) => a?.replace$),
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        summaryType = $options.field<ListOpenBillingsApiOpenBillingSummaryType>(
+        summaryType = options$.field<ListOpenBillingsApiOpenBillingSummaryType>(
             'summaryType',
             (a) => a?.summaryType,
             (s) => s?.summaryType,
             (p, b) => p?.summaryType = b),
-        dataType = $options.field<ListOpenBillingsApiOpenBillingDataType>(
+        dataType = options$.field<ListOpenBillingsApiOpenBillingDataType>(
             'dataType',
             (a) => a?.dataType,
             (s) => s?.dataType,
             (p, b) => p?.dataType = b),
-        doubleValue = $options.field<double>(
+        doubleValue = options$.field<double>(
             'doubleValue',
             (a) => a?.doubleValue,
             (s) => s?.doubleValue,
             (p, b) => p?.doubleValue = b),
-        longValue = $options.field<int>('longValue', (a) => a?.longValue,
+        longValue = options$.field<int>('longValue', (a) => a?.longValue,
             (s) => s?.longValue, (p, b) => p?.longValue = b),
         super._();
 
@@ -298,18 +298,18 @@ class _$ListOpenBillingsApiOpenBillingActions
       _$ListOpenBillingsApiOpenBillingActions._(options());
 
   @override
-  ListOpenBillingsApiOpenBilling get $initial =>
+  ListOpenBillingsApiOpenBilling get initialState$ =>
       ListOpenBillingsApiOpenBilling();
 
   @override
-  ListOpenBillingsApiOpenBillingBuilder $newBuilder() =>
+  ListOpenBillingsApiOpenBillingBuilder newBuilder$() =>
       ListOpenBillingsApiOpenBillingBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.name,
         this.summaryType,
         this.dataType,
@@ -318,22 +318,17 @@ class _$ListOpenBillingsApiOpenBillingActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    name.$reducer(reducer);
-    summaryType.$reducer(reducer);
-    dataType.$reducer(reducer);
-    doubleValue.$reducer(reducer);
-    longValue.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    name.reducer$(reducer);
+    summaryType.reducer$(reducer);
+    dataType.reducer$(reducer);
+    doubleValue.reducer$(reducer);
+    longValue.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListOpenBillingsApiOpenBilling);
 }

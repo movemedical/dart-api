@@ -361,9 +361,9 @@ class _$ListAssociationJournalsApiAssociationJournalActions
   final StatefulActionsOptions<
       ListAssociationJournalsApiAssociationJournal,
       ListAssociationJournalsApiAssociationJournalBuilder,
-      ListAssociationJournalsApiAssociationJournalActions> $options;
+      ListAssociationJournalsApiAssociationJournalActions> options$;
 
-  final ActionDispatcher<ListAssociationJournalsApiAssociationJournal> $replace;
+  final ActionDispatcher<ListAssociationJournalsApiAssociationJournal> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> number;
   final FieldDispatcher<DateTime> date;
@@ -374,42 +374,42 @@ class _$ListAssociationJournalsApiAssociationJournalActions
   final FieldDispatcher<StockReferenceType> transactionReferenceType;
   final FieldDispatcher<String> transactionReferenceId;
 
-  _$ListAssociationJournalsApiAssociationJournalActions._(this.$options)
-      : $replace =
-            $options.action<ListAssociationJournalsApiAssociationJournal>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListAssociationJournalsApiAssociationJournalActions._(this.options$)
+      : replace$ =
+            options$.action<ListAssociationJournalsApiAssociationJournal>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        date = $options.field<DateTime>(
+        date = options$.field<DateTime>(
             'date', (a) => a?.date, (s) => s?.date, (p, b) => p?.date = b),
-        stockTransactionType = $options.field<StockTransactionType>(
+        stockTransactionType = options$.field<StockTransactionType>(
             'stockTransactionType',
             (a) => a?.stockTransactionType,
             (s) => s?.stockTransactionType,
             (p, b) => p?.stockTransactionType = b),
-        associationType = $options.field<AssociationType>(
+        associationType = options$.field<AssociationType>(
             'associationType',
             (a) => a?.associationType,
             (s) => s?.associationType,
             (p, b) => p?.associationType = b),
-        associationId = $options.field<String>(
+        associationId = options$.field<String>(
             'associationId',
             (a) => a?.associationId,
             (s) => s?.associationId,
             (p, b) => p?.associationId = b),
-        quantityChange = $options.field<int>(
+        quantityChange = options$.field<int>(
             'quantityChange',
             (a) => a?.quantityChange,
             (s) => s?.quantityChange,
             (p, b) => p?.quantityChange = b),
-        transactionReferenceType = $options.field<StockReferenceType>(
+        transactionReferenceType = options$.field<StockReferenceType>(
             'transactionReferenceType',
             (a) => a?.transactionReferenceType,
             (s) => s?.transactionReferenceType,
             (p, b) => p?.transactionReferenceType = b),
-        transactionReferenceId = $options.field<String>(
+        transactionReferenceId = options$.field<String>(
             'transactionReferenceId',
             (a) => a?.transactionReferenceId,
             (s) => s?.transactionReferenceId,
@@ -421,18 +421,18 @@ class _$ListAssociationJournalsApiAssociationJournalActions
       _$ListAssociationJournalsApiAssociationJournalActions._(options());
 
   @override
-  ListAssociationJournalsApiAssociationJournal get $initial =>
+  ListAssociationJournalsApiAssociationJournal get initialState$ =>
       ListAssociationJournalsApiAssociationJournal();
 
   @override
-  ListAssociationJournalsApiAssociationJournalBuilder $newBuilder() =>
+  ListAssociationJournalsApiAssociationJournalBuilder newBuilder$() =>
       ListAssociationJournalsApiAssociationJournalBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.number,
         this.date,
@@ -445,26 +445,21 @@ class _$ListAssociationJournalsApiAssociationJournalActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    number.$reducer(reducer);
-    date.$reducer(reducer);
-    stockTransactionType.$reducer(reducer);
-    associationType.$reducer(reducer);
-    associationId.$reducer(reducer);
-    quantityChange.$reducer(reducer);
-    transactionReferenceType.$reducer(reducer);
-    transactionReferenceId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    number.reducer$(reducer);
+    date.reducer$(reducer);
+    stockTransactionType.reducer$(reducer);
+    associationType.reducer$(reducer);
+    associationId.reducer$(reducer);
+    quantityChange.reducer$(reducer);
+    transactionReferenceType.reducer$(reducer);
+    transactionReferenceId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListAssociationJournalsApiAssociationJournal);
 }

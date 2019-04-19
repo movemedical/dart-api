@@ -177,17 +177,17 @@ class _$ConfirmPackages2ApiRequestActions
   final StatefulActionsOptions<
       ConfirmPackages2ApiRequest,
       ConfirmPackages2ApiRequestBuilder,
-      ConfirmPackages2ApiRequestActions> $options;
+      ConfirmPackages2ApiRequestActions> options$;
 
-  final ActionDispatcher<ConfirmPackages2ApiRequest> $replace;
+  final ActionDispatcher<ConfirmPackages2ApiRequest> replace$;
   final FieldDispatcher<BuiltList<ConfirmPackages2ApiConfirmRequest>>
       confirmRequests;
 
-  _$ConfirmPackages2ApiRequestActions._(this.$options)
-      : $replace = $options.action<ConfirmPackages2ApiRequest>(
-            '\$replace', (a) => a?.$replace),
+  _$ConfirmPackages2ApiRequestActions._(this.options$)
+      : replace$ = options$.action<ConfirmPackages2ApiRequest>(
+            'replace\$', (a) => a?.replace$),
         confirmRequests =
-            $options.field<BuiltList<ConfirmPackages2ApiConfirmRequest>>(
+            options$.field<BuiltList<ConfirmPackages2ApiConfirmRequest>>(
                 'confirmRequests',
                 (a) => a?.confirmRequests,
                 (s) => s?.confirmRequests,
@@ -199,32 +199,28 @@ class _$ConfirmPackages2ApiRequestActions
       _$ConfirmPackages2ApiRequestActions._(options());
 
   @override
-  ConfirmPackages2ApiRequest get $initial => ConfirmPackages2ApiRequest();
+  ConfirmPackages2ApiRequest get initialState$ => ConfirmPackages2ApiRequest();
 
   @override
-  ConfirmPackages2ApiRequestBuilder $newBuilder() =>
+  ConfirmPackages2ApiRequestBuilder newBuilder$() =>
       ConfirmPackages2ApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.confirmRequests,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    confirmRequests.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    confirmRequests.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ConfirmPackages2ApiRequest);
 }

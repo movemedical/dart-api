@@ -155,15 +155,15 @@ class _$DeactivateMfaSmsApiRequestActions
   final StatefulActionsOptions<
       DeactivateMfaSmsApiRequest,
       DeactivateMfaSmsApiRequestBuilder,
-      DeactivateMfaSmsApiRequestActions> $options;
+      DeactivateMfaSmsApiRequestActions> options$;
 
-  final ActionDispatcher<DeactivateMfaSmsApiRequest> $replace;
+  final ActionDispatcher<DeactivateMfaSmsApiRequest> replace$;
   final FieldDispatcher<String> mfaSmsId;
 
-  _$DeactivateMfaSmsApiRequestActions._(this.$options)
-      : $replace = $options.action<DeactivateMfaSmsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        mfaSmsId = $options.field<String>('mfaSmsId', (a) => a?.mfaSmsId,
+  _$DeactivateMfaSmsApiRequestActions._(this.options$)
+      : replace$ = options$.action<DeactivateMfaSmsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        mfaSmsId = options$.field<String>('mfaSmsId', (a) => a?.mfaSmsId,
             (s) => s?.mfaSmsId, (p, b) => p?.mfaSmsId = b),
         super._();
 
@@ -172,32 +172,28 @@ class _$DeactivateMfaSmsApiRequestActions
       _$DeactivateMfaSmsApiRequestActions._(options());
 
   @override
-  DeactivateMfaSmsApiRequest get $initial => DeactivateMfaSmsApiRequest();
+  DeactivateMfaSmsApiRequest get initialState$ => DeactivateMfaSmsApiRequest();
 
   @override
-  DeactivateMfaSmsApiRequestBuilder $newBuilder() =>
+  DeactivateMfaSmsApiRequestBuilder newBuilder$() =>
       DeactivateMfaSmsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.mfaSmsId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    mfaSmsId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    mfaSmsId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(DeactivateMfaSmsApiRequest);
 }

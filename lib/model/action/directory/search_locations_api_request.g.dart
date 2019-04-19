@@ -463,9 +463,9 @@ class _$SearchLocationsApiRequestActions
   final StatefulActionsOptions<
       SearchLocationsApiRequest,
       SearchLocationsApiRequestBuilder,
-      SearchLocationsApiRequestActions> $options;
+      SearchLocationsApiRequestActions> options$;
 
-  final ActionDispatcher<SearchLocationsApiRequest> $replace;
+  final ActionDispatcher<SearchLocationsApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> search;
   final FieldDispatcher<BuiltList<String>> bizUnitIds;
@@ -479,53 +479,53 @@ class _$SearchLocationsApiRequestActions
   final FieldDispatcher<double> latitude;
   final FieldDispatcher<double> longitude;
 
-  _$SearchLocationsApiRequestActions._(this.$options)
-      : $replace = $options.action<SearchLocationsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$SearchLocationsApiRequestActions._(this.options$)
+      : replace$ = options$.action<SearchLocationsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        bizUnitIds = $options.field<BuiltList<String>>(
+        bizUnitIds = options$.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        locationTypes = $options.field<BuiltList<LocationType>>(
+        locationTypes = options$.field<BuiltList<LocationType>>(
             'locationTypes',
             (a) => a?.locationTypes,
             (s) => s?.locationTypes,
             (p, b) => p?.locationTypes = b),
-        facilityTypes = $options.field<BuiltList<FacilityType>>(
+        facilityTypes = options$.field<BuiltList<FacilityType>>(
             'facilityTypes',
             (a) => a?.facilityTypes,
             (s) => s?.facilityTypes,
             (p, b) => p?.facilityTypes = b),
-        scopeToLocationVizibility = $options.field<bool>(
+        scopeToLocationVizibility = options$.field<bool>(
             'scopeToLocationVizibility',
             (a) => a?.scopeToLocationVizibility,
             (s) => s?.scopeToLocationVizibility,
             (p, b) => p?.scopeToLocationVizibility = b),
-        locationIds = $options.field<BuiltList<String>>(
+        locationIds = options$.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        skipCache = $options.field<bool>('skipCache', (a) => a?.skipCache,
+        skipCache = options$.field<bool>('skipCache', (a) => a?.skipCache,
             (s) => s?.skipCache, (p, b) => p?.skipCache = b),
-        purpose = $options.field<SearchLocationsApiSearchLocationsPurpose>(
+        purpose = options$.field<SearchLocationsApiSearchLocationsPurpose>(
             'purpose',
             (a) => a?.purpose,
             (s) => s?.purpose,
             (p, b) => p?.purpose = b),
-        latitude = $options.field<double>('latitude', (a) => a?.latitude,
+        latitude = options$.field<double>('latitude', (a) => a?.latitude,
             (s) => s?.latitude, (p, b) => p?.latitude = b),
-        longitude = $options.field<double>('longitude', (a) => a?.longitude,
+        longitude = options$.field<double>('longitude', (a) => a?.longitude,
             (s) => s?.longitude, (p, b) => p?.longitude = b),
         super._();
 
@@ -534,17 +534,17 @@ class _$SearchLocationsApiRequestActions
       _$SearchLocationsApiRequestActions._(options());
 
   @override
-  SearchLocationsApiRequest get $initial => SearchLocationsApiRequest();
+  SearchLocationsApiRequest get initialState$ => SearchLocationsApiRequest();
 
   @override
-  SearchLocationsApiRequestBuilder $newBuilder() =>
+  SearchLocationsApiRequestBuilder newBuilder$() =>
       SearchLocationsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.search,
         this.bizUnitIds,
@@ -560,28 +560,24 @@ class _$SearchLocationsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    search.$reducer(reducer);
-    bizUnitIds.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    locationTypes.$reducer(reducer);
-    facilityTypes.$reducer(reducer);
-    scopeToLocationVizibility.$reducer(reducer);
-    locationIds.$reducer(reducer);
-    skipCache.$reducer(reducer);
-    purpose.$reducer(reducer);
-    latitude.$reducer(reducer);
-    longitude.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    search.reducer$(reducer);
+    bizUnitIds.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    locationTypes.reducer$(reducer);
+    facilityTypes.reducer$(reducer);
+    scopeToLocationVizibility.reducer$(reducer);
+    locationIds.reducer$(reducer);
+    skipCache.reducer$(reducer);
+    purpose.reducer$(reducer);
+    latitude.reducer$(reducer);
+    longitude.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SearchLocationsApiRequest);
 }

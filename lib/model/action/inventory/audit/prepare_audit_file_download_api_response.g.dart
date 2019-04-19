@@ -160,15 +160,15 @@ class _$PrepareAuditFileDownloadApiResponseActions
   final StatefulActionsOptions<
       PrepareAuditFileDownloadApiResponse,
       PrepareAuditFileDownloadApiResponseBuilder,
-      PrepareAuditFileDownloadApiResponseActions> $options;
+      PrepareAuditFileDownloadApiResponseActions> options$;
 
-  final ActionDispatcher<PrepareAuditFileDownloadApiResponse> $replace;
+  final ActionDispatcher<PrepareAuditFileDownloadApiResponse> replace$;
   final FieldDispatcher<String> url;
 
-  _$PrepareAuditFileDownloadApiResponseActions._(this.$options)
-      : $replace = $options.action<PrepareAuditFileDownloadApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        url = $options.field<String>(
+  _$PrepareAuditFileDownloadApiResponseActions._(this.options$)
+      : replace$ = options$.action<PrepareAuditFileDownloadApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        url = options$.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
         super._();
 
@@ -177,34 +177,29 @@ class _$PrepareAuditFileDownloadApiResponseActions
       _$PrepareAuditFileDownloadApiResponseActions._(options());
 
   @override
-  PrepareAuditFileDownloadApiResponse get $initial =>
+  PrepareAuditFileDownloadApiResponse get initialState$ =>
       PrepareAuditFileDownloadApiResponse();
 
   @override
-  PrepareAuditFileDownloadApiResponseBuilder $newBuilder() =>
+  PrepareAuditFileDownloadApiResponseBuilder newBuilder$() =>
       PrepareAuditFileDownloadApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.url,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    url.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    url.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(PrepareAuditFileDownloadApiResponse);
 }

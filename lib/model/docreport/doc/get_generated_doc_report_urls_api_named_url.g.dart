@@ -180,18 +180,18 @@ class _$GetGeneratedDocReportUrlsApiNamedUrlActions
   final StatefulActionsOptions<
       GetGeneratedDocReportUrlsApiNamedUrl,
       GetGeneratedDocReportUrlsApiNamedUrlBuilder,
-      GetGeneratedDocReportUrlsApiNamedUrlActions> $options;
+      GetGeneratedDocReportUrlsApiNamedUrlActions> options$;
 
-  final ActionDispatcher<GetGeneratedDocReportUrlsApiNamedUrl> $replace;
+  final ActionDispatcher<GetGeneratedDocReportUrlsApiNamedUrl> replace$;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> url;
 
-  _$GetGeneratedDocReportUrlsApiNamedUrlActions._(this.$options)
-      : $replace = $options.action<GetGeneratedDocReportUrlsApiNamedUrl>(
-            '\$replace', (a) => a?.$replace),
-        name = $options.field<String>(
+  _$GetGeneratedDocReportUrlsApiNamedUrlActions._(this.options$)
+      : replace$ = options$.action<GetGeneratedDocReportUrlsApiNamedUrl>(
+            'replace\$', (a) => a?.replace$),
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        url = $options.field<String>(
+        url = options$.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
         super._();
 
@@ -200,36 +200,31 @@ class _$GetGeneratedDocReportUrlsApiNamedUrlActions
       _$GetGeneratedDocReportUrlsApiNamedUrlActions._(options());
 
   @override
-  GetGeneratedDocReportUrlsApiNamedUrl get $initial =>
+  GetGeneratedDocReportUrlsApiNamedUrl get initialState$ =>
       GetGeneratedDocReportUrlsApiNamedUrl();
 
   @override
-  GetGeneratedDocReportUrlsApiNamedUrlBuilder $newBuilder() =>
+  GetGeneratedDocReportUrlsApiNamedUrlBuilder newBuilder$() =>
       GetGeneratedDocReportUrlsApiNamedUrlBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.name,
         this.url,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    name.$reducer(reducer);
-    url.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    name.reducer$(reducer);
+    url.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetGeneratedDocReportUrlsApiNamedUrl);
 }

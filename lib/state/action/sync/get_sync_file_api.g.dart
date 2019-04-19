@@ -22,64 +22,30 @@ class _$GetSyncFileApi extends GetSyncFileApi {
           ApiResult<GetSyncFileApiResponse>>,
       CommandStateBuilder<ApiCommand<GetSyncFileApiRequest>,
           ApiResult<GetSyncFileApiResponse>>,
-      GetSyncFileApi> $options;
+      GetSyncFileApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetSyncFileApiRequest>,
-          ApiResult<GetSyncFileApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetSyncFileApiRequest>,
-          ApiResult<GetSyncFileApiResponse>, GetSyncFileApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetSyncFileApiRequest>,
-          ApiResult<GetSyncFileApiResponse>,
-          GetSyncFileApi,
-          Command<ApiCommand<GetSyncFileApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetSyncFileApiRequest>,
-          ApiResult<GetSyncFileApiResponse>,
-          GetSyncFileApi,
-          CommandResult<ApiResult<GetSyncFileApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetSyncFileApiRequest>,
-          ApiResult<GetSyncFileApiResponse>,
-          GetSyncFileApi,
-          CommandProgress>> $progress;
+          ApiResult<GetSyncFileApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetSyncFileApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<GetSyncFileApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetSyncFileApi._(this.$options)
-      : $replace = $options.action<
+  _$GetSyncFileApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetSyncFileApiRequest>,
                     ApiResult<GetSyncFileApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetSyncFileApiRequest>,
-                ApiResult<GetSyncFileApiResponse>,
-                GetSyncFileApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetSyncFileApiRequest>,
-                    ApiResult<GetSyncFileApiResponse>,
-                    GetSyncFileApi,
-                    Command<ApiCommand<GetSyncFileApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetSyncFileApiRequest>,
-                    ApiResult<GetSyncFileApiResponse>,
-                    GetSyncFileApi,
-                    CommandResult<ApiResult<GetSyncFileApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetSyncFileApiRequest>,
-                ApiResult<GetSyncFileApiResponse>,
-                GetSyncFileApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<GetSyncFileApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<GetSyncFileApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetSyncFileApi(GetSyncFileApiOptions options) =>
@@ -88,31 +54,24 @@ class _$GetSyncFileApi extends GetSyncFileApi {
   @override
   CommandState<ApiCommand<GetSyncFileApiRequest>,
           ApiResult<GetSyncFileApiResponse>>
-      get $initial => CommandState<ApiCommand<GetSyncFileApiRequest>,
+      get initialState$ => CommandState<ApiCommand<GetSyncFileApiRequest>,
           ApiResult<GetSyncFileApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetSyncFileApiRequest>,
           ApiResult<GetSyncFileApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<GetSyncFileApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<GetSyncFileApiRequest>,
           ApiResult<GetSyncFileApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetSyncFileApiRequest)]),
-        FullType(ApiResult, [FullType(GetSyncFileApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

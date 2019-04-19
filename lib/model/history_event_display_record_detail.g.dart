@@ -204,24 +204,24 @@ class _$HistoryEventDisplayRecordDetailActions
   final StatefulActionsOptions<
       HistoryEventDisplayRecordDetail,
       HistoryEventDisplayRecordDetailBuilder,
-      HistoryEventDisplayRecordDetailActions> $options;
+      HistoryEventDisplayRecordDetailActions> options$;
 
-  final ActionDispatcher<HistoryEventDisplayRecordDetail> $replace;
+  final ActionDispatcher<HistoryEventDisplayRecordDetail> replace$;
   final FieldDispatcher<String> fieldName;
   final FieldDispatcher<String> valueBefore;
   final FieldDispatcher<String> valueAfter;
 
-  _$HistoryEventDisplayRecordDetailActions._(this.$options)
-      : $replace = $options.action<HistoryEventDisplayRecordDetail>(
-            '\$replace', (a) => a?.$replace),
-        fieldName = $options.field<String>('fieldName', (a) => a?.fieldName,
+  _$HistoryEventDisplayRecordDetailActions._(this.options$)
+      : replace$ = options$.action<HistoryEventDisplayRecordDetail>(
+            'replace\$', (a) => a?.replace$),
+        fieldName = options$.field<String>('fieldName', (a) => a?.fieldName,
             (s) => s?.fieldName, (p, b) => p?.fieldName = b),
-        valueBefore = $options.field<String>(
+        valueBefore = options$.field<String>(
             'valueBefore',
             (a) => a?.valueBefore,
             (s) => s?.valueBefore,
             (p, b) => p?.valueBefore = b),
-        valueAfter = $options.field<String>('valueAfter', (a) => a?.valueAfter,
+        valueAfter = options$.field<String>('valueAfter', (a) => a?.valueAfter,
             (s) => s?.valueAfter, (p, b) => p?.valueAfter = b),
         super._();
 
@@ -230,38 +230,33 @@ class _$HistoryEventDisplayRecordDetailActions
       _$HistoryEventDisplayRecordDetailActions._(options());
 
   @override
-  HistoryEventDisplayRecordDetail get $initial =>
+  HistoryEventDisplayRecordDetail get initialState$ =>
       HistoryEventDisplayRecordDetail();
 
   @override
-  HistoryEventDisplayRecordDetailBuilder $newBuilder() =>
+  HistoryEventDisplayRecordDetailBuilder newBuilder$() =>
       HistoryEventDisplayRecordDetailBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.fieldName,
         this.valueBefore,
         this.valueAfter,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    fieldName.$reducer(reducer);
-    valueBefore.$reducer(reducer);
-    valueAfter.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    fieldName.reducer$(reducer);
+    valueBefore.reducer$(reducer);
+    valueAfter.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(HistoryEventDisplayRecordDetail);
 }

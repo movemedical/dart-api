@@ -176,15 +176,15 @@ class _$GetOrgUnitChildrenApiResponseActions
   final StatefulActionsOptions<
       GetOrgUnitChildrenApiResponse,
       GetOrgUnitChildrenApiResponseBuilder,
-      GetOrgUnitChildrenApiResponseActions> $options;
+      GetOrgUnitChildrenApiResponseActions> options$;
 
-  final ActionDispatcher<GetOrgUnitChildrenApiResponse> $replace;
+  final ActionDispatcher<GetOrgUnitChildrenApiResponse> replace$;
   final FieldDispatcher<BuiltList<GetOrgUnitChildrenApiOrgUnitDetail>> data;
 
-  _$GetOrgUnitChildrenApiResponseActions._(this.$options)
-      : $replace = $options.action<GetOrgUnitChildrenApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<GetOrgUnitChildrenApiOrgUnitDetail>>(
+  _$GetOrgUnitChildrenApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetOrgUnitChildrenApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<GetOrgUnitChildrenApiOrgUnitDetail>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
         super._();
 
@@ -193,33 +193,29 @@ class _$GetOrgUnitChildrenApiResponseActions
       _$GetOrgUnitChildrenApiResponseActions._(options());
 
   @override
-  GetOrgUnitChildrenApiResponse get $initial => GetOrgUnitChildrenApiResponse();
+  GetOrgUnitChildrenApiResponse get initialState$ =>
+      GetOrgUnitChildrenApiResponse();
 
   @override
-  GetOrgUnitChildrenApiResponseBuilder $newBuilder() =>
+  GetOrgUnitChildrenApiResponseBuilder newBuilder$() =>
       GetOrgUnitChildrenApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetOrgUnitChildrenApiResponse);
 }

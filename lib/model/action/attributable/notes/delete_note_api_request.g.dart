@@ -148,15 +148,15 @@ typedef StatefulActionsOptions<
 
 class _$DeleteNoteApiRequestActions extends DeleteNoteApiRequestActions {
   final StatefulActionsOptions<DeleteNoteApiRequest,
-      DeleteNoteApiRequestBuilder, DeleteNoteApiRequestActions> $options;
+      DeleteNoteApiRequestBuilder, DeleteNoteApiRequestActions> options$;
 
-  final ActionDispatcher<DeleteNoteApiRequest> $replace;
+  final ActionDispatcher<DeleteNoteApiRequest> replace$;
   final FieldDispatcher<String> noteId;
 
-  _$DeleteNoteApiRequestActions._(this.$options)
-      : $replace = $options.action<DeleteNoteApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        noteId = $options.field<String>('noteId', (a) => a?.noteId,
+  _$DeleteNoteApiRequestActions._(this.options$)
+      : replace$ = options$.action<DeleteNoteApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        noteId = options$.field<String>('noteId', (a) => a?.noteId,
             (s) => s?.noteId, (p, b) => p?.noteId = b),
         super._();
 
@@ -165,31 +165,27 @@ class _$DeleteNoteApiRequestActions extends DeleteNoteApiRequestActions {
       _$DeleteNoteApiRequestActions._(options());
 
   @override
-  DeleteNoteApiRequest get $initial => DeleteNoteApiRequest();
+  DeleteNoteApiRequest get initialState$ => DeleteNoteApiRequest();
 
   @override
-  DeleteNoteApiRequestBuilder $newBuilder() => DeleteNoteApiRequestBuilder();
+  DeleteNoteApiRequestBuilder newBuilder$() => DeleteNoteApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.noteId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    noteId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    noteId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(DeleteNoteApiRequest);
 }

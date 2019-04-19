@@ -22,67 +22,32 @@ class _$CreateHoldReasonApi extends CreateHoldReasonApi {
           ApiResult<CreateHoldReasonApiResponse>>,
       CommandStateBuilder<ApiCommand<CreateHoldReasonApiRequest>,
           ApiResult<CreateHoldReasonApiResponse>>,
-      CreateHoldReasonApi> $options;
+      CreateHoldReasonApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateHoldReasonApiRequest>,
-          ApiResult<CreateHoldReasonApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateHoldReasonApiRequest>,
-          ApiResult<CreateHoldReasonApiResponse>,
-          CreateHoldReasonApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateHoldReasonApiRequest>,
-          ApiResult<CreateHoldReasonApiResponse>,
-          CreateHoldReasonApi,
-          Command<ApiCommand<CreateHoldReasonApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateHoldReasonApiRequest>,
-          ApiResult<CreateHoldReasonApiResponse>,
-          CreateHoldReasonApi,
-          CommandResult<ApiResult<CreateHoldReasonApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateHoldReasonApiRequest>,
-          ApiResult<CreateHoldReasonApiResponse>,
-          CreateHoldReasonApi,
-          CommandProgress>> $progress;
+          ApiResult<CreateHoldReasonApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<CreateHoldReasonApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<CreateHoldReasonApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CreateHoldReasonApi._(this.$options)
-      : $replace = $options.action<
+  _$CreateHoldReasonApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<CreateHoldReasonApiRequest>,
                     ApiResult<CreateHoldReasonApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CreateHoldReasonApiRequest>,
-                ApiResult<CreateHoldReasonApiResponse>,
-                CreateHoldReasonApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateHoldReasonApiRequest>,
-                    ApiResult<CreateHoldReasonApiResponse>,
-                    CreateHoldReasonApi,
-                    Command<ApiCommand<CreateHoldReasonApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateHoldReasonApiRequest>,
-                    ApiResult<CreateHoldReasonApiResponse>,
-                    CreateHoldReasonApi,
-                    CommandResult<ApiResult<CreateHoldReasonApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CreateHoldReasonApiRequest>,
-                ApiResult<CreateHoldReasonApiResponse>,
-                CreateHoldReasonApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<CreateHoldReasonApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<CreateHoldReasonApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CreateHoldReasonApi(CreateHoldReasonApiOptions options) =>
@@ -91,32 +56,25 @@ class _$CreateHoldReasonApi extends CreateHoldReasonApi {
   @override
   CommandState<ApiCommand<CreateHoldReasonApiRequest>,
           ApiResult<CreateHoldReasonApiResponse>>
-      get $initial => CommandState<ApiCommand<CreateHoldReasonApiRequest>,
+      get initialState$ => CommandState<ApiCommand<CreateHoldReasonApiRequest>,
           ApiResult<CreateHoldReasonApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateHoldReasonApiRequest>,
           ApiResult<CreateHoldReasonApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<CreateHoldReasonApiRequest>,
           ApiResult<CreateHoldReasonApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CreateHoldReasonApiRequest)]),
-        FullType(ApiResult, [FullType(CreateHoldReasonApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

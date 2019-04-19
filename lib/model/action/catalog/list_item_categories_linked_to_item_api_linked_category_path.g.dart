@@ -241,31 +241,31 @@ class _$ListItemCategoriesLinkedToItemApiLinkedCategoryPathActions
   final StatefulActionsOptions<
       ListItemCategoriesLinkedToItemApiLinkedCategoryPath,
       ListItemCategoriesLinkedToItemApiLinkedCategoryPathBuilder,
-      ListItemCategoriesLinkedToItemApiLinkedCategoryPathActions> $options;
+      ListItemCategoriesLinkedToItemApiLinkedCategoryPathActions> options$;
 
   final ActionDispatcher<ListItemCategoriesLinkedToItemApiLinkedCategoryPath>
-      $replace;
+      replace$;
   final FieldDispatcher<String> itemCategoryId;
   final FieldDispatcher<String> itemCategoryName;
   final FieldDispatcher<ListItemCategoriesLinkedToItemApiLinkedCategoryPath>
       nextPath;
 
-  _$ListItemCategoriesLinkedToItemApiLinkedCategoryPathActions._(this.$options)
-      : $replace = $options
+  _$ListItemCategoriesLinkedToItemApiLinkedCategoryPathActions._(this.options$)
+      : replace$ = options$
             .action<ListItemCategoriesLinkedToItemApiLinkedCategoryPath>(
-                '\$replace', (a) => a?.$replace),
-        itemCategoryId = $options.field<String>(
+                'replace\$', (a) => a?.replace$),
+        itemCategoryId = options$.field<String>(
             'itemCategoryId',
             (a) => a?.itemCategoryId,
             (s) => s?.itemCategoryId,
             (p, b) => p?.itemCategoryId = b),
-        itemCategoryName = $options.field<String>(
+        itemCategoryName = options$.field<String>(
             'itemCategoryName',
             (a) => a?.itemCategoryName,
             (s) => s?.itemCategoryName,
             (p, b) => p?.itemCategoryName = b),
         nextPath =
-            $options.field<ListItemCategoriesLinkedToItemApiLinkedCategoryPath>(
+            options$.field<ListItemCategoriesLinkedToItemApiLinkedCategoryPath>(
                 'nextPath',
                 (a) => a?.nextPath,
                 (s) => s?.nextPath,
@@ -278,38 +278,33 @@ class _$ListItemCategoriesLinkedToItemApiLinkedCategoryPathActions
       _$ListItemCategoriesLinkedToItemApiLinkedCategoryPathActions._(options());
 
   @override
-  ListItemCategoriesLinkedToItemApiLinkedCategoryPath get $initial =>
+  ListItemCategoriesLinkedToItemApiLinkedCategoryPath get initialState$ =>
       ListItemCategoriesLinkedToItemApiLinkedCategoryPath();
 
   @override
-  ListItemCategoriesLinkedToItemApiLinkedCategoryPathBuilder $newBuilder() =>
+  ListItemCategoriesLinkedToItemApiLinkedCategoryPathBuilder newBuilder$() =>
       ListItemCategoriesLinkedToItemApiLinkedCategoryPathBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemCategoryId,
         this.itemCategoryName,
         this.nextPath,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemCategoryId.$reducer(reducer);
-    itemCategoryName.$reducer(reducer);
-    nextPath.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemCategoryId.reducer$(reducer);
+    itemCategoryName.reducer$(reducer);
+    nextPath.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(ListItemCategoriesLinkedToItemApiLinkedCategoryPath);
 }

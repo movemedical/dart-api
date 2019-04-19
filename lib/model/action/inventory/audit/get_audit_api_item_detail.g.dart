@@ -244,36 +244,36 @@ typedef StatefulActionsOptions<
 
 class _$GetAuditApiItemDetailActions extends GetAuditApiItemDetailActions {
   final StatefulActionsOptions<GetAuditApiItemDetail,
-      GetAuditApiItemDetailBuilder, GetAuditApiItemDetailActions> $options;
+      GetAuditApiItemDetailBuilder, GetAuditApiItemDetailActions> options$;
 
-  final ActionDispatcher<GetAuditApiItemDetail> $replace;
+  final ActionDispatcher<GetAuditApiItemDetail> replace$;
   final FieldDispatcher<int> expectedItem;
   final FieldDispatcher<int> notCountedItem;
   final FieldDispatcher<int> shortageItem;
   final FieldDispatcher<int> overageItem;
   final FieldDispatcher<int> matchedItem;
 
-  _$GetAuditApiItemDetailActions._(this.$options)
-      : $replace = $options.action<GetAuditApiItemDetail>(
-            '\$replace', (a) => a?.$replace),
-        expectedItem = $options.field<int>(
+  _$GetAuditApiItemDetailActions._(this.options$)
+      : replace$ = options$.action<GetAuditApiItemDetail>(
+            'replace\$', (a) => a?.replace$),
+        expectedItem = options$.field<int>(
             'expectedItem',
             (a) => a?.expectedItem,
             (s) => s?.expectedItem,
             (p, b) => p?.expectedItem = b),
-        notCountedItem = $options.field<int>(
+        notCountedItem = options$.field<int>(
             'notCountedItem',
             (a) => a?.notCountedItem,
             (s) => s?.notCountedItem,
             (p, b) => p?.notCountedItem = b),
-        shortageItem = $options.field<int>(
+        shortageItem = options$.field<int>(
             'shortageItem',
             (a) => a?.shortageItem,
             (s) => s?.shortageItem,
             (p, b) => p?.shortageItem = b),
-        overageItem = $options.field<int>('overageItem', (a) => a?.overageItem,
+        overageItem = options$.field<int>('overageItem', (a) => a?.overageItem,
             (s) => s?.overageItem, (p, b) => p?.overageItem = b),
-        matchedItem = $options.field<int>('matchedItem', (a) => a?.matchedItem,
+        matchedItem = options$.field<int>('matchedItem', (a) => a?.matchedItem,
             (s) => s?.matchedItem, (p, b) => p?.matchedItem = b),
         super._();
 
@@ -282,16 +282,16 @@ class _$GetAuditApiItemDetailActions extends GetAuditApiItemDetailActions {
       _$GetAuditApiItemDetailActions._(options());
 
   @override
-  GetAuditApiItemDetail get $initial => GetAuditApiItemDetail();
+  GetAuditApiItemDetail get initialState$ => GetAuditApiItemDetail();
 
   @override
-  GetAuditApiItemDetailBuilder $newBuilder() => GetAuditApiItemDetailBuilder();
+  GetAuditApiItemDetailBuilder newBuilder$() => GetAuditApiItemDetailBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.expectedItem,
         this.notCountedItem,
         this.shortageItem,
@@ -300,21 +300,17 @@ class _$GetAuditApiItemDetailActions extends GetAuditApiItemDetailActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    expectedItem.$reducer(reducer);
-    notCountedItem.$reducer(reducer);
-    shortageItem.$reducer(reducer);
-    overageItem.$reducer(reducer);
-    matchedItem.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    expectedItem.reducer$(reducer);
+    notCountedItem.reducer$(reducer);
+    shortageItem.reducer$(reducer);
+    overageItem.reducer$(reducer);
+    matchedItem.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetAuditApiItemDetail);
 }

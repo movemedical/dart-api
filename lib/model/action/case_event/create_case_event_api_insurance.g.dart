@@ -318,9 +318,9 @@ class _$CreateCaseEventApiInsuranceActions
   final StatefulActionsOptions<
       CreateCaseEventApiInsurance,
       CreateCaseEventApiInsuranceBuilder,
-      CreateCaseEventApiInsuranceActions> $options;
+      CreateCaseEventApiInsuranceActions> options$;
 
-  final ActionDispatcher<CreateCaseEventApiInsurance> $replace;
+  final ActionDispatcher<CreateCaseEventApiInsurance> replace$;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> policyNumber;
   final FieldDispatcher<String> groupNumber;
@@ -329,22 +329,22 @@ class _$CreateCaseEventApiInsuranceActions
   final FieldDispatcher<String> subscriberRelation;
   final FieldDispatcher<DateTime> subscriberDateOfBirth;
 
-  _$CreateCaseEventApiInsuranceActions._(this.$options)
-      : $replace = $options.action<CreateCaseEventApiInsurance>(
-            '\$replace', (a) => a?.$replace),
-        name = $options.field<String>(
+  _$CreateCaseEventApiInsuranceActions._(this.options$)
+      : replace$ = options$.action<CreateCaseEventApiInsurance>(
+            'replace\$', (a) => a?.replace$),
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        policyNumber = $options.field<String>(
+        policyNumber = options$.field<String>(
             'policyNumber',
             (a) => a?.policyNumber,
             (s) => s?.policyNumber,
             (p, b) => p?.policyNumber = b),
-        groupNumber = $options.field<String>(
+        groupNumber = options$.field<String>(
             'groupNumber',
             (a) => a?.groupNumber,
             (s) => s?.groupNumber,
             (p, b) => p?.groupNumber = b),
-        phoneNumber = PhoneNumberActions(() => $options
+        phoneNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'phoneNumber',
                 (a) => a.phoneNumber,
@@ -352,18 +352,18 @@ class _$CreateCaseEventApiInsuranceActions
                 (b) => b?.phoneNumber,
                 (parent, builder) => parent?.phoneNumber = builder)),
         subscriberName = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'subscriberName',
                 (a) => a.subscriberName,
                 (s) => s?.subscriberName,
                 (b) => b?.subscriberName,
                 (parent, builder) => parent?.subscriberName = builder)),
-        subscriberRelation = $options.field<String>(
+        subscriberRelation = options$.field<String>(
             'subscriberRelation',
             (a) => a?.subscriberRelation,
             (s) => s?.subscriberRelation,
             (p, b) => p?.subscriberRelation = b),
-        subscriberDateOfBirth = $options.field<DateTime>(
+        subscriberDateOfBirth = options$.field<DateTime>(
             'subscriberDateOfBirth',
             (a) => a?.subscriberDateOfBirth,
             (s) => s?.subscriberDateOfBirth,
@@ -375,24 +375,25 @@ class _$CreateCaseEventApiInsuranceActions
       _$CreateCaseEventApiInsuranceActions._(options());
 
   @override
-  CreateCaseEventApiInsurance get $initial => CreateCaseEventApiInsurance();
+  CreateCaseEventApiInsurance get initialState$ =>
+      CreateCaseEventApiInsurance();
 
   @override
-  CreateCaseEventApiInsuranceBuilder $newBuilder() =>
+  CreateCaseEventApiInsuranceBuilder newBuilder$() =>
       CreateCaseEventApiInsuranceBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.phoneNumber,
         this.subscriberName,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.name,
         this.policyNumber,
         this.groupNumber,
@@ -401,26 +402,21 @@ class _$CreateCaseEventApiInsuranceActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    name.$reducer(reducer);
-    policyNumber.$reducer(reducer);
-    groupNumber.$reducer(reducer);
-    phoneNumber.$reducer(reducer);
-    subscriberName.$reducer(reducer);
-    subscriberRelation.$reducer(reducer);
-    subscriberDateOfBirth.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    name.reducer$(reducer);
+    policyNumber.reducer$(reducer);
+    groupNumber.reducer$(reducer);
+    phoneNumber.reducer$(reducer);
+    subscriberName.reducer$(reducer);
+    subscriberRelation.reducer$(reducer);
+    subscriberDateOfBirth.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    phoneNumber.$middleware(middleware);
-    subscriberName.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    phoneNumber.middleware$(middleware);
+    subscriberName.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateCaseEventApiInsurance);
 }

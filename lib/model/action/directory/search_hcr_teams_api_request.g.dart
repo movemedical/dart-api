@@ -447,9 +447,9 @@ class _$SearchHcrTeamsApiRequestActions
   final StatefulActionsOptions<
       SearchHcrTeamsApiRequest,
       SearchHcrTeamsApiRequestBuilder,
-      SearchHcrTeamsApiRequestActions> $options;
+      SearchHcrTeamsApiRequestActions> options$;
 
-  final ActionDispatcher<SearchHcrTeamsApiRequest> $replace;
+  final ActionDispatcher<SearchHcrTeamsApiRequest> replace$;
   final FieldDispatcher<String> search;
   final FieldDispatcher<BuiltList<String>> bizUnitIds;
   final FieldDispatcher<BuiltList<String>> salesOuIds;
@@ -462,51 +462,51 @@ class _$SearchHcrTeamsApiRequestActions
   final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<bool> withSalesOU;
 
-  _$SearchHcrTeamsApiRequestActions._(this.$options)
-      : $replace = $options.action<SearchHcrTeamsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$SearchHcrTeamsApiRequestActions._(this.options$)
+      : replace$ = options$.action<SearchHcrTeamsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        bizUnitIds = $options.field<BuiltList<String>>(
+        bizUnitIds = options$.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        salesOuIds = $options.field<BuiltList<String>>(
+        salesOuIds = options$.field<BuiltList<String>>(
             'salesOuIds',
             (a) => a?.salesOuIds,
             (s) => s?.salesOuIds,
             (p, b) => p?.salesOuIds = b),
-        hcrIds = $options.field<BuiltList<String>>('hcrIds', (a) => a?.hcrIds,
+        hcrIds = options$.field<BuiltList<String>>('hcrIds', (a) => a?.hcrIds,
             (s) => s?.hcrIds, (p, b) => p?.hcrIds = b),
-        teamIds = $options.field<BuiltList<String>>('teamIds',
+        teamIds = options$.field<BuiltList<String>>('teamIds',
             (a) => a?.teamIds, (s) => s?.teamIds, (p, b) => p?.teamIds = b),
-        facilityIds = $options.field<BuiltList<String>>(
+        facilityIds = options$.field<BuiltList<String>>(
             'facilityIds',
             (a) => a?.facilityIds,
             (s) => s?.facilityIds,
             (p, b) => p?.facilityIds = b),
-        physicianIds = $options.field<BuiltList<String>>(
+        physicianIds = options$.field<BuiltList<String>>(
             'physicianIds',
             (a) => a?.physicianIds,
             (s) => s?.physicianIds,
             (p, b) => p?.physicianIds = b),
-        procedureIds = $options.field<BuiltList<String>>(
+        procedureIds = options$.field<BuiltList<String>>(
             'procedureIds',
             (a) => a?.procedureIds,
             (s) => s?.procedureIds,
             (p, b) => p?.procedureIds = b),
-        forCreateCase = $options.field<bool>(
+        forCreateCase = options$.field<bool>(
             'forCreateCase',
             (a) => a?.forCreateCase,
             (s) => s?.forCreateCase,
             (p, b) => p?.forCreateCase = b),
-        caseEventId = $options.field<String>(
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        withSalesOU = $options.field<bool>('withSalesOU', (a) => a?.withSalesOU,
+        withSalesOU = options$.field<bool>('withSalesOU', (a) => a?.withSalesOU,
             (s) => s?.withSalesOU, (p, b) => p?.withSalesOU = b),
         super._();
 
@@ -515,17 +515,17 @@ class _$SearchHcrTeamsApiRequestActions
       _$SearchHcrTeamsApiRequestActions._(options());
 
   @override
-  SearchHcrTeamsApiRequest get $initial => SearchHcrTeamsApiRequest();
+  SearchHcrTeamsApiRequest get initialState$ => SearchHcrTeamsApiRequest();
 
   @override
-  SearchHcrTeamsApiRequestBuilder $newBuilder() =>
+  SearchHcrTeamsApiRequestBuilder newBuilder$() =>
       SearchHcrTeamsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
         this.bizUnitIds,
         this.salesOuIds,
@@ -540,27 +540,23 @@ class _$SearchHcrTeamsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
-    bizUnitIds.$reducer(reducer);
-    salesOuIds.$reducer(reducer);
-    hcrIds.$reducer(reducer);
-    teamIds.$reducer(reducer);
-    facilityIds.$reducer(reducer);
-    physicianIds.$reducer(reducer);
-    procedureIds.$reducer(reducer);
-    forCreateCase.$reducer(reducer);
-    caseEventId.$reducer(reducer);
-    withSalesOU.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
+    bizUnitIds.reducer$(reducer);
+    salesOuIds.reducer$(reducer);
+    hcrIds.reducer$(reducer);
+    teamIds.reducer$(reducer);
+    facilityIds.reducer$(reducer);
+    physicianIds.reducer$(reducer);
+    procedureIds.reducer$(reducer);
+    forCreateCase.reducer$(reducer);
+    caseEventId.reducer$(reducer);
+    withSalesOU.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SearchHcrTeamsApiRequest);
 }

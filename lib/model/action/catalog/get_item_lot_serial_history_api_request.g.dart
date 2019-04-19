@@ -202,21 +202,21 @@ class _$GetItemLotSerialHistoryApiRequestActions
   final StatefulActionsOptions<
       GetItemLotSerialHistoryApiRequest,
       GetItemLotSerialHistoryApiRequestBuilder,
-      GetItemLotSerialHistoryApiRequestActions> $options;
+      GetItemLotSerialHistoryApiRequestActions> options$;
 
-  final ActionDispatcher<GetItemLotSerialHistoryApiRequest> $replace;
+  final ActionDispatcher<GetItemLotSerialHistoryApiRequest> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> lotId;
   final FieldDispatcher<String> serialId;
 
-  _$GetItemLotSerialHistoryApiRequestActions._(this.$options)
-      : $replace = $options.action<GetItemLotSerialHistoryApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$GetItemLotSerialHistoryApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetItemLotSerialHistoryApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
         super._();
 
@@ -225,38 +225,33 @@ class _$GetItemLotSerialHistoryApiRequestActions
       _$GetItemLotSerialHistoryApiRequestActions._(options());
 
   @override
-  GetItemLotSerialHistoryApiRequest get $initial =>
+  GetItemLotSerialHistoryApiRequest get initialState$ =>
       GetItemLotSerialHistoryApiRequest();
 
   @override
-  GetItemLotSerialHistoryApiRequestBuilder $newBuilder() =>
+  GetItemLotSerialHistoryApiRequestBuilder newBuilder$() =>
       GetItemLotSerialHistoryApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.lotId,
         this.serialId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetItemLotSerialHistoryApiRequest);
 }

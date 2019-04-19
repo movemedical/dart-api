@@ -247,30 +247,30 @@ class _$CreateSubProcedureApiRequestActions
   final StatefulActionsOptions<
       CreateSubProcedureApiRequest,
       CreateSubProcedureApiRequestBuilder,
-      CreateSubProcedureApiRequestActions> $options;
+      CreateSubProcedureApiRequestActions> options$;
 
-  final ActionDispatcher<CreateSubProcedureApiRequest> $replace;
+  final ActionDispatcher<CreateSubProcedureApiRequest> replace$;
   final FieldDispatcher<String> parentId;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> icdCode;
   final FieldDispatcher<String> description;
   final FieldDispatcher<bool> active;
 
-  _$CreateSubProcedureApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateSubProcedureApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        parentId = $options.field<String>('parentId', (a) => a?.parentId,
+  _$CreateSubProcedureApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateSubProcedureApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        parentId = options$.field<String>('parentId', (a) => a?.parentId,
             (s) => s?.parentId, (p, b) => p?.parentId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        icdCode = $options.field<String>('icdCode', (a) => a?.icdCode,
+        icdCode = options$.field<String>('icdCode', (a) => a?.icdCode,
             (s) => s?.icdCode, (p, b) => p?.icdCode = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -279,17 +279,18 @@ class _$CreateSubProcedureApiRequestActions
       _$CreateSubProcedureApiRequestActions._(options());
 
   @override
-  CreateSubProcedureApiRequest get $initial => CreateSubProcedureApiRequest();
+  CreateSubProcedureApiRequest get initialState$ =>
+      CreateSubProcedureApiRequest();
 
   @override
-  CreateSubProcedureApiRequestBuilder $newBuilder() =>
+  CreateSubProcedureApiRequestBuilder newBuilder$() =>
       CreateSubProcedureApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.parentId,
         this.name,
         this.icdCode,
@@ -298,22 +299,17 @@ class _$CreateSubProcedureApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    parentId.$reducer(reducer);
-    name.$reducer(reducer);
-    icdCode.$reducer(reducer);
-    description.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    parentId.reducer$(reducer);
+    name.reducer$(reducer);
+    icdCode.reducer$(reducer);
+    description.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateSubProcedureApiRequest);
 }

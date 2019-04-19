@@ -196,21 +196,21 @@ class _$MarkMessagesReadApiRequestActions
   final StatefulActionsOptions<
       MarkMessagesReadApiRequest,
       MarkMessagesReadApiRequestBuilder,
-      MarkMessagesReadApiRequestActions> $options;
+      MarkMessagesReadApiRequestActions> options$;
 
-  final ActionDispatcher<MarkMessagesReadApiRequest> $replace;
+  final ActionDispatcher<MarkMessagesReadApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> messageParticipantIds;
   final FieldDispatcher<bool> read;
 
-  _$MarkMessagesReadApiRequestActions._(this.$options)
-      : $replace = $options.action<MarkMessagesReadApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        messageParticipantIds = $options.field<BuiltList<String>>(
+  _$MarkMessagesReadApiRequestActions._(this.options$)
+      : replace$ = options$.action<MarkMessagesReadApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        messageParticipantIds = options$.field<BuiltList<String>>(
             'messageParticipantIds',
             (a) => a?.messageParticipantIds,
             (s) => s?.messageParticipantIds,
             (p, b) => p?.messageParticipantIds = b),
-        read = $options.field<bool>(
+        read = options$.field<bool>(
             'read', (a) => a?.read, (s) => s?.read, (p, b) => p?.read = b),
         super._();
 
@@ -219,34 +219,30 @@ class _$MarkMessagesReadApiRequestActions
       _$MarkMessagesReadApiRequestActions._(options());
 
   @override
-  MarkMessagesReadApiRequest get $initial => MarkMessagesReadApiRequest();
+  MarkMessagesReadApiRequest get initialState$ => MarkMessagesReadApiRequest();
 
   @override
-  MarkMessagesReadApiRequestBuilder $newBuilder() =>
+  MarkMessagesReadApiRequestBuilder newBuilder$() =>
       MarkMessagesReadApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.messageParticipantIds,
         this.read,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    messageParticipantIds.$reducer(reducer);
-    read.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    messageParticipantIds.reducer$(reducer);
+    read.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(MarkMessagesReadApiRequest);
 }

@@ -18,51 +18,27 @@ class _$UpdateHcrApi extends UpdateHcrApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateHcrApiRequest>, ApiResult<Nothing>>,
-      UpdateHcrApi> $options;
+      UpdateHcrApi> options$;
 
   final ActionDispatcher<
           CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Nothing>>>
-      $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Nothing>,
-          UpdateHcrApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Nothing>,
-          UpdateHcrApi, Command<ApiCommand<UpdateHcrApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Nothing>,
-          UpdateHcrApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Nothing>,
-          UpdateHcrApi, CommandProgress>> $progress;
+      replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<UpdateHcrApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$UpdateHcrApi._(this.$options)
-      : $replace = $options.action<
+  _$UpdateHcrApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<UpdateHcrApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Nothing>,
-                UpdateHcrApi, String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateHcrApiRequest>,
-                    ApiResult<Nothing>,
-                    UpdateHcrApi,
-                    Command<ApiCommand<UpdateHcrApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateHcrApiRequest>,
-                    ApiResult<Nothing>,
-                    UpdateHcrApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateHcrApiRequest>,
-                ApiResult<Nothing>,
-                UpdateHcrApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<UpdateHcrApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$UpdateHcrApi(UpdateHcrApiOptions options) =>
@@ -70,30 +46,23 @@ class _$UpdateHcrApi extends UpdateHcrApi {
 
   @override
   CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Nothing>>
-      get $initial =>
+      get initialState$ =>
           CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateHcrApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<UpdateHcrApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<UpdateHcrApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(UpdateHcrApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

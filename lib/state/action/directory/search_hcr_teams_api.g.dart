@@ -22,67 +22,32 @@ class _$SearchHcrTeamsApi extends SearchHcrTeamsApi {
           ApiResult<SearchHcrTeamsApiResponse>>,
       CommandStateBuilder<ApiCommand<SearchHcrTeamsApiRequest>,
           ApiResult<SearchHcrTeamsApiResponse>>,
-      SearchHcrTeamsApi> $options;
+      SearchHcrTeamsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SearchHcrTeamsApiRequest>,
-          ApiResult<SearchHcrTeamsApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchHcrTeamsApiRequest>,
-          ApiResult<SearchHcrTeamsApiResponse>,
-          SearchHcrTeamsApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchHcrTeamsApiRequest>,
-          ApiResult<SearchHcrTeamsApiResponse>,
-          SearchHcrTeamsApi,
-          Command<ApiCommand<SearchHcrTeamsApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchHcrTeamsApiRequest>,
-          ApiResult<SearchHcrTeamsApiResponse>,
-          SearchHcrTeamsApi,
-          CommandResult<ApiResult<SearchHcrTeamsApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchHcrTeamsApiRequest>,
-          ApiResult<SearchHcrTeamsApiResponse>,
-          SearchHcrTeamsApi,
-          CommandProgress>> $progress;
+          ApiResult<SearchHcrTeamsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<SearchHcrTeamsApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<SearchHcrTeamsApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$SearchHcrTeamsApi._(this.$options)
-      : $replace = $options.action<
+  _$SearchHcrTeamsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<SearchHcrTeamsApiRequest>,
                     ApiResult<SearchHcrTeamsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<SearchHcrTeamsApiRequest>,
-                ApiResult<SearchHcrTeamsApiResponse>,
-                SearchHcrTeamsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<SearchHcrTeamsApiRequest>,
-                    ApiResult<SearchHcrTeamsApiResponse>,
-                    SearchHcrTeamsApi,
-                    Command<ApiCommand<SearchHcrTeamsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<SearchHcrTeamsApiRequest>,
-                    ApiResult<SearchHcrTeamsApiResponse>,
-                    SearchHcrTeamsApi,
-                    CommandResult<ApiResult<SearchHcrTeamsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<SearchHcrTeamsApiRequest>,
-                ApiResult<SearchHcrTeamsApiResponse>,
-                SearchHcrTeamsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<SearchHcrTeamsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<SearchHcrTeamsApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$SearchHcrTeamsApi(SearchHcrTeamsApiOptions options) =>
@@ -91,31 +56,24 @@ class _$SearchHcrTeamsApi extends SearchHcrTeamsApi {
   @override
   CommandState<ApiCommand<SearchHcrTeamsApiRequest>,
           ApiResult<SearchHcrTeamsApiResponse>>
-      get $initial => CommandState<ApiCommand<SearchHcrTeamsApiRequest>,
+      get initialState$ => CommandState<ApiCommand<SearchHcrTeamsApiRequest>,
           ApiResult<SearchHcrTeamsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<SearchHcrTeamsApiRequest>,
           ApiResult<SearchHcrTeamsApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<SearchHcrTeamsApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<SearchHcrTeamsApiRequest>,
           ApiResult<SearchHcrTeamsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(SearchHcrTeamsApiRequest)]),
-        FullType(ApiResult, [FullType(SearchHcrTeamsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

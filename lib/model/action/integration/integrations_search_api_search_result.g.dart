@@ -228,27 +228,27 @@ class _$IntegrationsSearchApiSearchResultActions
   final StatefulActionsOptions<
       IntegrationsSearchApiSearchResult,
       IntegrationsSearchApiSearchResultBuilder,
-      IntegrationsSearchApiSearchResultActions> $options;
+      IntegrationsSearchApiSearchResultActions> options$;
 
-  final ActionDispatcher<IntegrationsSearchApiSearchResult> $replace;
+  final ActionDispatcher<IntegrationsSearchApiSearchResult> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<IntegrationsSearchApiResultType> type;
   final FieldDispatcher<String> displayText;
   final FieldDispatcher<String> erpReferenceNumber;
 
-  _$IntegrationsSearchApiSearchResultActions._(this.$options)
-      : $replace = $options.action<IntegrationsSearchApiSearchResult>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$IntegrationsSearchApiSearchResultActions._(this.options$)
+      : replace$ = options$.action<IntegrationsSearchApiSearchResult>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.field<IntegrationsSearchApiResultType>(
+        type = options$.field<IntegrationsSearchApiResultType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        displayText = $options.field<String>(
+        displayText = options$.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
             (p, b) => p?.displayText = b),
-        erpReferenceNumber = $options.field<String>(
+        erpReferenceNumber = options$.field<String>(
             'erpReferenceNumber',
             (a) => a?.erpReferenceNumber,
             (s) => s?.erpReferenceNumber,
@@ -260,18 +260,18 @@ class _$IntegrationsSearchApiSearchResultActions
       _$IntegrationsSearchApiSearchResultActions._(options());
 
   @override
-  IntegrationsSearchApiSearchResult get $initial =>
+  IntegrationsSearchApiSearchResult get initialState$ =>
       IntegrationsSearchApiSearchResult();
 
   @override
-  IntegrationsSearchApiSearchResultBuilder $newBuilder() =>
+  IntegrationsSearchApiSearchResultBuilder newBuilder$() =>
       IntegrationsSearchApiSearchResultBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.type,
         this.displayText,
@@ -279,21 +279,16 @@ class _$IntegrationsSearchApiSearchResultActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    type.$reducer(reducer);
-    displayText.$reducer(reducer);
-    erpReferenceNumber.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    type.reducer$(reducer);
+    displayText.reducer$(reducer);
+    erpReferenceNumber.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(IntegrationsSearchApiSearchResult);
 }

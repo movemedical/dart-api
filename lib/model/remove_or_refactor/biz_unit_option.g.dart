@@ -181,21 +181,21 @@ typedef StatefulActionsOptions<BizUnitOption, BizUnitOptionBuilder,
 
 class _$BizUnitOptionActions extends BizUnitOptionActions {
   final StatefulActionsOptions<BizUnitOption, BizUnitOptionBuilder,
-      BizUnitOptionActions> $options;
+      BizUnitOptionActions> options$;
 
-  final ActionDispatcher<BizUnitOption> $replace;
+  final ActionDispatcher<BizUnitOption> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> description;
 
-  _$BizUnitOptionActions._(this.$options)
-      : $replace =
-            $options.action<BizUnitOption>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BizUnitOptionActions._(this.options$)
+      : replace$ =
+            options$.action<BizUnitOption>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -206,35 +206,31 @@ class _$BizUnitOptionActions extends BizUnitOptionActions {
       _$BizUnitOptionActions._(options());
 
   @override
-  BizUnitOption get $initial => BizUnitOption();
+  BizUnitOption get initialState$ => BizUnitOption();
 
   @override
-  BizUnitOptionBuilder $newBuilder() => BizUnitOptionBuilder();
+  BizUnitOptionBuilder newBuilder$() => BizUnitOptionBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.description,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    description.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    description.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(BizUnitOption);
 }

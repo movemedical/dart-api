@@ -309,9 +309,9 @@ class _$ListBizUnitProcedureLinksApiProcedureLinkActions
   final StatefulActionsOptions<
       ListBizUnitProcedureLinksApiProcedureLink,
       ListBizUnitProcedureLinksApiProcedureLinkBuilder,
-      ListBizUnitProcedureLinksApiProcedureLinkActions> $options;
+      ListBizUnitProcedureLinksApiProcedureLinkActions> options$;
 
-  final ActionDispatcher<ListBizUnitProcedureLinksApiProcedureLink> $replace;
+  final ActionDispatcher<ListBizUnitProcedureLinksApiProcedureLink> replace$;
   final FieldDispatcher<String> procedureToBizUnitId;
   final FieldDispatcher<String> procedureId;
   final FieldDispatcher<String> procedureName;
@@ -320,40 +320,40 @@ class _$ListBizUnitProcedureLinksApiProcedureLinkActions
   final FieldDispatcher<bool> procedureBodySideRequired;
   final FieldDispatcher<bool> procedureActive;
 
-  _$ListBizUnitProcedureLinksApiProcedureLinkActions._(this.$options)
-      : $replace = $options.action<ListBizUnitProcedureLinksApiProcedureLink>(
-            '\$replace', (a) => a?.$replace),
-        procedureToBizUnitId = $options.field<String>(
+  _$ListBizUnitProcedureLinksApiProcedureLinkActions._(this.options$)
+      : replace$ = options$.action<ListBizUnitProcedureLinksApiProcedureLink>(
+            'replace\$', (a) => a?.replace$),
+        procedureToBizUnitId = options$.field<String>(
             'procedureToBizUnitId',
             (a) => a?.procedureToBizUnitId,
             (s) => s?.procedureToBizUnitId,
             (p, b) => p?.procedureToBizUnitId = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        procedureName = $options.field<String>(
+        procedureName = options$.field<String>(
             'procedureName',
             (a) => a?.procedureName,
             (s) => s?.procedureName,
             (p, b) => p?.procedureName = b),
-        procedureIcdCode = $options.field<String>(
+        procedureIcdCode = options$.field<String>(
             'procedureIcdCode',
             (a) => a?.procedureIcdCode,
             (s) => s?.procedureIcdCode,
             (p, b) => p?.procedureIcdCode = b),
-        procedureDescription = $options.field<String>(
+        procedureDescription = options$.field<String>(
             'procedureDescription',
             (a) => a?.procedureDescription,
             (s) => s?.procedureDescription,
             (p, b) => p?.procedureDescription = b),
-        procedureBodySideRequired = $options.field<bool>(
+        procedureBodySideRequired = options$.field<bool>(
             'procedureBodySideRequired',
             (a) => a?.procedureBodySideRequired,
             (s) => s?.procedureBodySideRequired,
             (p, b) => p?.procedureBodySideRequired = b),
-        procedureActive = $options.field<bool>(
+        procedureActive = options$.field<bool>(
             'procedureActive',
             (a) => a?.procedureActive,
             (s) => s?.procedureActive,
@@ -365,18 +365,18 @@ class _$ListBizUnitProcedureLinksApiProcedureLinkActions
       _$ListBizUnitProcedureLinksApiProcedureLinkActions._(options());
 
   @override
-  ListBizUnitProcedureLinksApiProcedureLink get $initial =>
+  ListBizUnitProcedureLinksApiProcedureLink get initialState$ =>
       ListBizUnitProcedureLinksApiProcedureLink();
 
   @override
-  ListBizUnitProcedureLinksApiProcedureLinkBuilder $newBuilder() =>
+  ListBizUnitProcedureLinksApiProcedureLinkBuilder newBuilder$() =>
       ListBizUnitProcedureLinksApiProcedureLinkBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.procedureToBizUnitId,
         this.procedureId,
         this.procedureName,
@@ -387,24 +387,19 @@ class _$ListBizUnitProcedureLinksApiProcedureLinkActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    procedureToBizUnitId.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    procedureName.$reducer(reducer);
-    procedureIcdCode.$reducer(reducer);
-    procedureDescription.$reducer(reducer);
-    procedureBodySideRequired.$reducer(reducer);
-    procedureActive.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    procedureToBizUnitId.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    procedureName.reducer$(reducer);
+    procedureIcdCode.reducer$(reducer);
+    procedureDescription.reducer$(reducer);
+    procedureBodySideRequired.reducer$(reducer);
+    procedureActive.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListBizUnitProcedureLinksApiProcedureLink);
 }

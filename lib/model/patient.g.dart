@@ -367,9 +367,9 @@ typedef StatefulActionsOptions<Patient, PatientBuilder,
 
 class _$PatientActions extends PatientActions {
   final StatefulActionsOptions<Patient, PatientBuilder, PatientActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<Patient> $replace;
+  final ActionDispatcher<Patient> replace$;
   final FieldDispatcher<String> id;
   final PersonNameActions name;
   final FieldDispatcher<String> initials;
@@ -381,44 +381,44 @@ class _$PatientActions extends PatientActions {
   final FieldDispatcher<double> weightMeasurement;
   final FieldDispatcher<WeightMeasurementType> weightMeasurementType;
 
-  _$PatientActions._(this.$options)
-      : $replace = $options.action<Patient>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$PatientActions._(this.options$)
+      : replace$ = options$.action<Patient>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        initials = $options.field<String>('initials', (a) => a?.initials,
+        initials = options$.field<String>('initials', (a) => a?.initials,
             (s) => s?.initials, (p, b) => p?.initials = b),
-        mrn = $options.field<String>(
+        mrn = options$.field<String>(
             'mrn', (a) => a?.mrn, (s) => s?.mrn, (p, b) => p?.mrn = b),
-        dateOfBirth = $options.field<DateTime>(
+        dateOfBirth = options$.field<DateTime>(
             'dateOfBirth',
             (a) => a?.dateOfBirth,
             (s) => s?.dateOfBirth,
             (p, b) => p?.dateOfBirth = b),
-        gender = $options.field<Gender>('gender', (a) => a?.gender,
+        gender = options$.field<Gender>('gender', (a) => a?.gender,
             (s) => s?.gender, (p, b) => p?.gender = b),
-        heightMeasurement = $options.field<double>(
+        heightMeasurement = options$.field<double>(
             'heightMeasurement',
             (a) => a?.heightMeasurement,
             (s) => s?.heightMeasurement,
             (p, b) => p?.heightMeasurement = b),
-        heightMeasurementType = $options.field<LengthMeasurementType>(
+        heightMeasurementType = options$.field<LengthMeasurementType>(
             'heightMeasurementType',
             (a) => a?.heightMeasurementType,
             (s) => s?.heightMeasurementType,
             (p, b) => p?.heightMeasurementType = b),
-        weightMeasurement = $options.field<double>(
+        weightMeasurement = options$.field<double>(
             'weightMeasurement',
             (a) => a?.weightMeasurement,
             (s) => s?.weightMeasurement,
             (p, b) => p?.weightMeasurement = b),
-        weightMeasurementType = $options.field<WeightMeasurementType>(
+        weightMeasurementType = options$.field<WeightMeasurementType>(
             'weightMeasurementType',
             (a) => a?.weightMeasurementType,
             (s) => s?.weightMeasurementType,
@@ -429,22 +429,22 @@ class _$PatientActions extends PatientActions {
       _$PatientActions._(options());
 
   @override
-  Patient get $initial => Patient();
+  Patient get initialState$ => Patient();
 
   @override
-  PatientBuilder $newBuilder() => PatientBuilder();
+  PatientBuilder newBuilder$() => PatientBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.initials,
         this.mrn,
@@ -457,27 +457,23 @@ class _$PatientActions extends PatientActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    initials.$reducer(reducer);
-    mrn.$reducer(reducer);
-    dateOfBirth.$reducer(reducer);
-    gender.$reducer(reducer);
-    heightMeasurement.$reducer(reducer);
-    heightMeasurementType.$reducer(reducer);
-    weightMeasurement.$reducer(reducer);
-    weightMeasurementType.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    initials.reducer$(reducer);
+    mrn.reducer$(reducer);
+    dateOfBirth.reducer$(reducer);
+    gender.reducer$(reducer);
+    heightMeasurement.reducer$(reducer);
+    heightMeasurementType.reducer$(reducer);
+    weightMeasurement.reducer$(reducer);
+    weightMeasurementType.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    name.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    name.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Patient);
 }

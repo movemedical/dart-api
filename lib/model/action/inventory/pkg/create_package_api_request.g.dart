@@ -152,15 +152,15 @@ typedef StatefulActionsOptions<
 
 class _$CreatePackageApiRequestActions extends CreatePackageApiRequestActions {
   final StatefulActionsOptions<CreatePackageApiRequest,
-      CreatePackageApiRequestBuilder, CreatePackageApiRequestActions> $options;
+      CreatePackageApiRequestBuilder, CreatePackageApiRequestActions> options$;
 
-  final ActionDispatcher<CreatePackageApiRequest> $replace;
+  final ActionDispatcher<CreatePackageApiRequest> replace$;
   final FieldDispatcher<String> shipmentId;
 
-  _$CreatePackageApiRequestActions._(this.$options)
-      : $replace = $options.action<CreatePackageApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+  _$CreatePackageApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreatePackageApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        shipmentId = options$.field<String>('shipmentId', (a) => a?.shipmentId,
             (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
         super._();
 
@@ -169,32 +169,28 @@ class _$CreatePackageApiRequestActions extends CreatePackageApiRequestActions {
       _$CreatePackageApiRequestActions._(options());
 
   @override
-  CreatePackageApiRequest get $initial => CreatePackageApiRequest();
+  CreatePackageApiRequest get initialState$ => CreatePackageApiRequest();
 
   @override
-  CreatePackageApiRequestBuilder $newBuilder() =>
+  CreatePackageApiRequestBuilder newBuilder$() =>
       CreatePackageApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.shipmentId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    shipmentId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    shipmentId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreatePackageApiRequest);
 }

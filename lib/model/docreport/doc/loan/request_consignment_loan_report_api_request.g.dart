@@ -329,9 +329,9 @@ class _$RequestConsignmentLoanReportApiRequestActions
   final StatefulActionsOptions<
       RequestConsignmentLoanReportApiRequest,
       RequestConsignmentLoanReportApiRequestBuilder,
-      RequestConsignmentLoanReportApiRequestActions> $options;
+      RequestConsignmentLoanReportApiRequestActions> options$;
 
-  final ActionDispatcher<RequestConsignmentLoanReportApiRequest> $replace;
+  final ActionDispatcher<RequestConsignmentLoanReportApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final FieldDispatcher<DocReportDisplayType> displayType;
@@ -340,10 +340,10 @@ class _$RequestConsignmentLoanReportApiRequestActions
   final FieldDispatcher<BuiltList<String>> loanIds;
   final FieldDispatcher<bool> displayNotes;
 
-  _$RequestConsignmentLoanReportApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestConsignmentLoanReportApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestConsignmentLoanReportApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestConsignmentLoanReportApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -352,23 +352,23 @@ class _$RequestConsignmentLoanReportApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.field<DocReportDisplayType>(
+        displayType = options$.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        loanIds = $options.field<BuiltList<String>>('loanIds',
+        loanIds = options$.field<BuiltList<String>>('loanIds',
             (a) => a?.loanIds, (s) => s?.loanIds, (p, b) => p?.loanIds = b),
-        displayNotes = $options.field<bool>(
+        displayNotes = options$.field<bool>(
             'displayNotes',
             (a) => a?.displayNotes,
             (s) => s?.displayNotes,
@@ -380,24 +380,24 @@ class _$RequestConsignmentLoanReportApiRequestActions
       _$RequestConsignmentLoanReportApiRequestActions._(options());
 
   @override
-  RequestConsignmentLoanReportApiRequest get $initial =>
+  RequestConsignmentLoanReportApiRequest get initialState$ =>
       RequestConsignmentLoanReportApiRequest();
 
   @override
-  RequestConsignmentLoanReportApiRequestBuilder $newBuilder() =>
+  RequestConsignmentLoanReportApiRequestBuilder newBuilder$() =>
       RequestConsignmentLoanReportApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.format,
         this.displayType,
         this.locationType,
@@ -407,25 +407,20 @@ class _$RequestConsignmentLoanReportApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    format.$reducer(reducer);
-    displayType.$reducer(reducer);
-    locationType.$reducer(reducer);
-    locationId.$reducer(reducer);
-    loanIds.$reducer(reducer);
-    displayNotes.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    format.reducer$(reducer);
+    displayType.reducer$(reducer);
+    locationType.reducer$(reducer);
+    locationId.reducer$(reducer);
+    loanIds.reducer$(reducer);
+    displayNotes.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestConsignmentLoanReportApiRequest);
 }

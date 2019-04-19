@@ -298,9 +298,9 @@ class _$GetItemPricingApiResponseActions
   final StatefulActionsOptions<
       GetItemPricingApiResponse,
       GetItemPricingApiResponseBuilder,
-      GetItemPricingApiResponseActions> $options;
+      GetItemPricingApiResponseActions> options$;
 
-  final ActionDispatcher<GetItemPricingApiResponse> $replace;
+  final ActionDispatcher<GetItemPricingApiResponse> replace$;
   final FieldDispatcher<bool> shipToRemotePricingSuccess;
   final FieldDispatcher<String> shipToRemotePricingSoapLogId;
   final FieldDispatcher<bool> billToRemotePricingSuccess;
@@ -308,35 +308,35 @@ class _$GetItemPricingApiResponseActions
   final FieldDispatcher<double> constructPrice;
   final FieldDispatcher<BuiltList<GetItemPricingApiItemPrice>> itemPrices;
 
-  _$GetItemPricingApiResponseActions._(this.$options)
-      : $replace = $options.action<GetItemPricingApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        shipToRemotePricingSuccess = $options.field<bool>(
+  _$GetItemPricingApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetItemPricingApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        shipToRemotePricingSuccess = options$.field<bool>(
             'shipToRemotePricingSuccess',
             (a) => a?.shipToRemotePricingSuccess,
             (s) => s?.shipToRemotePricingSuccess,
             (p, b) => p?.shipToRemotePricingSuccess = b),
-        shipToRemotePricingSoapLogId = $options.field<String>(
+        shipToRemotePricingSoapLogId = options$.field<String>(
             'shipToRemotePricingSoapLogId',
             (a) => a?.shipToRemotePricingSoapLogId,
             (s) => s?.shipToRemotePricingSoapLogId,
             (p, b) => p?.shipToRemotePricingSoapLogId = b),
-        billToRemotePricingSuccess = $options.field<bool>(
+        billToRemotePricingSuccess = options$.field<bool>(
             'billToRemotePricingSuccess',
             (a) => a?.billToRemotePricingSuccess,
             (s) => s?.billToRemotePricingSuccess,
             (p, b) => p?.billToRemotePricingSuccess = b),
-        billToRemotePricingSoapLogId = $options.field<String>(
+        billToRemotePricingSoapLogId = options$.field<String>(
             'billToRemotePricingSoapLogId',
             (a) => a?.billToRemotePricingSoapLogId,
             (s) => s?.billToRemotePricingSoapLogId,
             (p, b) => p?.billToRemotePricingSoapLogId = b),
-        constructPrice = $options.field<double>(
+        constructPrice = options$.field<double>(
             'constructPrice',
             (a) => a?.constructPrice,
             (s) => s?.constructPrice,
             (p, b) => p?.constructPrice = b),
-        itemPrices = $options.field<BuiltList<GetItemPricingApiItemPrice>>(
+        itemPrices = options$.field<BuiltList<GetItemPricingApiItemPrice>>(
             'itemPrices',
             (a) => a?.itemPrices,
             (s) => s?.itemPrices,
@@ -348,17 +348,17 @@ class _$GetItemPricingApiResponseActions
       _$GetItemPricingApiResponseActions._(options());
 
   @override
-  GetItemPricingApiResponse get $initial => GetItemPricingApiResponse();
+  GetItemPricingApiResponse get initialState$ => GetItemPricingApiResponse();
 
   @override
-  GetItemPricingApiResponseBuilder $newBuilder() =>
+  GetItemPricingApiResponseBuilder newBuilder$() =>
       GetItemPricingApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.shipToRemotePricingSuccess,
         this.shipToRemotePricingSoapLogId,
         this.billToRemotePricingSuccess,
@@ -368,22 +368,18 @@ class _$GetItemPricingApiResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    shipToRemotePricingSuccess.$reducer(reducer);
-    shipToRemotePricingSoapLogId.$reducer(reducer);
-    billToRemotePricingSuccess.$reducer(reducer);
-    billToRemotePricingSoapLogId.$reducer(reducer);
-    constructPrice.$reducer(reducer);
-    itemPrices.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    shipToRemotePricingSuccess.reducer$(reducer);
+    shipToRemotePricingSoapLogId.reducer$(reducer);
+    billToRemotePricingSuccess.reducer$(reducer);
+    billToRemotePricingSoapLogId.reducer$(reducer);
+    constructPrice.reducer$(reducer);
+    itemPrices.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetItemPricingApiResponse);
 }

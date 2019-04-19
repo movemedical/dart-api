@@ -193,18 +193,18 @@ class _$ListAuditFilesApiResponseActions
   final StatefulActionsOptions<
       ListAuditFilesApiResponse,
       ListAuditFilesApiResponseBuilder,
-      ListAuditFilesApiResponseActions> $options;
+      ListAuditFilesApiResponseActions> options$;
 
-  final ActionDispatcher<ListAuditFilesApiResponse> $replace;
+  final ActionDispatcher<ListAuditFilesApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListAuditFilesApiAuditFile>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListAuditFilesApiResponseActions._(this.$options)
-      : $replace = $options.action<ListAuditFilesApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListAuditFilesApiAuditFile>>(
+  _$ListAuditFilesApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListAuditFilesApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListAuditFilesApiAuditFile>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -213,34 +213,30 @@ class _$ListAuditFilesApiResponseActions
       _$ListAuditFilesApiResponseActions._(options());
 
   @override
-  ListAuditFilesApiResponse get $initial => ListAuditFilesApiResponse();
+  ListAuditFilesApiResponse get initialState$ => ListAuditFilesApiResponse();
 
   @override
-  ListAuditFilesApiResponseBuilder $newBuilder() =>
+  ListAuditFilesApiResponseBuilder newBuilder$() =>
       ListAuditFilesApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListAuditFilesApiResponse);
 }

@@ -23,68 +23,29 @@ class _$UpdateDeliveryScheduleProfileApi
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
           ApiResult<Nothing>>,
-      UpdateDeliveryScheduleProfileApi> $options;
+      UpdateDeliveryScheduleProfileApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-          ApiResult<Nothing>,
-          UpdateDeliveryScheduleProfileApi,
-          String>> $cancel;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-              ApiResult<Nothing>,
-              UpdateDeliveryScheduleProfileApi,
-              Command<ApiCommand<UpdateDeliveryScheduleProfileApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-          ApiResult<Nothing>,
-          UpdateDeliveryScheduleProfileApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-          ApiResult<Nothing>,
-          UpdateDeliveryScheduleProfileApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<UpdateDeliveryScheduleProfileApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$UpdateDeliveryScheduleProfileApi._(this.$options)
-      : $replace = $options.action<
+  _$UpdateDeliveryScheduleProfileApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-                ApiResult<Nothing>,
-                UpdateDeliveryScheduleProfileApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-                    ApiResult<Nothing>,
-                    UpdateDeliveryScheduleProfileApi,
-                    Command<
-                        ApiCommand<UpdateDeliveryScheduleProfileApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-                    ApiResult<Nothing>,
-                    UpdateDeliveryScheduleProfileApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-                ApiResult<Nothing>,
-                UpdateDeliveryScheduleProfileApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<ApiCommand<UpdateDeliveryScheduleProfileApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$UpdateDeliveryScheduleProfileApi(
@@ -94,34 +55,26 @@ class _$UpdateDeliveryScheduleProfileApi
   @override
   CommandState<ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(
-            ApiCommand, [FullType(UpdateDeliveryScheduleProfileApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

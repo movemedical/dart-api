@@ -288,9 +288,9 @@ class _$GetSalesOrderApiCaseEventActions
   final StatefulActionsOptions<
       GetSalesOrderApiCaseEvent,
       GetSalesOrderApiCaseEventBuilder,
-      GetSalesOrderApiCaseEventActions> $options;
+      GetSalesOrderApiCaseEventActions> options$;
 
-  final ActionDispatcher<GetSalesOrderApiCaseEvent> $replace;
+  final ActionDispatcher<GetSalesOrderApiCaseEvent> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> poNumber;
   final FieldDispatcher<int> eventNumber;
@@ -298,31 +298,31 @@ class _$GetSalesOrderApiCaseEventActions
   final OrgUnitActions opsOu;
   final HcrTeamActions hcrTeam;
 
-  _$GetSalesOrderApiCaseEventActions._(this.$options)
-      : $replace = $options.action<GetSalesOrderApiCaseEvent>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetSalesOrderApiCaseEventActions._(this.options$)
+      : replace$ = options$.action<GetSalesOrderApiCaseEvent>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        eventNumber = $options.field<int>('eventNumber', (a) => a?.eventNumber,
+        eventNumber = options$.field<int>('eventNumber', (a) => a?.eventNumber,
             (s) => s?.eventNumber, (p, b) => p?.eventNumber = b),
         salesOu = OrgUnitActions(() =>
-            $options.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
+            options$.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
                 'salesOu',
                 (a) => a.salesOu,
                 (s) => s?.salesOu,
                 (b) => b?.salesOu,
                 (parent, builder) => parent?.salesOu = builder)),
         opsOu = OrgUnitActions(() =>
-            $options.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
+            options$.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
                 'opsOu',
                 (a) => a.opsOu,
                 (s) => s?.opsOu,
                 (b) => b?.opsOu,
                 (parent, builder) => parent?.opsOu = builder)),
         hcrTeam = HcrTeamActions(() =>
-            $options.stateful<HcrTeam, HcrTeamBuilder, HcrTeamActions>(
+            options$.stateful<HcrTeam, HcrTeamBuilder, HcrTeamActions>(
                 'hcrTeam',
                 (a) => a.hcrTeam,
                 (s) => s?.hcrTeam,
@@ -335,50 +335,46 @@ class _$GetSalesOrderApiCaseEventActions
       _$GetSalesOrderApiCaseEventActions._(options());
 
   @override
-  GetSalesOrderApiCaseEvent get $initial => GetSalesOrderApiCaseEvent();
+  GetSalesOrderApiCaseEvent get initialState$ => GetSalesOrderApiCaseEvent();
 
   @override
-  GetSalesOrderApiCaseEventBuilder $newBuilder() =>
+  GetSalesOrderApiCaseEventBuilder newBuilder$() =>
       GetSalesOrderApiCaseEventBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.salesOu,
         this.opsOu,
         this.hcrTeam,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.poNumber,
         this.eventNumber,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    poNumber.$reducer(reducer);
-    eventNumber.$reducer(reducer);
-    salesOu.$reducer(reducer);
-    opsOu.$reducer(reducer);
-    hcrTeam.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    poNumber.reducer$(reducer);
+    eventNumber.reducer$(reducer);
+    salesOu.reducer$(reducer);
+    opsOu.reducer$(reducer);
+    hcrTeam.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    salesOu.$middleware(middleware);
-    opsOu.$middleware(middleware);
-    hcrTeam.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    salesOu.middleware$(middleware);
+    opsOu.middleware$(middleware);
+    hcrTeam.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetSalesOrderApiCaseEvent);
 }

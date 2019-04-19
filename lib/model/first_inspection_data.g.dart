@@ -186,21 +186,21 @@ typedef StatefulActionsOptions<FirstInspectionData, FirstInspectionDataBuilder,
 
 class _$FirstInspectionDataActions extends FirstInspectionDataActions {
   final StatefulActionsOptions<FirstInspectionData, FirstInspectionDataBuilder,
-      FirstInspectionDataActions> $options;
+      FirstInspectionDataActions> options$;
 
-  final ActionDispatcher<FirstInspectionData> $replace;
+  final ActionDispatcher<FirstInspectionData> replace$;
   final FieldDispatcher<bool> firstInspectionAtLocation;
   final LocationDataActions previousLocation;
 
-  _$FirstInspectionDataActions._(this.$options)
-      : $replace = $options.action<FirstInspectionData>(
-            '\$replace', (a) => a?.$replace),
-        firstInspectionAtLocation = $options.field<bool>(
+  _$FirstInspectionDataActions._(this.options$)
+      : replace$ = options$.action<FirstInspectionData>(
+            'replace\$', (a) => a?.replace$),
+        firstInspectionAtLocation = options$.field<bool>(
             'firstInspectionAtLocation',
             (a) => a?.firstInspectionAtLocation,
             (s) => s?.firstInspectionAtLocation,
             (p, b) => p?.firstInspectionAtLocation = b),
-        previousLocation = LocationDataActions(() => $options
+        previousLocation = LocationDataActions(() => options$
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
                 'previousLocation',
                 (a) => a.previousLocation,
@@ -214,39 +214,35 @@ class _$FirstInspectionDataActions extends FirstInspectionDataActions {
       _$FirstInspectionDataActions._(options());
 
   @override
-  FirstInspectionData get $initial => FirstInspectionData();
+  FirstInspectionData get initialState$ => FirstInspectionData();
 
   @override
-  FirstInspectionDataBuilder $newBuilder() => FirstInspectionDataBuilder();
+  FirstInspectionDataBuilder newBuilder$() => FirstInspectionDataBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.previousLocation,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.firstInspectionAtLocation,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    firstInspectionAtLocation.$reducer(reducer);
-    previousLocation.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    firstInspectionAtLocation.reducer$(reducer);
+    previousLocation.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    previousLocation.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    previousLocation.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(FirstInspectionData);
 }

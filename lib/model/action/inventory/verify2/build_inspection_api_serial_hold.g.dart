@@ -225,27 +225,27 @@ class _$BuildInspectionApiSerialHoldActions
   final StatefulActionsOptions<
       BuildInspectionApiSerialHold,
       BuildInspectionApiSerialHoldBuilder,
-      BuildInspectionApiSerialHoldActions> $options;
+      BuildInspectionApiSerialHoldActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiSerialHold> $replace;
+  final ActionDispatcher<BuildInspectionApiSerialHold> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> serialId;
   final FieldDispatcher<String> holdReasonId;
   final FieldDispatcher<String> holdReasonName;
 
-  _$BuildInspectionApiSerialHoldActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiSerialHold>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BuildInspectionApiSerialHoldActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiSerialHold>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        holdReasonId = $options.field<String>(
+        holdReasonId = options$.field<String>(
             'holdReasonId',
             (a) => a?.holdReasonId,
             (s) => s?.holdReasonId,
             (p, b) => p?.holdReasonId = b),
-        holdReasonName = $options.field<String>(
+        holdReasonName = options$.field<String>(
             'holdReasonName',
             (a) => a?.holdReasonName,
             (s) => s?.holdReasonName,
@@ -257,17 +257,18 @@ class _$BuildInspectionApiSerialHoldActions
       _$BuildInspectionApiSerialHoldActions._(options());
 
   @override
-  BuildInspectionApiSerialHold get $initial => BuildInspectionApiSerialHold();
+  BuildInspectionApiSerialHold get initialState$ =>
+      BuildInspectionApiSerialHold();
 
   @override
-  BuildInspectionApiSerialHoldBuilder $newBuilder() =>
+  BuildInspectionApiSerialHoldBuilder newBuilder$() =>
       BuildInspectionApiSerialHoldBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.serialId,
         this.holdReasonId,
@@ -275,21 +276,16 @@ class _$BuildInspectionApiSerialHoldActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    serialId.$reducer(reducer);
-    holdReasonId.$reducer(reducer);
-    holdReasonName.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    serialId.reducer$(reducer);
+    holdReasonId.reducer$(reducer);
+    holdReasonName.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiSerialHold);
 }

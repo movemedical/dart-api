@@ -20,57 +20,29 @@ class _$UpdateHoldReasonApi extends UpdateHoldReasonApi {
       CommandState<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateHoldReasonApiRequest>,
           ApiResult<Nothing>>,
-      UpdateHoldReasonApi> $options;
+      UpdateHoldReasonApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateHoldReasonApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Nothing>,
-          UpdateHoldReasonApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateHoldReasonApiRequest>,
-          ApiResult<Nothing>,
-          UpdateHoldReasonApi,
-          Command<ApiCommand<UpdateHoldReasonApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Nothing>,
-          UpdateHoldReasonApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Nothing>,
-          UpdateHoldReasonApi, CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<UpdateHoldReasonApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$UpdateHoldReasonApi._(this.$options)
-      : $replace = $options.action<
+  _$UpdateHoldReasonApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<UpdateHoldReasonApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateHoldReasonApiRequest>,
-                ApiResult<Nothing>,
-                UpdateHoldReasonApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateHoldReasonApiRequest>,
-                    ApiResult<Nothing>,
-                    UpdateHoldReasonApi,
-                    Command<ApiCommand<UpdateHoldReasonApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateHoldReasonApiRequest>,
-                    ApiResult<Nothing>,
-                    UpdateHoldReasonApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateHoldReasonApiRequest>,
-                ApiResult<Nothing>,
-                UpdateHoldReasonApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<UpdateHoldReasonApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$UpdateHoldReasonApi(UpdateHoldReasonApiOptions options) =>
@@ -78,31 +50,24 @@ class _$UpdateHoldReasonApi extends UpdateHoldReasonApi {
 
   @override
   CommandState<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<UpdateHoldReasonApiRequest>,
+      get initialState$ => CommandState<ApiCommand<UpdateHoldReasonApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateHoldReasonApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(UpdateHoldReasonApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

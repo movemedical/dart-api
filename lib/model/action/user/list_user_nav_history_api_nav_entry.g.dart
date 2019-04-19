@@ -252,33 +252,33 @@ class _$ListUserNavHistoryApiNavEntryActions
   final StatefulActionsOptions<
       ListUserNavHistoryApiNavEntry,
       ListUserNavHistoryApiNavEntryBuilder,
-      ListUserNavHistoryApiNavEntryActions> $options;
+      ListUserNavHistoryApiNavEntryActions> options$;
 
-  final ActionDispatcher<ListUserNavHistoryApiNavEntry> $replace;
+  final ActionDispatcher<ListUserNavHistoryApiNavEntry> replace$;
   final FieldDispatcher<DateTime> date;
   final FieldDispatcher<DeviceType> deviceType;
   final FieldDispatcher<Place> place;
   final FieldDispatcher<String> referenceId;
   final FieldDispatcher<String> referenceString;
 
-  _$ListUserNavHistoryApiNavEntryActions._(this.$options)
-      : $replace = $options.action<ListUserNavHistoryApiNavEntry>(
-            '\$replace', (a) => a?.$replace),
-        date = $options.field<DateTime>(
+  _$ListUserNavHistoryApiNavEntryActions._(this.options$)
+      : replace$ = options$.action<ListUserNavHistoryApiNavEntry>(
+            'replace\$', (a) => a?.replace$),
+        date = options$.field<DateTime>(
             'date', (a) => a?.date, (s) => s?.date, (p, b) => p?.date = b),
-        deviceType = $options.field<DeviceType>(
+        deviceType = options$.field<DeviceType>(
             'deviceType',
             (a) => a?.deviceType,
             (s) => s?.deviceType,
             (p, b) => p?.deviceType = b),
-        place = $options.field<Place>(
+        place = options$.field<Place>(
             'place', (a) => a?.place, (s) => s?.place, (p, b) => p?.place = b),
-        referenceId = $options.field<String>(
+        referenceId = options$.field<String>(
             'referenceId',
             (a) => a?.referenceId,
             (s) => s?.referenceId,
             (p, b) => p?.referenceId = b),
-        referenceString = $options.field<String>(
+        referenceString = options$.field<String>(
             'referenceString',
             (a) => a?.referenceString,
             (s) => s?.referenceString,
@@ -290,17 +290,18 @@ class _$ListUserNavHistoryApiNavEntryActions
       _$ListUserNavHistoryApiNavEntryActions._(options());
 
   @override
-  ListUserNavHistoryApiNavEntry get $initial => ListUserNavHistoryApiNavEntry();
+  ListUserNavHistoryApiNavEntry get initialState$ =>
+      ListUserNavHistoryApiNavEntry();
 
   @override
-  ListUserNavHistoryApiNavEntryBuilder $newBuilder() =>
+  ListUserNavHistoryApiNavEntryBuilder newBuilder$() =>
       ListUserNavHistoryApiNavEntryBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.date,
         this.deviceType,
         this.place,
@@ -309,22 +310,17 @@ class _$ListUserNavHistoryApiNavEntryActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    date.$reducer(reducer);
-    deviceType.$reducer(reducer);
-    place.$reducer(reducer);
-    referenceId.$reducer(reducer);
-    referenceString.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    date.reducer$(reducer);
+    deviceType.reducer$(reducer);
+    place.reducer$(reducer);
+    referenceId.reducer$(reducer);
+    referenceString.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListUserNavHistoryApiNavEntry);
 }

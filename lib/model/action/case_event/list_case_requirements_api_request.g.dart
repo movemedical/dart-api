@@ -198,19 +198,19 @@ class _$ListCaseRequirementsApiRequestActions
   final StatefulActionsOptions<
       ListCaseRequirementsApiRequest,
       ListCaseRequirementsApiRequestBuilder,
-      ListCaseRequirementsApiRequestActions> $options;
+      ListCaseRequirementsApiRequestActions> options$;
 
-  final ActionDispatcher<ListCaseRequirementsApiRequest> $replace;
+  final ActionDispatcher<ListCaseRequirementsApiRequest> replace$;
   final FieldDispatcher<String> caseId;
   final OrderByParamsActions<ListCaseRequirementsApiOrderBy> orderBy;
 
-  _$ListCaseRequirementsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListCaseRequirementsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseId = $options.field<String>('caseId', (a) => a?.caseId,
+  _$ListCaseRequirementsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListCaseRequirementsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseId = options$.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
         orderBy = OrderByParamsActions<ListCaseRequirementsApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListCaseRequirementsApiOrderBy>,
                     OrderByParamsBuilder<ListCaseRequirementsApiOrderBy>,
                     OrderByParamsActions<ListCaseRequirementsApiOrderBy>>(
@@ -226,42 +226,37 @@ class _$ListCaseRequirementsApiRequestActions
       _$ListCaseRequirementsApiRequestActions._(options());
 
   @override
-  ListCaseRequirementsApiRequest get $initial =>
+  ListCaseRequirementsApiRequest get initialState$ =>
       ListCaseRequirementsApiRequest();
 
   @override
-  ListCaseRequirementsApiRequestBuilder $newBuilder() =>
+  ListCaseRequirementsApiRequestBuilder newBuilder$() =>
       ListCaseRequirementsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseId.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseId.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListCaseRequirementsApiRequest);
 }

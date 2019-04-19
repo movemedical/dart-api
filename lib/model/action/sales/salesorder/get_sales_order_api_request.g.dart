@@ -174,21 +174,21 @@ typedef StatefulActionsOptions<
 
 class _$GetSalesOrderApiRequestActions extends GetSalesOrderApiRequestActions {
   final StatefulActionsOptions<GetSalesOrderApiRequest,
-      GetSalesOrderApiRequestBuilder, GetSalesOrderApiRequestActions> $options;
+      GetSalesOrderApiRequestBuilder, GetSalesOrderApiRequestActions> options$;
 
-  final ActionDispatcher<GetSalesOrderApiRequest> $replace;
+  final ActionDispatcher<GetSalesOrderApiRequest> replace$;
   final FieldDispatcher<String> salesOrderId;
   final FieldDispatcher<bool> skipPresence;
 
-  _$GetSalesOrderApiRequestActions._(this.$options)
-      : $replace = $options.action<GetSalesOrderApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        salesOrderId = $options.field<String>(
+  _$GetSalesOrderApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetSalesOrderApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        salesOrderId = options$.field<String>(
             'salesOrderId',
             (a) => a?.salesOrderId,
             (s) => s?.salesOrderId,
             (p, b) => p?.salesOrderId = b),
-        skipPresence = $options.field<bool>(
+        skipPresence = options$.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -200,34 +200,30 @@ class _$GetSalesOrderApiRequestActions extends GetSalesOrderApiRequestActions {
       _$GetSalesOrderApiRequestActions._(options());
 
   @override
-  GetSalesOrderApiRequest get $initial => GetSalesOrderApiRequest();
+  GetSalesOrderApiRequest get initialState$ => GetSalesOrderApiRequest();
 
   @override
-  GetSalesOrderApiRequestBuilder $newBuilder() =>
+  GetSalesOrderApiRequestBuilder newBuilder$() =>
       GetSalesOrderApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.salesOrderId,
         this.skipPresence,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    salesOrderId.$reducer(reducer);
-    skipPresence.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    salesOrderId.reducer$(reducer);
+    skipPresence.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetSalesOrderApiRequest);
 }

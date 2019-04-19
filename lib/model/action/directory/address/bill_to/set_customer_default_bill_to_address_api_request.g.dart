@@ -186,18 +186,18 @@ class _$SetCustomerDefaultBillToAddressApiRequestActions
   final StatefulActionsOptions<
       SetCustomerDefaultBillToAddressApiRequest,
       SetCustomerDefaultBillToAddressApiRequestBuilder,
-      SetCustomerDefaultBillToAddressApiRequestActions> $options;
+      SetCustomerDefaultBillToAddressApiRequestActions> options$;
 
-  final ActionDispatcher<SetCustomerDefaultBillToAddressApiRequest> $replace;
+  final ActionDispatcher<SetCustomerDefaultBillToAddressApiRequest> replace$;
   final FieldDispatcher<String> customerId;
   final FieldDispatcher<String> billToAddressId;
 
-  _$SetCustomerDefaultBillToAddressApiRequestActions._(this.$options)
-      : $replace = $options.action<SetCustomerDefaultBillToAddressApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+  _$SetCustomerDefaultBillToAddressApiRequestActions._(this.options$)
+      : replace$ = options$.action<SetCustomerDefaultBillToAddressApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        billToAddressId = $options.field<String>(
+        billToAddressId = options$.field<String>(
             'billToAddressId',
             (a) => a?.billToAddressId,
             (s) => s?.billToAddressId,
@@ -209,36 +209,31 @@ class _$SetCustomerDefaultBillToAddressApiRequestActions
       _$SetCustomerDefaultBillToAddressApiRequestActions._(options());
 
   @override
-  SetCustomerDefaultBillToAddressApiRequest get $initial =>
+  SetCustomerDefaultBillToAddressApiRequest get initialState$ =>
       SetCustomerDefaultBillToAddressApiRequest();
 
   @override
-  SetCustomerDefaultBillToAddressApiRequestBuilder $newBuilder() =>
+  SetCustomerDefaultBillToAddressApiRequestBuilder newBuilder$() =>
       SetCustomerDefaultBillToAddressApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customerId,
         this.billToAddressId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    customerId.$reducer(reducer);
-    billToAddressId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    customerId.reducer$(reducer);
+    billToAddressId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SetCustomerDefaultBillToAddressApiRequest);
 }

@@ -196,21 +196,21 @@ class _$ListLocationJournalsApiRequestActions
   final StatefulActionsOptions<
       ListLocationJournalsApiRequest,
       ListLocationJournalsApiRequestBuilder,
-      ListLocationJournalsApiRequestActions> $options;
+      ListLocationJournalsApiRequestActions> options$;
 
-  final ActionDispatcher<ListLocationJournalsApiRequest> $replace;
+  final ActionDispatcher<ListLocationJournalsApiRequest> replace$;
   final FieldDispatcher<String> stockSnapshotId;
   final PaginationParamsActions paging;
 
-  _$ListLocationJournalsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListLocationJournalsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        stockSnapshotId = $options.field<String>(
+  _$ListLocationJournalsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListLocationJournalsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        stockSnapshotId = options$.field<String>(
             'stockSnapshotId',
             (a) => a?.stockSnapshotId,
             (s) => s?.stockSnapshotId,
             (p, b) => p?.stockSnapshotId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -226,42 +226,37 @@ class _$ListLocationJournalsApiRequestActions
       _$ListLocationJournalsApiRequestActions._(options());
 
   @override
-  ListLocationJournalsApiRequest get $initial =>
+  ListLocationJournalsApiRequest get initialState$ =>
       ListLocationJournalsApiRequest();
 
   @override
-  ListLocationJournalsApiRequestBuilder $newBuilder() =>
+  ListLocationJournalsApiRequestBuilder newBuilder$() =>
       ListLocationJournalsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockSnapshotId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockSnapshotId.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockSnapshotId.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListLocationJournalsApiRequest);
 }

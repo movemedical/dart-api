@@ -201,27 +201,27 @@ class _$CancelCaseEventApiRequestActions
   final StatefulActionsOptions<
       CancelCaseEventApiRequest,
       CancelCaseEventApiRequestBuilder,
-      CancelCaseEventApiRequestActions> $options;
+      CancelCaseEventApiRequestActions> options$;
 
-  final ActionDispatcher<CancelCaseEventApiRequest> $replace;
+  final ActionDispatcher<CancelCaseEventApiRequest> replace$;
   final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<String> cancelReasonId;
   final FieldDispatcher<String> note;
 
-  _$CancelCaseEventApiRequestActions._(this.$options)
-      : $replace = $options.action<CancelCaseEventApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$CancelCaseEventApiRequestActions._(this.options$)
+      : replace$ = options$.action<CancelCaseEventApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        cancelReasonId = $options.field<String>(
+        cancelReasonId = options$.field<String>(
             'cancelReasonId',
             (a) => a?.cancelReasonId,
             (s) => s?.cancelReasonId,
             (p, b) => p?.cancelReasonId = b),
-        note = $options.field<String>(
+        note = options$.field<String>(
             'note', (a) => a?.note, (s) => s?.note, (p, b) => p?.note = b),
         super._();
 
@@ -230,36 +230,32 @@ class _$CancelCaseEventApiRequestActions
       _$CancelCaseEventApiRequestActions._(options());
 
   @override
-  CancelCaseEventApiRequest get $initial => CancelCaseEventApiRequest();
+  CancelCaseEventApiRequest get initialState$ => CancelCaseEventApiRequest();
 
   @override
-  CancelCaseEventApiRequestBuilder $newBuilder() =>
+  CancelCaseEventApiRequestBuilder newBuilder$() =>
       CancelCaseEventApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
         this.cancelReasonId,
         this.note,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
-    cancelReasonId.$reducer(reducer);
-    note.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
+    cancelReasonId.reducer$(reducer);
+    note.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CancelCaseEventApiRequest);
 }

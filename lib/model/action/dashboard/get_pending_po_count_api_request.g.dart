@@ -118,13 +118,13 @@ class _$GetPendingPoCountApiRequestActions
   final StatefulActionsOptions<
       GetPendingPoCountApiRequest,
       GetPendingPoCountApiRequestBuilder,
-      GetPendingPoCountApiRequestActions> $options;
+      GetPendingPoCountApiRequestActions> options$;
 
-  final ActionDispatcher<GetPendingPoCountApiRequest> $replace;
+  final ActionDispatcher<GetPendingPoCountApiRequest> replace$;
 
-  _$GetPendingPoCountApiRequestActions._(this.$options)
-      : $replace = $options.action<GetPendingPoCountApiRequest>(
-            '\$replace', (a) => a?.$replace),
+  _$GetPendingPoCountApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetPendingPoCountApiRequest>(
+            'replace\$', (a) => a?.replace$),
         super._();
 
   factory _$GetPendingPoCountApiRequestActions(
@@ -132,21 +132,17 @@ class _$GetPendingPoCountApiRequestActions
       _$GetPendingPoCountApiRequestActions._(options());
 
   @override
-  GetPendingPoCountApiRequest get $initial => GetPendingPoCountApiRequest();
+  GetPendingPoCountApiRequest get initialState$ =>
+      GetPendingPoCountApiRequest();
 
   @override
-  GetPendingPoCountApiRequestBuilder $newBuilder() =>
+  GetPendingPoCountApiRequestBuilder newBuilder$() =>
       GetPendingPoCountApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetPendingPoCountApiRequest);
 }

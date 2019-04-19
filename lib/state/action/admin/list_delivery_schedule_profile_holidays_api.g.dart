@@ -25,76 +25,37 @@ class _$ListDeliveryScheduleProfileHolidaysApi
       CommandStateBuilder<
           ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
           ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>>,
-      ListDeliveryScheduleProfileHolidaysApi> $options;
+      ListDeliveryScheduleProfileHolidaysApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
-          ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>>> $replace;
+          ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
-          ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>,
-          ListDeliveryScheduleProfileHolidaysApi,
-          String>> $cancel;
+          Command<ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>>>
+      execute$;
   final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
-              ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>,
-              ListDeliveryScheduleProfileHolidaysApi,
-              Command<
-                  ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
-              ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>,
-              ListDeliveryScheduleProfileHolidaysApi,
-              CommandResult<
-                  ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
-          ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>,
-          ListDeliveryScheduleProfileHolidaysApi,
-          CommandProgress>> $progress;
+      CommandResult<
+          ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListDeliveryScheduleProfileHolidaysApi._(this.$options)
-      : $replace = $options.action<
+  _$ListDeliveryScheduleProfileHolidaysApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<
                     ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
                     ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
-                ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>,
-                ListDeliveryScheduleProfileHolidaysApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
-                    ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>,
-                    ListDeliveryScheduleProfileHolidaysApi,
-                    Command<
-                        ApiCommand<
-                            ListDeliveryScheduleProfileHolidaysApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
-                    ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>,
-                    ListDeliveryScheduleProfileHolidaysApi,
-                    CommandResult<
-                        ApiResult<
-                            ListDeliveryScheduleProfileHolidaysApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
-                ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>,
-                ListDeliveryScheduleProfileHolidaysApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<
+                    ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListDeliveryScheduleProfileHolidaysApi(
@@ -104,35 +65,26 @@ class _$ListDeliveryScheduleProfileHolidaysApi
   @override
   CommandState<ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
           ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
           ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
           ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListDeliveryScheduleProfileHolidaysApiRequest>,
           ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand,
-            [FullType(ListDeliveryScheduleProfileHolidaysApiRequest)]),
-        FullType(ApiResult,
-            [FullType(ListDeliveryScheduleProfileHolidaysApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

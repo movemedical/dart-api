@@ -264,29 +264,29 @@ class _$ListSalesOrgUnitItemCategoryLinksApiRequestActions
   final StatefulActionsOptions<
       ListSalesOrgUnitItemCategoryLinksApiRequest,
       ListSalesOrgUnitItemCategoryLinksApiRequestBuilder,
-      ListSalesOrgUnitItemCategoryLinksApiRequestActions> $options;
+      ListSalesOrgUnitItemCategoryLinksApiRequestActions> options$;
 
-  final ActionDispatcher<ListSalesOrgUnitItemCategoryLinksApiRequest> $replace;
+  final ActionDispatcher<ListSalesOrgUnitItemCategoryLinksApiRequest> replace$;
   final FieldDispatcher<String> salesOrgUnitId;
   final FieldDispatcher<bool> includeInherited;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListSalesOrgUnitItemCategoryLinksApiOrderBy>
       orderBy;
 
-  _$ListSalesOrgUnitItemCategoryLinksApiRequestActions._(this.$options)
-      : $replace = $options.action<ListSalesOrgUnitItemCategoryLinksApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        salesOrgUnitId = $options.field<String>(
+  _$ListSalesOrgUnitItemCategoryLinksApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListSalesOrgUnitItemCategoryLinksApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        salesOrgUnitId = options$.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
             (p, b) => p?.salesOrgUnitId = b),
-        includeInherited = $options.field<bool>(
+        includeInherited = options$.field<bool>(
             'includeInherited',
             (a) => a?.includeInherited,
             (s) => s?.includeInherited,
             (p, b) => p?.includeInherited = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -297,7 +297,7 @@ class _$ListSalesOrgUnitItemCategoryLinksApiRequestActions
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<
                 ListSalesOrgUnitItemCategoryLinksApiOrderBy>(
-            () => $options.stateful<
+            () => options$.stateful<
                     OrderByParams<ListSalesOrgUnitItemCategoryLinksApiOrderBy>,
                     OrderByParamsBuilder<
                         ListSalesOrgUnitItemCategoryLinksApiOrderBy>,
@@ -315,47 +315,42 @@ class _$ListSalesOrgUnitItemCategoryLinksApiRequestActions
       _$ListSalesOrgUnitItemCategoryLinksApiRequestActions._(options());
 
   @override
-  ListSalesOrgUnitItemCategoryLinksApiRequest get $initial =>
+  ListSalesOrgUnitItemCategoryLinksApiRequest get initialState$ =>
       ListSalesOrgUnitItemCategoryLinksApiRequest();
 
   @override
-  ListSalesOrgUnitItemCategoryLinksApiRequestBuilder $newBuilder() =>
+  ListSalesOrgUnitItemCategoryLinksApiRequestBuilder newBuilder$() =>
       ListSalesOrgUnitItemCategoryLinksApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.salesOrgUnitId,
         this.includeInherited,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    salesOrgUnitId.$reducer(reducer);
-    includeInherited.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    salesOrgUnitId.reducer$(reducer);
+    includeInherited.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListSalesOrgUnitItemCategoryLinksApiRequest);
 }

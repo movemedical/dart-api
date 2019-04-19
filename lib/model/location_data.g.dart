@@ -162,21 +162,21 @@ typedef StatefulActionsOptions<LocationData, LocationDataBuilder,
 
 class _$LocationDataActions extends LocationDataActions {
   final StatefulActionsOptions<LocationData, LocationDataBuilder,
-      LocationDataActions> $options;
+      LocationDataActions> options$;
 
-  final ActionDispatcher<LocationData> $replace;
+  final ActionDispatcher<LocationData> replace$;
   final FieldDispatcher<LocationType> locationType;
   final FieldDispatcher<String> locationId;
 
-  _$LocationDataActions._(this.$options)
-      : $replace =
-            $options.action<LocationData>('\$replace', (a) => a?.$replace),
-        locationType = $options.field<LocationType>(
+  _$LocationDataActions._(this.options$)
+      : replace$ =
+            options$.action<LocationData>('replace\$', (a) => a?.replace$),
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
         super._();
 
@@ -184,33 +184,29 @@ class _$LocationDataActions extends LocationDataActions {
       _$LocationDataActions._(options());
 
   @override
-  LocationData get $initial => LocationData();
+  LocationData get initialState$ => LocationData();
 
   @override
-  LocationDataBuilder $newBuilder() => LocationDataBuilder();
+  LocationDataBuilder newBuilder$() => LocationDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.locationType,
         this.locationId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    locationType.$reducer(reducer);
-    locationId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    locationType.reducer$(reducer);
+    locationId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(LocationData);
 }

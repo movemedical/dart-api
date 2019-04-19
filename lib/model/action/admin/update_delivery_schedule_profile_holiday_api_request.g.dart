@@ -306,10 +306,10 @@ class _$UpdateDeliveryScheduleProfileHolidayApiRequestActions
   final StatefulActionsOptions<
       UpdateDeliveryScheduleProfileHolidayApiRequest,
       UpdateDeliveryScheduleProfileHolidayApiRequestBuilder,
-      UpdateDeliveryScheduleProfileHolidayApiRequestActions> $options;
+      UpdateDeliveryScheduleProfileHolidayApiRequestActions> options$;
 
   final ActionDispatcher<UpdateDeliveryScheduleProfileHolidayApiRequest>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> profileId;
   final FieldDispatcher<String> parentId;
@@ -318,23 +318,23 @@ class _$UpdateDeliveryScheduleProfileHolidayApiRequestActions
   final FieldDispatcher<int> day;
   final FieldDispatcher<int> year;
 
-  _$UpdateDeliveryScheduleProfileHolidayApiRequestActions._(this.$options)
-      : $replace =
-            $options.action<UpdateDeliveryScheduleProfileHolidayApiRequest>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdateDeliveryScheduleProfileHolidayApiRequestActions._(this.options$)
+      : replace$ =
+            options$.action<UpdateDeliveryScheduleProfileHolidayApiRequest>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        profileId = $options.field<String>('profileId', (a) => a?.profileId,
+        profileId = options$.field<String>('profileId', (a) => a?.profileId,
             (s) => s?.profileId, (p, b) => p?.profileId = b),
-        parentId = $options.field<String>('parentId', (a) => a?.parentId,
+        parentId = options$.field<String>('parentId', (a) => a?.parentId,
             (s) => s?.parentId, (p, b) => p?.parentId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        month = $options.field<int>(
+        month = options$.field<int>(
             'month', (a) => a?.month, (s) => s?.month, (p, b) => p?.month = b),
-        day = $options.field<int>(
+        day = options$.field<int>(
             'day', (a) => a?.day, (s) => s?.day, (p, b) => p?.day = b),
-        year = $options.field<int>(
+        year = options$.field<int>(
             'year', (a) => a?.year, (s) => s?.year, (p, b) => p?.year = b),
         super._();
 
@@ -344,18 +344,18 @@ class _$UpdateDeliveryScheduleProfileHolidayApiRequestActions
       _$UpdateDeliveryScheduleProfileHolidayApiRequestActions._(options());
 
   @override
-  UpdateDeliveryScheduleProfileHolidayApiRequest get $initial =>
+  UpdateDeliveryScheduleProfileHolidayApiRequest get initialState$ =>
       UpdateDeliveryScheduleProfileHolidayApiRequest();
 
   @override
-  UpdateDeliveryScheduleProfileHolidayApiRequestBuilder $newBuilder() =>
+  UpdateDeliveryScheduleProfileHolidayApiRequestBuilder newBuilder$() =>
       UpdateDeliveryScheduleProfileHolidayApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.profileId,
         this.parentId,
@@ -366,24 +366,19 @@ class _$UpdateDeliveryScheduleProfileHolidayApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    profileId.$reducer(reducer);
-    parentId.$reducer(reducer);
-    name.$reducer(reducer);
-    month.$reducer(reducer);
-    day.$reducer(reducer);
-    year.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    profileId.reducer$(reducer);
+    parentId.reducer$(reducer);
+    name.reducer$(reducer);
+    month.reducer$(reducer);
+    day.reducer$(reducer);
+    year.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateDeliveryScheduleProfileHolidayApiRequest);
 }

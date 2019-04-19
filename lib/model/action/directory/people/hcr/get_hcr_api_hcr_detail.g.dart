@@ -770,9 +770,9 @@ typedef StatefulActionsOptions<GetHcrApiHcrDetail, GetHcrApiHcrDetailBuilder,
 
 class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
   final StatefulActionsOptions<GetHcrApiHcrDetail, GetHcrApiHcrDetailBuilder,
-      GetHcrApiHcrDetailActions> $options;
+      GetHcrApiHcrDetailActions> options$;
 
-  final ActionDispatcher<GetHcrApiHcrDetail> $replace;
+  final ActionDispatcher<GetHcrApiHcrDetail> replace$;
   final FieldDispatcher<String> id;
   final ListCustomersApiCustomerDetailsActions customer;
   final FieldDispatcher<String> orgId;
@@ -801,13 +801,13 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
   final FieldDispatcher<bool> phiAllowed;
   final FieldDispatcher<DateTime> lastVisibilityUpdateDate;
 
-  _$GetHcrApiHcrDetailActions._(this.$options)
-      : $replace = $options.action<GetHcrApiHcrDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetHcrApiHcrDetailActions._(this.options$)
+      : replace$ = options$.action<GetHcrApiHcrDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         customer = ListCustomersApiCustomerDetailsActions(() =>
-            $options.stateful<
+            options$.stateful<
                     ListCustomersApiCustomerDetails,
                     ListCustomersApiCustomerDetailsBuilder,
                     ListCustomersApiCustomerDetailsActions>(
@@ -816,104 +816,104 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
                 (s) => s?.customer,
                 (b) => b?.customer,
                 (parent, builder) => parent?.customer = builder)),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
+        orgType = options$.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        orgName = $options.field<String>('orgName', (a) => a?.orgName,
+        orgName = options$.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        hcrType = $options.field<HcrType>('hcrType', (a) => a?.hcrType,
+        hcrType = options$.field<HcrType>('hcrType', (a) => a?.hcrType,
             (s) => s?.hcrType, (p, b) => p?.hcrType = b),
-        hcrReference = $options.field<String>(
+        hcrReference = options$.field<String>(
             'hcrReference',
             (a) => a?.hcrReference,
             (s) => s?.hcrReference,
             (p, b) => p?.hcrReference = b),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        workPhoneNumber = PhoneNumberActions(() => $options
+        workPhoneNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'workPhoneNumber',
                 (a) => a.workPhoneNumber,
                 (s) => s?.workPhoneNumber,
                 (b) => b?.workPhoneNumber,
                 (parent, builder) => parent?.workPhoneNumber = builder)),
-        mobilePhoneNumber = PhoneNumberActions(() => $options
+        mobilePhoneNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'mobilePhoneNumber',
                 (a) => a.mobilePhoneNumber,
                 (s) => s?.mobilePhoneNumber,
                 (b) => b?.mobilePhoneNumber,
                 (parent, builder) => parent?.mobilePhoneNumber = builder)),
-        faxNumber = PhoneNumberActions(() => $options
+        faxNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'faxNumber',
                 (a) => a.faxNumber,
                 (s) => s?.faxNumber,
                 (b) => b?.faxNumber,
                 (parent, builder) => parent?.faxNumber = builder)),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        workingHomeId = $options.field<String>(
+        workingHomeId = options$.field<String>(
             'workingHomeId',
             (a) => a?.workingHomeId,
             (s) => s?.workingHomeId,
             (p, b) => p?.workingHomeId = b),
-        workingHomeName = $options.field<String>(
+        workingHomeName = options$.field<String>(
             'workingHomeName',
             (a) => a?.workingHomeName,
             (s) => s?.workingHomeName,
             (p, b) => p?.workingHomeName = b),
-        workingAtId = $options.field<String>(
+        workingAtId = options$.field<String>(
             'workingAtId',
             (a) => a?.workingAtId,
             (s) => s?.workingAtId,
             (p, b) => p?.workingAtId = b),
-        workingAtName = $options.field<String>(
+        workingAtName = options$.field<String>(
             'workingAtName',
             (a) => a?.workingAtName,
             (s) => s?.workingAtName,
             (p, b) => p?.workingAtName = b),
-        userId = $options.field<String>('userId', (a) => a?.userId,
+        userId = options$.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        userPerspective = $options.field<UserPerspective>(
+        userPerspective = options$.field<UserPerspective>(
             'userPerspective',
             (a) => a?.userPerspective,
             (s) => s?.userPerspective,
             (p, b) => p?.userPerspective = b),
-        userStatus = $options.field<UserStatus>(
+        userStatus = options$.field<UserStatus>(
             'userStatus',
             (a) => a?.userStatus,
             (s) => s?.userStatus,
             (p, b) => p?.userStatus = b),
-        userLocked = $options.field<bool>('userLocked', (a) => a?.userLocked,
+        userLocked = options$.field<bool>('userLocked', (a) => a?.userLocked,
             (s) => s?.userLocked, (p, b) => p?.userLocked = b),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+        startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
-        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
+        endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        directoryAdmin = $options.field<bool>(
+        directoryAdmin = options$.field<bool>(
             'directoryAdmin',
             (a) => a?.directoryAdmin,
             (s) => s?.directoryAdmin,
             (p, b) => p?.directoryAdmin = b),
-        phiAllowed = $options.field<bool>('phiAllowed', (a) => a?.phiAllowed,
+        phiAllowed = options$.field<bool>('phiAllowed', (a) => a?.phiAllowed,
             (s) => s?.phiAllowed, (p, b) => p?.phiAllowed = b),
-        lastVisibilityUpdateDate = $options.field<DateTime>(
+        lastVisibilityUpdateDate = options$.field<DateTime>(
             'lastVisibilityUpdateDate',
             (a) => a?.lastVisibilityUpdateDate,
             (s) => s?.lastVisibilityUpdateDate,
@@ -925,14 +925,14 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
       _$GetHcrApiHcrDetailActions._(options());
 
   @override
-  GetHcrApiHcrDetail get $initial => GetHcrApiHcrDetail();
+  GetHcrApiHcrDetail get initialState$ => GetHcrApiHcrDetail();
 
   @override
-  GetHcrApiHcrDetailBuilder $newBuilder() => GetHcrApiHcrDetailBuilder();
+  GetHcrApiHcrDetailBuilder newBuilder$() => GetHcrApiHcrDetailBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.customer,
         this.name,
         this.email,
@@ -941,11 +941,11 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
         this.faxNumber,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgId,
         this.orgType,
@@ -970,49 +970,45 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    customer.$reducer(reducer);
-    orgId.$reducer(reducer);
-    orgType.$reducer(reducer);
-    orgName.$reducer(reducer);
-    hcrType.$reducer(reducer);
-    hcrReference.$reducer(reducer);
-    name.$reducer(reducer);
-    email.$reducer(reducer);
-    workPhoneNumber.$reducer(reducer);
-    mobilePhoneNumber.$reducer(reducer);
-    faxNumber.$reducer(reducer);
-    active.$reducer(reducer);
-    workingHomeId.$reducer(reducer);
-    workingHomeName.$reducer(reducer);
-    workingAtId.$reducer(reducer);
-    workingAtName.$reducer(reducer);
-    userId.$reducer(reducer);
-    userPerspective.$reducer(reducer);
-    userStatus.$reducer(reducer);
-    userLocked.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    startDate.$reducer(reducer);
-    endDate.$reducer(reducer);
-    directoryAdmin.$reducer(reducer);
-    phiAllowed.$reducer(reducer);
-    lastVisibilityUpdateDate.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    customer.reducer$(reducer);
+    orgId.reducer$(reducer);
+    orgType.reducer$(reducer);
+    orgName.reducer$(reducer);
+    hcrType.reducer$(reducer);
+    hcrReference.reducer$(reducer);
+    name.reducer$(reducer);
+    email.reducer$(reducer);
+    workPhoneNumber.reducer$(reducer);
+    mobilePhoneNumber.reducer$(reducer);
+    faxNumber.reducer$(reducer);
+    active.reducer$(reducer);
+    workingHomeId.reducer$(reducer);
+    workingHomeName.reducer$(reducer);
+    workingAtId.reducer$(reducer);
+    workingAtName.reducer$(reducer);
+    userId.reducer$(reducer);
+    userPerspective.reducer$(reducer);
+    userStatus.reducer$(reducer);
+    userLocked.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    startDate.reducer$(reducer);
+    endDate.reducer$(reducer);
+    directoryAdmin.reducer$(reducer);
+    phiAllowed.reducer$(reducer);
+    lastVisibilityUpdateDate.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    customer.$middleware(middleware);
-    name.$middleware(middleware);
-    email.$middleware(middleware);
-    workPhoneNumber.$middleware(middleware);
-    mobilePhoneNumber.$middleware(middleware);
-    faxNumber.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    customer.middleware$(middleware);
+    name.middleware$(middleware);
+    email.middleware$(middleware);
+    workPhoneNumber.middleware$(middleware);
+    mobilePhoneNumber.middleware$(middleware);
+    faxNumber.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetHcrApiHcrDetail);
 }

@@ -248,22 +248,22 @@ class _$ListDceToOrgUnitLinksApiRequestActions
   final StatefulActionsOptions<
       ListDceToOrgUnitLinksApiRequest,
       ListDceToOrgUnitLinksApiRequestBuilder,
-      ListDceToOrgUnitLinksApiRequestActions> $options;
+      ListDceToOrgUnitLinksApiRequestActions> options$;
 
-  final ActionDispatcher<ListDceToOrgUnitLinksApiRequest> $replace;
+  final ActionDispatcher<ListDceToOrgUnitLinksApiRequest> replace$;
   final FieldDispatcher<String> dceId;
   final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListDceToOrgUnitLinksApiOrderBy> orderBy;
 
-  _$ListDceToOrgUnitLinksApiRequestActions._(this.$options)
-      : $replace = $options.action<ListDceToOrgUnitLinksApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        dceId = $options.field<String>(
+  _$ListDceToOrgUnitLinksApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListDceToOrgUnitLinksApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        dceId = options$.field<String>(
             'dceId', (a) => a?.dceId, (s) => s?.dceId, (p, b) => p?.dceId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -273,7 +273,7 @@ class _$ListDceToOrgUnitLinksApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListDceToOrgUnitLinksApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListDceToOrgUnitLinksApiOrderBy>,
                     OrderByParamsBuilder<ListDceToOrgUnitLinksApiOrderBy>,
                     OrderByParamsActions<ListDceToOrgUnitLinksApiOrderBy>>(
@@ -289,47 +289,42 @@ class _$ListDceToOrgUnitLinksApiRequestActions
       _$ListDceToOrgUnitLinksApiRequestActions._(options());
 
   @override
-  ListDceToOrgUnitLinksApiRequest get $initial =>
+  ListDceToOrgUnitLinksApiRequest get initialState$ =>
       ListDceToOrgUnitLinksApiRequest();
 
   @override
-  ListDceToOrgUnitLinksApiRequestBuilder $newBuilder() =>
+  ListDceToOrgUnitLinksApiRequestBuilder newBuilder$() =>
       ListDceToOrgUnitLinksApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.dceId,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    dceId.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    dceId.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListDceToOrgUnitLinksApiRequest);
 }

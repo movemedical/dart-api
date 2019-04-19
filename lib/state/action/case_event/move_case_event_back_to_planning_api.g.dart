@@ -22,64 +22,29 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
           ApiResult<Nothing>>,
-      MoveCaseEventBackToPlanningApi> $options;
+      MoveCaseEventBackToPlanningApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Nothing>, MoveCaseEventBackToPlanningApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Nothing>,
-          MoveCaseEventBackToPlanningApi,
-          Command<ApiCommand<MoveCaseEventBackToPlanningApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Nothing>,
-          MoveCaseEventBackToPlanningApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Nothing>,
-          MoveCaseEventBackToPlanningApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<MoveCaseEventBackToPlanningApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$MoveCaseEventBackToPlanningApi._(this.$options)
-      : $replace = $options.action<
+  _$MoveCaseEventBackToPlanningApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-                ApiResult<Nothing>,
-                MoveCaseEventBackToPlanningApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-                    ApiResult<Nothing>,
-                    MoveCaseEventBackToPlanningApi,
-                    Command<
-                        ApiCommand<MoveCaseEventBackToPlanningApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-                    ApiResult<Nothing>,
-                    MoveCaseEventBackToPlanningApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-                ApiResult<Nothing>,
-                MoveCaseEventBackToPlanningApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<MoveCaseEventBackToPlanningApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$MoveCaseEventBackToPlanningApi(
@@ -89,33 +54,26 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
   @override
   CommandState<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(MoveCaseEventBackToPlanningApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

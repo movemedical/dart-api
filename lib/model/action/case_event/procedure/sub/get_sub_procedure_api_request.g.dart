@@ -154,15 +154,15 @@ class _$GetSubProcedureApiRequestActions
   final StatefulActionsOptions<
       GetSubProcedureApiRequest,
       GetSubProcedureApiRequestBuilder,
-      GetSubProcedureApiRequestActions> $options;
+      GetSubProcedureApiRequestActions> options$;
 
-  final ActionDispatcher<GetSubProcedureApiRequest> $replace;
+  final ActionDispatcher<GetSubProcedureApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$GetSubProcedureApiRequestActions._(this.$options)
-      : $replace = $options.action<GetSubProcedureApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetSubProcedureApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetSubProcedureApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -171,32 +171,28 @@ class _$GetSubProcedureApiRequestActions
       _$GetSubProcedureApiRequestActions._(options());
 
   @override
-  GetSubProcedureApiRequest get $initial => GetSubProcedureApiRequest();
+  GetSubProcedureApiRequest get initialState$ => GetSubProcedureApiRequest();
 
   @override
-  GetSubProcedureApiRequestBuilder $newBuilder() =>
+  GetSubProcedureApiRequestBuilder newBuilder$() =>
       GetSubProcedureApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetSubProcedureApiRequest);
 }

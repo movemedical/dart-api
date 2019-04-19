@@ -120,13 +120,13 @@ class _$ListCalendarSubscriptionsApiRequestActions
   final StatefulActionsOptions<
       ListCalendarSubscriptionsApiRequest,
       ListCalendarSubscriptionsApiRequestBuilder,
-      ListCalendarSubscriptionsApiRequestActions> $options;
+      ListCalendarSubscriptionsApiRequestActions> options$;
 
-  final ActionDispatcher<ListCalendarSubscriptionsApiRequest> $replace;
+  final ActionDispatcher<ListCalendarSubscriptionsApiRequest> replace$;
 
-  _$ListCalendarSubscriptionsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListCalendarSubscriptionsApiRequest>(
-            '\$replace', (a) => a?.$replace),
+  _$ListCalendarSubscriptionsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListCalendarSubscriptionsApiRequest>(
+            'replace\$', (a) => a?.replace$),
         super._();
 
   factory _$ListCalendarSubscriptionsApiRequestActions(
@@ -134,22 +134,17 @@ class _$ListCalendarSubscriptionsApiRequestActions
       _$ListCalendarSubscriptionsApiRequestActions._(options());
 
   @override
-  ListCalendarSubscriptionsApiRequest get $initial =>
+  ListCalendarSubscriptionsApiRequest get initialState$ =>
       ListCalendarSubscriptionsApiRequest();
 
   @override
-  ListCalendarSubscriptionsApiRequestBuilder $newBuilder() =>
+  ListCalendarSubscriptionsApiRequestBuilder newBuilder$() =>
       ListCalendarSubscriptionsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListCalendarSubscriptionsApiRequest);
 }

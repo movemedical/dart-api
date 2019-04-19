@@ -22,67 +22,32 @@ class _$ListStockSnapshotsApi extends ListStockSnapshotsApi {
           ApiResult<ListStockSnapshotsApiResponse>>,
       CommandStateBuilder<ApiCommand<ListStockSnapshotsApiRequest>,
           ApiResult<ListStockSnapshotsApiResponse>>,
-      ListStockSnapshotsApi> $options;
+      ListStockSnapshotsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListStockSnapshotsApiRequest>,
-          ApiResult<ListStockSnapshotsApiResponse>>> $replace;
+          ApiResult<ListStockSnapshotsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListStockSnapshotsApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockSnapshotsApiRequest>,
-          ApiResult<ListStockSnapshotsApiResponse>,
-          ListStockSnapshotsApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockSnapshotsApiRequest>,
-          ApiResult<ListStockSnapshotsApiResponse>,
-          ListStockSnapshotsApi,
-          Command<ApiCommand<ListStockSnapshotsApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockSnapshotsApiRequest>,
-          ApiResult<ListStockSnapshotsApiResponse>,
-          ListStockSnapshotsApi,
-          CommandResult<ApiResult<ListStockSnapshotsApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockSnapshotsApiRequest>,
-          ApiResult<ListStockSnapshotsApiResponse>,
-          ListStockSnapshotsApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListStockSnapshotsApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListStockSnapshotsApi._(this.$options)
-      : $replace = $options.action<
+  _$ListStockSnapshotsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListStockSnapshotsApiRequest>,
                     ApiResult<ListStockSnapshotsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockSnapshotsApiRequest>,
-                ApiResult<ListStockSnapshotsApiResponse>,
-                ListStockSnapshotsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListStockSnapshotsApiRequest>,
-                    ApiResult<ListStockSnapshotsApiResponse>,
-                    ListStockSnapshotsApi,
-                    Command<ApiCommand<ListStockSnapshotsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListStockSnapshotsApiRequest>,
-                    ApiResult<ListStockSnapshotsApiResponse>,
-                    ListStockSnapshotsApi,
-                    CommandResult<ApiResult<ListStockSnapshotsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockSnapshotsApiRequest>,
-                ApiResult<ListStockSnapshotsApiResponse>,
-                ListStockSnapshotsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListStockSnapshotsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListStockSnapshotsApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListStockSnapshotsApi(ListStockSnapshotsApiOptions options) =>
@@ -91,32 +56,26 @@ class _$ListStockSnapshotsApi extends ListStockSnapshotsApi {
   @override
   CommandState<ApiCommand<ListStockSnapshotsApiRequest>,
           ApiResult<ListStockSnapshotsApiResponse>>
-      get $initial => CommandState<ApiCommand<ListStockSnapshotsApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<ListStockSnapshotsApiRequest>,
           ApiResult<ListStockSnapshotsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListStockSnapshotsApiRequest>,
           ApiResult<ListStockSnapshotsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListStockSnapshotsApiRequest>,
           ApiResult<ListStockSnapshotsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListStockSnapshotsApiRequest)]),
-        FullType(ApiResult, [FullType(ListStockSnapshotsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

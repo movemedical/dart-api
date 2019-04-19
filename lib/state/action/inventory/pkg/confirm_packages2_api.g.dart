@@ -20,57 +20,29 @@ class _$ConfirmPackages2Api extends ConfirmPackages2Api {
       CommandState<ApiCommand<ConfirmPackages2ApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<ConfirmPackages2ApiRequest>,
           ApiResult<Nothing>>,
-      ConfirmPackages2Api> $options;
+      ConfirmPackages2Api> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ConfirmPackages2ApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmPackages2ApiRequest>, ApiResult<Nothing>,
-          ConfirmPackages2Api, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ConfirmPackages2ApiRequest>,
-          ApiResult<Nothing>,
-          ConfirmPackages2Api,
-          Command<ApiCommand<ConfirmPackages2ApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmPackages2ApiRequest>, ApiResult<Nothing>,
-          ConfirmPackages2Api, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmPackages2ApiRequest>, ApiResult<Nothing>,
-          ConfirmPackages2Api, CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ConfirmPackages2ApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ConfirmPackages2Api._(this.$options)
-      : $replace = $options.action<
+  _$ConfirmPackages2Api._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<ConfirmPackages2ApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ConfirmPackages2ApiRequest>,
-                ApiResult<Nothing>,
-                ConfirmPackages2Api,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ConfirmPackages2ApiRequest>,
-                    ApiResult<Nothing>,
-                    ConfirmPackages2Api,
-                    Command<ApiCommand<ConfirmPackages2ApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ConfirmPackages2ApiRequest>,
-                    ApiResult<Nothing>,
-                    ConfirmPackages2Api,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ConfirmPackages2ApiRequest>,
-                ApiResult<Nothing>,
-                ConfirmPackages2Api,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ConfirmPackages2ApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ConfirmPackages2Api(ConfirmPackages2ApiOptions options) =>
@@ -78,31 +50,24 @@ class _$ConfirmPackages2Api extends ConfirmPackages2Api {
 
   @override
   CommandState<ApiCommand<ConfirmPackages2ApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<ConfirmPackages2ApiRequest>,
+      get initialState$ => CommandState<ApiCommand<ConfirmPackages2ApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<ConfirmPackages2ApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ConfirmPackages2ApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ConfirmPackages2ApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

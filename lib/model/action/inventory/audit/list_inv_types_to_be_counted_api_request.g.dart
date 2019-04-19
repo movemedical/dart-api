@@ -227,19 +227,19 @@ class _$ListInvTypesToBeCountedApiRequestActions
   final StatefulActionsOptions<
       ListInvTypesToBeCountedApiRequest,
       ListInvTypesToBeCountedApiRequestBuilder,
-      ListInvTypesToBeCountedApiRequestActions> $options;
+      ListInvTypesToBeCountedApiRequestActions> options$;
 
-  final ActionDispatcher<ListInvTypesToBeCountedApiRequest> $replace;
+  final ActionDispatcher<ListInvTypesToBeCountedApiRequest> replace$;
   final FieldDispatcher<String> auditId;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListInvTypesToBeCountedApiOrderBy> sortBy;
 
-  _$ListInvTypesToBeCountedApiRequestActions._(this.$options)
-      : $replace = $options.action<ListInvTypesToBeCountedApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+  _$ListInvTypesToBeCountedApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListInvTypesToBeCountedApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -249,7 +249,7 @@ class _$ListInvTypesToBeCountedApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         sortBy = OrderByParamsActions<ListInvTypesToBeCountedApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListInvTypesToBeCountedApiOrderBy>,
                     OrderByParamsBuilder<ListInvTypesToBeCountedApiOrderBy>,
                     OrderByParamsActions<ListInvTypesToBeCountedApiOrderBy>>(
@@ -265,45 +265,40 @@ class _$ListInvTypesToBeCountedApiRequestActions
       _$ListInvTypesToBeCountedApiRequestActions._(options());
 
   @override
-  ListInvTypesToBeCountedApiRequest get $initial =>
+  ListInvTypesToBeCountedApiRequest get initialState$ =>
       ListInvTypesToBeCountedApiRequest();
 
   @override
-  ListInvTypesToBeCountedApiRequestBuilder $newBuilder() =>
+  ListInvTypesToBeCountedApiRequestBuilder newBuilder$() =>
       ListInvTypesToBeCountedApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.sortBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditId.$reducer(reducer);
-    paging.$reducer(reducer);
-    sortBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditId.reducer$(reducer);
+    paging.reducer$(reducer);
+    sortBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    sortBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    sortBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListInvTypesToBeCountedApiRequest);
 }

@@ -22,67 +22,32 @@ class _$ListWebServiceLogsApi extends ListWebServiceLogsApi {
           ApiResult<ListWebServiceLogsApiResponse>>,
       CommandStateBuilder<ApiCommand<ListWebServiceLogsApiRequest>,
           ApiResult<ListWebServiceLogsApiResponse>>,
-      ListWebServiceLogsApi> $options;
+      ListWebServiceLogsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListWebServiceLogsApiRequest>,
-          ApiResult<ListWebServiceLogsApiResponse>>> $replace;
+          ApiResult<ListWebServiceLogsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListWebServiceLogsApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListWebServiceLogsApiRequest>,
-          ApiResult<ListWebServiceLogsApiResponse>,
-          ListWebServiceLogsApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListWebServiceLogsApiRequest>,
-          ApiResult<ListWebServiceLogsApiResponse>,
-          ListWebServiceLogsApi,
-          Command<ApiCommand<ListWebServiceLogsApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListWebServiceLogsApiRequest>,
-          ApiResult<ListWebServiceLogsApiResponse>,
-          ListWebServiceLogsApi,
-          CommandResult<ApiResult<ListWebServiceLogsApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListWebServiceLogsApiRequest>,
-          ApiResult<ListWebServiceLogsApiResponse>,
-          ListWebServiceLogsApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListWebServiceLogsApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListWebServiceLogsApi._(this.$options)
-      : $replace = $options.action<
+  _$ListWebServiceLogsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListWebServiceLogsApiRequest>,
                     ApiResult<ListWebServiceLogsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListWebServiceLogsApiRequest>,
-                ApiResult<ListWebServiceLogsApiResponse>,
-                ListWebServiceLogsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListWebServiceLogsApiRequest>,
-                    ApiResult<ListWebServiceLogsApiResponse>,
-                    ListWebServiceLogsApi,
-                    Command<ApiCommand<ListWebServiceLogsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListWebServiceLogsApiRequest>,
-                    ApiResult<ListWebServiceLogsApiResponse>,
-                    ListWebServiceLogsApi,
-                    CommandResult<ApiResult<ListWebServiceLogsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListWebServiceLogsApiRequest>,
-                ApiResult<ListWebServiceLogsApiResponse>,
-                ListWebServiceLogsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListWebServiceLogsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListWebServiceLogsApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListWebServiceLogsApi(ListWebServiceLogsApiOptions options) =>
@@ -91,32 +56,26 @@ class _$ListWebServiceLogsApi extends ListWebServiceLogsApi {
   @override
   CommandState<ApiCommand<ListWebServiceLogsApiRequest>,
           ApiResult<ListWebServiceLogsApiResponse>>
-      get $initial => CommandState<ApiCommand<ListWebServiceLogsApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<ListWebServiceLogsApiRequest>,
           ApiResult<ListWebServiceLogsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListWebServiceLogsApiRequest>,
           ApiResult<ListWebServiceLogsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListWebServiceLogsApiRequest>,
           ApiResult<ListWebServiceLogsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListWebServiceLogsApiRequest)]),
-        FullType(ApiResult, [FullType(ListWebServiceLogsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

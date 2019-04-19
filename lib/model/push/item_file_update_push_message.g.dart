@@ -229,27 +229,27 @@ class _$ItemFileUpdatePushMessageActions
   final StatefulActionsOptions<
       ItemFileUpdatePushMessage,
       ItemFileUpdatePushMessageBuilder,
-      ItemFileUpdatePushMessageActions> $options;
+      ItemFileUpdatePushMessageActions> options$;
 
-  final ActionDispatcher<ItemFileUpdatePushMessage> $replace;
+  final ActionDispatcher<ItemFileUpdatePushMessage> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> fileId;
   final FieldDispatcher<ItemFileUpdatePushMessageUpdateType> updateType;
   final FieldDispatcher<double> percentUploadedDecimalForm;
 
-  _$ItemFileUpdatePushMessageActions._(this.$options)
-      : $replace = $options.action<ItemFileUpdatePushMessage>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$ItemFileUpdatePushMessageActions._(this.options$)
+      : replace$ = options$.action<ItemFileUpdatePushMessage>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        updateType = $options.field<ItemFileUpdatePushMessageUpdateType>(
+        updateType = options$.field<ItemFileUpdatePushMessageUpdateType>(
             'updateType',
             (a) => a?.updateType,
             (s) => s?.updateType,
             (p, b) => p?.updateType = b),
-        percentUploadedDecimalForm = $options.field<double>(
+        percentUploadedDecimalForm = options$.field<double>(
             'percentUploadedDecimalForm',
             (a) => a?.percentUploadedDecimalForm,
             (s) => s?.percentUploadedDecimalForm,
@@ -261,17 +261,17 @@ class _$ItemFileUpdatePushMessageActions
       _$ItemFileUpdatePushMessageActions._(options());
 
   @override
-  ItemFileUpdatePushMessage get $initial => ItemFileUpdatePushMessage();
+  ItemFileUpdatePushMessage get initialState$ => ItemFileUpdatePushMessage();
 
   @override
-  ItemFileUpdatePushMessageBuilder $newBuilder() =>
+  ItemFileUpdatePushMessageBuilder newBuilder$() =>
       ItemFileUpdatePushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.fileId,
         this.updateType,
@@ -279,20 +279,16 @@ class _$ItemFileUpdatePushMessageActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    fileId.$reducer(reducer);
-    updateType.$reducer(reducer);
-    percentUploadedDecimalForm.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    fileId.reducer$(reducer);
+    updateType.reducer$(reducer);
+    percentUploadedDecimalForm.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ItemFileUpdatePushMessage);
 }

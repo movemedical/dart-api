@@ -241,27 +241,27 @@ typedef StatefulActionsOptions<
 
 class _$ListCaseTypesApiRequestActions extends ListCaseTypesApiRequestActions {
   final StatefulActionsOptions<ListCaseTypesApiRequest,
-      ListCaseTypesApiRequestBuilder, ListCaseTypesApiRequestActions> $options;
+      ListCaseTypesApiRequestBuilder, ListCaseTypesApiRequestActions> options$;
 
-  final ActionDispatcher<ListCaseTypesApiRequest> $replace;
+  final ActionDispatcher<ListCaseTypesApiRequest> replace$;
   final FieldDispatcher<String> search;
   final FieldDispatcher<BuiltList<String>> bizUnitIds;
   final FieldDispatcher<bool> active;
   final PaginationParamsActions paging;
 
-  _$ListCaseTypesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListCaseTypesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$ListCaseTypesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListCaseTypesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        bizUnitIds = $options.field<BuiltList<String>>(
+        bizUnitIds = options$.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -277,44 +277,40 @@ class _$ListCaseTypesApiRequestActions extends ListCaseTypesApiRequestActions {
       _$ListCaseTypesApiRequestActions._(options());
 
   @override
-  ListCaseTypesApiRequest get $initial => ListCaseTypesApiRequest();
+  ListCaseTypesApiRequest get initialState$ => ListCaseTypesApiRequest();
 
   @override
-  ListCaseTypesApiRequestBuilder $newBuilder() =>
+  ListCaseTypesApiRequestBuilder newBuilder$() =>
       ListCaseTypesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
         this.bizUnitIds,
         this.active,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
-    bizUnitIds.$reducer(reducer);
-    active.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
+    bizUnitIds.reducer$(reducer);
+    active.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListCaseTypesApiRequest);
 }

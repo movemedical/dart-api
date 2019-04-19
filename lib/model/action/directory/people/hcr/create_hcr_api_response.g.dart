@@ -191,21 +191,21 @@ typedef StatefulActionsOptions<
 
 class _$CreateHcrApiResponseActions extends CreateHcrApiResponseActions {
   final StatefulActionsOptions<CreateHcrApiResponse,
-      CreateHcrApiResponseBuilder, CreateHcrApiResponseActions> $options;
+      CreateHcrApiResponseBuilder, CreateHcrApiResponseActions> options$;
 
-  final ActionDispatcher<CreateHcrApiResponse> $replace;
+  final ActionDispatcher<CreateHcrApiResponse> replace$;
   final FieldDispatcher<String> hcrId;
   final FieldDispatcher<String> userId;
   final FieldDispatcher<String> contactId;
 
-  _$CreateHcrApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateHcrApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        hcrId = $options.field<String>(
+  _$CreateHcrApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateHcrApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        hcrId = options$.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        userId = $options.field<String>('userId', (a) => a?.userId,
+        userId = options$.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        contactId = $options.field<String>('contactId', (a) => a?.contactId,
+        contactId = options$.field<String>('contactId', (a) => a?.contactId,
             (s) => s?.contactId, (p, b) => p?.contactId = b),
         super._();
 
@@ -214,35 +214,31 @@ class _$CreateHcrApiResponseActions extends CreateHcrApiResponseActions {
       _$CreateHcrApiResponseActions._(options());
 
   @override
-  CreateHcrApiResponse get $initial => CreateHcrApiResponse();
+  CreateHcrApiResponse get initialState$ => CreateHcrApiResponse();
 
   @override
-  CreateHcrApiResponseBuilder $newBuilder() => CreateHcrApiResponseBuilder();
+  CreateHcrApiResponseBuilder newBuilder$() => CreateHcrApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.hcrId,
         this.userId,
         this.contactId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    hcrId.$reducer(reducer);
-    userId.$reducer(reducer);
-    contactId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    hcrId.reducer$(reducer);
+    userId.reducer$(reducer);
+    contactId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateHcrApiResponse);
 }

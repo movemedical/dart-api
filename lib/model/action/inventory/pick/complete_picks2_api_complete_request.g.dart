@@ -233,30 +233,30 @@ class _$CompletePicks2ApiCompleteRequestActions
   final StatefulActionsOptions<
       CompletePicks2ApiCompleteRequest,
       CompletePicks2ApiCompleteRequestBuilder,
-      CompletePicks2ApiCompleteRequestActions> $options;
+      CompletePicks2ApiCompleteRequestActions> options$;
 
-  final ActionDispatcher<CompletePicks2ApiCompleteRequest> $replace;
+  final ActionDispatcher<CompletePicks2ApiCompleteRequest> replace$;
   final FieldDispatcher<String> pickId;
   final FieldDispatcher<String> pickedStockId;
   final FieldDispatcher<StockContainerType> toContainerType;
   final FieldDispatcher<String> toContainerId;
 
-  _$CompletePicks2ApiCompleteRequestActions._(this.$options)
-      : $replace = $options.action<CompletePicks2ApiCompleteRequest>(
-            '\$replace', (a) => a?.$replace),
-        pickId = $options.field<String>('pickId', (a) => a?.pickId,
+  _$CompletePicks2ApiCompleteRequestActions._(this.options$)
+      : replace$ = options$.action<CompletePicks2ApiCompleteRequest>(
+            'replace\$', (a) => a?.replace$),
+        pickId = options$.field<String>('pickId', (a) => a?.pickId,
             (s) => s?.pickId, (p, b) => p?.pickId = b),
-        pickedStockId = $options.field<String>(
+        pickedStockId = options$.field<String>(
             'pickedStockId',
             (a) => a?.pickedStockId,
             (s) => s?.pickedStockId,
             (p, b) => p?.pickedStockId = b),
-        toContainerType = $options.field<StockContainerType>(
+        toContainerType = options$.field<StockContainerType>(
             'toContainerType',
             (a) => a?.toContainerType,
             (s) => s?.toContainerType,
             (p, b) => p?.toContainerType = b),
-        toContainerId = $options.field<String>(
+        toContainerId = options$.field<String>(
             'toContainerId',
             (a) => a?.toContainerId,
             (s) => s?.toContainerId,
@@ -268,18 +268,18 @@ class _$CompletePicks2ApiCompleteRequestActions
       _$CompletePicks2ApiCompleteRequestActions._(options());
 
   @override
-  CompletePicks2ApiCompleteRequest get $initial =>
+  CompletePicks2ApiCompleteRequest get initialState$ =>
       CompletePicks2ApiCompleteRequest();
 
   @override
-  CompletePicks2ApiCompleteRequestBuilder $newBuilder() =>
+  CompletePicks2ApiCompleteRequestBuilder newBuilder$() =>
       CompletePicks2ApiCompleteRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.pickId,
         this.pickedStockId,
         this.toContainerType,
@@ -287,21 +287,16 @@ class _$CompletePicks2ApiCompleteRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    pickId.$reducer(reducer);
-    pickedStockId.$reducer(reducer);
-    toContainerType.$reducer(reducer);
-    toContainerId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    pickId.reducer$(reducer);
+    pickedStockId.reducer$(reducer);
+    toContainerType.reducer$(reducer);
+    toContainerId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CompletePicks2ApiCompleteRequest);
 }

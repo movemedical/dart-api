@@ -230,17 +230,17 @@ class _$RequestSalesOrderExportDocApiRequestActions
   final StatefulActionsOptions<
       RequestSalesOrderExportDocApiRequest,
       RequestSalesOrderExportDocApiRequestBuilder,
-      RequestSalesOrderExportDocApiRequestActions> $options;
+      RequestSalesOrderExportDocApiRequestActions> options$;
 
-  final ActionDispatcher<RequestSalesOrderExportDocApiRequest> $replace;
+  final ActionDispatcher<RequestSalesOrderExportDocApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final ListSalesOrdersApiRequestActions salesOrderRequest;
 
-  _$RequestSalesOrderExportDocApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestSalesOrderExportDocApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestSalesOrderExportDocApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestSalesOrderExportDocApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -249,10 +249,10 @@ class _$RequestSalesOrderExportDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
         salesOrderRequest = ListSalesOrdersApiRequestActions(() =>
-            $options.stateful<
+            options$.stateful<
                     ListSalesOrdersApiRequest,
                     ListSalesOrdersApiRequestBuilder,
                     ListSalesOrdersApiRequestActions>(
@@ -268,45 +268,40 @@ class _$RequestSalesOrderExportDocApiRequestActions
       _$RequestSalesOrderExportDocApiRequestActions._(options());
 
   @override
-  RequestSalesOrderExportDocApiRequest get $initial =>
+  RequestSalesOrderExportDocApiRequest get initialState$ =>
       RequestSalesOrderExportDocApiRequest();
 
   @override
-  RequestSalesOrderExportDocApiRequestBuilder $newBuilder() =>
+  RequestSalesOrderExportDocApiRequestBuilder newBuilder$() =>
       RequestSalesOrderExportDocApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
         this.salesOrderRequest,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.format,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    format.$reducer(reducer);
-    salesOrderRequest.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    format.reducer$(reducer);
+    salesOrderRequest.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
-    salesOrderRequest.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
+    salesOrderRequest.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestSalesOrderExportDocApiRequest);
 }

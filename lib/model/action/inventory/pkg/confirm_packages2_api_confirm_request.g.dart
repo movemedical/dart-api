@@ -222,24 +222,24 @@ class _$ConfirmPackages2ApiConfirmRequestActions
   final StatefulActionsOptions<
       ConfirmPackages2ApiConfirmRequest,
       ConfirmPackages2ApiConfirmRequestBuilder,
-      ConfirmPackages2ApiConfirmRequestActions> $options;
+      ConfirmPackages2ApiConfirmRequestActions> options$;
 
-  final ActionDispatcher<ConfirmPackages2ApiConfirmRequest> $replace;
+  final ActionDispatcher<ConfirmPackages2ApiConfirmRequest> replace$;
   final FieldDispatcher<String> packageId;
   final FieldDispatcher<bool> autoConfirmAdjustments;
   final StockContainerDataActions toContainerOverride;
 
-  _$ConfirmPackages2ApiConfirmRequestActions._(this.$options)
-      : $replace = $options.action<ConfirmPackages2ApiConfirmRequest>(
-            '\$replace', (a) => a?.$replace),
-        packageId = $options.field<String>('packageId', (a) => a?.packageId,
+  _$ConfirmPackages2ApiConfirmRequestActions._(this.options$)
+      : replace$ = options$.action<ConfirmPackages2ApiConfirmRequest>(
+            'replace\$', (a) => a?.replace$),
+        packageId = options$.field<String>('packageId', (a) => a?.packageId,
             (s) => s?.packageId, (p, b) => p?.packageId = b),
-        autoConfirmAdjustments = $options.field<bool>(
+        autoConfirmAdjustments = options$.field<bool>(
             'autoConfirmAdjustments',
             (a) => a?.autoConfirmAdjustments,
             (s) => s?.autoConfirmAdjustments,
             (p, b) => p?.autoConfirmAdjustments = b),
-        toContainerOverride = StockContainerDataActions(() => $options.stateful<
+        toContainerOverride = StockContainerDataActions(() => options$.stateful<
                 StockContainerData,
                 StockContainerDataBuilder,
                 StockContainerDataActions>(
@@ -255,44 +255,39 @@ class _$ConfirmPackages2ApiConfirmRequestActions
       _$ConfirmPackages2ApiConfirmRequestActions._(options());
 
   @override
-  ConfirmPackages2ApiConfirmRequest get $initial =>
+  ConfirmPackages2ApiConfirmRequest get initialState$ =>
       ConfirmPackages2ApiConfirmRequest();
 
   @override
-  ConfirmPackages2ApiConfirmRequestBuilder $newBuilder() =>
+  ConfirmPackages2ApiConfirmRequestBuilder newBuilder$() =>
       ConfirmPackages2ApiConfirmRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toContainerOverride,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.packageId,
         this.autoConfirmAdjustments,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    packageId.$reducer(reducer);
-    autoConfirmAdjustments.$reducer(reducer);
-    toContainerOverride.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    packageId.reducer$(reducer);
+    autoConfirmAdjustments.reducer$(reducer);
+    toContainerOverride.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    toContainerOverride.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    toContainerOverride.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ConfirmPackages2ApiConfirmRequest);
 }

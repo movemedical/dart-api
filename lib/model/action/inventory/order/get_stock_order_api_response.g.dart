@@ -319,9 +319,9 @@ class _$GetStockOrderApiResponseActions
   final StatefulActionsOptions<
       GetStockOrderApiResponse,
       GetStockOrderApiResponseBuilder,
-      GetStockOrderApiResponseActions> $options;
+      GetStockOrderApiResponseActions> options$;
 
-  final ActionDispatcher<GetStockOrderApiResponse> $replace;
+  final ActionDispatcher<GetStockOrderApiResponse> replace$;
   final GetStockOrderApiOrderActions order;
   final GetStockOrderApiDisplayRulesActions displayRules;
   final FieldDispatcher<BuiltList<MovePresence>> presences;
@@ -329,10 +329,10 @@ class _$GetStockOrderApiResponseActions
   final FieldDispatcher<BuiltList<CustomDoc>> customDocs;
   final FieldDispatcher<BuiltList<GetStockOrderApiOrderAttribute>> attributes;
 
-  _$GetStockOrderApiResponseActions._(this.$options)
-      : $replace = $options.action<GetStockOrderApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        order = GetStockOrderApiOrderActions(() => $options.stateful<
+  _$GetStockOrderApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetStockOrderApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        order = GetStockOrderApiOrderActions(() => options$.stateful<
                 GetStockOrderApiOrder,
                 GetStockOrderApiOrderBuilder,
                 GetStockOrderApiOrderActions>(
@@ -342,7 +342,7 @@ class _$GetStockOrderApiResponseActions
             (b) => b?.order,
             (parent, builder) => parent?.order = builder)),
         displayRules = GetStockOrderApiDisplayRulesActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetStockOrderApiDisplayRules,
                     GetStockOrderApiDisplayRulesBuilder,
                     GetStockOrderApiDisplayRulesActions>(
@@ -351,22 +351,22 @@ class _$GetStockOrderApiResponseActions
                 (s) => s?.displayRules,
                 (b) => b?.displayRules,
                 (parent, builder) => parent?.displayRules = builder)),
-        presences = $options.field<BuiltList<MovePresence>>(
+        presences = options$.field<BuiltList<MovePresence>>(
             'presences',
             (a) => a?.presences,
             (s) => s?.presences,
             (p, b) => p?.presences = b),
-        orderCustomFieldValues = $options.field<BuiltList<CustomFieldValue>>(
+        orderCustomFieldValues = options$.field<BuiltList<CustomFieldValue>>(
             'orderCustomFieldValues',
             (a) => a?.orderCustomFieldValues,
             (s) => s?.orderCustomFieldValues,
             (p, b) => p?.orderCustomFieldValues = b),
-        customDocs = $options.field<BuiltList<CustomDoc>>(
+        customDocs = options$.field<BuiltList<CustomDoc>>(
             'customDocs',
             (a) => a?.customDocs,
             (s) => s?.customDocs,
             (p, b) => p?.customDocs = b),
-        attributes = $options.field<BuiltList<GetStockOrderApiOrderAttribute>>(
+        attributes = options$.field<BuiltList<GetStockOrderApiOrderAttribute>>(
             'attributes',
             (a) => a?.attributes,
             (s) => s?.attributes,
@@ -378,24 +378,24 @@ class _$GetStockOrderApiResponseActions
       _$GetStockOrderApiResponseActions._(options());
 
   @override
-  GetStockOrderApiResponse get $initial => GetStockOrderApiResponse();
+  GetStockOrderApiResponse get initialState$ => GetStockOrderApiResponse();
 
   @override
-  GetStockOrderApiResponseBuilder $newBuilder() =>
+  GetStockOrderApiResponseBuilder newBuilder$() =>
       GetStockOrderApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.order,
         this.displayRules,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.presences,
         this.orderCustomFieldValues,
         this.customDocs,
@@ -403,24 +403,20 @@ class _$GetStockOrderApiResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    order.$reducer(reducer);
-    displayRules.$reducer(reducer);
-    presences.$reducer(reducer);
-    orderCustomFieldValues.$reducer(reducer);
-    customDocs.$reducer(reducer);
-    attributes.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    order.reducer$(reducer);
+    displayRules.reducer$(reducer);
+    presences.reducer$(reducer);
+    orderCustomFieldValues.reducer$(reducer);
+    customDocs.reducer$(reducer);
+    attributes.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    order.$middleware(middleware);
-    displayRules.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    order.middleware$(middleware);
+    displayRules.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetStockOrderApiResponse);
 }

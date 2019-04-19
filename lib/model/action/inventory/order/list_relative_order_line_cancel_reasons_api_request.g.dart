@@ -214,22 +214,22 @@ class _$ListRelativeOrderLineCancelReasonsApiRequestActions
   final StatefulActionsOptions<
       ListRelativeOrderLineCancelReasonsApiRequest,
       ListRelativeOrderLineCancelReasonsApiRequestBuilder,
-      ListRelativeOrderLineCancelReasonsApiRequestActions> $options;
+      ListRelativeOrderLineCancelReasonsApiRequestActions> options$;
 
-  final ActionDispatcher<ListRelativeOrderLineCancelReasonsApiRequest> $replace;
+  final ActionDispatcher<ListRelativeOrderLineCancelReasonsApiRequest> replace$;
   final FieldDispatcher<String> orderId;
   final OrderByParamsActions<ListRelativeOrderLineCancelReasonsApiOrderBy>
       orderBy;
 
-  _$ListRelativeOrderLineCancelReasonsApiRequestActions._(this.$options)
-      : $replace =
-            $options.action<ListRelativeOrderLineCancelReasonsApiRequest>(
-                '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$ListRelativeOrderLineCancelReasonsApiRequestActions._(this.options$)
+      : replace$ =
+            options$.action<ListRelativeOrderLineCancelReasonsApiRequest>(
+                'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         orderBy = OrderByParamsActions<
                 ListRelativeOrderLineCancelReasonsApiOrderBy>(
-            () => $options.stateful<
+            () => options$.stateful<
                     OrderByParams<ListRelativeOrderLineCancelReasonsApiOrderBy>,
                     OrderByParamsBuilder<
                         ListRelativeOrderLineCancelReasonsApiOrderBy>,
@@ -247,42 +247,37 @@ class _$ListRelativeOrderLineCancelReasonsApiRequestActions
       _$ListRelativeOrderLineCancelReasonsApiRequestActions._(options());
 
   @override
-  ListRelativeOrderLineCancelReasonsApiRequest get $initial =>
+  ListRelativeOrderLineCancelReasonsApiRequest get initialState$ =>
       ListRelativeOrderLineCancelReasonsApiRequest();
 
   @override
-  ListRelativeOrderLineCancelReasonsApiRequestBuilder $newBuilder() =>
+  ListRelativeOrderLineCancelReasonsApiRequestBuilder newBuilder$() =>
       ListRelativeOrderLineCancelReasonsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListRelativeOrderLineCancelReasonsApiRequest);
 }

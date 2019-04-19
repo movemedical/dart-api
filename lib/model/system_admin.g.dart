@@ -216,34 +216,34 @@ typedef StatefulActionsOptions<SystemAdmin, SystemAdminBuilder,
 
 class _$SystemAdminActions extends SystemAdminActions {
   final StatefulActionsOptions<SystemAdmin, SystemAdminBuilder,
-      SystemAdminActions> $options;
+      SystemAdminActions> options$;
 
-  final ActionDispatcher<SystemAdmin> $replace;
+  final ActionDispatcher<SystemAdmin> replace$;
   final FieldDispatcher<String> id;
   final EmailActions email;
   final PersonNameActions name;
   final FieldDispatcher<bool> active;
 
-  _$SystemAdminActions._(this.$options)
-      : $replace =
-            $options.action<SystemAdmin>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$SystemAdminActions._(this.options$)
+      : replace$ =
+            options$.action<SystemAdmin>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -251,44 +251,40 @@ class _$SystemAdminActions extends SystemAdminActions {
       _$SystemAdminActions._(options());
 
   @override
-  SystemAdmin get $initial => SystemAdmin();
+  SystemAdmin get initialState$ => SystemAdmin();
 
   @override
-  SystemAdminBuilder $newBuilder() => SystemAdminBuilder();
+  SystemAdminBuilder newBuilder$() => SystemAdminBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
         this.name,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.active,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    email.$reducer(reducer);
-    name.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    email.reducer$(reducer);
+    name.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    email.$middleware(middleware);
-    name.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    email.middleware$(middleware);
+    name.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SystemAdmin);
 }

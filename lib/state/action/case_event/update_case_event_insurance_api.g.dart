@@ -22,63 +22,29 @@ class _$UpdateCaseEventInsuranceApi extends UpdateCaseEventInsuranceApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateCaseEventInsuranceApiRequest>,
           ApiResult<Nothing>>,
-      UpdateCaseEventInsuranceApi> $options;
+      UpdateCaseEventInsuranceApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateCaseEventInsuranceApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCaseEventInsuranceApiRequest>,
-          ApiResult<Nothing>, UpdateCaseEventInsuranceApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateCaseEventInsuranceApiRequest>,
-          ApiResult<Nothing>,
-          UpdateCaseEventInsuranceApi,
-          Command<ApiCommand<UpdateCaseEventInsuranceApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateCaseEventInsuranceApiRequest>,
-          ApiResult<Nothing>,
-          UpdateCaseEventInsuranceApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateCaseEventInsuranceApiRequest>,
-          ApiResult<Nothing>,
-          UpdateCaseEventInsuranceApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<UpdateCaseEventInsuranceApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$UpdateCaseEventInsuranceApi._(this.$options)
-      : $replace = $options.action<
+  _$UpdateCaseEventInsuranceApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<UpdateCaseEventInsuranceApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseEventInsuranceApiRequest>,
-                ApiResult<Nothing>,
-                UpdateCaseEventInsuranceApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateCaseEventInsuranceApiRequest>,
-                    ApiResult<Nothing>,
-                    UpdateCaseEventInsuranceApi,
-                    Command<ApiCommand<UpdateCaseEventInsuranceApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateCaseEventInsuranceApiRequest>,
-                    ApiResult<Nothing>,
-                    UpdateCaseEventInsuranceApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseEventInsuranceApiRequest>,
-                ApiResult<Nothing>,
-                UpdateCaseEventInsuranceApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<UpdateCaseEventInsuranceApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$UpdateCaseEventInsuranceApi(
@@ -88,31 +54,24 @@ class _$UpdateCaseEventInsuranceApi extends UpdateCaseEventInsuranceApi {
   @override
   CommandState<ApiCommand<UpdateCaseEventInsuranceApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<UpdateCaseEventInsuranceApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateCaseEventInsuranceApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<UpdateCaseEventInsuranceApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(UpdateCaseEventInsuranceApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

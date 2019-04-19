@@ -182,16 +182,16 @@ class _$ListMobileVersionBlacklistApiResponseActions
   final StatefulActionsOptions<
       ListMobileVersionBlacklistApiResponse,
       ListMobileVersionBlacklistApiResponseBuilder,
-      ListMobileVersionBlacklistApiResponseActions> $options;
+      ListMobileVersionBlacklistApiResponseActions> options$;
 
-  final ActionDispatcher<ListMobileVersionBlacklistApiResponse> $replace;
+  final ActionDispatcher<ListMobileVersionBlacklistApiResponse> replace$;
   final FieldDispatcher<
       BuiltList<ListMobileVersionBlacklistApiBlacklistedVersion>> data;
 
-  _$ListMobileVersionBlacklistApiResponseActions._(this.$options)
-      : $replace = $options.action<ListMobileVersionBlacklistApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options
+  _$ListMobileVersionBlacklistApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListMobileVersionBlacklistApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$
             .field<BuiltList<ListMobileVersionBlacklistApiBlacklistedVersion>>(
                 'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
         super._();
@@ -201,34 +201,29 @@ class _$ListMobileVersionBlacklistApiResponseActions
       _$ListMobileVersionBlacklistApiResponseActions._(options());
 
   @override
-  ListMobileVersionBlacklistApiResponse get $initial =>
+  ListMobileVersionBlacklistApiResponse get initialState$ =>
       ListMobileVersionBlacklistApiResponse();
 
   @override
-  ListMobileVersionBlacklistApiResponseBuilder $newBuilder() =>
+  ListMobileVersionBlacklistApiResponseBuilder newBuilder$() =>
       ListMobileVersionBlacklistApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListMobileVersionBlacklistApiResponse);
 }

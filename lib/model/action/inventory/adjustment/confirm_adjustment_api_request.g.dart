@@ -180,21 +180,21 @@ class _$ConfirmAdjustmentApiRequestActions
   final StatefulActionsOptions<
       ConfirmAdjustmentApiRequest,
       ConfirmAdjustmentApiRequestBuilder,
-      ConfirmAdjustmentApiRequestActions> $options;
+      ConfirmAdjustmentApiRequestActions> options$;
 
-  final ActionDispatcher<ConfirmAdjustmentApiRequest> $replace;
+  final ActionDispatcher<ConfirmAdjustmentApiRequest> replace$;
   final FieldDispatcher<String> adjustmentId;
   final FieldDispatcher<String> erpReference;
 
-  _$ConfirmAdjustmentApiRequestActions._(this.$options)
-      : $replace = $options.action<ConfirmAdjustmentApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        adjustmentId = $options.field<String>(
+  _$ConfirmAdjustmentApiRequestActions._(this.options$)
+      : replace$ = options$.action<ConfirmAdjustmentApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        adjustmentId = options$.field<String>(
             'adjustmentId',
             (a) => a?.adjustmentId,
             (s) => s?.adjustmentId,
             (p, b) => p?.adjustmentId = b),
-        erpReference = $options.field<String>(
+        erpReference = options$.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
@@ -206,35 +206,31 @@ class _$ConfirmAdjustmentApiRequestActions
       _$ConfirmAdjustmentApiRequestActions._(options());
 
   @override
-  ConfirmAdjustmentApiRequest get $initial => ConfirmAdjustmentApiRequest();
+  ConfirmAdjustmentApiRequest get initialState$ =>
+      ConfirmAdjustmentApiRequest();
 
   @override
-  ConfirmAdjustmentApiRequestBuilder $newBuilder() =>
+  ConfirmAdjustmentApiRequestBuilder newBuilder$() =>
       ConfirmAdjustmentApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.adjustmentId,
         this.erpReference,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    adjustmentId.$reducer(reducer);
-    erpReference.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    adjustmentId.reducer$(reducer);
+    erpReference.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ConfirmAdjustmentApiRequest);
 }

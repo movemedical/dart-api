@@ -176,15 +176,15 @@ class _$ListUpcomingCasesApiRequestActions
   final StatefulActionsOptions<
       ListUpcomingCasesApiRequest,
       ListUpcomingCasesApiRequestBuilder,
-      ListUpcomingCasesApiRequestActions> $options;
+      ListUpcomingCasesApiRequestActions> options$;
 
-  final ActionDispatcher<ListUpcomingCasesApiRequest> $replace;
+  final ActionDispatcher<ListUpcomingCasesApiRequest> replace$;
   final PaginationParamsActions paginationParams;
 
-  _$ListUpcomingCasesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListUpcomingCasesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        paginationParams = PaginationParamsActions(() => $options.stateful<
+  _$ListUpcomingCasesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListUpcomingCasesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        paginationParams = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -200,39 +200,35 @@ class _$ListUpcomingCasesApiRequestActions
       _$ListUpcomingCasesApiRequestActions._(options());
 
   @override
-  ListUpcomingCasesApiRequest get $initial => ListUpcomingCasesApiRequest();
+  ListUpcomingCasesApiRequest get initialState$ =>
+      ListUpcomingCasesApiRequest();
 
   @override
-  ListUpcomingCasesApiRequestBuilder $newBuilder() =>
+  ListUpcomingCasesApiRequestBuilder newBuilder$() =>
       ListUpcomingCasesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paginationParams,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    paginationParams.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    paginationParams.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paginationParams.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paginationParams.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListUpcomingCasesApiRequest);
 }

@@ -160,15 +160,15 @@ class _$PrepareItemFileDownloadApiResponseActions
   final StatefulActionsOptions<
       PrepareItemFileDownloadApiResponse,
       PrepareItemFileDownloadApiResponseBuilder,
-      PrepareItemFileDownloadApiResponseActions> $options;
+      PrepareItemFileDownloadApiResponseActions> options$;
 
-  final ActionDispatcher<PrepareItemFileDownloadApiResponse> $replace;
+  final ActionDispatcher<PrepareItemFileDownloadApiResponse> replace$;
   final FieldDispatcher<String> url;
 
-  _$PrepareItemFileDownloadApiResponseActions._(this.$options)
-      : $replace = $options.action<PrepareItemFileDownloadApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        url = $options.field<String>(
+  _$PrepareItemFileDownloadApiResponseActions._(this.options$)
+      : replace$ = options$.action<PrepareItemFileDownloadApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        url = options$.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
         super._();
 
@@ -177,34 +177,29 @@ class _$PrepareItemFileDownloadApiResponseActions
       _$PrepareItemFileDownloadApiResponseActions._(options());
 
   @override
-  PrepareItemFileDownloadApiResponse get $initial =>
+  PrepareItemFileDownloadApiResponse get initialState$ =>
       PrepareItemFileDownloadApiResponse();
 
   @override
-  PrepareItemFileDownloadApiResponseBuilder $newBuilder() =>
+  PrepareItemFileDownloadApiResponseBuilder newBuilder$() =>
       PrepareItemFileDownloadApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.url,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    url.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    url.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(PrepareItemFileDownloadApiResponse);
 }

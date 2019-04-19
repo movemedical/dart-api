@@ -305,9 +305,9 @@ class _$BuildKitTrayRestockPlanApiPendingRestockItemActions
   final StatefulActionsOptions<
       BuildKitTrayRestockPlanApiPendingRestockItem,
       BuildKitTrayRestockPlanApiPendingRestockItemBuilder,
-      BuildKitTrayRestockPlanApiPendingRestockItemActions> $options;
+      BuildKitTrayRestockPlanApiPendingRestockItemActions> options$;
 
-  final ActionDispatcher<BuildKitTrayRestockPlanApiPendingRestockItem> $replace;
+  final ActionDispatcher<BuildKitTrayRestockPlanApiPendingRestockItem> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> itemNumber;
   final FieldDispatcher<String> description;
@@ -316,29 +316,29 @@ class _$BuildKitTrayRestockPlanApiPendingRestockItemActions
   final FieldDispatcher<String> pickId;
   final FieldDispatcher<String> pickDisplay;
 
-  _$BuildKitTrayRestockPlanApiPendingRestockItemActions._(this.$options)
-      : $replace =
-            $options.action<BuildKitTrayRestockPlanApiPendingRestockItem>(
-                '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$BuildKitTrayRestockPlanApiPendingRestockItemActions._(this.options$)
+      : replace$ =
+            options$.action<BuildKitTrayRestockPlanApiPendingRestockItem>(
+                'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+        itemNumber = options$.field<String>('itemNumber', (a) => a?.itemNumber,
             (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        orderDisplay = $options.field<String>(
+        orderDisplay = options$.field<String>(
             'orderDisplay',
             (a) => a?.orderDisplay,
             (s) => s?.orderDisplay,
             (p, b) => p?.orderDisplay = b),
-        pickId = $options.field<String>('pickId', (a) => a?.pickId,
+        pickId = options$.field<String>('pickId', (a) => a?.pickId,
             (s) => s?.pickId, (p, b) => p?.pickId = b),
-        pickDisplay = $options.field<String>(
+        pickDisplay = options$.field<String>(
             'pickDisplay',
             (a) => a?.pickDisplay,
             (s) => s?.pickDisplay,
@@ -350,18 +350,18 @@ class _$BuildKitTrayRestockPlanApiPendingRestockItemActions
       _$BuildKitTrayRestockPlanApiPendingRestockItemActions._(options());
 
   @override
-  BuildKitTrayRestockPlanApiPendingRestockItem get $initial =>
+  BuildKitTrayRestockPlanApiPendingRestockItem get initialState$ =>
       BuildKitTrayRestockPlanApiPendingRestockItem();
 
   @override
-  BuildKitTrayRestockPlanApiPendingRestockItemBuilder $newBuilder() =>
+  BuildKitTrayRestockPlanApiPendingRestockItemBuilder newBuilder$() =>
       BuildKitTrayRestockPlanApiPendingRestockItemBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.itemNumber,
         this.description,
@@ -372,24 +372,19 @@ class _$BuildKitTrayRestockPlanApiPendingRestockItemActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemNumber.$reducer(reducer);
-    description.$reducer(reducer);
-    orderId.$reducer(reducer);
-    orderDisplay.$reducer(reducer);
-    pickId.$reducer(reducer);
-    pickDisplay.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemNumber.reducer$(reducer);
+    description.reducer$(reducer);
+    orderId.reducer$(reducer);
+    orderDisplay.reducer$(reducer);
+    pickId.reducer$(reducer);
+    pickDisplay.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildKitTrayRestockPlanApiPendingRestockItem);
 }

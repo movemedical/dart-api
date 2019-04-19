@@ -177,17 +177,17 @@ class _$CompletePicks2ApiRequestActions
   final StatefulActionsOptions<
       CompletePicks2ApiRequest,
       CompletePicks2ApiRequestBuilder,
-      CompletePicks2ApiRequestActions> $options;
+      CompletePicks2ApiRequestActions> options$;
 
-  final ActionDispatcher<CompletePicks2ApiRequest> $replace;
+  final ActionDispatcher<CompletePicks2ApiRequest> replace$;
   final FieldDispatcher<BuiltList<CompletePicks2ApiCompleteRequest>>
       completeRequests;
 
-  _$CompletePicks2ApiRequestActions._(this.$options)
-      : $replace = $options.action<CompletePicks2ApiRequest>(
-            '\$replace', (a) => a?.$replace),
+  _$CompletePicks2ApiRequestActions._(this.options$)
+      : replace$ = options$.action<CompletePicks2ApiRequest>(
+            'replace\$', (a) => a?.replace$),
         completeRequests =
-            $options.field<BuiltList<CompletePicks2ApiCompleteRequest>>(
+            options$.field<BuiltList<CompletePicks2ApiCompleteRequest>>(
                 'completeRequests',
                 (a) => a?.completeRequests,
                 (s) => s?.completeRequests,
@@ -199,32 +199,28 @@ class _$CompletePicks2ApiRequestActions
       _$CompletePicks2ApiRequestActions._(options());
 
   @override
-  CompletePicks2ApiRequest get $initial => CompletePicks2ApiRequest();
+  CompletePicks2ApiRequest get initialState$ => CompletePicks2ApiRequest();
 
   @override
-  CompletePicks2ApiRequestBuilder $newBuilder() =>
+  CompletePicks2ApiRequestBuilder newBuilder$() =>
       CompletePicks2ApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.completeRequests,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    completeRequests.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    completeRequests.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CompletePicks2ApiRequest);
 }

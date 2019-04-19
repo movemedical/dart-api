@@ -162,15 +162,15 @@ class _$GetImportLogFileDetailApiRequestActions
   final StatefulActionsOptions<
       GetImportLogFileDetailApiRequest,
       GetImportLogFileDetailApiRequestBuilder,
-      GetImportLogFileDetailApiRequestActions> $options;
+      GetImportLogFileDetailApiRequestActions> options$;
 
-  final ActionDispatcher<GetImportLogFileDetailApiRequest> $replace;
+  final ActionDispatcher<GetImportLogFileDetailApiRequest> replace$;
   final FieldDispatcher<String> importLogFileId;
 
-  _$GetImportLogFileDetailApiRequestActions._(this.$options)
-      : $replace = $options.action<GetImportLogFileDetailApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        importLogFileId = $options.field<String>(
+  _$GetImportLogFileDetailApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetImportLogFileDetailApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        importLogFileId = options$.field<String>(
             'importLogFileId',
             (a) => a?.importLogFileId,
             (s) => s?.importLogFileId,
@@ -182,34 +182,29 @@ class _$GetImportLogFileDetailApiRequestActions
       _$GetImportLogFileDetailApiRequestActions._(options());
 
   @override
-  GetImportLogFileDetailApiRequest get $initial =>
+  GetImportLogFileDetailApiRequest get initialState$ =>
       GetImportLogFileDetailApiRequest();
 
   @override
-  GetImportLogFileDetailApiRequestBuilder $newBuilder() =>
+  GetImportLogFileDetailApiRequestBuilder newBuilder$() =>
       GetImportLogFileDetailApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.importLogFileId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    importLogFileId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    importLogFileId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetImportLogFileDetailApiRequest);
 }

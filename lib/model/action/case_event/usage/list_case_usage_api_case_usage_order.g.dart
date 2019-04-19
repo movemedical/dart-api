@@ -291,9 +291,9 @@ class _$ListCaseUsageApiCaseUsageOrderActions
   final StatefulActionsOptions<
       ListCaseUsageApiCaseUsageOrder,
       ListCaseUsageApiCaseUsageOrderBuilder,
-      ListCaseUsageApiCaseUsageOrderActions> $options;
+      ListCaseUsageApiCaseUsageOrderActions> options$;
 
-  final ActionDispatcher<ListCaseUsageApiCaseUsageOrder> $replace;
+  final ActionDispatcher<ListCaseUsageApiCaseUsageOrder> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<String> referenceString;
@@ -301,23 +301,23 @@ class _$ListCaseUsageApiCaseUsageOrderActions
   final FieldDispatcher<bool> closed;
   final CustomerAddressActions billToAddress;
 
-  _$ListCaseUsageApiCaseUsageOrderActions._(this.$options)
-      : $replace = $options.action<ListCaseUsageApiCaseUsageOrder>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListCaseUsageApiCaseUsageOrderActions._(this.options$)
+      : replace$ = options$.action<ListCaseUsageApiCaseUsageOrder>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        referenceString = $options.field<String>(
+        referenceString = options$.field<String>(
             'referenceString',
             (a) => a?.referenceString,
             (s) => s?.referenceString,
             (p, b) => p?.referenceString = b),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        closed = $options.field<bool>('closed', (a) => a?.closed,
+        closed = options$.field<bool>('closed', (a) => a?.closed,
             (s) => s?.closed, (p, b) => p?.closed = b),
-        billToAddress = CustomerAddressActions(() => $options.stateful<
+        billToAddress = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -333,24 +333,24 @@ class _$ListCaseUsageApiCaseUsageOrderActions
       _$ListCaseUsageApiCaseUsageOrderActions._(options());
 
   @override
-  ListCaseUsageApiCaseUsageOrder get $initial =>
+  ListCaseUsageApiCaseUsageOrder get initialState$ =>
       ListCaseUsageApiCaseUsageOrder();
 
   @override
-  ListCaseUsageApiCaseUsageOrderBuilder $newBuilder() =>
+  ListCaseUsageApiCaseUsageOrderBuilder newBuilder$() =>
       ListCaseUsageApiCaseUsageOrderBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.billToAddress,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orderId,
         this.referenceString,
@@ -359,24 +359,19 @@ class _$ListCaseUsageApiCaseUsageOrderActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orderId.$reducer(reducer);
-    referenceString.$reducer(reducer);
-    poNumber.$reducer(reducer);
-    closed.$reducer(reducer);
-    billToAddress.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orderId.reducer$(reducer);
+    referenceString.reducer$(reducer);
+    poNumber.reducer$(reducer);
+    closed.reducer$(reducer);
+    billToAddress.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    billToAddress.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    billToAddress.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListCaseUsageApiCaseUsageOrder);
 }

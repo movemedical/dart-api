@@ -264,19 +264,19 @@ class _$GetUiSetupWebApiResponseActions
   final StatefulActionsOptions<
       GetUiSetupWebApiResponse,
       GetUiSetupWebApiResponseBuilder,
-      GetUiSetupWebApiResponseActions> $options;
+      GetUiSetupWebApiResponseActions> options$;
 
-  final ActionDispatcher<GetUiSetupWebApiResponse> $replace;
+  final ActionDispatcher<GetUiSetupWebApiResponse> replace$;
   final GetUiSetupAllApiResponseActions uiSetup;
   final FieldDispatcher<BuiltList<GetUiSetupWebApiDashboardWidget>>
       dashboardWidgets;
   final FieldDispatcher<BuiltList<WebNavigationElement>> navigationElements;
   final FieldDispatcher<BuiltList<WebReport>> webReports;
 
-  _$GetUiSetupWebApiResponseActions._(this.$options)
-      : $replace = $options.action<GetUiSetupWebApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        uiSetup = GetUiSetupAllApiResponseActions(() => $options.stateful<
+  _$GetUiSetupWebApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetUiSetupWebApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        uiSetup = GetUiSetupAllApiResponseActions(() => options$.stateful<
                 GetUiSetupAllApiResponse,
                 GetUiSetupAllApiResponseBuilder,
                 GetUiSetupAllApiResponseActions>(
@@ -286,17 +286,17 @@ class _$GetUiSetupWebApiResponseActions
             (b) => b?.uiSetup,
             (parent, builder) => parent?.uiSetup = builder)),
         dashboardWidgets =
-            $options.field<BuiltList<GetUiSetupWebApiDashboardWidget>>(
+            options$.field<BuiltList<GetUiSetupWebApiDashboardWidget>>(
                 'dashboardWidgets',
                 (a) => a?.dashboardWidgets,
                 (s) => s?.dashboardWidgets,
                 (p, b) => p?.dashboardWidgets = b),
-        navigationElements = $options.field<BuiltList<WebNavigationElement>>(
+        navigationElements = options$.field<BuiltList<WebNavigationElement>>(
             'navigationElements',
             (a) => a?.navigationElements,
             (s) => s?.navigationElements,
             (p, b) => p?.navigationElements = b),
-        webReports = $options.field<BuiltList<WebReport>>(
+        webReports = options$.field<BuiltList<WebReport>>(
             'webReports',
             (a) => a?.webReports,
             (s) => s?.webReports,
@@ -308,44 +308,40 @@ class _$GetUiSetupWebApiResponseActions
       _$GetUiSetupWebApiResponseActions._(options());
 
   @override
-  GetUiSetupWebApiResponse get $initial => GetUiSetupWebApiResponse();
+  GetUiSetupWebApiResponse get initialState$ => GetUiSetupWebApiResponse();
 
   @override
-  GetUiSetupWebApiResponseBuilder $newBuilder() =>
+  GetUiSetupWebApiResponseBuilder newBuilder$() =>
       GetUiSetupWebApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.uiSetup,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.dashboardWidgets,
         this.navigationElements,
         this.webReports,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    uiSetup.$reducer(reducer);
-    dashboardWidgets.$reducer(reducer);
-    navigationElements.$reducer(reducer);
-    webReports.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    uiSetup.reducer$(reducer);
+    dashboardWidgets.reducer$(reducer);
+    navigationElements.reducer$(reducer);
+    webReports.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    uiSetup.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    uiSetup.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetUiSetupWebApiResponse);
 }

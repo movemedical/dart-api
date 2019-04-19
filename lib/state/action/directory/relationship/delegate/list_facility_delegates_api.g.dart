@@ -22,68 +22,32 @@ class _$ListFacilityDelegatesApi extends ListFacilityDelegatesApi {
           ApiResult<ListFacilityDelegatesApiResponse>>,
       CommandStateBuilder<ApiCommand<ListFacilityDelegatesApiRequest>,
           ApiResult<ListFacilityDelegatesApiResponse>>,
-      ListFacilityDelegatesApi> $options;
+      ListFacilityDelegatesApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListFacilityDelegatesApiRequest>,
-          ApiResult<ListFacilityDelegatesApiResponse>>> $replace;
+          ApiResult<ListFacilityDelegatesApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListFacilityDelegatesApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListFacilityDelegatesApiRequest>,
-          ApiResult<ListFacilityDelegatesApiResponse>,
-          ListFacilityDelegatesApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListFacilityDelegatesApiRequest>,
-          ApiResult<ListFacilityDelegatesApiResponse>,
-          ListFacilityDelegatesApi,
-          Command<ApiCommand<ListFacilityDelegatesApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListFacilityDelegatesApiRequest>,
-          ApiResult<ListFacilityDelegatesApiResponse>,
-          ListFacilityDelegatesApi,
-          CommandResult<ApiResult<ListFacilityDelegatesApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListFacilityDelegatesApiRequest>,
-          ApiResult<ListFacilityDelegatesApiResponse>,
-          ListFacilityDelegatesApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListFacilityDelegatesApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListFacilityDelegatesApi._(this.$options)
-      : $replace = $options.action<
+  _$ListFacilityDelegatesApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListFacilityDelegatesApiRequest>,
                     ApiResult<ListFacilityDelegatesApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListFacilityDelegatesApiRequest>,
-                ApiResult<ListFacilityDelegatesApiResponse>,
-                ListFacilityDelegatesApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListFacilityDelegatesApiRequest>,
-                    ApiResult<ListFacilityDelegatesApiResponse>,
-                    ListFacilityDelegatesApi,
-                    Command<ApiCommand<ListFacilityDelegatesApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListFacilityDelegatesApiRequest>,
-                    ApiResult<ListFacilityDelegatesApiResponse>,
-                    ListFacilityDelegatesApi,
-                    CommandResult<
-                        ApiResult<ListFacilityDelegatesApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListFacilityDelegatesApiRequest>,
-                ApiResult<ListFacilityDelegatesApiResponse>,
-                ListFacilityDelegatesApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListFacilityDelegatesApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListFacilityDelegatesApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListFacilityDelegatesApi(ListFacilityDelegatesApiOptions options) =>
@@ -92,32 +56,26 @@ class _$ListFacilityDelegatesApi extends ListFacilityDelegatesApi {
   @override
   CommandState<ApiCommand<ListFacilityDelegatesApiRequest>,
           ApiResult<ListFacilityDelegatesApiResponse>>
-      get $initial => CommandState<ApiCommand<ListFacilityDelegatesApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<ListFacilityDelegatesApiRequest>,
           ApiResult<ListFacilityDelegatesApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListFacilityDelegatesApiRequest>,
           ApiResult<ListFacilityDelegatesApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListFacilityDelegatesApiRequest>,
           ApiResult<ListFacilityDelegatesApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListFacilityDelegatesApiRequest)]),
-        FullType(ApiResult, [FullType(ListFacilityDelegatesApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

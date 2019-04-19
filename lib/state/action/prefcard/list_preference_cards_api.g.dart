@@ -22,67 +22,32 @@ class _$ListPreferenceCardsApi extends ListPreferenceCardsApi {
           ApiResult<ListPreferenceCardsApiResponse>>,
       CommandStateBuilder<ApiCommand<ListPreferenceCardsApiRequest>,
           ApiResult<ListPreferenceCardsApiResponse>>,
-      ListPreferenceCardsApi> $options;
+      ListPreferenceCardsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListPreferenceCardsApiRequest>,
-          ApiResult<ListPreferenceCardsApiResponse>>> $replace;
+          ApiResult<ListPreferenceCardsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListPreferenceCardsApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPreferenceCardsApiRequest>,
-          ApiResult<ListPreferenceCardsApiResponse>,
-          ListPreferenceCardsApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPreferenceCardsApiRequest>,
-          ApiResult<ListPreferenceCardsApiResponse>,
-          ListPreferenceCardsApi,
-          Command<ApiCommand<ListPreferenceCardsApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPreferenceCardsApiRequest>,
-          ApiResult<ListPreferenceCardsApiResponse>,
-          ListPreferenceCardsApi,
-          CommandResult<ApiResult<ListPreferenceCardsApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPreferenceCardsApiRequest>,
-          ApiResult<ListPreferenceCardsApiResponse>,
-          ListPreferenceCardsApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListPreferenceCardsApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListPreferenceCardsApi._(this.$options)
-      : $replace = $options.action<
+  _$ListPreferenceCardsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListPreferenceCardsApiRequest>,
                     ApiResult<ListPreferenceCardsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListPreferenceCardsApiRequest>,
-                ApiResult<ListPreferenceCardsApiResponse>,
-                ListPreferenceCardsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListPreferenceCardsApiRequest>,
-                    ApiResult<ListPreferenceCardsApiResponse>,
-                    ListPreferenceCardsApi,
-                    Command<ApiCommand<ListPreferenceCardsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListPreferenceCardsApiRequest>,
-                    ApiResult<ListPreferenceCardsApiResponse>,
-                    ListPreferenceCardsApi,
-                    CommandResult<ApiResult<ListPreferenceCardsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListPreferenceCardsApiRequest>,
-                ApiResult<ListPreferenceCardsApiResponse>,
-                ListPreferenceCardsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListPreferenceCardsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListPreferenceCardsApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListPreferenceCardsApi(ListPreferenceCardsApiOptions options) =>
@@ -91,32 +56,26 @@ class _$ListPreferenceCardsApi extends ListPreferenceCardsApi {
   @override
   CommandState<ApiCommand<ListPreferenceCardsApiRequest>,
           ApiResult<ListPreferenceCardsApiResponse>>
-      get $initial => CommandState<ApiCommand<ListPreferenceCardsApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<ListPreferenceCardsApiRequest>,
           ApiResult<ListPreferenceCardsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListPreferenceCardsApiRequest>,
           ApiResult<ListPreferenceCardsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListPreferenceCardsApiRequest>,
           ApiResult<ListPreferenceCardsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListPreferenceCardsApiRequest)]),
-        FullType(ApiResult, [FullType(ListPreferenceCardsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

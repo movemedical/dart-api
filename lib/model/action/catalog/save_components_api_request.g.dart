@@ -196,21 +196,21 @@ class _$SaveComponentsApiRequestActions
   final StatefulActionsOptions<
       SaveComponentsApiRequest,
       SaveComponentsApiRequestBuilder,
-      SaveComponentsApiRequestActions> $options;
+      SaveComponentsApiRequestActions> options$;
 
-  final ActionDispatcher<SaveComponentsApiRequest> $replace;
+  final ActionDispatcher<SaveComponentsApiRequest> replace$;
   final FieldDispatcher<String> itemVersionId;
   final FieldDispatcher<BuiltList<SaveComponentsApiComponent>> components;
 
-  _$SaveComponentsApiRequestActions._(this.$options)
-      : $replace = $options.action<SaveComponentsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        itemVersionId = $options.field<String>(
+  _$SaveComponentsApiRequestActions._(this.options$)
+      : replace$ = options$.action<SaveComponentsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        itemVersionId = options$.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        components = $options.field<BuiltList<SaveComponentsApiComponent>>(
+        components = options$.field<BuiltList<SaveComponentsApiComponent>>(
             'components',
             (a) => a?.components,
             (s) => s?.components,
@@ -222,34 +222,30 @@ class _$SaveComponentsApiRequestActions
       _$SaveComponentsApiRequestActions._(options());
 
   @override
-  SaveComponentsApiRequest get $initial => SaveComponentsApiRequest();
+  SaveComponentsApiRequest get initialState$ => SaveComponentsApiRequest();
 
   @override
-  SaveComponentsApiRequestBuilder $newBuilder() =>
+  SaveComponentsApiRequestBuilder newBuilder$() =>
       SaveComponentsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemVersionId,
         this.components,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemVersionId.$reducer(reducer);
-    components.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemVersionId.reducer$(reducer);
+    components.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SaveComponentsApiRequest);
 }

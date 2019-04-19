@@ -198,18 +198,18 @@ class _$ListIntegrationIssuesApiResponseActions
   final StatefulActionsOptions<
       ListIntegrationIssuesApiResponse,
       ListIntegrationIssuesApiResponseBuilder,
-      ListIntegrationIssuesApiResponseActions> $options;
+      ListIntegrationIssuesApiResponseActions> options$;
 
-  final ActionDispatcher<ListIntegrationIssuesApiResponse> $replace;
+  final ActionDispatcher<ListIntegrationIssuesApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListIntegrationIssuesApiIssue>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListIntegrationIssuesApiResponseActions._(this.$options)
-      : $replace = $options.action<ListIntegrationIssuesApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListIntegrationIssuesApiIssue>>(
+  _$ListIntegrationIssuesApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListIntegrationIssuesApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListIntegrationIssuesApiIssue>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -218,36 +218,31 @@ class _$ListIntegrationIssuesApiResponseActions
       _$ListIntegrationIssuesApiResponseActions._(options());
 
   @override
-  ListIntegrationIssuesApiResponse get $initial =>
+  ListIntegrationIssuesApiResponse get initialState$ =>
       ListIntegrationIssuesApiResponse();
 
   @override
-  ListIntegrationIssuesApiResponseBuilder $newBuilder() =>
+  ListIntegrationIssuesApiResponseBuilder newBuilder$() =>
       ListIntegrationIssuesApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListIntegrationIssuesApiResponse);
 }

@@ -158,15 +158,15 @@ class _$IntegrationsSearchApiRequestActions
   final StatefulActionsOptions<
       IntegrationsSearchApiRequest,
       IntegrationsSearchApiRequestBuilder,
-      IntegrationsSearchApiRequestActions> $options;
+      IntegrationsSearchApiRequestActions> options$;
 
-  final ActionDispatcher<IntegrationsSearchApiRequest> $replace;
+  final ActionDispatcher<IntegrationsSearchApiRequest> replace$;
   final FieldDispatcher<String> search;
 
-  _$IntegrationsSearchApiRequestActions._(this.$options)
-      : $replace = $options.action<IntegrationsSearchApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$IntegrationsSearchApiRequestActions._(this.options$)
+      : replace$ = options$.action<IntegrationsSearchApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -175,33 +175,29 @@ class _$IntegrationsSearchApiRequestActions
       _$IntegrationsSearchApiRequestActions._(options());
 
   @override
-  IntegrationsSearchApiRequest get $initial => IntegrationsSearchApiRequest();
+  IntegrationsSearchApiRequest get initialState$ =>
+      IntegrationsSearchApiRequest();
 
   @override
-  IntegrationsSearchApiRequestBuilder $newBuilder() =>
+  IntegrationsSearchApiRequestBuilder newBuilder$() =>
       IntegrationsSearchApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(IntegrationsSearchApiRequest);
 }

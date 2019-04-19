@@ -154,15 +154,15 @@ class _$GetAuditHistoryApiRequestActions
   final StatefulActionsOptions<
       GetAuditHistoryApiRequest,
       GetAuditHistoryApiRequestBuilder,
-      GetAuditHistoryApiRequestActions> $options;
+      GetAuditHistoryApiRequestActions> options$;
 
-  final ActionDispatcher<GetAuditHistoryApiRequest> $replace;
+  final ActionDispatcher<GetAuditHistoryApiRequest> replace$;
   final FieldDispatcher<String> auditId;
 
-  _$GetAuditHistoryApiRequestActions._(this.$options)
-      : $replace = $options.action<GetAuditHistoryApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+  _$GetAuditHistoryApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetAuditHistoryApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         super._();
 
@@ -171,32 +171,28 @@ class _$GetAuditHistoryApiRequestActions
       _$GetAuditHistoryApiRequestActions._(options());
 
   @override
-  GetAuditHistoryApiRequest get $initial => GetAuditHistoryApiRequest();
+  GetAuditHistoryApiRequest get initialState$ => GetAuditHistoryApiRequest();
 
   @override
-  GetAuditHistoryApiRequestBuilder $newBuilder() =>
+  GetAuditHistoryApiRequestBuilder newBuilder$() =>
       GetAuditHistoryApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetAuditHistoryApiRequest);
 }

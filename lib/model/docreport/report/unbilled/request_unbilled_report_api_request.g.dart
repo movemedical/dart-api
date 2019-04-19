@@ -271,19 +271,19 @@ class _$RequestUnbilledReportApiRequestActions
   final StatefulActionsOptions<
       RequestUnbilledReportApiRequest,
       RequestUnbilledReportApiRequestBuilder,
-      RequestUnbilledReportApiRequestActions> $options;
+      RequestUnbilledReportApiRequestActions> options$;
 
-  final ActionDispatcher<RequestUnbilledReportApiRequest> $replace;
+  final ActionDispatcher<RequestUnbilledReportApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final FieldDispatcher<DocReportDisplayType> displayType;
   final FieldDispatcher<String> hcrOrTeamId;
   final FieldDispatcher<String> facilityId;
 
-  _$RequestUnbilledReportApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestUnbilledReportApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestUnbilledReportApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestUnbilledReportApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -292,19 +292,19 @@ class _$RequestUnbilledReportApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.field<DocReportDisplayType>(
+        displayType = options$.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        hcrOrTeamId = $options.field<String>(
+        hcrOrTeamId = options$.field<String>(
             'hcrOrTeamId',
             (a) => a?.hcrOrTeamId,
             (s) => s?.hcrOrTeamId,
             (p, b) => p?.hcrOrTeamId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
         super._();
 
@@ -313,24 +313,24 @@ class _$RequestUnbilledReportApiRequestActions
       _$RequestUnbilledReportApiRequestActions._(options());
 
   @override
-  RequestUnbilledReportApiRequest get $initial =>
+  RequestUnbilledReportApiRequest get initialState$ =>
       RequestUnbilledReportApiRequest();
 
   @override
-  RequestUnbilledReportApiRequestBuilder $newBuilder() =>
+  RequestUnbilledReportApiRequestBuilder newBuilder$() =>
       RequestUnbilledReportApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.format,
         this.displayType,
         this.hcrOrTeamId,
@@ -338,23 +338,18 @@ class _$RequestUnbilledReportApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    format.$reducer(reducer);
-    displayType.$reducer(reducer);
-    hcrOrTeamId.$reducer(reducer);
-    facilityId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    format.reducer$(reducer);
+    displayType.reducer$(reducer);
+    hcrOrTeamId.reducer$(reducer);
+    facilityId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestUnbilledReportApiRequest);
 }

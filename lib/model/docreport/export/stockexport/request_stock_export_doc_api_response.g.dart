@@ -160,15 +160,15 @@ class _$RequestStockExportDocApiResponseActions
   final StatefulActionsOptions<
       RequestStockExportDocApiResponse,
       RequestStockExportDocApiResponseBuilder,
-      RequestStockExportDocApiResponseActions> $options;
+      RequestStockExportDocApiResponseActions> options$;
 
-  final ActionDispatcher<RequestStockExportDocApiResponse> $replace;
+  final ActionDispatcher<RequestStockExportDocApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
 
-  _$RequestStockExportDocApiResponseActions._(this.$options)
-      : $replace = $options.action<RequestStockExportDocApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$RequestStockExportDocApiResponseActions._(this.options$)
+      : replace$ = options$.action<RequestStockExportDocApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -180,34 +180,29 @@ class _$RequestStockExportDocApiResponseActions
       _$RequestStockExportDocApiResponseActions._(options());
 
   @override
-  RequestStockExportDocApiResponse get $initial =>
+  RequestStockExportDocApiResponse get initialState$ =>
       RequestStockExportDocApiResponse();
 
   @override
-  RequestStockExportDocApiResponseBuilder $newBuilder() =>
+  RequestStockExportDocApiResponseBuilder newBuilder$() =>
       RequestStockExportDocApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestStockExportDocApiResponse);
 }

@@ -541,9 +541,9 @@ class _$CreatePicks2ApiPickRequestActions
   final StatefulActionsOptions<
       CreatePicks2ApiPickRequest,
       CreatePicks2ApiPickRequestBuilder,
-      CreatePicks2ApiPickRequestActions> $options;
+      CreatePicks2ApiPickRequestActions> options$;
 
-  final ActionDispatcher<CreatePicks2ApiPickRequest> $replace;
+  final ActionDispatcher<CreatePicks2ApiPickRequest> replace$;
   final FieldDispatcher<String> pickRequestId;
   final FieldDispatcher<String> stockId;
   final CreatePicks2ApiVirtualStockDataActions virtualStockData;
@@ -561,18 +561,18 @@ class _$CreatePicks2ApiPickRequestActions
   final CreatePicks2ApiShipmentOptionsActions shipmentOptions;
   final FieldDispatcher<bool> complete;
 
-  _$CreatePicks2ApiPickRequestActions._(this.$options)
-      : $replace = $options.action<CreatePicks2ApiPickRequest>(
-            '\$replace', (a) => a?.$replace),
-        pickRequestId = $options.field<String>(
+  _$CreatePicks2ApiPickRequestActions._(this.options$)
+      : replace$ = options$.action<CreatePicks2ApiPickRequest>(
+            'replace\$', (a) => a?.replace$),
+        pickRequestId = options$.field<String>(
             'pickRequestId',
             (a) => a?.pickRequestId,
             (s) => s?.pickRequestId,
             (p, b) => p?.pickRequestId = b),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
         virtualStockData = CreatePicks2ApiVirtualStockDataActions(() =>
-            $options.stateful<
+            options$.stateful<
                     CreatePicks2ApiVirtualStockData,
                     CreatePicks2ApiVirtualStockDataBuilder,
                     CreatePicks2ApiVirtualStockDataActions>(
@@ -581,54 +581,54 @@ class _$CreatePicks2ApiPickRequestActions
                 (s) => s?.virtualStockData,
                 (b) => b?.virtualStockData,
                 (parent, builder) => parent?.virtualStockData = builder)),
-        orderLineId = $options.field<String>(
+        orderLineId = options$.field<String>(
             'orderLineId',
             (a) => a?.orderLineId,
             (s) => s?.orderLineId,
             (p, b) => p?.orderLineId = b),
-        toContainerType = $options.field<StockContainerType>(
+        toContainerType = options$.field<StockContainerType>(
             'toContainerType',
             (a) => a?.toContainerType,
             (s) => s?.toContainerType,
             (p, b) => p?.toContainerType = b),
-        toContainerId = $options.field<String>(
+        toContainerId = options$.field<String>(
             'toContainerId',
             (a) => a?.toContainerId,
             (s) => s?.toContainerId,
             (p, b) => p?.toContainerId = b),
-        allowVersionSwap = $options.field<bool>(
+        allowVersionSwap = options$.field<bool>(
             'allowVersionSwap',
             (a) => a?.allowVersionSwap,
             (s) => s?.allowVersionSwap,
             (p, b) => p?.allowVersionSwap = b),
-        allowLotSerialSwap = $options.field<bool>(
+        allowLotSerialSwap = options$.field<bool>(
             'allowLotSerialSwap',
             (a) => a?.allowLotSerialSwap,
             (s) => s?.allowLotSerialSwap,
             (p, b) => p?.allowLotSerialSwap = b),
-        released = $options.field<bool>('released', (a) => a?.released,
+        released = options$.field<bool>('released', (a) => a?.released,
             (s) => s?.released, (p, b) => p?.released = b),
-        releaseDate = $options.field<DateTime>(
+        releaseDate = options$.field<DateTime>(
             'releaseDate',
             (a) => a?.releaseDate,
             (s) => s?.releaseDate,
             (p, b) => p?.releaseDate = b),
-        dueDate = $options.field<DateTime>('dueDate', (a) => a?.dueDate,
+        dueDate = options$.field<DateTime>('dueDate', (a) => a?.dueDate,
             (s) => s?.dueDate, (p, b) => p?.dueDate = b),
-        dependsOnPickId = $options.field<String>(
+        dependsOnPickId = options$.field<String>(
             'dependsOnPickId',
             (a) => a?.dependsOnPickId,
             (s) => s?.dependsOnPickId,
             (p, b) => p?.dependsOnPickId = b),
-        toKitId = $options.field<String>('toKitId', (a) => a?.toKitId,
+        toKitId = options$.field<String>('toKitId', (a) => a?.toKitId,
             (s) => s?.toKitId, (p, b) => p?.toKitId = b),
-        toKitContainerDefId = $options.field<String>(
+        toKitContainerDefId = options$.field<String>(
             'toKitContainerDefId',
             (a) => a?.toKitContainerDefId,
             (s) => s?.toKitContainerDefId,
             (p, b) => p?.toKitContainerDefId = b),
         shipmentOptions = CreatePicks2ApiShipmentOptionsActions(() =>
-            $options.stateful<
+            options$.stateful<
                     CreatePicks2ApiShipmentOptions,
                     CreatePicks2ApiShipmentOptionsBuilder,
                     CreatePicks2ApiShipmentOptionsActions>(
@@ -637,7 +637,7 @@ class _$CreatePicks2ApiPickRequestActions
                 (s) => s?.shipmentOptions,
                 (b) => b?.shipmentOptions,
                 (parent, builder) => parent?.shipmentOptions = builder)),
-        complete = $options.field<bool>('complete', (a) => a?.complete,
+        complete = options$.field<bool>('complete', (a) => a?.complete,
             (s) => s?.complete, (p, b) => p?.complete = b),
         super._();
 
@@ -646,24 +646,24 @@ class _$CreatePicks2ApiPickRequestActions
       _$CreatePicks2ApiPickRequestActions._(options());
 
   @override
-  CreatePicks2ApiPickRequest get $initial => CreatePicks2ApiPickRequest();
+  CreatePicks2ApiPickRequest get initialState$ => CreatePicks2ApiPickRequest();
 
   @override
-  CreatePicks2ApiPickRequestBuilder $newBuilder() =>
+  CreatePicks2ApiPickRequestBuilder newBuilder$() =>
       CreatePicks2ApiPickRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.virtualStockData,
         this.shipmentOptions,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.pickRequestId,
         this.stockId,
         this.orderLineId,
@@ -681,34 +681,30 @@ class _$CreatePicks2ApiPickRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    pickRequestId.$reducer(reducer);
-    stockId.$reducer(reducer);
-    virtualStockData.$reducer(reducer);
-    orderLineId.$reducer(reducer);
-    toContainerType.$reducer(reducer);
-    toContainerId.$reducer(reducer);
-    allowVersionSwap.$reducer(reducer);
-    allowLotSerialSwap.$reducer(reducer);
-    released.$reducer(reducer);
-    releaseDate.$reducer(reducer);
-    dueDate.$reducer(reducer);
-    dependsOnPickId.$reducer(reducer);
-    toKitId.$reducer(reducer);
-    toKitContainerDefId.$reducer(reducer);
-    shipmentOptions.$reducer(reducer);
-    complete.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    pickRequestId.reducer$(reducer);
+    stockId.reducer$(reducer);
+    virtualStockData.reducer$(reducer);
+    orderLineId.reducer$(reducer);
+    toContainerType.reducer$(reducer);
+    toContainerId.reducer$(reducer);
+    allowVersionSwap.reducer$(reducer);
+    allowLotSerialSwap.reducer$(reducer);
+    released.reducer$(reducer);
+    releaseDate.reducer$(reducer);
+    dueDate.reducer$(reducer);
+    dependsOnPickId.reducer$(reducer);
+    toKitId.reducer$(reducer);
+    toKitContainerDefId.reducer$(reducer);
+    shipmentOptions.reducer$(reducer);
+    complete.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    virtualStockData.$middleware(middleware);
-    shipmentOptions.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    virtualStockData.middleware$(middleware);
+    shipmentOptions.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreatePicks2ApiPickRequest);
 }

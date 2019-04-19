@@ -160,15 +160,15 @@ class _$StockSummaryKeyUpdatedPushMessageActions
   final StatefulActionsOptions<
       StockSummaryKeyUpdatedPushMessage,
       StockSummaryKeyUpdatedPushMessageBuilder,
-      StockSummaryKeyUpdatedPushMessageActions> $options;
+      StockSummaryKeyUpdatedPushMessageActions> options$;
 
-  final ActionDispatcher<StockSummaryKeyUpdatedPushMessage> $replace;
+  final ActionDispatcher<StockSummaryKeyUpdatedPushMessage> replace$;
   final FieldDispatcher<bool> deleted;
 
-  _$StockSummaryKeyUpdatedPushMessageActions._(this.$options)
-      : $replace = $options.action<StockSummaryKeyUpdatedPushMessage>(
-            '\$replace', (a) => a?.$replace),
-        deleted = $options.field<bool>('deleted', (a) => a?.deleted,
+  _$StockSummaryKeyUpdatedPushMessageActions._(this.options$)
+      : replace$ = options$.action<StockSummaryKeyUpdatedPushMessage>(
+            'replace\$', (a) => a?.replace$),
+        deleted = options$.field<bool>('deleted', (a) => a?.deleted,
             (s) => s?.deleted, (p, b) => p?.deleted = b),
         super._();
 
@@ -177,34 +177,29 @@ class _$StockSummaryKeyUpdatedPushMessageActions
       _$StockSummaryKeyUpdatedPushMessageActions._(options());
 
   @override
-  StockSummaryKeyUpdatedPushMessage get $initial =>
+  StockSummaryKeyUpdatedPushMessage get initialState$ =>
       StockSummaryKeyUpdatedPushMessage();
 
   @override
-  StockSummaryKeyUpdatedPushMessageBuilder $newBuilder() =>
+  StockSummaryKeyUpdatedPushMessageBuilder newBuilder$() =>
       StockSummaryKeyUpdatedPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.deleted,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    deleted.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    deleted.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(StockSummaryKeyUpdatedPushMessage);
 }

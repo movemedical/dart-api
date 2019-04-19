@@ -333,9 +333,9 @@ class _$SearchContactsApiRequestActions
   final StatefulActionsOptions<
       SearchContactsApiRequest,
       SearchContactsApiRequestBuilder,
-      SearchContactsApiRequestActions> $options;
+      SearchContactsApiRequestActions> options$;
 
-  final ActionDispatcher<SearchContactsApiRequest> $replace;
+  final ActionDispatcher<SearchContactsApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> bizUnitIds;
   final FieldDispatcher<BuiltList<String>> orgUnitIds;
   final FieldDispatcher<BuiltList<GeneralContactType>> contactTypes;
@@ -344,34 +344,34 @@ class _$SearchContactsApiRequestActions
   final FieldDispatcher<bool> active;
   final FieldDispatcher<bool> openSearch;
 
-  _$SearchContactsApiRequestActions._(this.$options)
-      : $replace = $options.action<SearchContactsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        bizUnitIds = $options.field<BuiltList<String>>(
+  _$SearchContactsApiRequestActions._(this.options$)
+      : replace$ = options$.action<SearchContactsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        bizUnitIds = options$.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        contactTypes = $options.field<BuiltList<GeneralContactType>>(
+        contactTypes = options$.field<BuiltList<GeneralContactType>>(
             'contactTypes',
             (a) => a?.contactTypes,
             (s) => s?.contactTypes,
             (p, b) => p?.contactTypes = b),
-        contactIds = $options.field<BuiltList<String>>(
+        contactIds = options$.field<BuiltList<String>>(
             'contactIds',
             (a) => a?.contactIds,
             (s) => s?.contactIds,
             (p, b) => p?.contactIds = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        openSearch = $options.field<bool>('openSearch', (a) => a?.openSearch,
+        openSearch = options$.field<bool>('openSearch', (a) => a?.openSearch,
             (s) => s?.openSearch, (p, b) => p?.openSearch = b),
         super._();
 
@@ -380,17 +380,17 @@ class _$SearchContactsApiRequestActions
       _$SearchContactsApiRequestActions._(options());
 
   @override
-  SearchContactsApiRequest get $initial => SearchContactsApiRequest();
+  SearchContactsApiRequest get initialState$ => SearchContactsApiRequest();
 
   @override
-  SearchContactsApiRequestBuilder $newBuilder() =>
+  SearchContactsApiRequestBuilder newBuilder$() =>
       SearchContactsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.bizUnitIds,
         this.orgUnitIds,
         this.contactTypes,
@@ -401,23 +401,19 @@ class _$SearchContactsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    bizUnitIds.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    contactTypes.$reducer(reducer);
-    contactIds.$reducer(reducer);
-    search.$reducer(reducer);
-    active.$reducer(reducer);
-    openSearch.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    bizUnitIds.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    contactTypes.reducer$(reducer);
+    contactIds.reducer$(reducer);
+    search.reducer$(reducer);
+    active.reducer$(reducer);
+    openSearch.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SearchContactsApiRequest);
 }

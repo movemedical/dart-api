@@ -169,18 +169,18 @@ typedef StatefulActionsOptions<
 
 class _$GetPackageApiRequestActions extends GetPackageApiRequestActions {
   final StatefulActionsOptions<GetPackageApiRequest,
-      GetPackageApiRequestBuilder, GetPackageApiRequestActions> $options;
+      GetPackageApiRequestBuilder, GetPackageApiRequestActions> options$;
 
-  final ActionDispatcher<GetPackageApiRequest> $replace;
+  final ActionDispatcher<GetPackageApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<bool> skipPresence;
 
-  _$GetPackageApiRequestActions._(this.$options)
-      : $replace = $options.action<GetPackageApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetPackageApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetPackageApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        skipPresence = $options.field<bool>(
+        skipPresence = options$.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -192,33 +192,29 @@ class _$GetPackageApiRequestActions extends GetPackageApiRequestActions {
       _$GetPackageApiRequestActions._(options());
 
   @override
-  GetPackageApiRequest get $initial => GetPackageApiRequest();
+  GetPackageApiRequest get initialState$ => GetPackageApiRequest();
 
   @override
-  GetPackageApiRequestBuilder $newBuilder() => GetPackageApiRequestBuilder();
+  GetPackageApiRequestBuilder newBuilder$() => GetPackageApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.skipPresence,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    skipPresence.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    skipPresence.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetPackageApiRequest);
 }

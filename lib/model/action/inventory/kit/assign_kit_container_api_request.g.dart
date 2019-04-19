@@ -205,24 +205,24 @@ class _$AssignKitContainerApiRequestActions
   final StatefulActionsOptions<
       AssignKitContainerApiRequest,
       AssignKitContainerApiRequestBuilder,
-      AssignKitContainerApiRequestActions> $options;
+      AssignKitContainerApiRequestActions> options$;
 
-  final ActionDispatcher<AssignKitContainerApiRequest> $replace;
+  final ActionDispatcher<AssignKitContainerApiRequest> replace$;
   final FieldDispatcher<String> kitStockId;
   final FieldDispatcher<String> containerStockId;
   final FieldDispatcher<String> kitContainerDefId;
 
-  _$AssignKitContainerApiRequestActions._(this.$options)
-      : $replace = $options.action<AssignKitContainerApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        kitStockId = $options.field<String>('kitStockId', (a) => a?.kitStockId,
+  _$AssignKitContainerApiRequestActions._(this.options$)
+      : replace$ = options$.action<AssignKitContainerApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        kitStockId = options$.field<String>('kitStockId', (a) => a?.kitStockId,
             (s) => s?.kitStockId, (p, b) => p?.kitStockId = b),
-        containerStockId = $options.field<String>(
+        containerStockId = options$.field<String>(
             'containerStockId',
             (a) => a?.containerStockId,
             (s) => s?.containerStockId,
             (p, b) => p?.containerStockId = b),
-        kitContainerDefId = $options.field<String>(
+        kitContainerDefId = options$.field<String>(
             'kitContainerDefId',
             (a) => a?.kitContainerDefId,
             (s) => s?.kitContainerDefId,
@@ -234,37 +234,33 @@ class _$AssignKitContainerApiRequestActions
       _$AssignKitContainerApiRequestActions._(options());
 
   @override
-  AssignKitContainerApiRequest get $initial => AssignKitContainerApiRequest();
+  AssignKitContainerApiRequest get initialState$ =>
+      AssignKitContainerApiRequest();
 
   @override
-  AssignKitContainerApiRequestBuilder $newBuilder() =>
+  AssignKitContainerApiRequestBuilder newBuilder$() =>
       AssignKitContainerApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.kitStockId,
         this.containerStockId,
         this.kitContainerDefId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    kitStockId.$reducer(reducer);
-    containerStockId.$reducer(reducer);
-    kitContainerDefId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    kitStockId.reducer$(reducer);
+    containerStockId.reducer$(reducer);
+    kitContainerDefId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AssignKitContainerApiRequest);
 }

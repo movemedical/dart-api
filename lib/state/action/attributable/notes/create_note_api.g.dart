@@ -22,64 +22,30 @@ class _$CreateNoteApi extends CreateNoteApi {
           ApiResult<CreateNoteApiResponse>>,
       CommandStateBuilder<ApiCommand<CreateNoteApiRequest>,
           ApiResult<CreateNoteApiResponse>>,
-      CreateNoteApi> $options;
+      CreateNoteApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateNoteApiRequest>,
-          ApiResult<CreateNoteApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateNoteApiRequest>,
-          ApiResult<CreateNoteApiResponse>, CreateNoteApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateNoteApiRequest>,
-          ApiResult<CreateNoteApiResponse>,
-          CreateNoteApi,
-          Command<ApiCommand<CreateNoteApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateNoteApiRequest>,
-          ApiResult<CreateNoteApiResponse>,
-          CreateNoteApi,
-          CommandResult<ApiResult<CreateNoteApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateNoteApiRequest>,
-          ApiResult<CreateNoteApiResponse>,
-          CreateNoteApi,
-          CommandProgress>> $progress;
+          ApiResult<CreateNoteApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<CreateNoteApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<CreateNoteApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CreateNoteApi._(this.$options)
-      : $replace = $options.action<
+  _$CreateNoteApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<CreateNoteApiRequest>,
                     ApiResult<CreateNoteApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CreateNoteApiRequest>,
-                ApiResult<CreateNoteApiResponse>,
-                CreateNoteApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateNoteApiRequest>,
-                    ApiResult<CreateNoteApiResponse>,
-                    CreateNoteApi,
-                    Command<ApiCommand<CreateNoteApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateNoteApiRequest>,
-                    ApiResult<CreateNoteApiResponse>,
-                    CreateNoteApi,
-                    CommandResult<ApiResult<CreateNoteApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CreateNoteApiRequest>,
-                ApiResult<CreateNoteApiResponse>,
-                CreateNoteApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<CreateNoteApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<CreateNoteApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CreateNoteApi(CreateNoteApiOptions options) =>
@@ -88,31 +54,24 @@ class _$CreateNoteApi extends CreateNoteApi {
   @override
   CommandState<ApiCommand<CreateNoteApiRequest>,
           ApiResult<CreateNoteApiResponse>>
-      get $initial => CommandState<ApiCommand<CreateNoteApiRequest>,
+      get initialState$ => CommandState<ApiCommand<CreateNoteApiRequest>,
           ApiResult<CreateNoteApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateNoteApiRequest>,
           ApiResult<CreateNoteApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<CreateNoteApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<CreateNoteApiRequest>,
           ApiResult<CreateNoteApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CreateNoteApiRequest)]),
-        FullType(ApiResult, [FullType(CreateNoteApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

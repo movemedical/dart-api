@@ -22,68 +22,32 @@ class _$GetImportLogFileDetailApi extends GetImportLogFileDetailApi {
           ApiResult<GetImportLogFileDetailApiResponse>>,
       CommandStateBuilder<ApiCommand<GetImportLogFileDetailApiRequest>,
           ApiResult<GetImportLogFileDetailApiResponse>>,
-      GetImportLogFileDetailApi> $options;
+      GetImportLogFileDetailApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetImportLogFileDetailApiRequest>,
-          ApiResult<GetImportLogFileDetailApiResponse>>> $replace;
+          ApiResult<GetImportLogFileDetailApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetImportLogFileDetailApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetImportLogFileDetailApiRequest>,
-          ApiResult<GetImportLogFileDetailApiResponse>,
-          GetImportLogFileDetailApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetImportLogFileDetailApiRequest>,
-          ApiResult<GetImportLogFileDetailApiResponse>,
-          GetImportLogFileDetailApi,
-          Command<ApiCommand<GetImportLogFileDetailApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetImportLogFileDetailApiRequest>,
-          ApiResult<GetImportLogFileDetailApiResponse>,
-          GetImportLogFileDetailApi,
-          CommandResult<ApiResult<GetImportLogFileDetailApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetImportLogFileDetailApiRequest>,
-          ApiResult<GetImportLogFileDetailApiResponse>,
-          GetImportLogFileDetailApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<GetImportLogFileDetailApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetImportLogFileDetailApi._(this.$options)
-      : $replace = $options.action<
+  _$GetImportLogFileDetailApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetImportLogFileDetailApiRequest>,
                     ApiResult<GetImportLogFileDetailApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetImportLogFileDetailApiRequest>,
-                ApiResult<GetImportLogFileDetailApiResponse>,
-                GetImportLogFileDetailApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetImportLogFileDetailApiRequest>,
-                    ApiResult<GetImportLogFileDetailApiResponse>,
-                    GetImportLogFileDetailApi,
-                    Command<ApiCommand<GetImportLogFileDetailApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetImportLogFileDetailApiRequest>,
-                    ApiResult<GetImportLogFileDetailApiResponse>,
-                    GetImportLogFileDetailApi,
-                    CommandResult<
-                        ApiResult<GetImportLogFileDetailApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetImportLogFileDetailApiRequest>,
-                ApiResult<GetImportLogFileDetailApiResponse>,
-                GetImportLogFileDetailApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<GetImportLogFileDetailApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<GetImportLogFileDetailApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetImportLogFileDetailApi(
@@ -93,32 +57,26 @@ class _$GetImportLogFileDetailApi extends GetImportLogFileDetailApi {
   @override
   CommandState<ApiCommand<GetImportLogFileDetailApiRequest>,
           ApiResult<GetImportLogFileDetailApiResponse>>
-      get $initial => CommandState<ApiCommand<GetImportLogFileDetailApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<GetImportLogFileDetailApiRequest>,
           ApiResult<GetImportLogFileDetailApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetImportLogFileDetailApiRequest>,
           ApiResult<GetImportLogFileDetailApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetImportLogFileDetailApiRequest>,
           ApiResult<GetImportLogFileDetailApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetImportLogFileDetailApiRequest)]),
-        FullType(ApiResult, [FullType(GetImportLogFileDetailApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

@@ -23,69 +23,29 @@ class _$RequestConsignmentRequestReportApi
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestConsignmentRequestReportApiRequest>,
           ApiResult<Nothing>>,
-      RequestConsignmentRequestReportApi> $options;
+      RequestConsignmentRequestReportApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestConsignmentRequestReportApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestConsignmentRequestReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestConsignmentRequestReportApi,
-          String>> $cancel;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<RequestConsignmentRequestReportApiRequest>,
-              ApiResult<Nothing>,
-              RequestConsignmentRequestReportApi,
-              Command<ApiCommand<RequestConsignmentRequestReportApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestConsignmentRequestReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestConsignmentRequestReportApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestConsignmentRequestReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestConsignmentRequestReportApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<RequestConsignmentRequestReportApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RequestConsignmentRequestReportApi._(this.$options)
-      : $replace = $options.action<
+  _$RequestConsignmentRequestReportApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<RequestConsignmentRequestReportApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RequestConsignmentRequestReportApiRequest>,
-                ApiResult<Nothing>,
-                RequestConsignmentRequestReportApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestConsignmentRequestReportApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestConsignmentRequestReportApi,
-                    Command<
-                        ApiCommand<
-                            RequestConsignmentRequestReportApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestConsignmentRequestReportApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestConsignmentRequestReportApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RequestConsignmentRequestReportApiRequest>,
-                ApiResult<Nothing>,
-                RequestConsignmentRequestReportApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<ApiCommand<RequestConsignmentRequestReportApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RequestConsignmentRequestReportApi(
@@ -95,34 +55,26 @@ class _$RequestConsignmentRequestReportApi
   @override
   CommandState<ApiCommand<RequestConsignmentRequestReportApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<RequestConsignmentRequestReportApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestConsignmentRequestReportApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RequestConsignmentRequestReportApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(
-            ApiCommand, [FullType(RequestConsignmentRequestReportApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

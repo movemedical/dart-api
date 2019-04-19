@@ -157,15 +157,15 @@ typedef StatefulActionsOptions<GetAeApiResponse, GetAeApiResponseBuilder,
 
 class _$GetAeApiResponseActions extends GetAeApiResponseActions {
   final StatefulActionsOptions<GetAeApiResponse, GetAeApiResponseBuilder,
-      GetAeApiResponseActions> $options;
+      GetAeApiResponseActions> options$;
 
-  final ActionDispatcher<GetAeApiResponse> $replace;
+  final ActionDispatcher<GetAeApiResponse> replace$;
   final GetAeApiAeDetailActions detail;
 
-  _$GetAeApiResponseActions._(this.$options)
-      : $replace =
-            $options.action<GetAeApiResponse>('\$replace', (a) => a?.$replace),
-        detail = GetAeApiAeDetailActions(() => $options.stateful<
+  _$GetAeApiResponseActions._(this.options$)
+      : replace$ =
+            options$.action<GetAeApiResponse>('replace\$', (a) => a?.replace$),
+        detail = GetAeApiAeDetailActions(() => options$.stateful<
                 GetAeApiAeDetail,
                 GetAeApiAeDetailBuilder,
                 GetAeApiAeDetailActions>(
@@ -180,37 +180,33 @@ class _$GetAeApiResponseActions extends GetAeApiResponseActions {
       _$GetAeApiResponseActions._(options());
 
   @override
-  GetAeApiResponse get $initial => GetAeApiResponse();
+  GetAeApiResponse get initialState$ => GetAeApiResponse();
 
   @override
-  GetAeApiResponseBuilder $newBuilder() => GetAeApiResponseBuilder();
+  GetAeApiResponseBuilder newBuilder$() => GetAeApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.detail,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    detail.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    detail.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    detail.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    detail.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetAeApiResponse);
 }

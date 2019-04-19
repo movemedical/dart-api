@@ -246,30 +246,30 @@ class _$ListAssigneesApiAssigneeActions
   final StatefulActionsOptions<
       ListAssigneesApiAssignee,
       ListAssigneesApiAssigneeBuilder,
-      ListAssigneesApiAssigneeActions> $options;
+      ListAssigneesApiAssigneeActions> options$;
 
-  final ActionDispatcher<ListAssigneesApiAssignee> $replace;
+  final ActionDispatcher<ListAssigneesApiAssignee> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<GeneralContactType> linkedType;
   final FieldDispatcher<String> linkedId;
   final FieldDispatcher<String> name;
   final FieldDispatcher<bool> active;
 
-  _$ListAssigneesApiAssigneeActions._(this.$options)
-      : $replace = $options.action<ListAssigneesApiAssignee>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListAssigneesApiAssigneeActions._(this.options$)
+      : replace$ = options$.action<ListAssigneesApiAssignee>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        linkedType = $options.field<GeneralContactType>(
+        linkedType = options$.field<GeneralContactType>(
             'linkedType',
             (a) => a?.linkedType,
             (s) => s?.linkedType,
             (p, b) => p?.linkedType = b),
-        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
+        linkedId = options$.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -278,17 +278,17 @@ class _$ListAssigneesApiAssigneeActions
       _$ListAssigneesApiAssigneeActions._(options());
 
   @override
-  ListAssigneesApiAssignee get $initial => ListAssigneesApiAssignee();
+  ListAssigneesApiAssignee get initialState$ => ListAssigneesApiAssignee();
 
   @override
-  ListAssigneesApiAssigneeBuilder $newBuilder() =>
+  ListAssigneesApiAssigneeBuilder newBuilder$() =>
       ListAssigneesApiAssigneeBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.linkedType,
         this.linkedId,
@@ -297,21 +297,17 @@ class _$ListAssigneesApiAssigneeActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    linkedType.$reducer(reducer);
-    linkedId.$reducer(reducer);
-    name.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    linkedType.reducer$(reducer);
+    linkedId.reducer$(reducer);
+    name.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListAssigneesApiAssignee);
 }

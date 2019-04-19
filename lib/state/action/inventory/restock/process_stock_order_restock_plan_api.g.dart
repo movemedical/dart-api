@@ -23,71 +23,34 @@ class _$ProcessStockOrderRestockPlanApi
           ApiResult<ProcessStockOrderRestockPlanApiResponse>>,
       CommandStateBuilder<ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
           ApiResult<ProcessStockOrderRestockPlanApiResponse>>,
-      ProcessStockOrderRestockPlanApi> $options;
+      ProcessStockOrderRestockPlanApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
-          ApiResult<ProcessStockOrderRestockPlanApiResponse>>> $replace;
+          ApiResult<ProcessStockOrderRestockPlanApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
-          ApiResult<ProcessStockOrderRestockPlanApiResponse>,
-          ProcessStockOrderRestockPlanApi,
-          String>> $cancel;
+      Command<ApiCommand<ProcessStockOrderRestockPlanApiRequest>>> execute$;
   final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
-              ApiResult<ProcessStockOrderRestockPlanApiResponse>,
-              ProcessStockOrderRestockPlanApi,
-              Command<ApiCommand<ProcessStockOrderRestockPlanApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
-          ApiResult<ProcessStockOrderRestockPlanApiResponse>,
-          ProcessStockOrderRestockPlanApi,
-          CommandResult<
-              ApiResult<ProcessStockOrderRestockPlanApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
-          ApiResult<ProcessStockOrderRestockPlanApiResponse>,
-          ProcessStockOrderRestockPlanApi,
-          CommandProgress>> $progress;
+          CommandResult<ApiResult<ProcessStockOrderRestockPlanApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ProcessStockOrderRestockPlanApi._(this.$options)
-      : $replace = $options.action<
+  _$ProcessStockOrderRestockPlanApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
                     ApiResult<ProcessStockOrderRestockPlanApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
-                ApiResult<ProcessStockOrderRestockPlanApiResponse>,
-                ProcessStockOrderRestockPlanApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
-                    ApiResult<ProcessStockOrderRestockPlanApiResponse>,
-                    ProcessStockOrderRestockPlanApi,
-                    Command<
-                        ApiCommand<ProcessStockOrderRestockPlanApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
-                    ApiResult<ProcessStockOrderRestockPlanApiResponse>,
-                    ProcessStockOrderRestockPlanApi,
-                    CommandResult<
-                        ApiResult<ProcessStockOrderRestockPlanApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
-                ApiResult<ProcessStockOrderRestockPlanApiResponse>,
-                ProcessStockOrderRestockPlanApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<ApiCommand<ProcessStockOrderRestockPlanApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<ProcessStockOrderRestockPlanApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ProcessStockOrderRestockPlanApi(
@@ -97,34 +60,26 @@ class _$ProcessStockOrderRestockPlanApi
   @override
   CommandState<ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
           ApiResult<ProcessStockOrderRestockPlanApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
           ApiResult<ProcessStockOrderRestockPlanApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
           ApiResult<ProcessStockOrderRestockPlanApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ProcessStockOrderRestockPlanApiRequest>,
           ApiResult<ProcessStockOrderRestockPlanApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(
-            ApiCommand, [FullType(ProcessStockOrderRestockPlanApiRequest)]),
-        FullType(ApiResult, [FullType(ProcessStockOrderRestockPlanApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

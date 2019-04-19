@@ -175,15 +175,15 @@ class _$GetExpiringItemsApiRequestActions
   final StatefulActionsOptions<
       GetExpiringItemsApiRequest,
       GetExpiringItemsApiRequestBuilder,
-      GetExpiringItemsApiRequestActions> $options;
+      GetExpiringItemsApiRequestActions> options$;
 
-  final ActionDispatcher<GetExpiringItemsApiRequest> $replace;
+  final ActionDispatcher<GetExpiringItemsApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> expirationLevelIds;
 
-  _$GetExpiringItemsApiRequestActions._(this.$options)
-      : $replace = $options.action<GetExpiringItemsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        expirationLevelIds = $options.field<BuiltList<String>>(
+  _$GetExpiringItemsApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetExpiringItemsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        expirationLevelIds = options$.field<BuiltList<String>>(
             'expirationLevelIds',
             (a) => a?.expirationLevelIds,
             (s) => s?.expirationLevelIds,
@@ -195,32 +195,28 @@ class _$GetExpiringItemsApiRequestActions
       _$GetExpiringItemsApiRequestActions._(options());
 
   @override
-  GetExpiringItemsApiRequest get $initial => GetExpiringItemsApiRequest();
+  GetExpiringItemsApiRequest get initialState$ => GetExpiringItemsApiRequest();
 
   @override
-  GetExpiringItemsApiRequestBuilder $newBuilder() =>
+  GetExpiringItemsApiRequestBuilder newBuilder$() =>
       GetExpiringItemsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.expirationLevelIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    expirationLevelIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    expirationLevelIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetExpiringItemsApiRequest);
 }

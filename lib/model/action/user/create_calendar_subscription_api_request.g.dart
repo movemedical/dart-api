@@ -203,19 +203,19 @@ class _$CreateCalendarSubscriptionApiRequestActions
   final StatefulActionsOptions<
       CreateCalendarSubscriptionApiRequest,
       CreateCalendarSubscriptionApiRequestBuilder,
-      CreateCalendarSubscriptionApiRequestActions> $options;
+      CreateCalendarSubscriptionApiRequestActions> options$;
 
-  final ActionDispatcher<CreateCalendarSubscriptionApiRequest> $replace;
+  final ActionDispatcher<CreateCalendarSubscriptionApiRequest> replace$;
   final FieldDispatcher<String> calendar;
   final ListCaseEventsApiRequestActions listCaseEventsRequest;
 
-  _$CreateCalendarSubscriptionApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateCalendarSubscriptionApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        calendar = $options.field<String>('calendar', (a) => a?.calendar,
+  _$CreateCalendarSubscriptionApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateCalendarSubscriptionApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        calendar = options$.field<String>('calendar', (a) => a?.calendar,
             (s) => s?.calendar, (p, b) => p?.calendar = b),
         listCaseEventsRequest = ListCaseEventsApiRequestActions(() =>
-            $options.stateful<
+            options$.stateful<
                     ListCaseEventsApiRequest,
                     ListCaseEventsApiRequestBuilder,
                     ListCaseEventsApiRequestActions>(
@@ -231,42 +231,37 @@ class _$CreateCalendarSubscriptionApiRequestActions
       _$CreateCalendarSubscriptionApiRequestActions._(options());
 
   @override
-  CreateCalendarSubscriptionApiRequest get $initial =>
+  CreateCalendarSubscriptionApiRequest get initialState$ =>
       CreateCalendarSubscriptionApiRequest();
 
   @override
-  CreateCalendarSubscriptionApiRequestBuilder $newBuilder() =>
+  CreateCalendarSubscriptionApiRequestBuilder newBuilder$() =>
       CreateCalendarSubscriptionApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.listCaseEventsRequest,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.calendar,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    calendar.$reducer(reducer);
-    listCaseEventsRequest.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    calendar.reducer$(reducer);
+    listCaseEventsRequest.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    listCaseEventsRequest.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    listCaseEventsRequest.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateCalendarSubscriptionApiRequest);
 }

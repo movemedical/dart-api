@@ -526,9 +526,9 @@ class _$GetPhysicianApiPhysicianDetailActions
   final StatefulActionsOptions<
       GetPhysicianApiPhysicianDetail,
       GetPhysicianApiPhysicianDetailBuilder,
-      GetPhysicianApiPhysicianDetailActions> $options;
+      GetPhysicianApiPhysicianDetailActions> options$;
 
-  final ActionDispatcher<GetPhysicianApiPhysicianDetail> $replace;
+  final ActionDispatcher<GetPhysicianApiPhysicianDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<PhysicianType> physicianType;
   final PersonNameActions name;
@@ -545,70 +545,70 @@ class _$GetPhysicianApiPhysicianDetailActions
   final FieldDispatcher<BuiltList<PhysicianAttribute>> attributes;
   final FieldDispatcher<BuiltList<AttributeContact>> attributeContacts;
 
-  _$GetPhysicianApiPhysicianDetailActions._(this.$options)
-      : $replace = $options.action<GetPhysicianApiPhysicianDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetPhysicianApiPhysicianDetailActions._(this.options$)
+      : replace$ = options$.action<GetPhysicianApiPhysicianDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        physicianType = $options.field<PhysicianType>(
+        physicianType = options$.field<PhysicianType>(
             'physicianType',
             (a) => a?.physicianType,
             (s) => s?.physicianType,
             (p, b) => p?.physicianType = b),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        workPhoneNumber = PhoneNumberActions(() => $options
+        workPhoneNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'workPhoneNumber',
                 (a) => a.workPhoneNumber,
                 (s) => s?.workPhoneNumber,
                 (b) => b?.workPhoneNumber,
                 (parent, builder) => parent?.workPhoneNumber = builder)),
-        mobilePhoneNumber = PhoneNumberActions(() => $options
+        mobilePhoneNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'mobilePhoneNumber',
                 (a) => a.mobilePhoneNumber,
                 (s) => s?.mobilePhoneNumber,
                 (b) => b?.mobilePhoneNumber,
                 (parent, builder) => parent?.mobilePhoneNumber = builder)),
-        reference1 = $options.field<String>('reference1', (a) => a?.reference1,
+        reference1 = options$.field<String>('reference1', (a) => a?.reference1,
             (s) => s?.reference1, (p, b) => p?.reference1 = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        npi = $options.field<String>(
+        npi = options$.field<String>(
             'npi', (a) => a?.npi, (s) => s?.npi, (p, b) => p?.npi = b),
-        userId = $options.field<String>('userId', (a) => a?.userId,
+        userId = options$.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        userPerspective = $options.field<UserPerspective>(
+        userPerspective = options$.field<UserPerspective>(
             'userPerspective',
             (a) => a?.userPerspective,
             (s) => s?.userPerspective,
             (p, b) => p?.userPerspective = b),
-        userStatus = $options.field<UserStatus>(
+        userStatus = options$.field<UserStatus>(
             'userStatus',
             (a) => a?.userStatus,
             (s) => s?.userStatus,
             (p, b) => p?.userStatus = b),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        attributes = $options.field<BuiltList<PhysicianAttribute>>(
+        attributes = options$.field<BuiltList<PhysicianAttribute>>(
             'attributes',
             (a) => a?.attributes,
             (s) => s?.attributes,
             (p, b) => p?.attributes = b),
-        attributeContacts = $options.field<BuiltList<AttributeContact>>(
+        attributeContacts = options$.field<BuiltList<AttributeContact>>(
             'attributeContacts',
             (a) => a?.attributeContacts,
             (s) => s?.attributeContacts,
@@ -620,27 +620,27 @@ class _$GetPhysicianApiPhysicianDetailActions
       _$GetPhysicianApiPhysicianDetailActions._(options());
 
   @override
-  GetPhysicianApiPhysicianDetail get $initial =>
+  GetPhysicianApiPhysicianDetail get initialState$ =>
       GetPhysicianApiPhysicianDetail();
 
   @override
-  GetPhysicianApiPhysicianDetailBuilder $newBuilder() =>
+  GetPhysicianApiPhysicianDetailBuilder newBuilder$() =>
       GetPhysicianApiPhysicianDetailBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
         this.email,
         this.workPhoneNumber,
         this.mobilePhoneNumber,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.physicianType,
         this.reference1,
@@ -655,36 +655,31 @@ class _$GetPhysicianApiPhysicianDetailActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    physicianType.$reducer(reducer);
-    name.$reducer(reducer);
-    email.$reducer(reducer);
-    workPhoneNumber.$reducer(reducer);
-    mobilePhoneNumber.$reducer(reducer);
-    reference1.$reducer(reducer);
-    active.$reducer(reducer);
-    npi.$reducer(reducer);
-    userId.$reducer(reducer);
-    userPerspective.$reducer(reducer);
-    userStatus.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    attributes.$reducer(reducer);
-    attributeContacts.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    physicianType.reducer$(reducer);
+    name.reducer$(reducer);
+    email.reducer$(reducer);
+    workPhoneNumber.reducer$(reducer);
+    mobilePhoneNumber.reducer$(reducer);
+    reference1.reducer$(reducer);
+    active.reducer$(reducer);
+    npi.reducer$(reducer);
+    userId.reducer$(reducer);
+    userPerspective.reducer$(reducer);
+    userStatus.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    attributes.reducer$(reducer);
+    attributeContacts.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    name.$middleware(middleware);
-    email.$middleware(middleware);
-    workPhoneNumber.$middleware(middleware);
-    mobilePhoneNumber.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    name.middleware$(middleware);
+    email.middleware$(middleware);
+    workPhoneNumber.middleware$(middleware);
+    mobilePhoneNumber.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetPhysicianApiPhysicianDetail);
 }

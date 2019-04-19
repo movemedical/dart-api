@@ -611,9 +611,9 @@ class _$SaveAeToOrgUnitApiRequestActions
   final StatefulActionsOptions<
       SaveAeToOrgUnitApiRequest,
       SaveAeToOrgUnitApiRequestBuilder,
-      SaveAeToOrgUnitApiRequestActions> $options;
+      SaveAeToOrgUnitApiRequestActions> options$;
 
-  final ActionDispatcher<SaveAeToOrgUnitApiRequest> $replace;
+  final ActionDispatcher<SaveAeToOrgUnitApiRequest> replace$;
   final FieldDispatcher<String> directLinkIdOverride;
   final FieldDispatcher<String> userRoleId;
   final FieldDispatcher<String> aeId;
@@ -635,67 +635,67 @@ class _$SaveAeToOrgUnitApiRequestActions
   final FieldDispatcher<BuiltList<SaveAeToOrgUnitApiInventoryTypePermission>>
       inventoryTypePermissions;
 
-  _$SaveAeToOrgUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<SaveAeToOrgUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        directLinkIdOverride = $options.field<String>(
+  _$SaveAeToOrgUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<SaveAeToOrgUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        directLinkIdOverride = options$.field<String>(
             'directLinkIdOverride',
             (a) => a?.directLinkIdOverride,
             (s) => s?.directLinkIdOverride,
             (p, b) => p?.directLinkIdOverride = b),
-        userRoleId = $options.field<String>('userRoleId', (a) => a?.userRoleId,
+        userRoleId = options$.field<String>('userRoleId', (a) => a?.userRoleId,
             (s) => s?.userRoleId, (p, b) => p?.userRoleId = b),
-        aeId = $options.field<String>(
+        aeId = options$.field<String>(
             'aeId', (a) => a?.aeId, (s) => s?.aeId, (p, b) => p?.aeId = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        ouAccessType = $options.field<OuAccessType>(
+        ouAccessType = options$.field<OuAccessType>(
             'ouAccessType',
             (a) => a?.ouAccessType,
             (s) => s?.ouAccessType,
             (p, b) => p?.ouAccessType = b),
-        createCase = $options.field<bool>('createCase', (a) => a?.createCase,
+        createCase = options$.field<bool>('createCase', (a) => a?.createCase,
             (s) => s?.createCase, (p, b) => p?.createCase = b),
-        editCase = $options.field<bool>('editCase', (a) => a?.editCase,
+        editCase = options$.field<bool>('editCase', (a) => a?.editCase,
             (s) => s?.editCase, (p, b) => p?.editCase = b),
-        processOrders = $options.field<bool>(
+        processOrders = options$.field<bool>(
             'processOrders',
             (a) => a?.processOrders,
             (s) => s?.processOrders,
             (p, b) => p?.processOrders = b),
-        manageCatalog = $options.field<bool>(
+        manageCatalog = options$.field<bool>(
             'manageCatalog',
             (a) => a?.manageCatalog,
             (s) => s?.manageCatalog,
             (p, b) => p?.manageCatalog = b),
-        manageUsers = $options.field<bool>('manageUsers', (a) => a?.manageUsers,
+        manageUsers = options$.field<bool>('manageUsers', (a) => a?.manageUsers,
             (s) => s?.manageUsers, (p, b) => p?.manageUsers = b),
-        manageAudit = $options.field<bool>('manageAudit', (a) => a?.manageAudit,
+        manageAudit = options$.field<bool>('manageAudit', (a) => a?.manageAudit,
             (s) => s?.manageAudit, (p, b) => p?.manageAudit = b),
-        performAudit = $options.field<bool>(
+        performAudit = options$.field<bool>(
             'performAudit',
             (a) => a?.performAudit,
             (s) => s?.performAudit,
             (p, b) => p?.performAudit = b),
-        requestLoan = $options.field<bool>('requestLoan', (a) => a?.requestLoan,
+        requestLoan = options$.field<bool>('requestLoan', (a) => a?.requestLoan,
             (s) => s?.requestLoan, (p, b) => p?.requestLoan = b),
-        approveLoan = $options.field<bool>('approveLoan', (a) => a?.approveLoan,
+        approveLoan = options$.field<bool>('approveLoan', (a) => a?.approveLoan,
             (s) => s?.approveLoan, (p, b) => p?.approveLoan = b),
-        approveLoanMax = $options.field<double>(
+        approveLoanMax = options$.field<double>(
             'approveLoanMax',
             (a) => a?.approveLoanMax,
             (s) => s?.approveLoanMax,
             (p, b) => p?.approveLoanMax = b),
-        createAudit = $options.field<bool>('createAudit', (a) => a?.createAudit,
+        createAudit = options$.field<bool>('createAudit', (a) => a?.createAudit,
             (s) => s?.createAudit, (p, b) => p?.createAudit = b),
-        manageZone = $options.field<bool>('manageZone', (a) => a?.manageZone,
+        manageZone = options$.field<bool>('manageZone', (a) => a?.manageZone,
             (s) => s?.manageZone, (p, b) => p?.manageZone = b),
-        approveSalesOrders = $options.field<bool>(
+        approveSalesOrders = options$.field<bool>(
             'approveSalesOrders',
             (a) => a?.approveSalesOrders,
             (s) => s?.approveSalesOrders,
             (p, b) => p?.approveSalesOrders = b),
-        inventoryTypePermissions = $options
+        inventoryTypePermissions = options$
             .field<BuiltList<SaveAeToOrgUnitApiInventoryTypePermission>>(
                 'inventoryTypePermissions',
                 (a) => a?.inventoryTypePermissions,
@@ -708,17 +708,17 @@ class _$SaveAeToOrgUnitApiRequestActions
       _$SaveAeToOrgUnitApiRequestActions._(options());
 
   @override
-  SaveAeToOrgUnitApiRequest get $initial => SaveAeToOrgUnitApiRequest();
+  SaveAeToOrgUnitApiRequest get initialState$ => SaveAeToOrgUnitApiRequest();
 
   @override
-  SaveAeToOrgUnitApiRequestBuilder $newBuilder() =>
+  SaveAeToOrgUnitApiRequestBuilder newBuilder$() =>
       SaveAeToOrgUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.directLinkIdOverride,
         this.userRoleId,
         this.aeId,
@@ -741,35 +741,31 @@ class _$SaveAeToOrgUnitApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    directLinkIdOverride.$reducer(reducer);
-    userRoleId.$reducer(reducer);
-    aeId.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    ouAccessType.$reducer(reducer);
-    createCase.$reducer(reducer);
-    editCase.$reducer(reducer);
-    processOrders.$reducer(reducer);
-    manageCatalog.$reducer(reducer);
-    manageUsers.$reducer(reducer);
-    manageAudit.$reducer(reducer);
-    performAudit.$reducer(reducer);
-    requestLoan.$reducer(reducer);
-    approveLoan.$reducer(reducer);
-    approveLoanMax.$reducer(reducer);
-    createAudit.$reducer(reducer);
-    manageZone.$reducer(reducer);
-    approveSalesOrders.$reducer(reducer);
-    inventoryTypePermissions.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    directLinkIdOverride.reducer$(reducer);
+    userRoleId.reducer$(reducer);
+    aeId.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    ouAccessType.reducer$(reducer);
+    createCase.reducer$(reducer);
+    editCase.reducer$(reducer);
+    processOrders.reducer$(reducer);
+    manageCatalog.reducer$(reducer);
+    manageUsers.reducer$(reducer);
+    manageAudit.reducer$(reducer);
+    performAudit.reducer$(reducer);
+    requestLoan.reducer$(reducer);
+    approveLoan.reducer$(reducer);
+    approveLoanMax.reducer$(reducer);
+    createAudit.reducer$(reducer);
+    manageZone.reducer$(reducer);
+    approveSalesOrders.reducer$(reducer);
+    inventoryTypePermissions.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SaveAeToOrgUnitApiRequest);
 }

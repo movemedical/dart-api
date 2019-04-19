@@ -312,9 +312,9 @@ class _$SaveComponentsApiComponentActions
   final StatefulActionsOptions<
       SaveComponentsApiComponent,
       SaveComponentsApiComponentBuilder,
-      SaveComponentsApiComponentActions> $options;
+      SaveComponentsApiComponentActions> options$;
 
-  final ActionDispatcher<SaveComponentsApiComponent> $replace;
+  final ActionDispatcher<SaveComponentsApiComponent> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> containerId;
   final SaveComponentsApiItemSpecIdsActions itemSpec;
@@ -323,17 +323,17 @@ class _$SaveComponentsApiComponentActions
   final FieldDispatcher<int> minimumQuantity;
   final FieldDispatcher<int> placementInSequence;
 
-  _$SaveComponentsApiComponentActions._(this.$options)
-      : $replace = $options.action<SaveComponentsApiComponent>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$SaveComponentsApiComponentActions._(this.options$)
+      : replace$ = options$.action<SaveComponentsApiComponent>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        itemSpec = SaveComponentsApiItemSpecIdsActions(() => $options.stateful<
+        itemSpec = SaveComponentsApiItemSpecIdsActions(() => options$.stateful<
                 SaveComponentsApiItemSpecIds,
                 SaveComponentsApiItemSpecIdsBuilder,
                 SaveComponentsApiItemSpecIdsActions>(
@@ -342,16 +342,16 @@ class _$SaveComponentsApiComponentActions
             (s) => s?.itemSpec,
             (b) => b?.itemSpec,
             (parent, builder) => parent?.itemSpec = builder)),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        remove = $options.field<bool>('remove', (a) => a?.remove,
+        remove = options$.field<bool>('remove', (a) => a?.remove,
             (s) => s?.remove, (p, b) => p?.remove = b),
-        minimumQuantity = $options.field<int>(
+        minimumQuantity = options$.field<int>(
             'minimumQuantity',
             (a) => a?.minimumQuantity,
             (s) => s?.minimumQuantity,
             (p, b) => p?.minimumQuantity = b),
-        placementInSequence = $options.field<int>(
+        placementInSequence = options$.field<int>(
             'placementInSequence',
             (a) => a?.placementInSequence,
             (s) => s?.placementInSequence,
@@ -363,23 +363,23 @@ class _$SaveComponentsApiComponentActions
       _$SaveComponentsApiComponentActions._(options());
 
   @override
-  SaveComponentsApiComponent get $initial => SaveComponentsApiComponent();
+  SaveComponentsApiComponent get initialState$ => SaveComponentsApiComponent();
 
   @override
-  SaveComponentsApiComponentBuilder $newBuilder() =>
+  SaveComponentsApiComponentBuilder newBuilder$() =>
       SaveComponentsApiComponentBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.itemSpec,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.containerId,
         this.quantity,
@@ -389,24 +389,20 @@ class _$SaveComponentsApiComponentActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    containerId.$reducer(reducer);
-    itemSpec.$reducer(reducer);
-    quantity.$reducer(reducer);
-    remove.$reducer(reducer);
-    minimumQuantity.$reducer(reducer);
-    placementInSequence.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    containerId.reducer$(reducer);
+    itemSpec.reducer$(reducer);
+    quantity.reducer$(reducer);
+    remove.reducer$(reducer);
+    minimumQuantity.reducer$(reducer);
+    placementInSequence.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    itemSpec.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    itemSpec.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SaveComponentsApiComponent);
 }

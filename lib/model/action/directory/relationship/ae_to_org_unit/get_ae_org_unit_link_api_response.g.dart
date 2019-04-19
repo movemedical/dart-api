@@ -180,16 +180,16 @@ class _$GetAeOrgUnitLinkApiResponseActions
   final StatefulActionsOptions<
       GetAeOrgUnitLinkApiResponse,
       GetAeOrgUnitLinkApiResponseBuilder,
-      GetAeOrgUnitLinkApiResponseActions> $options;
+      GetAeOrgUnitLinkApiResponseActions> options$;
 
-  final ActionDispatcher<GetAeOrgUnitLinkApiResponse> $replace;
+  final ActionDispatcher<GetAeOrgUnitLinkApiResponse> replace$;
   final GetAeOrgUnitLinkApiDetailedOrgUnitLinkActions detailedOrgUnitLink;
 
-  _$GetAeOrgUnitLinkApiResponseActions._(this.$options)
-      : $replace = $options.action<GetAeOrgUnitLinkApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$GetAeOrgUnitLinkApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetAeOrgUnitLinkApiResponse>(
+            'replace\$', (a) => a?.replace$),
         detailedOrgUnitLink = GetAeOrgUnitLinkApiDetailedOrgUnitLinkActions(
-            () => $options.stateful<
+            () => options$.stateful<
                     GetAeOrgUnitLinkApiDetailedOrgUnitLink,
                     GetAeOrgUnitLinkApiDetailedOrgUnitLinkBuilder,
                     GetAeOrgUnitLinkApiDetailedOrgUnitLinkActions>(
@@ -205,39 +205,35 @@ class _$GetAeOrgUnitLinkApiResponseActions
       _$GetAeOrgUnitLinkApiResponseActions._(options());
 
   @override
-  GetAeOrgUnitLinkApiResponse get $initial => GetAeOrgUnitLinkApiResponse();
+  GetAeOrgUnitLinkApiResponse get initialState$ =>
+      GetAeOrgUnitLinkApiResponse();
 
   @override
-  GetAeOrgUnitLinkApiResponseBuilder $newBuilder() =>
+  GetAeOrgUnitLinkApiResponseBuilder newBuilder$() =>
       GetAeOrgUnitLinkApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.detailedOrgUnitLink,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    detailedOrgUnitLink.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    detailedOrgUnitLink.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    detailedOrgUnitLink.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    detailedOrgUnitLink.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetAeOrgUnitLinkApiResponse);
 }

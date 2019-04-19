@@ -325,9 +325,9 @@ class _$BuildStockOrderRestockPlanApiResponseActions
   final StatefulActionsOptions<
       BuildStockOrderRestockPlanApiResponse,
       BuildStockOrderRestockPlanApiResponseBuilder,
-      BuildStockOrderRestockPlanApiResponseActions> $options;
+      BuildStockOrderRestockPlanApiResponseActions> options$;
 
-  final ActionDispatcher<BuildStockOrderRestockPlanApiResponse> $replace;
+  final ActionDispatcher<BuildStockOrderRestockPlanApiResponse> replace$;
   final FieldDispatcher<bool> replenishmentAvailable;
   final FieldDispatcher<BuildStockOrderRestockPlanApiRestockSystem> system;
   final OrderHeaderLiteActions usingExistingOrder;
@@ -338,20 +338,20 @@ class _$BuildStockOrderRestockPlanApiResponseActions
           BuiltList<BuildStockOrderRestockPlanApiPendingRestockItem>>
       pendingRestockItems;
 
-  _$BuildStockOrderRestockPlanApiResponseActions._(this.$options)
-      : $replace = $options.action<BuildStockOrderRestockPlanApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        replenishmentAvailable = $options.field<bool>(
+  _$BuildStockOrderRestockPlanApiResponseActions._(this.options$)
+      : replace$ = options$.action<BuildStockOrderRestockPlanApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        replenishmentAvailable = options$.field<bool>(
             'replenishmentAvailable',
             (a) => a?.replenishmentAvailable,
             (s) => s?.replenishmentAvailable,
             (p, b) => p?.replenishmentAvailable = b),
-        system = $options.field<BuildStockOrderRestockPlanApiRestockSystem>(
+        system = options$.field<BuildStockOrderRestockPlanApiRestockSystem>(
             'system',
             (a) => a?.system,
             (s) => s?.system,
             (p, b) => p?.system = b),
-        usingExistingOrder = OrderHeaderLiteActions(() => $options.stateful<
+        usingExistingOrder = OrderHeaderLiteActions(() => options$.stateful<
                 OrderHeaderLite,
                 OrderHeaderLiteBuilder,
                 OrderHeaderLiteActions>(
@@ -360,15 +360,15 @@ class _$BuildStockOrderRestockPlanApiResponseActions
             (s) => s?.usingExistingOrder,
             (b) => b?.usingExistingOrder,
             (parent, builder) => parent?.usingExistingOrder = builder)),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
         restockItems =
-            $options.field<BuiltList<BuildStockOrderRestockPlanApiRestockItem>>(
+            options$.field<BuiltList<BuildStockOrderRestockPlanApiRestockItem>>(
                 'restockItems',
                 (a) => a?.restockItems,
                 (s) => s?.restockItems,
                 (p, b) => p?.restockItems = b),
-        pendingRestockItems = $options
+        pendingRestockItems = options$
             .field<BuiltList<BuildStockOrderRestockPlanApiPendingRestockItem>>(
                 'pendingRestockItems',
                 (a) => a?.pendingRestockItems,
@@ -381,24 +381,24 @@ class _$BuildStockOrderRestockPlanApiResponseActions
       _$BuildStockOrderRestockPlanApiResponseActions._(options());
 
   @override
-  BuildStockOrderRestockPlanApiResponse get $initial =>
+  BuildStockOrderRestockPlanApiResponse get initialState$ =>
       BuildStockOrderRestockPlanApiResponse();
 
   @override
-  BuildStockOrderRestockPlanApiResponseBuilder $newBuilder() =>
+  BuildStockOrderRestockPlanApiResponseBuilder newBuilder$() =>
       BuildStockOrderRestockPlanApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.usingExistingOrder,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.replenishmentAvailable,
         this.system,
         this.poNumber,
@@ -407,24 +407,19 @@ class _$BuildStockOrderRestockPlanApiResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    replenishmentAvailable.$reducer(reducer);
-    system.$reducer(reducer);
-    usingExistingOrder.$reducer(reducer);
-    poNumber.$reducer(reducer);
-    restockItems.$reducer(reducer);
-    pendingRestockItems.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    replenishmentAvailable.reducer$(reducer);
+    system.reducer$(reducer);
+    usingExistingOrder.reducer$(reducer);
+    poNumber.reducer$(reducer);
+    restockItems.reducer$(reducer);
+    pendingRestockItems.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    usingExistingOrder.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    usingExistingOrder.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildStockOrderRestockPlanApiResponse);
 }

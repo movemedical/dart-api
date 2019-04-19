@@ -607,9 +607,9 @@ typedef StatefulActionsOptions<StockContainer, StockContainerBuilder,
 
 class _$StockContainerActions extends StockContainerActions {
   final StatefulActionsOptions<StockContainer, StockContainerBuilder,
-      StockContainerActions> $options;
+      StockContainerActions> options$;
 
-  final ActionDispatcher<StockContainer> $replace;
+  final ActionDispatcher<StockContainer> replace$;
   final FieldDispatcher<StockContainerType> containerType;
   final FieldDispatcher<String> containerId;
   final FieldDispatcher<String> zoneId;
@@ -632,71 +632,71 @@ class _$StockContainerActions extends StockContainerActions {
   final FieldDispatcher<int> kitSerialNumber;
   final FieldDispatcher<String> kitSerialRef;
 
-  _$StockContainerActions._(this.$options)
-      : $replace =
-            $options.action<StockContainer>('\$replace', (a) => a?.$replace),
-        containerType = $options.field<StockContainerType>(
+  _$StockContainerActions._(this.options$)
+      : replace$ =
+            options$.action<StockContainer>('replace\$', (a) => a?.replace$),
+        containerType = options$.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        zoneId = $options.field<String>('zoneId', (a) => a?.zoneId,
+        zoneId = options$.field<String>('zoneId', (a) => a?.zoneId,
             (s) => s?.zoneId, (p, b) => p?.zoneId = b),
-        zoneType = $options.field<ZoneType>('zoneType', (a) => a?.zoneType,
+        zoneType = options$.field<ZoneType>('zoneType', (a) => a?.zoneType,
             (s) => s?.zoneType, (p, b) => p?.zoneType = b),
-        zoneName = $options.field<String>('zoneName', (a) => a?.zoneName,
+        zoneName = options$.field<String>('zoneName', (a) => a?.zoneName,
             (s) => s?.zoneName, (p, b) => p?.zoneName = b),
-        binName = $options.field<String>('binName', (a) => a?.binName,
+        binName = options$.field<String>('binName', (a) => a?.binName,
             (s) => s?.binName, (p, b) => p?.binName = b),
-        binType = $options.field<BinType>('binType', (a) => a?.binType,
+        binType = options$.field<BinType>('binType', (a) => a?.binType,
             (s) => s?.binType, (p, b) => p?.binType = b),
-        binAisle = $options.field<String>('binAisle', (a) => a?.binAisle,
+        binAisle = options$.field<String>('binAisle', (a) => a?.binAisle,
             (s) => s?.binAisle, (p, b) => p?.binAisle = b),
-        binSection = $options.field<int>('binSection', (a) => a?.binSection,
+        binSection = options$.field<int>('binSection', (a) => a?.binSection,
             (s) => s?.binSection, (p, b) => p?.binSection = b),
-        binShelf = $options.field<int>('binShelf', (a) => a?.binShelf,
+        binShelf = options$.field<int>('binShelf', (a) => a?.binShelf,
             (s) => s?.binShelf, (p, b) => p?.binShelf = b),
-        binPosition = $options.field<int>('binPosition', (a) => a?.binPosition,
+        binPosition = options$.field<int>('binPosition', (a) => a?.binPosition,
             (s) => s?.binPosition, (p, b) => p?.binPosition = b),
-        packageNumber = $options.field<int>(
+        packageNumber = options$.field<int>(
             'packageNumber',
             (a) => a?.packageNumber,
             (s) => s?.packageNumber,
             (p, b) => p?.packageNumber = b),
-        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+        itemNumber = options$.field<String>('itemNumber', (a) => a?.itemNumber,
             (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
-        serialNumber = $options.field<int>(
+        serialNumber = options$.field<int>(
             'serialNumber',
             (a) => a?.serialNumber,
             (s) => s?.serialNumber,
             (p, b) => p?.serialNumber = b),
-        serialRef = $options.field<String>('serialRef', (a) => a?.serialRef,
+        serialRef = options$.field<String>('serialRef', (a) => a?.serialRef,
             (s) => s?.serialRef, (p, b) => p?.serialRef = b),
-        sealed = $options.field<bool>('sealed', (a) => a?.sealed,
+        sealed = options$.field<bool>('sealed', (a) => a?.sealed,
             (s) => s?.sealed, (p, b) => p?.sealed = b),
-        displayText = $options.field<String>(
+        displayText = options$.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
             (p, b) => p?.displayText = b),
-        kitId = $options.field<String>(
+        kitId = options$.field<String>(
             'kitId', (a) => a?.kitId, (s) => s?.kitId, (p, b) => p?.kitId = b),
-        kitItemNumber = $options.field<String>(
+        kitItemNumber = options$.field<String>(
             'kitItemNumber',
             (a) => a?.kitItemNumber,
             (s) => s?.kitItemNumber,
             (p, b) => p?.kitItemNumber = b),
-        kitSerialNumber = $options.field<int>(
+        kitSerialNumber = options$.field<int>(
             'kitSerialNumber',
             (a) => a?.kitSerialNumber,
             (s) => s?.kitSerialNumber,
             (p, b) => p?.kitSerialNumber = b),
-        kitSerialRef = $options.field<String>(
+        kitSerialRef = options$.field<String>(
             'kitSerialRef',
             (a) => a?.kitSerialRef,
             (s) => s?.kitSerialRef,
@@ -707,16 +707,16 @@ class _$StockContainerActions extends StockContainerActions {
       _$StockContainerActions._(options());
 
   @override
-  StockContainer get $initial => StockContainer();
+  StockContainer get initialState$ => StockContainer();
 
   @override
-  StockContainerBuilder $newBuilder() => StockContainerBuilder();
+  StockContainerBuilder newBuilder$() => StockContainerBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.containerType,
         this.containerId,
         this.zoneId,
@@ -741,37 +741,33 @@ class _$StockContainerActions extends StockContainerActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    containerType.$reducer(reducer);
-    containerId.$reducer(reducer);
-    zoneId.$reducer(reducer);
-    zoneType.$reducer(reducer);
-    zoneName.$reducer(reducer);
-    binName.$reducer(reducer);
-    binType.$reducer(reducer);
-    binAisle.$reducer(reducer);
-    binSection.$reducer(reducer);
-    binShelf.$reducer(reducer);
-    binPosition.$reducer(reducer);
-    packageNumber.$reducer(reducer);
-    itemNumber.$reducer(reducer);
-    serialNumber.$reducer(reducer);
-    serialRef.$reducer(reducer);
-    sealed.$reducer(reducer);
-    displayText.$reducer(reducer);
-    kitId.$reducer(reducer);
-    kitItemNumber.$reducer(reducer);
-    kitSerialNumber.$reducer(reducer);
-    kitSerialRef.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    containerType.reducer$(reducer);
+    containerId.reducer$(reducer);
+    zoneId.reducer$(reducer);
+    zoneType.reducer$(reducer);
+    zoneName.reducer$(reducer);
+    binName.reducer$(reducer);
+    binType.reducer$(reducer);
+    binAisle.reducer$(reducer);
+    binSection.reducer$(reducer);
+    binShelf.reducer$(reducer);
+    binPosition.reducer$(reducer);
+    packageNumber.reducer$(reducer);
+    itemNumber.reducer$(reducer);
+    serialNumber.reducer$(reducer);
+    serialRef.reducer$(reducer);
+    sealed.reducer$(reducer);
+    displayText.reducer$(reducer);
+    kitId.reducer$(reducer);
+    kitItemNumber.reducer$(reducer);
+    kitSerialNumber.reducer$(reducer);
+    kitSerialRef.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(StockContainer);
 }

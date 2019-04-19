@@ -171,18 +171,18 @@ typedef StatefulActionsOptions<
 
 class _$GetUiSetupAllApiBizUnitActions extends GetUiSetupAllApiBizUnitActions {
   final StatefulActionsOptions<GetUiSetupAllApiBizUnit,
-      GetUiSetupAllApiBizUnitBuilder, GetUiSetupAllApiBizUnitActions> $options;
+      GetUiSetupAllApiBizUnitBuilder, GetUiSetupAllApiBizUnitActions> options$;
 
-  final ActionDispatcher<GetUiSetupAllApiBizUnit> $replace;
+  final ActionDispatcher<GetUiSetupAllApiBizUnit> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
 
-  _$GetUiSetupAllApiBizUnitActions._(this.$options)
-      : $replace = $options.action<GetUiSetupAllApiBizUnit>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetUiSetupAllApiBizUnitActions._(this.options$)
+      : replace$ = options$.action<GetUiSetupAllApiBizUnit>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         super._();
 
@@ -191,34 +191,30 @@ class _$GetUiSetupAllApiBizUnitActions extends GetUiSetupAllApiBizUnitActions {
       _$GetUiSetupAllApiBizUnitActions._(options());
 
   @override
-  GetUiSetupAllApiBizUnit get $initial => GetUiSetupAllApiBizUnit();
+  GetUiSetupAllApiBizUnit get initialState$ => GetUiSetupAllApiBizUnit();
 
   @override
-  GetUiSetupAllApiBizUnitBuilder $newBuilder() =>
+  GetUiSetupAllApiBizUnitBuilder newBuilder$() =>
       GetUiSetupAllApiBizUnitBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetUiSetupAllApiBizUnit);
 }

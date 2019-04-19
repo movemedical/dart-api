@@ -180,20 +180,20 @@ typedef StatefulActionsOptions<Procedure, ProcedureBuilder,
 
 class _$ProcedureActions extends ProcedureActions {
   final StatefulActionsOptions<Procedure, ProcedureBuilder, ProcedureActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<Procedure> $replace;
+  final ActionDispatcher<Procedure> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<bool> bodySideRequired;
 
-  _$ProcedureActions._(this.$options)
-      : $replace = $options.action<Procedure>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ProcedureActions._(this.options$)
+      : replace$ = options$.action<Procedure>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        bodySideRequired = $options.field<bool>(
+        bodySideRequired = options$.field<bool>(
             'bodySideRequired',
             (a) => a?.bodySideRequired,
             (s) => s?.bodySideRequired,
@@ -204,35 +204,31 @@ class _$ProcedureActions extends ProcedureActions {
       _$ProcedureActions._(options());
 
   @override
-  Procedure get $initial => Procedure();
+  Procedure get initialState$ => Procedure();
 
   @override
-  ProcedureBuilder $newBuilder() => ProcedureBuilder();
+  ProcedureBuilder newBuilder$() => ProcedureBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.bodySideRequired,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    bodySideRequired.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    bodySideRequired.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Procedure);
 }

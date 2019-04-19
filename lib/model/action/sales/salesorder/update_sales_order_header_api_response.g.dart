@@ -159,15 +159,15 @@ class _$UpdateSalesOrderHeaderApiResponseActions
   final StatefulActionsOptions<
       UpdateSalesOrderHeaderApiResponse,
       UpdateSalesOrderHeaderApiResponseBuilder,
-      UpdateSalesOrderHeaderApiResponseActions> $options;
+      UpdateSalesOrderHeaderApiResponseActions> options$;
 
-  final ActionDispatcher<UpdateSalesOrderHeaderApiResponse> $replace;
+  final ActionDispatcher<UpdateSalesOrderHeaderApiResponse> replace$;
   final FieldDispatcher<bool> canDo;
 
-  _$UpdateSalesOrderHeaderApiResponseActions._(this.$options)
-      : $replace = $options.action<UpdateSalesOrderHeaderApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        canDo = $options.field<bool>(
+  _$UpdateSalesOrderHeaderApiResponseActions._(this.options$)
+      : replace$ = options$.action<UpdateSalesOrderHeaderApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        canDo = options$.field<bool>(
             'canDo', (a) => a?.canDo, (s) => s?.canDo, (p, b) => p?.canDo = b),
         super._();
 
@@ -176,34 +176,29 @@ class _$UpdateSalesOrderHeaderApiResponseActions
       _$UpdateSalesOrderHeaderApiResponseActions._(options());
 
   @override
-  UpdateSalesOrderHeaderApiResponse get $initial =>
+  UpdateSalesOrderHeaderApiResponse get initialState$ =>
       UpdateSalesOrderHeaderApiResponse();
 
   @override
-  UpdateSalesOrderHeaderApiResponseBuilder $newBuilder() =>
+  UpdateSalesOrderHeaderApiResponseBuilder newBuilder$() =>
       UpdateSalesOrderHeaderApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.canDo,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    canDo.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    canDo.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateSalesOrderHeaderApiResponse);
 }

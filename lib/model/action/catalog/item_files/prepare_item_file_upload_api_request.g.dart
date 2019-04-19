@@ -278,9 +278,9 @@ class _$PrepareItemFileUploadApiRequestActions
   final StatefulActionsOptions<
       PrepareItemFileUploadApiRequest,
       PrepareItemFileUploadApiRequestBuilder,
-      PrepareItemFileUploadApiRequestActions> $options;
+      PrepareItemFileUploadApiRequestActions> options$;
 
-  final ActionDispatcher<PrepareItemFileUploadApiRequest> $replace;
+  final ActionDispatcher<PrepareItemFileUploadApiRequest> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> fileName;
   final FieldDispatcher<String> fileDescription;
@@ -288,26 +288,26 @@ class _$PrepareItemFileUploadApiRequestActions
   final FieldDispatcher<int> estimatedSizeKb;
   final FieldDispatcher<String> ownerOrgUnitId;
 
-  _$PrepareItemFileUploadApiRequestActions._(this.$options)
-      : $replace = $options.action<PrepareItemFileUploadApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$PrepareItemFileUploadApiRequestActions._(this.options$)
+      : replace$ = options$.action<PrepareItemFileUploadApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        fileName = $options.field<String>('fileName', (a) => a?.fileName,
+        fileName = options$.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
-        fileDescription = $options.field<String>(
+        fileDescription = options$.field<String>(
             'fileDescription',
             (a) => a?.fileDescription,
             (s) => s?.fileDescription,
             (p, b) => p?.fileDescription = b),
-        fileType = $options.field<ItemFileType>('fileType', (a) => a?.fileType,
+        fileType = options$.field<ItemFileType>('fileType', (a) => a?.fileType,
             (s) => s?.fileType, (p, b) => p?.fileType = b),
-        estimatedSizeKb = $options.field<int>(
+        estimatedSizeKb = options$.field<int>(
             'estimatedSizeKb',
             (a) => a?.estimatedSizeKb,
             (s) => s?.estimatedSizeKb,
             (p, b) => p?.estimatedSizeKb = b),
-        ownerOrgUnitId = $options.field<String>(
+        ownerOrgUnitId = options$.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
@@ -319,18 +319,18 @@ class _$PrepareItemFileUploadApiRequestActions
       _$PrepareItemFileUploadApiRequestActions._(options());
 
   @override
-  PrepareItemFileUploadApiRequest get $initial =>
+  PrepareItemFileUploadApiRequest get initialState$ =>
       PrepareItemFileUploadApiRequest();
 
   @override
-  PrepareItemFileUploadApiRequestBuilder $newBuilder() =>
+  PrepareItemFileUploadApiRequestBuilder newBuilder$() =>
       PrepareItemFileUploadApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.fileName,
         this.fileDescription,
@@ -340,23 +340,18 @@ class _$PrepareItemFileUploadApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    fileName.$reducer(reducer);
-    fileDescription.$reducer(reducer);
-    fileType.$reducer(reducer);
-    estimatedSizeKb.$reducer(reducer);
-    ownerOrgUnitId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    fileName.reducer$(reducer);
+    fileDescription.reducer$(reducer);
+    fileType.reducer$(reducer);
+    estimatedSizeKb.reducer$(reducer);
+    ownerOrgUnitId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(PrepareItemFileUploadApiRequest);
 }

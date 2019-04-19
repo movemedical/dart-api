@@ -463,9 +463,9 @@ typedef StatefulActionsOptions<FileDetail, FileDetailBuilder,
 
 class _$FileDetailActions extends FileDetailActions {
   final StatefulActionsOptions<FileDetail, FileDetailBuilder, FileDetailActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<FileDetail> $replace;
+  final ActionDispatcher<FileDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> orgId;
@@ -482,43 +482,43 @@ class _$FileDetailActions extends FileDetailActions {
   final FieldDispatcher<bool> uploaded;
   final FieldDispatcher<FileType> fileType;
 
-  _$FileDetailActions._(this.$options)
-      : $replace = $options.action<FileDetail>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$FileDetailActions._(this.options$)
+      : replace$ = options$.action<FileDetail>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        created = $options.field<DateTime>('created', (a) => a?.created,
+        created = options$.field<DateTime>('created', (a) => a?.created,
             (s) => s?.created, (p, b) => p?.created = b),
-        expires = $options.field<DateTime>('expires', (a) => a?.expires,
+        expires = options$.field<DateTime>('expires', (a) => a?.expires,
             (s) => s?.expires, (p, b) => p?.expires = b),
-        contentType = $options.field<String>(
+        contentType = options$.field<String>(
             'contentType',
             (a) => a?.contentType,
             (s) => s?.contentType,
             (p, b) => p?.contentType = b),
-        md5 = $options.field<String>(
+        md5 = options$.field<String>(
             'md5', (a) => a?.md5, (s) => s?.md5, (p, b) => p?.md5 = b),
-        size = $options.field<int>(
+        size = options$.field<int>(
             'size', (a) => a?.size, (s) => s?.size, (p, b) => p?.size = b),
-        region = $options.field<String>('region', (a) => a?.region,
+        region = options$.field<String>('region', (a) => a?.region,
             (s) => s?.region, (p, b) => p?.region = b),
-        bucket = $options.field<String>('bucket', (a) => a?.bucket,
+        bucket = options$.field<String>('bucket', (a) => a?.bucket,
             (s) => s?.bucket, (p, b) => p?.bucket = b),
-        key = $options.field<String>(
+        key = options$.field<String>(
             'key', (a) => a?.key, (s) => s?.key, (p, b) => p?.key = b),
-        storageClass = $options.field<String>(
+        storageClass = options$.field<String>(
             'storageClass',
             (a) => a?.storageClass,
             (s) => s?.storageClass,
             (p, b) => p?.storageClass = b),
-        resource = $options.field<bool>('resource', (a) => a?.resource,
+        resource = options$.field<bool>('resource', (a) => a?.resource,
             (s) => s?.resource, (p, b) => p?.resource = b),
-        uploaded = $options.field<bool>('uploaded', (a) => a?.uploaded,
+        uploaded = options$.field<bool>('uploaded', (a) => a?.uploaded,
             (s) => s?.uploaded, (p, b) => p?.uploaded = b),
-        fileType = $options.field<FileType>('fileType', (a) => a?.fileType,
+        fileType = options$.field<FileType>('fileType', (a) => a?.fileType,
             (s) => s?.fileType, (p, b) => p?.fileType = b),
         super._();
 
@@ -526,16 +526,16 @@ class _$FileDetailActions extends FileDetailActions {
       _$FileDetailActions._(options());
 
   @override
-  FileDetail get $initial => FileDetail();
+  FileDetail get initialState$ => FileDetail();
 
   @override
-  FileDetailBuilder $newBuilder() => FileDetailBuilder();
+  FileDetailBuilder newBuilder$() => FileDetailBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.orgId,
@@ -554,31 +554,27 @@ class _$FileDetailActions extends FileDetailActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    orgId.$reducer(reducer);
-    created.$reducer(reducer);
-    expires.$reducer(reducer);
-    contentType.$reducer(reducer);
-    md5.$reducer(reducer);
-    size.$reducer(reducer);
-    region.$reducer(reducer);
-    bucket.$reducer(reducer);
-    key.$reducer(reducer);
-    storageClass.$reducer(reducer);
-    resource.$reducer(reducer);
-    uploaded.$reducer(reducer);
-    fileType.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    orgId.reducer$(reducer);
+    created.reducer$(reducer);
+    expires.reducer$(reducer);
+    contentType.reducer$(reducer);
+    md5.reducer$(reducer);
+    size.reducer$(reducer);
+    region.reducer$(reducer);
+    bucket.reducer$(reducer);
+    key.reducer$(reducer);
+    storageClass.reducer$(reducer);
+    resource.reducer$(reducer);
+    uploaded.reducer$(reducer);
+    fileType.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(FileDetail);
 }

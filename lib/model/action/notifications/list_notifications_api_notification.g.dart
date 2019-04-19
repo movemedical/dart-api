@@ -398,9 +398,9 @@ class _$ListNotificationsApiNotificationActions
   final StatefulActionsOptions<
       ListNotificationsApiNotification,
       ListNotificationsApiNotificationBuilder,
-      ListNotificationsApiNotificationActions> $options;
+      ListNotificationsApiNotificationActions> options$;
 
-  final ActionDispatcher<ListNotificationsApiNotification> $replace;
+  final ActionDispatcher<ListNotificationsApiNotification> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<DateTime> notificationDate;
   final FieldDispatcher<bool> pushed;
@@ -413,39 +413,39 @@ class _$ListNotificationsApiNotificationActions
   final FieldDispatcher<String> objectId;
   final FieldDispatcher<String> objectDisplayText;
 
-  _$ListNotificationsApiNotificationActions._(this.$options)
-      : $replace = $options.action<ListNotificationsApiNotification>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListNotificationsApiNotificationActions._(this.options$)
+      : replace$ = options$.action<ListNotificationsApiNotification>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        notificationDate = $options.field<DateTime>(
+        notificationDate = options$.field<DateTime>(
             'notificationDate',
             (a) => a?.notificationDate,
             (s) => s?.notificationDate,
             (p, b) => p?.notificationDate = b),
-        pushed = $options.field<bool>('pushed', (a) => a?.pushed,
+        pushed = options$.field<bool>('pushed', (a) => a?.pushed,
             (s) => s?.pushed, (p, b) => p?.pushed = b),
-        emailed = $options.field<bool>('emailed', (a) => a?.emailed,
+        emailed = options$.field<bool>('emailed', (a) => a?.emailed,
             (s) => s?.emailed, (p, b) => p?.emailed = b),
-        read = $options.field<bool>(
+        read = options$.field<bool>(
             'read', (a) => a?.read, (s) => s?.read, (p, b) => p?.read = b),
-        readDate = $options.field<DateTime>('readDate', (a) => a?.readDate,
+        readDate = options$.field<DateTime>('readDate', (a) => a?.readDate,
             (s) => s?.readDate, (p, b) => p?.readDate = b),
-        notificationType = $options.field<NotificationType>(
+        notificationType = options$.field<NotificationType>(
             'notificationType',
             (a) => a?.notificationType,
             (s) => s?.notificationType,
             (p, b) => p?.notificationType = b),
-        message = $options.field<String>('message', (a) => a?.message,
+        message = options$.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
-        objectType = $options.field<AttributableType>(
+        objectType = options$.field<AttributableType>(
             'objectType',
             (a) => a?.objectType,
             (s) => s?.objectType,
             (p, b) => p?.objectType = b),
-        objectId = $options.field<String>('objectId', (a) => a?.objectId,
+        objectId = options$.field<String>('objectId', (a) => a?.objectId,
             (s) => s?.objectId, (p, b) => p?.objectId = b),
-        objectDisplayText = $options.field<String>(
+        objectDisplayText = options$.field<String>(
             'objectDisplayText',
             (a) => a?.objectDisplayText,
             (s) => s?.objectDisplayText,
@@ -457,18 +457,18 @@ class _$ListNotificationsApiNotificationActions
       _$ListNotificationsApiNotificationActions._(options());
 
   @override
-  ListNotificationsApiNotification get $initial =>
+  ListNotificationsApiNotification get initialState$ =>
       ListNotificationsApiNotification();
 
   @override
-  ListNotificationsApiNotificationBuilder $newBuilder() =>
+  ListNotificationsApiNotificationBuilder newBuilder$() =>
       ListNotificationsApiNotificationBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.notificationDate,
         this.pushed,
@@ -483,28 +483,23 @@ class _$ListNotificationsApiNotificationActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    notificationDate.$reducer(reducer);
-    pushed.$reducer(reducer);
-    emailed.$reducer(reducer);
-    read.$reducer(reducer);
-    readDate.$reducer(reducer);
-    notificationType.$reducer(reducer);
-    message.$reducer(reducer);
-    objectType.$reducer(reducer);
-    objectId.$reducer(reducer);
-    objectDisplayText.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    notificationDate.reducer$(reducer);
+    pushed.reducer$(reducer);
+    emailed.reducer$(reducer);
+    read.reducer$(reducer);
+    readDate.reducer$(reducer);
+    notificationType.reducer$(reducer);
+    message.reducer$(reducer);
+    objectType.reducer$(reducer);
+    objectId.reducer$(reducer);
+    objectDisplayText.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListNotificationsApiNotification);
 }

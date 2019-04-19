@@ -256,30 +256,30 @@ class _$MoveStockWithinLocationApiStockMoveActions
   final StatefulActionsOptions<
       MoveStockWithinLocationApiStockMove,
       MoveStockWithinLocationApiStockMoveBuilder,
-      MoveStockWithinLocationApiStockMoveActions> $options;
+      MoveStockWithinLocationApiStockMoveActions> options$;
 
-  final ActionDispatcher<MoveStockWithinLocationApiStockMove> $replace;
+  final ActionDispatcher<MoveStockWithinLocationApiStockMove> replace$;
   final FieldDispatcher<String> stockId;
   final FieldDispatcher<String> summaryKey;
   final FieldDispatcher<int> qty;
   final FieldDispatcher<StockContainerType> toContainerType;
   final FieldDispatcher<String> toContainerId;
 
-  _$MoveStockWithinLocationApiStockMoveActions._(this.$options)
-      : $replace = $options.action<MoveStockWithinLocationApiStockMove>(
-            '\$replace', (a) => a?.$replace),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+  _$MoveStockWithinLocationApiStockMoveActions._(this.options$)
+      : replace$ = options$.action<MoveStockWithinLocationApiStockMove>(
+            'replace\$', (a) => a?.replace$),
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        summaryKey = $options.field<String>('summaryKey', (a) => a?.summaryKey,
+        summaryKey = options$.field<String>('summaryKey', (a) => a?.summaryKey,
             (s) => s?.summaryKey, (p, b) => p?.summaryKey = b),
-        qty = $options.field<int>(
+        qty = options$.field<int>(
             'qty', (a) => a?.qty, (s) => s?.qty, (p, b) => p?.qty = b),
-        toContainerType = $options.field<StockContainerType>(
+        toContainerType = options$.field<StockContainerType>(
             'toContainerType',
             (a) => a?.toContainerType,
             (s) => s?.toContainerType,
             (p, b) => p?.toContainerType = b),
-        toContainerId = $options.field<String>(
+        toContainerId = options$.field<String>(
             'toContainerId',
             (a) => a?.toContainerId,
             (s) => s?.toContainerId,
@@ -291,18 +291,18 @@ class _$MoveStockWithinLocationApiStockMoveActions
       _$MoveStockWithinLocationApiStockMoveActions._(options());
 
   @override
-  MoveStockWithinLocationApiStockMove get $initial =>
+  MoveStockWithinLocationApiStockMove get initialState$ =>
       MoveStockWithinLocationApiStockMove();
 
   @override
-  MoveStockWithinLocationApiStockMoveBuilder $newBuilder() =>
+  MoveStockWithinLocationApiStockMoveBuilder newBuilder$() =>
       MoveStockWithinLocationApiStockMoveBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockId,
         this.summaryKey,
         this.qty,
@@ -311,22 +311,17 @@ class _$MoveStockWithinLocationApiStockMoveActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockId.$reducer(reducer);
-    summaryKey.$reducer(reducer);
-    qty.$reducer(reducer);
-    toContainerType.$reducer(reducer);
-    toContainerId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockId.reducer$(reducer);
+    summaryKey.reducer$(reducer);
+    qty.reducer$(reducer);
+    toContainerType.reducer$(reducer);
+    toContainerId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(MoveStockWithinLocationApiStockMove);
 }

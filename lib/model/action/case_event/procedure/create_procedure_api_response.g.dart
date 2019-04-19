@@ -154,15 +154,15 @@ class _$CreateProcedureApiResponseActions
   final StatefulActionsOptions<
       CreateProcedureApiResponse,
       CreateProcedureApiResponseBuilder,
-      CreateProcedureApiResponseActions> $options;
+      CreateProcedureApiResponseActions> options$;
 
-  final ActionDispatcher<CreateProcedureApiResponse> $replace;
+  final ActionDispatcher<CreateProcedureApiResponse> replace$;
   final FieldDispatcher<String> id;
 
-  _$CreateProcedureApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateProcedureApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$CreateProcedureApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateProcedureApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -171,32 +171,28 @@ class _$CreateProcedureApiResponseActions
       _$CreateProcedureApiResponseActions._(options());
 
   @override
-  CreateProcedureApiResponse get $initial => CreateProcedureApiResponse();
+  CreateProcedureApiResponse get initialState$ => CreateProcedureApiResponse();
 
   @override
-  CreateProcedureApiResponseBuilder $newBuilder() =>
+  CreateProcedureApiResponseBuilder newBuilder$() =>
       CreateProcedureApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateProcedureApiResponse);
 }

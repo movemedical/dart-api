@@ -200,23 +200,23 @@ class _$GetExpiringItemsApiResponseActions
   final StatefulActionsOptions<
       GetExpiringItemsApiResponse,
       GetExpiringItemsApiResponseBuilder,
-      GetExpiringItemsApiResponseActions> $options;
+      GetExpiringItemsApiResponseActions> options$;
 
-  final ActionDispatcher<GetExpiringItemsApiResponse> $replace;
+  final ActionDispatcher<GetExpiringItemsApiResponse> replace$;
   final FieldDispatcher<BuiltList<GetExpiringItemsApiExpirationLevel>>
       expirationLevels;
   final FieldDispatcher<bool> building;
 
-  _$GetExpiringItemsApiResponseActions._(this.$options)
-      : $replace = $options.action<GetExpiringItemsApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$GetExpiringItemsApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetExpiringItemsApiResponse>(
+            'replace\$', (a) => a?.replace$),
         expirationLevels =
-            $options.field<BuiltList<GetExpiringItemsApiExpirationLevel>>(
+            options$.field<BuiltList<GetExpiringItemsApiExpirationLevel>>(
                 'expirationLevels',
                 (a) => a?.expirationLevels,
                 (s) => s?.expirationLevels,
                 (p, b) => p?.expirationLevels = b),
-        building = $options.field<bool>('building', (a) => a?.building,
+        building = options$.field<bool>('building', (a) => a?.building,
             (s) => s?.building, (p, b) => p?.building = b),
         super._();
 
@@ -225,35 +225,31 @@ class _$GetExpiringItemsApiResponseActions
       _$GetExpiringItemsApiResponseActions._(options());
 
   @override
-  GetExpiringItemsApiResponse get $initial => GetExpiringItemsApiResponse();
+  GetExpiringItemsApiResponse get initialState$ =>
+      GetExpiringItemsApiResponse();
 
   @override
-  GetExpiringItemsApiResponseBuilder $newBuilder() =>
+  GetExpiringItemsApiResponseBuilder newBuilder$() =>
       GetExpiringItemsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.expirationLevels,
         this.building,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    expirationLevels.$reducer(reducer);
-    building.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    expirationLevels.reducer$(reducer);
+    building.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetExpiringItemsApiResponse);
 }

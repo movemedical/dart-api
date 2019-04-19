@@ -342,9 +342,9 @@ typedef StatefulActionsOptions<
 
 class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
   final StatefulActionsOptions<GetUiSetupAllApiOrgInfo,
-      GetUiSetupAllApiOrgInfoBuilder, GetUiSetupAllApiOrgInfoActions> $options;
+      GetUiSetupAllApiOrgInfoBuilder, GetUiSetupAllApiOrgInfoActions> options$;
 
-  final ActionDispatcher<GetUiSetupAllApiOrgInfo> $replace;
+  final ActionDispatcher<GetUiSetupAllApiOrgInfo> replace$;
   final GetUiSetupAllApiBizUnitActions defaultBizUnit;
   final GetUiSetupAllApiOrgUnitActions defaultSalesOrgUnit;
   final GetUiSetupAllApiOrgUnitActions defaultOpsOrgUnit;
@@ -353,10 +353,10 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
   final FieldDispatcher<BuiltList<GetUiSetupAllApiOrgUnit>> fullAccessOrgUnits;
   final FieldDispatcher<bool> allowCasesWithoutDates;
 
-  _$GetUiSetupAllApiOrgInfoActions._(this.$options)
-      : $replace = $options.action<GetUiSetupAllApiOrgInfo>(
-            '\$replace', (a) => a?.$replace),
-        defaultBizUnit = GetUiSetupAllApiBizUnitActions(() => $options.stateful<
+  _$GetUiSetupAllApiOrgInfoActions._(this.options$)
+      : replace$ = options$.action<GetUiSetupAllApiOrgInfo>(
+            'replace\$', (a) => a?.replace$),
+        defaultBizUnit = GetUiSetupAllApiBizUnitActions(() => options$.stateful<
                 GetUiSetupAllApiBizUnit,
                 GetUiSetupAllApiBizUnitBuilder,
                 GetUiSetupAllApiBizUnitActions>(
@@ -366,7 +366,7 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
             (b) => b?.defaultBizUnit,
             (parent, builder) => parent?.defaultBizUnit = builder)),
         defaultSalesOrgUnit = GetUiSetupAllApiOrgUnitActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetUiSetupAllApiOrgUnit,
                     GetUiSetupAllApiOrgUnitBuilder,
                     GetUiSetupAllApiOrgUnitActions>(
@@ -376,7 +376,7 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
                 (b) => b?.defaultSalesOrgUnit,
                 (parent, builder) => parent?.defaultSalesOrgUnit = builder)),
         defaultOpsOrgUnit = GetUiSetupAllApiOrgUnitActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetUiSetupAllApiOrgUnit,
                     GetUiSetupAllApiOrgUnitBuilder,
                     GetUiSetupAllApiOrgUnitActions>(
@@ -385,22 +385,22 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
                 (s) => s?.defaultOpsOrgUnit,
                 (b) => b?.defaultOpsOrgUnit,
                 (parent, builder) => parent?.defaultOpsOrgUnit = builder)),
-        bizUnits = $options.field<BuiltList<GetUiSetupAllApiBizUnit>>(
+        bizUnits = options$.field<BuiltList<GetUiSetupAllApiBizUnit>>(
             'bizUnits',
             (a) => a?.bizUnits,
             (s) => s?.bizUnits,
             (p, b) => p?.bizUnits = b),
-        invOnlyOrgUnits = $options.field<BuiltList<GetUiSetupAllApiOrgUnit>>(
+        invOnlyOrgUnits = options$.field<BuiltList<GetUiSetupAllApiOrgUnit>>(
             'invOnlyOrgUnits',
             (a) => a?.invOnlyOrgUnits,
             (s) => s?.invOnlyOrgUnits,
             (p, b) => p?.invOnlyOrgUnits = b),
-        fullAccessOrgUnits = $options.field<BuiltList<GetUiSetupAllApiOrgUnit>>(
+        fullAccessOrgUnits = options$.field<BuiltList<GetUiSetupAllApiOrgUnit>>(
             'fullAccessOrgUnits',
             (a) => a?.fullAccessOrgUnits,
             (s) => s?.fullAccessOrgUnits,
             (p, b) => p?.fullAccessOrgUnits = b),
-        allowCasesWithoutDates = $options.field<bool>(
+        allowCasesWithoutDates = options$.field<bool>(
             'allowCasesWithoutDates',
             (a) => a?.allowCasesWithoutDates,
             (s) => s?.allowCasesWithoutDates,
@@ -412,25 +412,25 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
       _$GetUiSetupAllApiOrgInfoActions._(options());
 
   @override
-  GetUiSetupAllApiOrgInfo get $initial => GetUiSetupAllApiOrgInfo();
+  GetUiSetupAllApiOrgInfo get initialState$ => GetUiSetupAllApiOrgInfo();
 
   @override
-  GetUiSetupAllApiOrgInfoBuilder $newBuilder() =>
+  GetUiSetupAllApiOrgInfoBuilder newBuilder$() =>
       GetUiSetupAllApiOrgInfoBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.defaultBizUnit,
         this.defaultSalesOrgUnit,
         this.defaultOpsOrgUnit,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.bizUnits,
         this.invOnlyOrgUnits,
         this.fullAccessOrgUnits,
@@ -438,26 +438,22 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    defaultBizUnit.$reducer(reducer);
-    defaultSalesOrgUnit.$reducer(reducer);
-    defaultOpsOrgUnit.$reducer(reducer);
-    bizUnits.$reducer(reducer);
-    invOnlyOrgUnits.$reducer(reducer);
-    fullAccessOrgUnits.$reducer(reducer);
-    allowCasesWithoutDates.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    defaultBizUnit.reducer$(reducer);
+    defaultSalesOrgUnit.reducer$(reducer);
+    defaultOpsOrgUnit.reducer$(reducer);
+    bizUnits.reducer$(reducer);
+    invOnlyOrgUnits.reducer$(reducer);
+    fullAccessOrgUnits.reducer$(reducer);
+    allowCasesWithoutDates.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    defaultBizUnit.$middleware(middleware);
-    defaultSalesOrgUnit.$middleware(middleware);
-    defaultOpsOrgUnit.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    defaultBizUnit.middleware$(middleware);
+    defaultSalesOrgUnit.middleware$(middleware);
+    defaultOpsOrgUnit.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetUiSetupAllApiOrgInfo);
 }

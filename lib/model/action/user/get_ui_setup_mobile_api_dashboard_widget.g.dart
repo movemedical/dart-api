@@ -184,21 +184,21 @@ class _$GetUiSetupMobileApiDashboardWidgetActions
   final StatefulActionsOptions<
       GetUiSetupMobileApiDashboardWidget,
       GetUiSetupMobileApiDashboardWidgetBuilder,
-      GetUiSetupMobileApiDashboardWidgetActions> $options;
+      GetUiSetupMobileApiDashboardWidgetActions> options$;
 
-  final ActionDispatcher<GetUiSetupMobileApiDashboardWidget> $replace;
+  final ActionDispatcher<GetUiSetupMobileApiDashboardWidget> replace$;
   final FieldDispatcher<MobileDashboardWidgetType> widgetType;
   final FieldDispatcher<String> widgetConfig;
 
-  _$GetUiSetupMobileApiDashboardWidgetActions._(this.$options)
-      : $replace = $options.action<GetUiSetupMobileApiDashboardWidget>(
-            '\$replace', (a) => a?.$replace),
-        widgetType = $options.field<MobileDashboardWidgetType>(
+  _$GetUiSetupMobileApiDashboardWidgetActions._(this.options$)
+      : replace$ = options$.action<GetUiSetupMobileApiDashboardWidget>(
+            'replace\$', (a) => a?.replace$),
+        widgetType = options$.field<MobileDashboardWidgetType>(
             'widgetType',
             (a) => a?.widgetType,
             (s) => s?.widgetType,
             (p, b) => p?.widgetType = b),
-        widgetConfig = $options.field<String>(
+        widgetConfig = options$.field<String>(
             'widgetConfig',
             (a) => a?.widgetConfig,
             (s) => s?.widgetConfig,
@@ -210,36 +210,31 @@ class _$GetUiSetupMobileApiDashboardWidgetActions
       _$GetUiSetupMobileApiDashboardWidgetActions._(options());
 
   @override
-  GetUiSetupMobileApiDashboardWidget get $initial =>
+  GetUiSetupMobileApiDashboardWidget get initialState$ =>
       GetUiSetupMobileApiDashboardWidget();
 
   @override
-  GetUiSetupMobileApiDashboardWidgetBuilder $newBuilder() =>
+  GetUiSetupMobileApiDashboardWidgetBuilder newBuilder$() =>
       GetUiSetupMobileApiDashboardWidgetBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.widgetType,
         this.widgetConfig,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    widgetType.$reducer(reducer);
-    widgetConfig.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    widgetType.reducer$(reducer);
+    widgetConfig.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetUiSetupMobileApiDashboardWidget);
 }

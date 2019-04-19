@@ -214,23 +214,23 @@ class _$ListItemCategoriesApiResponseActions
   final StatefulActionsOptions<
       ListItemCategoriesApiResponse,
       ListItemCategoriesApiResponseBuilder,
-      ListItemCategoriesApiResponseActions> $options;
+      ListItemCategoriesApiResponseActions> options$;
 
-  final ActionDispatcher<ListItemCategoriesApiResponse> $replace;
+  final ActionDispatcher<ListItemCategoriesApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListItemCategoriesApiItemCategory>>
       itemCategories;
   final FieldDispatcher<BuiltList<String>> existingLinkedItemCategoryIds;
 
-  _$ListItemCategoriesApiResponseActions._(this.$options)
-      : $replace = $options.action<ListItemCategoriesApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$ListItemCategoriesApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListItemCategoriesApiResponse>(
+            'replace\$', (a) => a?.replace$),
         itemCategories =
-            $options.field<BuiltList<ListItemCategoriesApiItemCategory>>(
+            options$.field<BuiltList<ListItemCategoriesApiItemCategory>>(
                 'itemCategories',
                 (a) => a?.itemCategories,
                 (s) => s?.itemCategories,
                 (p, b) => p?.itemCategories = b),
-        existingLinkedItemCategoryIds = $options.field<BuiltList<String>>(
+        existingLinkedItemCategoryIds = options$.field<BuiltList<String>>(
             'existingLinkedItemCategoryIds',
             (a) => a?.existingLinkedItemCategoryIds,
             (s) => s?.existingLinkedItemCategoryIds,
@@ -242,35 +242,31 @@ class _$ListItemCategoriesApiResponseActions
       _$ListItemCategoriesApiResponseActions._(options());
 
   @override
-  ListItemCategoriesApiResponse get $initial => ListItemCategoriesApiResponse();
+  ListItemCategoriesApiResponse get initialState$ =>
+      ListItemCategoriesApiResponse();
 
   @override
-  ListItemCategoriesApiResponseBuilder $newBuilder() =>
+  ListItemCategoriesApiResponseBuilder newBuilder$() =>
       ListItemCategoriesApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemCategories,
         this.existingLinkedItemCategoryIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemCategories.$reducer(reducer);
-    existingLinkedItemCategoryIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemCategories.reducer$(reducer);
+    existingLinkedItemCategoryIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListItemCategoriesApiResponse);
 }

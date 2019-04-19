@@ -238,27 +238,27 @@ typedef StatefulActionsOptions<
 
 class _$ListRootOrgsApiRootOrgActions extends ListRootOrgsApiRootOrgActions {
   final StatefulActionsOptions<ListRootOrgsApiRootOrg,
-      ListRootOrgsApiRootOrgBuilder, ListRootOrgsApiRootOrgActions> $options;
+      ListRootOrgsApiRootOrgBuilder, ListRootOrgsApiRootOrgActions> options$;
 
-  final ActionDispatcher<ListRootOrgsApiRootOrg> $replace;
+  final ActionDispatcher<ListRootOrgsApiRootOrg> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<OrgType> type;
   final FieldDispatcher<String> reference;
   final FieldDispatcher<bool> active;
 
-  _$ListRootOrgsApiRootOrgActions._(this.$options)
-      : $replace = $options.action<ListRootOrgsApiRootOrg>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListRootOrgsApiRootOrgActions._(this.options$)
+      : replace$ = options$.action<ListRootOrgsApiRootOrg>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        type = $options.field<OrgType>(
+        type = options$.field<OrgType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -267,17 +267,17 @@ class _$ListRootOrgsApiRootOrgActions extends ListRootOrgsApiRootOrgActions {
       _$ListRootOrgsApiRootOrgActions._(options());
 
   @override
-  ListRootOrgsApiRootOrg get $initial => ListRootOrgsApiRootOrg();
+  ListRootOrgsApiRootOrg get initialState$ => ListRootOrgsApiRootOrg();
 
   @override
-  ListRootOrgsApiRootOrgBuilder $newBuilder() =>
+  ListRootOrgsApiRootOrgBuilder newBuilder$() =>
       ListRootOrgsApiRootOrgBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.type,
@@ -286,21 +286,17 @@ class _$ListRootOrgsApiRootOrgActions extends ListRootOrgsApiRootOrgActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    type.$reducer(reducer);
-    reference.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    type.reducer$(reducer);
+    reference.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListRootOrgsApiRootOrg);
 }

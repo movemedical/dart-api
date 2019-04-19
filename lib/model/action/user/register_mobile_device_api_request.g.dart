@@ -229,30 +229,30 @@ class _$RegisterMobileDeviceApiRequestActions
   final StatefulActionsOptions<
       RegisterMobileDeviceApiRequest,
       RegisterMobileDeviceApiRequestBuilder,
-      RegisterMobileDeviceApiRequestActions> $options;
+      RegisterMobileDeviceApiRequestActions> options$;
 
-  final ActionDispatcher<RegisterMobileDeviceApiRequest> $replace;
+  final ActionDispatcher<RegisterMobileDeviceApiRequest> replace$;
   final FieldDispatcher<String> existingDeviceId;
   final FieldDispatcher<MobileDeviceType> deviceType;
   final FieldDispatcher<String> token;
   final FieldDispatcher<bool> useSandboxArn;
 
-  _$RegisterMobileDeviceApiRequestActions._(this.$options)
-      : $replace = $options.action<RegisterMobileDeviceApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        existingDeviceId = $options.field<String>(
+  _$RegisterMobileDeviceApiRequestActions._(this.options$)
+      : replace$ = options$.action<RegisterMobileDeviceApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        existingDeviceId = options$.field<String>(
             'existingDeviceId',
             (a) => a?.existingDeviceId,
             (s) => s?.existingDeviceId,
             (p, b) => p?.existingDeviceId = b),
-        deviceType = $options.field<MobileDeviceType>(
+        deviceType = options$.field<MobileDeviceType>(
             'deviceType',
             (a) => a?.deviceType,
             (s) => s?.deviceType,
             (p, b) => p?.deviceType = b),
-        token = $options.field<String>(
+        token = options$.field<String>(
             'token', (a) => a?.token, (s) => s?.token, (p, b) => p?.token = b),
-        useSandboxArn = $options.field<bool>(
+        useSandboxArn = options$.field<bool>(
             'useSandboxArn',
             (a) => a?.useSandboxArn,
             (s) => s?.useSandboxArn,
@@ -264,18 +264,18 @@ class _$RegisterMobileDeviceApiRequestActions
       _$RegisterMobileDeviceApiRequestActions._(options());
 
   @override
-  RegisterMobileDeviceApiRequest get $initial =>
+  RegisterMobileDeviceApiRequest get initialState$ =>
       RegisterMobileDeviceApiRequest();
 
   @override
-  RegisterMobileDeviceApiRequestBuilder $newBuilder() =>
+  RegisterMobileDeviceApiRequestBuilder newBuilder$() =>
       RegisterMobileDeviceApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.existingDeviceId,
         this.deviceType,
         this.token,
@@ -283,21 +283,16 @@ class _$RegisterMobileDeviceApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    existingDeviceId.$reducer(reducer);
-    deviceType.$reducer(reducer);
-    token.$reducer(reducer);
-    useSandboxArn.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    existingDeviceId.reducer$(reducer);
+    deviceType.reducer$(reducer);
+    token.reducer$(reducer);
+    useSandboxArn.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RegisterMobileDeviceApiRequest);
 }

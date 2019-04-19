@@ -148,15 +148,15 @@ typedef StatefulActionsOptions<
 
 class _$GetFacilityApiRequestActions extends GetFacilityApiRequestActions {
   final StatefulActionsOptions<GetFacilityApiRequest,
-      GetFacilityApiRequestBuilder, GetFacilityApiRequestActions> $options;
+      GetFacilityApiRequestBuilder, GetFacilityApiRequestActions> options$;
 
-  final ActionDispatcher<GetFacilityApiRequest> $replace;
+  final ActionDispatcher<GetFacilityApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$GetFacilityApiRequestActions._(this.$options)
-      : $replace = $options.action<GetFacilityApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetFacilityApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetFacilityApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -165,31 +165,27 @@ class _$GetFacilityApiRequestActions extends GetFacilityApiRequestActions {
       _$GetFacilityApiRequestActions._(options());
 
   @override
-  GetFacilityApiRequest get $initial => GetFacilityApiRequest();
+  GetFacilityApiRequest get initialState$ => GetFacilityApiRequest();
 
   @override
-  GetFacilityApiRequestBuilder $newBuilder() => GetFacilityApiRequestBuilder();
+  GetFacilityApiRequestBuilder newBuilder$() => GetFacilityApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetFacilityApiRequest);
 }

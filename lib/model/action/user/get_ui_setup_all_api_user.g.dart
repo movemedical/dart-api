@@ -761,9 +761,9 @@ typedef StatefulActionsOptions<
 
 class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
   final StatefulActionsOptions<GetUiSetupAllApiUser,
-      GetUiSetupAllApiUserBuilder, GetUiSetupAllApiUserActions> $options;
+      GetUiSetupAllApiUserBuilder, GetUiSetupAllApiUserActions> options$;
 
-  final ActionDispatcher<GetUiSetupAllApiUser> $replace;
+  final ActionDispatcher<GetUiSetupAllApiUser> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> displayName;
   final FieldDispatcher<String> linkedId;
@@ -791,66 +791,66 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
   final DceActions dce;
   final ConsumerActions consumer;
 
-  _$GetUiSetupAllApiUserActions._(this.$options)
-      : $replace = $options.action<GetUiSetupAllApiUser>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetUiSetupAllApiUserActions._(this.options$)
+      : replace$ = options$.action<GetUiSetupAllApiUser>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        displayName = $options.field<String>(
+        displayName = options$.field<String>(
             'displayName',
             (a) => a?.displayName,
             (s) => s?.displayName,
             (p, b) => p?.displayName = b),
-        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
+        linkedId = options$.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
-        erpUserId = $options.field<String>('erpUserId', (a) => a?.erpUserId,
+        erpUserId = options$.field<String>('erpUserId', (a) => a?.erpUserId,
             (s) => s?.erpUserId, (p, b) => p?.erpUserId = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        userPerspective = $options.field<UserPerspective>(
+        userPerspective = options$.field<UserPerspective>(
             'userPerspective',
             (a) => a?.userPerspective,
             (s) => s?.userPerspective,
             (p, b) => p?.userPerspective = b),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        locale = $options.field<MoveLocale>('locale', (a) => a?.locale,
+        locale = options$.field<MoveLocale>('locale', (a) => a?.locale,
             (s) => s?.locale, (p, b) => p?.locale = b),
-        dateFormat = $options.field<MoveDateRegion>(
+        dateFormat = options$.field<MoveDateRegion>(
             'dateFormat',
             (a) => a?.dateFormat,
             (s) => s?.dateFormat,
             (p, b) => p?.dateFormat = b),
         contact = ContactActions(() =>
-            $options.stateful<Contact, ContactBuilder, ContactActions>(
+            options$.stateful<Contact, ContactBuilder, ContactActions>(
                 'contact',
                 (a) => a.contact,
                 (s) => s?.contact,
                 (b) => b?.contact,
                 (parent, builder) => parent?.contact = builder)),
-        ssoId = $options.field<String>(
+        ssoId = options$.field<String>(
             'ssoId', (a) => a?.ssoId, (s) => s?.ssoId, (p, b) => p?.ssoId = b),
-        ssoName = $options.field<String>('ssoName', (a) => a?.ssoName,
+        ssoName = options$.field<String>('ssoName', (a) => a?.ssoName,
             (s) => s?.ssoName, (p, b) => p?.ssoName = b),
-        ssoType = $options.field<SSOType>('ssoType', (a) => a?.ssoType,
+        ssoType = options$.field<SSOType>('ssoType', (a) => a?.ssoType,
             (s) => s?.ssoType, (p, b) => p?.ssoType = b),
-        mfaEnabled = $options.field<bool>('mfaEnabled', (a) => a?.mfaEnabled,
+        mfaEnabled = options$.field<bool>('mfaEnabled', (a) => a?.mfaEnabled,
             (s) => s?.mfaEnabled, (p, b) => p?.mfaEnabled = b),
-        mfaId = $options.field<String>(
+        mfaId = options$.field<String>(
             'mfaId', (a) => a?.mfaId, (s) => s?.mfaId, (p, b) => p?.mfaId = b),
-        mfaRef = $options.field<String>('mfaRef', (a) => a?.mfaRef,
+        mfaRef = options$.field<String>('mfaRef', (a) => a?.mfaRef,
             (s) => s?.mfaRef, (p, b) => p?.mfaRef = b),
-        mfaType = $options.field<MfaType>('mfaType', (a) => a?.mfaType,
+        mfaType = options$.field<MfaType>('mfaType', (a) => a?.mfaType,
             (s) => s?.mfaType, (p, b) => p?.mfaType = b),
         defaultReceivingAtLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'defaultReceivingAtLocation',
                 (a) => a.defaultReceivingAtLocation,
                 (s) => s?.defaultReceivingAtLocation,
                 (b) => b?.defaultReceivingAtLocation,
                 (parent, builder) =>
                     parent?.defaultReceivingAtLocation = builder)),
-        orgInfo = GetUiSetupAllApiOrgInfoActions(() => $options.stateful<
+        orgInfo = GetUiSetupAllApiOrgInfoActions(() => options$.stateful<
                 GetUiSetupAllApiOrgInfo,
                 GetUiSetupAllApiOrgInfoBuilder,
                 GetUiSetupAllApiOrgInfoActions>(
@@ -860,7 +860,7 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
             (b) => b?.orgInfo,
             (parent, builder) => parent?.orgInfo = builder)),
         userPermissions = GetUiSetupAllApiUserPermissionsActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetUiSetupAllApiUserPermissions,
                     GetUiSetupAllApiUserPermissionsBuilder,
                     GetUiSetupAllApiUserPermissionsActions>(
@@ -869,39 +869,39 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
                 (s) => s?.userPermissions,
                 (b) => b?.userPermissions,
                 (parent, builder) => parent?.userPermissions = builder)),
-        systemAdmin = SystemAdminActions(() => $options
+        systemAdmin = SystemAdminActions(() => options$
             .stateful<SystemAdmin, SystemAdminBuilder, SystemAdminActions>(
                 'systemAdmin',
                 (a) => a.systemAdmin,
                 (s) => s?.systemAdmin,
                 (b) => b?.systemAdmin,
                 (parent, builder) => parent?.systemAdmin = builder)),
-        ae = AeActions(() => $options.stateful<Ae, AeBuilder, AeActions>(
+        ae = AeActions(() => options$.stateful<Ae, AeBuilder, AeActions>(
             'ae',
             (a) => a.ae,
             (s) => s?.ae,
             (b) => b?.ae,
             (parent, builder) => parent?.ae = builder)),
-        hcp = HcpActions(() => $options.stateful<Hcp, HcpBuilder, HcpActions>(
+        hcp = HcpActions(() => options$.stateful<Hcp, HcpBuilder, HcpActions>(
             'hcp',
             (a) => a.hcp,
             (s) => s?.hcp,
             (b) => b?.hcp,
             (parent, builder) => parent?.hcp = builder)),
-        hcr = HcrActions(() => $options.stateful<Hcr, HcrBuilder, HcrActions>(
+        hcr = HcrActions(() => options$.stateful<Hcr, HcrBuilder, HcrActions>(
             'hcr',
             (a) => a.hcr,
             (s) => s?.hcr,
             (b) => b?.hcr,
             (parent, builder) => parent?.hcr = builder)),
-        dce = DceActions(() => $options.stateful<Dce, DceBuilder, DceActions>(
+        dce = DceActions(() => options$.stateful<Dce, DceBuilder, DceActions>(
             'dce',
             (a) => a.dce,
             (s) => s?.dce,
             (b) => b?.dce,
             (parent, builder) => parent?.dce = builder)),
         consumer = ConsumerActions(() =>
-            $options.stateful<Consumer, ConsumerBuilder, ConsumerActions>(
+            options$.stateful<Consumer, ConsumerBuilder, ConsumerActions>(
                 'consumer',
                 (a) => a.consumer,
                 (s) => s?.consumer,
@@ -914,14 +914,14 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
       _$GetUiSetupAllApiUserActions._(options());
 
   @override
-  GetUiSetupAllApiUser get $initial => GetUiSetupAllApiUser();
+  GetUiSetupAllApiUser get initialState$ => GetUiSetupAllApiUser();
 
   @override
-  GetUiSetupAllApiUserBuilder $newBuilder() => GetUiSetupAllApiUserBuilder();
+  GetUiSetupAllApiUserBuilder newBuilder$() => GetUiSetupAllApiUserBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.contact,
         this.defaultReceivingAtLocation,
         this.orgInfo,
@@ -934,11 +934,11 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
         this.consumer,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.displayName,
         this.linkedId,
@@ -958,52 +958,48 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    displayName.$reducer(reducer);
-    linkedId.$reducer(reducer);
-    erpUserId.$reducer(reducer);
-    orgId.$reducer(reducer);
-    userPerspective.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    locale.$reducer(reducer);
-    dateFormat.$reducer(reducer);
-    contact.$reducer(reducer);
-    ssoId.$reducer(reducer);
-    ssoName.$reducer(reducer);
-    ssoType.$reducer(reducer);
-    mfaEnabled.$reducer(reducer);
-    mfaId.$reducer(reducer);
-    mfaRef.$reducer(reducer);
-    mfaType.$reducer(reducer);
-    defaultReceivingAtLocation.$reducer(reducer);
-    orgInfo.$reducer(reducer);
-    userPermissions.$reducer(reducer);
-    systemAdmin.$reducer(reducer);
-    ae.$reducer(reducer);
-    hcp.$reducer(reducer);
-    hcr.$reducer(reducer);
-    dce.$reducer(reducer);
-    consumer.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    displayName.reducer$(reducer);
+    linkedId.reducer$(reducer);
+    erpUserId.reducer$(reducer);
+    orgId.reducer$(reducer);
+    userPerspective.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    locale.reducer$(reducer);
+    dateFormat.reducer$(reducer);
+    contact.reducer$(reducer);
+    ssoId.reducer$(reducer);
+    ssoName.reducer$(reducer);
+    ssoType.reducer$(reducer);
+    mfaEnabled.reducer$(reducer);
+    mfaId.reducer$(reducer);
+    mfaRef.reducer$(reducer);
+    mfaType.reducer$(reducer);
+    defaultReceivingAtLocation.reducer$(reducer);
+    orgInfo.reducer$(reducer);
+    userPermissions.reducer$(reducer);
+    systemAdmin.reducer$(reducer);
+    ae.reducer$(reducer);
+    hcp.reducer$(reducer);
+    hcr.reducer$(reducer);
+    dce.reducer$(reducer);
+    consumer.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    contact.$middleware(middleware);
-    defaultReceivingAtLocation.$middleware(middleware);
-    orgInfo.$middleware(middleware);
-    userPermissions.$middleware(middleware);
-    systemAdmin.$middleware(middleware);
-    ae.$middleware(middleware);
-    hcp.$middleware(middleware);
-    hcr.$middleware(middleware);
-    dce.$middleware(middleware);
-    consumer.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    contact.middleware$(middleware);
+    defaultReceivingAtLocation.middleware$(middleware);
+    orgInfo.middleware$(middleware);
+    userPermissions.middleware$(middleware);
+    systemAdmin.middleware$(middleware);
+    ae.middleware$(middleware);
+    hcp.middleware$(middleware);
+    hcr.middleware$(middleware);
+    dce.middleware$(middleware);
+    consumer.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetUiSetupAllApiUser);
 }

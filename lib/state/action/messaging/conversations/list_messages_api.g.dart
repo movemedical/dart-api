@@ -22,64 +22,30 @@ class _$ListMessagesApi extends ListMessagesApi {
           ApiResult<ListMessagesApiResponse>>,
       CommandStateBuilder<ApiCommand<ListMessagesApiRequest>,
           ApiResult<ListMessagesApiResponse>>,
-      ListMessagesApi> $options;
+      ListMessagesApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListMessagesApiRequest>,
-          ApiResult<ListMessagesApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ListMessagesApiRequest>,
-          ApiResult<ListMessagesApiResponse>, ListMessagesApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListMessagesApiRequest>,
-          ApiResult<ListMessagesApiResponse>,
-          ListMessagesApi,
-          Command<ApiCommand<ListMessagesApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListMessagesApiRequest>,
-          ApiResult<ListMessagesApiResponse>,
-          ListMessagesApi,
-          CommandResult<ApiResult<ListMessagesApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListMessagesApiRequest>,
-          ApiResult<ListMessagesApiResponse>,
-          ListMessagesApi,
-          CommandProgress>> $progress;
+          ApiResult<ListMessagesApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListMessagesApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<ListMessagesApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListMessagesApi._(this.$options)
-      : $replace = $options.action<
+  _$ListMessagesApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListMessagesApiRequest>,
                     ApiResult<ListMessagesApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListMessagesApiRequest>,
-                ApiResult<ListMessagesApiResponse>,
-                ListMessagesApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListMessagesApiRequest>,
-                    ApiResult<ListMessagesApiResponse>,
-                    ListMessagesApi,
-                    Command<ApiCommand<ListMessagesApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListMessagesApiRequest>,
-                    ApiResult<ListMessagesApiResponse>,
-                    ListMessagesApi,
-                    CommandResult<ApiResult<ListMessagesApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListMessagesApiRequest>,
-                ApiResult<ListMessagesApiResponse>,
-                ListMessagesApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<ListMessagesApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<ListMessagesApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListMessagesApi(ListMessagesApiOptions options) =>
@@ -88,31 +54,24 @@ class _$ListMessagesApi extends ListMessagesApi {
   @override
   CommandState<ApiCommand<ListMessagesApiRequest>,
           ApiResult<ListMessagesApiResponse>>
-      get $initial => CommandState<ApiCommand<ListMessagesApiRequest>,
+      get initialState$ => CommandState<ApiCommand<ListMessagesApiRequest>,
           ApiResult<ListMessagesApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListMessagesApiRequest>,
           ApiResult<ListMessagesApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<ListMessagesApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<ListMessagesApiRequest>,
           ApiResult<ListMessagesApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListMessagesApiRequest)]),
-        FullType(ApiResult, [FullType(ListMessagesApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

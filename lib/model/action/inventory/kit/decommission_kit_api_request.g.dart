@@ -194,18 +194,18 @@ class _$DecommissionKitApiRequestActions
   final StatefulActionsOptions<
       DecommissionKitApiRequest,
       DecommissionKitApiRequestBuilder,
-      DecommissionKitApiRequestActions> $options;
+      DecommissionKitApiRequestActions> options$;
 
-  final ActionDispatcher<DecommissionKitApiRequest> $replace;
+  final ActionDispatcher<DecommissionKitApiRequest> replace$;
   final FieldDispatcher<String> kitStockId;
   final FieldDispatcher<BuiltList<DecommissionKitApiKitContainer>> containers;
 
-  _$DecommissionKitApiRequestActions._(this.$options)
-      : $replace = $options.action<DecommissionKitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        kitStockId = $options.field<String>('kitStockId', (a) => a?.kitStockId,
+  _$DecommissionKitApiRequestActions._(this.options$)
+      : replace$ = options$.action<DecommissionKitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        kitStockId = options$.field<String>('kitStockId', (a) => a?.kitStockId,
             (s) => s?.kitStockId, (p, b) => p?.kitStockId = b),
-        containers = $options.field<BuiltList<DecommissionKitApiKitContainer>>(
+        containers = options$.field<BuiltList<DecommissionKitApiKitContainer>>(
             'containers',
             (a) => a?.containers,
             (s) => s?.containers,
@@ -217,34 +217,30 @@ class _$DecommissionKitApiRequestActions
       _$DecommissionKitApiRequestActions._(options());
 
   @override
-  DecommissionKitApiRequest get $initial => DecommissionKitApiRequest();
+  DecommissionKitApiRequest get initialState$ => DecommissionKitApiRequest();
 
   @override
-  DecommissionKitApiRequestBuilder $newBuilder() =>
+  DecommissionKitApiRequestBuilder newBuilder$() =>
       DecommissionKitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.kitStockId,
         this.containers,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    kitStockId.$reducer(reducer);
-    containers.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    kitStockId.reducer$(reducer);
+    containers.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(DecommissionKitApiRequest);
 }

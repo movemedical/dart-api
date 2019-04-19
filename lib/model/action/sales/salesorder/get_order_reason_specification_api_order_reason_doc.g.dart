@@ -188,19 +188,19 @@ class _$GetOrderReasonSpecificationApiOrderReasonDocActions
   final StatefulActionsOptions<
       GetOrderReasonSpecificationApiOrderReasonDoc,
       GetOrderReasonSpecificationApiOrderReasonDocBuilder,
-      GetOrderReasonSpecificationApiOrderReasonDocActions> $options;
+      GetOrderReasonSpecificationApiOrderReasonDocActions> options$;
 
-  final ActionDispatcher<GetOrderReasonSpecificationApiOrderReasonDoc> $replace;
+  final ActionDispatcher<GetOrderReasonSpecificationApiOrderReasonDoc> replace$;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> doc;
 
-  _$GetOrderReasonSpecificationApiOrderReasonDocActions._(this.$options)
-      : $replace =
-            $options.action<GetOrderReasonSpecificationApiOrderReasonDoc>(
-                '\$replace', (a) => a?.$replace),
-        name = $options.field<String>(
+  _$GetOrderReasonSpecificationApiOrderReasonDocActions._(this.options$)
+      : replace$ =
+            options$.action<GetOrderReasonSpecificationApiOrderReasonDoc>(
+                'replace\$', (a) => a?.replace$),
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        doc = $options.field<String>(
+        doc = options$.field<String>(
             'doc', (a) => a?.doc, (s) => s?.doc, (p, b) => p?.doc = b),
         super._();
 
@@ -209,36 +209,31 @@ class _$GetOrderReasonSpecificationApiOrderReasonDocActions
       _$GetOrderReasonSpecificationApiOrderReasonDocActions._(options());
 
   @override
-  GetOrderReasonSpecificationApiOrderReasonDoc get $initial =>
+  GetOrderReasonSpecificationApiOrderReasonDoc get initialState$ =>
       GetOrderReasonSpecificationApiOrderReasonDoc();
 
   @override
-  GetOrderReasonSpecificationApiOrderReasonDocBuilder $newBuilder() =>
+  GetOrderReasonSpecificationApiOrderReasonDocBuilder newBuilder$() =>
       GetOrderReasonSpecificationApiOrderReasonDocBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.name,
         this.doc,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    name.$reducer(reducer);
-    doc.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    name.reducer$(reducer);
+    doc.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetOrderReasonSpecificationApiOrderReasonDoc);
 }

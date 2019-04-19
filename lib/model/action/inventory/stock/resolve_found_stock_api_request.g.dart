@@ -184,21 +184,21 @@ class _$ResolveFoundStockApiRequestActions
   final StatefulActionsOptions<
       ResolveFoundStockApiRequest,
       ResolveFoundStockApiRequestBuilder,
-      ResolveFoundStockApiRequestActions> $options;
+      ResolveFoundStockApiRequestActions> options$;
 
-  final ActionDispatcher<ResolveFoundStockApiRequest> $replace;
+  final ActionDispatcher<ResolveFoundStockApiRequest> replace$;
   final FieldDispatcher<String> foundStockId;
   final FieldDispatcher<int> resolveWithStockNumber;
 
-  _$ResolveFoundStockApiRequestActions._(this.$options)
-      : $replace = $options.action<ResolveFoundStockApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        foundStockId = $options.field<String>(
+  _$ResolveFoundStockApiRequestActions._(this.options$)
+      : replace$ = options$.action<ResolveFoundStockApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        foundStockId = options$.field<String>(
             'foundStockId',
             (a) => a?.foundStockId,
             (s) => s?.foundStockId,
             (p, b) => p?.foundStockId = b),
-        resolveWithStockNumber = $options.field<int>(
+        resolveWithStockNumber = options$.field<int>(
             'resolveWithStockNumber',
             (a) => a?.resolveWithStockNumber,
             (s) => s?.resolveWithStockNumber,
@@ -210,35 +210,31 @@ class _$ResolveFoundStockApiRequestActions
       _$ResolveFoundStockApiRequestActions._(options());
 
   @override
-  ResolveFoundStockApiRequest get $initial => ResolveFoundStockApiRequest();
+  ResolveFoundStockApiRequest get initialState$ =>
+      ResolveFoundStockApiRequest();
 
   @override
-  ResolveFoundStockApiRequestBuilder $newBuilder() =>
+  ResolveFoundStockApiRequestBuilder newBuilder$() =>
       ResolveFoundStockApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.foundStockId,
         this.resolveWithStockNumber,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    foundStockId.$reducer(reducer);
-    resolveWithStockNumber.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    foundStockId.reducer$(reducer);
+    resolveWithStockNumber.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ResolveFoundStockApiRequest);
 }

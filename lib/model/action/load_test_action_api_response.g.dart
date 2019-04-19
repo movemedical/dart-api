@@ -154,15 +154,15 @@ class _$LoadTestActionApiResponseActions
   final StatefulActionsOptions<
       LoadTestActionApiResponse,
       LoadTestActionApiResponseBuilder,
-      LoadTestActionApiResponseActions> $options;
+      LoadTestActionApiResponseActions> options$;
 
-  final ActionDispatcher<LoadTestActionApiResponse> $replace;
+  final ActionDispatcher<LoadTestActionApiResponse> replace$;
   final FieldDispatcher<String> message;
 
-  _$LoadTestActionApiResponseActions._(this.$options)
-      : $replace = $options.action<LoadTestActionApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        message = $options.field<String>('message', (a) => a?.message,
+  _$LoadTestActionApiResponseActions._(this.options$)
+      : replace$ = options$.action<LoadTestActionApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        message = options$.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
         super._();
 
@@ -171,32 +171,28 @@ class _$LoadTestActionApiResponseActions
       _$LoadTestActionApiResponseActions._(options());
 
   @override
-  LoadTestActionApiResponse get $initial => LoadTestActionApiResponse();
+  LoadTestActionApiResponse get initialState$ => LoadTestActionApiResponse();
 
   @override
-  LoadTestActionApiResponseBuilder $newBuilder() =>
+  LoadTestActionApiResponseBuilder newBuilder$() =>
       LoadTestActionApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.message,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    message.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    message.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(LoadTestActionApiResponse);
 }

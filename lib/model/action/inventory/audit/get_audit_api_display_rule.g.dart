@@ -339,9 +339,9 @@ typedef StatefulActionsOptions<
 
 class _$GetAuditApiDisplayRuleActions extends GetAuditApiDisplayRuleActions {
   final StatefulActionsOptions<GetAuditApiDisplayRule,
-      GetAuditApiDisplayRuleBuilder, GetAuditApiDisplayRuleActions> $options;
+      GetAuditApiDisplayRuleBuilder, GetAuditApiDisplayRuleActions> options$;
 
-  final ActionDispatcher<GetAuditApiDisplayRule> $replace;
+  final ActionDispatcher<GetAuditApiDisplayRule> replace$;
   final FieldDispatcher<bool> manage;
   final FieldDispatcher<bool> manageInventoryTypesCount;
   final FieldDispatcher<bool> start;
@@ -352,29 +352,29 @@ class _$GetAuditApiDisplayRuleActions extends GetAuditApiDisplayRuleActions {
   final FieldDispatcher<bool> exportItems;
   final FieldDispatcher<bool> auditOutput;
 
-  _$GetAuditApiDisplayRuleActions._(this.$options)
-      : $replace = $options.action<GetAuditApiDisplayRule>(
-            '\$replace', (a) => a?.$replace),
-        manage = $options.field<bool>('manage', (a) => a?.manage,
+  _$GetAuditApiDisplayRuleActions._(this.options$)
+      : replace$ = options$.action<GetAuditApiDisplayRule>(
+            'replace\$', (a) => a?.replace$),
+        manage = options$.field<bool>('manage', (a) => a?.manage,
             (s) => s?.manage, (p, b) => p?.manage = b),
-        manageInventoryTypesCount = $options.field<bool>(
+        manageInventoryTypesCount = options$.field<bool>(
             'manageInventoryTypesCount',
             (a) => a?.manageInventoryTypesCount,
             (s) => s?.manageInventoryTypesCount,
             (p, b) => p?.manageInventoryTypesCount = b),
-        start = $options.field<bool>(
+        start = options$.field<bool>(
             'start', (a) => a?.start, (s) => s?.start, (p, b) => p?.start = b),
-        submit = $options.field<bool>('submit', (a) => a?.submit,
+        submit = options$.field<bool>('submit', (a) => a?.submit,
             (s) => s?.submit, (p, b) => p?.submit = b),
-        cancel = $options.field<bool>('cancel', (a) => a?.cancel,
+        cancel = options$.field<bool>('cancel', (a) => a?.cancel,
             (s) => s?.cancel, (p, b) => p?.cancel = b),
-        addCounts = $options.field<bool>('addCounts', (a) => a?.addCounts,
+        addCounts = options$.field<bool>('addCounts', (a) => a?.addCounts,
             (s) => s?.addCounts, (p, b) => p?.addCounts = b),
-        bill = $options.field<bool>(
+        bill = options$.field<bool>(
             'bill', (a) => a?.bill, (s) => s?.bill, (p, b) => p?.bill = b),
-        exportItems = $options.field<bool>('exportItems', (a) => a?.exportItems,
+        exportItems = options$.field<bool>('exportItems', (a) => a?.exportItems,
             (s) => s?.exportItems, (p, b) => p?.exportItems = b),
-        auditOutput = $options.field<bool>('auditOutput', (a) => a?.auditOutput,
+        auditOutput = options$.field<bool>('auditOutput', (a) => a?.auditOutput,
             (s) => s?.auditOutput, (p, b) => p?.auditOutput = b),
         super._();
 
@@ -383,17 +383,17 @@ class _$GetAuditApiDisplayRuleActions extends GetAuditApiDisplayRuleActions {
       _$GetAuditApiDisplayRuleActions._(options());
 
   @override
-  GetAuditApiDisplayRule get $initial => GetAuditApiDisplayRule();
+  GetAuditApiDisplayRule get initialState$ => GetAuditApiDisplayRule();
 
   @override
-  GetAuditApiDisplayRuleBuilder $newBuilder() =>
+  GetAuditApiDisplayRuleBuilder newBuilder$() =>
       GetAuditApiDisplayRuleBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.manage,
         this.manageInventoryTypesCount,
         this.start,
@@ -406,25 +406,21 @@ class _$GetAuditApiDisplayRuleActions extends GetAuditApiDisplayRuleActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    manage.$reducer(reducer);
-    manageInventoryTypesCount.$reducer(reducer);
-    start.$reducer(reducer);
-    submit.$reducer(reducer);
-    cancel.$reducer(reducer);
-    addCounts.$reducer(reducer);
-    bill.$reducer(reducer);
-    exportItems.$reducer(reducer);
-    auditOutput.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    manage.reducer$(reducer);
+    manageInventoryTypesCount.reducer$(reducer);
+    start.reducer$(reducer);
+    submit.reducer$(reducer);
+    cancel.reducer$(reducer);
+    addCounts.reducer$(reducer);
+    bill.reducer$(reducer);
+    exportItems.reducer$(reducer);
+    auditOutput.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetAuditApiDisplayRule);
 }

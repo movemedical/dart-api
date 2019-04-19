@@ -158,15 +158,15 @@ class _$GetOrgUnitChildrenApiRequestActions
   final StatefulActionsOptions<
       GetOrgUnitChildrenApiRequest,
       GetOrgUnitChildrenApiRequestBuilder,
-      GetOrgUnitChildrenApiRequestActions> $options;
+      GetOrgUnitChildrenApiRequestActions> options$;
 
-  final ActionDispatcher<GetOrgUnitChildrenApiRequest> $replace;
+  final ActionDispatcher<GetOrgUnitChildrenApiRequest> replace$;
   final FieldDispatcher<String> parentId;
 
-  _$GetOrgUnitChildrenApiRequestActions._(this.$options)
-      : $replace = $options.action<GetOrgUnitChildrenApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        parentId = $options.field<String>('parentId', (a) => a?.parentId,
+  _$GetOrgUnitChildrenApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetOrgUnitChildrenApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        parentId = options$.field<String>('parentId', (a) => a?.parentId,
             (s) => s?.parentId, (p, b) => p?.parentId = b),
         super._();
 
@@ -175,33 +175,29 @@ class _$GetOrgUnitChildrenApiRequestActions
       _$GetOrgUnitChildrenApiRequestActions._(options());
 
   @override
-  GetOrgUnitChildrenApiRequest get $initial => GetOrgUnitChildrenApiRequest();
+  GetOrgUnitChildrenApiRequest get initialState$ =>
+      GetOrgUnitChildrenApiRequest();
 
   @override
-  GetOrgUnitChildrenApiRequestBuilder $newBuilder() =>
+  GetOrgUnitChildrenApiRequestBuilder newBuilder$() =>
       GetOrgUnitChildrenApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.parentId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    parentId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    parentId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetOrgUnitChildrenApiRequest);
 }

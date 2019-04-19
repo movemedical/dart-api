@@ -416,9 +416,9 @@ class _$ProcessKitTrayRestockPlanApiRequestActions
   final StatefulActionsOptions<
       ProcessKitTrayRestockPlanApiRequest,
       ProcessKitTrayRestockPlanApiRequestBuilder,
-      ProcessKitTrayRestockPlanApiRequestActions> $options;
+      ProcessKitTrayRestockPlanApiRequestActions> options$;
 
-  final ActionDispatcher<ProcessKitTrayRestockPlanApiRequest> $replace;
+  final ActionDispatcher<ProcessKitTrayRestockPlanApiRequest> replace$;
   final FieldDispatcher<String> kitTrayStockIdOrStockSummaryId;
   final FieldDispatcher<BuildKitTrayRestockPlanApiRestockSystem> system;
   final FieldDispatcher<String> poNumber;
@@ -431,58 +431,58 @@ class _$ProcessKitTrayRestockPlanApiRequestActions
   final FieldDispatcher<BuiltList<ProcessKitTrayRestockPlanApiRestockItem>>
       restockItems;
 
-  _$ProcessKitTrayRestockPlanApiRequestActions._(this.$options)
-      : $replace = $options.action<ProcessKitTrayRestockPlanApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        kitTrayStockIdOrStockSummaryId = $options.field<String>(
+  _$ProcessKitTrayRestockPlanApiRequestActions._(this.options$)
+      : replace$ = options$.action<ProcessKitTrayRestockPlanApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        kitTrayStockIdOrStockSummaryId = options$.field<String>(
             'kitTrayStockIdOrStockSummaryId',
             (a) => a?.kitTrayStockIdOrStockSummaryId,
             (s) => s?.kitTrayStockIdOrStockSummaryId,
             (p, b) => p?.kitTrayStockIdOrStockSummaryId = b),
-        system = $options.field<BuildKitTrayRestockPlanApiRestockSystem>(
+        system = options$.field<BuildKitTrayRestockPlanApiRestockSystem>(
             'system',
             (a) => a?.system,
             (s) => s?.system,
             (p, b) => p?.system = b),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        existingOrderId = $options.field<String>(
+        existingOrderId = options$.field<String>(
             'existingOrderId',
             (a) => a?.existingOrderId,
             (s) => s?.existingOrderId,
             (p, b) => p?.existingOrderId = b),
-        location = LocationDataActions(() => $options
+        location = LocationDataActions(() => options$
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        deliverToAddressId = $options.field<String>(
+        deliverToAddressId = options$.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
             (p, b) => p?.deliverToAddressId = b),
         deliverToAddressOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToAddressOverride',
                 (a) => a.deliverToAddressOverride,
                 (s) => s?.deliverToAddressOverride,
                 (b) => b?.deliverToAddressOverride,
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
-        deliverByDate = $options.field<DateTime>(
+        deliverByDate = options$.field<DateTime>(
             'deliverByDate',
             (a) => a?.deliverByDate,
             (s) => s?.deliverByDate,
             (p, b) => p?.deliverByDate = b),
-        shippingServiceId = $options.field<String>(
+        shippingServiceId = options$.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
         restockItems =
-            $options.field<BuiltList<ProcessKitTrayRestockPlanApiRestockItem>>(
+            options$.field<BuiltList<ProcessKitTrayRestockPlanApiRestockItem>>(
                 'restockItems',
                 (a) => a?.restockItems,
                 (s) => s?.restockItems,
@@ -494,25 +494,25 @@ class _$ProcessKitTrayRestockPlanApiRequestActions
       _$ProcessKitTrayRestockPlanApiRequestActions._(options());
 
   @override
-  ProcessKitTrayRestockPlanApiRequest get $initial =>
+  ProcessKitTrayRestockPlanApiRequest get initialState$ =>
       ProcessKitTrayRestockPlanApiRequest();
 
   @override
-  ProcessKitTrayRestockPlanApiRequestBuilder $newBuilder() =>
+  ProcessKitTrayRestockPlanApiRequestBuilder newBuilder$() =>
       ProcessKitTrayRestockPlanApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
         this.deliverToAddressOverride,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.kitTrayStockIdOrStockSummaryId,
         this.system,
         this.poNumber,
@@ -524,29 +524,24 @@ class _$ProcessKitTrayRestockPlanApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    kitTrayStockIdOrStockSummaryId.$reducer(reducer);
-    system.$reducer(reducer);
-    poNumber.$reducer(reducer);
-    existingOrderId.$reducer(reducer);
-    location.$reducer(reducer);
-    deliverToAddressId.$reducer(reducer);
-    deliverToAddressOverride.$reducer(reducer);
-    deliverByDate.$reducer(reducer);
-    shippingServiceId.$reducer(reducer);
-    restockItems.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    kitTrayStockIdOrStockSummaryId.reducer$(reducer);
+    system.reducer$(reducer);
+    poNumber.reducer$(reducer);
+    existingOrderId.reducer$(reducer);
+    location.reducer$(reducer);
+    deliverToAddressId.reducer$(reducer);
+    deliverToAddressOverride.reducer$(reducer);
+    deliverByDate.reducer$(reducer);
+    shippingServiceId.reducer$(reducer);
+    restockItems.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    location.$middleware(middleware);
-    deliverToAddressOverride.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    location.middleware$(middleware);
+    deliverToAddressOverride.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ProcessKitTrayRestockPlanApiRequest);
 }

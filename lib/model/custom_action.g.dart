@@ -195,21 +195,21 @@ typedef StatefulActionsOptions<CustomAction, CustomActionBuilder,
 
 class _$CustomActionActions extends CustomActionActions {
   final StatefulActionsOptions<CustomAction, CustomActionBuilder,
-      CustomActionActions> $options;
+      CustomActionActions> options$;
 
-  final ActionDispatcher<CustomAction> $replace;
+  final ActionDispatcher<CustomAction> replace$;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> argsDef;
   final RunCustomActionApiRequestActions req;
 
-  _$CustomActionActions._(this.$options)
-      : $replace =
-            $options.action<CustomAction>('\$replace', (a) => a?.$replace),
-        name = $options.field<String>(
+  _$CustomActionActions._(this.options$)
+      : replace$ =
+            options$.action<CustomAction>('replace\$', (a) => a?.replace$),
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        argsDef = $options.field<String>('argsDef', (a) => a?.argsDef,
+        argsDef = options$.field<String>('argsDef', (a) => a?.argsDef,
             (s) => s?.argsDef, (p, b) => p?.argsDef = b),
-        req = RunCustomActionApiRequestActions(() => $options.stateful<
+        req = RunCustomActionApiRequestActions(() => options$.stateful<
                 RunCustomActionApiRequest,
                 RunCustomActionApiRequestBuilder,
                 RunCustomActionApiRequestActions>(
@@ -224,41 +224,37 @@ class _$CustomActionActions extends CustomActionActions {
       _$CustomActionActions._(options());
 
   @override
-  CustomAction get $initial => CustomAction();
+  CustomAction get initialState$ => CustomAction();
 
   @override
-  CustomActionBuilder $newBuilder() => CustomActionBuilder();
+  CustomActionBuilder newBuilder$() => CustomActionBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.req,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.name,
         this.argsDef,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    name.$reducer(reducer);
-    argsDef.$reducer(reducer);
-    req.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    name.reducer$(reducer);
+    argsDef.reducer$(reducer);
+    req.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    req.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    req.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CustomAction);
 }

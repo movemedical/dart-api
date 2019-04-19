@@ -247,22 +247,22 @@ class _$ListTeamOrgUnitLinksApiRequestActions
   final StatefulActionsOptions<
       ListTeamOrgUnitLinksApiRequest,
       ListTeamOrgUnitLinksApiRequestBuilder,
-      ListTeamOrgUnitLinksApiRequestActions> $options;
+      ListTeamOrgUnitLinksApiRequestActions> options$;
 
-  final ActionDispatcher<ListTeamOrgUnitLinksApiRequest> $replace;
+  final ActionDispatcher<ListTeamOrgUnitLinksApiRequest> replace$;
   final FieldDispatcher<String> teamId;
   final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListTeamOrgUnitLinksApiOrderBy> orderBy;
 
-  _$ListTeamOrgUnitLinksApiRequestActions._(this.$options)
-      : $replace = $options.action<ListTeamOrgUnitLinksApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+  _$ListTeamOrgUnitLinksApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListTeamOrgUnitLinksApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -272,7 +272,7 @@ class _$ListTeamOrgUnitLinksApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListTeamOrgUnitLinksApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListTeamOrgUnitLinksApiOrderBy>,
                     OrderByParamsBuilder<ListTeamOrgUnitLinksApiOrderBy>,
                     OrderByParamsActions<ListTeamOrgUnitLinksApiOrderBy>>(
@@ -288,47 +288,42 @@ class _$ListTeamOrgUnitLinksApiRequestActions
       _$ListTeamOrgUnitLinksApiRequestActions._(options());
 
   @override
-  ListTeamOrgUnitLinksApiRequest get $initial =>
+  ListTeamOrgUnitLinksApiRequest get initialState$ =>
       ListTeamOrgUnitLinksApiRequest();
 
   @override
-  ListTeamOrgUnitLinksApiRequestBuilder $newBuilder() =>
+  ListTeamOrgUnitLinksApiRequestBuilder newBuilder$() =>
       ListTeamOrgUnitLinksApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.teamId,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    teamId.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    teamId.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListTeamOrgUnitLinksApiRequest);
 }

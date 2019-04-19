@@ -149,15 +149,15 @@ typedef StatefulActionsOptions<
 
 class _$CreateNoteApiResponseActions extends CreateNoteApiResponseActions {
   final StatefulActionsOptions<CreateNoteApiResponse,
-      CreateNoteApiResponseBuilder, CreateNoteApiResponseActions> $options;
+      CreateNoteApiResponseBuilder, CreateNoteApiResponseActions> options$;
 
-  final ActionDispatcher<CreateNoteApiResponse> $replace;
+  final ActionDispatcher<CreateNoteApiResponse> replace$;
   final FieldDispatcher<String> noteId;
 
-  _$CreateNoteApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateNoteApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        noteId = $options.field<String>('noteId', (a) => a?.noteId,
+  _$CreateNoteApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateNoteApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        noteId = options$.field<String>('noteId', (a) => a?.noteId,
             (s) => s?.noteId, (p, b) => p?.noteId = b),
         super._();
 
@@ -166,31 +166,27 @@ class _$CreateNoteApiResponseActions extends CreateNoteApiResponseActions {
       _$CreateNoteApiResponseActions._(options());
 
   @override
-  CreateNoteApiResponse get $initial => CreateNoteApiResponse();
+  CreateNoteApiResponse get initialState$ => CreateNoteApiResponse();
 
   @override
-  CreateNoteApiResponseBuilder $newBuilder() => CreateNoteApiResponseBuilder();
+  CreateNoteApiResponseBuilder newBuilder$() => CreateNoteApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.noteId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    noteId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    noteId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateNoteApiResponse);
 }

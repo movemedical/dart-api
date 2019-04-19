@@ -224,24 +224,24 @@ class _$BuildInspectionApiReceiptUpdateActions
   final StatefulActionsOptions<
       BuildInspectionApiReceiptUpdate,
       BuildInspectionApiReceiptUpdateBuilder,
-      BuildInspectionApiReceiptUpdateActions> $options;
+      BuildInspectionApiReceiptUpdateActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiReceiptUpdate> $replace;
+  final ActionDispatcher<BuildInspectionApiReceiptUpdate> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<BuildInspectionApiReceiptUpdateType> type;
   final FieldDispatcher<String> pkgId;
   final FieldDispatcher<String> binId;
 
-  _$BuildInspectionApiReceiptUpdateActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiReceiptUpdate>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BuildInspectionApiReceiptUpdateActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiReceiptUpdate>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.field<BuildInspectionApiReceiptUpdateType>(
+        type = options$.field<BuildInspectionApiReceiptUpdateType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        pkgId = $options.field<String>(
+        pkgId = options$.field<String>(
             'pkgId', (a) => a?.pkgId, (s) => s?.pkgId, (p, b) => p?.pkgId = b),
-        binId = $options.field<String>(
+        binId = options$.field<String>(
             'binId', (a) => a?.binId, (s) => s?.binId, (p, b) => p?.binId = b),
         super._();
 
@@ -250,18 +250,18 @@ class _$BuildInspectionApiReceiptUpdateActions
       _$BuildInspectionApiReceiptUpdateActions._(options());
 
   @override
-  BuildInspectionApiReceiptUpdate get $initial =>
+  BuildInspectionApiReceiptUpdate get initialState$ =>
       BuildInspectionApiReceiptUpdate();
 
   @override
-  BuildInspectionApiReceiptUpdateBuilder $newBuilder() =>
+  BuildInspectionApiReceiptUpdateBuilder newBuilder$() =>
       BuildInspectionApiReceiptUpdateBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.type,
         this.pkgId,
@@ -269,21 +269,16 @@ class _$BuildInspectionApiReceiptUpdateActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    type.$reducer(reducer);
-    pkgId.$reducer(reducer);
-    binId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    type.reducer$(reducer);
+    pkgId.reducer$(reducer);
+    binId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiReceiptUpdate);
 }

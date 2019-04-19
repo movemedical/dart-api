@@ -184,21 +184,21 @@ class _$GetGeneratedDocReportUrlsApiRequestActions
   final StatefulActionsOptions<
       GetGeneratedDocReportUrlsApiRequest,
       GetGeneratedDocReportUrlsApiRequestBuilder,
-      GetGeneratedDocReportUrlsApiRequestActions> $options;
+      GetGeneratedDocReportUrlsApiRequestActions> options$;
 
-  final ActionDispatcher<GetGeneratedDocReportUrlsApiRequest> $replace;
+  final ActionDispatcher<GetGeneratedDocReportUrlsApiRequest> replace$;
   final FieldDispatcher<String> generatedDocReportId;
   final FieldDispatcher<bool> attachment;
 
-  _$GetGeneratedDocReportUrlsApiRequestActions._(this.$options)
-      : $replace = $options.action<GetGeneratedDocReportUrlsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        generatedDocReportId = $options.field<String>(
+  _$GetGeneratedDocReportUrlsApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetGeneratedDocReportUrlsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        generatedDocReportId = options$.field<String>(
             'generatedDocReportId',
             (a) => a?.generatedDocReportId,
             (s) => s?.generatedDocReportId,
             (p, b) => p?.generatedDocReportId = b),
-        attachment = $options.field<bool>('attachment', (a) => a?.attachment,
+        attachment = options$.field<bool>('attachment', (a) => a?.attachment,
             (s) => s?.attachment, (p, b) => p?.attachment = b),
         super._();
 
@@ -207,36 +207,31 @@ class _$GetGeneratedDocReportUrlsApiRequestActions
       _$GetGeneratedDocReportUrlsApiRequestActions._(options());
 
   @override
-  GetGeneratedDocReportUrlsApiRequest get $initial =>
+  GetGeneratedDocReportUrlsApiRequest get initialState$ =>
       GetGeneratedDocReportUrlsApiRequest();
 
   @override
-  GetGeneratedDocReportUrlsApiRequestBuilder $newBuilder() =>
+  GetGeneratedDocReportUrlsApiRequestBuilder newBuilder$() =>
       GetGeneratedDocReportUrlsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.generatedDocReportId,
         this.attachment,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    generatedDocReportId.$reducer(reducer);
-    attachment.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    generatedDocReportId.reducer$(reducer);
+    attachment.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetGeneratedDocReportUrlsApiRequest);
 }

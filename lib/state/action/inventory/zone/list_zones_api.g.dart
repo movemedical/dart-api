@@ -22,64 +22,30 @@ class _$ListZonesApi extends ListZonesApi {
           ApiResult<ListZonesApiResponse>>,
       CommandStateBuilder<ApiCommand<ListZonesApiRequest>,
           ApiResult<ListZonesApiResponse>>,
-      ListZonesApi> $options;
+      ListZonesApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListZonesApiRequest>,
-          ApiResult<ListZonesApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ListZonesApiRequest>,
-          ApiResult<ListZonesApiResponse>, ListZonesApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListZonesApiRequest>,
-          ApiResult<ListZonesApiResponse>,
-          ListZonesApi,
-          Command<ApiCommand<ListZonesApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListZonesApiRequest>,
-          ApiResult<ListZonesApiResponse>,
-          ListZonesApi,
-          CommandResult<ApiResult<ListZonesApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListZonesApiRequest>,
-          ApiResult<ListZonesApiResponse>,
-          ListZonesApi,
-          CommandProgress>> $progress;
+          ApiResult<ListZonesApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListZonesApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<ListZonesApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListZonesApi._(this.$options)
-      : $replace = $options.action<
+  _$ListZonesApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListZonesApiRequest>,
                     ApiResult<ListZonesApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListZonesApiRequest>,
-                ApiResult<ListZonesApiResponse>,
-                ListZonesApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListZonesApiRequest>,
-                    ApiResult<ListZonesApiResponse>,
-                    ListZonesApi,
-                    Command<ApiCommand<ListZonesApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListZonesApiRequest>,
-                    ApiResult<ListZonesApiResponse>,
-                    ListZonesApi,
-                    CommandResult<ApiResult<ListZonesApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListZonesApiRequest>,
-                ApiResult<ListZonesApiResponse>,
-                ListZonesApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<ListZonesApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<ListZonesApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListZonesApi(ListZonesApiOptions options) =>
@@ -87,31 +53,24 @@ class _$ListZonesApi extends ListZonesApi {
 
   @override
   CommandState<ApiCommand<ListZonesApiRequest>, ApiResult<ListZonesApiResponse>>
-      get $initial => CommandState<ApiCommand<ListZonesApiRequest>,
+      get initialState$ => CommandState<ApiCommand<ListZonesApiRequest>,
           ApiResult<ListZonesApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListZonesApiRequest>,
           ApiResult<ListZonesApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<ListZonesApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<ListZonesApiRequest>,
           ApiResult<ListZonesApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListZonesApiRequest)]),
-        FullType(ApiResult, [FullType(ListZonesApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

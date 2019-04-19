@@ -22,67 +22,32 @@ class _$ListUserNavHistoryApi extends ListUserNavHistoryApi {
           ApiResult<ListUserNavHistoryApiResponse>>,
       CommandStateBuilder<ApiCommand<ListUserNavHistoryApiRequest>,
           ApiResult<ListUserNavHistoryApiResponse>>,
-      ListUserNavHistoryApi> $options;
+      ListUserNavHistoryApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListUserNavHistoryApiRequest>,
-          ApiResult<ListUserNavHistoryApiResponse>>> $replace;
+          ApiResult<ListUserNavHistoryApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListUserNavHistoryApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListUserNavHistoryApiRequest>,
-          ApiResult<ListUserNavHistoryApiResponse>,
-          ListUserNavHistoryApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListUserNavHistoryApiRequest>,
-          ApiResult<ListUserNavHistoryApiResponse>,
-          ListUserNavHistoryApi,
-          Command<ApiCommand<ListUserNavHistoryApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListUserNavHistoryApiRequest>,
-          ApiResult<ListUserNavHistoryApiResponse>,
-          ListUserNavHistoryApi,
-          CommandResult<ApiResult<ListUserNavHistoryApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListUserNavHistoryApiRequest>,
-          ApiResult<ListUserNavHistoryApiResponse>,
-          ListUserNavHistoryApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListUserNavHistoryApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListUserNavHistoryApi._(this.$options)
-      : $replace = $options.action<
+  _$ListUserNavHistoryApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListUserNavHistoryApiRequest>,
                     ApiResult<ListUserNavHistoryApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListUserNavHistoryApiRequest>,
-                ApiResult<ListUserNavHistoryApiResponse>,
-                ListUserNavHistoryApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListUserNavHistoryApiRequest>,
-                    ApiResult<ListUserNavHistoryApiResponse>,
-                    ListUserNavHistoryApi,
-                    Command<ApiCommand<ListUserNavHistoryApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListUserNavHistoryApiRequest>,
-                    ApiResult<ListUserNavHistoryApiResponse>,
-                    ListUserNavHistoryApi,
-                    CommandResult<ApiResult<ListUserNavHistoryApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListUserNavHistoryApiRequest>,
-                ApiResult<ListUserNavHistoryApiResponse>,
-                ListUserNavHistoryApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListUserNavHistoryApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListUserNavHistoryApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListUserNavHistoryApi(ListUserNavHistoryApiOptions options) =>
@@ -91,32 +56,26 @@ class _$ListUserNavHistoryApi extends ListUserNavHistoryApi {
   @override
   CommandState<ApiCommand<ListUserNavHistoryApiRequest>,
           ApiResult<ListUserNavHistoryApiResponse>>
-      get $initial => CommandState<ApiCommand<ListUserNavHistoryApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<ListUserNavHistoryApiRequest>,
           ApiResult<ListUserNavHistoryApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListUserNavHistoryApiRequest>,
           ApiResult<ListUserNavHistoryApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListUserNavHistoryApiRequest>,
           ApiResult<ListUserNavHistoryApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListUserNavHistoryApiRequest)]),
-        FullType(ApiResult, [FullType(ListUserNavHistoryApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

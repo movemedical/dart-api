@@ -230,30 +230,30 @@ class _$ExportLogFilePushMessageActions
   final StatefulActionsOptions<
       ExportLogFilePushMessage,
       ExportLogFilePushMessageBuilder,
-      ExportLogFilePushMessageActions> $options;
+      ExportLogFilePushMessageActions> options$;
 
-  final ActionDispatcher<ExportLogFilePushMessage> $replace;
+  final ActionDispatcher<ExportLogFilePushMessage> replace$;
   final FieldDispatcher<String> exportLogFileId;
   final FieldDispatcher<String> fileId;
   final FieldDispatcher<ExportLogFilePushMessageFileUpdateType> updateType;
   final FieldDispatcher<double> percentUploadedDecimalForm;
 
-  _$ExportLogFilePushMessageActions._(this.$options)
-      : $replace = $options.action<ExportLogFilePushMessage>(
-            '\$replace', (a) => a?.$replace),
-        exportLogFileId = $options.field<String>(
+  _$ExportLogFilePushMessageActions._(this.options$)
+      : replace$ = options$.action<ExportLogFilePushMessage>(
+            'replace\$', (a) => a?.replace$),
+        exportLogFileId = options$.field<String>(
             'exportLogFileId',
             (a) => a?.exportLogFileId,
             (s) => s?.exportLogFileId,
             (p, b) => p?.exportLogFileId = b),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        updateType = $options.field<ExportLogFilePushMessageFileUpdateType>(
+        updateType = options$.field<ExportLogFilePushMessageFileUpdateType>(
             'updateType',
             (a) => a?.updateType,
             (s) => s?.updateType,
             (p, b) => p?.updateType = b),
-        percentUploadedDecimalForm = $options.field<double>(
+        percentUploadedDecimalForm = options$.field<double>(
             'percentUploadedDecimalForm',
             (a) => a?.percentUploadedDecimalForm,
             (s) => s?.percentUploadedDecimalForm,
@@ -265,17 +265,17 @@ class _$ExportLogFilePushMessageActions
       _$ExportLogFilePushMessageActions._(options());
 
   @override
-  ExportLogFilePushMessage get $initial => ExportLogFilePushMessage();
+  ExportLogFilePushMessage get initialState$ => ExportLogFilePushMessage();
 
   @override
-  ExportLogFilePushMessageBuilder $newBuilder() =>
+  ExportLogFilePushMessageBuilder newBuilder$() =>
       ExportLogFilePushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.exportLogFileId,
         this.fileId,
         this.updateType,
@@ -283,20 +283,16 @@ class _$ExportLogFilePushMessageActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    exportLogFileId.$reducer(reducer);
-    fileId.$reducer(reducer);
-    updateType.$reducer(reducer);
-    percentUploadedDecimalForm.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    exportLogFileId.reducer$(reducer);
+    fileId.reducer$(reducer);
+    updateType.reducer$(reducer);
+    percentUploadedDecimalForm.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ExportLogFilePushMessage);
 }

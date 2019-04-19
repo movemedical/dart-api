@@ -235,27 +235,27 @@ typedef StatefulActionsOptions<
 
 class _$SourceStockApiRequestActions extends SourceStockApiRequestActions {
   final StatefulActionsOptions<SourceStockApiRequest,
-      SourceStockApiRequestBuilder, SourceStockApiRequestActions> $options;
+      SourceStockApiRequestBuilder, SourceStockApiRequestActions> options$;
 
-  final ActionDispatcher<SourceStockApiRequest> $replace;
+  final ActionDispatcher<SourceStockApiRequest> replace$;
   final FieldDispatcher<BuiltList<SourceStockApiSourceStock>> stockToSource;
   final FieldDispatcher<String> caseId;
   final FieldDispatcher<String> loanId;
   final FieldDispatcher<String> orderId;
 
-  _$SourceStockApiRequestActions._(this.$options)
-      : $replace = $options.action<SourceStockApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        stockToSource = $options.field<BuiltList<SourceStockApiSourceStock>>(
+  _$SourceStockApiRequestActions._(this.options$)
+      : replace$ = options$.action<SourceStockApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        stockToSource = options$.field<BuiltList<SourceStockApiSourceStock>>(
             'stockToSource',
             (a) => a?.stockToSource,
             (s) => s?.stockToSource,
             (p, b) => p?.stockToSource = b),
-        caseId = $options.field<String>('caseId', (a) => a?.caseId,
+        caseId = options$.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        loanId = $options.field<String>('loanId', (a) => a?.loanId,
+        loanId = options$.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         super._();
 
@@ -264,16 +264,16 @@ class _$SourceStockApiRequestActions extends SourceStockApiRequestActions {
       _$SourceStockApiRequestActions._(options());
 
   @override
-  SourceStockApiRequest get $initial => SourceStockApiRequest();
+  SourceStockApiRequest get initialState$ => SourceStockApiRequest();
 
   @override
-  SourceStockApiRequestBuilder $newBuilder() => SourceStockApiRequestBuilder();
+  SourceStockApiRequestBuilder newBuilder$() => SourceStockApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockToSource,
         this.caseId,
         this.loanId,
@@ -281,20 +281,16 @@ class _$SourceStockApiRequestActions extends SourceStockApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockToSource.$reducer(reducer);
-    caseId.$reducer(reducer);
-    loanId.$reducer(reducer);
-    orderId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockToSource.reducer$(reducer);
+    caseId.reducer$(reducer);
+    loanId.reducer$(reducer);
+    orderId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SourceStockApiRequest);
 }

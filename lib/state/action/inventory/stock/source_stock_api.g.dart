@@ -22,64 +22,30 @@ class _$SourceStockApi extends SourceStockApi {
           ApiResult<SourceStockApiResponse>>,
       CommandStateBuilder<ApiCommand<SourceStockApiRequest>,
           ApiResult<SourceStockApiResponse>>,
-      SourceStockApi> $options;
+      SourceStockApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SourceStockApiRequest>,
-          ApiResult<SourceStockApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SourceStockApiRequest>,
-          ApiResult<SourceStockApiResponse>, SourceStockApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SourceStockApiRequest>,
-          ApiResult<SourceStockApiResponse>,
-          SourceStockApi,
-          Command<ApiCommand<SourceStockApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SourceStockApiRequest>,
-          ApiResult<SourceStockApiResponse>,
-          SourceStockApi,
-          CommandResult<ApiResult<SourceStockApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SourceStockApiRequest>,
-          ApiResult<SourceStockApiResponse>,
-          SourceStockApi,
-          CommandProgress>> $progress;
+          ApiResult<SourceStockApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<SourceStockApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<SourceStockApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$SourceStockApi._(this.$options)
-      : $replace = $options.action<
+  _$SourceStockApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<SourceStockApiRequest>,
                     ApiResult<SourceStockApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<SourceStockApiRequest>,
-                ApiResult<SourceStockApiResponse>,
-                SourceStockApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<SourceStockApiRequest>,
-                    ApiResult<SourceStockApiResponse>,
-                    SourceStockApi,
-                    Command<ApiCommand<SourceStockApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<SourceStockApiRequest>,
-                    ApiResult<SourceStockApiResponse>,
-                    SourceStockApi,
-                    CommandResult<ApiResult<SourceStockApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<SourceStockApiRequest>,
-                ApiResult<SourceStockApiResponse>,
-                SourceStockApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<SourceStockApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<SourceStockApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$SourceStockApi(SourceStockApiOptions options) =>
@@ -88,31 +54,24 @@ class _$SourceStockApi extends SourceStockApi {
   @override
   CommandState<ApiCommand<SourceStockApiRequest>,
           ApiResult<SourceStockApiResponse>>
-      get $initial => CommandState<ApiCommand<SourceStockApiRequest>,
+      get initialState$ => CommandState<ApiCommand<SourceStockApiRequest>,
           ApiResult<SourceStockApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<SourceStockApiRequest>,
           ApiResult<SourceStockApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<SourceStockApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<SourceStockApiRequest>,
           ApiResult<SourceStockApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(SourceStockApiRequest)]),
-        FullType(ApiResult, [FullType(SourceStockApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

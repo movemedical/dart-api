@@ -159,15 +159,15 @@ class _$CreateConsignmentLoanApiResponseActions
   final StatefulActionsOptions<
       CreateConsignmentLoanApiResponse,
       CreateConsignmentLoanApiResponseBuilder,
-      CreateConsignmentLoanApiResponseActions> $options;
+      CreateConsignmentLoanApiResponseActions> options$;
 
-  final ActionDispatcher<CreateConsignmentLoanApiResponse> $replace;
+  final ActionDispatcher<CreateConsignmentLoanApiResponse> replace$;
   final FieldDispatcher<String> loanId;
 
-  _$CreateConsignmentLoanApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateConsignmentLoanApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        loanId = $options.field<String>('loanId', (a) => a?.loanId,
+  _$CreateConsignmentLoanApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateConsignmentLoanApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        loanId = options$.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
         super._();
 
@@ -176,34 +176,29 @@ class _$CreateConsignmentLoanApiResponseActions
       _$CreateConsignmentLoanApiResponseActions._(options());
 
   @override
-  CreateConsignmentLoanApiResponse get $initial =>
+  CreateConsignmentLoanApiResponse get initialState$ =>
       CreateConsignmentLoanApiResponse();
 
   @override
-  CreateConsignmentLoanApiResponseBuilder $newBuilder() =>
+  CreateConsignmentLoanApiResponseBuilder newBuilder$() =>
       CreateConsignmentLoanApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.loanId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    loanId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    loanId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateConsignmentLoanApiResponse);
 }

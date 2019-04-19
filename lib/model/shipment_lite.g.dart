@@ -202,24 +202,24 @@ typedef StatefulActionsOptions<ShipmentLite, ShipmentLiteBuilder,
 
 class _$ShipmentLiteActions extends ShipmentLiteActions {
   final StatefulActionsOptions<ShipmentLite, ShipmentLiteBuilder,
-      ShipmentLiteActions> $options;
+      ShipmentLiteActions> options$;
 
-  final ActionDispatcher<ShipmentLite> $replace;
+  final ActionDispatcher<ShipmentLite> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<DateTime> created;
   final FieldDispatcher<int> number;
   final FieldDispatcher<ShipmentStatus> status;
 
-  _$ShipmentLiteActions._(this.$options)
-      : $replace =
-            $options.action<ShipmentLite>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ShipmentLiteActions._(this.options$)
+      : replace$ =
+            options$.action<ShipmentLite>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        created = $options.field<DateTime>('created', (a) => a?.created,
+        created = options$.field<DateTime>('created', (a) => a?.created,
             (s) => s?.created, (p, b) => p?.created = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<ShipmentStatus>('status', (a) => a?.status,
+        status = options$.field<ShipmentStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
         super._();
 
@@ -227,16 +227,16 @@ class _$ShipmentLiteActions extends ShipmentLiteActions {
       _$ShipmentLiteActions._(options());
 
   @override
-  ShipmentLite get $initial => ShipmentLite();
+  ShipmentLite get initialState$ => ShipmentLite();
 
   @override
-  ShipmentLiteBuilder $newBuilder() => ShipmentLiteBuilder();
+  ShipmentLiteBuilder newBuilder$() => ShipmentLiteBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.created,
         this.number,
@@ -244,20 +244,16 @@ class _$ShipmentLiteActions extends ShipmentLiteActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    created.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    created.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ShipmentLite);
 }

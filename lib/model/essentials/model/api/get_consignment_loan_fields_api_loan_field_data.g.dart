@@ -251,27 +251,27 @@ class _$GetConsignmentLoanFieldsApiLoanFieldDataActions
   final StatefulActionsOptions<
       GetConsignmentLoanFieldsApiLoanFieldData,
       GetConsignmentLoanFieldsApiLoanFieldDataBuilder,
-      GetConsignmentLoanFieldsApiLoanFieldDataActions> $options;
+      GetConsignmentLoanFieldsApiLoanFieldDataActions> options$;
 
-  final ActionDispatcher<GetConsignmentLoanFieldsApiLoanFieldData> $replace;
+  final ActionDispatcher<GetConsignmentLoanFieldsApiLoanFieldData> replace$;
   final FieldDispatcher<GetConsignmentLoanFieldsApiLoanField> name;
   final FieldDispatcher<int> sort;
   final FieldDispatcher<bool> required;
   final FieldDispatcher<bool> loan;
   final FieldDispatcher<bool> loanRequest;
 
-  _$GetConsignmentLoanFieldsApiLoanFieldDataActions._(this.$options)
-      : $replace = $options.action<GetConsignmentLoanFieldsApiLoanFieldData>(
-            '\$replace', (a) => a?.$replace),
-        name = $options.field<GetConsignmentLoanFieldsApiLoanField>(
+  _$GetConsignmentLoanFieldsApiLoanFieldDataActions._(this.options$)
+      : replace$ = options$.action<GetConsignmentLoanFieldsApiLoanFieldData>(
+            'replace\$', (a) => a?.replace$),
+        name = options$.field<GetConsignmentLoanFieldsApiLoanField>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        sort = $options.field<int>(
+        sort = options$.field<int>(
             'sort', (a) => a?.sort, (s) => s?.sort, (p, b) => p?.sort = b),
-        required = $options.field<bool>('required', (a) => a?.required,
+        required = options$.field<bool>('required', (a) => a?.required,
             (s) => s?.required, (p, b) => p?.required = b),
-        loan = $options.field<bool>(
+        loan = options$.field<bool>(
             'loan', (a) => a?.loan, (s) => s?.loan, (p, b) => p?.loan = b),
-        loanRequest = $options.field<bool>('loanRequest', (a) => a?.loanRequest,
+        loanRequest = options$.field<bool>('loanRequest', (a) => a?.loanRequest,
             (s) => s?.loanRequest, (p, b) => p?.loanRequest = b),
         super._();
 
@@ -280,18 +280,18 @@ class _$GetConsignmentLoanFieldsApiLoanFieldDataActions
       _$GetConsignmentLoanFieldsApiLoanFieldDataActions._(options());
 
   @override
-  GetConsignmentLoanFieldsApiLoanFieldData get $initial =>
+  GetConsignmentLoanFieldsApiLoanFieldData get initialState$ =>
       GetConsignmentLoanFieldsApiLoanFieldData();
 
   @override
-  GetConsignmentLoanFieldsApiLoanFieldDataBuilder $newBuilder() =>
+  GetConsignmentLoanFieldsApiLoanFieldDataBuilder newBuilder$() =>
       GetConsignmentLoanFieldsApiLoanFieldDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.name,
         this.sort,
         this.required,
@@ -300,22 +300,17 @@ class _$GetConsignmentLoanFieldsApiLoanFieldDataActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    name.$reducer(reducer);
-    sort.$reducer(reducer);
-    required.$reducer(reducer);
-    loan.$reducer(reducer);
-    loanRequest.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    name.reducer$(reducer);
+    sort.reducer$(reducer);
+    required.reducer$(reducer);
+    loan.reducer$(reducer);
+    loanRequest.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetConsignmentLoanFieldsApiLoanFieldData);
 }

@@ -935,9 +935,9 @@ typedef StatefulActionsOptions<
 
 class _$MoveStock2ApiRequestActions extends MoveStock2ApiRequestActions {
   final StatefulActionsOptions<MoveStock2ApiRequest,
-      MoveStock2ApiRequestBuilder, MoveStock2ApiRequestActions> $options;
+      MoveStock2ApiRequestBuilder, MoveStock2ApiRequestActions> options$;
 
-  final ActionDispatcher<MoveStock2ApiRequest> $replace;
+  final ActionDispatcher<MoveStock2ApiRequest> replace$;
   final FieldDispatcher<String> orderReasonId;
   final FieldDispatcher<String> loanId;
   final FieldDispatcher<String> toLocationId;
@@ -973,163 +973,163 @@ class _$MoveStock2ApiRequestActions extends MoveStock2ApiRequestActions {
   final FieldDispatcher<String> attention;
   final FieldDispatcher<String> trackingNumber;
 
-  _$MoveStock2ApiRequestActions._(this.$options)
-      : $replace = $options.action<MoveStock2ApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderReasonId = $options.field<String>(
+  _$MoveStock2ApiRequestActions._(this.options$)
+      : replace$ = options$.action<MoveStock2ApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderReasonId = options$.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
             (p, b) => p?.orderReasonId = b),
-        loanId = $options.field<String>('loanId', (a) => a?.loanId,
+        loanId = options$.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
-        toLocationId = $options.field<String>(
+        toLocationId = options$.field<String>(
             'toLocationId',
             (a) => a?.toLocationId,
             (s) => s?.toLocationId,
             (p, b) => p?.toLocationId = b),
-        toLocationType = $options.field<LocationType>(
+        toLocationType = options$.field<LocationType>(
             'toLocationType',
             (a) => a?.toLocationType,
             (s) => s?.toLocationType,
             (p, b) => p?.toLocationType = b),
-        opsOrgUnitId = $options.field<String>(
+        opsOrgUnitId = options$.field<String>(
             'opsOrgUnitId',
             (a) => a?.opsOrgUnitId,
             (s) => s?.opsOrgUnitId,
             (p, b) => p?.opsOrgUnitId = b),
-        salesOrgUnitId = $options.field<String>(
+        salesOrgUnitId = options$.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
             (p, b) => p?.salesOrgUnitId = b),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        processingLevel = $options.field<MoveStock2ApiProcessingLevel>(
+        processingLevel = options$.field<MoveStock2ApiProcessingLevel>(
             'processingLevel',
             (a) => a?.processingLevel,
             (s) => s?.processingLevel,
             (p, b) => p?.processingLevel = b),
-        stock = $options.field<BuiltList<MoveStock2ApiMovingStockReq>>(
+        stock = options$.field<BuiltList<MoveStock2ApiMovingStockReq>>(
             'stock', (a) => a?.stock, (s) => s?.stock, (p, b) => p?.stock = b),
-        toInventoryTypeId = $options.field<String>(
+        toInventoryTypeId = options$.field<String>(
             'toInventoryTypeId',
             (a) => a?.toInventoryTypeId,
             (s) => s?.toInventoryTypeId,
             (p, b) => p?.toInventoryTypeId = b),
-        toResponsiblePartyType = $options.field<ResponsiblePartyType>(
+        toResponsiblePartyType = options$.field<ResponsiblePartyType>(
             'toResponsiblePartyType',
             (a) => a?.toResponsiblePartyType,
             (s) => s?.toResponsiblePartyType,
             (p, b) => p?.toResponsiblePartyType = b),
-        toResponsiblePartyId = $options.field<String>(
+        toResponsiblePartyId = options$.field<String>(
             'toResponsiblePartyId',
             (a) => a?.toResponsiblePartyId,
             (s) => s?.toResponsiblePartyId,
             (p, b) => p?.toResponsiblePartyId = b),
-        toHomeLocationType = $options.field<LocationType>(
+        toHomeLocationType = options$.field<LocationType>(
             'toHomeLocationType',
             (a) => a?.toHomeLocationType,
             (s) => s?.toHomeLocationType,
             (p, b) => p?.toHomeLocationType = b),
-        toHomeLocationId = $options.field<String>(
+        toHomeLocationId = options$.field<String>(
             'toHomeLocationId',
             (a) => a?.toHomeLocationId,
             (s) => s?.toHomeLocationId,
             (p, b) => p?.toHomeLocationId = b),
-        erpReference = $options.field<String>(
+        erpReference = options$.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
-        transferTypeId = $options.field<String>(
+        transferTypeId = options$.field<String>(
             'transferTypeId',
             (a) => a?.transferTypeId,
             (s) => s?.transferTypeId,
             (p, b) => p?.transferTypeId = b),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        proxyLocationType = $options.field<LocationType>(
+        proxyLocationType = options$.field<LocationType>(
             'proxyLocationType',
             (a) => a?.proxyLocationType,
             (s) => s?.proxyLocationType,
             (p, b) => p?.proxyLocationType = b),
-        proxyLocationId = $options.field<String>(
+        proxyLocationId = options$.field<String>(
             'proxyLocationId',
             (a) => a?.proxyLocationId,
             (s) => s?.proxyLocationId,
             (p, b) => p?.proxyLocationId = b),
-        toContainerType = $options.field<StockContainerType>(
+        toContainerType = options$.field<StockContainerType>(
             'toContainerType',
             (a) => a?.toContainerType,
             (s) => s?.toContainerType,
             (p, b) => p?.toContainerType = b),
-        toContainerId = $options.field<String>(
+        toContainerId = options$.field<String>(
             'toContainerId',
             (a) => a?.toContainerId,
             (s) => s?.toContainerId,
             (p, b) => p?.toContainerId = b),
-        sourceStartDate = $options.field<DateTime>(
+        sourceStartDate = options$.field<DateTime>(
             'sourceStartDate',
             (a) => a?.sourceStartDate,
             (s) => s?.sourceStartDate,
             (p, b) => p?.sourceStartDate = b),
-        deliverWindowStart = $options.field<DateTime>(
+        deliverWindowStart = options$.field<DateTime>(
             'deliverWindowStart',
             (a) => a?.deliverWindowStart,
             (s) => s?.deliverWindowStart,
             (p, b) => p?.deliverWindowStart = b),
-        deliverWindowEnd = $options.field<DateTime>(
+        deliverWindowEnd = options$.field<DateTime>(
             'deliverWindowEnd',
             (a) => a?.deliverWindowEnd,
             (s) => s?.deliverWindowEnd,
             (p, b) => p?.deliverWindowEnd = b),
-        loanServiceEndDate = $options.field<DateTime>(
+        loanServiceEndDate = options$.field<DateTime>(
             'loanServiceEndDate',
             (a) => a?.loanServiceEndDate,
             (s) => s?.loanServiceEndDate,
             (p, b) => p?.loanServiceEndDate = b),
-        fulfillmentCutoffDate = $options.field<DateTime>(
+        fulfillmentCutoffDate = options$.field<DateTime>(
             'fulfillmentCutoffDate',
             (a) => a?.fulfillmentCutoffDate,
             (s) => s?.fulfillmentCutoffDate,
             (p, b) => p?.fulfillmentCutoffDate = b),
-        deliverToAddressId = $options.field<String>(
+        deliverToAddressId = options$.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
             (p, b) => p?.deliverToAddressId = b),
         deliverToAddressOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToAddressOverride',
                 (a) => a.deliverToAddressOverride,
                 (s) => s?.deliverToAddressOverride,
                 (b) => b?.deliverToAddressOverride,
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
-        shipToAddressId = $options.field<String>(
+        shipToAddressId = options$.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
             (p, b) => p?.shipToAddressId = b),
-        expirationCutoff = $options.field<DateTime>(
+        expirationCutoff = options$.field<DateTime>(
             'expirationCutoff',
             (a) => a?.expirationCutoff,
             (s) => s?.expirationCutoff,
             (p, b) => p?.expirationCutoff = b),
-        shippingServiceId = $options.field<String>(
+        shippingServiceId = options$.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
-        email = $options.field<String>(
+        email = options$.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        attention = $options.field<String>('attention', (a) => a?.attention,
+        attention = options$.field<String>('attention', (a) => a?.attention,
             (s) => s?.attention, (p, b) => p?.attention = b),
-        trackingNumber = $options.field<String>(
+        trackingNumber = options$.field<String>(
             'trackingNumber',
             (a) => a?.trackingNumber,
             (s) => s?.trackingNumber,
@@ -1141,22 +1141,22 @@ class _$MoveStock2ApiRequestActions extends MoveStock2ApiRequestActions {
       _$MoveStock2ApiRequestActions._(options());
 
   @override
-  MoveStock2ApiRequest get $initial => MoveStock2ApiRequest();
+  MoveStock2ApiRequest get initialState$ => MoveStock2ApiRequest();
 
   @override
-  MoveStock2ApiRequestBuilder $newBuilder() => MoveStock2ApiRequestBuilder();
+  MoveStock2ApiRequestBuilder newBuilder$() => MoveStock2ApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderReasonId,
         this.loanId,
         this.toLocationId,
@@ -1193,51 +1193,47 @@ class _$MoveStock2ApiRequestActions extends MoveStock2ApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderReasonId.$reducer(reducer);
-    loanId.$reducer(reducer);
-    toLocationId.$reducer(reducer);
-    toLocationType.$reducer(reducer);
-    opsOrgUnitId.$reducer(reducer);
-    salesOrgUnitId.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    processingLevel.$reducer(reducer);
-    stock.$reducer(reducer);
-    toInventoryTypeId.$reducer(reducer);
-    toResponsiblePartyType.$reducer(reducer);
-    toResponsiblePartyId.$reducer(reducer);
-    toHomeLocationType.$reducer(reducer);
-    toHomeLocationId.$reducer(reducer);
-    erpReference.$reducer(reducer);
-    transferTypeId.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    proxyLocationType.$reducer(reducer);
-    proxyLocationId.$reducer(reducer);
-    toContainerType.$reducer(reducer);
-    toContainerId.$reducer(reducer);
-    sourceStartDate.$reducer(reducer);
-    deliverWindowStart.$reducer(reducer);
-    deliverWindowEnd.$reducer(reducer);
-    loanServiceEndDate.$reducer(reducer);
-    fulfillmentCutoffDate.$reducer(reducer);
-    deliverToAddressId.$reducer(reducer);
-    deliverToAddressOverride.$reducer(reducer);
-    shipToAddressId.$reducer(reducer);
-    expirationCutoff.$reducer(reducer);
-    shippingServiceId.$reducer(reducer);
-    email.$reducer(reducer);
-    attention.$reducer(reducer);
-    trackingNumber.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
+    loanId.reducer$(reducer);
+    toLocationId.reducer$(reducer);
+    toLocationType.reducer$(reducer);
+    opsOrgUnitId.reducer$(reducer);
+    salesOrgUnitId.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    processingLevel.reducer$(reducer);
+    stock.reducer$(reducer);
+    toInventoryTypeId.reducer$(reducer);
+    toResponsiblePartyType.reducer$(reducer);
+    toResponsiblePartyId.reducer$(reducer);
+    toHomeLocationType.reducer$(reducer);
+    toHomeLocationId.reducer$(reducer);
+    erpReference.reducer$(reducer);
+    transferTypeId.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    proxyLocationType.reducer$(reducer);
+    proxyLocationId.reducer$(reducer);
+    toContainerType.reducer$(reducer);
+    toContainerId.reducer$(reducer);
+    sourceStartDate.reducer$(reducer);
+    deliverWindowStart.reducer$(reducer);
+    deliverWindowEnd.reducer$(reducer);
+    loanServiceEndDate.reducer$(reducer);
+    fulfillmentCutoffDate.reducer$(reducer);
+    deliverToAddressId.reducer$(reducer);
+    deliverToAddressOverride.reducer$(reducer);
+    shipToAddressId.reducer$(reducer);
+    expirationCutoff.reducer$(reducer);
+    shippingServiceId.reducer$(reducer);
+    email.reducer$(reducer);
+    attention.reducer$(reducer);
+    trackingNumber.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    deliverToAddressOverride.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    deliverToAddressOverride.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(MoveStock2ApiRequest);
 }

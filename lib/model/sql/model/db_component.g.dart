@@ -424,9 +424,9 @@ typedef StatefulActionsOptions<DBComponent, DBComponentBuilder,
 
 class _$DBComponentActions extends DBComponentActions {
   final StatefulActionsOptions<DBComponent, DBComponentBuilder,
-      DBComponentActions> $options;
+      DBComponentActions> options$;
 
-  final ActionDispatcher<DBComponent> $replace;
+  final ActionDispatcher<DBComponent> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> parentItemId;
   final FieldDispatcher<String> parentItemVersionId;
@@ -441,58 +441,58 @@ class _$DBComponentActions extends DBComponentActions {
   final FieldDispatcher<int> placementInSequence;
   final FieldDispatcher<String> uomId;
 
-  _$DBComponentActions._(this.$options)
-      : $replace =
-            $options.action<DBComponent>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$DBComponentActions._(this.options$)
+      : replace$ =
+            options$.action<DBComponent>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        parentItemId = $options.field<String>(
+        parentItemId = options$.field<String>(
             'parentItemId',
             (a) => a?.parentItemId,
             (s) => s?.parentItemId,
             (p, b) => p?.parentItemId = b),
-        parentItemVersionId = $options.field<String>(
+        parentItemVersionId = options$.field<String>(
             'parentItemVersionId',
             (a) => a?.parentItemVersionId,
             (s) => s?.parentItemVersionId,
             (p, b) => p?.parentItemVersionId = b),
-        componentItemId = $options.field<String>(
+        componentItemId = options$.field<String>(
             'componentItemId',
             (a) => a?.componentItemId,
             (s) => s?.componentItemId,
             (p, b) => p?.componentItemId = b),
-        anyVersion = $options.field<bool>('anyVersion', (a) => a?.anyVersion,
+        anyVersion = options$.field<bool>('anyVersion', (a) => a?.anyVersion,
             (s) => s?.anyVersion, (p, b) => p?.anyVersion = b),
-        kitContainerDefId = $options.field<String>(
+        kitContainerDefId = options$.field<String>(
             'kitContainerDefId',
             (a) => a?.kitContainerDefId,
             (s) => s?.kitContainerDefId,
             (p, b) => p?.kitContainerDefId = b),
-        trayLayerDefId = $options.field<String>(
+        trayLayerDefId = options$.field<String>(
             'trayLayerDefId',
             (a) => a?.trayLayerDefId,
             (s) => s?.trayLayerDefId,
             (p, b) => p?.trayLayerDefId = b),
-        forceContainerOrLayer = $options.field<bool>(
+        forceContainerOrLayer = options$.field<bool>(
             'forceContainerOrLayer',
             (a) => a?.forceContainerOrLayer,
             (s) => s?.forceContainerOrLayer,
             (p, b) => p?.forceContainerOrLayer = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        v = $options.field<int>(
+        v = options$.field<int>(
             'v', (a) => a?.v, (s) => s?.v, (p, b) => p?.v = b),
-        minimumQuantity = $options.field<int>(
+        minimumQuantity = options$.field<int>(
             'minimumQuantity',
             (a) => a?.minimumQuantity,
             (s) => s?.minimumQuantity,
             (p, b) => p?.minimumQuantity = b),
-        placementInSequence = $options.field<int>(
+        placementInSequence = options$.field<int>(
             'placementInSequence',
             (a) => a?.placementInSequence,
             (s) => s?.placementInSequence,
             (p, b) => p?.placementInSequence = b),
-        uomId = $options.field<String>(
+        uomId = options$.field<String>(
             'uomId', (a) => a?.uomId, (s) => s?.uomId, (p, b) => p?.uomId = b),
         super._();
 
@@ -500,16 +500,16 @@ class _$DBComponentActions extends DBComponentActions {
       _$DBComponentActions._(options());
 
   @override
-  DBComponent get $initial => DBComponent();
+  DBComponent get initialState$ => DBComponent();
 
   @override
-  DBComponentBuilder $newBuilder() => DBComponentBuilder();
+  DBComponentBuilder newBuilder$() => DBComponentBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.parentItemId,
         this.parentItemVersionId,
@@ -526,29 +526,25 @@ class _$DBComponentActions extends DBComponentActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    parentItemId.$reducer(reducer);
-    parentItemVersionId.$reducer(reducer);
-    componentItemId.$reducer(reducer);
-    anyVersion.$reducer(reducer);
-    kitContainerDefId.$reducer(reducer);
-    trayLayerDefId.$reducer(reducer);
-    forceContainerOrLayer.$reducer(reducer);
-    quantity.$reducer(reducer);
-    v.$reducer(reducer);
-    minimumQuantity.$reducer(reducer);
-    placementInSequence.$reducer(reducer);
-    uomId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    parentItemId.reducer$(reducer);
+    parentItemVersionId.reducer$(reducer);
+    componentItemId.reducer$(reducer);
+    anyVersion.reducer$(reducer);
+    kitContainerDefId.reducer$(reducer);
+    trayLayerDefId.reducer$(reducer);
+    forceContainerOrLayer.reducer$(reducer);
+    quantity.reducer$(reducer);
+    v.reducer$(reducer);
+    minimumQuantity.reducer$(reducer);
+    placementInSequence.reducer$(reducer);
+    uomId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(DBComponent);
 }

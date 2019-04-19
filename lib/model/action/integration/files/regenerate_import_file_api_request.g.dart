@@ -161,15 +161,15 @@ class _$RegenerateImportFileApiRequestActions
   final StatefulActionsOptions<
       RegenerateImportFileApiRequest,
       RegenerateImportFileApiRequestBuilder,
-      RegenerateImportFileApiRequestActions> $options;
+      RegenerateImportFileApiRequestActions> options$;
 
-  final ActionDispatcher<RegenerateImportFileApiRequest> $replace;
+  final ActionDispatcher<RegenerateImportFileApiRequest> replace$;
   final FieldDispatcher<String> integrationIssueId;
 
-  _$RegenerateImportFileApiRequestActions._(this.$options)
-      : $replace = $options.action<RegenerateImportFileApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        integrationIssueId = $options.field<String>(
+  _$RegenerateImportFileApiRequestActions._(this.options$)
+      : replace$ = options$.action<RegenerateImportFileApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        integrationIssueId = options$.field<String>(
             'integrationIssueId',
             (a) => a?.integrationIssueId,
             (s) => s?.integrationIssueId,
@@ -181,34 +181,29 @@ class _$RegenerateImportFileApiRequestActions
       _$RegenerateImportFileApiRequestActions._(options());
 
   @override
-  RegenerateImportFileApiRequest get $initial =>
+  RegenerateImportFileApiRequest get initialState$ =>
       RegenerateImportFileApiRequest();
 
   @override
-  RegenerateImportFileApiRequestBuilder $newBuilder() =>
+  RegenerateImportFileApiRequestBuilder newBuilder$() =>
       RegenerateImportFileApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.integrationIssueId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    integrationIssueId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    integrationIssueId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RegenerateImportFileApiRequest);
 }

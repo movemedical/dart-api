@@ -160,15 +160,15 @@ class _$GetHcrOrgUnitLinkApiRequestActions
   final StatefulActionsOptions<
       GetHcrOrgUnitLinkApiRequest,
       GetHcrOrgUnitLinkApiRequestBuilder,
-      GetHcrOrgUnitLinkApiRequestActions> $options;
+      GetHcrOrgUnitLinkApiRequestActions> options$;
 
-  final ActionDispatcher<GetHcrOrgUnitLinkApiRequest> $replace;
+  final ActionDispatcher<GetHcrOrgUnitLinkApiRequest> replace$;
   final FieldDispatcher<String> hcrToOrgUnitId;
 
-  _$GetHcrOrgUnitLinkApiRequestActions._(this.$options)
-      : $replace = $options.action<GetHcrOrgUnitLinkApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        hcrToOrgUnitId = $options.field<String>(
+  _$GetHcrOrgUnitLinkApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetHcrOrgUnitLinkApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        hcrToOrgUnitId = options$.field<String>(
             'hcrToOrgUnitId',
             (a) => a?.hcrToOrgUnitId,
             (s) => s?.hcrToOrgUnitId,
@@ -180,33 +180,29 @@ class _$GetHcrOrgUnitLinkApiRequestActions
       _$GetHcrOrgUnitLinkApiRequestActions._(options());
 
   @override
-  GetHcrOrgUnitLinkApiRequest get $initial => GetHcrOrgUnitLinkApiRequest();
+  GetHcrOrgUnitLinkApiRequest get initialState$ =>
+      GetHcrOrgUnitLinkApiRequest();
 
   @override
-  GetHcrOrgUnitLinkApiRequestBuilder $newBuilder() =>
+  GetHcrOrgUnitLinkApiRequestBuilder newBuilder$() =>
       GetHcrOrgUnitLinkApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.hcrToOrgUnitId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    hcrToOrgUnitId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    hcrToOrgUnitId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetHcrOrgUnitLinkApiRequest);
 }

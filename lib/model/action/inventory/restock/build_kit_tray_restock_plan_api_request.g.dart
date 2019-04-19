@@ -165,15 +165,15 @@ class _$BuildKitTrayRestockPlanApiRequestActions
   final StatefulActionsOptions<
       BuildKitTrayRestockPlanApiRequest,
       BuildKitTrayRestockPlanApiRequestBuilder,
-      BuildKitTrayRestockPlanApiRequestActions> $options;
+      BuildKitTrayRestockPlanApiRequestActions> options$;
 
-  final ActionDispatcher<BuildKitTrayRestockPlanApiRequest> $replace;
+  final ActionDispatcher<BuildKitTrayRestockPlanApiRequest> replace$;
   final FieldDispatcher<String> kitTrayStockIdOrStockSummaryId;
 
-  _$BuildKitTrayRestockPlanApiRequestActions._(this.$options)
-      : $replace = $options.action<BuildKitTrayRestockPlanApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        kitTrayStockIdOrStockSummaryId = $options.field<String>(
+  _$BuildKitTrayRestockPlanApiRequestActions._(this.options$)
+      : replace$ = options$.action<BuildKitTrayRestockPlanApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        kitTrayStockIdOrStockSummaryId = options$.field<String>(
             'kitTrayStockIdOrStockSummaryId',
             (a) => a?.kitTrayStockIdOrStockSummaryId,
             (s) => s?.kitTrayStockIdOrStockSummaryId,
@@ -185,34 +185,29 @@ class _$BuildKitTrayRestockPlanApiRequestActions
       _$BuildKitTrayRestockPlanApiRequestActions._(options());
 
   @override
-  BuildKitTrayRestockPlanApiRequest get $initial =>
+  BuildKitTrayRestockPlanApiRequest get initialState$ =>
       BuildKitTrayRestockPlanApiRequest();
 
   @override
-  BuildKitTrayRestockPlanApiRequestBuilder $newBuilder() =>
+  BuildKitTrayRestockPlanApiRequestBuilder newBuilder$() =>
       BuildKitTrayRestockPlanApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.kitTrayStockIdOrStockSummaryId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    kitTrayStockIdOrStockSummaryId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    kitTrayStockIdOrStockSummaryId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildKitTrayRestockPlanApiRequest);
 }

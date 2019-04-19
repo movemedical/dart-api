@@ -22,63 +22,29 @@ class _$UpdateConsignmentLoanApi extends UpdateConsignmentLoanApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateConsignmentLoanApiRequest>,
           ApiResult<Nothing>>,
-      UpdateConsignmentLoanApi> $options;
+      UpdateConsignmentLoanApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateConsignmentLoanApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateConsignmentLoanApiRequest>,
-          ApiResult<Nothing>, UpdateConsignmentLoanApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateConsignmentLoanApiRequest>,
-          ApiResult<Nothing>,
-          UpdateConsignmentLoanApi,
-          Command<ApiCommand<UpdateConsignmentLoanApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateConsignmentLoanApiRequest>,
-          ApiResult<Nothing>,
-          UpdateConsignmentLoanApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateConsignmentLoanApiRequest>,
-          ApiResult<Nothing>,
-          UpdateConsignmentLoanApi,
-          CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<UpdateConsignmentLoanApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$UpdateConsignmentLoanApi._(this.$options)
-      : $replace = $options.action<
+  _$UpdateConsignmentLoanApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<UpdateConsignmentLoanApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateConsignmentLoanApiRequest>,
-                ApiResult<Nothing>,
-                UpdateConsignmentLoanApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateConsignmentLoanApiRequest>,
-                    ApiResult<Nothing>,
-                    UpdateConsignmentLoanApi,
-                    Command<ApiCommand<UpdateConsignmentLoanApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<UpdateConsignmentLoanApiRequest>,
-                    ApiResult<Nothing>,
-                    UpdateConsignmentLoanApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateConsignmentLoanApiRequest>,
-                ApiResult<Nothing>,
-                UpdateConsignmentLoanApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<UpdateConsignmentLoanApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$UpdateConsignmentLoanApi(UpdateConsignmentLoanApiOptions options) =>
@@ -86,31 +52,24 @@ class _$UpdateConsignmentLoanApi extends UpdateConsignmentLoanApi {
 
   @override
   CommandState<ApiCommand<UpdateConsignmentLoanApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<UpdateConsignmentLoanApiRequest>,
-          ApiResult<Nothing>>();
+      get initialState$ => CommandState<
+          ApiCommand<UpdateConsignmentLoanApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateConsignmentLoanApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<UpdateConsignmentLoanApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(UpdateConsignmentLoanApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

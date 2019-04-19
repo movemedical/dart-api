@@ -179,21 +179,21 @@ class _$ListUserNavHistoryApiRequestActions
   final StatefulActionsOptions<
       ListUserNavHistoryApiRequest,
       ListUserNavHistoryApiRequestBuilder,
-      ListUserNavHistoryApiRequestActions> $options;
+      ListUserNavHistoryApiRequestActions> options$;
 
-  final ActionDispatcher<ListUserNavHistoryApiRequest> $replace;
+  final ActionDispatcher<ListUserNavHistoryApiRequest> replace$;
   final FieldDispatcher<DeviceType> deviceType;
   final FieldDispatcher<Place> place;
 
-  _$ListUserNavHistoryApiRequestActions._(this.$options)
-      : $replace = $options.action<ListUserNavHistoryApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        deviceType = $options.field<DeviceType>(
+  _$ListUserNavHistoryApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListUserNavHistoryApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        deviceType = options$.field<DeviceType>(
             'deviceType',
             (a) => a?.deviceType,
             (s) => s?.deviceType,
             (p, b) => p?.deviceType = b),
-        place = $options.field<Place>(
+        place = options$.field<Place>(
             'place', (a) => a?.place, (s) => s?.place, (p, b) => p?.place = b),
         super._();
 
@@ -202,35 +202,31 @@ class _$ListUserNavHistoryApiRequestActions
       _$ListUserNavHistoryApiRequestActions._(options());
 
   @override
-  ListUserNavHistoryApiRequest get $initial => ListUserNavHistoryApiRequest();
+  ListUserNavHistoryApiRequest get initialState$ =>
+      ListUserNavHistoryApiRequest();
 
   @override
-  ListUserNavHistoryApiRequestBuilder $newBuilder() =>
+  ListUserNavHistoryApiRequestBuilder newBuilder$() =>
       ListUserNavHistoryApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.deviceType,
         this.place,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    deviceType.$reducer(reducer);
-    place.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    deviceType.reducer$(reducer);
+    place.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListUserNavHistoryApiRequest);
 }

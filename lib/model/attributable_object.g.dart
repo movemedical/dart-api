@@ -184,21 +184,21 @@ typedef StatefulActionsOptions<AttributableObject, AttributableObjectBuilder,
 
 class _$AttributableObjectActions extends AttributableObjectActions {
   final StatefulActionsOptions<AttributableObject, AttributableObjectBuilder,
-      AttributableObjectActions> $options;
+      AttributableObjectActions> options$;
 
-  final ActionDispatcher<AttributableObject> $replace;
+  final ActionDispatcher<AttributableObject> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<AttributableType> type;
   final FieldDispatcher<String> displayText;
 
-  _$AttributableObjectActions._(this.$options)
-      : $replace = $options.action<AttributableObject>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$AttributableObjectActions._(this.options$)
+      : replace$ = options$.action<AttributableObject>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.field<AttributableType>(
+        type = options$.field<AttributableType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        displayText = $options.field<String>(
+        displayText = options$.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
@@ -210,35 +210,31 @@ class _$AttributableObjectActions extends AttributableObjectActions {
       _$AttributableObjectActions._(options());
 
   @override
-  AttributableObject get $initial => AttributableObject();
+  AttributableObject get initialState$ => AttributableObject();
 
   @override
-  AttributableObjectBuilder $newBuilder() => AttributableObjectBuilder();
+  AttributableObjectBuilder newBuilder$() => AttributableObjectBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.type,
         this.displayText,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    type.$reducer(reducer);
-    displayText.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    type.reducer$(reducer);
+    displayText.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(AttributableObject);
 }

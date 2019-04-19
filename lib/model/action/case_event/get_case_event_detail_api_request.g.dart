@@ -201,21 +201,21 @@ class _$GetCaseEventDetailApiRequestActions
   final StatefulActionsOptions<
       GetCaseEventDetailApiRequest,
       GetCaseEventDetailApiRequestBuilder,
-      GetCaseEventDetailApiRequestActions> $options;
+      GetCaseEventDetailApiRequestActions> options$;
 
-  final ActionDispatcher<GetCaseEventDetailApiRequest> $replace;
+  final ActionDispatcher<GetCaseEventDetailApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> caseNumber;
   final FieldDispatcher<bool> skipPresence;
 
-  _$GetCaseEventDetailApiRequestActions._(this.$options)
-      : $replace = $options.action<GetCaseEventDetailApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetCaseEventDetailApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetCaseEventDetailApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        caseNumber = $options.field<int>('caseNumber', (a) => a?.caseNumber,
+        caseNumber = options$.field<int>('caseNumber', (a) => a?.caseNumber,
             (s) => s?.caseNumber, (p, b) => p?.caseNumber = b),
-        skipPresence = $options.field<bool>(
+        skipPresence = options$.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -227,37 +227,33 @@ class _$GetCaseEventDetailApiRequestActions
       _$GetCaseEventDetailApiRequestActions._(options());
 
   @override
-  GetCaseEventDetailApiRequest get $initial => GetCaseEventDetailApiRequest();
+  GetCaseEventDetailApiRequest get initialState$ =>
+      GetCaseEventDetailApiRequest();
 
   @override
-  GetCaseEventDetailApiRequestBuilder $newBuilder() =>
+  GetCaseEventDetailApiRequestBuilder newBuilder$() =>
       GetCaseEventDetailApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.caseNumber,
         this.skipPresence,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    caseNumber.$reducer(reducer);
-    skipPresence.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    caseNumber.reducer$(reducer);
+    skipPresence.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCaseEventDetailApiRequest);
 }

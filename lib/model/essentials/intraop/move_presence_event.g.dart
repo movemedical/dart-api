@@ -202,24 +202,24 @@ typedef StatefulActionsOptions<MovePresenceEvent, MovePresenceEventBuilder,
 
 class _$MovePresenceEventActions extends MovePresenceEventActions {
   final StatefulActionsOptions<MovePresenceEvent, MovePresenceEventBuilder,
-      MovePresenceEventActions> $options;
+      MovePresenceEventActions> options$;
 
-  final ActionDispatcher<MovePresenceEvent> $replace;
+  final ActionDispatcher<MovePresenceEvent> replace$;
   final FieldDispatcher<PresenceEventType> eventType;
   final FieldDispatcher<String> objectId;
   final MovePresenceActions presence;
 
-  _$MovePresenceEventActions._(this.$options)
-      : $replace =
-            $options.action<MovePresenceEvent>('\$replace', (a) => a?.$replace),
-        eventType = $options.field<PresenceEventType>(
+  _$MovePresenceEventActions._(this.options$)
+      : replace$ =
+            options$.action<MovePresenceEvent>('replace\$', (a) => a?.replace$),
+        eventType = options$.field<PresenceEventType>(
             'eventType',
             (a) => a?.eventType,
             (s) => s?.eventType,
             (p, b) => p?.eventType = b),
-        objectId = $options.field<String>('objectId', (a) => a?.objectId,
+        objectId = options$.field<String>('objectId', (a) => a?.objectId,
             (s) => s?.objectId, (p, b) => p?.objectId = b),
-        presence = MovePresenceActions(() => $options
+        presence = MovePresenceActions(() => options$
             .stateful<MovePresence, MovePresenceBuilder, MovePresenceActions>(
                 'presence',
                 (a) => a.presence,
@@ -232,41 +232,37 @@ class _$MovePresenceEventActions extends MovePresenceEventActions {
       _$MovePresenceEventActions._(options());
 
   @override
-  MovePresenceEvent get $initial => MovePresenceEvent();
+  MovePresenceEvent get initialState$ => MovePresenceEvent();
 
   @override
-  MovePresenceEventBuilder $newBuilder() => MovePresenceEventBuilder();
+  MovePresenceEventBuilder newBuilder$() => MovePresenceEventBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.presence,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.eventType,
         this.objectId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    eventType.$reducer(reducer);
-    objectId.$reducer(reducer);
-    presence.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    eventType.reducer$(reducer);
+    objectId.reducer$(reducer);
+    presence.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    presence.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    presence.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(MovePresenceEvent);
 }

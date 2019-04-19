@@ -181,17 +181,17 @@ class _$BuildUsageRestockPlanApiResponseActions
   final StatefulActionsOptions<
       BuildUsageRestockPlanApiResponse,
       BuildUsageRestockPlanApiResponseBuilder,
-      BuildUsageRestockPlanApiResponseActions> $options;
+      BuildUsageRestockPlanApiResponseActions> options$;
 
-  final ActionDispatcher<BuildUsageRestockPlanApiResponse> $replace;
+  final ActionDispatcher<BuildUsageRestockPlanApiResponse> replace$;
   final FieldDispatcher<BuiltList<BuildUsageRestockPlanApiRestockItem>>
       restockItems;
 
-  _$BuildUsageRestockPlanApiResponseActions._(this.$options)
-      : $replace = $options.action<BuildUsageRestockPlanApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$BuildUsageRestockPlanApiResponseActions._(this.options$)
+      : replace$ = options$.action<BuildUsageRestockPlanApiResponse>(
+            'replace\$', (a) => a?.replace$),
         restockItems =
-            $options.field<BuiltList<BuildUsageRestockPlanApiRestockItem>>(
+            options$.field<BuiltList<BuildUsageRestockPlanApiRestockItem>>(
                 'restockItems',
                 (a) => a?.restockItems,
                 (s) => s?.restockItems,
@@ -203,34 +203,29 @@ class _$BuildUsageRestockPlanApiResponseActions
       _$BuildUsageRestockPlanApiResponseActions._(options());
 
   @override
-  BuildUsageRestockPlanApiResponse get $initial =>
+  BuildUsageRestockPlanApiResponse get initialState$ =>
       BuildUsageRestockPlanApiResponse();
 
   @override
-  BuildUsageRestockPlanApiResponseBuilder $newBuilder() =>
+  BuildUsageRestockPlanApiResponseBuilder newBuilder$() =>
       BuildUsageRestockPlanApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.restockItems,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    restockItems.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    restockItems.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildUsageRestockPlanApiResponse);
 }

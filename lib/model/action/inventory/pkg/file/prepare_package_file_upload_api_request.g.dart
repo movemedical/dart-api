@@ -304,9 +304,9 @@ class _$PreparePackageFileUploadApiRequestActions
   final StatefulActionsOptions<
       PreparePackageFileUploadApiRequest,
       PreparePackageFileUploadApiRequestBuilder,
-      PreparePackageFileUploadApiRequestActions> $options;
+      PreparePackageFileUploadApiRequestActions> options$;
 
-  final ActionDispatcher<PreparePackageFileUploadApiRequest> $replace;
+  final ActionDispatcher<PreparePackageFileUploadApiRequest> replace$;
   final FieldDispatcher<String> packageId;
   final FieldDispatcher<String> fileName;
   final FieldDispatcher<PackageFileType> packageFileType;
@@ -315,34 +315,34 @@ class _$PreparePackageFileUploadApiRequestActions
   final FieldDispatcher<String> ownerOrgUnitId;
   final FieldDispatcher<Visibility> visibility;
 
-  _$PreparePackageFileUploadApiRequestActions._(this.$options)
-      : $replace = $options.action<PreparePackageFileUploadApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        packageId = $options.field<String>('packageId', (a) => a?.packageId,
+  _$PreparePackageFileUploadApiRequestActions._(this.options$)
+      : replace$ = options$.action<PreparePackageFileUploadApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        packageId = options$.field<String>('packageId', (a) => a?.packageId,
             (s) => s?.packageId, (p, b) => p?.packageId = b),
-        fileName = $options.field<String>('fileName', (a) => a?.fileName,
+        fileName = options$.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
-        packageFileType = $options.field<PackageFileType>(
+        packageFileType = options$.field<PackageFileType>(
             'packageFileType',
             (a) => a?.packageFileType,
             (s) => s?.packageFileType,
             (p, b) => p?.packageFileType = b),
-        fileDescription = $options.field<String>(
+        fileDescription = options$.field<String>(
             'fileDescription',
             (a) => a?.fileDescription,
             (s) => s?.fileDescription,
             (p, b) => p?.fileDescription = b),
-        estimatedSizeKb = $options.field<int>(
+        estimatedSizeKb = options$.field<int>(
             'estimatedSizeKb',
             (a) => a?.estimatedSizeKb,
             (s) => s?.estimatedSizeKb,
             (p, b) => p?.estimatedSizeKb = b),
-        ownerOrgUnitId = $options.field<String>(
+        ownerOrgUnitId = options$.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        visibility = $options.field<Visibility>(
+        visibility = options$.field<Visibility>(
             'visibility',
             (a) => a?.visibility,
             (s) => s?.visibility,
@@ -354,18 +354,18 @@ class _$PreparePackageFileUploadApiRequestActions
       _$PreparePackageFileUploadApiRequestActions._(options());
 
   @override
-  PreparePackageFileUploadApiRequest get $initial =>
+  PreparePackageFileUploadApiRequest get initialState$ =>
       PreparePackageFileUploadApiRequest();
 
   @override
-  PreparePackageFileUploadApiRequestBuilder $newBuilder() =>
+  PreparePackageFileUploadApiRequestBuilder newBuilder$() =>
       PreparePackageFileUploadApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.packageId,
         this.fileName,
         this.packageFileType,
@@ -376,24 +376,19 @@ class _$PreparePackageFileUploadApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    packageId.$reducer(reducer);
-    fileName.$reducer(reducer);
-    packageFileType.$reducer(reducer);
-    fileDescription.$reducer(reducer);
-    estimatedSizeKb.$reducer(reducer);
-    ownerOrgUnitId.$reducer(reducer);
-    visibility.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    packageId.reducer$(reducer);
+    fileName.reducer$(reducer);
+    packageFileType.reducer$(reducer);
+    fileDescription.reducer$(reducer);
+    estimatedSizeKb.reducer$(reducer);
+    ownerOrgUnitId.reducer$(reducer);
+    visibility.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(PreparePackageFileUploadApiRequest);
 }

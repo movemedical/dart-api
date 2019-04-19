@@ -189,17 +189,17 @@ class _$ListQuestionableKitSummaryApiResponseActions
   final StatefulActionsOptions<
       ListQuestionableKitSummaryApiResponse,
       ListQuestionableKitSummaryApiResponseBuilder,
-      ListQuestionableKitSummaryApiResponseActions> $options;
+      ListQuestionableKitSummaryApiResponseActions> options$;
 
-  final ActionDispatcher<ListQuestionableKitSummaryApiResponse> $replace;
+  final ActionDispatcher<ListQuestionableKitSummaryApiResponse> replace$;
   final FieldDispatcher<
           BuiltList<ListQuestionableKitSummaryApiQuestionableSummary>>
       questionableSummaryList;
 
-  _$ListQuestionableKitSummaryApiResponseActions._(this.$options)
-      : $replace = $options.action<ListQuestionableKitSummaryApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        questionableSummaryList = $options
+  _$ListQuestionableKitSummaryApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListQuestionableKitSummaryApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        questionableSummaryList = options$
             .field<BuiltList<ListQuestionableKitSummaryApiQuestionableSummary>>(
                 'questionableSummaryList',
                 (a) => a?.questionableSummaryList,
@@ -212,34 +212,29 @@ class _$ListQuestionableKitSummaryApiResponseActions
       _$ListQuestionableKitSummaryApiResponseActions._(options());
 
   @override
-  ListQuestionableKitSummaryApiResponse get $initial =>
+  ListQuestionableKitSummaryApiResponse get initialState$ =>
       ListQuestionableKitSummaryApiResponse();
 
   @override
-  ListQuestionableKitSummaryApiResponseBuilder $newBuilder() =>
+  ListQuestionableKitSummaryApiResponseBuilder newBuilder$() =>
       ListQuestionableKitSummaryApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.questionableSummaryList,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    questionableSummaryList.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    questionableSummaryList.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListQuestionableKitSummaryApiResponse);
 }

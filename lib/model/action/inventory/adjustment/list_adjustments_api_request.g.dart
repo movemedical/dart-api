@@ -469,9 +469,9 @@ class _$ListAdjustmentsApiRequestActions
   final StatefulActionsOptions<
       ListAdjustmentsApiRequest,
       ListAdjustmentsApiRequestBuilder,
-      ListAdjustmentsApiRequestActions> $options;
+      ListAdjustmentsApiRequestActions> options$;
 
-  final ActionDispatcher<ListAdjustmentsApiRequest> $replace;
+  final ActionDispatcher<ListAdjustmentsApiRequest> replace$;
   final FieldDispatcher<AdjustmentReason> reason;
   final FieldDispatcher<AdjustmentStatus> status;
   final FieldDispatcher<String> itemId;
@@ -486,35 +486,35 @@ class _$ListAdjustmentsApiRequestActions
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListAdjustmentsApiOrderBy> orderBy;
 
-  _$ListAdjustmentsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListAdjustmentsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        reason = $options.field<AdjustmentReason>('reason', (a) => a?.reason,
+  _$ListAdjustmentsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListAdjustmentsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        reason = options$.field<AdjustmentReason>('reason', (a) => a?.reason,
             (s) => s?.reason, (p, b) => p?.reason = b),
-        status = $options.field<AdjustmentStatus>('status', (a) => a?.status,
+        status = options$.field<AdjustmentStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        moveItemType = $options.field<MoveItemType>(
+        moveItemType = options$.field<MoveItemType>(
             'moveItemType',
             (a) => a?.moveItemType,
             (s) => s?.moveItemType,
             (p, b) => p?.moveItemType = b),
-        inventoryTypeId = $options.field<String>(
+        inventoryTypeId = options$.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        location = LocationDataActions(() => $options
+        location = LocationDataActions(() => options$
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
                 'location',
                 (a) => a.location,
@@ -522,15 +522,15 @@ class _$ListAdjustmentsApiRequestActions
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
         adjustedDateRange = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'adjustedDateRange',
                 (a) => a.adjustedDateRange,
                 (s) => s?.adjustedDateRange,
                 (b) => b?.adjustedDateRange,
                 (parent, builder) => parent?.adjustedDateRange = builder)),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -540,7 +540,7 @@ class _$ListAdjustmentsApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListAdjustmentsApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListAdjustmentsApiOrderBy>,
                     OrderByParamsBuilder<ListAdjustmentsApiOrderBy>,
                     OrderByParamsActions<ListAdjustmentsApiOrderBy>>(
@@ -556,26 +556,26 @@ class _$ListAdjustmentsApiRequestActions
       _$ListAdjustmentsApiRequestActions._(options());
 
   @override
-  ListAdjustmentsApiRequest get $initial => ListAdjustmentsApiRequest();
+  ListAdjustmentsApiRequest get initialState$ => ListAdjustmentsApiRequest();
 
   @override
-  ListAdjustmentsApiRequestBuilder $newBuilder() =>
+  ListAdjustmentsApiRequestBuilder newBuilder$() =>
       ListAdjustmentsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
         this.adjustedDateRange,
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.reason,
         this.status,
         this.itemId,
@@ -588,33 +588,29 @@ class _$ListAdjustmentsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    reason.$reducer(reducer);
-    status.$reducer(reducer);
-    itemId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    moveItemType.$reducer(reducer);
-    inventoryTypeId.$reducer(reducer);
-    location.$reducer(reducer);
-    adjustedDateRange.$reducer(reducer);
-    stockId.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    reason.reducer$(reducer);
+    status.reducer$(reducer);
+    itemId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    moveItemType.reducer$(reducer);
+    inventoryTypeId.reducer$(reducer);
+    location.reducer$(reducer);
+    adjustedDateRange.reducer$(reducer);
+    stockId.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    location.$middleware(middleware);
-    adjustedDateRange.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    location.middleware$(middleware);
+    adjustedDateRange.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListAdjustmentsApiRequest);
 }

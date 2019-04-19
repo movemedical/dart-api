@@ -182,24 +182,24 @@ typedef StatefulActionsOptions<MovePresence, MovePresenceBuilder,
 
 class _$MovePresenceActions extends MovePresenceActions {
   final StatefulActionsOptions<MovePresence, MovePresenceBuilder,
-      MovePresenceActions> $options;
+      MovePresenceActions> options$;
 
-  final ActionDispatcher<MovePresence> $replace;
+  final ActionDispatcher<MovePresence> replace$;
   final FieldDispatcher<String> userId;
   final FieldDispatcher<String> userDisplay;
   final FieldDispatcher<String> message;
 
-  _$MovePresenceActions._(this.$options)
-      : $replace =
-            $options.action<MovePresence>('\$replace', (a) => a?.$replace),
-        userId = $options.field<String>('userId', (a) => a?.userId,
+  _$MovePresenceActions._(this.options$)
+      : replace$ =
+            options$.action<MovePresence>('replace\$', (a) => a?.replace$),
+        userId = options$.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        userDisplay = $options.field<String>(
+        userDisplay = options$.field<String>(
             'userDisplay',
             (a) => a?.userDisplay,
             (s) => s?.userDisplay,
             (p, b) => p?.userDisplay = b),
-        message = $options.field<String>('message', (a) => a?.message,
+        message = options$.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
         super._();
 
@@ -207,35 +207,31 @@ class _$MovePresenceActions extends MovePresenceActions {
       _$MovePresenceActions._(options());
 
   @override
-  MovePresence get $initial => MovePresence();
+  MovePresence get initialState$ => MovePresence();
 
   @override
-  MovePresenceBuilder $newBuilder() => MovePresenceBuilder();
+  MovePresenceBuilder newBuilder$() => MovePresenceBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.userId,
         this.userDisplay,
         this.message,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    userId.$reducer(reducer);
-    userDisplay.$reducer(reducer);
-    message.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    userId.reducer$(reducer);
+    userDisplay.reducer$(reducer);
+    message.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(MovePresence);
 }

@@ -235,19 +235,19 @@ class _$ListBizUnitsForBizUnitProcedureApiRequestActions
   final StatefulActionsOptions<
       ListBizUnitsForBizUnitProcedureApiRequest,
       ListBizUnitsForBizUnitProcedureApiRequestBuilder,
-      ListBizUnitsForBizUnitProcedureApiRequestActions> $options;
+      ListBizUnitsForBizUnitProcedureApiRequestActions> options$;
 
-  final ActionDispatcher<ListBizUnitsForBizUnitProcedureApiRequest> $replace;
+  final ActionDispatcher<ListBizUnitsForBizUnitProcedureApiRequest> replace$;
   final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListBizUnitsForBizUnitProcedureApiOrderBy> orderBy;
 
-  _$ListBizUnitsForBizUnitProcedureApiRequestActions._(this.$options)
-      : $replace = $options.action<ListBizUnitsForBizUnitProcedureApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$ListBizUnitsForBizUnitProcedureApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListBizUnitsForBizUnitProcedureApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -257,7 +257,7 @@ class _$ListBizUnitsForBizUnitProcedureApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<
-            ListBizUnitsForBizUnitProcedureApiOrderBy>(() => $options.stateful<
+            ListBizUnitsForBizUnitProcedureApiOrderBy>(() => options$.stateful<
                 OrderByParams<ListBizUnitsForBizUnitProcedureApiOrderBy>,
                 OrderByParamsBuilder<ListBizUnitsForBizUnitProcedureApiOrderBy>,
                 OrderByParamsActions<
@@ -274,45 +274,40 @@ class _$ListBizUnitsForBizUnitProcedureApiRequestActions
       _$ListBizUnitsForBizUnitProcedureApiRequestActions._(options());
 
   @override
-  ListBizUnitsForBizUnitProcedureApiRequest get $initial =>
+  ListBizUnitsForBizUnitProcedureApiRequest get initialState$ =>
       ListBizUnitsForBizUnitProcedureApiRequest();
 
   @override
-  ListBizUnitsForBizUnitProcedureApiRequestBuilder $newBuilder() =>
+  ListBizUnitsForBizUnitProcedureApiRequestBuilder newBuilder$() =>
       ListBizUnitsForBizUnitProcedureApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListBizUnitsForBizUnitProcedureApiRequest);
 }

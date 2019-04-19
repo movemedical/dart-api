@@ -22,64 +22,29 @@ class _$AddCaseCustomFieldToOrgUnitApi extends AddCaseCustomFieldToOrgUnitApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
           ApiResult<Nothing>>,
-      AddCaseCustomFieldToOrgUnitApi> $options;
+      AddCaseCustomFieldToOrgUnitApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
-          ApiResult<Nothing>, AddCaseCustomFieldToOrgUnitApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
-          ApiResult<Nothing>,
-          AddCaseCustomFieldToOrgUnitApi,
-          Command<ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
-          ApiResult<Nothing>,
-          AddCaseCustomFieldToOrgUnitApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
-          ApiResult<Nothing>,
-          AddCaseCustomFieldToOrgUnitApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$AddCaseCustomFieldToOrgUnitApi._(this.$options)
-      : $replace = $options.action<
+  _$AddCaseCustomFieldToOrgUnitApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
-                ApiResult<Nothing>,
-                AddCaseCustomFieldToOrgUnitApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
-                    ApiResult<Nothing>,
-                    AddCaseCustomFieldToOrgUnitApi,
-                    Command<
-                        ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
-                    ApiResult<Nothing>,
-                    AddCaseCustomFieldToOrgUnitApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
-                ApiResult<Nothing>,
-                AddCaseCustomFieldToOrgUnitApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$AddCaseCustomFieldToOrgUnitApi(
@@ -89,33 +54,26 @@ class _$AddCaseCustomFieldToOrgUnitApi extends AddCaseCustomFieldToOrgUnitApi {
   @override
   CommandState<ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<AddCaseCustomFieldToOrgUnitApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(AddCaseCustomFieldToOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

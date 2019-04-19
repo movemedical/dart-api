@@ -175,21 +175,21 @@ class _$CloseAuditItemApiRequestActions
   final StatefulActionsOptions<
       CloseAuditItemApiRequest,
       CloseAuditItemApiRequestBuilder,
-      CloseAuditItemApiRequestActions> $options;
+      CloseAuditItemApiRequestActions> options$;
 
-  final ActionDispatcher<CloseAuditItemApiRequest> $replace;
+  final ActionDispatcher<CloseAuditItemApiRequest> replace$;
   final FieldDispatcher<String> auditItemId;
   final FieldDispatcher<String> note;
 
-  _$CloseAuditItemApiRequestActions._(this.$options)
-      : $replace = $options.action<CloseAuditItemApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditItemId = $options.field<String>(
+  _$CloseAuditItemApiRequestActions._(this.options$)
+      : replace$ = options$.action<CloseAuditItemApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditItemId = options$.field<String>(
             'auditItemId',
             (a) => a?.auditItemId,
             (s) => s?.auditItemId,
             (p, b) => p?.auditItemId = b),
-        note = $options.field<String>(
+        note = options$.field<String>(
             'note', (a) => a?.note, (s) => s?.note, (p, b) => p?.note = b),
         super._();
 
@@ -198,34 +198,30 @@ class _$CloseAuditItemApiRequestActions
       _$CloseAuditItemApiRequestActions._(options());
 
   @override
-  CloseAuditItemApiRequest get $initial => CloseAuditItemApiRequest();
+  CloseAuditItemApiRequest get initialState$ => CloseAuditItemApiRequest();
 
   @override
-  CloseAuditItemApiRequestBuilder $newBuilder() =>
+  CloseAuditItemApiRequestBuilder newBuilder$() =>
       CloseAuditItemApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditItemId,
         this.note,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditItemId.$reducer(reducer);
-    note.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditItemId.reducer$(reducer);
+    note.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CloseAuditItemApiRequest);
 }

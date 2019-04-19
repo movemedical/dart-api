@@ -214,21 +214,21 @@ class _$ListProcedureItemCategoryOptionsApiResponseActions
   final StatefulActionsOptions<
       ListProcedureItemCategoryOptionsApiResponse,
       ListProcedureItemCategoryOptionsApiResponseBuilder,
-      ListProcedureItemCategoryOptionsApiResponseActions> $options;
+      ListProcedureItemCategoryOptionsApiResponseActions> options$;
 
-  final ActionDispatcher<ListProcedureItemCategoryOptionsApiResponse> $replace;
+  final ActionDispatcher<ListProcedureItemCategoryOptionsApiResponse> replace$;
   final FieldDispatcher<
       BuiltList<ListProcedureItemCategoryOptionsApiItemCategoryOption>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListProcedureItemCategoryOptionsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListProcedureItemCategoryOptionsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<
+  _$ListProcedureItemCategoryOptionsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListProcedureItemCategoryOptionsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<
                 BuiltList<
                     ListProcedureItemCategoryOptionsApiItemCategoryOption>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -237,36 +237,31 @@ class _$ListProcedureItemCategoryOptionsApiResponseActions
       _$ListProcedureItemCategoryOptionsApiResponseActions._(options());
 
   @override
-  ListProcedureItemCategoryOptionsApiResponse get $initial =>
+  ListProcedureItemCategoryOptionsApiResponse get initialState$ =>
       ListProcedureItemCategoryOptionsApiResponse();
 
   @override
-  ListProcedureItemCategoryOptionsApiResponseBuilder $newBuilder() =>
+  ListProcedureItemCategoryOptionsApiResponseBuilder newBuilder$() =>
       ListProcedureItemCategoryOptionsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListProcedureItemCategoryOptionsApiResponse);
 }

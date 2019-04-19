@@ -270,9 +270,9 @@ typedef StatefulActionsOptions<
 
 class _$OuLinkToInventoryTypeActions extends OuLinkToInventoryTypeActions {
   final StatefulActionsOptions<OuLinkToInventoryType,
-      OuLinkToInventoryTypeBuilder, OuLinkToInventoryTypeActions> $options;
+      OuLinkToInventoryTypeBuilder, OuLinkToInventoryTypeActions> options$;
 
-  final ActionDispatcher<OuLinkToInventoryType> $replace;
+  final ActionDispatcher<OuLinkToInventoryType> replace$;
   final FieldDispatcher<String> inventoryTypeId;
   final FieldDispatcher<String> inventoryTypeName;
   final FieldDispatcher<bool> view;
@@ -280,26 +280,26 @@ class _$OuLinkToInventoryTypeActions extends OuLinkToInventoryTypeActions {
   final FieldDispatcher<bool> reconcile;
   final FieldDispatcher<bool> admin;
 
-  _$OuLinkToInventoryTypeActions._(this.$options)
-      : $replace = $options.action<OuLinkToInventoryType>(
-            '\$replace', (a) => a?.$replace),
-        inventoryTypeId = $options.field<String>(
+  _$OuLinkToInventoryTypeActions._(this.options$)
+      : replace$ = options$.action<OuLinkToInventoryType>(
+            'replace\$', (a) => a?.replace$),
+        inventoryTypeId = options$.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        inventoryTypeName = $options.field<String>(
+        inventoryTypeName = options$.field<String>(
             'inventoryTypeName',
             (a) => a?.inventoryTypeName,
             (s) => s?.inventoryTypeName,
             (p, b) => p?.inventoryTypeName = b),
-        view = $options.field<bool>(
+        view = options$.field<bool>(
             'view', (a) => a?.view, (s) => s?.view, (p, b) => p?.view = b),
-        source = $options.field<bool>('source', (a) => a?.source,
+        source = options$.field<bool>('source', (a) => a?.source,
             (s) => s?.source, (p, b) => p?.source = b),
-        reconcile = $options.field<bool>('reconcile', (a) => a?.reconcile,
+        reconcile = options$.field<bool>('reconcile', (a) => a?.reconcile,
             (s) => s?.reconcile, (p, b) => p?.reconcile = b),
-        admin = $options.field<bool>(
+        admin = options$.field<bool>(
             'admin', (a) => a?.admin, (s) => s?.admin, (p, b) => p?.admin = b),
         super._();
 
@@ -308,16 +308,16 @@ class _$OuLinkToInventoryTypeActions extends OuLinkToInventoryTypeActions {
       _$OuLinkToInventoryTypeActions._(options());
 
   @override
-  OuLinkToInventoryType get $initial => OuLinkToInventoryType();
+  OuLinkToInventoryType get initialState$ => OuLinkToInventoryType();
 
   @override
-  OuLinkToInventoryTypeBuilder $newBuilder() => OuLinkToInventoryTypeBuilder();
+  OuLinkToInventoryTypeBuilder newBuilder$() => OuLinkToInventoryTypeBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.inventoryTypeId,
         this.inventoryTypeName,
         this.view,
@@ -327,22 +327,18 @@ class _$OuLinkToInventoryTypeActions extends OuLinkToInventoryTypeActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    inventoryTypeId.$reducer(reducer);
-    inventoryTypeName.$reducer(reducer);
-    view.$reducer(reducer);
-    source.$reducer(reducer);
-    reconcile.$reducer(reducer);
-    admin.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    inventoryTypeId.reducer$(reducer);
+    inventoryTypeName.reducer$(reducer);
+    view.reducer$(reducer);
+    source.reducer$(reducer);
+    reconcile.reducer$(reducer);
+    admin.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(OuLinkToInventoryType);
 }

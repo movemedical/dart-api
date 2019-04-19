@@ -160,15 +160,15 @@ class _$CreateConversationApiResponseActions
   final StatefulActionsOptions<
       CreateConversationApiResponse,
       CreateConversationApiResponseBuilder,
-      CreateConversationApiResponseActions> $options;
+      CreateConversationApiResponseActions> options$;
 
-  final ActionDispatcher<CreateConversationApiResponse> $replace;
+  final ActionDispatcher<CreateConversationApiResponse> replace$;
   final FieldDispatcher<String> conversationId;
 
-  _$CreateConversationApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateConversationApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        conversationId = $options.field<String>(
+  _$CreateConversationApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateConversationApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        conversationId = options$.field<String>(
             'conversationId',
             (a) => a?.conversationId,
             (s) => s?.conversationId,
@@ -180,33 +180,29 @@ class _$CreateConversationApiResponseActions
       _$CreateConversationApiResponseActions._(options());
 
   @override
-  CreateConversationApiResponse get $initial => CreateConversationApiResponse();
+  CreateConversationApiResponse get initialState$ =>
+      CreateConversationApiResponse();
 
   @override
-  CreateConversationApiResponseBuilder $newBuilder() =>
+  CreateConversationApiResponseBuilder newBuilder$() =>
       CreateConversationApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.conversationId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    conversationId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    conversationId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateConversationApiResponse);
 }

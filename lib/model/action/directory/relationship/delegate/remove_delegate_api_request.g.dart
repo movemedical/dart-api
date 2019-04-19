@@ -176,18 +176,18 @@ class _$RemoveDelegateApiRequestActions
   final StatefulActionsOptions<
       RemoveDelegateApiRequest,
       RemoveDelegateApiRequestBuilder,
-      RemoveDelegateApiRequestActions> $options;
+      RemoveDelegateApiRequestActions> options$;
 
-  final ActionDispatcher<RemoveDelegateApiRequest> $replace;
+  final ActionDispatcher<RemoveDelegateApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<DirectoryNonPersonType> type;
 
-  _$RemoveDelegateApiRequestActions._(this.$options)
-      : $replace = $options.action<RemoveDelegateApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$RemoveDelegateApiRequestActions._(this.options$)
+      : replace$ = options$.action<RemoveDelegateApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.field<DirectoryNonPersonType>(
+        type = options$.field<DirectoryNonPersonType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
         super._();
 
@@ -196,34 +196,30 @@ class _$RemoveDelegateApiRequestActions
       _$RemoveDelegateApiRequestActions._(options());
 
   @override
-  RemoveDelegateApiRequest get $initial => RemoveDelegateApiRequest();
+  RemoveDelegateApiRequest get initialState$ => RemoveDelegateApiRequest();
 
   @override
-  RemoveDelegateApiRequestBuilder $newBuilder() =>
+  RemoveDelegateApiRequestBuilder newBuilder$() =>
       RemoveDelegateApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.type,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    type.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    type.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(RemoveDelegateApiRequest);
 }

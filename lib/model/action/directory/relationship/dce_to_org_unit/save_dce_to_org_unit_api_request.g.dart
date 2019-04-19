@@ -392,9 +392,9 @@ class _$SaveDceToOrgUnitApiRequestActions
   final StatefulActionsOptions<
       SaveDceToOrgUnitApiRequest,
       SaveDceToOrgUnitApiRequestBuilder,
-      SaveDceToOrgUnitApiRequestActions> $options;
+      SaveDceToOrgUnitApiRequestActions> options$;
 
-  final ActionDispatcher<SaveDceToOrgUnitApiRequest> $replace;
+  final ActionDispatcher<SaveDceToOrgUnitApiRequest> replace$;
   final FieldDispatcher<String> directLinkIdOverride;
   final FieldDispatcher<String> userRoleId;
   final FieldDispatcher<String> dceId;
@@ -407,40 +407,40 @@ class _$SaveDceToOrgUnitApiRequestActions
   final FieldDispatcher<BuiltList<SaveDceToOrgUnitApiInventoryTypePermission>>
       inventoryTypePermissions;
 
-  _$SaveDceToOrgUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<SaveDceToOrgUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        directLinkIdOverride = $options.field<String>(
+  _$SaveDceToOrgUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<SaveDceToOrgUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        directLinkIdOverride = options$.field<String>(
             'directLinkIdOverride',
             (a) => a?.directLinkIdOverride,
             (s) => s?.directLinkIdOverride,
             (p, b) => p?.directLinkIdOverride = b),
-        userRoleId = $options.field<String>('userRoleId', (a) => a?.userRoleId,
+        userRoleId = options$.field<String>('userRoleId', (a) => a?.userRoleId,
             (s) => s?.userRoleId, (p, b) => p?.userRoleId = b),
-        dceId = $options.field<String>(
+        dceId = options$.field<String>(
             'dceId', (a) => a?.dceId, (s) => s?.dceId, (p, b) => p?.dceId = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        processOrders = $options.field<bool>(
+        processOrders = options$.field<bool>(
             'processOrders',
             (a) => a?.processOrders,
             (s) => s?.processOrders,
             (p, b) => p?.processOrders = b),
-        manageCatalog = $options.field<bool>(
+        manageCatalog = options$.field<bool>(
             'manageCatalog',
             (a) => a?.manageCatalog,
             (s) => s?.manageCatalog,
             (p, b) => p?.manageCatalog = b),
-        createAudit = $options.field<bool>('createAudit', (a) => a?.createAudit,
+        createAudit = options$.field<bool>('createAudit', (a) => a?.createAudit,
             (s) => s?.createAudit, (p, b) => p?.createAudit = b),
-        manageAudit = $options.field<bool>('manageAudit', (a) => a?.manageAudit,
+        manageAudit = options$.field<bool>('manageAudit', (a) => a?.manageAudit,
             (s) => s?.manageAudit, (p, b) => p?.manageAudit = b),
-        processAudit = $options.field<bool>(
+        processAudit = options$.field<bool>(
             'processAudit',
             (a) => a?.processAudit,
             (s) => s?.processAudit,
             (p, b) => p?.processAudit = b),
-        inventoryTypePermissions = $options
+        inventoryTypePermissions = options$
             .field<BuiltList<SaveDceToOrgUnitApiInventoryTypePermission>>(
                 'inventoryTypePermissions',
                 (a) => a?.inventoryTypePermissions,
@@ -453,17 +453,17 @@ class _$SaveDceToOrgUnitApiRequestActions
       _$SaveDceToOrgUnitApiRequestActions._(options());
 
   @override
-  SaveDceToOrgUnitApiRequest get $initial => SaveDceToOrgUnitApiRequest();
+  SaveDceToOrgUnitApiRequest get initialState$ => SaveDceToOrgUnitApiRequest();
 
   @override
-  SaveDceToOrgUnitApiRequestBuilder $newBuilder() =>
+  SaveDceToOrgUnitApiRequestBuilder newBuilder$() =>
       SaveDceToOrgUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.directLinkIdOverride,
         this.userRoleId,
         this.dceId,
@@ -477,26 +477,22 @@ class _$SaveDceToOrgUnitApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    directLinkIdOverride.$reducer(reducer);
-    userRoleId.$reducer(reducer);
-    dceId.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    processOrders.$reducer(reducer);
-    manageCatalog.$reducer(reducer);
-    createAudit.$reducer(reducer);
-    manageAudit.$reducer(reducer);
-    processAudit.$reducer(reducer);
-    inventoryTypePermissions.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    directLinkIdOverride.reducer$(reducer);
+    userRoleId.reducer$(reducer);
+    dceId.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    processOrders.reducer$(reducer);
+    manageCatalog.reducer$(reducer);
+    createAudit.reducer$(reducer);
+    manageAudit.reducer$(reducer);
+    processAudit.reducer$(reducer);
+    inventoryTypePermissions.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SaveDceToOrgUnitApiRequest);
 }

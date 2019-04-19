@@ -185,21 +185,21 @@ class _$AddInvTypesToBeCountedApiInvTypeToCountActions
   final StatefulActionsOptions<
       AddInvTypesToBeCountedApiInvTypeToCount,
       AddInvTypesToBeCountedApiInvTypeToCountBuilder,
-      AddInvTypesToBeCountedApiInvTypeToCountActions> $options;
+      AddInvTypesToBeCountedApiInvTypeToCountActions> options$;
 
-  final ActionDispatcher<AddInvTypesToBeCountedApiInvTypeToCount> $replace;
+  final ActionDispatcher<AddInvTypesToBeCountedApiInvTypeToCount> replace$;
   final FieldDispatcher<String> inventoryTypeId;
   final FieldDispatcher<int> sequence;
 
-  _$AddInvTypesToBeCountedApiInvTypeToCountActions._(this.$options)
-      : $replace = $options.action<AddInvTypesToBeCountedApiInvTypeToCount>(
-            '\$replace', (a) => a?.$replace),
-        inventoryTypeId = $options.field<String>(
+  _$AddInvTypesToBeCountedApiInvTypeToCountActions._(this.options$)
+      : replace$ = options$.action<AddInvTypesToBeCountedApiInvTypeToCount>(
+            'replace\$', (a) => a?.replace$),
+        inventoryTypeId = options$.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        sequence = $options.field<int>('sequence', (a) => a?.sequence,
+        sequence = options$.field<int>('sequence', (a) => a?.sequence,
             (s) => s?.sequence, (p, b) => p?.sequence = b),
         super._();
 
@@ -208,36 +208,31 @@ class _$AddInvTypesToBeCountedApiInvTypeToCountActions
       _$AddInvTypesToBeCountedApiInvTypeToCountActions._(options());
 
   @override
-  AddInvTypesToBeCountedApiInvTypeToCount get $initial =>
+  AddInvTypesToBeCountedApiInvTypeToCount get initialState$ =>
       AddInvTypesToBeCountedApiInvTypeToCount();
 
   @override
-  AddInvTypesToBeCountedApiInvTypeToCountBuilder $newBuilder() =>
+  AddInvTypesToBeCountedApiInvTypeToCountBuilder newBuilder$() =>
       AddInvTypesToBeCountedApiInvTypeToCountBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.inventoryTypeId,
         this.sequence,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    inventoryTypeId.$reducer(reducer);
-    sequence.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    inventoryTypeId.reducer$(reducer);
+    sequence.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AddInvTypesToBeCountedApiInvTypeToCount);
 }

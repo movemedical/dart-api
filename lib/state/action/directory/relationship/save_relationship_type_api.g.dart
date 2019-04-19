@@ -22,63 +22,29 @@ class _$SaveRelationshipTypeApi extends SaveRelationshipTypeApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<SaveRelationshipTypeApiRequest>,
           ApiResult<Nothing>>,
-      SaveRelationshipTypeApi> $options;
+      SaveRelationshipTypeApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Nothing>, SaveRelationshipTypeApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Nothing>,
-          SaveRelationshipTypeApi,
-          Command<ApiCommand<SaveRelationshipTypeApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Nothing>,
-          SaveRelationshipTypeApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Nothing>,
-          SaveRelationshipTypeApi,
-          CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<SaveRelationshipTypeApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$SaveRelationshipTypeApi._(this.$options)
-      : $replace = $options.action<
+  _$SaveRelationshipTypeApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<SaveRelationshipTypeApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<SaveRelationshipTypeApiRequest>,
-                ApiResult<Nothing>,
-                SaveRelationshipTypeApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<SaveRelationshipTypeApiRequest>,
-                    ApiResult<Nothing>,
-                    SaveRelationshipTypeApi,
-                    Command<ApiCommand<SaveRelationshipTypeApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<SaveRelationshipTypeApiRequest>,
-                    ApiResult<Nothing>,
-                    SaveRelationshipTypeApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<SaveRelationshipTypeApiRequest>,
-                ApiResult<Nothing>,
-                SaveRelationshipTypeApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<SaveRelationshipTypeApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$SaveRelationshipTypeApi(SaveRelationshipTypeApiOptions options) =>
@@ -86,31 +52,24 @@ class _$SaveRelationshipTypeApi extends SaveRelationshipTypeApi {
 
   @override
   CommandState<ApiCommand<SaveRelationshipTypeApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Nothing>>();
+      get initialState$ => CommandState<
+          ApiCommand<SaveRelationshipTypeApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<SaveRelationshipTypeApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<SaveRelationshipTypeApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(SaveRelationshipTypeApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

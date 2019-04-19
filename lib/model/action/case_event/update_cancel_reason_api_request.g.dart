@@ -199,21 +199,21 @@ class _$UpdateCancelReasonApiRequestActions
   final StatefulActionsOptions<
       UpdateCancelReasonApiRequest,
       UpdateCancelReasonApiRequestBuilder,
-      UpdateCancelReasonApiRequestActions> $options;
+      UpdateCancelReasonApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateCancelReasonApiRequest> $replace;
+  final ActionDispatcher<UpdateCancelReasonApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<bool> active;
 
-  _$UpdateCancelReasonApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateCancelReasonApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdateCancelReasonApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateCancelReasonApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -222,37 +222,33 @@ class _$UpdateCancelReasonApiRequestActions
       _$UpdateCancelReasonApiRequestActions._(options());
 
   @override
-  UpdateCancelReasonApiRequest get $initial => UpdateCancelReasonApiRequest();
+  UpdateCancelReasonApiRequest get initialState$ =>
+      UpdateCancelReasonApiRequest();
 
   @override
-  UpdateCancelReasonApiRequestBuilder $newBuilder() =>
+  UpdateCancelReasonApiRequestBuilder newBuilder$() =>
       UpdateCancelReasonApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.active,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateCancelReasonApiRequest);
 }

@@ -258,32 +258,32 @@ class _$ListBizUnitProcedureOptionsApiProcedureOptionActions
   final StatefulActionsOptions<
       ListBizUnitProcedureOptionsApiProcedureOption,
       ListBizUnitProcedureOptionsApiProcedureOptionBuilder,
-      ListBizUnitProcedureOptionsApiProcedureOptionActions> $options;
+      ListBizUnitProcedureOptionsApiProcedureOptionActions> options$;
 
   final ActionDispatcher<ListBizUnitProcedureOptionsApiProcedureOption>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> icdCode;
   final FieldDispatcher<String> description;
   final FieldDispatcher<bool> bodySideRequired;
 
-  _$ListBizUnitProcedureOptionsApiProcedureOptionActions._(this.$options)
-      : $replace =
-            $options.action<ListBizUnitProcedureOptionsApiProcedureOption>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListBizUnitProcedureOptionsApiProcedureOptionActions._(this.options$)
+      : replace$ =
+            options$.action<ListBizUnitProcedureOptionsApiProcedureOption>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        icdCode = $options.field<String>('icdCode', (a) => a?.icdCode,
+        icdCode = options$.field<String>('icdCode', (a) => a?.icdCode,
             (s) => s?.icdCode, (p, b) => p?.icdCode = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        bodySideRequired = $options.field<bool>(
+        bodySideRequired = options$.field<bool>(
             'bodySideRequired',
             (a) => a?.bodySideRequired,
             (s) => s?.bodySideRequired,
@@ -296,18 +296,18 @@ class _$ListBizUnitProcedureOptionsApiProcedureOptionActions
       _$ListBizUnitProcedureOptionsApiProcedureOptionActions._(options());
 
   @override
-  ListBizUnitProcedureOptionsApiProcedureOption get $initial =>
+  ListBizUnitProcedureOptionsApiProcedureOption get initialState$ =>
       ListBizUnitProcedureOptionsApiProcedureOption();
 
   @override
-  ListBizUnitProcedureOptionsApiProcedureOptionBuilder $newBuilder() =>
+  ListBizUnitProcedureOptionsApiProcedureOptionBuilder newBuilder$() =>
       ListBizUnitProcedureOptionsApiProcedureOptionBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.icdCode,
@@ -316,22 +316,17 @@ class _$ListBizUnitProcedureOptionsApiProcedureOptionActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    icdCode.$reducer(reducer);
-    description.$reducer(reducer);
-    bodySideRequired.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    icdCode.reducer$(reducer);
+    description.reducer$(reducer);
+    bodySideRequired.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListBizUnitProcedureOptionsApiProcedureOption);
 }

@@ -222,30 +222,30 @@ typedef StatefulActionsOptions<
 
 class _$AuditFilePushMessageActions extends AuditFilePushMessageActions {
   final StatefulActionsOptions<AuditFilePushMessage,
-      AuditFilePushMessageBuilder, AuditFilePushMessageActions> $options;
+      AuditFilePushMessageBuilder, AuditFilePushMessageActions> options$;
 
-  final ActionDispatcher<AuditFilePushMessage> $replace;
+  final ActionDispatcher<AuditFilePushMessage> replace$;
   final FieldDispatcher<String> auditFileId;
   final FieldDispatcher<String> fileId;
   final FieldDispatcher<AuditFilePushMessageFileUpdateType> updateType;
   final FieldDispatcher<double> percentUploadedDecimalForm;
 
-  _$AuditFilePushMessageActions._(this.$options)
-      : $replace = $options.action<AuditFilePushMessage>(
-            '\$replace', (a) => a?.$replace),
-        auditFileId = $options.field<String>(
+  _$AuditFilePushMessageActions._(this.options$)
+      : replace$ = options$.action<AuditFilePushMessage>(
+            'replace\$', (a) => a?.replace$),
+        auditFileId = options$.field<String>(
             'auditFileId',
             (a) => a?.auditFileId,
             (s) => s?.auditFileId,
             (p, b) => p?.auditFileId = b),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        updateType = $options.field<AuditFilePushMessageFileUpdateType>(
+        updateType = options$.field<AuditFilePushMessageFileUpdateType>(
             'updateType',
             (a) => a?.updateType,
             (s) => s?.updateType,
             (p, b) => p?.updateType = b),
-        percentUploadedDecimalForm = $options.field<double>(
+        percentUploadedDecimalForm = options$.field<double>(
             'percentUploadedDecimalForm',
             (a) => a?.percentUploadedDecimalForm,
             (s) => s?.percentUploadedDecimalForm,
@@ -257,16 +257,16 @@ class _$AuditFilePushMessageActions extends AuditFilePushMessageActions {
       _$AuditFilePushMessageActions._(options());
 
   @override
-  AuditFilePushMessage get $initial => AuditFilePushMessage();
+  AuditFilePushMessage get initialState$ => AuditFilePushMessage();
 
   @override
-  AuditFilePushMessageBuilder $newBuilder() => AuditFilePushMessageBuilder();
+  AuditFilePushMessageBuilder newBuilder$() => AuditFilePushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditFileId,
         this.fileId,
         this.updateType,
@@ -274,20 +274,16 @@ class _$AuditFilePushMessageActions extends AuditFilePushMessageActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditFileId.$reducer(reducer);
-    fileId.$reducer(reducer);
-    updateType.$reducer(reducer);
-    percentUploadedDecimalForm.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditFileId.reducer$(reducer);
+    fileId.reducer$(reducer);
+    updateType.reducer$(reducer);
+    percentUploadedDecimalForm.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(AuditFilePushMessage);
 }

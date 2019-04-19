@@ -182,21 +182,21 @@ typedef StatefulActionsOptions<OrgUnitAttribute, OrgUnitAttributeBuilder,
 
 class _$OrgUnitAttributeActions extends OrgUnitAttributeActions {
   final StatefulActionsOptions<OrgUnitAttribute, OrgUnitAttributeBuilder,
-      OrgUnitAttributeActions> $options;
+      OrgUnitAttributeActions> options$;
 
-  final ActionDispatcher<OrgUnitAttribute> $replace;
+  final ActionDispatcher<OrgUnitAttribute> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> label;
   final FieldDispatcher<String> value;
 
-  _$OrgUnitAttributeActions._(this.$options)
-      : $replace =
-            $options.action<OrgUnitAttribute>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$OrgUnitAttributeActions._(this.options$)
+      : replace$ =
+            options$.action<OrgUnitAttribute>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        label = $options.field<String>(
+        label = options$.field<String>(
             'label', (a) => a?.label, (s) => s?.label, (p, b) => p?.label = b),
-        value = $options.field<String>(
+        value = options$.field<String>(
             'value', (a) => a?.value, (s) => s?.value, (p, b) => p?.value = b),
         super._();
 
@@ -204,35 +204,31 @@ class _$OrgUnitAttributeActions extends OrgUnitAttributeActions {
       _$OrgUnitAttributeActions._(options());
 
   @override
-  OrgUnitAttribute get $initial => OrgUnitAttribute();
+  OrgUnitAttribute get initialState$ => OrgUnitAttribute();
 
   @override
-  OrgUnitAttributeBuilder $newBuilder() => OrgUnitAttributeBuilder();
+  OrgUnitAttributeBuilder newBuilder$() => OrgUnitAttributeBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.label,
         this.value,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    label.$reducer(reducer);
-    value.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    label.reducer$(reducer);
+    value.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(OrgUnitAttribute);
 }

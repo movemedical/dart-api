@@ -196,18 +196,18 @@ class _$ListPackagesForShipmentApiRequestActions
   final StatefulActionsOptions<
       ListPackagesForShipmentApiRequest,
       ListPackagesForShipmentApiRequestBuilder,
-      ListPackagesForShipmentApiRequestActions> $options;
+      ListPackagesForShipmentApiRequestActions> options$;
 
-  final ActionDispatcher<ListPackagesForShipmentApiRequest> $replace;
+  final ActionDispatcher<ListPackagesForShipmentApiRequest> replace$;
   final FieldDispatcher<String> shipmentId;
   final PaginationParamsActions paging;
 
-  _$ListPackagesForShipmentApiRequestActions._(this.$options)
-      : $replace = $options.action<ListPackagesForShipmentApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+  _$ListPackagesForShipmentApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListPackagesForShipmentApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        shipmentId = options$.field<String>('shipmentId', (a) => a?.shipmentId,
             (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -223,42 +223,37 @@ class _$ListPackagesForShipmentApiRequestActions
       _$ListPackagesForShipmentApiRequestActions._(options());
 
   @override
-  ListPackagesForShipmentApiRequest get $initial =>
+  ListPackagesForShipmentApiRequest get initialState$ =>
       ListPackagesForShipmentApiRequest();
 
   @override
-  ListPackagesForShipmentApiRequestBuilder $newBuilder() =>
+  ListPackagesForShipmentApiRequestBuilder newBuilder$() =>
       ListPackagesForShipmentApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.shipmentId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    shipmentId.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    shipmentId.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPackagesForShipmentApiRequest);
 }

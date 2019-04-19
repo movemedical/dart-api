@@ -154,15 +154,15 @@ class _$CreateRootOrgApiResponseActions
   final StatefulActionsOptions<
       CreateRootOrgApiResponse,
       CreateRootOrgApiResponseBuilder,
-      CreateRootOrgApiResponseActions> $options;
+      CreateRootOrgApiResponseActions> options$;
 
-  final ActionDispatcher<CreateRootOrgApiResponse> $replace;
+  final ActionDispatcher<CreateRootOrgApiResponse> replace$;
   final FieldDispatcher<String> id;
 
-  _$CreateRootOrgApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateRootOrgApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$CreateRootOrgApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateRootOrgApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -171,32 +171,28 @@ class _$CreateRootOrgApiResponseActions
       _$CreateRootOrgApiResponseActions._(options());
 
   @override
-  CreateRootOrgApiResponse get $initial => CreateRootOrgApiResponse();
+  CreateRootOrgApiResponse get initialState$ => CreateRootOrgApiResponse();
 
   @override
-  CreateRootOrgApiResponseBuilder $newBuilder() =>
+  CreateRootOrgApiResponseBuilder newBuilder$() =>
       CreateRootOrgApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateRootOrgApiResponse);
 }

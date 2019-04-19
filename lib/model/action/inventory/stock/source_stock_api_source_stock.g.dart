@@ -176,18 +176,18 @@ class _$SourceStockApiSourceStockActions
   final StatefulActionsOptions<
       SourceStockApiSourceStock,
       SourceStockApiSourceStockBuilder,
-      SourceStockApiSourceStockActions> $options;
+      SourceStockApiSourceStockActions> options$;
 
-  final ActionDispatcher<SourceStockApiSourceStock> $replace;
+  final ActionDispatcher<SourceStockApiSourceStock> replace$;
   final FieldDispatcher<String> summaryKey;
   final FieldDispatcher<int> quantity;
 
-  _$SourceStockApiSourceStockActions._(this.$options)
-      : $replace = $options.action<SourceStockApiSourceStock>(
-            '\$replace', (a) => a?.$replace),
-        summaryKey = $options.field<String>('summaryKey', (a) => a?.summaryKey,
+  _$SourceStockApiSourceStockActions._(this.options$)
+      : replace$ = options$.action<SourceStockApiSourceStock>(
+            'replace\$', (a) => a?.replace$),
+        summaryKey = options$.field<String>('summaryKey', (a) => a?.summaryKey,
             (s) => s?.summaryKey, (p, b) => p?.summaryKey = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -196,34 +196,30 @@ class _$SourceStockApiSourceStockActions
       _$SourceStockApiSourceStockActions._(options());
 
   @override
-  SourceStockApiSourceStock get $initial => SourceStockApiSourceStock();
+  SourceStockApiSourceStock get initialState$ => SourceStockApiSourceStock();
 
   @override
-  SourceStockApiSourceStockBuilder $newBuilder() =>
+  SourceStockApiSourceStockBuilder newBuilder$() =>
       SourceStockApiSourceStockBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.summaryKey,
         this.quantity,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    summaryKey.$reducer(reducer);
-    quantity.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    summaryKey.reducer$(reducer);
+    quantity.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SourceStockApiSourceStock);
 }

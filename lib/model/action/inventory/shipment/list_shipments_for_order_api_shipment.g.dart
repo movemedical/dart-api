@@ -295,9 +295,9 @@ class _$ListShipmentsForOrderApiShipmentActions
   final StatefulActionsOptions<
       ListShipmentsForOrderApiShipment,
       ListShipmentsForOrderApiShipmentBuilder,
-      ListShipmentsForOrderApiShipmentActions> $options;
+      ListShipmentsForOrderApiShipmentActions> options$;
 
-  final ActionDispatcher<ListShipmentsForOrderApiShipment> $replace;
+  final ActionDispatcher<ListShipmentsForOrderApiShipment> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> number;
   final FieldDispatcher<ShipmentStatus> status;
@@ -305,16 +305,16 @@ class _$ListShipmentsForOrderApiShipmentActions
   final LocationActions fromLocation;
   final LocationActions toLocation;
 
-  _$ListShipmentsForOrderApiShipmentActions._(this.$options)
-      : $replace = $options.action<ListShipmentsForOrderApiShipment>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListShipmentsForOrderApiShipmentActions._(this.options$)
+      : replace$ = options$.action<ListShipmentsForOrderApiShipment>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<ShipmentStatus>('status', (a) => a?.status,
+        status = options$.field<ShipmentStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        order = OrderHeaderLiteActions(() => $options.stateful<OrderHeaderLite,
+        order = OrderHeaderLiteActions(() => options$.stateful<OrderHeaderLite,
                 OrderHeaderLiteBuilder, OrderHeaderLiteActions>(
             'order',
             (a) => a.order,
@@ -322,14 +322,14 @@ class _$ListShipmentsForOrderApiShipmentActions
             (b) => b?.order,
             (parent, builder) => parent?.order = builder)),
         fromLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'fromLocation',
                 (a) => a.fromLocation,
                 (s) => s?.fromLocation,
                 (b) => b?.fromLocation,
                 (parent, builder) => parent?.fromLocation = builder)),
         toLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'toLocation',
                 (a) => a.toLocation,
                 (s) => s?.toLocation,
@@ -342,52 +342,47 @@ class _$ListShipmentsForOrderApiShipmentActions
       _$ListShipmentsForOrderApiShipmentActions._(options());
 
   @override
-  ListShipmentsForOrderApiShipment get $initial =>
+  ListShipmentsForOrderApiShipment get initialState$ =>
       ListShipmentsForOrderApiShipment();
 
   @override
-  ListShipmentsForOrderApiShipmentBuilder $newBuilder() =>
+  ListShipmentsForOrderApiShipmentBuilder newBuilder$() =>
       ListShipmentsForOrderApiShipmentBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.order,
         this.fromLocation,
         this.toLocation,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.number,
         this.status,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
-    order.$reducer(reducer);
-    fromLocation.$reducer(reducer);
-    toLocation.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
+    order.reducer$(reducer);
+    fromLocation.reducer$(reducer);
+    toLocation.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    order.$middleware(middleware);
-    fromLocation.$middleware(middleware);
-    toLocation.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    order.middleware$(middleware);
+    fromLocation.middleware$(middleware);
+    toLocation.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListShipmentsForOrderApiShipment);
 }

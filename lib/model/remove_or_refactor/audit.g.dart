@@ -500,9 +500,9 @@ typedef StatefulActionsOptions<Audit, AuditBuilder,
     AuditActions> AuditActionsOptions();
 
 class _$AuditActions extends AuditActions {
-  final StatefulActionsOptions<Audit, AuditBuilder, AuditActions> $options;
+  final StatefulActionsOptions<Audit, AuditBuilder, AuditActions> options$;
 
-  final ActionDispatcher<Audit> $replace;
+  final ActionDispatcher<Audit> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> referenceString;
   final FieldDispatcher<int> auditNumber;
@@ -520,72 +520,72 @@ class _$AuditActions extends AuditActions {
   final FieldDispatcher<bool> trayContentsRequired;
   final FieldDispatcher<bool> blind;
 
-  _$AuditActions._(this.$options)
-      : $replace = $options.action<Audit>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$AuditActions._(this.options$)
+      : replace$ = options$.action<Audit>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        referenceString = $options.field<String>(
+        referenceString = options$.field<String>(
             'referenceString',
             (a) => a?.referenceString,
             (s) => s?.referenceString,
             (p, b) => p?.referenceString = b),
-        auditNumber = $options.field<int>('auditNumber', (a) => a?.auditNumber,
+        auditNumber = options$.field<int>('auditNumber', (a) => a?.auditNumber,
             (s) => s?.auditNumber, (p, b) => p?.auditNumber = b),
-        type = $options.field<AuditType>(
+        type = options$.field<AuditType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        countType = $options.field<AuditCountType>(
+        countType = options$.field<AuditCountType>(
             'countType',
             (a) => a?.countType,
             (s) => s?.countType,
             (p, b) => p?.countType = b),
-        status = $options.field<AuditStatus>('status', (a) => a?.status,
+        status = options$.field<AuditStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        scheduledWindowStart = $options.field<DateTime>(
+        scheduledWindowStart = options$.field<DateTime>(
             'scheduledWindowStart',
             (a) => a?.scheduledWindowStart,
             (s) => s?.scheduledWindowStart,
             (p, b) => p?.scheduledWindowStart = b),
-        scheduledWindowEnd = $options.field<DateTime>(
+        scheduledWindowEnd = options$.field<DateTime>(
             'scheduledWindowEnd',
             (a) => a?.scheduledWindowEnd,
             (s) => s?.scheduledWindowEnd,
             (p, b) => p?.scheduledWindowEnd = b),
-        actualStart = $options.field<DateTime>(
+        actualStart = options$.field<DateTime>(
             'actualStart',
             (a) => a?.actualStart,
             (s) => s?.actualStart,
             (p, b) => p?.actualStart = b),
-        countEndDate = $options.field<DateTime>(
+        countEndDate = options$.field<DateTime>(
             'countEndDate',
             (a) => a?.countEndDate,
             (s) => s?.countEndDate,
             (p, b) => p?.countEndDate = b),
-        completeDate = $options.field<DateTime>(
+        completeDate = options$.field<DateTime>(
             'completeDate',
             (a) => a?.completeDate,
             (s) => s?.completeDate,
             (p, b) => p?.completeDate = b),
-        toteContentsRequired = $options.field<bool>(
+        toteContentsRequired = options$.field<bool>(
             'toteContentsRequired',
             (a) => a?.toteContentsRequired,
             (s) => s?.toteContentsRequired,
             (p, b) => p?.toteContentsRequired = b),
-        kitToteContentsRequired = $options.field<bool>(
+        kitToteContentsRequired = options$.field<bool>(
             'kitToteContentsRequired',
             (a) => a?.kitToteContentsRequired,
             (s) => s?.kitToteContentsRequired,
             (p, b) => p?.kitToteContentsRequired = b),
-        pkgContentsRequired = $options.field<bool>(
+        pkgContentsRequired = options$.field<bool>(
             'pkgContentsRequired',
             (a) => a?.pkgContentsRequired,
             (s) => s?.pkgContentsRequired,
             (p, b) => p?.pkgContentsRequired = b),
-        trayContentsRequired = $options.field<bool>(
+        trayContentsRequired = options$.field<bool>(
             'trayContentsRequired',
             (a) => a?.trayContentsRequired,
             (s) => s?.trayContentsRequired,
             (p, b) => p?.trayContentsRequired = b),
-        blind = $options.field<bool>(
+        blind = options$.field<bool>(
             'blind', (a) => a?.blind, (s) => s?.blind, (p, b) => p?.blind = b),
         super._();
 
@@ -593,16 +593,16 @@ class _$AuditActions extends AuditActions {
       _$AuditActions._(options());
 
   @override
-  Audit get $initial => Audit();
+  Audit get initialState$ => Audit();
 
   @override
-  AuditBuilder $newBuilder() => AuditBuilder();
+  AuditBuilder newBuilder$() => AuditBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.referenceString,
         this.auditNumber,
@@ -622,32 +622,28 @@ class _$AuditActions extends AuditActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    referenceString.$reducer(reducer);
-    auditNumber.$reducer(reducer);
-    type.$reducer(reducer);
-    countType.$reducer(reducer);
-    status.$reducer(reducer);
-    scheduledWindowStart.$reducer(reducer);
-    scheduledWindowEnd.$reducer(reducer);
-    actualStart.$reducer(reducer);
-    countEndDate.$reducer(reducer);
-    completeDate.$reducer(reducer);
-    toteContentsRequired.$reducer(reducer);
-    kitToteContentsRequired.$reducer(reducer);
-    pkgContentsRequired.$reducer(reducer);
-    trayContentsRequired.$reducer(reducer);
-    blind.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    referenceString.reducer$(reducer);
+    auditNumber.reducer$(reducer);
+    type.reducer$(reducer);
+    countType.reducer$(reducer);
+    status.reducer$(reducer);
+    scheduledWindowStart.reducer$(reducer);
+    scheduledWindowEnd.reducer$(reducer);
+    actualStart.reducer$(reducer);
+    countEndDate.reducer$(reducer);
+    completeDate.reducer$(reducer);
+    toteContentsRequired.reducer$(reducer);
+    kitToteContentsRequired.reducer$(reducer);
+    pkgContentsRequired.reducer$(reducer);
+    trayContentsRequired.reducer$(reducer);
+    blind.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Audit);
 }

@@ -191,21 +191,21 @@ typedef StatefulActionsOptions<
 
 class _$GetUiSetupAllApiOrgUnitActions extends GetUiSetupAllApiOrgUnitActions {
   final StatefulActionsOptions<GetUiSetupAllApiOrgUnit,
-      GetUiSetupAllApiOrgUnitBuilder, GetUiSetupAllApiOrgUnitActions> $options;
+      GetUiSetupAllApiOrgUnitBuilder, GetUiSetupAllApiOrgUnitActions> options$;
 
-  final ActionDispatcher<GetUiSetupAllApiOrgUnit> $replace;
+  final ActionDispatcher<GetUiSetupAllApiOrgUnit> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<bool> sales;
 
-  _$GetUiSetupAllApiOrgUnitActions._(this.$options)
-      : $replace = $options.action<GetUiSetupAllApiOrgUnit>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetUiSetupAllApiOrgUnitActions._(this.options$)
+      : replace$ = options$.action<GetUiSetupAllApiOrgUnit>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        sales = $options.field<bool>(
+        sales = options$.field<bool>(
             'sales', (a) => a?.sales, (s) => s?.sales, (p, b) => p?.sales = b),
         super._();
 
@@ -214,36 +214,32 @@ class _$GetUiSetupAllApiOrgUnitActions extends GetUiSetupAllApiOrgUnitActions {
       _$GetUiSetupAllApiOrgUnitActions._(options());
 
   @override
-  GetUiSetupAllApiOrgUnit get $initial => GetUiSetupAllApiOrgUnit();
+  GetUiSetupAllApiOrgUnit get initialState$ => GetUiSetupAllApiOrgUnit();
 
   @override
-  GetUiSetupAllApiOrgUnitBuilder $newBuilder() =>
+  GetUiSetupAllApiOrgUnitBuilder newBuilder$() =>
       GetUiSetupAllApiOrgUnitBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.sales,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    sales.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    sales.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetUiSetupAllApiOrgUnit);
 }

@@ -22,67 +22,32 @@ class _$CloneCaseEventApi extends CloneCaseEventApi {
           ApiResult<CloneCaseEventApiResponse>>,
       CommandStateBuilder<ApiCommand<CloneCaseEventApiRequest>,
           ApiResult<CloneCaseEventApiResponse>>,
-      CloneCaseEventApi> $options;
+      CloneCaseEventApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CloneCaseEventApiRequest>,
-          ApiResult<CloneCaseEventApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CloneCaseEventApiRequest>,
-          ApiResult<CloneCaseEventApiResponse>,
-          CloneCaseEventApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CloneCaseEventApiRequest>,
-          ApiResult<CloneCaseEventApiResponse>,
-          CloneCaseEventApi,
-          Command<ApiCommand<CloneCaseEventApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CloneCaseEventApiRequest>,
-          ApiResult<CloneCaseEventApiResponse>,
-          CloneCaseEventApi,
-          CommandResult<ApiResult<CloneCaseEventApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CloneCaseEventApiRequest>,
-          ApiResult<CloneCaseEventApiResponse>,
-          CloneCaseEventApi,
-          CommandProgress>> $progress;
+          ApiResult<CloneCaseEventApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<CloneCaseEventApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<CloneCaseEventApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CloneCaseEventApi._(this.$options)
-      : $replace = $options.action<
+  _$CloneCaseEventApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<CloneCaseEventApiRequest>,
                     ApiResult<CloneCaseEventApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CloneCaseEventApiRequest>,
-                ApiResult<CloneCaseEventApiResponse>,
-                CloneCaseEventApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CloneCaseEventApiRequest>,
-                    ApiResult<CloneCaseEventApiResponse>,
-                    CloneCaseEventApi,
-                    Command<ApiCommand<CloneCaseEventApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CloneCaseEventApiRequest>,
-                    ApiResult<CloneCaseEventApiResponse>,
-                    CloneCaseEventApi,
-                    CommandResult<ApiResult<CloneCaseEventApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CloneCaseEventApiRequest>,
-                ApiResult<CloneCaseEventApiResponse>,
-                CloneCaseEventApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<CloneCaseEventApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<CloneCaseEventApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CloneCaseEventApi(CloneCaseEventApiOptions options) =>
@@ -91,31 +56,24 @@ class _$CloneCaseEventApi extends CloneCaseEventApi {
   @override
   CommandState<ApiCommand<CloneCaseEventApiRequest>,
           ApiResult<CloneCaseEventApiResponse>>
-      get $initial => CommandState<ApiCommand<CloneCaseEventApiRequest>,
+      get initialState$ => CommandState<ApiCommand<CloneCaseEventApiRequest>,
           ApiResult<CloneCaseEventApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<CloneCaseEventApiRequest>,
           ApiResult<CloneCaseEventApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<CloneCaseEventApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<CloneCaseEventApiRequest>,
           ApiResult<CloneCaseEventApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CloneCaseEventApiRequest)]),
-        FullType(ApiResult, [FullType(CloneCaseEventApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

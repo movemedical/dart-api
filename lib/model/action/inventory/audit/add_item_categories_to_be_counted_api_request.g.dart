@@ -204,18 +204,18 @@ class _$AddItemCategoriesToBeCountedApiRequestActions
   final StatefulActionsOptions<
       AddItemCategoriesToBeCountedApiRequest,
       AddItemCategoriesToBeCountedApiRequestBuilder,
-      AddItemCategoriesToBeCountedApiRequestActions> $options;
+      AddItemCategoriesToBeCountedApiRequestActions> options$;
 
-  final ActionDispatcher<AddItemCategoriesToBeCountedApiRequest> $replace;
+  final ActionDispatcher<AddItemCategoriesToBeCountedApiRequest> replace$;
   final FieldDispatcher<String> auditId;
   final FieldDispatcher<BuiltList<String>> itemCategoryIds;
 
-  _$AddItemCategoriesToBeCountedApiRequestActions._(this.$options)
-      : $replace = $options.action<AddItemCategoriesToBeCountedApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+  _$AddItemCategoriesToBeCountedApiRequestActions._(this.options$)
+      : replace$ = options$.action<AddItemCategoriesToBeCountedApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        itemCategoryIds = $options.field<BuiltList<String>>(
+        itemCategoryIds = options$.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
@@ -227,36 +227,31 @@ class _$AddItemCategoriesToBeCountedApiRequestActions
       _$AddItemCategoriesToBeCountedApiRequestActions._(options());
 
   @override
-  AddItemCategoriesToBeCountedApiRequest get $initial =>
+  AddItemCategoriesToBeCountedApiRequest get initialState$ =>
       AddItemCategoriesToBeCountedApiRequest();
 
   @override
-  AddItemCategoriesToBeCountedApiRequestBuilder $newBuilder() =>
+  AddItemCategoriesToBeCountedApiRequestBuilder newBuilder$() =>
       AddItemCategoriesToBeCountedApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
         this.itemCategoryIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditId.$reducer(reducer);
-    itemCategoryIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditId.reducer$(reducer);
+    itemCategoryIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AddItemCategoriesToBeCountedApiRequest);
 }

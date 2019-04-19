@@ -421,9 +421,9 @@ class _$ListWebServiceLogsApiWebServiceLogActions
   final StatefulActionsOptions<
       ListWebServiceLogsApiWebServiceLog,
       ListWebServiceLogsApiWebServiceLogBuilder,
-      ListWebServiceLogsApiWebServiceLogActions> $options;
+      ListWebServiceLogsApiWebServiceLogActions> options$;
 
-  final ActionDispatcher<ListWebServiceLogsApiWebServiceLog> $replace;
+  final ActionDispatcher<ListWebServiceLogsApiWebServiceLog> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> interfaceKey;
   final FieldDispatcher<DateTime> startDate;
@@ -437,47 +437,47 @@ class _$ListWebServiceLogsApiWebServiceLogActions
   final FieldDispatcher<String> request;
   final FieldDispatcher<String> response;
 
-  _$ListWebServiceLogsApiWebServiceLogActions._(this.$options)
-      : $replace = $options.action<ListWebServiceLogsApiWebServiceLog>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListWebServiceLogsApiWebServiceLogActions._(this.options$)
+      : replace$ = options$.action<ListWebServiceLogsApiWebServiceLog>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        interfaceKey = $options.field<String>(
+        interfaceKey = options$.field<String>(
             'interfaceKey',
             (a) => a?.interfaceKey,
             (s) => s?.interfaceKey,
             (p, b) => p?.interfaceKey = b),
-        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+        startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
-        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
+        endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        outcome = $options.field<bool>('outcome', (a) => a?.outcome,
+        outcome = options$.field<bool>('outcome', (a) => a?.outcome,
             (s) => s?.outcome, (p, b) => p?.outcome = b),
-        outcomeMessage = $options.field<String>(
+        outcomeMessage = options$.field<String>(
             'outcomeMessage',
             (a) => a?.outcomeMessage,
             (s) => s?.outcomeMessage,
             (p, b) => p?.outcomeMessage = b),
-        webServiceType = $options.field<WebServiceType>(
+        webServiceType = options$.field<WebServiceType>(
             'webServiceType',
             (a) => a?.webServiceType,
             (s) => s?.webServiceType,
             (p, b) => p?.webServiceType = b),
-        direction = $options.field<WebServiceDirection>(
+        direction = options$.field<WebServiceDirection>(
             'direction',
             (a) => a?.direction,
             (s) => s?.direction,
             (p, b) => p?.direction = b),
-        logInitiator = $options.field<WebServiceLogInitiatorType>(
+        logInitiator = options$.field<WebServiceLogInitiatorType>(
             'logInitiator',
             (a) => a?.logInitiator,
             (s) => s?.logInitiator,
             (p, b) => p?.logInitiator = b),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
-        request = $options.field<String>('request', (a) => a?.request,
+        request = options$.field<String>('request', (a) => a?.request,
             (s) => s?.request, (p, b) => p?.request = b),
-        response = $options.field<String>('response', (a) => a?.response,
+        response = options$.field<String>('response', (a) => a?.response,
             (s) => s?.response, (p, b) => p?.response = b),
         super._();
 
@@ -486,18 +486,18 @@ class _$ListWebServiceLogsApiWebServiceLogActions
       _$ListWebServiceLogsApiWebServiceLogActions._(options());
 
   @override
-  ListWebServiceLogsApiWebServiceLog get $initial =>
+  ListWebServiceLogsApiWebServiceLog get initialState$ =>
       ListWebServiceLogsApiWebServiceLog();
 
   @override
-  ListWebServiceLogsApiWebServiceLogBuilder $newBuilder() =>
+  ListWebServiceLogsApiWebServiceLogBuilder newBuilder$() =>
       ListWebServiceLogsApiWebServiceLogBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.interfaceKey,
         this.startDate,
@@ -513,29 +513,24 @@ class _$ListWebServiceLogsApiWebServiceLogActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    interfaceKey.$reducer(reducer);
-    startDate.$reducer(reducer);
-    endDate.$reducer(reducer);
-    outcome.$reducer(reducer);
-    outcomeMessage.$reducer(reducer);
-    webServiceType.$reducer(reducer);
-    direction.$reducer(reducer);
-    logInitiator.$reducer(reducer);
-    reference.$reducer(reducer);
-    request.$reducer(reducer);
-    response.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    interfaceKey.reducer$(reducer);
+    startDate.reducer$(reducer);
+    endDate.reducer$(reducer);
+    outcome.reducer$(reducer);
+    outcomeMessage.reducer$(reducer);
+    webServiceType.reducer$(reducer);
+    direction.reducer$(reducer);
+    logInitiator.reducer$(reducer);
+    reference.reducer$(reducer);
+    request.reducer$(reducer);
+    response.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListWebServiceLogsApiWebServiceLog);
 }

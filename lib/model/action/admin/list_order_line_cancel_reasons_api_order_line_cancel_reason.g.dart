@@ -334,10 +334,10 @@ class _$ListOrderLineCancelReasonsApiOrderLineCancelReasonActions
   final StatefulActionsOptions<
       ListOrderLineCancelReasonsApiOrderLineCancelReason,
       ListOrderLineCancelReasonsApiOrderLineCancelReasonBuilder,
-      ListOrderLineCancelReasonsApiOrderLineCancelReasonActions> $options;
+      ListOrderLineCancelReasonsApiOrderLineCancelReasonActions> options$;
 
   final ActionDispatcher<ListOrderLineCancelReasonsApiOrderLineCancelReason>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> orgId;
@@ -347,34 +347,34 @@ class _$ListOrderLineCancelReasonsApiOrderLineCancelReasonActions
   final FieldDispatcher<String> orderReasonName;
   final FieldDispatcher<bool> active;
 
-  _$ListOrderLineCancelReasonsApiOrderLineCancelReasonActions._(this.$options)
-      : $replace =
-            $options.action<ListOrderLineCancelReasonsApiOrderLineCancelReason>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListOrderLineCancelReasonsApiOrderLineCancelReasonActions._(this.options$)
+      : replace$ =
+            options$.action<ListOrderLineCancelReasonsApiOrderLineCancelReason>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        orgUnitName = $options.field<String>(
+        orgUnitName = options$.field<String>(
             'orgUnitName',
             (a) => a?.orgUnitName,
             (s) => s?.orgUnitName,
             (p, b) => p?.orgUnitName = b),
-        orderReasonId = $options.field<String>(
+        orderReasonId = options$.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
             (p, b) => p?.orderReasonId = b),
-        orderReasonName = $options.field<String>(
+        orderReasonName = options$.field<String>(
             'orderReasonName',
             (a) => a?.orderReasonName,
             (s) => s?.orderReasonName,
             (p, b) => p?.orderReasonName = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -384,18 +384,18 @@ class _$ListOrderLineCancelReasonsApiOrderLineCancelReasonActions
       _$ListOrderLineCancelReasonsApiOrderLineCancelReasonActions._(options());
 
   @override
-  ListOrderLineCancelReasonsApiOrderLineCancelReason get $initial =>
+  ListOrderLineCancelReasonsApiOrderLineCancelReason get initialState$ =>
       ListOrderLineCancelReasonsApiOrderLineCancelReason();
 
   @override
-  ListOrderLineCancelReasonsApiOrderLineCancelReasonBuilder $newBuilder() =>
+  ListOrderLineCancelReasonsApiOrderLineCancelReasonBuilder newBuilder$() =>
       ListOrderLineCancelReasonsApiOrderLineCancelReasonBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.orgId,
@@ -407,25 +407,20 @@ class _$ListOrderLineCancelReasonsApiOrderLineCancelReasonActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    orgId.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    orgUnitName.$reducer(reducer);
-    orderReasonId.$reducer(reducer);
-    orderReasonName.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    orgId.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    orgUnitName.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
+    orderReasonName.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(ListOrderLineCancelReasonsApiOrderLineCancelReason);
 }

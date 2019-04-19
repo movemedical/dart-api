@@ -242,32 +242,32 @@ typedef StatefulActionsOptions<
 
 class _$GetAuditApiBillingInfoActions extends GetAuditApiBillingInfoActions {
   final StatefulActionsOptions<GetAuditApiBillingInfo,
-      GetAuditApiBillingInfoBuilder, GetAuditApiBillingInfoActions> $options;
+      GetAuditApiBillingInfoBuilder, GetAuditApiBillingInfoActions> options$;
 
-  final ActionDispatcher<GetAuditApiBillingInfo> $replace;
+  final ActionDispatcher<GetAuditApiBillingInfo> replace$;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> salesOrgUnitId;
   final OrderReasonActions orderReason;
   final CustomerAddressActions shipToAddress;
 
-  _$GetAuditApiBillingInfoActions._(this.$options)
-      : $replace = $options.action<GetAuditApiBillingInfo>(
-            '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+  _$GetAuditApiBillingInfoActions._(this.options$)
+      : replace$ = options$.action<GetAuditApiBillingInfo>(
+            'replace\$', (a) => a?.replace$),
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        salesOrgUnitId = $options.field<String>(
+        salesOrgUnitId = options$.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
             (p, b) => p?.salesOrgUnitId = b),
-        orderReason = OrderReasonActions(() => $options
+        orderReason = OrderReasonActions(() => options$
             .stateful<OrderReason, OrderReasonBuilder, OrderReasonActions>(
                 'orderReason',
                 (a) => a.orderReason,
                 (s) => s?.orderReason,
                 (b) => b?.orderReason,
                 (parent, builder) => parent?.orderReason = builder)),
-        shipToAddress = CustomerAddressActions(() => $options.stateful<
+        shipToAddress = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -283,45 +283,41 @@ class _$GetAuditApiBillingInfoActions extends GetAuditApiBillingInfoActions {
       _$GetAuditApiBillingInfoActions._(options());
 
   @override
-  GetAuditApiBillingInfo get $initial => GetAuditApiBillingInfo();
+  GetAuditApiBillingInfo get initialState$ => GetAuditApiBillingInfo();
 
   @override
-  GetAuditApiBillingInfoBuilder $newBuilder() =>
+  GetAuditApiBillingInfoBuilder newBuilder$() =>
       GetAuditApiBillingInfoBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.orderReason,
         this.shipToAddress,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.bizUnitId,
         this.salesOrgUnitId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    salesOrgUnitId.$reducer(reducer);
-    orderReason.$reducer(reducer);
-    shipToAddress.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    salesOrgUnitId.reducer$(reducer);
+    orderReason.reducer$(reducer);
+    shipToAddress.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    orderReason.$middleware(middleware);
-    shipToAddress.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    orderReason.middleware$(middleware);
+    shipToAddress.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetAuditApiBillingInfo);
 }

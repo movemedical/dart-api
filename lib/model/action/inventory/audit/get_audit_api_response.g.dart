@@ -271,34 +271,34 @@ typedef StatefulActionsOptions<GetAuditApiResponse, GetAuditApiResponseBuilder,
 
 class _$GetAuditApiResponseActions extends GetAuditApiResponseActions {
   final StatefulActionsOptions<GetAuditApiResponse, GetAuditApiResponseBuilder,
-      GetAuditApiResponseActions> $options;
+      GetAuditApiResponseActions> options$;
 
-  final ActionDispatcher<GetAuditApiResponse> $replace;
+  final ActionDispatcher<GetAuditApiResponse> replace$;
   final AuditActions audit;
   final LocationActions location;
   final GetAuditApiAuditCountedSummaryActions auditCountedSummary;
   final GetAuditApiBillingInfoActions billingInfo;
   final GetAuditApiDisplayRuleActions displayRules;
 
-  _$GetAuditApiResponseActions._(this.$options)
-      : $replace = $options.action<GetAuditApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$GetAuditApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetAuditApiResponse>(
+            'replace\$', (a) => a?.replace$),
         audit = AuditActions(() =>
-            $options.stateful<Audit, AuditBuilder, AuditActions>(
+            options$.stateful<Audit, AuditBuilder, AuditActions>(
                 'audit',
                 (a) => a.audit,
                 (s) => s?.audit,
                 (b) => b?.audit,
                 (parent, builder) => parent?.audit = builder)),
         location = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
         auditCountedSummary = GetAuditApiAuditCountedSummaryActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetAuditApiAuditCountedSummary,
                     GetAuditApiAuditCountedSummaryBuilder,
                     GetAuditApiAuditCountedSummaryActions>(
@@ -307,7 +307,7 @@ class _$GetAuditApiResponseActions extends GetAuditApiResponseActions {
                 (s) => s?.auditCountedSummary,
                 (b) => b?.auditCountedSummary,
                 (parent, builder) => parent?.auditCountedSummary = builder)),
-        billingInfo = GetAuditApiBillingInfoActions(() => $options.stateful<
+        billingInfo = GetAuditApiBillingInfoActions(() => options$.stateful<
                 GetAuditApiBillingInfo,
                 GetAuditApiBillingInfoBuilder,
                 GetAuditApiBillingInfoActions>(
@@ -316,7 +316,7 @@ class _$GetAuditApiResponseActions extends GetAuditApiResponseActions {
             (s) => s?.billingInfo,
             (b) => b?.billingInfo,
             (parent, builder) => parent?.billingInfo = builder)),
-        displayRules = GetAuditApiDisplayRuleActions(() => $options.stateful<
+        displayRules = GetAuditApiDisplayRuleActions(() => options$.stateful<
                 GetAuditApiDisplayRule,
                 GetAuditApiDisplayRuleBuilder,
                 GetAuditApiDisplayRuleActions>(
@@ -332,14 +332,14 @@ class _$GetAuditApiResponseActions extends GetAuditApiResponseActions {
       _$GetAuditApiResponseActions._(options());
 
   @override
-  GetAuditApiResponse get $initial => GetAuditApiResponse();
+  GetAuditApiResponse get initialState$ => GetAuditApiResponse();
 
   @override
-  GetAuditApiResponseBuilder $newBuilder() => GetAuditApiResponseBuilder();
+  GetAuditApiResponseBuilder newBuilder$() => GetAuditApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.audit,
         this.location,
         this.auditCountedSummary,
@@ -347,34 +347,30 @@ class _$GetAuditApiResponseActions extends GetAuditApiResponseActions {
         this.displayRules,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    audit.$reducer(reducer);
-    location.$reducer(reducer);
-    auditCountedSummary.$reducer(reducer);
-    billingInfo.$reducer(reducer);
-    displayRules.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    audit.reducer$(reducer);
+    location.reducer$(reducer);
+    auditCountedSummary.reducer$(reducer);
+    billingInfo.reducer$(reducer);
+    displayRules.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    audit.$middleware(middleware);
-    location.$middleware(middleware);
-    auditCountedSummary.$middleware(middleware);
-    billingInfo.$middleware(middleware);
-    displayRules.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    audit.middleware$(middleware);
+    location.middleware$(middleware);
+    auditCountedSummary.middleware$(middleware);
+    billingInfo.middleware$(middleware);
+    displayRules.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetAuditApiResponse);
 }

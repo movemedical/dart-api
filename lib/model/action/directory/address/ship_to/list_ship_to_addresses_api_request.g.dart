@@ -425,9 +425,9 @@ class _$ListShipToAddressesApiRequestActions
   final StatefulActionsOptions<
       ListShipToAddressesApiRequest,
       ListShipToAddressesApiRequestBuilder,
-      ListShipToAddressesApiRequestActions> $options;
+      ListShipToAddressesApiRequestActions> options$;
 
-  final ActionDispatcher<ListShipToAddressesApiRequest> $replace;
+  final ActionDispatcher<ListShipToAddressesApiRequest> replace$;
   final FieldDispatcher<String> customerId;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> search;
@@ -440,43 +440,43 @@ class _$ListShipToAddressesApiRequestActions
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListShipToAddressesApiOrderBy> orderBy;
 
-  _$ListShipToAddressesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListShipToAddressesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+  _$ListShipToAddressesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListShipToAddressesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        linkedToCustomer = $options.field<bool>(
+        linkedToCustomer = options$.field<bool>(
             'linkedToCustomer',
             (a) => a?.linkedToCustomer,
             (s) => s?.linkedToCustomer,
             (p, b) => p?.linkedToCustomer = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        omitSubOrgUnits = $options.field<bool>(
+        omitSubOrgUnits = options$.field<bool>(
             'omitSubOrgUnits',
             (a) => a?.omitSubOrgUnits,
             (s) => s?.omitSubOrgUnits,
             (p, b) => p?.omitSubOrgUnits = b),
-        scopeToLocationVizibility = $options.field<bool>(
+        scopeToLocationVizibility = options$.field<bool>(
             'scopeToLocationVizibility',
             (a) => a?.scopeToLocationVizibility,
             (s) => s?.scopeToLocationVizibility,
             (p, b) => p?.scopeToLocationVizibility = b),
-        showFacility = $options.field<bool>(
+        showFacility = options$.field<bool>(
             'showFacility',
             (a) => a?.showFacility,
             (s) => s?.showFacility,
             (p, b) => p?.showFacility = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -486,7 +486,7 @@ class _$ListShipToAddressesApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListShipToAddressesApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListShipToAddressesApiOrderBy>,
                     OrderByParamsBuilder<ListShipToAddressesApiOrderBy>,
                     OrderByParamsActions<ListShipToAddressesApiOrderBy>>(
@@ -502,24 +502,25 @@ class _$ListShipToAddressesApiRequestActions
       _$ListShipToAddressesApiRequestActions._(options());
 
   @override
-  ListShipToAddressesApiRequest get $initial => ListShipToAddressesApiRequest();
+  ListShipToAddressesApiRequest get initialState$ =>
+      ListShipToAddressesApiRequest();
 
   @override
-  ListShipToAddressesApiRequestBuilder $newBuilder() =>
+  ListShipToAddressesApiRequestBuilder newBuilder$() =>
       ListShipToAddressesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customerId,
         this.facilityId,
         this.search,
@@ -532,30 +533,25 @@ class _$ListShipToAddressesApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    customerId.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    search.$reducer(reducer);
-    linkedToCustomer.$reducer(reducer);
-    active.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    omitSubOrgUnits.$reducer(reducer);
-    scopeToLocationVizibility.$reducer(reducer);
-    showFacility.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    customerId.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    search.reducer$(reducer);
+    linkedToCustomer.reducer$(reducer);
+    active.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    omitSubOrgUnits.reducer$(reducer);
+    scopeToLocationVizibility.reducer$(reducer);
+    showFacility.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListShipToAddressesApiRequest);
 }

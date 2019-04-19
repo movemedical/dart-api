@@ -316,9 +316,9 @@ class _$RequestCreditHoldReportApiRequestActions
   final StatefulActionsOptions<
       RequestCreditHoldReportApiRequest,
       RequestCreditHoldReportApiRequestBuilder,
-      RequestCreditHoldReportApiRequestActions> $options;
+      RequestCreditHoldReportApiRequestActions> options$;
 
-  final ActionDispatcher<RequestCreditHoldReportApiRequest> $replace;
+  final ActionDispatcher<RequestCreditHoldReportApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final FieldDispatcher<DocReportDisplayType> displayType;
@@ -326,10 +326,10 @@ class _$RequestCreditHoldReportApiRequestActions
   final FieldDispatcher<BuiltList<String>> orgUnitIds;
   final FieldDispatcher<BuiltList<String>> userIdsToEmail;
 
-  _$RequestCreditHoldReportApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestCreditHoldReportApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestCreditHoldReportApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestCreditHoldReportApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -338,24 +338,24 @@ class _$RequestCreditHoldReportApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.field<DocReportDisplayType>(
+        displayType = options$.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        locationIds = $options.field<BuiltList<String>>(
+        locationIds = options$.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        userIdsToEmail = $options.field<BuiltList<String>>(
+        userIdsToEmail = options$.field<BuiltList<String>>(
             'userIdsToEmail',
             (a) => a?.userIdsToEmail,
             (s) => s?.userIdsToEmail,
@@ -367,24 +367,24 @@ class _$RequestCreditHoldReportApiRequestActions
       _$RequestCreditHoldReportApiRequestActions._(options());
 
   @override
-  RequestCreditHoldReportApiRequest get $initial =>
+  RequestCreditHoldReportApiRequest get initialState$ =>
       RequestCreditHoldReportApiRequest();
 
   @override
-  RequestCreditHoldReportApiRequestBuilder $newBuilder() =>
+  RequestCreditHoldReportApiRequestBuilder newBuilder$() =>
       RequestCreditHoldReportApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.format,
         this.displayType,
         this.locationIds,
@@ -393,24 +393,19 @@ class _$RequestCreditHoldReportApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    format.$reducer(reducer);
-    displayType.$reducer(reducer);
-    locationIds.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    userIdsToEmail.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    format.reducer$(reducer);
+    displayType.reducer$(reducer);
+    locationIds.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    userIdsToEmail.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestCreditHoldReportApiRequest);
 }

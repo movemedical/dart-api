@@ -877,9 +877,9 @@ class _$UpdateFacilityApiRequestActions
   final StatefulActionsOptions<
       UpdateFacilityApiRequest,
       UpdateFacilityApiRequestBuilder,
-      UpdateFacilityApiRequestActions> $options;
+      UpdateFacilityApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateFacilityApiRequest> $replace;
+  final ActionDispatcher<UpdateFacilityApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<FacilityType> facilityType;
@@ -912,142 +912,142 @@ class _$UpdateFacilityApiRequestActions
   final FieldDispatcher<String> defaultDeliverToAddressId;
   final AddressActions defaultDeliverToAddress;
 
-  _$UpdateFacilityApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateFacilityApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdateFacilityApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateFacilityApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        facilityType = $options.field<FacilityType>(
+        facilityType = options$.field<FacilityType>(
             'facilityType',
             (a) => a?.facilityType,
             (s) => s?.facilityType,
             (p, b) => p?.facilityType = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         contactName = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'contactName',
                 (a) => a.contactName,
                 (s) => s?.contactName,
                 (b) => b?.contactName,
                 (parent, builder) => parent?.contactName = builder)),
-        contactPhone = PhoneNumberActions(() => $options
+        contactPhone = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'contactPhone',
                 (a) => a.contactPhone,
                 (s) => s?.contactPhone,
                 (b) => b?.contactPhone,
                 (parent, builder) => parent?.contactPhone = builder)),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        caseLoaningMethodology = $options.field<CaseLoaningMethodology>(
+        caseLoaningMethodology = options$.field<CaseLoaningMethodology>(
             'caseLoaningMethodology',
             (a) => a?.caseLoaningMethodology,
             (s) => s?.caseLoaningMethodology,
             (p, b) => p?.caseLoaningMethodology = b),
-        restockType = $options.field<RestockType>(
+        restockType = options$.field<RestockType>(
             'restockType',
             (a) => a?.restockType,
             (s) => s?.restockType,
             (p, b) => p?.restockType = b),
-        binManaged = $options.field<bool>('binManaged', (a) => a?.binManaged,
+        binManaged = options$.field<bool>('binManaged', (a) => a?.binManaged,
             (s) => s?.binManaged, (p, b) => p?.binManaged = b),
-        autoPutAway = $options.field<bool>('autoPutAway', (a) => a?.autoPutAway,
+        autoPutAway = options$.field<bool>('autoPutAway', (a) => a?.autoPutAway,
             (s) => s?.autoPutAway, (p, b) => p?.autoPutAway = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        opsScheduleProfileId = $options.field<String>(
+        opsScheduleProfileId = options$.field<String>(
             'opsScheduleProfileId',
             (a) => a?.opsScheduleProfileId,
             (s) => s?.opsScheduleProfileId,
             (p, b) => p?.opsScheduleProfileId = b),
-        deliveryScheduleProfileId = $options.field<String>(
+        deliveryScheduleProfileId = options$.field<String>(
             'deliveryScheduleProfileId',
             (a) => a?.deliveryScheduleProfileId,
             (s) => s?.deliveryScheduleProfileId,
             (p, b) => p?.deliveryScheduleProfileId = b),
-        courierProfileId = $options.field<String>(
+        courierProfileId = options$.field<String>(
             'courierProfileId',
             (a) => a?.courierProfileId,
             (s) => s?.courierProfileId,
             (p, b) => p?.courierProfileId = b),
-        lagTime = $options.field<int>('lagTime', (a) => a?.lagTime,
+        lagTime = options$.field<int>('lagTime', (a) => a?.lagTime,
             (s) => s?.lagTime, (p, b) => p?.lagTime = b),
-        splitImplantsAndInstruments = $options.field<bool>(
+        splitImplantsAndInstruments = options$.field<bool>(
             'splitImplantsAndInstruments',
             (a) => a?.splitImplantsAndInstruments,
             (s) => s?.splitImplantsAndInstruments,
             (p, b) => p?.splitImplantsAndInstruments = b),
-        turnTimeInMinutes = $options.field<int>(
+        turnTimeInMinutes = options$.field<int>(
             'turnTimeInMinutes',
             (a) => a?.turnTimeInMinutes,
             (s) => s?.turnTimeInMinutes,
             (p, b) => p?.turnTimeInMinutes = b),
-        loanSplitMethod = $options.field<LoanSplitMethod>(
+        loanSplitMethod = options$.field<LoanSplitMethod>(
             'loanSplitMethod',
             (a) => a?.loanSplitMethod,
             (s) => s?.loanSplitMethod,
             (p, b) => p?.loanSplitMethod = b),
-        optimizeLoans = $options.field<bool>(
+        optimizeLoans = options$.field<bool>(
             'optimizeLoans',
             (a) => a?.optimizeLoans,
             (s) => s?.optimizeLoans,
             (p, b) => p?.optimizeLoans = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        publicVisible = $options.field<bool>(
+        publicVisible = options$.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
             (p, b) => p?.publicVisible = b),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        shipToAddressId = $options.field<String>(
+        shipToAddressId = options$.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
             (p, b) => p?.shipToAddressId = b),
         shipToAddress = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'shipToAddress',
                 (a) => a.shipToAddress,
                 (s) => s?.shipToAddress,
                 (b) => b?.shipToAddress,
                 (parent, builder) => parent?.shipToAddress = builder)),
-        shipToAddressCustomerKey = $options.field<String>(
+        shipToAddressCustomerKey = options$.field<String>(
             'shipToAddressCustomerKey',
             (a) => a?.shipToAddressCustomerKey,
             (s) => s?.shipToAddressCustomerKey,
             (p, b) => p?.shipToAddressCustomerKey = b),
-        shipToReference_1 = $options.field<String>(
+        shipToReference_1 = options$.field<String>(
             'shipToReference_1',
             (a) => a?.shipToReference_1,
             (s) => s?.shipToReference_1,
             (p, b) => p?.shipToReference_1 = b),
-        shipToReference_2 = $options.field<String>(
+        shipToReference_2 = options$.field<String>(
             'shipToReference_2',
             (a) => a?.shipToReference_2,
             (s) => s?.shipToReference_2,
             (p, b) => p?.shipToReference_2 = b),
-        defaultBillToAddressId = $options.field<String>(
+        defaultBillToAddressId = options$.field<String>(
             'defaultBillToAddressId',
             (a) => a?.defaultBillToAddressId,
             (s) => s?.defaultBillToAddressId,
             (p, b) => p?.defaultBillToAddressId = b),
-        defaultDeliverToAddressId = $options.field<String>(
+        defaultDeliverToAddressId = options$.field<String>(
             'defaultDeliverToAddressId',
             (a) => a?.defaultDeliverToAddressId,
             (s) => s?.defaultDeliverToAddressId,
             (p, b) => p?.defaultDeliverToAddressId = b),
         defaultDeliverToAddress = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'defaultDeliverToAddress',
                 (a) => a.defaultDeliverToAddress,
                 (s) => s?.defaultDeliverToAddress,
@@ -1061,15 +1061,15 @@ class _$UpdateFacilityApiRequestActions
       _$UpdateFacilityApiRequestActions._(options());
 
   @override
-  UpdateFacilityApiRequest get $initial => UpdateFacilityApiRequest();
+  UpdateFacilityApiRequest get initialState$ => UpdateFacilityApiRequest();
 
   @override
-  UpdateFacilityApiRequestBuilder $newBuilder() =>
+  UpdateFacilityApiRequestBuilder newBuilder$() =>
       UpdateFacilityApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.contactName,
         this.contactPhone,
         this.email,
@@ -1077,11 +1077,11 @@ class _$UpdateFacilityApiRequestActions
         this.defaultDeliverToAddress,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgId,
         this.facilityType,
@@ -1111,52 +1111,48 @@ class _$UpdateFacilityApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgId.$reducer(reducer);
-    facilityType.$reducer(reducer);
-    name.$reducer(reducer);
-    contactName.$reducer(reducer);
-    contactPhone.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    caseLoaningMethodology.$reducer(reducer);
-    restockType.$reducer(reducer);
-    binManaged.$reducer(reducer);
-    autoPutAway.$reducer(reducer);
-    active.$reducer(reducer);
-    opsScheduleProfileId.$reducer(reducer);
-    deliveryScheduleProfileId.$reducer(reducer);
-    courierProfileId.$reducer(reducer);
-    lagTime.$reducer(reducer);
-    splitImplantsAndInstruments.$reducer(reducer);
-    turnTimeInMinutes.$reducer(reducer);
-    loanSplitMethod.$reducer(reducer);
-    optimizeLoans.$reducer(reducer);
-    email.$reducer(reducer);
-    publicVisible.$reducer(reducer);
-    customerId.$reducer(reducer);
-    shipToAddressId.$reducer(reducer);
-    shipToAddress.$reducer(reducer);
-    shipToAddressCustomerKey.$reducer(reducer);
-    shipToReference_1.$reducer(reducer);
-    shipToReference_2.$reducer(reducer);
-    defaultBillToAddressId.$reducer(reducer);
-    defaultDeliverToAddressId.$reducer(reducer);
-    defaultDeliverToAddress.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgId.reducer$(reducer);
+    facilityType.reducer$(reducer);
+    name.reducer$(reducer);
+    contactName.reducer$(reducer);
+    contactPhone.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    caseLoaningMethodology.reducer$(reducer);
+    restockType.reducer$(reducer);
+    binManaged.reducer$(reducer);
+    autoPutAway.reducer$(reducer);
+    active.reducer$(reducer);
+    opsScheduleProfileId.reducer$(reducer);
+    deliveryScheduleProfileId.reducer$(reducer);
+    courierProfileId.reducer$(reducer);
+    lagTime.reducer$(reducer);
+    splitImplantsAndInstruments.reducer$(reducer);
+    turnTimeInMinutes.reducer$(reducer);
+    loanSplitMethod.reducer$(reducer);
+    optimizeLoans.reducer$(reducer);
+    email.reducer$(reducer);
+    publicVisible.reducer$(reducer);
+    customerId.reducer$(reducer);
+    shipToAddressId.reducer$(reducer);
+    shipToAddress.reducer$(reducer);
+    shipToAddressCustomerKey.reducer$(reducer);
+    shipToReference_1.reducer$(reducer);
+    shipToReference_2.reducer$(reducer);
+    defaultBillToAddressId.reducer$(reducer);
+    defaultDeliverToAddressId.reducer$(reducer);
+    defaultDeliverToAddress.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    contactName.$middleware(middleware);
-    contactPhone.$middleware(middleware);
-    email.$middleware(middleware);
-    shipToAddress.$middleware(middleware);
-    defaultDeliverToAddress.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    contactName.middleware$(middleware);
+    contactPhone.middleware$(middleware);
+    email.middleware$(middleware);
+    shipToAddress.middleware$(middleware);
+    defaultDeliverToAddress.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(UpdateFacilityApiRequest);
 }

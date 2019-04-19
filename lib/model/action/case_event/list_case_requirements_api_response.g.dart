@@ -223,24 +223,24 @@ class _$ListCaseRequirementsApiResponseActions
   final StatefulActionsOptions<
       ListCaseRequirementsApiResponse,
       ListCaseRequirementsApiResponseBuilder,
-      ListCaseRequirementsApiResponseActions> $options;
+      ListCaseRequirementsApiResponseActions> options$;
 
-  final ActionDispatcher<ListCaseRequirementsApiResponse> $replace;
+  final ActionDispatcher<ListCaseRequirementsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListCaseRequirementsApiItemRequest>> data;
   final FieldDispatcher<bool> editRequirements;
   final FieldDispatcher<bool> confirmCase;
 
-  _$ListCaseRequirementsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListCaseRequirementsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListCaseRequirementsApiItemRequest>>(
+  _$ListCaseRequirementsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListCaseRequirementsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListCaseRequirementsApiItemRequest>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        editRequirements = $options.field<bool>(
+        editRequirements = options$.field<bool>(
             'editRequirements',
             (a) => a?.editRequirements,
             (s) => s?.editRequirements,
             (p, b) => p?.editRequirements = b),
-        confirmCase = $options.field<bool>('confirmCase', (a) => a?.confirmCase,
+        confirmCase = options$.field<bool>('confirmCase', (a) => a?.confirmCase,
             (s) => s?.confirmCase, (p, b) => p?.confirmCase = b),
         super._();
 
@@ -249,38 +249,33 @@ class _$ListCaseRequirementsApiResponseActions
       _$ListCaseRequirementsApiResponseActions._(options());
 
   @override
-  ListCaseRequirementsApiResponse get $initial =>
+  ListCaseRequirementsApiResponse get initialState$ =>
       ListCaseRequirementsApiResponse();
 
   @override
-  ListCaseRequirementsApiResponseBuilder $newBuilder() =>
+  ListCaseRequirementsApiResponseBuilder newBuilder$() =>
       ListCaseRequirementsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.editRequirements,
         this.confirmCase,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    editRequirements.$reducer(reducer);
-    confirmCase.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    editRequirements.reducer$(reducer);
+    confirmCase.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListCaseRequirementsApiResponse);
 }

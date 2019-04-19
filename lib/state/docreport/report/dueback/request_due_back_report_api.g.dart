@@ -22,67 +22,32 @@ class _$RequestDueBackReportApi extends RequestDueBackReportApi {
           ApiResult<RequestDueBackReportApiResponse>>,
       CommandStateBuilder<ApiCommand<RequestDueBackReportApiRequest>,
           ApiResult<RequestDueBackReportApiResponse>>,
-      RequestDueBackReportApi> $options;
+      RequestDueBackReportApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestDueBackReportApiRequest>,
-          ApiResult<RequestDueBackReportApiResponse>>> $replace;
+          ApiResult<RequestDueBackReportApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<RequestDueBackReportApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestDueBackReportApiRequest>,
-          ApiResult<RequestDueBackReportApiResponse>,
-          RequestDueBackReportApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestDueBackReportApiRequest>,
-          ApiResult<RequestDueBackReportApiResponse>,
-          RequestDueBackReportApi,
-          Command<ApiCommand<RequestDueBackReportApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestDueBackReportApiRequest>,
-          ApiResult<RequestDueBackReportApiResponse>,
-          RequestDueBackReportApi,
-          CommandResult<ApiResult<RequestDueBackReportApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestDueBackReportApiRequest>,
-          ApiResult<RequestDueBackReportApiResponse>,
-          RequestDueBackReportApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<RequestDueBackReportApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RequestDueBackReportApi._(this.$options)
-      : $replace = $options.action<
+  _$RequestDueBackReportApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<RequestDueBackReportApiRequest>,
                     ApiResult<RequestDueBackReportApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RequestDueBackReportApiRequest>,
-                ApiResult<RequestDueBackReportApiResponse>,
-                RequestDueBackReportApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestDueBackReportApiRequest>,
-                    ApiResult<RequestDueBackReportApiResponse>,
-                    RequestDueBackReportApi,
-                    Command<ApiCommand<RequestDueBackReportApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestDueBackReportApiRequest>,
-                    ApiResult<RequestDueBackReportApiResponse>,
-                    RequestDueBackReportApi,
-                    CommandResult<ApiResult<RequestDueBackReportApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RequestDueBackReportApiRequest>,
-                ApiResult<RequestDueBackReportApiResponse>,
-                RequestDueBackReportApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<RequestDueBackReportApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<RequestDueBackReportApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RequestDueBackReportApi(RequestDueBackReportApiOptions options) =>
@@ -91,32 +56,26 @@ class _$RequestDueBackReportApi extends RequestDueBackReportApi {
   @override
   CommandState<ApiCommand<RequestDueBackReportApiRequest>,
           ApiResult<RequestDueBackReportApiResponse>>
-      get $initial => CommandState<ApiCommand<RequestDueBackReportApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<RequestDueBackReportApiRequest>,
           ApiResult<RequestDueBackReportApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestDueBackReportApiRequest>,
           ApiResult<RequestDueBackReportApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RequestDueBackReportApiRequest>,
           ApiResult<RequestDueBackReportApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RequestDueBackReportApiRequest)]),
-        FullType(ApiResult, [FullType(RequestDueBackReportApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

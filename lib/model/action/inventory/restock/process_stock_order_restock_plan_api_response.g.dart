@@ -182,15 +182,15 @@ class _$ProcessStockOrderRestockPlanApiResponseActions
   final StatefulActionsOptions<
       ProcessStockOrderRestockPlanApiResponse,
       ProcessStockOrderRestockPlanApiResponseBuilder,
-      ProcessStockOrderRestockPlanApiResponseActions> $options;
+      ProcessStockOrderRestockPlanApiResponseActions> options$;
 
-  final ActionDispatcher<ProcessStockOrderRestockPlanApiResponse> $replace;
+  final ActionDispatcher<ProcessStockOrderRestockPlanApiResponse> replace$;
   final FieldDispatcher<BuiltList<String>> orderIds;
 
-  _$ProcessStockOrderRestockPlanApiResponseActions._(this.$options)
-      : $replace = $options.action<ProcessStockOrderRestockPlanApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        orderIds = $options.field<BuiltList<String>>('orderIds',
+  _$ProcessStockOrderRestockPlanApiResponseActions._(this.options$)
+      : replace$ = options$.action<ProcessStockOrderRestockPlanApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        orderIds = options$.field<BuiltList<String>>('orderIds',
             (a) => a?.orderIds, (s) => s?.orderIds, (p, b) => p?.orderIds = b),
         super._();
 
@@ -199,34 +199,29 @@ class _$ProcessStockOrderRestockPlanApiResponseActions
       _$ProcessStockOrderRestockPlanApiResponseActions._(options());
 
   @override
-  ProcessStockOrderRestockPlanApiResponse get $initial =>
+  ProcessStockOrderRestockPlanApiResponse get initialState$ =>
       ProcessStockOrderRestockPlanApiResponse();
 
   @override
-  ProcessStockOrderRestockPlanApiResponseBuilder $newBuilder() =>
+  ProcessStockOrderRestockPlanApiResponseBuilder newBuilder$() =>
       ProcessStockOrderRestockPlanApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ProcessStockOrderRestockPlanApiResponse);
 }

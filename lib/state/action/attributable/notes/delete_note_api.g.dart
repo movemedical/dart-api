@@ -18,51 +18,27 @@ class _$DeleteNoteApi extends DeleteNoteApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>,
-      DeleteNoteApi> $options;
+      DeleteNoteApi> options$;
 
   final ActionDispatcher<
           CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>>
-      $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>,
-          DeleteNoteApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>,
-          DeleteNoteApi, Command<ApiCommand<DeleteNoteApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>,
-          DeleteNoteApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>,
-          DeleteNoteApi, CommandProgress>> $progress;
+      replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<DeleteNoteApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$DeleteNoteApi._(this.$options)
-      : $replace = $options.action<
+  _$DeleteNoteApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<DeleteNoteApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>,
-                DeleteNoteApi, String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<DeleteNoteApiRequest>,
-                    ApiResult<Nothing>,
-                    DeleteNoteApi,
-                    Command<ApiCommand<DeleteNoteApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<DeleteNoteApiRequest>,
-                    ApiResult<Nothing>,
-                    DeleteNoteApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<DeleteNoteApiRequest>,
-                ApiResult<Nothing>,
-                DeleteNoteApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<DeleteNoteApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$DeleteNoteApi(DeleteNoteApiOptions options) =>
@@ -70,30 +46,23 @@ class _$DeleteNoteApi extends DeleteNoteApi {
 
   @override
   CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>
-      get $initial =>
+      get initialState$ =>
           CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<DeleteNoteApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<DeleteNoteApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(DeleteNoteApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

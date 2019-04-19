@@ -212,24 +212,24 @@ class _$ListRelationshipTypesApiOrgUnitRelationshipsActions
   final StatefulActionsOptions<
       ListRelationshipTypesApiOrgUnitRelationships,
       ListRelationshipTypesApiOrgUnitRelationshipsBuilder,
-      ListRelationshipTypesApiOrgUnitRelationshipsActions> $options;
+      ListRelationshipTypesApiOrgUnitRelationshipsActions> options$;
 
-  final ActionDispatcher<ListRelationshipTypesApiOrgUnitRelationships> $replace;
+  final ActionDispatcher<ListRelationshipTypesApiOrgUnitRelationships> replace$;
   final OrgUnitActions orgUnit;
   final FieldDispatcher<BuiltList<RelationshipType>> relationshipTypes;
 
-  _$ListRelationshipTypesApiOrgUnitRelationshipsActions._(this.$options)
-      : $replace =
-            $options.action<ListRelationshipTypesApiOrgUnitRelationships>(
-                '\$replace', (a) => a?.$replace),
+  _$ListRelationshipTypesApiOrgUnitRelationshipsActions._(this.options$)
+      : replace$ =
+            options$.action<ListRelationshipTypesApiOrgUnitRelationships>(
+                'replace\$', (a) => a?.replace$),
         orgUnit = OrgUnitActions(() =>
-            $options.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
+            options$.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
                 'orgUnit',
                 (a) => a.orgUnit,
                 (s) => s?.orgUnit,
                 (b) => b?.orgUnit,
                 (parent, builder) => parent?.orgUnit = builder)),
-        relationshipTypes = $options.field<BuiltList<RelationshipType>>(
+        relationshipTypes = options$.field<BuiltList<RelationshipType>>(
             'relationshipTypes',
             (a) => a?.relationshipTypes,
             (s) => s?.relationshipTypes,
@@ -241,42 +241,37 @@ class _$ListRelationshipTypesApiOrgUnitRelationshipsActions
       _$ListRelationshipTypesApiOrgUnitRelationshipsActions._(options());
 
   @override
-  ListRelationshipTypesApiOrgUnitRelationships get $initial =>
+  ListRelationshipTypesApiOrgUnitRelationships get initialState$ =>
       ListRelationshipTypesApiOrgUnitRelationships();
 
   @override
-  ListRelationshipTypesApiOrgUnitRelationshipsBuilder $newBuilder() =>
+  ListRelationshipTypesApiOrgUnitRelationshipsBuilder newBuilder$() =>
       ListRelationshipTypesApiOrgUnitRelationshipsBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.orgUnit,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.relationshipTypes,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orgUnit.$reducer(reducer);
-    relationshipTypes.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orgUnit.reducer$(reducer);
+    relationshipTypes.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    orgUnit.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    orgUnit.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListRelationshipTypesApiOrgUnitRelationships);
 }

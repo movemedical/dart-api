@@ -174,15 +174,15 @@ class _$CommissionTagsApiRequestActions
   final StatefulActionsOptions<
       CommissionTagsApiRequest,
       CommissionTagsApiRequestBuilder,
-      CommissionTagsApiRequestActions> $options;
+      CommissionTagsApiRequestActions> options$;
 
-  final ActionDispatcher<CommissionTagsApiRequest> $replace;
+  final ActionDispatcher<CommissionTagsApiRequest> replace$;
   final FieldDispatcher<BuiltList<CommissionTagsApiTagRequest>> tagRequests;
 
-  _$CommissionTagsApiRequestActions._(this.$options)
-      : $replace = $options.action<CommissionTagsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        tagRequests = $options.field<BuiltList<CommissionTagsApiTagRequest>>(
+  _$CommissionTagsApiRequestActions._(this.options$)
+      : replace$ = options$.action<CommissionTagsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        tagRequests = options$.field<BuiltList<CommissionTagsApiTagRequest>>(
             'tagRequests',
             (a) => a?.tagRequests,
             (s) => s?.tagRequests,
@@ -194,32 +194,28 @@ class _$CommissionTagsApiRequestActions
       _$CommissionTagsApiRequestActions._(options());
 
   @override
-  CommissionTagsApiRequest get $initial => CommissionTagsApiRequest();
+  CommissionTagsApiRequest get initialState$ => CommissionTagsApiRequest();
 
   @override
-  CommissionTagsApiRequestBuilder $newBuilder() =>
+  CommissionTagsApiRequestBuilder newBuilder$() =>
       CommissionTagsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.tagRequests,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    tagRequests.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    tagRequests.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommissionTagsApiRequest);
 }

@@ -161,15 +161,15 @@ class _$RequestCreditHoldReportApiResponseActions
   final StatefulActionsOptions<
       RequestCreditHoldReportApiResponse,
       RequestCreditHoldReportApiResponseBuilder,
-      RequestCreditHoldReportApiResponseActions> $options;
+      RequestCreditHoldReportApiResponseActions> options$;
 
-  final ActionDispatcher<RequestCreditHoldReportApiResponse> $replace;
+  final ActionDispatcher<RequestCreditHoldReportApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
 
-  _$RequestCreditHoldReportApiResponseActions._(this.$options)
-      : $replace = $options.action<RequestCreditHoldReportApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$RequestCreditHoldReportApiResponseActions._(this.options$)
+      : replace$ = options$.action<RequestCreditHoldReportApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -181,34 +181,29 @@ class _$RequestCreditHoldReportApiResponseActions
       _$RequestCreditHoldReportApiResponseActions._(options());
 
   @override
-  RequestCreditHoldReportApiResponse get $initial =>
+  RequestCreditHoldReportApiResponse get initialState$ =>
       RequestCreditHoldReportApiResponse();
 
   @override
-  RequestCreditHoldReportApiResponseBuilder $newBuilder() =>
+  RequestCreditHoldReportApiResponseBuilder newBuilder$() =>
       RequestCreditHoldReportApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestCreditHoldReportApiResponse);
 }

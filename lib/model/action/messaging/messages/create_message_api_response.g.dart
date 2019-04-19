@@ -168,16 +168,16 @@ class _$CreateMessageApiResponseActions
   final StatefulActionsOptions<
       CreateMessageApiResponse,
       CreateMessageApiResponseBuilder,
-      CreateMessageApiResponseActions> $options;
+      CreateMessageApiResponseActions> options$;
 
-  final ActionDispatcher<CreateMessageApiResponse> $replace;
+  final ActionDispatcher<CreateMessageApiResponse> replace$;
   final MessageActions message;
 
-  _$CreateMessageApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateMessageApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$CreateMessageApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateMessageApiResponse>(
+            'replace\$', (a) => a?.replace$),
         message = MessageActions(() =>
-            $options.stateful<Message, MessageBuilder, MessageActions>(
+            options$.stateful<Message, MessageBuilder, MessageActions>(
                 'message',
                 (a) => a.message,
                 (s) => s?.message,
@@ -190,38 +190,34 @@ class _$CreateMessageApiResponseActions
       _$CreateMessageApiResponseActions._(options());
 
   @override
-  CreateMessageApiResponse get $initial => CreateMessageApiResponse();
+  CreateMessageApiResponse get initialState$ => CreateMessageApiResponse();
 
   @override
-  CreateMessageApiResponseBuilder $newBuilder() =>
+  CreateMessageApiResponseBuilder newBuilder$() =>
       CreateMessageApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.message,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    message.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    message.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    message.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    message.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateMessageApiResponse);
 }

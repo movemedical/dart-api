@@ -200,18 +200,18 @@ class _$ListProceduresForSearchApiResponseActions
   final StatefulActionsOptions<
       ListProceduresForSearchApiResponse,
       ListProceduresForSearchApiResponseBuilder,
-      ListProceduresForSearchApiResponseActions> $options;
+      ListProceduresForSearchApiResponseActions> options$;
 
-  final ActionDispatcher<ListProceduresForSearchApiResponse> $replace;
+  final ActionDispatcher<ListProceduresForSearchApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListProceduresForSearchApiProcedure>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListProceduresForSearchApiResponseActions._(this.$options)
-      : $replace = $options.action<ListProceduresForSearchApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListProceduresForSearchApiProcedure>>(
+  _$ListProceduresForSearchApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListProceduresForSearchApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListProceduresForSearchApiProcedure>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -220,36 +220,31 @@ class _$ListProceduresForSearchApiResponseActions
       _$ListProceduresForSearchApiResponseActions._(options());
 
   @override
-  ListProceduresForSearchApiResponse get $initial =>
+  ListProceduresForSearchApiResponse get initialState$ =>
       ListProceduresForSearchApiResponse();
 
   @override
-  ListProceduresForSearchApiResponseBuilder $newBuilder() =>
+  ListProceduresForSearchApiResponseBuilder newBuilder$() =>
       ListProceduresForSearchApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListProceduresForSearchApiResponse);
 }

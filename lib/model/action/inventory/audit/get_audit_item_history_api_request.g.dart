@@ -159,15 +159,15 @@ class _$GetAuditItemHistoryApiRequestActions
   final StatefulActionsOptions<
       GetAuditItemHistoryApiRequest,
       GetAuditItemHistoryApiRequestBuilder,
-      GetAuditItemHistoryApiRequestActions> $options;
+      GetAuditItemHistoryApiRequestActions> options$;
 
-  final ActionDispatcher<GetAuditItemHistoryApiRequest> $replace;
+  final ActionDispatcher<GetAuditItemHistoryApiRequest> replace$;
   final FieldDispatcher<String> auditItemId;
 
-  _$GetAuditItemHistoryApiRequestActions._(this.$options)
-      : $replace = $options.action<GetAuditItemHistoryApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditItemId = $options.field<String>(
+  _$GetAuditItemHistoryApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetAuditItemHistoryApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditItemId = options$.field<String>(
             'auditItemId',
             (a) => a?.auditItemId,
             (s) => s?.auditItemId,
@@ -179,33 +179,29 @@ class _$GetAuditItemHistoryApiRequestActions
       _$GetAuditItemHistoryApiRequestActions._(options());
 
   @override
-  GetAuditItemHistoryApiRequest get $initial => GetAuditItemHistoryApiRequest();
+  GetAuditItemHistoryApiRequest get initialState$ =>
+      GetAuditItemHistoryApiRequest();
 
   @override
-  GetAuditItemHistoryApiRequestBuilder $newBuilder() =>
+  GetAuditItemHistoryApiRequestBuilder newBuilder$() =>
       GetAuditItemHistoryApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditItemId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditItemId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditItemId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetAuditItemHistoryApiRequest);
 }

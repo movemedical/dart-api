@@ -219,25 +219,25 @@ typedef StatefulActionsOptions<GetLoanApiResponse, GetLoanApiResponseBuilder,
 
 class _$GetLoanApiResponseActions extends GetLoanApiResponseActions {
   final StatefulActionsOptions<GetLoanApiResponse, GetLoanApiResponseBuilder,
-      GetLoanApiResponseActions> $options;
+      GetLoanApiResponseActions> options$;
 
-  final ActionDispatcher<GetLoanApiResponse> $replace;
+  final ActionDispatcher<GetLoanApiResponse> replace$;
   final GetLoanApiLoanActions loan;
   final GetLoanApiDisplayRulesActions displayRules;
   final FieldDispatcher<BuiltList<GetConsignmentLoanFieldsApiLoanFieldData>>
       consignmentLoanFields;
 
-  _$GetLoanApiResponseActions._(this.$options)
-      : $replace = $options.action<GetLoanApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        loan = GetLoanApiLoanActions(() => $options.stateful<GetLoanApiLoan,
+  _$GetLoanApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetLoanApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        loan = GetLoanApiLoanActions(() => options$.stateful<GetLoanApiLoan,
                 GetLoanApiLoanBuilder, GetLoanApiLoanActions>(
             'loan',
             (a) => a.loan,
             (s) => s?.loan,
             (b) => b?.loan,
             (parent, builder) => parent?.loan = builder)),
-        displayRules = GetLoanApiDisplayRulesActions(() => $options.stateful<
+        displayRules = GetLoanApiDisplayRulesActions(() => options$.stateful<
                 GetLoanApiDisplayRules,
                 GetLoanApiDisplayRulesBuilder,
                 GetLoanApiDisplayRulesActions>(
@@ -247,7 +247,7 @@ class _$GetLoanApiResponseActions extends GetLoanApiResponseActions {
             (b) => b?.displayRules,
             (parent, builder) => parent?.displayRules = builder)),
         consignmentLoanFields =
-            $options.field<BuiltList<GetConsignmentLoanFieldsApiLoanFieldData>>(
+            options$.field<BuiltList<GetConsignmentLoanFieldsApiLoanFieldData>>(
                 'consignmentLoanFields',
                 (a) => a?.consignmentLoanFields,
                 (s) => s?.consignmentLoanFields,
@@ -259,42 +259,38 @@ class _$GetLoanApiResponseActions extends GetLoanApiResponseActions {
       _$GetLoanApiResponseActions._(options());
 
   @override
-  GetLoanApiResponse get $initial => GetLoanApiResponse();
+  GetLoanApiResponse get initialState$ => GetLoanApiResponse();
 
   @override
-  GetLoanApiResponseBuilder $newBuilder() => GetLoanApiResponseBuilder();
+  GetLoanApiResponseBuilder newBuilder$() => GetLoanApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.loan,
         this.displayRules,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.consignmentLoanFields,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    loan.$reducer(reducer);
-    displayRules.$reducer(reducer);
-    consignmentLoanFields.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    loan.reducer$(reducer);
+    displayRules.reducer$(reducer);
+    consignmentLoanFields.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    loan.$middleware(middleware);
-    displayRules.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    loan.middleware$(middleware);
+    displayRules.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetLoanApiResponse);
 }

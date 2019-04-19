@@ -369,9 +369,9 @@ class _$GetDceOrgUnitLinkApiDetailedOrgUnitLinkActions
   final StatefulActionsOptions<
       GetDceOrgUnitLinkApiDetailedOrgUnitLink,
       GetDceOrgUnitLinkApiDetailedOrgUnitLinkBuilder,
-      GetDceOrgUnitLinkApiDetailedOrgUnitLinkActions> $options;
+      GetDceOrgUnitLinkApiDetailedOrgUnitLinkActions> options$;
 
-  final ActionDispatcher<GetDceOrgUnitLinkApiDetailedOrgUnitLink> $replace;
+  final ActionDispatcher<GetDceOrgUnitLinkApiDetailedOrgUnitLink> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<String> orgUnitName;
@@ -382,38 +382,38 @@ class _$GetDceOrgUnitLinkApiDetailedOrgUnitLinkActions
   final FieldDispatcher<bool> processAudit;
   final FieldDispatcher<BuiltList<OuLinkToInventoryType>> inventoryTypeLinks;
 
-  _$GetDceOrgUnitLinkApiDetailedOrgUnitLinkActions._(this.$options)
-      : $replace = $options.action<GetDceOrgUnitLinkApiDetailedOrgUnitLink>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetDceOrgUnitLinkApiDetailedOrgUnitLinkActions._(this.options$)
+      : replace$ = options$.action<GetDceOrgUnitLinkApiDetailedOrgUnitLink>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        orgUnitName = $options.field<String>(
+        orgUnitName = options$.field<String>(
             'orgUnitName',
             (a) => a?.orgUnitName,
             (s) => s?.orgUnitName,
             (p, b) => p?.orgUnitName = b),
-        processOrders = $options.field<bool>(
+        processOrders = options$.field<bool>(
             'processOrders',
             (a) => a?.processOrders,
             (s) => s?.processOrders,
             (p, b) => p?.processOrders = b),
-        manageCatalog = $options.field<bool>(
+        manageCatalog = options$.field<bool>(
             'manageCatalog',
             (a) => a?.manageCatalog,
             (s) => s?.manageCatalog,
             (p, b) => p?.manageCatalog = b),
-        createAudit = $options.field<bool>('createAudit', (a) => a?.createAudit,
+        createAudit = options$.field<bool>('createAudit', (a) => a?.createAudit,
             (s) => s?.createAudit, (p, b) => p?.createAudit = b),
-        manageAudit = $options.field<bool>('manageAudit', (a) => a?.manageAudit,
+        manageAudit = options$.field<bool>('manageAudit', (a) => a?.manageAudit,
             (s) => s?.manageAudit, (p, b) => p?.manageAudit = b),
-        processAudit = $options.field<bool>(
+        processAudit = options$.field<bool>(
             'processAudit',
             (a) => a?.processAudit,
             (s) => s?.processAudit,
             (p, b) => p?.processAudit = b),
-        inventoryTypeLinks = $options.field<BuiltList<OuLinkToInventoryType>>(
+        inventoryTypeLinks = options$.field<BuiltList<OuLinkToInventoryType>>(
             'inventoryTypeLinks',
             (a) => a?.inventoryTypeLinks,
             (s) => s?.inventoryTypeLinks,
@@ -425,18 +425,18 @@ class _$GetDceOrgUnitLinkApiDetailedOrgUnitLinkActions
       _$GetDceOrgUnitLinkApiDetailedOrgUnitLinkActions._(options());
 
   @override
-  GetDceOrgUnitLinkApiDetailedOrgUnitLink get $initial =>
+  GetDceOrgUnitLinkApiDetailedOrgUnitLink get initialState$ =>
       GetDceOrgUnitLinkApiDetailedOrgUnitLink();
 
   @override
-  GetDceOrgUnitLinkApiDetailedOrgUnitLinkBuilder $newBuilder() =>
+  GetDceOrgUnitLinkApiDetailedOrgUnitLinkBuilder newBuilder$() =>
       GetDceOrgUnitLinkApiDetailedOrgUnitLinkBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgUnitId,
         this.orgUnitName,
@@ -449,26 +449,21 @@ class _$GetDceOrgUnitLinkApiDetailedOrgUnitLinkActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    orgUnitName.$reducer(reducer);
-    processOrders.$reducer(reducer);
-    manageCatalog.$reducer(reducer);
-    createAudit.$reducer(reducer);
-    manageAudit.$reducer(reducer);
-    processAudit.$reducer(reducer);
-    inventoryTypeLinks.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    orgUnitName.reducer$(reducer);
+    processOrders.reducer$(reducer);
+    manageCatalog.reducer$(reducer);
+    createAudit.reducer$(reducer);
+    manageAudit.reducer$(reducer);
+    processAudit.reducer$(reducer);
+    inventoryTypeLinks.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetDceOrgUnitLinkApiDetailedOrgUnitLink);
 }

@@ -22,67 +22,32 @@ class _$CreateSimpleKitStockApi extends CreateSimpleKitStockApi {
           ApiResult<CreateSimpleKitStockApiResponse>>,
       CommandStateBuilder<ApiCommand<CreateSimpleKitStockApiRequest>,
           ApiResult<CreateSimpleKitStockApiResponse>>,
-      CreateSimpleKitStockApi> $options;
+      CreateSimpleKitStockApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateSimpleKitStockApiRequest>,
-          ApiResult<CreateSimpleKitStockApiResponse>>> $replace;
+          ApiResult<CreateSimpleKitStockApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<CreateSimpleKitStockApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateSimpleKitStockApiRequest>,
-          ApiResult<CreateSimpleKitStockApiResponse>,
-          CreateSimpleKitStockApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateSimpleKitStockApiRequest>,
-          ApiResult<CreateSimpleKitStockApiResponse>,
-          CreateSimpleKitStockApi,
-          Command<ApiCommand<CreateSimpleKitStockApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateSimpleKitStockApiRequest>,
-          ApiResult<CreateSimpleKitStockApiResponse>,
-          CreateSimpleKitStockApi,
-          CommandResult<ApiResult<CreateSimpleKitStockApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateSimpleKitStockApiRequest>,
-          ApiResult<CreateSimpleKitStockApiResponse>,
-          CreateSimpleKitStockApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<CreateSimpleKitStockApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CreateSimpleKitStockApi._(this.$options)
-      : $replace = $options.action<
+  _$CreateSimpleKitStockApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<CreateSimpleKitStockApiRequest>,
                     ApiResult<CreateSimpleKitStockApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CreateSimpleKitStockApiRequest>,
-                ApiResult<CreateSimpleKitStockApiResponse>,
-                CreateSimpleKitStockApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateSimpleKitStockApiRequest>,
-                    ApiResult<CreateSimpleKitStockApiResponse>,
-                    CreateSimpleKitStockApi,
-                    Command<ApiCommand<CreateSimpleKitStockApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateSimpleKitStockApiRequest>,
-                    ApiResult<CreateSimpleKitStockApiResponse>,
-                    CreateSimpleKitStockApi,
-                    CommandResult<ApiResult<CreateSimpleKitStockApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CreateSimpleKitStockApiRequest>,
-                ApiResult<CreateSimpleKitStockApiResponse>,
-                CreateSimpleKitStockApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<CreateSimpleKitStockApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<CreateSimpleKitStockApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CreateSimpleKitStockApi(CreateSimpleKitStockApiOptions options) =>
@@ -91,32 +56,26 @@ class _$CreateSimpleKitStockApi extends CreateSimpleKitStockApi {
   @override
   CommandState<ApiCommand<CreateSimpleKitStockApiRequest>,
           ApiResult<CreateSimpleKitStockApiResponse>>
-      get $initial => CommandState<ApiCommand<CreateSimpleKitStockApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<CreateSimpleKitStockApiRequest>,
           ApiResult<CreateSimpleKitStockApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateSimpleKitStockApiRequest>,
           ApiResult<CreateSimpleKitStockApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<CreateSimpleKitStockApiRequest>,
           ApiResult<CreateSimpleKitStockApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CreateSimpleKitStockApiRequest)]),
-        FullType(ApiResult, [FullType(CreateSimpleKitStockApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

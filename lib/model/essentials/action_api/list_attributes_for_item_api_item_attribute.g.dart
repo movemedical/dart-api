@@ -223,27 +223,27 @@ class _$ListAttributesForItemApiItemAttributeActions
   final StatefulActionsOptions<
       ListAttributesForItemApiItemAttribute,
       ListAttributesForItemApiItemAttributeBuilder,
-      ListAttributesForItemApiItemAttributeActions> $options;
+      ListAttributesForItemApiItemAttributeActions> options$;
 
-  final ActionDispatcher<ListAttributesForItemApiItemAttribute> $replace;
+  final ActionDispatcher<ListAttributesForItemApiItemAttribute> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgUnitName;
   final FieldDispatcher<String> label;
   final FieldDispatcher<String> value;
 
-  _$ListAttributesForItemApiItemAttributeActions._(this.$options)
-      : $replace = $options.action<ListAttributesForItemApiItemAttribute>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListAttributesForItemApiItemAttributeActions._(this.options$)
+      : replace$ = options$.action<ListAttributesForItemApiItemAttribute>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgUnitName = $options.field<String>(
+        orgUnitName = options$.field<String>(
             'orgUnitName',
             (a) => a?.orgUnitName,
             (s) => s?.orgUnitName,
             (p, b) => p?.orgUnitName = b),
-        label = $options.field<String>(
+        label = options$.field<String>(
             'label', (a) => a?.label, (s) => s?.label, (p, b) => p?.label = b),
-        value = $options.field<String>(
+        value = options$.field<String>(
             'value', (a) => a?.value, (s) => s?.value, (p, b) => p?.value = b),
         super._();
 
@@ -252,18 +252,18 @@ class _$ListAttributesForItemApiItemAttributeActions
       _$ListAttributesForItemApiItemAttributeActions._(options());
 
   @override
-  ListAttributesForItemApiItemAttribute get $initial =>
+  ListAttributesForItemApiItemAttribute get initialState$ =>
       ListAttributesForItemApiItemAttribute();
 
   @override
-  ListAttributesForItemApiItemAttributeBuilder $newBuilder() =>
+  ListAttributesForItemApiItemAttributeBuilder newBuilder$() =>
       ListAttributesForItemApiItemAttributeBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgUnitName,
         this.label,
@@ -271,21 +271,16 @@ class _$ListAttributesForItemApiItemAttributeActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgUnitName.$reducer(reducer);
-    label.$reducer(reducer);
-    value.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgUnitName.reducer$(reducer);
+    label.reducer$(reducer);
+    value.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListAttributesForItemApiItemAttribute);
 }

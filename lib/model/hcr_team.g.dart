@@ -198,23 +198,23 @@ typedef StatefulActionsOptions<HcrTeam, HcrTeamBuilder,
 
 class _$HcrTeamActions extends HcrTeamActions {
   final StatefulActionsOptions<HcrTeam, HcrTeamBuilder, HcrTeamActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<HcrTeam> $replace;
+  final ActionDispatcher<HcrTeam> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> ouId;
   final FieldDispatcher<HcrTeamType> type;
   final FieldDispatcher<String> displayText;
 
-  _$HcrTeamActions._(this.$options)
-      : $replace = $options.action<HcrTeam>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$HcrTeamActions._(this.options$)
+      : replace$ = options$.action<HcrTeam>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        ouId = $options.field<String>(
+        ouId = options$.field<String>(
             'ouId', (a) => a?.ouId, (s) => s?.ouId, (p, b) => p?.ouId = b),
-        type = $options.field<HcrTeamType>(
+        type = options$.field<HcrTeamType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        displayText = $options.field<String>(
+        displayText = options$.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
@@ -225,16 +225,16 @@ class _$HcrTeamActions extends HcrTeamActions {
       _$HcrTeamActions._(options());
 
   @override
-  HcrTeam get $initial => HcrTeam();
+  HcrTeam get initialState$ => HcrTeam();
 
   @override
-  HcrTeamBuilder $newBuilder() => HcrTeamBuilder();
+  HcrTeamBuilder newBuilder$() => HcrTeamBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.ouId,
         this.type,
@@ -242,20 +242,16 @@ class _$HcrTeamActions extends HcrTeamActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    ouId.$reducer(reducer);
-    type.$reducer(reducer);
-    displayText.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    ouId.reducer$(reducer);
+    type.reducer$(reducer);
+    displayText.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(HcrTeam);
 }

@@ -179,18 +179,18 @@ class _$GetPendingPoCountApiResponseActions
   final StatefulActionsOptions<
       GetPendingPoCountApiResponse,
       GetPendingPoCountApiResponseBuilder,
-      GetPendingPoCountApiResponseActions> $options;
+      GetPendingPoCountApiResponseActions> options$;
 
-  final ActionDispatcher<GetPendingPoCountApiResponse> $replace;
+  final ActionDispatcher<GetPendingPoCountApiResponse> replace$;
   final FieldDispatcher<int> count;
   final FieldDispatcher<double> totalAmount;
 
-  _$GetPendingPoCountApiResponseActions._(this.$options)
-      : $replace = $options.action<GetPendingPoCountApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        count = $options.field<int>(
+  _$GetPendingPoCountApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetPendingPoCountApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        count = options$.field<int>(
             'count', (a) => a?.count, (s) => s?.count, (p, b) => p?.count = b),
-        totalAmount = $options.field<double>(
+        totalAmount = options$.field<double>(
             'totalAmount',
             (a) => a?.totalAmount,
             (s) => s?.totalAmount,
@@ -202,35 +202,31 @@ class _$GetPendingPoCountApiResponseActions
       _$GetPendingPoCountApiResponseActions._(options());
 
   @override
-  GetPendingPoCountApiResponse get $initial => GetPendingPoCountApiResponse();
+  GetPendingPoCountApiResponse get initialState$ =>
+      GetPendingPoCountApiResponse();
 
   @override
-  GetPendingPoCountApiResponseBuilder $newBuilder() =>
+  GetPendingPoCountApiResponseBuilder newBuilder$() =>
       GetPendingPoCountApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.count,
         this.totalAmount,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    count.$reducer(reducer);
-    totalAmount.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    count.reducer$(reducer);
+    totalAmount.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetPendingPoCountApiResponse);
 }

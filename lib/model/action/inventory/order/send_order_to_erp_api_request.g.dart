@@ -176,18 +176,18 @@ class _$SendOrderToErpApiRequestActions
   final StatefulActionsOptions<
       SendOrderToErpApiRequest,
       SendOrderToErpApiRequestBuilder,
-      SendOrderToErpApiRequestActions> $options;
+      SendOrderToErpApiRequestActions> options$;
 
-  final ActionDispatcher<SendOrderToErpApiRequest> $replace;
+  final ActionDispatcher<SendOrderToErpApiRequest> replace$;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<bool> validateOnly;
 
-  _$SendOrderToErpApiRequestActions._(this.$options)
-      : $replace = $options.action<SendOrderToErpApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$SendOrderToErpApiRequestActions._(this.options$)
+      : replace$ = options$.action<SendOrderToErpApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        validateOnly = $options.field<bool>(
+        validateOnly = options$.field<bool>(
             'validateOnly',
             (a) => a?.validateOnly,
             (s) => s?.validateOnly,
@@ -199,34 +199,30 @@ class _$SendOrderToErpApiRequestActions
       _$SendOrderToErpApiRequestActions._(options());
 
   @override
-  SendOrderToErpApiRequest get $initial => SendOrderToErpApiRequest();
+  SendOrderToErpApiRequest get initialState$ => SendOrderToErpApiRequest();
 
   @override
-  SendOrderToErpApiRequestBuilder $newBuilder() =>
+  SendOrderToErpApiRequestBuilder newBuilder$() =>
       SendOrderToErpApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
         this.validateOnly,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
-    validateOnly.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
+    validateOnly.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SendOrderToErpApiRequest);
 }

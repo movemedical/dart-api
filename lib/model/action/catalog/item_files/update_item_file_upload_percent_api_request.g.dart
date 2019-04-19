@@ -206,21 +206,21 @@ class _$UpdateItemFileUploadPercentApiRequestActions
   final StatefulActionsOptions<
       UpdateItemFileUploadPercentApiRequest,
       UpdateItemFileUploadPercentApiRequestBuilder,
-      UpdateItemFileUploadPercentApiRequestActions> $options;
+      UpdateItemFileUploadPercentApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateItemFileUploadPercentApiRequest> $replace;
+  final ActionDispatcher<UpdateItemFileUploadPercentApiRequest> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> fileId;
   final FieldDispatcher<double> percentDecimalForm;
 
-  _$UpdateItemFileUploadPercentApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateItemFileUploadPercentApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$UpdateItemFileUploadPercentApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateItemFileUploadPercentApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        percentDecimalForm = $options.field<double>(
+        percentDecimalForm = options$.field<double>(
             'percentDecimalForm',
             (a) => a?.percentDecimalForm,
             (s) => s?.percentDecimalForm,
@@ -232,38 +232,33 @@ class _$UpdateItemFileUploadPercentApiRequestActions
       _$UpdateItemFileUploadPercentApiRequestActions._(options());
 
   @override
-  UpdateItemFileUploadPercentApiRequest get $initial =>
+  UpdateItemFileUploadPercentApiRequest get initialState$ =>
       UpdateItemFileUploadPercentApiRequest();
 
   @override
-  UpdateItemFileUploadPercentApiRequestBuilder $newBuilder() =>
+  UpdateItemFileUploadPercentApiRequestBuilder newBuilder$() =>
       UpdateItemFileUploadPercentApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.fileId,
         this.percentDecimalForm,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    fileId.$reducer(reducer);
-    percentDecimalForm.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    fileId.reducer$(reducer);
+    percentDecimalForm.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateItemFileUploadPercentApiRequest);
 }

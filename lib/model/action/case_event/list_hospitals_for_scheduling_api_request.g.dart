@@ -415,9 +415,9 @@ class _$ListHospitalsForSchedulingApiRequestActions
   final StatefulActionsOptions<
       ListHospitalsForSchedulingApiRequest,
       ListHospitalsForSchedulingApiRequestBuilder,
-      ListHospitalsForSchedulingApiRequestActions> $options;
+      ListHospitalsForSchedulingApiRequestActions> options$;
 
-  final ActionDispatcher<ListHospitalsForSchedulingApiRequest> $replace;
+  final ActionDispatcher<ListHospitalsForSchedulingApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> hospitalIds;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> healthSystemId;
@@ -430,45 +430,45 @@ class _$ListHospitalsForSchedulingApiRequestActions
   final FieldDispatcher<bool> forCreateCase;
   final FieldDispatcher<bool> skipCache;
 
-  _$ListHospitalsForSchedulingApiRequestActions._(this.$options)
-      : $replace = $options.action<ListHospitalsForSchedulingApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        hospitalIds = $options.field<BuiltList<String>>(
+  _$ListHospitalsForSchedulingApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListHospitalsForSchedulingApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        hospitalIds = options$.field<BuiltList<String>>(
             'hospitalIds',
             (a) => a?.hospitalIds,
             (s) => s?.hospitalIds,
             (p, b) => p?.hospitalIds = b),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        healthSystemId = $options.field<String>(
+        healthSystemId = options$.field<String>(
             'healthSystemId',
             (a) => a?.healthSystemId,
             (s) => s?.healthSystemId,
             (p, b) => p?.healthSystemId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        hcrId = $options.field<String>(
+        hcrId = options$.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        physicianId = $options.field<String>(
+        physicianId = options$.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        forCreateCase = $options.field<bool>(
+        forCreateCase = options$.field<bool>(
             'forCreateCase',
             (a) => a?.forCreateCase,
             (s) => s?.forCreateCase,
             (p, b) => p?.forCreateCase = b),
-        skipCache = $options.field<bool>('skipCache', (a) => a?.skipCache,
+        skipCache = options$.field<bool>('skipCache', (a) => a?.skipCache,
             (s) => s?.skipCache, (p, b) => p?.skipCache = b),
         super._();
 
@@ -477,18 +477,18 @@ class _$ListHospitalsForSchedulingApiRequestActions
       _$ListHospitalsForSchedulingApiRequestActions._(options());
 
   @override
-  ListHospitalsForSchedulingApiRequest get $initial =>
+  ListHospitalsForSchedulingApiRequest get initialState$ =>
       ListHospitalsForSchedulingApiRequest();
 
   @override
-  ListHospitalsForSchedulingApiRequestBuilder $newBuilder() =>
+  ListHospitalsForSchedulingApiRequestBuilder newBuilder$() =>
       ListHospitalsForSchedulingApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.hospitalIds,
         this.bizUnitId,
         this.healthSystemId,
@@ -503,28 +503,23 @@ class _$ListHospitalsForSchedulingApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    hospitalIds.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    healthSystemId.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    hcrId.$reducer(reducer);
-    teamId.$reducer(reducer);
-    physicianId.$reducer(reducer);
-    search.$reducer(reducer);
-    forCreateCase.$reducer(reducer);
-    skipCache.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    hospitalIds.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    healthSystemId.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    hcrId.reducer$(reducer);
+    teamId.reducer$(reducer);
+    physicianId.reducer$(reducer);
+    search.reducer$(reducer);
+    forCreateCase.reducer$(reducer);
+    skipCache.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListHospitalsForSchedulingApiRequest);
 }

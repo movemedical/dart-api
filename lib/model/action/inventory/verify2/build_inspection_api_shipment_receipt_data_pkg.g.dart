@@ -284,35 +284,35 @@ class _$BuildInspectionApiShipmentReceiptDataPkgActions
   final StatefulActionsOptions<
       BuildInspectionApiShipmentReceiptDataPkg,
       BuildInspectionApiShipmentReceiptDataPkgBuilder,
-      BuildInspectionApiShipmentReceiptDataPkgActions> $options;
+      BuildInspectionApiShipmentReceiptDataPkgActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiShipmentReceiptDataPkg> $replace;
+  final ActionDispatcher<BuildInspectionApiShipmentReceiptDataPkg> replace$;
   final FieldDispatcher<String> id;
   final LocationDataActions location;
   final FieldDispatcher<bool> receivingNow;
   final FieldDispatcher<BuiltList<String>> entryIds;
   final FieldDispatcher<BuiltList<String>> expectedStockIds;
 
-  _$BuildInspectionApiShipmentReceiptDataPkgActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiShipmentReceiptDataPkg>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BuildInspectionApiShipmentReceiptDataPkgActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiShipmentReceiptDataPkg>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        location = LocationDataActions(() => $options
+        location = LocationDataActions(() => options$
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        receivingNow = $options.field<bool>(
+        receivingNow = options$.field<bool>(
             'receivingNow',
             (a) => a?.receivingNow,
             (s) => s?.receivingNow,
             (p, b) => p?.receivingNow = b),
-        entryIds = $options.field<BuiltList<String>>('entryIds',
+        entryIds = options$.field<BuiltList<String>>('entryIds',
             (a) => a?.entryIds, (s) => s?.entryIds, (p, b) => p?.entryIds = b),
-        expectedStockIds = $options.field<BuiltList<String>>(
+        expectedStockIds = options$.field<BuiltList<String>>(
             'expectedStockIds',
             (a) => a?.expectedStockIds,
             (s) => s?.expectedStockIds,
@@ -324,24 +324,24 @@ class _$BuildInspectionApiShipmentReceiptDataPkgActions
       _$BuildInspectionApiShipmentReceiptDataPkgActions._(options());
 
   @override
-  BuildInspectionApiShipmentReceiptDataPkg get $initial =>
+  BuildInspectionApiShipmentReceiptDataPkg get initialState$ =>
       BuildInspectionApiShipmentReceiptDataPkg();
 
   @override
-  BuildInspectionApiShipmentReceiptDataPkgBuilder $newBuilder() =>
+  BuildInspectionApiShipmentReceiptDataPkgBuilder newBuilder$() =>
       BuildInspectionApiShipmentReceiptDataPkgBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.receivingNow,
         this.entryIds,
@@ -349,23 +349,18 @@ class _$BuildInspectionApiShipmentReceiptDataPkgActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    location.$reducer(reducer);
-    receivingNow.$reducer(reducer);
-    entryIds.$reducer(reducer);
-    expectedStockIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    location.reducer$(reducer);
+    receivingNow.reducer$(reducer);
+    entryIds.reducer$(reducer);
+    expectedStockIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    location.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    location.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiShipmentReceiptDataPkg);
 }

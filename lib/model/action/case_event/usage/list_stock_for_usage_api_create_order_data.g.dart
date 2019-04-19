@@ -255,36 +255,36 @@ class _$ListStockForUsageApiCreateOrderDataActions
   final StatefulActionsOptions<
       ListStockForUsageApiCreateOrderData,
       ListStockForUsageApiCreateOrderDataBuilder,
-      ListStockForUsageApiCreateOrderDataActions> $options;
+      ListStockForUsageApiCreateOrderDataActions> options$;
 
-  final ActionDispatcher<ListStockForUsageApiCreateOrderData> $replace;
+  final ActionDispatcher<ListStockForUsageApiCreateOrderData> replace$;
   final FieldDispatcher<HcrTeamType> hcrTeamType;
   final FieldDispatcher<String> hcrTeamId;
   final FieldDispatcher<String> salesOrgUnitId;
   final FieldDispatcher<LocationType> toLocationType;
   final FieldDispatcher<String> toLocationId;
 
-  _$ListStockForUsageApiCreateOrderDataActions._(this.$options)
-      : $replace = $options.action<ListStockForUsageApiCreateOrderData>(
-            '\$replace', (a) => a?.$replace),
-        hcrTeamType = $options.field<HcrTeamType>(
+  _$ListStockForUsageApiCreateOrderDataActions._(this.options$)
+      : replace$ = options$.action<ListStockForUsageApiCreateOrderData>(
+            'replace\$', (a) => a?.replace$),
+        hcrTeamType = options$.field<HcrTeamType>(
             'hcrTeamType',
             (a) => a?.hcrTeamType,
             (s) => s?.hcrTeamType,
             (p, b) => p?.hcrTeamType = b),
-        hcrTeamId = $options.field<String>('hcrTeamId', (a) => a?.hcrTeamId,
+        hcrTeamId = options$.field<String>('hcrTeamId', (a) => a?.hcrTeamId,
             (s) => s?.hcrTeamId, (p, b) => p?.hcrTeamId = b),
-        salesOrgUnitId = $options.field<String>(
+        salesOrgUnitId = options$.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
             (p, b) => p?.salesOrgUnitId = b),
-        toLocationType = $options.field<LocationType>(
+        toLocationType = options$.field<LocationType>(
             'toLocationType',
             (a) => a?.toLocationType,
             (s) => s?.toLocationType,
             (p, b) => p?.toLocationType = b),
-        toLocationId = $options.field<String>(
+        toLocationId = options$.field<String>(
             'toLocationId',
             (a) => a?.toLocationId,
             (s) => s?.toLocationId,
@@ -296,18 +296,18 @@ class _$ListStockForUsageApiCreateOrderDataActions
       _$ListStockForUsageApiCreateOrderDataActions._(options());
 
   @override
-  ListStockForUsageApiCreateOrderData get $initial =>
+  ListStockForUsageApiCreateOrderData get initialState$ =>
       ListStockForUsageApiCreateOrderData();
 
   @override
-  ListStockForUsageApiCreateOrderDataBuilder $newBuilder() =>
+  ListStockForUsageApiCreateOrderDataBuilder newBuilder$() =>
       ListStockForUsageApiCreateOrderDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.hcrTeamType,
         this.hcrTeamId,
         this.salesOrgUnitId,
@@ -316,22 +316,17 @@ class _$ListStockForUsageApiCreateOrderDataActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    hcrTeamType.$reducer(reducer);
-    hcrTeamId.$reducer(reducer);
-    salesOrgUnitId.$reducer(reducer);
-    toLocationType.$reducer(reducer);
-    toLocationId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    hcrTeamType.reducer$(reducer);
+    hcrTeamId.reducer$(reducer);
+    salesOrgUnitId.reducer$(reducer);
+    toLocationType.reducer$(reducer);
+    toLocationId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListStockForUsageApiCreateOrderData);
 }

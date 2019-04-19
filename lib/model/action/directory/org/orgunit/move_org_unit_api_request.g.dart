@@ -172,18 +172,18 @@ typedef StatefulActionsOptions<
 
 class _$MoveOrgUnitApiRequestActions extends MoveOrgUnitApiRequestActions {
   final StatefulActionsOptions<MoveOrgUnitApiRequest,
-      MoveOrgUnitApiRequestBuilder, MoveOrgUnitApiRequestActions> $options;
+      MoveOrgUnitApiRequestBuilder, MoveOrgUnitApiRequestActions> options$;
 
-  final ActionDispatcher<MoveOrgUnitApiRequest> $replace;
+  final ActionDispatcher<MoveOrgUnitApiRequest> replace$;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<String> parentOrgUnitId;
 
-  _$MoveOrgUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<MoveOrgUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+  _$MoveOrgUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<MoveOrgUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        parentOrgUnitId = $options.field<String>(
+        parentOrgUnitId = options$.field<String>(
             'parentOrgUnitId',
             (a) => a?.parentOrgUnitId,
             (s) => s?.parentOrgUnitId,
@@ -195,33 +195,29 @@ class _$MoveOrgUnitApiRequestActions extends MoveOrgUnitApiRequestActions {
       _$MoveOrgUnitApiRequestActions._(options());
 
   @override
-  MoveOrgUnitApiRequest get $initial => MoveOrgUnitApiRequest();
+  MoveOrgUnitApiRequest get initialState$ => MoveOrgUnitApiRequest();
 
   @override
-  MoveOrgUnitApiRequestBuilder $newBuilder() => MoveOrgUnitApiRequestBuilder();
+  MoveOrgUnitApiRequestBuilder newBuilder$() => MoveOrgUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orgUnitId,
         this.parentOrgUnitId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    parentOrgUnitId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    parentOrgUnitId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(MoveOrgUnitApiRequest);
 }

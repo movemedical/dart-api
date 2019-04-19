@@ -175,18 +175,18 @@ class _$RefreshPresenceApiRequestActions
   final StatefulActionsOptions<
       RefreshPresenceApiRequest,
       RefreshPresenceApiRequestBuilder,
-      RefreshPresenceApiRequestActions> $options;
+      RefreshPresenceApiRequestActions> options$;
 
-  final ActionDispatcher<RefreshPresenceApiRequest> $replace;
+  final ActionDispatcher<RefreshPresenceApiRequest> replace$;
   final FieldDispatcher<String> objectId;
   final FieldDispatcher<String> message;
 
-  _$RefreshPresenceApiRequestActions._(this.$options)
-      : $replace = $options.action<RefreshPresenceApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        objectId = $options.field<String>('objectId', (a) => a?.objectId,
+  _$RefreshPresenceApiRequestActions._(this.options$)
+      : replace$ = options$.action<RefreshPresenceApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        objectId = options$.field<String>('objectId', (a) => a?.objectId,
             (s) => s?.objectId, (p, b) => p?.objectId = b),
-        message = $options.field<String>('message', (a) => a?.message,
+        message = options$.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
         super._();
 
@@ -195,34 +195,30 @@ class _$RefreshPresenceApiRequestActions
       _$RefreshPresenceApiRequestActions._(options());
 
   @override
-  RefreshPresenceApiRequest get $initial => RefreshPresenceApiRequest();
+  RefreshPresenceApiRequest get initialState$ => RefreshPresenceApiRequest();
 
   @override
-  RefreshPresenceApiRequestBuilder $newBuilder() =>
+  RefreshPresenceApiRequestBuilder newBuilder$() =>
       RefreshPresenceApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.objectId,
         this.message,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    objectId.$reducer(reducer);
-    message.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    objectId.reducer$(reducer);
+    message.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(RefreshPresenceApiRequest);
 }

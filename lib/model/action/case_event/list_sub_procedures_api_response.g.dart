@@ -178,15 +178,15 @@ class _$ListSubProceduresApiResponseActions
   final StatefulActionsOptions<
       ListSubProceduresApiResponse,
       ListSubProceduresApiResponseBuilder,
-      ListSubProceduresApiResponseActions> $options;
+      ListSubProceduresApiResponseActions> options$;
 
-  final ActionDispatcher<ListSubProceduresApiResponse> $replace;
+  final ActionDispatcher<ListSubProceduresApiResponse> replace$;
   final FieldDispatcher<BuiltList<SubProcedure>> subProcedures;
 
-  _$ListSubProceduresApiResponseActions._(this.$options)
-      : $replace = $options.action<ListSubProceduresApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        subProcedures = $options.field<BuiltList<SubProcedure>>(
+  _$ListSubProceduresApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListSubProceduresApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        subProcedures = options$.field<BuiltList<SubProcedure>>(
             'subProcedures',
             (a) => a?.subProcedures,
             (s) => s?.subProcedures,
@@ -198,33 +198,29 @@ class _$ListSubProceduresApiResponseActions
       _$ListSubProceduresApiResponseActions._(options());
 
   @override
-  ListSubProceduresApiResponse get $initial => ListSubProceduresApiResponse();
+  ListSubProceduresApiResponse get initialState$ =>
+      ListSubProceduresApiResponse();
 
   @override
-  ListSubProceduresApiResponseBuilder $newBuilder() =>
+  ListSubProceduresApiResponseBuilder newBuilder$() =>
       ListSubProceduresApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.subProcedures,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    subProcedures.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    subProcedures.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListSubProceduresApiResponse);
 }

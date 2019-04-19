@@ -148,15 +148,15 @@ typedef StatefulActionsOptions<
 
 class _$CreateTeamApiResponseActions extends CreateTeamApiResponseActions {
   final StatefulActionsOptions<CreateTeamApiResponse,
-      CreateTeamApiResponseBuilder, CreateTeamApiResponseActions> $options;
+      CreateTeamApiResponseBuilder, CreateTeamApiResponseActions> options$;
 
-  final ActionDispatcher<CreateTeamApiResponse> $replace;
+  final ActionDispatcher<CreateTeamApiResponse> replace$;
   final FieldDispatcher<String> id;
 
-  _$CreateTeamApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateTeamApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$CreateTeamApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateTeamApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -165,31 +165,27 @@ class _$CreateTeamApiResponseActions extends CreateTeamApiResponseActions {
       _$CreateTeamApiResponseActions._(options());
 
   @override
-  CreateTeamApiResponse get $initial => CreateTeamApiResponse();
+  CreateTeamApiResponse get initialState$ => CreateTeamApiResponse();
 
   @override
-  CreateTeamApiResponseBuilder $newBuilder() => CreateTeamApiResponseBuilder();
+  CreateTeamApiResponseBuilder newBuilder$() => CreateTeamApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateTeamApiResponse);
 }

@@ -334,9 +334,9 @@ class _$ListExportLogsApiRequestActions
   final StatefulActionsOptions<
       ListExportLogsApiRequest,
       ListExportLogsApiRequestBuilder,
-      ListExportLogsApiRequestActions> $options;
+      ListExportLogsApiRequestActions> options$;
 
-  final ActionDispatcher<ListExportLogsApiRequest> $replace;
+  final ActionDispatcher<ListExportLogsApiRequest> replace$;
   final FieldDispatcher<String> exportJobId;
   final FieldDispatcher<String> search;
   final FieldDispatcher<DateTime> startDate;
@@ -346,30 +346,30 @@ class _$ListExportLogsApiRequestActions
   final FieldDispatcher<bool> descending;
   final PaginationParamsActions paging;
 
-  _$ListExportLogsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListExportLogsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        exportJobId = $options.field<String>(
+  _$ListExportLogsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListExportLogsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        exportJobId = options$.field<String>(
             'exportJobId',
             (a) => a?.exportJobId,
             (s) => s?.exportJobId,
             (p, b) => p?.exportJobId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+        startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
-        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
+        endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        currentState = $options.field<ExportState>(
+        currentState = options$.field<ExportState>(
             'currentState',
             (a) => a?.currentState,
             (s) => s?.currentState,
             (p, b) => p?.currentState = b),
-        sortBy = $options.field<ListExportLogsApiSortBy>('sortBy',
+        sortBy = options$.field<ListExportLogsApiSortBy>('sortBy',
             (a) => a?.sortBy, (s) => s?.sortBy, (p, b) => p?.sortBy = b),
-        descending = $options.field<bool>('descending', (a) => a?.descending,
+        descending = options$.field<bool>('descending', (a) => a?.descending,
             (s) => s?.descending, (p, b) => p?.descending = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -385,23 +385,23 @@ class _$ListExportLogsApiRequestActions
       _$ListExportLogsApiRequestActions._(options());
 
   @override
-  ListExportLogsApiRequest get $initial => ListExportLogsApiRequest();
+  ListExportLogsApiRequest get initialState$ => ListExportLogsApiRequest();
 
   @override
-  ListExportLogsApiRequestBuilder $newBuilder() =>
+  ListExportLogsApiRequestBuilder newBuilder$() =>
       ListExportLogsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.exportJobId,
         this.search,
         this.startDate,
@@ -412,25 +412,21 @@ class _$ListExportLogsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    exportJobId.$reducer(reducer);
-    search.$reducer(reducer);
-    startDate.$reducer(reducer);
-    endDate.$reducer(reducer);
-    currentState.$reducer(reducer);
-    sortBy.$reducer(reducer);
-    descending.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    exportJobId.reducer$(reducer);
+    search.reducer$(reducer);
+    startDate.reducer$(reducer);
+    endDate.reducer$(reducer);
+    currentState.reducer$(reducer);
+    sortBy.reducer$(reducer);
+    descending.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListExportLogsApiRequest);
 }

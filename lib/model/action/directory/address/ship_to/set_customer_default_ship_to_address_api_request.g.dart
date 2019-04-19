@@ -186,18 +186,18 @@ class _$SetCustomerDefaultShipToAddressApiRequestActions
   final StatefulActionsOptions<
       SetCustomerDefaultShipToAddressApiRequest,
       SetCustomerDefaultShipToAddressApiRequestBuilder,
-      SetCustomerDefaultShipToAddressApiRequestActions> $options;
+      SetCustomerDefaultShipToAddressApiRequestActions> options$;
 
-  final ActionDispatcher<SetCustomerDefaultShipToAddressApiRequest> $replace;
+  final ActionDispatcher<SetCustomerDefaultShipToAddressApiRequest> replace$;
   final FieldDispatcher<String> customerId;
   final FieldDispatcher<String> shipToAddressId;
 
-  _$SetCustomerDefaultShipToAddressApiRequestActions._(this.$options)
-      : $replace = $options.action<SetCustomerDefaultShipToAddressApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+  _$SetCustomerDefaultShipToAddressApiRequestActions._(this.options$)
+      : replace$ = options$.action<SetCustomerDefaultShipToAddressApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        shipToAddressId = $options.field<String>(
+        shipToAddressId = options$.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
@@ -209,36 +209,31 @@ class _$SetCustomerDefaultShipToAddressApiRequestActions
       _$SetCustomerDefaultShipToAddressApiRequestActions._(options());
 
   @override
-  SetCustomerDefaultShipToAddressApiRequest get $initial =>
+  SetCustomerDefaultShipToAddressApiRequest get initialState$ =>
       SetCustomerDefaultShipToAddressApiRequest();
 
   @override
-  SetCustomerDefaultShipToAddressApiRequestBuilder $newBuilder() =>
+  SetCustomerDefaultShipToAddressApiRequestBuilder newBuilder$() =>
       SetCustomerDefaultShipToAddressApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customerId,
         this.shipToAddressId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    customerId.$reducer(reducer);
-    shipToAddressId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    customerId.reducer$(reducer);
+    shipToAddressId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SetCustomerDefaultShipToAddressApiRequest);
 }

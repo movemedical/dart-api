@@ -177,15 +177,15 @@ class _$ListPackageContentsApiResponseActions
   final StatefulActionsOptions<
       ListPackageContentsApiResponse,
       ListPackageContentsApiResponseBuilder,
-      ListPackageContentsApiResponseActions> $options;
+      ListPackageContentsApiResponseActions> options$;
 
-  final ActionDispatcher<ListPackageContentsApiResponse> $replace;
+  final ActionDispatcher<ListPackageContentsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListPackageContentsApiContentItem>> contents;
 
-  _$ListPackageContentsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListPackageContentsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        contents = $options.field<BuiltList<ListPackageContentsApiContentItem>>(
+  _$ListPackageContentsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListPackageContentsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        contents = options$.field<BuiltList<ListPackageContentsApiContentItem>>(
             'contents',
             (a) => a?.contents,
             (s) => s?.contents,
@@ -197,34 +197,29 @@ class _$ListPackageContentsApiResponseActions
       _$ListPackageContentsApiResponseActions._(options());
 
   @override
-  ListPackageContentsApiResponse get $initial =>
+  ListPackageContentsApiResponse get initialState$ =>
       ListPackageContentsApiResponse();
 
   @override
-  ListPackageContentsApiResponseBuilder $newBuilder() =>
+  ListPackageContentsApiResponseBuilder newBuilder$() =>
       ListPackageContentsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.contents,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    contents.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    contents.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPackageContentsApiResponse);
 }

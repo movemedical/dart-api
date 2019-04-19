@@ -161,15 +161,15 @@ class _$CreateDeliveryScheduleProfileApiResponseActions
   final StatefulActionsOptions<
       CreateDeliveryScheduleProfileApiResponse,
       CreateDeliveryScheduleProfileApiResponseBuilder,
-      CreateDeliveryScheduleProfileApiResponseActions> $options;
+      CreateDeliveryScheduleProfileApiResponseActions> options$;
 
-  final ActionDispatcher<CreateDeliveryScheduleProfileApiResponse> $replace;
+  final ActionDispatcher<CreateDeliveryScheduleProfileApiResponse> replace$;
   final FieldDispatcher<String> id;
 
-  _$CreateDeliveryScheduleProfileApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateDeliveryScheduleProfileApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$CreateDeliveryScheduleProfileApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateDeliveryScheduleProfileApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -178,34 +178,29 @@ class _$CreateDeliveryScheduleProfileApiResponseActions
       _$CreateDeliveryScheduleProfileApiResponseActions._(options());
 
   @override
-  CreateDeliveryScheduleProfileApiResponse get $initial =>
+  CreateDeliveryScheduleProfileApiResponse get initialState$ =>
       CreateDeliveryScheduleProfileApiResponse();
 
   @override
-  CreateDeliveryScheduleProfileApiResponseBuilder $newBuilder() =>
+  CreateDeliveryScheduleProfileApiResponseBuilder newBuilder$() =>
       CreateDeliveryScheduleProfileApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateDeliveryScheduleProfileApiResponse);
 }

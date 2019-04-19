@@ -313,9 +313,9 @@ class _$ListWebServiceLogsApiRequestActions
   final StatefulActionsOptions<
       ListWebServiceLogsApiRequest,
       ListWebServiceLogsApiRequestBuilder,
-      ListWebServiceLogsApiRequestActions> $options;
+      ListWebServiceLogsApiRequestActions> options$;
 
-  final ActionDispatcher<ListWebServiceLogsApiRequest> $replace;
+  final ActionDispatcher<ListWebServiceLogsApiRequest> replace$;
   final FieldDispatcher<String> search;
   final FieldDispatcher<DateTime> startDate;
   final FieldDispatcher<DateTime> endDate;
@@ -324,22 +324,22 @@ class _$ListWebServiceLogsApiRequestActions
   final FieldDispatcher<bool> failed;
   final PaginationParamsActions paging;
 
-  _$ListWebServiceLogsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListWebServiceLogsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$ListWebServiceLogsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListWebServiceLogsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+        startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
-        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
+        endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        sortBy = $options.field<ListWebServiceLogsApiSortBy>('sortBy',
+        sortBy = options$.field<ListWebServiceLogsApiSortBy>('sortBy',
             (a) => a?.sortBy, (s) => s?.sortBy, (p, b) => p?.sortBy = b),
-        descending = $options.field<bool>('descending', (a) => a?.descending,
+        descending = options$.field<bool>('descending', (a) => a?.descending,
             (s) => s?.descending, (p, b) => p?.descending = b),
-        failed = $options.field<bool>('failed', (a) => a?.failed,
+        failed = options$.field<bool>('failed', (a) => a?.failed,
             (s) => s?.failed, (p, b) => p?.failed = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -355,23 +355,24 @@ class _$ListWebServiceLogsApiRequestActions
       _$ListWebServiceLogsApiRequestActions._(options());
 
   @override
-  ListWebServiceLogsApiRequest get $initial => ListWebServiceLogsApiRequest();
+  ListWebServiceLogsApiRequest get initialState$ =>
+      ListWebServiceLogsApiRequest();
 
   @override
-  ListWebServiceLogsApiRequestBuilder $newBuilder() =>
+  ListWebServiceLogsApiRequestBuilder newBuilder$() =>
       ListWebServiceLogsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
         this.startDate,
         this.endDate,
@@ -381,25 +382,20 @@ class _$ListWebServiceLogsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
-    startDate.$reducer(reducer);
-    endDate.$reducer(reducer);
-    sortBy.$reducer(reducer);
-    descending.$reducer(reducer);
-    failed.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
+    startDate.reducer$(reducer);
+    endDate.reducer$(reducer);
+    sortBy.reducer$(reducer);
+    descending.reducer$(reducer);
+    failed.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListWebServiceLogsApiRequest);
 }

@@ -182,21 +182,21 @@ class _$CreatePhysicianForFacilityApiRequestActions
   final StatefulActionsOptions<
       CreatePhysicianForFacilityApiRequest,
       CreatePhysicianForFacilityApiRequestBuilder,
-      CreatePhysicianForFacilityApiRequestActions> $options;
+      CreatePhysicianForFacilityApiRequestActions> options$;
 
-  final ActionDispatcher<CreatePhysicianForFacilityApiRequest> $replace;
+  final ActionDispatcher<CreatePhysicianForFacilityApiRequest> replace$;
   final FieldDispatcher<String> physicianId;
   final FieldDispatcher<String> facilityId;
 
-  _$CreatePhysicianForFacilityApiRequestActions._(this.$options)
-      : $replace = $options.action<CreatePhysicianForFacilityApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        physicianId = $options.field<String>(
+  _$CreatePhysicianForFacilityApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreatePhysicianForFacilityApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        physicianId = options$.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
         super._();
 
@@ -205,36 +205,31 @@ class _$CreatePhysicianForFacilityApiRequestActions
       _$CreatePhysicianForFacilityApiRequestActions._(options());
 
   @override
-  CreatePhysicianForFacilityApiRequest get $initial =>
+  CreatePhysicianForFacilityApiRequest get initialState$ =>
       CreatePhysicianForFacilityApiRequest();
 
   @override
-  CreatePhysicianForFacilityApiRequestBuilder $newBuilder() =>
+  CreatePhysicianForFacilityApiRequestBuilder newBuilder$() =>
       CreatePhysicianForFacilityApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.physicianId,
         this.facilityId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    physicianId.$reducer(reducer);
-    facilityId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    physicianId.reducer$(reducer);
+    facilityId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreatePhysicianForFacilityApiRequest);
 }

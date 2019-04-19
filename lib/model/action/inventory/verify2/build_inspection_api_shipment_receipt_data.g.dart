@@ -182,17 +182,17 @@ class _$BuildInspectionApiShipmentReceiptDataActions
   final StatefulActionsOptions<
       BuildInspectionApiShipmentReceiptData,
       BuildInspectionApiShipmentReceiptDataBuilder,
-      BuildInspectionApiShipmentReceiptDataActions> $options;
+      BuildInspectionApiShipmentReceiptDataActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiShipmentReceiptData> $replace;
+  final ActionDispatcher<BuildInspectionApiShipmentReceiptData> replace$;
   final FieldDispatcher<BuiltList<BuildInspectionApiShipmentReceiptDataPkg>>
       pkgs;
 
-  _$BuildInspectionApiShipmentReceiptDataActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiShipmentReceiptData>(
-            '\$replace', (a) => a?.$replace),
+  _$BuildInspectionApiShipmentReceiptDataActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiShipmentReceiptData>(
+            'replace\$', (a) => a?.replace$),
         pkgs =
-            $options.field<BuiltList<BuildInspectionApiShipmentReceiptDataPkg>>(
+            options$.field<BuiltList<BuildInspectionApiShipmentReceiptDataPkg>>(
                 'pkgs', (a) => a?.pkgs, (s) => s?.pkgs, (p, b) => p?.pkgs = b),
         super._();
 
@@ -201,34 +201,29 @@ class _$BuildInspectionApiShipmentReceiptDataActions
       _$BuildInspectionApiShipmentReceiptDataActions._(options());
 
   @override
-  BuildInspectionApiShipmentReceiptData get $initial =>
+  BuildInspectionApiShipmentReceiptData get initialState$ =>
       BuildInspectionApiShipmentReceiptData();
 
   @override
-  BuildInspectionApiShipmentReceiptDataBuilder $newBuilder() =>
+  BuildInspectionApiShipmentReceiptDataBuilder newBuilder$() =>
       BuildInspectionApiShipmentReceiptDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.pkgs,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    pkgs.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    pkgs.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiShipmentReceiptData);
 }

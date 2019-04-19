@@ -174,21 +174,21 @@ typedef StatefulActionsOptions<
 
 class _$AddAssigneeApiAssigneeActions extends AddAssigneeApiAssigneeActions {
   final StatefulActionsOptions<AddAssigneeApiAssignee,
-      AddAssigneeApiAssigneeBuilder, AddAssigneeApiAssigneeActions> $options;
+      AddAssigneeApiAssigneeBuilder, AddAssigneeApiAssigneeActions> options$;
 
-  final ActionDispatcher<AddAssigneeApiAssignee> $replace;
+  final ActionDispatcher<AddAssigneeApiAssignee> replace$;
   final FieldDispatcher<GeneralContactType> linkedType;
   final FieldDispatcher<String> linkedId;
 
-  _$AddAssigneeApiAssigneeActions._(this.$options)
-      : $replace = $options.action<AddAssigneeApiAssignee>(
-            '\$replace', (a) => a?.$replace),
-        linkedType = $options.field<GeneralContactType>(
+  _$AddAssigneeApiAssigneeActions._(this.options$)
+      : replace$ = options$.action<AddAssigneeApiAssignee>(
+            'replace\$', (a) => a?.replace$),
+        linkedType = options$.field<GeneralContactType>(
             'linkedType',
             (a) => a?.linkedType,
             (s) => s?.linkedType,
             (p, b) => p?.linkedType = b),
-        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
+        linkedId = options$.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
         super._();
 
@@ -197,34 +197,30 @@ class _$AddAssigneeApiAssigneeActions extends AddAssigneeApiAssigneeActions {
       _$AddAssigneeApiAssigneeActions._(options());
 
   @override
-  AddAssigneeApiAssignee get $initial => AddAssigneeApiAssignee();
+  AddAssigneeApiAssignee get initialState$ => AddAssigneeApiAssignee();
 
   @override
-  AddAssigneeApiAssigneeBuilder $newBuilder() =>
+  AddAssigneeApiAssigneeBuilder newBuilder$() =>
       AddAssigneeApiAssigneeBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.linkedType,
         this.linkedId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    linkedType.$reducer(reducer);
-    linkedId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    linkedType.reducer$(reducer);
+    linkedId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(AddAssigneeApiAssignee);
 }

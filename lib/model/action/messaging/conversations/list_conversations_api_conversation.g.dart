@@ -461,9 +461,9 @@ class _$ListConversationsApiConversationActions
   final StatefulActionsOptions<
       ListConversationsApiConversation,
       ListConversationsApiConversationBuilder,
-      ListConversationsApiConversationActions> $options;
+      ListConversationsApiConversationActions> options$;
 
-  final ActionDispatcher<ListConversationsApiConversation> $replace;
+  final ActionDispatcher<ListConversationsApiConversation> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<DateTime> urgency;
   final FieldDispatcher<String> purpose;
@@ -478,52 +478,52 @@ class _$ListConversationsApiConversationActions
   final FieldDispatcher<DateTime> lastMessageSentDate;
   final FieldDispatcher<BuiltList<AttributableObject>> links;
 
-  _$ListConversationsApiConversationActions._(this.$options)
-      : $replace = $options.action<ListConversationsApiConversation>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListConversationsApiConversationActions._(this.options$)
+      : replace$ = options$.action<ListConversationsApiConversation>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        urgency = $options.field<DateTime>('urgency', (a) => a?.urgency,
+        urgency = options$.field<DateTime>('urgency', (a) => a?.urgency,
             (s) => s?.urgency, (p, b) => p?.urgency = b),
-        purpose = $options.field<String>('purpose', (a) => a?.purpose,
+        purpose = options$.field<String>('purpose', (a) => a?.purpose,
             (s) => s?.purpose, (p, b) => p?.purpose = b),
-        allParticipantsDisplayText = $options.field<String>(
+        allParticipantsDisplayText = options$.field<String>(
             'allParticipantsDisplayText',
             (a) => a?.allParticipantsDisplayText,
             (s) => s?.allParticipantsDisplayText,
             (p, b) => p?.allParticipantsDisplayText = b),
-        stopped = $options.field<bool>('stopped', (a) => a?.stopped,
+        stopped = options$.field<bool>('stopped', (a) => a?.stopped,
             (s) => s?.stopped, (p, b) => p?.stopped = b),
-        archived = $options.field<bool>('archived', (a) => a?.archived,
+        archived = options$.field<bool>('archived', (a) => a?.archived,
             (s) => s?.archived, (p, b) => p?.archived = b),
-        unread = $options.field<int>('unread', (a) => a?.unread,
+        unread = options$.field<int>('unread', (a) => a?.unread,
             (s) => s?.unread, (p, b) => p?.unread = b),
-        lastSenderId = $options.field<String>(
+        lastSenderId = options$.field<String>(
             'lastSenderId',
             (a) => a?.lastSenderId,
             (s) => s?.lastSenderId,
             (p, b) => p?.lastSenderId = b),
-        lastSenderInitials = $options.field<String>(
+        lastSenderInitials = options$.field<String>(
             'lastSenderInitials',
             (a) => a?.lastSenderInitials,
             (s) => s?.lastSenderInitials,
             (p, b) => p?.lastSenderInitials = b),
-        lastSenderDisplayText = $options.field<String>(
+        lastSenderDisplayText = options$.field<String>(
             'lastSenderDisplayText',
             (a) => a?.lastSenderDisplayText,
             (s) => s?.lastSenderDisplayText,
             (p, b) => p?.lastSenderDisplayText = b),
-        lastMessagePreview = $options.field<String>(
+        lastMessagePreview = options$.field<String>(
             'lastMessagePreview',
             (a) => a?.lastMessagePreview,
             (s) => s?.lastMessagePreview,
             (p, b) => p?.lastMessagePreview = b),
-        lastMessageSentDate = $options.field<DateTime>(
+        lastMessageSentDate = options$.field<DateTime>(
             'lastMessageSentDate',
             (a) => a?.lastMessageSentDate,
             (s) => s?.lastMessageSentDate,
             (p, b) => p?.lastMessageSentDate = b),
-        links = $options.field<BuiltList<AttributableObject>>(
+        links = options$.field<BuiltList<AttributableObject>>(
             'links', (a) => a?.links, (s) => s?.links, (p, b) => p?.links = b),
         super._();
 
@@ -532,18 +532,18 @@ class _$ListConversationsApiConversationActions
       _$ListConversationsApiConversationActions._(options());
 
   @override
-  ListConversationsApiConversation get $initial =>
+  ListConversationsApiConversation get initialState$ =>
       ListConversationsApiConversation();
 
   @override
-  ListConversationsApiConversationBuilder $newBuilder() =>
+  ListConversationsApiConversationBuilder newBuilder$() =>
       ListConversationsApiConversationBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.urgency,
         this.purpose,
@@ -560,30 +560,25 @@ class _$ListConversationsApiConversationActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    urgency.$reducer(reducer);
-    purpose.$reducer(reducer);
-    allParticipantsDisplayText.$reducer(reducer);
-    stopped.$reducer(reducer);
-    archived.$reducer(reducer);
-    unread.$reducer(reducer);
-    lastSenderId.$reducer(reducer);
-    lastSenderInitials.$reducer(reducer);
-    lastSenderDisplayText.$reducer(reducer);
-    lastMessagePreview.$reducer(reducer);
-    lastMessageSentDate.$reducer(reducer);
-    links.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    urgency.reducer$(reducer);
+    purpose.reducer$(reducer);
+    allParticipantsDisplayText.reducer$(reducer);
+    stopped.reducer$(reducer);
+    archived.reducer$(reducer);
+    unread.reducer$(reducer);
+    lastSenderId.reducer$(reducer);
+    lastSenderInitials.reducer$(reducer);
+    lastSenderDisplayText.reducer$(reducer);
+    lastMessagePreview.reducer$(reducer);
+    lastMessageSentDate.reducer$(reducer);
+    links.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListConversationsApiConversation);
 }

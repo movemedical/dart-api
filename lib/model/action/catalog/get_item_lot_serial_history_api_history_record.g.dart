@@ -232,30 +232,30 @@ class _$GetItemLotSerialHistoryApiHistoryRecordActions
   final StatefulActionsOptions<
       GetItemLotSerialHistoryApiHistoryRecord,
       GetItemLotSerialHistoryApiHistoryRecordBuilder,
-      GetItemLotSerialHistoryApiHistoryRecordActions> $options;
+      GetItemLotSerialHistoryApiHistoryRecordActions> options$;
 
-  final ActionDispatcher<GetItemLotSerialHistoryApiHistoryRecord> $replace;
+  final ActionDispatcher<GetItemLotSerialHistoryApiHistoryRecord> replace$;
   final FieldDispatcher<DateTime> date;
   final FieldDispatcher<String> description;
   final FieldDispatcher<GetItemLotSerialHistoryApiHistoryType> historyType;
   final FieldDispatcher<String> referenceId;
 
-  _$GetItemLotSerialHistoryApiHistoryRecordActions._(this.$options)
-      : $replace = $options.action<GetItemLotSerialHistoryApiHistoryRecord>(
-            '\$replace', (a) => a?.$replace),
-        date = $options.field<DateTime>(
+  _$GetItemLotSerialHistoryApiHistoryRecordActions._(this.options$)
+      : replace$ = options$.action<GetItemLotSerialHistoryApiHistoryRecord>(
+            'replace\$', (a) => a?.replace$),
+        date = options$.field<DateTime>(
             'date', (a) => a?.date, (s) => s?.date, (p, b) => p?.date = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        historyType = $options.field<GetItemLotSerialHistoryApiHistoryType>(
+        historyType = options$.field<GetItemLotSerialHistoryApiHistoryType>(
             'historyType',
             (a) => a?.historyType,
             (s) => s?.historyType,
             (p, b) => p?.historyType = b),
-        referenceId = $options.field<String>(
+        referenceId = options$.field<String>(
             'referenceId',
             (a) => a?.referenceId,
             (s) => s?.referenceId,
@@ -267,18 +267,18 @@ class _$GetItemLotSerialHistoryApiHistoryRecordActions
       _$GetItemLotSerialHistoryApiHistoryRecordActions._(options());
 
   @override
-  GetItemLotSerialHistoryApiHistoryRecord get $initial =>
+  GetItemLotSerialHistoryApiHistoryRecord get initialState$ =>
       GetItemLotSerialHistoryApiHistoryRecord();
 
   @override
-  GetItemLotSerialHistoryApiHistoryRecordBuilder $newBuilder() =>
+  GetItemLotSerialHistoryApiHistoryRecordBuilder newBuilder$() =>
       GetItemLotSerialHistoryApiHistoryRecordBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.date,
         this.description,
         this.historyType,
@@ -286,21 +286,16 @@ class _$GetItemLotSerialHistoryApiHistoryRecordActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    date.$reducer(reducer);
-    description.$reducer(reducer);
-    historyType.$reducer(reducer);
-    referenceId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    date.reducer$(reducer);
+    description.reducer$(reducer);
+    historyType.reducer$(reducer);
+    referenceId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetItemLotSerialHistoryApiHistoryRecord);
 }

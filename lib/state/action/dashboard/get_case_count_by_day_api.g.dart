@@ -22,67 +22,32 @@ class _$GetCaseCountByDayApi extends GetCaseCountByDayApi {
           ApiResult<GetCaseCountByDayApiResponse>>,
       CommandStateBuilder<ApiCommand<GetCaseCountByDayApiRequest>,
           ApiResult<GetCaseCountByDayApiResponse>>,
-      GetCaseCountByDayApi> $options;
+      GetCaseCountByDayApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetCaseCountByDayApiRequest>,
-          ApiResult<GetCaseCountByDayApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetCaseCountByDayApiRequest>,
-          ApiResult<GetCaseCountByDayApiResponse>,
-          GetCaseCountByDayApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetCaseCountByDayApiRequest>,
-          ApiResult<GetCaseCountByDayApiResponse>,
-          GetCaseCountByDayApi,
-          Command<ApiCommand<GetCaseCountByDayApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetCaseCountByDayApiRequest>,
-          ApiResult<GetCaseCountByDayApiResponse>,
-          GetCaseCountByDayApi,
-          CommandResult<ApiResult<GetCaseCountByDayApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetCaseCountByDayApiRequest>,
-          ApiResult<GetCaseCountByDayApiResponse>,
-          GetCaseCountByDayApi,
-          CommandProgress>> $progress;
+          ApiResult<GetCaseCountByDayApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetCaseCountByDayApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<GetCaseCountByDayApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetCaseCountByDayApi._(this.$options)
-      : $replace = $options.action<
+  _$GetCaseCountByDayApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetCaseCountByDayApiRequest>,
                     ApiResult<GetCaseCountByDayApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetCaseCountByDayApiRequest>,
-                ApiResult<GetCaseCountByDayApiResponse>,
-                GetCaseCountByDayApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetCaseCountByDayApiRequest>,
-                    ApiResult<GetCaseCountByDayApiResponse>,
-                    GetCaseCountByDayApi,
-                    Command<ApiCommand<GetCaseCountByDayApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetCaseCountByDayApiRequest>,
-                    ApiResult<GetCaseCountByDayApiResponse>,
-                    GetCaseCountByDayApi,
-                    CommandResult<ApiResult<GetCaseCountByDayApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetCaseCountByDayApiRequest>,
-                ApiResult<GetCaseCountByDayApiResponse>,
-                GetCaseCountByDayApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<GetCaseCountByDayApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<GetCaseCountByDayApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetCaseCountByDayApi(GetCaseCountByDayApiOptions options) =>
@@ -91,32 +56,25 @@ class _$GetCaseCountByDayApi extends GetCaseCountByDayApi {
   @override
   CommandState<ApiCommand<GetCaseCountByDayApiRequest>,
           ApiResult<GetCaseCountByDayApiResponse>>
-      get $initial => CommandState<ApiCommand<GetCaseCountByDayApiRequest>,
+      get initialState$ => CommandState<ApiCommand<GetCaseCountByDayApiRequest>,
           ApiResult<GetCaseCountByDayApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetCaseCountByDayApiRequest>,
           ApiResult<GetCaseCountByDayApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetCaseCountByDayApiRequest>,
           ApiResult<GetCaseCountByDayApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetCaseCountByDayApiRequest)]),
-        FullType(ApiResult, [FullType(GetCaseCountByDayApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

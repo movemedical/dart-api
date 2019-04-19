@@ -279,9 +279,9 @@ class _$ListInvoicesForSalesOrderApiInvoiceActions
   final StatefulActionsOptions<
       ListInvoicesForSalesOrderApiInvoice,
       ListInvoicesForSalesOrderApiInvoiceBuilder,
-      ListInvoicesForSalesOrderApiInvoiceActions> $options;
+      ListInvoicesForSalesOrderApiInvoiceActions> options$;
 
-  final ActionDispatcher<ListInvoicesForSalesOrderApiInvoice> $replace;
+  final ActionDispatcher<ListInvoicesForSalesOrderApiInvoice> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> invoiceNumber;
   final FieldDispatcher<DateTime> invoiceDate;
@@ -289,32 +289,32 @@ class _$ListInvoicesForSalesOrderApiInvoiceActions
   final FieldDispatcher<String> erpOrderNumber;
   final FieldDispatcher<String> erpInvoiceNumber;
 
-  _$ListInvoicesForSalesOrderApiInvoiceActions._(this.$options)
-      : $replace = $options.action<ListInvoicesForSalesOrderApiInvoice>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListInvoicesForSalesOrderApiInvoiceActions._(this.options$)
+      : replace$ = options$.action<ListInvoicesForSalesOrderApiInvoice>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        invoiceNumber = $options.field<int>(
+        invoiceNumber = options$.field<int>(
             'invoiceNumber',
             (a) => a?.invoiceNumber,
             (s) => s?.invoiceNumber,
             (p, b) => p?.invoiceNumber = b),
-        invoiceDate = $options.field<DateTime>(
+        invoiceDate = options$.field<DateTime>(
             'invoiceDate',
             (a) => a?.invoiceDate,
             (s) => s?.invoiceDate,
             (p, b) => p?.invoiceDate = b),
-        invoiceCreationDate = $options.field<DateTime>(
+        invoiceCreationDate = options$.field<DateTime>(
             'invoiceCreationDate',
             (a) => a?.invoiceCreationDate,
             (s) => s?.invoiceCreationDate,
             (p, b) => p?.invoiceCreationDate = b),
-        erpOrderNumber = $options.field<String>(
+        erpOrderNumber = options$.field<String>(
             'erpOrderNumber',
             (a) => a?.erpOrderNumber,
             (s) => s?.erpOrderNumber,
             (p, b) => p?.erpOrderNumber = b),
-        erpInvoiceNumber = $options.field<String>(
+        erpInvoiceNumber = options$.field<String>(
             'erpInvoiceNumber',
             (a) => a?.erpInvoiceNumber,
             (s) => s?.erpInvoiceNumber,
@@ -326,18 +326,18 @@ class _$ListInvoicesForSalesOrderApiInvoiceActions
       _$ListInvoicesForSalesOrderApiInvoiceActions._(options());
 
   @override
-  ListInvoicesForSalesOrderApiInvoice get $initial =>
+  ListInvoicesForSalesOrderApiInvoice get initialState$ =>
       ListInvoicesForSalesOrderApiInvoice();
 
   @override
-  ListInvoicesForSalesOrderApiInvoiceBuilder $newBuilder() =>
+  ListInvoicesForSalesOrderApiInvoiceBuilder newBuilder$() =>
       ListInvoicesForSalesOrderApiInvoiceBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.invoiceNumber,
         this.invoiceDate,
@@ -347,23 +347,18 @@ class _$ListInvoicesForSalesOrderApiInvoiceActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    invoiceNumber.$reducer(reducer);
-    invoiceDate.$reducer(reducer);
-    invoiceCreationDate.$reducer(reducer);
-    erpOrderNumber.$reducer(reducer);
-    erpInvoiceNumber.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    invoiceNumber.reducer$(reducer);
+    invoiceDate.reducer$(reducer);
+    invoiceCreationDate.reducer$(reducer);
+    erpOrderNumber.reducer$(reducer);
+    erpInvoiceNumber.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListInvoicesForSalesOrderApiInvoice);
 }

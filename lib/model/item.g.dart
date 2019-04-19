@@ -485,9 +485,9 @@ typedef StatefulActionsOptions<Item, ItemBuilder,
     ItemActions> ItemActionsOptions();
 
 class _$ItemActions extends ItemActions {
-  final StatefulActionsOptions<Item, ItemBuilder, ItemActions> $options;
+  final StatefulActionsOptions<Item, ItemBuilder, ItemActions> options$;
 
-  final ActionDispatcher<Item> $replace;
+  final ActionDispatcher<Item> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> itemNumber;
   final FieldDispatcher<int> sizeSequence;
@@ -504,58 +504,58 @@ class _$ItemActions extends ItemActions {
   final FieldDispatcher<CurrencyType> currencyType;
   final UnitOfMeasureActions unitOfMeasure;
 
-  _$ItemActions._(this.$options)
-      : $replace = $options.action<Item>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ItemActions._(this.options$)
+      : replace$ = options$.action<Item>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+        itemNumber = options$.field<String>('itemNumber', (a) => a?.itemNumber,
             (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
-        sizeSequence = $options.field<int>(
+        sizeSequence = options$.field<int>(
             'sizeSequence',
             (a) => a?.sizeSequence,
             (s) => s?.sizeSequence,
             (p, b) => p?.sizeSequence = b),
-        skuNumber = $options.field<String>('skuNumber', (a) => a?.skuNumber,
+        skuNumber = options$.field<String>('skuNumber', (a) => a?.skuNumber,
             (s) => s?.skuNumber, (p, b) => p?.skuNumber = b),
-        shortDescription = $options.field<String>(
+        shortDescription = options$.field<String>(
             'shortDescription',
             (a) => a?.shortDescription,
             (s) => s?.shortDescription,
             (p, b) => p?.shortDescription = b),
-        longDescription = $options.field<String>(
+        longDescription = options$.field<String>(
             'longDescription',
             (a) => a?.longDescription,
             (s) => s?.longDescription,
             (p, b) => p?.longDescription = b),
-        itemClass = $options.field<String>('itemClass', (a) => a?.itemClass,
+        itemClass = options$.field<String>('itemClass', (a) => a?.itemClass,
             (s) => s?.itemClass, (p, b) => p?.itemClass = b),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        itemType = $options.field<String>('itemType', (a) => a?.itemType,
+        itemType = options$.field<String>('itemType', (a) => a?.itemType,
             (s) => s?.itemType, (p, b) => p?.itemType = b),
-        moveItemType = $options.field<MoveItemType>(
+        moveItemType = options$.field<MoveItemType>(
             'moveItemType',
             (a) => a?.moveItemType,
             (s) => s?.moveItemType,
             (p, b) => p?.moveItemType = b),
-        lotTracked = $options.field<bool>('lotTracked', (a) => a?.lotTracked,
+        lotTracked = options$.field<bool>('lotTracked', (a) => a?.lotTracked,
             (s) => s?.lotTracked, (p, b) => p?.lotTracked = b),
-        serialTracked = $options.field<bool>(
+        serialTracked = options$.field<bool>(
             'serialTracked',
             (a) => a?.serialTracked,
             (s) => s?.serialTracked,
             (p, b) => p?.serialTracked = b),
-        listPrice = $options.field<double>('listPrice', (a) => a?.listPrice,
+        listPrice = options$.field<double>('listPrice', (a) => a?.listPrice,
             (s) => s?.listPrice, (p, b) => p?.listPrice = b),
-        currencyType = $options.field<CurrencyType>(
+        currencyType = options$.field<CurrencyType>(
             'currencyType',
             (a) => a?.currencyType,
             (s) => s?.currencyType,
             (p, b) => p?.currencyType = b),
-        unitOfMeasure = UnitOfMeasureActions(() => $options.stateful<
+        unitOfMeasure = UnitOfMeasureActions(() => options$.stateful<
                 UnitOfMeasure, UnitOfMeasureBuilder, UnitOfMeasureActions>(
             'unitOfMeasure',
             (a) => a.unitOfMeasure,
@@ -568,22 +568,22 @@ class _$ItemActions extends ItemActions {
       _$ItemActions._(options());
 
   @override
-  Item get $initial => Item();
+  Item get initialState$ => Item();
 
   @override
-  ItemBuilder $newBuilder() => ItemBuilder();
+  ItemBuilder newBuilder$() => ItemBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.unitOfMeasure,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.itemNumber,
         this.sizeSequence,
@@ -601,32 +601,28 @@ class _$ItemActions extends ItemActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    itemNumber.$reducer(reducer);
-    sizeSequence.$reducer(reducer);
-    skuNumber.$reducer(reducer);
-    shortDescription.$reducer(reducer);
-    longDescription.$reducer(reducer);
-    itemClass.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    itemType.$reducer(reducer);
-    moveItemType.$reducer(reducer);
-    lotTracked.$reducer(reducer);
-    serialTracked.$reducer(reducer);
-    listPrice.$reducer(reducer);
-    currencyType.$reducer(reducer);
-    unitOfMeasure.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    itemNumber.reducer$(reducer);
+    sizeSequence.reducer$(reducer);
+    skuNumber.reducer$(reducer);
+    shortDescription.reducer$(reducer);
+    longDescription.reducer$(reducer);
+    itemClass.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    itemType.reducer$(reducer);
+    moveItemType.reducer$(reducer);
+    lotTracked.reducer$(reducer);
+    serialTracked.reducer$(reducer);
+    listPrice.reducer$(reducer);
+    currencyType.reducer$(reducer);
+    unitOfMeasure.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    unitOfMeasure.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    unitOfMeasure.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Item);
 }

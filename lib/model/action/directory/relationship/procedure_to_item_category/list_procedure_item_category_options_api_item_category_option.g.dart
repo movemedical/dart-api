@@ -290,10 +290,10 @@ class _$ListProcedureItemCategoryOptionsApiItemCategoryOptionActions
   final StatefulActionsOptions<
       ListProcedureItemCategoryOptionsApiItemCategoryOption,
       ListProcedureItemCategoryOptionsApiItemCategoryOptionBuilder,
-      ListProcedureItemCategoryOptionsApiItemCategoryOptionActions> $options;
+      ListProcedureItemCategoryOptionsApiItemCategoryOptionActions> options$;
 
   final ActionDispatcher<ListProcedureItemCategoryOptionsApiItemCategoryOption>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> rootCategoryId;
   final FieldDispatcher<String> parentCategoryId;
@@ -302,27 +302,27 @@ class _$ListProcedureItemCategoryOptionsApiItemCategoryOptionActions
   final FieldDispatcher<bool> bottom;
 
   _$ListProcedureItemCategoryOptionsApiItemCategoryOptionActions._(
-      this.$options)
-      : $replace = $options
+      this.options$)
+      : replace$ = options$
             .action<ListProcedureItemCategoryOptionsApiItemCategoryOption>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        rootCategoryId = $options.field<String>(
+        rootCategoryId = options$.field<String>(
             'rootCategoryId',
             (a) => a?.rootCategoryId,
             (s) => s?.rootCategoryId,
             (p, b) => p?.rootCategoryId = b),
-        parentCategoryId = $options.field<String>(
+        parentCategoryId = options$.field<String>(
             'parentCategoryId',
             (a) => a?.parentCategoryId,
             (s) => s?.parentCategoryId,
             (p, b) => p?.parentCategoryId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        code = $options.field<String>(
+        code = options$.field<String>(
             'code', (a) => a?.code, (s) => s?.code, (p, b) => p?.code = b),
-        bottom = $options.field<bool>('bottom', (a) => a?.bottom,
+        bottom = options$.field<bool>('bottom', (a) => a?.bottom,
             (s) => s?.bottom, (p, b) => p?.bottom = b),
         super._();
 
@@ -333,18 +333,18 @@ class _$ListProcedureItemCategoryOptionsApiItemCategoryOptionActions
           ._(options());
 
   @override
-  ListProcedureItemCategoryOptionsApiItemCategoryOption get $initial =>
+  ListProcedureItemCategoryOptionsApiItemCategoryOption get initialState$ =>
       ListProcedureItemCategoryOptionsApiItemCategoryOption();
 
   @override
-  ListProcedureItemCategoryOptionsApiItemCategoryOptionBuilder $newBuilder() =>
+  ListProcedureItemCategoryOptionsApiItemCategoryOptionBuilder newBuilder$() =>
       ListProcedureItemCategoryOptionsApiItemCategoryOptionBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.rootCategoryId,
         this.parentCategoryId,
@@ -354,23 +354,18 @@ class _$ListProcedureItemCategoryOptionsApiItemCategoryOptionActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    rootCategoryId.$reducer(reducer);
-    parentCategoryId.$reducer(reducer);
-    name.$reducer(reducer);
-    code.$reducer(reducer);
-    bottom.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    rootCategoryId.reducer$(reducer);
+    parentCategoryId.reducer$(reducer);
+    name.reducer$(reducer);
+    code.reducer$(reducer);
+    bottom.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(ListProcedureItemCategoryOptionsApiItemCategoryOption);
 }

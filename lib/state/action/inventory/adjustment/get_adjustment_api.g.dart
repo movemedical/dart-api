@@ -22,67 +22,31 @@ class _$GetAdjustmentApi extends GetAdjustmentApi {
           ApiResult<GetAdjustmentApiResponse>>,
       CommandStateBuilder<ApiCommand<GetAdjustmentApiRequest>,
           ApiResult<GetAdjustmentApiResponse>>,
-      GetAdjustmentApi> $options;
+      GetAdjustmentApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetAdjustmentApiRequest>,
-          ApiResult<GetAdjustmentApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetAdjustmentApiRequest>,
-          ApiResult<GetAdjustmentApiResponse>,
-          GetAdjustmentApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetAdjustmentApiRequest>,
-          ApiResult<GetAdjustmentApiResponse>,
-          GetAdjustmentApi,
-          Command<ApiCommand<GetAdjustmentApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetAdjustmentApiRequest>,
-          ApiResult<GetAdjustmentApiResponse>,
-          GetAdjustmentApi,
-          CommandResult<ApiResult<GetAdjustmentApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetAdjustmentApiRequest>,
-          ApiResult<GetAdjustmentApiResponse>,
-          GetAdjustmentApi,
-          CommandProgress>> $progress;
+          ApiResult<GetAdjustmentApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetAdjustmentApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<GetAdjustmentApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetAdjustmentApi._(this.$options)
-      : $replace = $options.action<
+  _$GetAdjustmentApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetAdjustmentApiRequest>,
                     ApiResult<GetAdjustmentApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetAdjustmentApiRequest>,
-                ApiResult<GetAdjustmentApiResponse>,
-                GetAdjustmentApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetAdjustmentApiRequest>,
-                    ApiResult<GetAdjustmentApiResponse>,
-                    GetAdjustmentApi,
-                    Command<ApiCommand<GetAdjustmentApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetAdjustmentApiRequest>,
-                    ApiResult<GetAdjustmentApiResponse>,
-                    GetAdjustmentApi,
-                    CommandResult<ApiResult<GetAdjustmentApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetAdjustmentApiRequest>,
-                ApiResult<GetAdjustmentApiResponse>,
-                GetAdjustmentApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<GetAdjustmentApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<GetAdjustmentApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetAdjustmentApi(GetAdjustmentApiOptions options) =>
@@ -91,31 +55,24 @@ class _$GetAdjustmentApi extends GetAdjustmentApi {
   @override
   CommandState<ApiCommand<GetAdjustmentApiRequest>,
           ApiResult<GetAdjustmentApiResponse>>
-      get $initial => CommandState<ApiCommand<GetAdjustmentApiRequest>,
+      get initialState$ => CommandState<ApiCommand<GetAdjustmentApiRequest>,
           ApiResult<GetAdjustmentApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetAdjustmentApiRequest>,
           ApiResult<GetAdjustmentApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<GetAdjustmentApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<GetAdjustmentApiRequest>,
           ApiResult<GetAdjustmentApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetAdjustmentApiRequest)]),
-        FullType(ApiResult, [FullType(GetAdjustmentApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

@@ -496,9 +496,9 @@ class _$GetCaseEventDetailApiDisplayRulesActions
   final StatefulActionsOptions<
       GetCaseEventDetailApiDisplayRules,
       GetCaseEventDetailApiDisplayRulesBuilder,
-      GetCaseEventDetailApiDisplayRulesActions> $options;
+      GetCaseEventDetailApiDisplayRulesActions> options$;
 
-  final ActionDispatcher<GetCaseEventDetailApiDisplayRules> $replace;
+  final ActionDispatcher<GetCaseEventDetailApiDisplayRules> replace$;
   final FieldDispatcher<bool> confirmCase;
   final FieldDispatcher<bool> confirmUsage;
   final FieldDispatcher<bool> editRequirements;
@@ -515,62 +515,62 @@ class _$GetCaseEventDetailApiDisplayRulesActions
   final FieldDispatcher<bool> addPONumber;
   final FieldDispatcher<bool> loanReturn;
 
-  _$GetCaseEventDetailApiDisplayRulesActions._(this.$options)
-      : $replace = $options.action<GetCaseEventDetailApiDisplayRules>(
-            '\$replace', (a) => a?.$replace),
-        confirmCase = $options.field<bool>('confirmCase', (a) => a?.confirmCase,
+  _$GetCaseEventDetailApiDisplayRulesActions._(this.options$)
+      : replace$ = options$.action<GetCaseEventDetailApiDisplayRules>(
+            'replace\$', (a) => a?.replace$),
+        confirmCase = options$.field<bool>('confirmCase', (a) => a?.confirmCase,
             (s) => s?.confirmCase, (p, b) => p?.confirmCase = b),
-        confirmUsage = $options.field<bool>(
+        confirmUsage = options$.field<bool>(
             'confirmUsage',
             (a) => a?.confirmUsage,
             (s) => s?.confirmUsage,
             (p, b) => p?.confirmUsage = b),
-        editRequirements = $options.field<bool>(
+        editRequirements = options$.field<bool>(
             'editRequirements',
             (a) => a?.editRequirements,
             (s) => s?.editRequirements,
             (p, b) => p?.editRequirements = b),
-        reschedule = $options.field<bool>('reschedule', (a) => a?.reschedule,
+        reschedule = options$.field<bool>('reschedule', (a) => a?.reschedule,
             (s) => s?.reschedule, (p, b) => p?.reschedule = b),
-        cancel = $options.field<bool>('cancel', (a) => a?.cancel,
+        cancel = options$.field<bool>('cancel', (a) => a?.cancel,
             (s) => s?.cancel, (p, b) => p?.cancel = b),
-        editUsage = $options.field<bool>('editUsage', (a) => a?.editUsage,
+        editUsage = options$.field<bool>('editUsage', (a) => a?.editUsage,
             (s) => s?.editUsage, (p, b) => p?.editUsage = b),
-        schedulingEditFull = $options.field<bool>(
+        schedulingEditFull = options$.field<bool>(
             'schedulingEditFull',
             (a) => a?.schedulingEditFull,
             (s) => s?.schedulingEditFull,
             (p, b) => p?.schedulingEditFull = b),
-        schedulingEditPartial = $options.field<bool>(
+        schedulingEditPartial = options$.field<bool>(
             'schedulingEditPartial',
             (a) => a?.schedulingEditPartial,
             (s) => s?.schedulingEditPartial,
             (p, b) => p?.schedulingEditPartial = b),
-        editPatient = $options.field<bool>('editPatient', (a) => a?.editPatient,
+        editPatient = options$.field<bool>('editPatient', (a) => a?.editPatient,
             (s) => s?.editPatient, (p, b) => p?.editPatient = b),
-        editDeliverTo = $options.field<bool>(
+        editDeliverTo = options$.field<bool>(
             'editDeliverTo',
             (a) => a?.editDeliverTo,
             (s) => s?.editDeliverTo,
             (p, b) => p?.editDeliverTo = b),
-        moveBackToPlanning = $options.field<bool>(
+        moveBackToPlanning = options$.field<bool>(
             'moveBackToPlanning',
             (a) => a?.moveBackToPlanning,
             (s) => s?.moveBackToPlanning,
             (p, b) => p?.moveBackToPlanning = b),
-        billingCodes = $options.field<bool>(
+        billingCodes = options$.field<bool>(
             'billingCodes',
             (a) => a?.billingCodes,
             (s) => s?.billingCodes,
             (p, b) => p?.billingCodes = b),
-        overridePrice = $options.field<bool>(
+        overridePrice = options$.field<bool>(
             'overridePrice',
             (a) => a?.overridePrice,
             (s) => s?.overridePrice,
             (p, b) => p?.overridePrice = b),
-        addPONumber = $options.field<bool>('addPONumber', (a) => a?.addPONumber,
+        addPONumber = options$.field<bool>('addPONumber', (a) => a?.addPONumber,
             (s) => s?.addPONumber, (p, b) => p?.addPONumber = b),
-        loanReturn = $options.field<bool>('loanReturn', (a) => a?.loanReturn,
+        loanReturn = options$.field<bool>('loanReturn', (a) => a?.loanReturn,
             (s) => s?.loanReturn, (p, b) => p?.loanReturn = b),
         super._();
 
@@ -579,18 +579,18 @@ class _$GetCaseEventDetailApiDisplayRulesActions
       _$GetCaseEventDetailApiDisplayRulesActions._(options());
 
   @override
-  GetCaseEventDetailApiDisplayRules get $initial =>
+  GetCaseEventDetailApiDisplayRules get initialState$ =>
       GetCaseEventDetailApiDisplayRules();
 
   @override
-  GetCaseEventDetailApiDisplayRulesBuilder $newBuilder() =>
+  GetCaseEventDetailApiDisplayRulesBuilder newBuilder$() =>
       GetCaseEventDetailApiDisplayRulesBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.confirmCase,
         this.confirmUsage,
         this.editRequirements,
@@ -609,32 +609,27 @@ class _$GetCaseEventDetailApiDisplayRulesActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    confirmCase.$reducer(reducer);
-    confirmUsage.$reducer(reducer);
-    editRequirements.$reducer(reducer);
-    reschedule.$reducer(reducer);
-    cancel.$reducer(reducer);
-    editUsage.$reducer(reducer);
-    schedulingEditFull.$reducer(reducer);
-    schedulingEditPartial.$reducer(reducer);
-    editPatient.$reducer(reducer);
-    editDeliverTo.$reducer(reducer);
-    moveBackToPlanning.$reducer(reducer);
-    billingCodes.$reducer(reducer);
-    overridePrice.$reducer(reducer);
-    addPONumber.$reducer(reducer);
-    loanReturn.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    confirmCase.reducer$(reducer);
+    confirmUsage.reducer$(reducer);
+    editRequirements.reducer$(reducer);
+    reschedule.reducer$(reducer);
+    cancel.reducer$(reducer);
+    editUsage.reducer$(reducer);
+    schedulingEditFull.reducer$(reducer);
+    schedulingEditPartial.reducer$(reducer);
+    editPatient.reducer$(reducer);
+    editDeliverTo.reducer$(reducer);
+    moveBackToPlanning.reducer$(reducer);
+    billingCodes.reducer$(reducer);
+    overridePrice.reducer$(reducer);
+    addPONumber.reducer$(reducer);
+    loanReturn.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCaseEventDetailApiDisplayRules);
 }

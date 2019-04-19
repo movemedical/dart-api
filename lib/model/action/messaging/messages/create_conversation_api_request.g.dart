@@ -320,9 +320,9 @@ class _$CreateConversationApiRequestActions
   final StatefulActionsOptions<
       CreateConversationApiRequest,
       CreateConversationApiRequestBuilder,
-      CreateConversationApiRequestActions> $options;
+      CreateConversationApiRequestActions> options$;
 
-  final ActionDispatcher<CreateConversationApiRequest> $replace;
+  final ActionDispatcher<CreateConversationApiRequest> replace$;
   final FieldDispatcher<String> startedByContactId;
   final FieldDispatcher<String> purpose;
   final FieldDispatcher<String> message;
@@ -331,31 +331,31 @@ class _$CreateConversationApiRequestActions
   final FieldDispatcher<AttributableType> attributableType;
   final FieldDispatcher<String> attrId;
 
-  _$CreateConversationApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateConversationApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        startedByContactId = $options.field<String>(
+  _$CreateConversationApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateConversationApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        startedByContactId = options$.field<String>(
             'startedByContactId',
             (a) => a?.startedByContactId,
             (s) => s?.startedByContactId,
             (p, b) => p?.startedByContactId = b),
-        purpose = $options.field<String>('purpose', (a) => a?.purpose,
+        purpose = options$.field<String>('purpose', (a) => a?.purpose,
             (s) => s?.purpose, (p, b) => p?.purpose = b),
-        message = $options.field<String>('message', (a) => a?.message,
+        message = options$.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
-        urgency = $options.field<DateTime>('urgency', (a) => a?.urgency,
+        urgency = options$.field<DateTime>('urgency', (a) => a?.urgency,
             (s) => s?.urgency, (p, b) => p?.urgency = b),
-        participantContactIds = $options.field<BuiltList<String>>(
+        participantContactIds = options$.field<BuiltList<String>>(
             'participantContactIds',
             (a) => a?.participantContactIds,
             (s) => s?.participantContactIds,
             (p, b) => p?.participantContactIds = b),
-        attributableType = $options.field<AttributableType>(
+        attributableType = options$.field<AttributableType>(
             'attributableType',
             (a) => a?.attributableType,
             (s) => s?.attributableType,
             (p, b) => p?.attributableType = b),
-        attrId = $options.field<String>('attrId', (a) => a?.attrId,
+        attrId = options$.field<String>('attrId', (a) => a?.attrId,
             (s) => s?.attrId, (p, b) => p?.attrId = b),
         super._();
 
@@ -364,17 +364,18 @@ class _$CreateConversationApiRequestActions
       _$CreateConversationApiRequestActions._(options());
 
   @override
-  CreateConversationApiRequest get $initial => CreateConversationApiRequest();
+  CreateConversationApiRequest get initialState$ =>
+      CreateConversationApiRequest();
 
   @override
-  CreateConversationApiRequestBuilder $newBuilder() =>
+  CreateConversationApiRequestBuilder newBuilder$() =>
       CreateConversationApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.startedByContactId,
         this.purpose,
         this.message,
@@ -385,24 +386,19 @@ class _$CreateConversationApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    startedByContactId.$reducer(reducer);
-    purpose.$reducer(reducer);
-    message.$reducer(reducer);
-    urgency.$reducer(reducer);
-    participantContactIds.$reducer(reducer);
-    attributableType.$reducer(reducer);
-    attrId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    startedByContactId.reducer$(reducer);
+    purpose.reducer$(reducer);
+    message.reducer$(reducer);
+    urgency.reducer$(reducer);
+    participantContactIds.reducer$(reducer);
+    attributableType.reducer$(reducer);
+    attrId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateConversationApiRequest);
 }

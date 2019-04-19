@@ -200,23 +200,23 @@ typedef StatefulActionsOptions<TeamLink, TeamLinkBuilder,
 
 class _$TeamLinkActions extends TeamLinkActions {
   final StatefulActionsOptions<TeamLink, TeamLinkBuilder, TeamLinkActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<TeamLink> $replace;
+  final ActionDispatcher<TeamLink> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> teamId;
   final FieldDispatcher<String> teamName;
   final FieldDispatcher<bool> teamActive;
 
-  _$TeamLinkActions._(this.$options)
-      : $replace = $options.action<TeamLink>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$TeamLinkActions._(this.options$)
+      : replace$ = options$.action<TeamLink>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        teamName = $options.field<String>('teamName', (a) => a?.teamName,
+        teamName = options$.field<String>('teamName', (a) => a?.teamName,
             (s) => s?.teamName, (p, b) => p?.teamName = b),
-        teamActive = $options.field<bool>('teamActive', (a) => a?.teamActive,
+        teamActive = options$.field<bool>('teamActive', (a) => a?.teamActive,
             (s) => s?.teamActive, (p, b) => p?.teamActive = b),
         super._();
 
@@ -224,16 +224,16 @@ class _$TeamLinkActions extends TeamLinkActions {
       _$TeamLinkActions._(options());
 
   @override
-  TeamLink get $initial => TeamLink();
+  TeamLink get initialState$ => TeamLink();
 
   @override
-  TeamLinkBuilder $newBuilder() => TeamLinkBuilder();
+  TeamLinkBuilder newBuilder$() => TeamLinkBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.teamId,
         this.teamName,
@@ -241,20 +241,16 @@ class _$TeamLinkActions extends TeamLinkActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    teamId.$reducer(reducer);
-    teamName.$reducer(reducer);
-    teamActive.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    teamId.reducer$(reducer);
+    teamName.reducer$(reducer);
+    teamActive.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(TeamLink);
 }

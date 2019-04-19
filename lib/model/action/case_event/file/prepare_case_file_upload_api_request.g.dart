@@ -301,9 +301,9 @@ class _$PrepareCaseFileUploadApiRequestActions
   final StatefulActionsOptions<
       PrepareCaseFileUploadApiRequest,
       PrepareCaseFileUploadApiRequestBuilder,
-      PrepareCaseFileUploadApiRequestActions> $options;
+      PrepareCaseFileUploadApiRequestActions> options$;
 
-  final ActionDispatcher<PrepareCaseFileUploadApiRequest> $replace;
+  final ActionDispatcher<PrepareCaseFileUploadApiRequest> replace$;
   final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<String> fileName;
   final FieldDispatcher<String> fileDescription;
@@ -312,34 +312,34 @@ class _$PrepareCaseFileUploadApiRequestActions
   final FieldDispatcher<String> ownerOrgUnitId;
   final FieldDispatcher<Visibility> visibility;
 
-  _$PrepareCaseFileUploadApiRequestActions._(this.$options)
-      : $replace = $options.action<PrepareCaseFileUploadApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$PrepareCaseFileUploadApiRequestActions._(this.options$)
+      : replace$ = options$.action<PrepareCaseFileUploadApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        fileName = $options.field<String>('fileName', (a) => a?.fileName,
+        fileName = options$.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
-        fileDescription = $options.field<String>(
+        fileDescription = options$.field<String>(
             'fileDescription',
             (a) => a?.fileDescription,
             (s) => s?.fileDescription,
             (p, b) => p?.fileDescription = b),
-        fileType = $options.field<CaseFileType>('fileType', (a) => a?.fileType,
+        fileType = options$.field<CaseFileType>('fileType', (a) => a?.fileType,
             (s) => s?.fileType, (p, b) => p?.fileType = b),
-        estimatedSizeKb = $options.field<int>(
+        estimatedSizeKb = options$.field<int>(
             'estimatedSizeKb',
             (a) => a?.estimatedSizeKb,
             (s) => s?.estimatedSizeKb,
             (p, b) => p?.estimatedSizeKb = b),
-        ownerOrgUnitId = $options.field<String>(
+        ownerOrgUnitId = options$.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        visibility = $options.field<Visibility>(
+        visibility = options$.field<Visibility>(
             'visibility',
             (a) => a?.visibility,
             (s) => s?.visibility,
@@ -351,18 +351,18 @@ class _$PrepareCaseFileUploadApiRequestActions
       _$PrepareCaseFileUploadApiRequestActions._(options());
 
   @override
-  PrepareCaseFileUploadApiRequest get $initial =>
+  PrepareCaseFileUploadApiRequest get initialState$ =>
       PrepareCaseFileUploadApiRequest();
 
   @override
-  PrepareCaseFileUploadApiRequestBuilder $newBuilder() =>
+  PrepareCaseFileUploadApiRequestBuilder newBuilder$() =>
       PrepareCaseFileUploadApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
         this.fileName,
         this.fileDescription,
@@ -373,24 +373,19 @@ class _$PrepareCaseFileUploadApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
-    fileName.$reducer(reducer);
-    fileDescription.$reducer(reducer);
-    fileType.$reducer(reducer);
-    estimatedSizeKb.$reducer(reducer);
-    ownerOrgUnitId.$reducer(reducer);
-    visibility.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
+    fileName.reducer$(reducer);
+    fileDescription.reducer$(reducer);
+    fileType.reducer$(reducer);
+    estimatedSizeKb.reducer$(reducer);
+    ownerOrgUnitId.reducer$(reducer);
+    visibility.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(PrepareCaseFileUploadApiRequest);
 }

@@ -159,15 +159,15 @@ class _$GetExportLogDetailApiRequestActions
   final StatefulActionsOptions<
       GetExportLogDetailApiRequest,
       GetExportLogDetailApiRequestBuilder,
-      GetExportLogDetailApiRequestActions> $options;
+      GetExportLogDetailApiRequestActions> options$;
 
-  final ActionDispatcher<GetExportLogDetailApiRequest> $replace;
+  final ActionDispatcher<GetExportLogDetailApiRequest> replace$;
   final FieldDispatcher<String> exportLogId;
 
-  _$GetExportLogDetailApiRequestActions._(this.$options)
-      : $replace = $options.action<GetExportLogDetailApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        exportLogId = $options.field<String>(
+  _$GetExportLogDetailApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetExportLogDetailApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        exportLogId = options$.field<String>(
             'exportLogId',
             (a) => a?.exportLogId,
             (s) => s?.exportLogId,
@@ -179,33 +179,29 @@ class _$GetExportLogDetailApiRequestActions
       _$GetExportLogDetailApiRequestActions._(options());
 
   @override
-  GetExportLogDetailApiRequest get $initial => GetExportLogDetailApiRequest();
+  GetExportLogDetailApiRequest get initialState$ =>
+      GetExportLogDetailApiRequest();
 
   @override
-  GetExportLogDetailApiRequestBuilder $newBuilder() =>
+  GetExportLogDetailApiRequestBuilder newBuilder$() =>
       GetExportLogDetailApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.exportLogId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    exportLogId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    exportLogId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetExportLogDetailApiRequest);
 }

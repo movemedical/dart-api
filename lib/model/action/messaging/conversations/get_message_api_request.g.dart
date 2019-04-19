@@ -147,15 +147,15 @@ typedef StatefulActionsOptions<
 
 class _$GetMessageApiRequestActions extends GetMessageApiRequestActions {
   final StatefulActionsOptions<GetMessageApiRequest,
-      GetMessageApiRequestBuilder, GetMessageApiRequestActions> $options;
+      GetMessageApiRequestBuilder, GetMessageApiRequestActions> options$;
 
-  final ActionDispatcher<GetMessageApiRequest> $replace;
+  final ActionDispatcher<GetMessageApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$GetMessageApiRequestActions._(this.$options)
-      : $replace = $options.action<GetMessageApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetMessageApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetMessageApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -164,31 +164,27 @@ class _$GetMessageApiRequestActions extends GetMessageApiRequestActions {
       _$GetMessageApiRequestActions._(options());
 
   @override
-  GetMessageApiRequest get $initial => GetMessageApiRequest();
+  GetMessageApiRequest get initialState$ => GetMessageApiRequest();
 
   @override
-  GetMessageApiRequestBuilder $newBuilder() => GetMessageApiRequestBuilder();
+  GetMessageApiRequestBuilder newBuilder$() => GetMessageApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetMessageApiRequest);
 }

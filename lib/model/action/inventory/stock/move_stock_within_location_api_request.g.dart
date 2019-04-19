@@ -180,17 +180,17 @@ class _$MoveStockWithinLocationApiRequestActions
   final StatefulActionsOptions<
       MoveStockWithinLocationApiRequest,
       MoveStockWithinLocationApiRequestBuilder,
-      MoveStockWithinLocationApiRequestActions> $options;
+      MoveStockWithinLocationApiRequestActions> options$;
 
-  final ActionDispatcher<MoveStockWithinLocationApiRequest> $replace;
+  final ActionDispatcher<MoveStockWithinLocationApiRequest> replace$;
   final FieldDispatcher<BuiltList<MoveStockWithinLocationApiStockMove>>
       stockMoves;
 
-  _$MoveStockWithinLocationApiRequestActions._(this.$options)
-      : $replace = $options.action<MoveStockWithinLocationApiRequest>(
-            '\$replace', (a) => a?.$replace),
+  _$MoveStockWithinLocationApiRequestActions._(this.options$)
+      : replace$ = options$.action<MoveStockWithinLocationApiRequest>(
+            'replace\$', (a) => a?.replace$),
         stockMoves =
-            $options.field<BuiltList<MoveStockWithinLocationApiStockMove>>(
+            options$.field<BuiltList<MoveStockWithinLocationApiStockMove>>(
                 'stockMoves',
                 (a) => a?.stockMoves,
                 (s) => s?.stockMoves,
@@ -202,34 +202,29 @@ class _$MoveStockWithinLocationApiRequestActions
       _$MoveStockWithinLocationApiRequestActions._(options());
 
   @override
-  MoveStockWithinLocationApiRequest get $initial =>
+  MoveStockWithinLocationApiRequest get initialState$ =>
       MoveStockWithinLocationApiRequest();
 
   @override
-  MoveStockWithinLocationApiRequestBuilder $newBuilder() =>
+  MoveStockWithinLocationApiRequestBuilder newBuilder$() =>
       MoveStockWithinLocationApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockMoves,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockMoves.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockMoves.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(MoveStockWithinLocationApiRequest);
 }

@@ -517,9 +517,9 @@ class _$ListPreferenceCardsApiPreferenceCardActions
   final StatefulActionsOptions<
       ListPreferenceCardsApiPreferenceCard,
       ListPreferenceCardsApiPreferenceCardBuilder,
-      ListPreferenceCardsApiPreferenceCardActions> $options;
+      ListPreferenceCardsApiPreferenceCardActions> options$;
 
-  final ActionDispatcher<ListPreferenceCardsApiPreferenceCard> $replace;
+  final ActionDispatcher<ListPreferenceCardsApiPreferenceCard> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> description;
@@ -537,73 +537,73 @@ class _$ListPreferenceCardsApiPreferenceCardActions
   final FieldDispatcher<int> totalItems;
   final FieldDispatcher<bool> active;
 
-  _$ListPreferenceCardsApiPreferenceCardActions._(this.$options)
-      : $replace = $options.action<ListPreferenceCardsApiPreferenceCard>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListPreferenceCardsApiPreferenceCardActions._(this.options$)
+      : replace$ = options$.action<ListPreferenceCardsApiPreferenceCard>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        techniqueId = $options.field<String>(
+        techniqueId = options$.field<String>(
             'techniqueId',
             (a) => a?.techniqueId,
             (s) => s?.techniqueId,
             (p, b) => p?.techniqueId = b),
-        techniqueName = $options.field<String>(
+        techniqueName = options$.field<String>(
             'techniqueName',
             (a) => a?.techniqueName,
             (s) => s?.techniqueName,
             (p, b) => p?.techniqueName = b),
-        physicianId = $options.field<String>(
+        physicianId = options$.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        physicianName = $options.field<String>(
+        physicianName = options$.field<String>(
             'physicianName',
             (a) => a?.physicianName,
             (s) => s?.physicianName,
             (p, b) => p?.physicianName = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        facilityName = $options.field<String>(
+        facilityName = options$.field<String>(
             'facilityName',
             (a) => a?.facilityName,
             (s) => s?.facilityName,
             (p, b) => p?.facilityName = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        procedureName = $options.field<String>(
+        procedureName = options$.field<String>(
             'procedureName',
             (a) => a?.procedureName,
             (s) => s?.procedureName,
             (p, b) => p?.procedureName = b),
-        subProcedureId = $options.field<String>(
+        subProcedureId = options$.field<String>(
             'subProcedureId',
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
             (p, b) => p?.subProcedureId = b),
-        subProcedureName = $options.field<String>(
+        subProcedureName = options$.field<String>(
             'subProcedureName',
             (a) => a?.subProcedureName,
             (s) => s?.subProcedureName,
             (p, b) => p?.subProcedureName = b),
-        preferenceCardType = $options.field<PreferenceCardType>(
+        preferenceCardType = options$.field<PreferenceCardType>(
             'preferenceCardType',
             (a) => a?.preferenceCardType,
             (s) => s?.preferenceCardType,
             (p, b) => p?.preferenceCardType = b),
-        totalItems = $options.field<int>('totalItems', (a) => a?.totalItems,
+        totalItems = options$.field<int>('totalItems', (a) => a?.totalItems,
             (s) => s?.totalItems, (p, b) => p?.totalItems = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -612,18 +612,18 @@ class _$ListPreferenceCardsApiPreferenceCardActions
       _$ListPreferenceCardsApiPreferenceCardActions._(options());
 
   @override
-  ListPreferenceCardsApiPreferenceCard get $initial =>
+  ListPreferenceCardsApiPreferenceCard get initialState$ =>
       ListPreferenceCardsApiPreferenceCard();
 
   @override
-  ListPreferenceCardsApiPreferenceCardBuilder $newBuilder() =>
+  ListPreferenceCardsApiPreferenceCardBuilder newBuilder$() =>
       ListPreferenceCardsApiPreferenceCardBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.description,
@@ -643,33 +643,28 @@ class _$ListPreferenceCardsApiPreferenceCardActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    description.$reducer(reducer);
-    techniqueId.$reducer(reducer);
-    techniqueName.$reducer(reducer);
-    physicianId.$reducer(reducer);
-    physicianName.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    facilityName.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    procedureName.$reducer(reducer);
-    subProcedureId.$reducer(reducer);
-    subProcedureName.$reducer(reducer);
-    preferenceCardType.$reducer(reducer);
-    totalItems.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    description.reducer$(reducer);
+    techniqueId.reducer$(reducer);
+    techniqueName.reducer$(reducer);
+    physicianId.reducer$(reducer);
+    physicianName.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    facilityName.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    procedureName.reducer$(reducer);
+    subProcedureId.reducer$(reducer);
+    subProcedureName.reducer$(reducer);
+    preferenceCardType.reducer$(reducer);
+    totalItems.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPreferenceCardsApiPreferenceCard);
 }

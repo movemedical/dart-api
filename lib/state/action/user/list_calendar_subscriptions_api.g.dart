@@ -22,69 +22,32 @@ class _$ListCalendarSubscriptionsApi extends ListCalendarSubscriptionsApi {
           ApiResult<ListCalendarSubscriptionsApiResponse>>,
       CommandStateBuilder<ApiCommand<ListCalendarSubscriptionsApiRequest>,
           ApiResult<ListCalendarSubscriptionsApiResponse>>,
-      ListCalendarSubscriptionsApi> $options;
+      ListCalendarSubscriptionsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListCalendarSubscriptionsApiRequest>,
-          ApiResult<ListCalendarSubscriptionsApiResponse>>> $replace;
+          ApiResult<ListCalendarSubscriptionsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListCalendarSubscriptionsApiRequest>,
-          ApiResult<ListCalendarSubscriptionsApiResponse>,
-          ListCalendarSubscriptionsApi,
-          String>> $cancel;
+      Command<ApiCommand<ListCalendarSubscriptionsApiRequest>>> execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListCalendarSubscriptionsApiRequest>,
-          ApiResult<ListCalendarSubscriptionsApiResponse>,
-          ListCalendarSubscriptionsApi,
-          Command<ApiCommand<ListCalendarSubscriptionsApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListCalendarSubscriptionsApiRequest>,
-              ApiResult<ListCalendarSubscriptionsApiResponse>,
-              ListCalendarSubscriptionsApi,
-              CommandResult<ApiResult<ListCalendarSubscriptionsApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListCalendarSubscriptionsApiRequest>,
-          ApiResult<ListCalendarSubscriptionsApiResponse>,
-          ListCalendarSubscriptionsApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListCalendarSubscriptionsApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListCalendarSubscriptionsApi._(this.$options)
-      : $replace = $options.action<
+  _$ListCalendarSubscriptionsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListCalendarSubscriptionsApiRequest>,
                     ApiResult<ListCalendarSubscriptionsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListCalendarSubscriptionsApiRequest>,
-                ApiResult<ListCalendarSubscriptionsApiResponse>,
-                ListCalendarSubscriptionsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListCalendarSubscriptionsApiRequest>,
-                    ApiResult<ListCalendarSubscriptionsApiResponse>,
-                    ListCalendarSubscriptionsApi,
-                    Command<ApiCommand<ListCalendarSubscriptionsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListCalendarSubscriptionsApiRequest>,
-                    ApiResult<ListCalendarSubscriptionsApiResponse>,
-                    ListCalendarSubscriptionsApi,
-                    CommandResult<
-                        ApiResult<ListCalendarSubscriptionsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListCalendarSubscriptionsApiRequest>,
-                ApiResult<ListCalendarSubscriptionsApiResponse>,
-                ListCalendarSubscriptionsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListCalendarSubscriptionsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<ListCalendarSubscriptionsApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListCalendarSubscriptionsApi(
@@ -94,33 +57,26 @@ class _$ListCalendarSubscriptionsApi extends ListCalendarSubscriptionsApi {
   @override
   CommandState<ApiCommand<ListCalendarSubscriptionsApiRequest>,
           ApiResult<ListCalendarSubscriptionsApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListCalendarSubscriptionsApiRequest>,
           ApiResult<ListCalendarSubscriptionsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListCalendarSubscriptionsApiRequest>,
           ApiResult<ListCalendarSubscriptionsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListCalendarSubscriptionsApiRequest>,
           ApiResult<ListCalendarSubscriptionsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListCalendarSubscriptionsApiRequest)]),
-        FullType(ApiResult, [FullType(ListCalendarSubscriptionsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

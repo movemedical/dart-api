@@ -261,35 +261,35 @@ class _$ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions
   final StatefulActionsOptions<
       ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOption,
       ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionBuilder,
-      ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions> $options;
+      ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions> options$;
 
   final ActionDispatcher<ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOption>
-      $replace;
+      replace$;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<String> orgUnitName;
   final FieldDispatcher<bool> opsOrgUnit;
   final FieldDispatcher<bool> salesOrgUnit;
   final FieldDispatcher<String> orgUnitLabel;
 
-  _$ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions._(this.$options)
-      : $replace =
-            $options.action<ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOption>(
-                '\$replace', (a) => a?.$replace),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+  _$ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions._(this.options$)
+      : replace$ =
+            options$.action<ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOption>(
+                'replace\$', (a) => a?.replace$),
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        orgUnitName = $options.field<String>(
+        orgUnitName = options$.field<String>(
             'orgUnitName',
             (a) => a?.orgUnitName,
             (s) => s?.orgUnitName,
             (p, b) => p?.orgUnitName = b),
-        opsOrgUnit = $options.field<bool>('opsOrgUnit', (a) => a?.opsOrgUnit,
+        opsOrgUnit = options$.field<bool>('opsOrgUnit', (a) => a?.opsOrgUnit,
             (s) => s?.opsOrgUnit, (p, b) => p?.opsOrgUnit = b),
-        salesOrgUnit = $options.field<bool>(
+        salesOrgUnit = options$.field<bool>(
             'salesOrgUnit',
             (a) => a?.salesOrgUnit,
             (s) => s?.salesOrgUnit,
             (p, b) => p?.salesOrgUnit = b),
-        orgUnitLabel = $options.field<String>(
+        orgUnitLabel = options$.field<String>(
             'orgUnitLabel',
             (a) => a?.orgUnitLabel,
             (s) => s?.orgUnitLabel,
@@ -302,18 +302,18 @@ class _$ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions
       _$ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions._(options());
 
   @override
-  ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOption get $initial =>
+  ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOption get initialState$ =>
       ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOption();
 
   @override
-  ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionBuilder $newBuilder() =>
+  ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionBuilder newBuilder$() =>
       ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orgUnitId,
         this.orgUnitName,
         this.opsOrgUnit,
@@ -322,22 +322,17 @@ class _$ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    orgUnitName.$reducer(reducer);
-    opsOrgUnit.$reducer(reducer);
-    salesOrgUnit.$reducer(reducer);
-    orgUnitLabel.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    orgUnitName.reducer$(reducer);
+    opsOrgUnit.reducer$(reducer);
+    salesOrgUnit.reducer$(reducer);
+    orgUnitLabel.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOption);
 }

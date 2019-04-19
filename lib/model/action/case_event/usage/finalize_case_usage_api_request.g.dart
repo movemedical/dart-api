@@ -157,15 +157,15 @@ class _$FinalizeCaseUsageApiRequestActions
   final StatefulActionsOptions<
       FinalizeCaseUsageApiRequest,
       FinalizeCaseUsageApiRequestBuilder,
-      FinalizeCaseUsageApiRequestActions> $options;
+      FinalizeCaseUsageApiRequestActions> options$;
 
-  final ActionDispatcher<FinalizeCaseUsageApiRequest> $replace;
+  final ActionDispatcher<FinalizeCaseUsageApiRequest> replace$;
   final FieldDispatcher<String> caseId;
 
-  _$FinalizeCaseUsageApiRequestActions._(this.$options)
-      : $replace = $options.action<FinalizeCaseUsageApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseId = $options.field<String>('caseId', (a) => a?.caseId,
+  _$FinalizeCaseUsageApiRequestActions._(this.options$)
+      : replace$ = options$.action<FinalizeCaseUsageApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseId = options$.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
         super._();
 
@@ -174,33 +174,29 @@ class _$FinalizeCaseUsageApiRequestActions
       _$FinalizeCaseUsageApiRequestActions._(options());
 
   @override
-  FinalizeCaseUsageApiRequest get $initial => FinalizeCaseUsageApiRequest();
+  FinalizeCaseUsageApiRequest get initialState$ =>
+      FinalizeCaseUsageApiRequest();
 
   @override
-  FinalizeCaseUsageApiRequestBuilder $newBuilder() =>
+  FinalizeCaseUsageApiRequestBuilder newBuilder$() =>
       FinalizeCaseUsageApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(FinalizeCaseUsageApiRequest);
 }

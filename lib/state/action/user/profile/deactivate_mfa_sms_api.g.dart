@@ -20,57 +20,29 @@ class _$DeactivateMfaSmsApi extends DeactivateMfaSmsApi {
       CommandState<ApiCommand<DeactivateMfaSmsApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<DeactivateMfaSmsApiRequest>,
           ApiResult<Nothing>>,
-      DeactivateMfaSmsApi> $options;
+      DeactivateMfaSmsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<DeactivateMfaSmsApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeactivateMfaSmsApiRequest>, ApiResult<Nothing>,
-          DeactivateMfaSmsApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<DeactivateMfaSmsApiRequest>,
-          ApiResult<Nothing>,
-          DeactivateMfaSmsApi,
-          Command<ApiCommand<DeactivateMfaSmsApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeactivateMfaSmsApiRequest>, ApiResult<Nothing>,
-          DeactivateMfaSmsApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeactivateMfaSmsApiRequest>, ApiResult<Nothing>,
-          DeactivateMfaSmsApi, CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<DeactivateMfaSmsApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$DeactivateMfaSmsApi._(this.$options)
-      : $replace = $options.action<
+  _$DeactivateMfaSmsApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<DeactivateMfaSmsApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<DeactivateMfaSmsApiRequest>,
-                ApiResult<Nothing>,
-                DeactivateMfaSmsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<DeactivateMfaSmsApiRequest>,
-                    ApiResult<Nothing>,
-                    DeactivateMfaSmsApi,
-                    Command<ApiCommand<DeactivateMfaSmsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<DeactivateMfaSmsApiRequest>,
-                    ApiResult<Nothing>,
-                    DeactivateMfaSmsApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<DeactivateMfaSmsApiRequest>,
-                ApiResult<Nothing>,
-                DeactivateMfaSmsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<DeactivateMfaSmsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$DeactivateMfaSmsApi(DeactivateMfaSmsApiOptions options) =>
@@ -78,31 +50,24 @@ class _$DeactivateMfaSmsApi extends DeactivateMfaSmsApi {
 
   @override
   CommandState<ApiCommand<DeactivateMfaSmsApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<DeactivateMfaSmsApiRequest>,
+      get initialState$ => CommandState<ApiCommand<DeactivateMfaSmsApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<DeactivateMfaSmsApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<DeactivateMfaSmsApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(DeactivateMfaSmsApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

@@ -19,54 +19,27 @@ class _$SubmitAuditApi extends SubmitAuditApi {
       CommandState<ApiCommand<SubmitAuditApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<SubmitAuditApiRequest>,
           ApiResult<Nothing>>,
-      SubmitAuditApi> $options;
+      SubmitAuditApi> options$;
 
   final ActionDispatcher<
           CommandState<ApiCommand<SubmitAuditApiRequest>, ApiResult<Nothing>>>
-      $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SubmitAuditApiRequest>, ApiResult<Nothing>,
-          SubmitAuditApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SubmitAuditApiRequest>, ApiResult<Nothing>,
-          SubmitAuditApi, Command<ApiCommand<SubmitAuditApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SubmitAuditApiRequest>, ApiResult<Nothing>,
-          SubmitAuditApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SubmitAuditApiRequest>, ApiResult<Nothing>,
-          SubmitAuditApi, CommandProgress>> $progress;
+      replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<SubmitAuditApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$SubmitAuditApi._(this.$options)
-      : $replace = $options.action<
+  _$SubmitAuditApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<SubmitAuditApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<SubmitAuditApiRequest>,
-                ApiResult<Nothing>,
-                SubmitAuditApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<SubmitAuditApiRequest>,
-                    ApiResult<Nothing>,
-                    SubmitAuditApi,
-                    Command<ApiCommand<SubmitAuditApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<SubmitAuditApiRequest>,
-                    ApiResult<Nothing>,
-                    SubmitAuditApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<SubmitAuditApiRequest>,
-                ApiResult<Nothing>,
-                SubmitAuditApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<SubmitAuditApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$SubmitAuditApi(SubmitAuditApiOptions options) =>
@@ -74,30 +47,23 @@ class _$SubmitAuditApi extends SubmitAuditApi {
 
   @override
   CommandState<ApiCommand<SubmitAuditApiRequest>, ApiResult<Nothing>>
-      get $initial =>
+      get initialState$ =>
           CommandState<ApiCommand<SubmitAuditApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<SubmitAuditApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<SubmitAuditApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<SubmitAuditApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(SubmitAuditApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

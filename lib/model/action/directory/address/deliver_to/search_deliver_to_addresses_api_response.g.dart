@@ -177,15 +177,15 @@ class _$SearchDeliverToAddressesApiResponseActions
   final StatefulActionsOptions<
       SearchDeliverToAddressesApiResponse,
       SearchDeliverToAddressesApiResponseBuilder,
-      SearchDeliverToAddressesApiResponseActions> $options;
+      SearchDeliverToAddressesApiResponseActions> options$;
 
-  final ActionDispatcher<SearchDeliverToAddressesApiResponse> $replace;
+  final ActionDispatcher<SearchDeliverToAddressesApiResponse> replace$;
   final FieldDispatcher<BuiltList<CustomerAddress>> data;
 
-  _$SearchDeliverToAddressesApiResponseActions._(this.$options)
-      : $replace = $options.action<SearchDeliverToAddressesApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<CustomerAddress>>(
+  _$SearchDeliverToAddressesApiResponseActions._(this.options$)
+      : replace$ = options$.action<SearchDeliverToAddressesApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<CustomerAddress>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
         super._();
 
@@ -194,34 +194,29 @@ class _$SearchDeliverToAddressesApiResponseActions
       _$SearchDeliverToAddressesApiResponseActions._(options());
 
   @override
-  SearchDeliverToAddressesApiResponse get $initial =>
+  SearchDeliverToAddressesApiResponse get initialState$ =>
       SearchDeliverToAddressesApiResponse();
 
   @override
-  SearchDeliverToAddressesApiResponseBuilder $newBuilder() =>
+  SearchDeliverToAddressesApiResponseBuilder newBuilder$() =>
       SearchDeliverToAddressesApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SearchDeliverToAddressesApiResponse);
 }

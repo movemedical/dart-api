@@ -578,9 +578,9 @@ typedef StatefulActionsOptions<
 
 class _$BuildInspectionApiEntryActions extends BuildInspectionApiEntryActions {
   final StatefulActionsOptions<BuildInspectionApiEntry,
-      BuildInspectionApiEntryBuilder, BuildInspectionApiEntryActions> $options;
+      BuildInspectionApiEntryBuilder, BuildInspectionApiEntryActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiEntry> $replace;
+  final ActionDispatcher<BuildInspectionApiEntry> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> receiptId;
   final FieldDispatcher<String> containerId;
@@ -600,26 +600,26 @@ class _$BuildInspectionApiEntryActions extends BuildInspectionApiEntryActions {
       unfilteredOptions;
   final FieldDispatcher<BuiltList<BuildInspectionApiExtraEntryOption>> options;
 
-  _$BuildInspectionApiEntryActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiEntry>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BuildInspectionApiEntryActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiEntry>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        receiptId = $options.field<String>('receiptId', (a) => a?.receiptId,
+        receiptId = options$.field<String>('receiptId', (a) => a?.receiptId,
             (s) => s?.receiptId, (p, b) => p?.receiptId = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        order = $options.field<int>(
+        order = options$.field<int>(
             'order', (a) => a?.order, (s) => s?.order, (p, b) => p?.order = b),
-        fillsKitStandard = $options.field<bool>(
+        fillsKitStandard = options$.field<bool>(
             'fillsKitStandard',
             (a) => a?.fillsKitStandard,
             (s) => s?.fillsKitStandard,
             (p, b) => p?.fillsKitStandard = b),
-        toContainerOverride = StockContainerDataActions(() => $options.stateful<
+        toContainerOverride = StockContainerDataActions(() => options$.stateful<
                 StockContainerData,
                 StockContainerDataBuilder,
                 StockContainerDataActions>(
@@ -628,20 +628,20 @@ class _$BuildInspectionApiEntryActions extends BuildInspectionApiEntryActions {
             (s) => s?.toContainerOverride,
             (b) => b?.toContainerOverride,
             (parent, builder) => parent?.toContainerOverride = builder)),
-        fromAutoScan = $options.field<bool>(
+        fromAutoScan = options$.field<bool>(
             'fromAutoScan',
             (a) => a?.fromAutoScan,
             (s) => s?.fromAutoScan,
             (p, b) => p?.fromAutoScan = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        tagId = $options.field<String>(
+        tagId = options$.field<String>(
             'tagId', (a) => a?.tagId, (s) => s?.tagId, (p, b) => p?.tagId = b),
-        kitData = BuildInspectionApiKitDataActions(() => $options.stateful<
+        kitData = BuildInspectionApiKitDataActions(() => options$.stateful<
                 BuildInspectionApiKitData,
                 BuildInspectionApiKitDataBuilder,
                 BuildInspectionApiKitDataActions>(
@@ -650,7 +650,7 @@ class _$BuildInspectionApiEntryActions extends BuildInspectionApiEntryActions {
             (s) => s?.kitData,
             (b) => b?.kitData,
             (parent, builder) => parent?.kitData = builder)),
-        trayData = BuildInspectionApiTrayDataActions(() => $options.stateful<
+        trayData = BuildInspectionApiTrayDataActions(() => options$.stateful<
                 BuildInspectionApiTrayData,
                 BuildInspectionApiTrayDataBuilder,
                 BuildInspectionApiTrayDataActions>(
@@ -659,23 +659,23 @@ class _$BuildInspectionApiEntryActions extends BuildInspectionApiEntryActions {
             (s) => s?.trayData,
             (b) => b?.trayData,
             (parent, builder) => parent?.trayData = builder)),
-        matchedToExpectedStockId = $options.field<String>(
+        matchedToExpectedStockId = options$.field<String>(
             'matchedToExpectedStockId',
             (a) => a?.matchedToExpectedStockId,
             (s) => s?.matchedToExpectedStockId,
             (p, b) => p?.matchedToExpectedStockId = b),
-        selectedOptionId = $options.field<String>(
+        selectedOptionId = options$.field<String>(
             'selectedOptionId',
             (a) => a?.selectedOptionId,
             (s) => s?.selectedOptionId,
             (p, b) => p?.selectedOptionId = b),
         unfilteredOptions =
-            $options.field<BuiltList<BuildInspectionApiExtraEntryOption>>(
+            options$.field<BuiltList<BuildInspectionApiExtraEntryOption>>(
                 'unfilteredOptions',
                 (a) => a?.unfilteredOptions,
                 (s) => s?.unfilteredOptions,
                 (p, b) => p?.unfilteredOptions = b),
-        options = $options.field<BuiltList<BuildInspectionApiExtraEntryOption>>(
+        options = options$.field<BuiltList<BuildInspectionApiExtraEntryOption>>(
             'options',
             (a) => a?.options,
             (s) => s?.options,
@@ -687,25 +687,25 @@ class _$BuildInspectionApiEntryActions extends BuildInspectionApiEntryActions {
       _$BuildInspectionApiEntryActions._(options());
 
   @override
-  BuildInspectionApiEntry get $initial => BuildInspectionApiEntry();
+  BuildInspectionApiEntry get initialState$ => BuildInspectionApiEntry();
 
   @override
-  BuildInspectionApiEntryBuilder $newBuilder() =>
+  BuildInspectionApiEntryBuilder newBuilder$() =>
       BuildInspectionApiEntryBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toContainerOverride,
         this.kitData,
         this.trayData,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.receiptId,
         this.containerId,
@@ -723,36 +723,32 @@ class _$BuildInspectionApiEntryActions extends BuildInspectionApiEntryActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    receiptId.$reducer(reducer);
-    containerId.$reducer(reducer);
-    order.$reducer(reducer);
-    fillsKitStandard.$reducer(reducer);
-    toContainerOverride.$reducer(reducer);
-    fromAutoScan.$reducer(reducer);
-    itemId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    tagId.$reducer(reducer);
-    kitData.$reducer(reducer);
-    trayData.$reducer(reducer);
-    matchedToExpectedStockId.$reducer(reducer);
-    selectedOptionId.$reducer(reducer);
-    unfilteredOptions.$reducer(reducer);
-    options.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    receiptId.reducer$(reducer);
+    containerId.reducer$(reducer);
+    order.reducer$(reducer);
+    fillsKitStandard.reducer$(reducer);
+    toContainerOverride.reducer$(reducer);
+    fromAutoScan.reducer$(reducer);
+    itemId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    tagId.reducer$(reducer);
+    kitData.reducer$(reducer);
+    trayData.reducer$(reducer);
+    matchedToExpectedStockId.reducer$(reducer);
+    selectedOptionId.reducer$(reducer);
+    unfilteredOptions.reducer$(reducer);
+    options.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    toContainerOverride.$middleware(middleware);
-    kitData.$middleware(middleware);
-    trayData.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    toContainerOverride.middleware$(middleware);
+    kitData.middleware$(middleware);
+    trayData.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(BuildInspectionApiEntry);
 }

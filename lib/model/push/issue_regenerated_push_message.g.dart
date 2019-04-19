@@ -118,13 +118,13 @@ class _$IssueRegeneratedPushMessageActions
   final StatefulActionsOptions<
       IssueRegeneratedPushMessage,
       IssueRegeneratedPushMessageBuilder,
-      IssueRegeneratedPushMessageActions> $options;
+      IssueRegeneratedPushMessageActions> options$;
 
-  final ActionDispatcher<IssueRegeneratedPushMessage> $replace;
+  final ActionDispatcher<IssueRegeneratedPushMessage> replace$;
 
-  _$IssueRegeneratedPushMessageActions._(this.$options)
-      : $replace = $options.action<IssueRegeneratedPushMessage>(
-            '\$replace', (a) => a?.$replace),
+  _$IssueRegeneratedPushMessageActions._(this.options$)
+      : replace$ = options$.action<IssueRegeneratedPushMessage>(
+            'replace\$', (a) => a?.replace$),
         super._();
 
   factory _$IssueRegeneratedPushMessageActions(
@@ -132,21 +132,17 @@ class _$IssueRegeneratedPushMessageActions
       _$IssueRegeneratedPushMessageActions._(options());
 
   @override
-  IssueRegeneratedPushMessage get $initial => IssueRegeneratedPushMessage();
+  IssueRegeneratedPushMessage get initialState$ =>
+      IssueRegeneratedPushMessage();
 
   @override
-  IssueRegeneratedPushMessageBuilder $newBuilder() =>
+  IssueRegeneratedPushMessageBuilder newBuilder$() =>
       IssueRegeneratedPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(IssueRegeneratedPushMessage);
 }

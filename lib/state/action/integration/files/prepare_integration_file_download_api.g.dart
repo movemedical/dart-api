@@ -23,72 +23,35 @@ class _$PrepareIntegrationFileDownloadApi
           ApiResult<PrepareIntegrationFileDownloadApiResponse>>,
       CommandStateBuilder<ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
           ApiResult<PrepareIntegrationFileDownloadApiResponse>>,
-      PrepareIntegrationFileDownloadApi> $options;
+      PrepareIntegrationFileDownloadApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-          ApiResult<PrepareIntegrationFileDownloadApiResponse>>> $replace;
+          ApiResult<PrepareIntegrationFileDownloadApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-          ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-          PrepareIntegrationFileDownloadApi,
-          String>> $cancel;
+      Command<ApiCommand<PrepareIntegrationFileDownloadApiRequest>>> execute$;
   final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-              ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-              PrepareIntegrationFileDownloadApi,
-              Command<ApiCommand<PrepareIntegrationFileDownloadApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-          ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-          PrepareIntegrationFileDownloadApi,
-          CommandResult<
-              ApiResult<PrepareIntegrationFileDownloadApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-          ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-          PrepareIntegrationFileDownloadApi,
-          CommandProgress>> $progress;
+          CommandResult<ApiResult<PrepareIntegrationFileDownloadApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$PrepareIntegrationFileDownloadApi._(this.$options)
-      : $replace = $options.action<
+  _$PrepareIntegrationFileDownloadApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<
                     ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
                     ApiResult<PrepareIntegrationFileDownloadApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-                ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-                PrepareIntegrationFileDownloadApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-                    ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-                    PrepareIntegrationFileDownloadApi,
-                    Command<
-                        ApiCommand<PrepareIntegrationFileDownloadApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-                    ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-                    PrepareIntegrationFileDownloadApi,
-                    CommandResult<
-                        ApiResult<PrepareIntegrationFileDownloadApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-                ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-                PrepareIntegrationFileDownloadApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<ApiCommand<PrepareIntegrationFileDownloadApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<PrepareIntegrationFileDownloadApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$PrepareIntegrationFileDownloadApi(
@@ -98,35 +61,26 @@ class _$PrepareIntegrationFileDownloadApi
   @override
   CommandState<ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
           ApiResult<PrepareIntegrationFileDownloadApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
           ApiResult<PrepareIntegrationFileDownloadApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
           ApiResult<PrepareIntegrationFileDownloadApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
           ApiResult<PrepareIntegrationFileDownloadApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(
-            ApiCommand, [FullType(PrepareIntegrationFileDownloadApiRequest)]),
-        FullType(
-            ApiResult, [FullType(PrepareIntegrationFileDownloadApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

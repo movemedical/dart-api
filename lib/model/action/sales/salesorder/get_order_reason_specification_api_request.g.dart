@@ -163,15 +163,15 @@ class _$GetOrderReasonSpecificationApiRequestActions
   final StatefulActionsOptions<
       GetOrderReasonSpecificationApiRequest,
       GetOrderReasonSpecificationApiRequestBuilder,
-      GetOrderReasonSpecificationApiRequestActions> $options;
+      GetOrderReasonSpecificationApiRequestActions> options$;
 
-  final ActionDispatcher<GetOrderReasonSpecificationApiRequest> $replace;
+  final ActionDispatcher<GetOrderReasonSpecificationApiRequest> replace$;
   final FieldDispatcher<String> orderReasonId;
 
-  _$GetOrderReasonSpecificationApiRequestActions._(this.$options)
-      : $replace = $options.action<GetOrderReasonSpecificationApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderReasonId = $options.field<String>(
+  _$GetOrderReasonSpecificationApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetOrderReasonSpecificationApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderReasonId = options$.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
@@ -183,34 +183,29 @@ class _$GetOrderReasonSpecificationApiRequestActions
       _$GetOrderReasonSpecificationApiRequestActions._(options());
 
   @override
-  GetOrderReasonSpecificationApiRequest get $initial =>
+  GetOrderReasonSpecificationApiRequest get initialState$ =>
       GetOrderReasonSpecificationApiRequest();
 
   @override
-  GetOrderReasonSpecificationApiRequestBuilder $newBuilder() =>
+  GetOrderReasonSpecificationApiRequestBuilder newBuilder$() =>
       GetOrderReasonSpecificationApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderReasonId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderReasonId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetOrderReasonSpecificationApiRequest);
 }

@@ -175,16 +175,16 @@ class _$GetImportLogDetailApiResponseActions
   final StatefulActionsOptions<
       GetImportLogDetailApiResponse,
       GetImportLogDetailApiResponseBuilder,
-      GetImportLogDetailApiResponseActions> $options;
+      GetImportLogDetailApiResponseActions> options$;
 
-  final ActionDispatcher<GetImportLogDetailApiResponse> $replace;
+  final ActionDispatcher<GetImportLogDetailApiResponse> replace$;
   final GetImportLogDetailApiImportLogActions importLog;
 
-  _$GetImportLogDetailApiResponseActions._(this.$options)
-      : $replace = $options.action<GetImportLogDetailApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$GetImportLogDetailApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetImportLogDetailApiResponse>(
+            'replace\$', (a) => a?.replace$),
         importLog = GetImportLogDetailApiImportLogActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetImportLogDetailApiImportLog,
                     GetImportLogDetailApiImportLogBuilder,
                     GetImportLogDetailApiImportLogActions>(
@@ -200,39 +200,35 @@ class _$GetImportLogDetailApiResponseActions
       _$GetImportLogDetailApiResponseActions._(options());
 
   @override
-  GetImportLogDetailApiResponse get $initial => GetImportLogDetailApiResponse();
+  GetImportLogDetailApiResponse get initialState$ =>
+      GetImportLogDetailApiResponse();
 
   @override
-  GetImportLogDetailApiResponseBuilder $newBuilder() =>
+  GetImportLogDetailApiResponseBuilder newBuilder$() =>
       GetImportLogDetailApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.importLog,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    importLog.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    importLog.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    importLog.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    importLog.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetImportLogDetailApiResponse);
 }

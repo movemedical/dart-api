@@ -368,9 +368,9 @@ class _$GetCaseEventDetailApiEventActions
   final StatefulActionsOptions<
       GetCaseEventDetailApiEvent,
       GetCaseEventDetailApiEventBuilder,
-      GetCaseEventDetailApiEventActions> $options;
+      GetCaseEventDetailApiEventActions> options$;
 
-  final ActionDispatcher<GetCaseEventDetailApiEvent> $replace;
+  final ActionDispatcher<GetCaseEventDetailApiEvent> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<EventType> eventType;
   final FieldDispatcher<DateTime> eventDate;
@@ -382,43 +382,43 @@ class _$GetCaseEventDetailApiEventActions
   final FieldDispatcher<int> eventNumber;
   final FieldDispatcher<bool> eventTimeUnknown;
 
-  _$GetCaseEventDetailApiEventActions._(this.$options)
-      : $replace = $options.action<GetCaseEventDetailApiEvent>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetCaseEventDetailApiEventActions._(this.options$)
+      : replace$ = options$.action<GetCaseEventDetailApiEvent>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        eventType = $options.field<EventType>('eventType', (a) => a?.eventType,
+        eventType = options$.field<EventType>('eventType', (a) => a?.eventType,
             (s) => s?.eventType, (p, b) => p?.eventType = b),
-        eventDate = $options.field<DateTime>('eventDate', (a) => a?.eventDate,
+        eventDate = options$.field<DateTime>('eventDate', (a) => a?.eventDate,
             (s) => s?.eventDate, (p, b) => p?.eventDate = b),
-        localEventDate = $options.field<DateTime>(
+        localEventDate = options$.field<DateTime>(
             'localEventDate',
             (a) => a?.localEventDate,
             (s) => s?.localEventDate,
             (p, b) => p?.localEventDate = b),
-        eventDuration = $options.field<int>(
+        eventDuration = options$.field<int>(
             'eventDuration',
             (a) => a?.eventDuration,
             (s) => s?.eventDuration,
             (p, b) => p?.eventDuration = b),
-        eventStatus = $options.field<EventStatus>(
+        eventStatus = options$.field<EventStatus>(
             'eventStatus',
             (a) => a?.eventStatus,
             (s) => s?.eventStatus,
             (p, b) => p?.eventStatus = b),
-        eventState = $options.field<EventState>(
+        eventState = options$.field<EventState>(
             'eventState',
             (a) => a?.eventState,
             (s) => s?.eventState,
             (p, b) => p?.eventState = b),
-        eventDescription = $options.field<String>(
+        eventDescription = options$.field<String>(
             'eventDescription',
             (a) => a?.eventDescription,
             (s) => s?.eventDescription,
             (p, b) => p?.eventDescription = b),
-        eventNumber = $options.field<int>('eventNumber', (a) => a?.eventNumber,
+        eventNumber = options$.field<int>('eventNumber', (a) => a?.eventNumber,
             (s) => s?.eventNumber, (p, b) => p?.eventNumber = b),
-        eventTimeUnknown = $options.field<bool>(
+        eventTimeUnknown = options$.field<bool>(
             'eventTimeUnknown',
             (a) => a?.eventTimeUnknown,
             (s) => s?.eventTimeUnknown,
@@ -430,17 +430,17 @@ class _$GetCaseEventDetailApiEventActions
       _$GetCaseEventDetailApiEventActions._(options());
 
   @override
-  GetCaseEventDetailApiEvent get $initial => GetCaseEventDetailApiEvent();
+  GetCaseEventDetailApiEvent get initialState$ => GetCaseEventDetailApiEvent();
 
   @override
-  GetCaseEventDetailApiEventBuilder $newBuilder() =>
+  GetCaseEventDetailApiEventBuilder newBuilder$() =>
       GetCaseEventDetailApiEventBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.eventType,
         this.eventDate,
@@ -454,26 +454,22 @@ class _$GetCaseEventDetailApiEventActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    eventType.$reducer(reducer);
-    eventDate.$reducer(reducer);
-    localEventDate.$reducer(reducer);
-    eventDuration.$reducer(reducer);
-    eventStatus.$reducer(reducer);
-    eventState.$reducer(reducer);
-    eventDescription.$reducer(reducer);
-    eventNumber.$reducer(reducer);
-    eventTimeUnknown.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    eventType.reducer$(reducer);
+    eventDate.reducer$(reducer);
+    localEventDate.reducer$(reducer);
+    eventDuration.reducer$(reducer);
+    eventStatus.reducer$(reducer);
+    eventState.reducer$(reducer);
+    eventDescription.reducer$(reducer);
+    eventNumber.reducer$(reducer);
+    eventTimeUnknown.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetCaseEventDetailApiEvent);
 }

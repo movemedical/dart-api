@@ -254,30 +254,30 @@ class _$UpdateCustomerQualifierApiRequestActions
   final StatefulActionsOptions<
       UpdateCustomerQualifierApiRequest,
       UpdateCustomerQualifierApiRequestBuilder,
-      UpdateCustomerQualifierApiRequestActions> $options;
+      UpdateCustomerQualifierApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateCustomerQualifierApiRequest> $replace;
+  final ActionDispatcher<UpdateCustomerQualifierApiRequest> replace$;
   final FieldDispatcher<String> customerQualifierId;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<CustomerQualifierType> type;
   final FieldDispatcher<String> value;
   final FieldDispatcher<int> priority;
 
-  _$UpdateCustomerQualifierApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateCustomerQualifierApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        customerQualifierId = $options.field<String>(
+  _$UpdateCustomerQualifierApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateCustomerQualifierApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        customerQualifierId = options$.field<String>(
             'customerQualifierId',
             (a) => a?.customerQualifierId,
             (s) => s?.customerQualifierId,
             (p, b) => p?.customerQualifierId = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        type = $options.field<CustomerQualifierType>(
+        type = options$.field<CustomerQualifierType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        value = $options.field<String>(
+        value = options$.field<String>(
             'value', (a) => a?.value, (s) => s?.value, (p, b) => p?.value = b),
-        priority = $options.field<int>('priority', (a) => a?.priority,
+        priority = options$.field<int>('priority', (a) => a?.priority,
             (s) => s?.priority, (p, b) => p?.priority = b),
         super._();
 
@@ -286,18 +286,18 @@ class _$UpdateCustomerQualifierApiRequestActions
       _$UpdateCustomerQualifierApiRequestActions._(options());
 
   @override
-  UpdateCustomerQualifierApiRequest get $initial =>
+  UpdateCustomerQualifierApiRequest get initialState$ =>
       UpdateCustomerQualifierApiRequest();
 
   @override
-  UpdateCustomerQualifierApiRequestBuilder $newBuilder() =>
+  UpdateCustomerQualifierApiRequestBuilder newBuilder$() =>
       UpdateCustomerQualifierApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customerQualifierId,
         this.orgUnitId,
         this.type,
@@ -306,22 +306,17 @@ class _$UpdateCustomerQualifierApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    customerQualifierId.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    type.$reducer(reducer);
-    value.$reducer(reducer);
-    priority.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    customerQualifierId.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    type.reducer$(reducer);
+    value.reducer$(reducer);
+    priority.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateCustomerQualifierApiRequest);
 }

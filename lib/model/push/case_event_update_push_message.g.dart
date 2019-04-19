@@ -179,21 +179,21 @@ class _$CaseEventUpdatePushMessageActions
   final StatefulActionsOptions<
       CaseEventUpdatePushMessage,
       CaseEventUpdatePushMessageBuilder,
-      CaseEventUpdatePushMessageActions> $options;
+      CaseEventUpdatePushMessageActions> options$;
 
-  final ActionDispatcher<CaseEventUpdatePushMessage> $replace;
+  final ActionDispatcher<CaseEventUpdatePushMessage> replace$;
   final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<CaseEventUpdateType> updateType;
 
-  _$CaseEventUpdatePushMessageActions._(this.$options)
-      : $replace = $options.action<CaseEventUpdatePushMessage>(
-            '\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$CaseEventUpdatePushMessageActions._(this.options$)
+      : replace$ = options$.action<CaseEventUpdatePushMessage>(
+            'replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        updateType = $options.field<CaseEventUpdateType>(
+        updateType = options$.field<CaseEventUpdateType>(
             'updateType',
             (a) => a?.updateType,
             (s) => s?.updateType,
@@ -205,34 +205,30 @@ class _$CaseEventUpdatePushMessageActions
       _$CaseEventUpdatePushMessageActions._(options());
 
   @override
-  CaseEventUpdatePushMessage get $initial => CaseEventUpdatePushMessage();
+  CaseEventUpdatePushMessage get initialState$ => CaseEventUpdatePushMessage();
 
   @override
-  CaseEventUpdatePushMessageBuilder $newBuilder() =>
+  CaseEventUpdatePushMessageBuilder newBuilder$() =>
       CaseEventUpdatePushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
         this.updateType,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
-    updateType.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
+    updateType.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CaseEventUpdatePushMessage);
 }

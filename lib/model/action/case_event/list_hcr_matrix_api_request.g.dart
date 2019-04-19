@@ -240,22 +240,22 @@ typedef StatefulActionsOptions<
 
 class _$ListHcrMatrixApiRequestActions extends ListHcrMatrixApiRequestActions {
   final StatefulActionsOptions<ListHcrMatrixApiRequest,
-      ListHcrMatrixApiRequestBuilder, ListHcrMatrixApiRequestActions> $options;
+      ListHcrMatrixApiRequestBuilder, ListHcrMatrixApiRequestActions> options$;
 
-  final ActionDispatcher<ListHcrMatrixApiRequest> $replace;
+  final ActionDispatcher<ListHcrMatrixApiRequest> replace$;
   final FieldDispatcher<String> hcrId;
   final FieldDispatcher<String> teamId;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListHcrMatrixApiOrderBy> orderBy;
 
-  _$ListHcrMatrixApiRequestActions._(this.$options)
-      : $replace = $options.action<ListHcrMatrixApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        hcrId = $options.field<String>(
+  _$ListHcrMatrixApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListHcrMatrixApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        hcrId = options$.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -265,7 +265,7 @@ class _$ListHcrMatrixApiRequestActions extends ListHcrMatrixApiRequestActions {
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListHcrMatrixApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListHcrMatrixApiOrderBy>,
                     OrderByParamsBuilder<ListHcrMatrixApiOrderBy>,
                     OrderByParamsActions<ListHcrMatrixApiOrderBy>>(
@@ -281,45 +281,41 @@ class _$ListHcrMatrixApiRequestActions extends ListHcrMatrixApiRequestActions {
       _$ListHcrMatrixApiRequestActions._(options());
 
   @override
-  ListHcrMatrixApiRequest get $initial => ListHcrMatrixApiRequest();
+  ListHcrMatrixApiRequest get initialState$ => ListHcrMatrixApiRequest();
 
   @override
-  ListHcrMatrixApiRequestBuilder $newBuilder() =>
+  ListHcrMatrixApiRequestBuilder newBuilder$() =>
       ListHcrMatrixApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.hcrId,
         this.teamId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    hcrId.$reducer(reducer);
-    teamId.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    hcrId.reducer$(reducer);
+    teamId.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListHcrMatrixApiRequest);
 }

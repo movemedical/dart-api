@@ -23,69 +23,29 @@ class _$SetCustomerDefaultBillToAddressApi
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
           ApiResult<Nothing>>,
-      SetCustomerDefaultBillToAddressApi> $options;
+      SetCustomerDefaultBillToAddressApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Nothing>,
-          SetCustomerDefaultBillToAddressApi,
-          String>> $cancel;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-              ApiResult<Nothing>,
-              SetCustomerDefaultBillToAddressApi,
-              Command<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Nothing>,
-          SetCustomerDefaultBillToAddressApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Nothing>,
-          SetCustomerDefaultBillToAddressApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$SetCustomerDefaultBillToAddressApi._(this.$options)
-      : $replace = $options.action<
+  _$SetCustomerDefaultBillToAddressApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-                ApiResult<Nothing>,
-                SetCustomerDefaultBillToAddressApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-                    ApiResult<Nothing>,
-                    SetCustomerDefaultBillToAddressApi,
-                    Command<
-                        ApiCommand<
-                            SetCustomerDefaultBillToAddressApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-                    ApiResult<Nothing>,
-                    SetCustomerDefaultBillToAddressApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-                ApiResult<Nothing>,
-                SetCustomerDefaultBillToAddressApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$SetCustomerDefaultBillToAddressApi(
@@ -95,34 +55,26 @@ class _$SetCustomerDefaultBillToAddressApi
   @override
   CommandState<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(
-            ApiCommand, [FullType(SetCustomerDefaultBillToAddressApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

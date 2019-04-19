@@ -309,9 +309,9 @@ typedef StatefulActionsOptions<ListUsersApiUser, ListUsersApiUserBuilder,
 
 class _$ListUsersApiUserActions extends ListUsersApiUserActions {
   final StatefulActionsOptions<ListUsersApiUser, ListUsersApiUserBuilder,
-      ListUsersApiUserActions> $options;
+      ListUsersApiUserActions> options$;
 
-  final ActionDispatcher<ListUsersApiUser> $replace;
+  final ActionDispatcher<ListUsersApiUser> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> email;
@@ -321,36 +321,36 @@ class _$ListUsersApiUserActions extends ListUsersApiUserActions {
   final FieldDispatcher<bool> supportAccessEnabled;
   final FieldDispatcher<DateTime> supportAccessEndDate;
 
-  _$ListUsersApiUserActions._(this.$options)
-      : $replace =
-            $options.action<ListUsersApiUser>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListUsersApiUserActions._(this.options$)
+      : replace$ =
+            options$.action<ListUsersApiUser>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        email = $options.field<String>(
+        email = options$.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        userPerspective = $options.field<UserPerspective>(
+        userPerspective = options$.field<UserPerspective>(
             'userPerspective',
             (a) => a?.userPerspective,
             (s) => s?.userPerspective,
             (p, b) => p?.userPerspective = b),
-        userStatus = $options.field<UserStatus>(
+        userStatus = options$.field<UserStatus>(
             'userStatus',
             (a) => a?.userStatus,
             (s) => s?.userStatus,
             (p, b) => p?.userStatus = b),
-        directoryAdmin = $options.field<bool>(
+        directoryAdmin = options$.field<bool>(
             'directoryAdmin',
             (a) => a?.directoryAdmin,
             (s) => s?.directoryAdmin,
             (p, b) => p?.directoryAdmin = b),
-        supportAccessEnabled = $options.field<bool>(
+        supportAccessEnabled = options$.field<bool>(
             'supportAccessEnabled',
             (a) => a?.supportAccessEnabled,
             (s) => s?.supportAccessEnabled,
             (p, b) => p?.supportAccessEnabled = b),
-        supportAccessEndDate = $options.field<DateTime>(
+        supportAccessEndDate = options$.field<DateTime>(
             'supportAccessEndDate',
             (a) => a?.supportAccessEndDate,
             (s) => s?.supportAccessEndDate,
@@ -361,16 +361,16 @@ class _$ListUsersApiUserActions extends ListUsersApiUserActions {
       _$ListUsersApiUserActions._(options());
 
   @override
-  ListUsersApiUser get $initial => ListUsersApiUser();
+  ListUsersApiUser get initialState$ => ListUsersApiUser();
 
   @override
-  ListUsersApiUserBuilder $newBuilder() => ListUsersApiUserBuilder();
+  ListUsersApiUserBuilder newBuilder$() => ListUsersApiUserBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.email,
@@ -382,24 +382,20 @@ class _$ListUsersApiUserActions extends ListUsersApiUserActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    email.$reducer(reducer);
-    userPerspective.$reducer(reducer);
-    userStatus.$reducer(reducer);
-    directoryAdmin.$reducer(reducer);
-    supportAccessEnabled.$reducer(reducer);
-    supportAccessEndDate.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    email.reducer$(reducer);
+    userPerspective.reducer$(reducer);
+    userStatus.reducer$(reducer);
+    directoryAdmin.reducer$(reducer);
+    supportAccessEnabled.reducer$(reducer);
+    supportAccessEndDate.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListUsersApiUser);
 }

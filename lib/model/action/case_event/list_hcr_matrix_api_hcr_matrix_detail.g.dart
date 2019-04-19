@@ -420,9 +420,9 @@ class _$ListHcrMatrixApiHcrMatrixDetailActions
   final StatefulActionsOptions<
       ListHcrMatrixApiHcrMatrixDetail,
       ListHcrMatrixApiHcrMatrixDetailBuilder,
-      ListHcrMatrixApiHcrMatrixDetailActions> $options;
+      ListHcrMatrixApiHcrMatrixDetailActions> options$;
 
-  final ActionDispatcher<ListHcrMatrixApiHcrMatrixDetail> $replace;
+  final ActionDispatcher<ListHcrMatrixApiHcrMatrixDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> teamId;
   final FieldDispatcher<String> teamText;
@@ -436,53 +436,53 @@ class _$ListHcrMatrixApiHcrMatrixDetailActions
   final FieldDispatcher<String> procedureText;
   final FieldDispatcher<bool> allProcedures;
 
-  _$ListHcrMatrixApiHcrMatrixDetailActions._(this.$options)
-      : $replace = $options.action<ListHcrMatrixApiHcrMatrixDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListHcrMatrixApiHcrMatrixDetailActions._(this.options$)
+      : replace$ = options$.action<ListHcrMatrixApiHcrMatrixDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        teamText = $options.field<String>('teamText', (a) => a?.teamText,
+        teamText = options$.field<String>('teamText', (a) => a?.teamText,
             (s) => s?.teamText, (p, b) => p?.teamText = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        facilityText = $options.field<String>(
+        facilityText = options$.field<String>(
             'facilityText',
             (a) => a?.facilityText,
             (s) => s?.facilityText,
             (p, b) => p?.facilityText = b),
-        allFacilities = $options.field<bool>(
+        allFacilities = options$.field<bool>(
             'allFacilities',
             (a) => a?.allFacilities,
             (s) => s?.allFacilities,
             (p, b) => p?.allFacilities = b),
-        physicianId = $options.field<String>(
+        physicianId = options$.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        physicianText = $options.field<String>(
+        physicianText = options$.field<String>(
             'physicianText',
             (a) => a?.physicianText,
             (s) => s?.physicianText,
             (p, b) => p?.physicianText = b),
-        allPhysicians = $options.field<bool>(
+        allPhysicians = options$.field<bool>(
             'allPhysicians',
             (a) => a?.allPhysicians,
             (s) => s?.allPhysicians,
             (p, b) => p?.allPhysicians = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        procedureText = $options.field<String>(
+        procedureText = options$.field<String>(
             'procedureText',
             (a) => a?.procedureText,
             (s) => s?.procedureText,
             (p, b) => p?.procedureText = b),
-        allProcedures = $options.field<bool>(
+        allProcedures = options$.field<bool>(
             'allProcedures',
             (a) => a?.allProcedures,
             (s) => s?.allProcedures,
@@ -494,18 +494,18 @@ class _$ListHcrMatrixApiHcrMatrixDetailActions
       _$ListHcrMatrixApiHcrMatrixDetailActions._(options());
 
   @override
-  ListHcrMatrixApiHcrMatrixDetail get $initial =>
+  ListHcrMatrixApiHcrMatrixDetail get initialState$ =>
       ListHcrMatrixApiHcrMatrixDetail();
 
   @override
-  ListHcrMatrixApiHcrMatrixDetailBuilder $newBuilder() =>
+  ListHcrMatrixApiHcrMatrixDetailBuilder newBuilder$() =>
       ListHcrMatrixApiHcrMatrixDetailBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.teamId,
         this.teamText,
@@ -521,29 +521,24 @@ class _$ListHcrMatrixApiHcrMatrixDetailActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    teamId.$reducer(reducer);
-    teamText.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    facilityText.$reducer(reducer);
-    allFacilities.$reducer(reducer);
-    physicianId.$reducer(reducer);
-    physicianText.$reducer(reducer);
-    allPhysicians.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    procedureText.$reducer(reducer);
-    allProcedures.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    teamId.reducer$(reducer);
+    teamText.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    facilityText.reducer$(reducer);
+    allFacilities.reducer$(reducer);
+    physicianId.reducer$(reducer);
+    physicianText.reducer$(reducer);
+    allPhysicians.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    procedureText.reducer$(reducer);
+    allProcedures.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListHcrMatrixApiHcrMatrixDetail);
 }

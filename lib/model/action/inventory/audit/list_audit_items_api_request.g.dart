@@ -430,9 +430,9 @@ class _$ListAuditItemsApiRequestActions
   final StatefulActionsOptions<
       ListAuditItemsApiRequest,
       ListAuditItemsApiRequestBuilder,
-      ListAuditItemsApiRequestActions> $options;
+      ListAuditItemsApiRequestActions> options$;
 
-  final ActionDispatcher<ListAuditItemsApiRequest> $replace;
+  final ActionDispatcher<ListAuditItemsApiRequest> replace$;
   final FieldDispatcher<String> auditId;
   final FieldDispatcher<String> search;
   final FieldDispatcher<int> number;
@@ -445,39 +445,39 @@ class _$ListAuditItemsApiRequestActions
   final FieldDispatcher<bool> forExport;
   final PaginationParamsActions paging;
 
-  _$ListAuditItemsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListAuditItemsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+  _$ListAuditItemsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListAuditItemsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        itemIds = $options.field<BuiltList<String>>('itemIds',
+        itemIds = options$.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        lotIds = $options.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
+        lotIds = options$.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
             (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        serialIds = $options.field<BuiltList<String>>(
+        serialIds = options$.field<BuiltList<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
             (p, b) => p?.serialIds = b),
-        containerIds = $options.field<BuiltList<String>>(
+        containerIds = options$.field<BuiltList<String>>(
             'containerIds',
             (a) => a?.containerIds,
             (s) => s?.containerIds,
             (p, b) => p?.containerIds = b),
-        includeClosed = $options.field<bool>(
+        includeClosed = options$.field<bool>(
             'includeClosed',
             (a) => a?.includeClosed,
             (s) => s?.includeClosed,
             (p, b) => p?.includeClosed = b),
-        hasDiff = $options.field<bool>('hasDiff', (a) => a?.hasDiff,
+        hasDiff = options$.field<bool>('hasDiff', (a) => a?.hasDiff,
             (s) => s?.hasDiff, (p, b) => p?.hasDiff = b),
-        forExport = $options.field<bool>('forExport', (a) => a?.forExport,
+        forExport = options$.field<bool>('forExport', (a) => a?.forExport,
             (s) => s?.forExport, (p, b) => p?.forExport = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -493,23 +493,23 @@ class _$ListAuditItemsApiRequestActions
       _$ListAuditItemsApiRequestActions._(options());
 
   @override
-  ListAuditItemsApiRequest get $initial => ListAuditItemsApiRequest();
+  ListAuditItemsApiRequest get initialState$ => ListAuditItemsApiRequest();
 
   @override
-  ListAuditItemsApiRequestBuilder $newBuilder() =>
+  ListAuditItemsApiRequestBuilder newBuilder$() =>
       ListAuditItemsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
         this.search,
         this.number,
@@ -523,28 +523,24 @@ class _$ListAuditItemsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditId.$reducer(reducer);
-    search.$reducer(reducer);
-    number.$reducer(reducer);
-    itemIds.$reducer(reducer);
-    lotIds.$reducer(reducer);
-    serialIds.$reducer(reducer);
-    containerIds.$reducer(reducer);
-    includeClosed.$reducer(reducer);
-    hasDiff.$reducer(reducer);
-    forExport.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditId.reducer$(reducer);
+    search.reducer$(reducer);
+    number.reducer$(reducer);
+    itemIds.reducer$(reducer);
+    lotIds.reducer$(reducer);
+    serialIds.reducer$(reducer);
+    containerIds.reducer$(reducer);
+    includeClosed.reducer$(reducer);
+    hasDiff.reducer$(reducer);
+    forExport.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListAuditItemsApiRequest);
 }

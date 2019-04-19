@@ -120,13 +120,13 @@ class _$GetDashboardStockLevelCountApiRequestActions
   final StatefulActionsOptions<
       GetDashboardStockLevelCountApiRequest,
       GetDashboardStockLevelCountApiRequestBuilder,
-      GetDashboardStockLevelCountApiRequestActions> $options;
+      GetDashboardStockLevelCountApiRequestActions> options$;
 
-  final ActionDispatcher<GetDashboardStockLevelCountApiRequest> $replace;
+  final ActionDispatcher<GetDashboardStockLevelCountApiRequest> replace$;
 
-  _$GetDashboardStockLevelCountApiRequestActions._(this.$options)
-      : $replace = $options.action<GetDashboardStockLevelCountApiRequest>(
-            '\$replace', (a) => a?.$replace),
+  _$GetDashboardStockLevelCountApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetDashboardStockLevelCountApiRequest>(
+            'replace\$', (a) => a?.replace$),
         super._();
 
   factory _$GetDashboardStockLevelCountApiRequestActions(
@@ -134,22 +134,17 @@ class _$GetDashboardStockLevelCountApiRequestActions
       _$GetDashboardStockLevelCountApiRequestActions._(options());
 
   @override
-  GetDashboardStockLevelCountApiRequest get $initial =>
+  GetDashboardStockLevelCountApiRequest get initialState$ =>
       GetDashboardStockLevelCountApiRequest();
 
   @override
-  GetDashboardStockLevelCountApiRequestBuilder $newBuilder() =>
+  GetDashboardStockLevelCountApiRequestBuilder newBuilder$() =>
       GetDashboardStockLevelCountApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetDashboardStockLevelCountApiRequest);
 }

@@ -21,95 +21,52 @@ class _$GetLoanApi extends GetLoanApi {
           ApiResult<GetLoanApiResponse>>,
       CommandStateBuilder<ApiCommand<GetLoanApiRequest>,
           ApiResult<GetLoanApiResponse>>,
-      GetLoanApi> $options;
+      GetLoanApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetLoanApiRequest>,
-          ApiResult<GetLoanApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetLoanApiRequest>,
-          ApiResult<GetLoanApiResponse>, GetLoanApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetLoanApiRequest>,
-          ApiResult<GetLoanApiResponse>,
-          GetLoanApi,
-          Command<ApiCommand<GetLoanApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetLoanApiRequest>,
-          ApiResult<GetLoanApiResponse>,
-          GetLoanApi,
-          CommandResult<ApiResult<GetLoanApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetLoanApiRequest>,
-          ApiResult<GetLoanApiResponse>,
-          GetLoanApi,
-          CommandProgress>> $progress;
+          ApiResult<GetLoanApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetLoanApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<GetLoanApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetLoanApi._(this.$options)
-      : $replace = $options.action<
+  _$GetLoanApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetLoanApiRequest>,
                     ApiResult<GetLoanApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetLoanApiRequest>,
-                ApiResult<GetLoanApiResponse>,
-                GetLoanApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetLoanApiRequest>,
-                    ApiResult<GetLoanApiResponse>,
-                    GetLoanApi,
-                    Command<ApiCommand<GetLoanApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetLoanApiRequest>,
-                    ApiResult<GetLoanApiResponse>,
-                    GetLoanApi,
-                    CommandResult<ApiResult<GetLoanApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetLoanApiRequest>,
-                ApiResult<GetLoanApiResponse>,
-                GetLoanApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<GetLoanApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<GetLoanApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetLoanApi(GetLoanApiOptions options) => _$GetLoanApi._(options());
 
   @override
   CommandState<ApiCommand<GetLoanApiRequest>, ApiResult<GetLoanApiResponse>>
-      get $initial => CommandState<ApiCommand<GetLoanApiRequest>,
+      get initialState$ => CommandState<ApiCommand<GetLoanApiRequest>,
           ApiResult<GetLoanApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetLoanApiRequest>,
           ApiResult<GetLoanApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<GetLoanApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<GetLoanApiRequest>,
           ApiResult<GetLoanApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetLoanApiRequest)]),
-        FullType(ApiResult, [FullType(GetLoanApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

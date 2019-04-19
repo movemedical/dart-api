@@ -20,57 +20,29 @@ class _$CancelCaseEventApi extends CancelCaseEventApi {
       CommandState<ApiCommand<CancelCaseEventApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<CancelCaseEventApiRequest>,
           ApiResult<Nothing>>,
-      CancelCaseEventApi> $options;
+      CancelCaseEventApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CancelCaseEventApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelCaseEventApiRequest>, ApiResult<Nothing>,
-          CancelCaseEventApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CancelCaseEventApiRequest>,
-          ApiResult<Nothing>,
-          CancelCaseEventApi,
-          Command<ApiCommand<CancelCaseEventApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelCaseEventApiRequest>, ApiResult<Nothing>,
-          CancelCaseEventApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelCaseEventApiRequest>, ApiResult<Nothing>,
-          CancelCaseEventApi, CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<CancelCaseEventApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CancelCaseEventApi._(this.$options)
-      : $replace = $options.action<
+  _$CancelCaseEventApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<CancelCaseEventApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CancelCaseEventApiRequest>,
-                ApiResult<Nothing>,
-                CancelCaseEventApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CancelCaseEventApiRequest>,
-                    ApiResult<Nothing>,
-                    CancelCaseEventApi,
-                    Command<ApiCommand<CancelCaseEventApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CancelCaseEventApiRequest>,
-                    ApiResult<Nothing>,
-                    CancelCaseEventApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CancelCaseEventApiRequest>,
-                ApiResult<Nothing>,
-                CancelCaseEventApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<CancelCaseEventApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CancelCaseEventApi(CancelCaseEventApiOptions options) =>
@@ -78,30 +50,23 @@ class _$CancelCaseEventApi extends CancelCaseEventApi {
 
   @override
   CommandState<ApiCommand<CancelCaseEventApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<CancelCaseEventApiRequest>,
+      get initialState$ => CommandState<ApiCommand<CancelCaseEventApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<CancelCaseEventApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<CancelCaseEventApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CancelCaseEventApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

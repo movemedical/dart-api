@@ -318,9 +318,9 @@ class _$ListAdjustmentsApiAdjustmentActions
   final StatefulActionsOptions<
       ListAdjustmentsApiAdjustment,
       ListAdjustmentsApiAdjustmentBuilder,
-      ListAdjustmentsApiAdjustmentActions> $options;
+      ListAdjustmentsApiAdjustmentActions> options$;
 
-  final ActionDispatcher<ListAdjustmentsApiAdjustment> $replace;
+  final ActionDispatcher<ListAdjustmentsApiAdjustment> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> number;
   final FieldDispatcher<AdjustmentStatus> status;
@@ -329,32 +329,32 @@ class _$ListAdjustmentsApiAdjustmentActions
   final StockPlaceActions stockPlace;
   final FieldDispatcher<DateTime> adjustedDate;
 
-  _$ListAdjustmentsApiAdjustmentActions._(this.$options)
-      : $replace = $options.action<ListAdjustmentsApiAdjustment>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListAdjustmentsApiAdjustmentActions._(this.options$)
+      : replace$ = options$.action<ListAdjustmentsApiAdjustment>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<AdjustmentStatus>('status', (a) => a?.status,
+        status = options$.field<AdjustmentStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        reason = $options.field<AdjustmentReason>('reason', (a) => a?.reason,
+        reason = options$.field<AdjustmentReason>('reason', (a) => a?.reason,
             (s) => s?.reason, (p, b) => p?.reason = b),
         stockItem = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
                 (a) => a.stockItem,
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
         stockPlace = StockPlaceActions(() =>
-            $options.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
+            options$.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
                 'stockPlace',
                 (a) => a.stockPlace,
                 (s) => s?.stockPlace,
                 (b) => b?.stockPlace,
                 (parent, builder) => parent?.stockPlace = builder)),
-        adjustedDate = $options.field<DateTime>(
+        adjustedDate = options$.field<DateTime>(
             'adjustedDate',
             (a) => a?.adjustedDate,
             (s) => s?.adjustedDate,
@@ -366,24 +366,25 @@ class _$ListAdjustmentsApiAdjustmentActions
       _$ListAdjustmentsApiAdjustmentActions._(options());
 
   @override
-  ListAdjustmentsApiAdjustment get $initial => ListAdjustmentsApiAdjustment();
+  ListAdjustmentsApiAdjustment get initialState$ =>
+      ListAdjustmentsApiAdjustment();
 
   @override
-  ListAdjustmentsApiAdjustmentBuilder $newBuilder() =>
+  ListAdjustmentsApiAdjustmentBuilder newBuilder$() =>
       ListAdjustmentsApiAdjustmentBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
         this.stockPlace,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.number,
         this.status,
@@ -392,26 +393,21 @@ class _$ListAdjustmentsApiAdjustmentActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
-    reason.$reducer(reducer);
-    stockItem.$reducer(reducer);
-    stockPlace.$reducer(reducer);
-    adjustedDate.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
+    reason.reducer$(reducer);
+    stockItem.reducer$(reducer);
+    stockPlace.reducer$(reducer);
+    adjustedDate.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    stockItem.$middleware(middleware);
-    stockPlace.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    stockItem.middleware$(middleware);
+    stockPlace.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListAdjustmentsApiAdjustment);
 }

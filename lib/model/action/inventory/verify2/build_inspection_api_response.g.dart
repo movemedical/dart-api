@@ -348,9 +348,9 @@ class _$BuildInspectionApiResponseActions
   final StatefulActionsOptions<
       BuildInspectionApiResponse,
       BuildInspectionApiResponseBuilder,
-      BuildInspectionApiResponseActions> $options;
+      BuildInspectionApiResponseActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiResponse> $replace;
+  final ActionDispatcher<BuildInspectionApiResponse> replace$;
   final FieldDispatcher<String> processKey;
   final FieldDispatcher<bool> processInProgress;
   final FieldDispatcher<BuiltList<BuildInspectionApiReceipt>> receipts;
@@ -361,37 +361,37 @@ class _$BuildInspectionApiResponseActions
       receiptOverrides;
   final BuildInspectionApiSupportingInfoActions supportingInfo;
 
-  _$BuildInspectionApiResponseActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        processKey = $options.field<String>('processKey', (a) => a?.processKey,
+  _$BuildInspectionApiResponseActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        processKey = options$.field<String>('processKey', (a) => a?.processKey,
             (s) => s?.processKey, (p, b) => p?.processKey = b),
-        processInProgress = $options.field<bool>(
+        processInProgress = options$.field<bool>(
             'processInProgress',
             (a) => a?.processInProgress,
             (s) => s?.processInProgress,
             (p, b) => p?.processInProgress = b),
-        receipts = $options.field<BuiltList<BuildInspectionApiReceipt>>(
+        receipts = options$.field<BuiltList<BuildInspectionApiReceipt>>(
             'receipts',
             (a) => a?.receipts,
             (s) => s?.receipts,
             (p, b) => p?.receipts = b),
-        entries = $options.field<BuiltList<BuildInspectionApiEntry>>('entries',
+        entries = options$.field<BuiltList<BuildInspectionApiEntry>>('entries',
             (a) => a?.entries, (s) => s?.entries, (p, b) => p?.entries = b),
         expectedStocks =
-            $options.field<BuiltList<BuildInspectionApiExpectedStock>>(
+            options$.field<BuiltList<BuildInspectionApiExpectedStock>>(
                 'expectedStocks',
                 (a) => a?.expectedStocks,
                 (s) => s?.expectedStocks,
                 (p, b) => p?.expectedStocks = b),
         receiptOverrides =
-            $options.field<BuiltList<BuildInspectionApiEntryReceiptOverride>>(
+            options$.field<BuiltList<BuildInspectionApiEntryReceiptOverride>>(
                 'receiptOverrides',
                 (a) => a?.receiptOverrides,
                 (s) => s?.receiptOverrides,
                 (p, b) => p?.receiptOverrides = b),
         supportingInfo = BuildInspectionApiSupportingInfoActions(() =>
-            $options.stateful<
+            options$.stateful<
                     BuildInspectionApiSupportingInfo,
                     BuildInspectionApiSupportingInfoBuilder,
                     BuildInspectionApiSupportingInfoActions>(
@@ -407,23 +407,23 @@ class _$BuildInspectionApiResponseActions
       _$BuildInspectionApiResponseActions._(options());
 
   @override
-  BuildInspectionApiResponse get $initial => BuildInspectionApiResponse();
+  BuildInspectionApiResponse get initialState$ => BuildInspectionApiResponse();
 
   @override
-  BuildInspectionApiResponseBuilder $newBuilder() =>
+  BuildInspectionApiResponseBuilder newBuilder$() =>
       BuildInspectionApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.supportingInfo,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.processKey,
         this.processInProgress,
         this.receipts,
@@ -433,24 +433,20 @@ class _$BuildInspectionApiResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    processKey.$reducer(reducer);
-    processInProgress.$reducer(reducer);
-    receipts.$reducer(reducer);
-    entries.$reducer(reducer);
-    expectedStocks.$reducer(reducer);
-    receiptOverrides.$reducer(reducer);
-    supportingInfo.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    processKey.reducer$(reducer);
+    processInProgress.reducer$(reducer);
+    receipts.reducer$(reducer);
+    entries.reducer$(reducer);
+    expectedStocks.reducer$(reducer);
+    receiptOverrides.reducer$(reducer);
+    supportingInfo.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    supportingInfo.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    supportingInfo.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(BuildInspectionApiResponse);
 }

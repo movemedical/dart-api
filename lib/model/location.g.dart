@@ -328,9 +328,9 @@ typedef StatefulActionsOptions<Location, LocationBuilder,
 
 class _$LocationActions extends LocationActions {
   final StatefulActionsOptions<Location, LocationBuilder, LocationActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<Location> $replace;
+  final ActionDispatcher<Location> replace$;
   final FieldDispatcher<LocationType> locationType;
   final FieldDispatcher<FacilityType> facilityType;
   final FieldDispatcher<String> locationId;
@@ -341,37 +341,37 @@ class _$LocationActions extends LocationActions {
   final FieldDispatcher<bool> favorite;
   final FieldDispatcher<double> distance;
 
-  _$LocationActions._(this.$options)
-      : $replace = $options.action<Location>('\$replace', (a) => a?.$replace),
-        locationType = $options.field<LocationType>(
+  _$LocationActions._(this.options$)
+      : replace$ = options$.action<Location>('replace\$', (a) => a?.replace$),
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        facilityType = $options.field<FacilityType>(
+        facilityType = options$.field<FacilityType>(
             'facilityType',
             (a) => a?.facilityType,
             (s) => s?.facilityType,
             (p, b) => p?.facilityType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        displayText = $options.field<String>(
+        displayText = options$.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
             (p, b) => p?.displayText = b),
-        displayPriority = $options.field<int>(
+        displayPriority = options$.field<int>(
             'displayPriority',
             (a) => a?.displayPriority,
             (s) => s?.displayPriority,
             (p, b) => p?.displayPriority = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        favorite = $options.field<bool>('favorite', (a) => a?.favorite,
+        favorite = options$.field<bool>('favorite', (a) => a?.favorite,
             (s) => s?.favorite, (p, b) => p?.favorite = b),
-        distance = $options.field<double>('distance', (a) => a?.distance,
+        distance = options$.field<double>('distance', (a) => a?.distance,
             (s) => s?.distance, (p, b) => p?.distance = b),
         super._();
 
@@ -379,16 +379,16 @@ class _$LocationActions extends LocationActions {
       _$LocationActions._(options());
 
   @override
-  Location get $initial => Location();
+  Location get initialState$ => Location();
 
   @override
-  LocationBuilder $newBuilder() => LocationBuilder();
+  LocationBuilder newBuilder$() => LocationBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.locationType,
         this.facilityType,
         this.locationId,
@@ -401,25 +401,21 @@ class _$LocationActions extends LocationActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    locationType.$reducer(reducer);
-    facilityType.$reducer(reducer);
-    locationId.$reducer(reducer);
-    customerId.$reducer(reducer);
-    displayText.$reducer(reducer);
-    displayPriority.$reducer(reducer);
-    name.$reducer(reducer);
-    favorite.$reducer(reducer);
-    distance.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    locationType.reducer$(reducer);
+    facilityType.reducer$(reducer);
+    locationId.reducer$(reducer);
+    customerId.reducer$(reducer);
+    displayText.reducer$(reducer);
+    displayPriority.reducer$(reducer);
+    name.reducer$(reducer);
+    favorite.reducer$(reducer);
+    distance.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Location);
 }

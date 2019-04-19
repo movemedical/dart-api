@@ -244,33 +244,33 @@ typedef StatefulActionsOptions<
 
 class _$CreateNoteApiRequestActions extends CreateNoteApiRequestActions {
   final StatefulActionsOptions<CreateNoteApiRequest,
-      CreateNoteApiRequestBuilder, CreateNoteApiRequestActions> $options;
+      CreateNoteApiRequestBuilder, CreateNoteApiRequestActions> options$;
 
-  final ActionDispatcher<CreateNoteApiRequest> $replace;
+  final ActionDispatcher<CreateNoteApiRequest> replace$;
   final FieldDispatcher<String> ownerOrgUnitId;
   final FieldDispatcher<AttributableType> attrType;
   final FieldDispatcher<String> attrId;
   final FieldDispatcher<Visibility> visibility;
   final FieldDispatcher<String> noteValue;
 
-  _$CreateNoteApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateNoteApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        ownerOrgUnitId = $options.field<String>(
+  _$CreateNoteApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateNoteApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        ownerOrgUnitId = options$.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        attrType = $options.field<AttributableType>('attrType',
+        attrType = options$.field<AttributableType>('attrType',
             (a) => a?.attrType, (s) => s?.attrType, (p, b) => p?.attrType = b),
-        attrId = $options.field<String>('attrId', (a) => a?.attrId,
+        attrId = options$.field<String>('attrId', (a) => a?.attrId,
             (s) => s?.attrId, (p, b) => p?.attrId = b),
-        visibility = $options.field<Visibility>(
+        visibility = options$.field<Visibility>(
             'visibility',
             (a) => a?.visibility,
             (s) => s?.visibility,
             (p, b) => p?.visibility = b),
-        noteValue = $options.field<String>('noteValue', (a) => a?.noteValue,
+        noteValue = options$.field<String>('noteValue', (a) => a?.noteValue,
             (s) => s?.noteValue, (p, b) => p?.noteValue = b),
         super._();
 
@@ -279,16 +279,16 @@ class _$CreateNoteApiRequestActions extends CreateNoteApiRequestActions {
       _$CreateNoteApiRequestActions._(options());
 
   @override
-  CreateNoteApiRequest get $initial => CreateNoteApiRequest();
+  CreateNoteApiRequest get initialState$ => CreateNoteApiRequest();
 
   @override
-  CreateNoteApiRequestBuilder $newBuilder() => CreateNoteApiRequestBuilder();
+  CreateNoteApiRequestBuilder newBuilder$() => CreateNoteApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.ownerOrgUnitId,
         this.attrType,
         this.attrId,
@@ -297,21 +297,17 @@ class _$CreateNoteApiRequestActions extends CreateNoteApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    ownerOrgUnitId.$reducer(reducer);
-    attrType.$reducer(reducer);
-    attrId.$reducer(reducer);
-    visibility.$reducer(reducer);
-    noteValue.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    ownerOrgUnitId.reducer$(reducer);
+    attrType.reducer$(reducer);
+    attrId.reducer$(reducer);
+    visibility.reducer$(reducer);
+    noteValue.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateNoteApiRequest);
 }

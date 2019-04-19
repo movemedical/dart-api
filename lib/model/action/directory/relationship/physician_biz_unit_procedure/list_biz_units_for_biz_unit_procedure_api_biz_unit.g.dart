@@ -205,21 +205,21 @@ class _$ListBizUnitsForBizUnitProcedureApiBizUnitActions
   final StatefulActionsOptions<
       ListBizUnitsForBizUnitProcedureApiBizUnit,
       ListBizUnitsForBizUnitProcedureApiBizUnitBuilder,
-      ListBizUnitsForBizUnitProcedureApiBizUnitActions> $options;
+      ListBizUnitsForBizUnitProcedureApiBizUnitActions> options$;
 
-  final ActionDispatcher<ListBizUnitsForBizUnitProcedureApiBizUnit> $replace;
+  final ActionDispatcher<ListBizUnitsForBizUnitProcedureApiBizUnit> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> description;
 
-  _$ListBizUnitsForBizUnitProcedureApiBizUnitActions._(this.$options)
-      : $replace = $options.action<ListBizUnitsForBizUnitProcedureApiBizUnit>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListBizUnitsForBizUnitProcedureApiBizUnitActions._(this.options$)
+      : replace$ = options$.action<ListBizUnitsForBizUnitProcedureApiBizUnit>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -231,38 +231,33 @@ class _$ListBizUnitsForBizUnitProcedureApiBizUnitActions
       _$ListBizUnitsForBizUnitProcedureApiBizUnitActions._(options());
 
   @override
-  ListBizUnitsForBizUnitProcedureApiBizUnit get $initial =>
+  ListBizUnitsForBizUnitProcedureApiBizUnit get initialState$ =>
       ListBizUnitsForBizUnitProcedureApiBizUnit();
 
   @override
-  ListBizUnitsForBizUnitProcedureApiBizUnitBuilder $newBuilder() =>
+  ListBizUnitsForBizUnitProcedureApiBizUnitBuilder newBuilder$() =>
       ListBizUnitsForBizUnitProcedureApiBizUnitBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.description,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    description.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    description.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListBizUnitsForBizUnitProcedureApiBizUnit);
 }

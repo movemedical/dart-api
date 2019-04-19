@@ -154,15 +154,15 @@ class _$ReleaseShipment2ApiRequestActions
   final StatefulActionsOptions<
       ReleaseShipment2ApiRequest,
       ReleaseShipment2ApiRequestBuilder,
-      ReleaseShipment2ApiRequestActions> $options;
+      ReleaseShipment2ApiRequestActions> options$;
 
-  final ActionDispatcher<ReleaseShipment2ApiRequest> $replace;
+  final ActionDispatcher<ReleaseShipment2ApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$ReleaseShipment2ApiRequestActions._(this.$options)
-      : $replace = $options.action<ReleaseShipment2ApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ReleaseShipment2ApiRequestActions._(this.options$)
+      : replace$ = options$.action<ReleaseShipment2ApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -171,32 +171,28 @@ class _$ReleaseShipment2ApiRequestActions
       _$ReleaseShipment2ApiRequestActions._(options());
 
   @override
-  ReleaseShipment2ApiRequest get $initial => ReleaseShipment2ApiRequest();
+  ReleaseShipment2ApiRequest get initialState$ => ReleaseShipment2ApiRequest();
 
   @override
-  ReleaseShipment2ApiRequestBuilder $newBuilder() =>
+  ReleaseShipment2ApiRequestBuilder newBuilder$() =>
       ReleaseShipment2ApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ReleaseShipment2ApiRequest);
 }

@@ -446,9 +446,9 @@ class _$GetUiSetupAllApiUserPermissionsActions
   final StatefulActionsOptions<
       GetUiSetupAllApiUserPermissions,
       GetUiSetupAllApiUserPermissionsBuilder,
-      GetUiSetupAllApiUserPermissionsActions> $options;
+      GetUiSetupAllApiUserPermissionsActions> options$;
 
-  final ActionDispatcher<GetUiSetupAllApiUserPermissions> $replace;
+  final ActionDispatcher<GetUiSetupAllApiUserPermissions> replace$;
   final FieldDispatcher<bool> directoryAdmin;
   final FieldDispatcher<bool> manageCatalog;
   final FieldDispatcher<bool> phiAllowed;
@@ -463,46 +463,46 @@ class _$GetUiSetupAllApiUserPermissionsActions
   final FieldDispatcher<bool> requestLoan;
   final FieldDispatcher<bool> createLoan;
 
-  _$GetUiSetupAllApiUserPermissionsActions._(this.$options)
-      : $replace = $options.action<GetUiSetupAllApiUserPermissions>(
-            '\$replace', (a) => a?.$replace),
-        directoryAdmin = $options.field<bool>(
+  _$GetUiSetupAllApiUserPermissionsActions._(this.options$)
+      : replace$ = options$.action<GetUiSetupAllApiUserPermissions>(
+            'replace\$', (a) => a?.replace$),
+        directoryAdmin = options$.field<bool>(
             'directoryAdmin',
             (a) => a?.directoryAdmin,
             (s) => s?.directoryAdmin,
             (p, b) => p?.directoryAdmin = b),
-        manageCatalog = $options.field<bool>(
+        manageCatalog = options$.field<bool>(
             'manageCatalog',
             (a) => a?.manageCatalog,
             (s) => s?.manageCatalog,
             (p, b) => p?.manageCatalog = b),
-        phiAllowed = $options.field<bool>('phiAllowed', (a) => a?.phiAllowed,
+        phiAllowed = options$.field<bool>('phiAllowed', (a) => a?.phiAllowed,
             (s) => s?.phiAllowed, (p, b) => p?.phiAllowed = b),
-        createCase = $options.field<bool>('createCase', (a) => a?.createCase,
+        createCase = options$.field<bool>('createCase', (a) => a?.createCase,
             (s) => s?.createCase, (p, b) => p?.createCase = b),
-        manageUsers = $options.field<bool>('manageUsers', (a) => a?.manageUsers,
+        manageUsers = options$.field<bool>('manageUsers', (a) => a?.manageUsers,
             (s) => s?.manageUsers, (p, b) => p?.manageUsers = b),
-        orgAdmin = $options.field<bool>('orgAdmin', (a) => a?.orgAdmin,
+        orgAdmin = options$.field<bool>('orgAdmin', (a) => a?.orgAdmin,
             (s) => s?.orgAdmin, (p, b) => p?.orgAdmin = b),
-        createStock = $options.field<bool>('createStock', (a) => a?.createStock,
+        createStock = options$.field<bool>('createStock', (a) => a?.createStock,
             (s) => s?.createStock, (p, b) => p?.createStock = b),
-        createSalesOrder = $options.field<bool>(
+        createSalesOrder = options$.field<bool>(
             'createSalesOrder',
             (a) => a?.createSalesOrder,
             (s) => s?.createSalesOrder,
             (p, b) => p?.createSalesOrder = b),
-        createStockOrder = $options.field<bool>(
+        createStockOrder = options$.field<bool>(
             'createStockOrder',
             (a) => a?.createStockOrder,
             (s) => s?.createStockOrder,
             (p, b) => p?.createStockOrder = b),
-        createAudit = $options.field<bool>('createAudit', (a) => a?.createAudit,
+        createAudit = options$.field<bool>('createAudit', (a) => a?.createAudit,
             (s) => s?.createAudit, (p, b) => p?.createAudit = b),
-        getPricing = $options.field<bool>('getPricing', (a) => a?.getPricing,
+        getPricing = options$.field<bool>('getPricing', (a) => a?.getPricing,
             (s) => s?.getPricing, (p, b) => p?.getPricing = b),
-        requestLoan = $options.field<bool>('requestLoan', (a) => a?.requestLoan,
+        requestLoan = options$.field<bool>('requestLoan', (a) => a?.requestLoan,
             (s) => s?.requestLoan, (p, b) => p?.requestLoan = b),
-        createLoan = $options.field<bool>('createLoan', (a) => a?.createLoan,
+        createLoan = options$.field<bool>('createLoan', (a) => a?.createLoan,
             (s) => s?.createLoan, (p, b) => p?.createLoan = b),
         super._();
 
@@ -511,18 +511,18 @@ class _$GetUiSetupAllApiUserPermissionsActions
       _$GetUiSetupAllApiUserPermissionsActions._(options());
 
   @override
-  GetUiSetupAllApiUserPermissions get $initial =>
+  GetUiSetupAllApiUserPermissions get initialState$ =>
       GetUiSetupAllApiUserPermissions();
 
   @override
-  GetUiSetupAllApiUserPermissionsBuilder $newBuilder() =>
+  GetUiSetupAllApiUserPermissionsBuilder newBuilder$() =>
       GetUiSetupAllApiUserPermissionsBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.directoryAdmin,
         this.manageCatalog,
         this.phiAllowed,
@@ -539,30 +539,25 @@ class _$GetUiSetupAllApiUserPermissionsActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    directoryAdmin.$reducer(reducer);
-    manageCatalog.$reducer(reducer);
-    phiAllowed.$reducer(reducer);
-    createCase.$reducer(reducer);
-    manageUsers.$reducer(reducer);
-    orgAdmin.$reducer(reducer);
-    createStock.$reducer(reducer);
-    createSalesOrder.$reducer(reducer);
-    createStockOrder.$reducer(reducer);
-    createAudit.$reducer(reducer);
-    getPricing.$reducer(reducer);
-    requestLoan.$reducer(reducer);
-    createLoan.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    directoryAdmin.reducer$(reducer);
+    manageCatalog.reducer$(reducer);
+    phiAllowed.reducer$(reducer);
+    createCase.reducer$(reducer);
+    manageUsers.reducer$(reducer);
+    orgAdmin.reducer$(reducer);
+    createStock.reducer$(reducer);
+    createSalesOrder.reducer$(reducer);
+    createStockOrder.reducer$(reducer);
+    createAudit.reducer$(reducer);
+    getPricing.reducer$(reducer);
+    requestLoan.reducer$(reducer);
+    createLoan.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetUiSetupAllApiUserPermissions);
 }

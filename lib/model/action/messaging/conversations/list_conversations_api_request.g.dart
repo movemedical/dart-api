@@ -396,9 +396,9 @@ class _$ListConversationsApiRequestActions
   final StatefulActionsOptions<
       ListConversationsApiRequest,
       ListConversationsApiRequestBuilder,
-      ListConversationsApiRequestActions> $options;
+      ListConversationsApiRequestActions> options$;
 
-  final ActionDispatcher<ListConversationsApiRequest> $replace;
+  final ActionDispatcher<ListConversationsApiRequest> replace$;
   final FieldDispatcher<bool> archived;
   final FieldDispatcher<bool> stopped;
   final FieldDispatcher<bool> unread;
@@ -410,43 +410,43 @@ class _$ListConversationsApiRequestActions
   final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
 
-  _$ListConversationsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListConversationsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        archived = $options.field<bool>('archived', (a) => a?.archived,
+  _$ListConversationsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListConversationsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        archived = options$.field<bool>('archived', (a) => a?.archived,
             (s) => s?.archived, (p, b) => p?.archived = b),
-        stopped = $options.field<bool>('stopped', (a) => a?.stopped,
+        stopped = options$.field<bool>('stopped', (a) => a?.stopped,
             (s) => s?.stopped, (p, b) => p?.stopped = b),
-        unread = $options.field<bool>('unread', (a) => a?.unread,
+        unread = options$.field<bool>('unread', (a) => a?.unread,
             (s) => s?.unread, (p, b) => p?.unread = b),
-        contactIds = $options.field<BuiltList<String>>(
+        contactIds = options$.field<BuiltList<String>>(
             'contactIds',
             (a) => a?.contactIds,
             (s) => s?.contactIds,
             (p, b) => p?.contactIds = b),
-        urgencyStartDate = $options.field<DateTime>(
+        urgencyStartDate = options$.field<DateTime>(
             'urgencyStartDate',
             (a) => a?.urgencyStartDate,
             (s) => s?.urgencyStartDate,
             (p, b) => p?.urgencyStartDate = b),
-        urgencyEndDate = $options.field<DateTime>(
+        urgencyEndDate = options$.field<DateTime>(
             'urgencyEndDate',
             (a) => a?.urgencyEndDate,
             (s) => s?.urgencyEndDate,
             (p, b) => p?.urgencyEndDate = b),
-        attributableType = $options.field<AttributableType>(
+        attributableType = options$.field<AttributableType>(
             'attributableType',
             (a) => a?.attributableType,
             (s) => s?.attributableType,
             (p, b) => p?.attributableType = b),
-        attributableId = $options.field<String>(
+        attributableId = options$.field<String>(
             'attributableId',
             (a) => a?.attributableId,
             (s) => s?.attributableId,
             (p, b) => p?.attributableId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -462,23 +462,24 @@ class _$ListConversationsApiRequestActions
       _$ListConversationsApiRequestActions._(options());
 
   @override
-  ListConversationsApiRequest get $initial => ListConversationsApiRequest();
+  ListConversationsApiRequest get initialState$ =>
+      ListConversationsApiRequest();
 
   @override
-  ListConversationsApiRequestBuilder $newBuilder() =>
+  ListConversationsApiRequestBuilder newBuilder$() =>
       ListConversationsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.archived,
         this.stopped,
         this.unread,
@@ -491,28 +492,23 @@ class _$ListConversationsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    archived.$reducer(reducer);
-    stopped.$reducer(reducer);
-    unread.$reducer(reducer);
-    contactIds.$reducer(reducer);
-    urgencyStartDate.$reducer(reducer);
-    urgencyEndDate.$reducer(reducer);
-    attributableType.$reducer(reducer);
-    attributableId.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    archived.reducer$(reducer);
+    stopped.reducer$(reducer);
+    unread.reducer$(reducer);
+    contactIds.reducer$(reducer);
+    urgencyStartDate.reducer$(reducer);
+    urgencyEndDate.reducer$(reducer);
+    attributableType.reducer$(reducer);
+    attributableId.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListConversationsApiRequest);
 }

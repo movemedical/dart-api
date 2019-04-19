@@ -193,18 +193,18 @@ class _$ListAssigneesApiResponseActions
   final StatefulActionsOptions<
       ListAssigneesApiResponse,
       ListAssigneesApiResponseBuilder,
-      ListAssigneesApiResponseActions> $options;
+      ListAssigneesApiResponseActions> options$;
 
-  final ActionDispatcher<ListAssigneesApiResponse> $replace;
+  final ActionDispatcher<ListAssigneesApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListAssigneesApiAssignee>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListAssigneesApiResponseActions._(this.$options)
-      : $replace = $options.action<ListAssigneesApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListAssigneesApiAssignee>>(
+  _$ListAssigneesApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListAssigneesApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListAssigneesApiAssignee>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -213,34 +213,30 @@ class _$ListAssigneesApiResponseActions
       _$ListAssigneesApiResponseActions._(options());
 
   @override
-  ListAssigneesApiResponse get $initial => ListAssigneesApiResponse();
+  ListAssigneesApiResponse get initialState$ => ListAssigneesApiResponse();
 
   @override
-  ListAssigneesApiResponseBuilder $newBuilder() =>
+  ListAssigneesApiResponseBuilder newBuilder$() =>
       ListAssigneesApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListAssigneesApiResponse);
 }

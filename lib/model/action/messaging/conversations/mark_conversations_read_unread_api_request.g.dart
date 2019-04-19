@@ -202,21 +202,21 @@ class _$MarkConversationsReadUnreadApiRequestActions
   final StatefulActionsOptions<
       MarkConversationsReadUnreadApiRequest,
       MarkConversationsReadUnreadApiRequestBuilder,
-      MarkConversationsReadUnreadApiRequestActions> $options;
+      MarkConversationsReadUnreadApiRequestActions> options$;
 
-  final ActionDispatcher<MarkConversationsReadUnreadApiRequest> $replace;
+  final ActionDispatcher<MarkConversationsReadUnreadApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> conversationIds;
   final FieldDispatcher<bool> read;
 
-  _$MarkConversationsReadUnreadApiRequestActions._(this.$options)
-      : $replace = $options.action<MarkConversationsReadUnreadApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        conversationIds = $options.field<BuiltList<String>>(
+  _$MarkConversationsReadUnreadApiRequestActions._(this.options$)
+      : replace$ = options$.action<MarkConversationsReadUnreadApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        conversationIds = options$.field<BuiltList<String>>(
             'conversationIds',
             (a) => a?.conversationIds,
             (s) => s?.conversationIds,
             (p, b) => p?.conversationIds = b),
-        read = $options.field<bool>(
+        read = options$.field<bool>(
             'read', (a) => a?.read, (s) => s?.read, (p, b) => p?.read = b),
         super._();
 
@@ -225,36 +225,31 @@ class _$MarkConversationsReadUnreadApiRequestActions
       _$MarkConversationsReadUnreadApiRequestActions._(options());
 
   @override
-  MarkConversationsReadUnreadApiRequest get $initial =>
+  MarkConversationsReadUnreadApiRequest get initialState$ =>
       MarkConversationsReadUnreadApiRequest();
 
   @override
-  MarkConversationsReadUnreadApiRequestBuilder $newBuilder() =>
+  MarkConversationsReadUnreadApiRequestBuilder newBuilder$() =>
       MarkConversationsReadUnreadApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.conversationIds,
         this.read,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    conversationIds.$reducer(reducer);
-    read.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    conversationIds.reducer$(reducer);
+    read.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(MarkConversationsReadUnreadApiRequest);
 }

@@ -158,15 +158,15 @@ class _$RemoveCustomerQualifierApiRequestActions
   final StatefulActionsOptions<
       RemoveCustomerQualifierApiRequest,
       RemoveCustomerQualifierApiRequestBuilder,
-      RemoveCustomerQualifierApiRequestActions> $options;
+      RemoveCustomerQualifierApiRequestActions> options$;
 
-  final ActionDispatcher<RemoveCustomerQualifierApiRequest> $replace;
+  final ActionDispatcher<RemoveCustomerQualifierApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$RemoveCustomerQualifierApiRequestActions._(this.$options)
-      : $replace = $options.action<RemoveCustomerQualifierApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$RemoveCustomerQualifierApiRequestActions._(this.options$)
+      : replace$ = options$.action<RemoveCustomerQualifierApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -175,34 +175,29 @@ class _$RemoveCustomerQualifierApiRequestActions
       _$RemoveCustomerQualifierApiRequestActions._(options());
 
   @override
-  RemoveCustomerQualifierApiRequest get $initial =>
+  RemoveCustomerQualifierApiRequest get initialState$ =>
       RemoveCustomerQualifierApiRequest();
 
   @override
-  RemoveCustomerQualifierApiRequestBuilder $newBuilder() =>
+  RemoveCustomerQualifierApiRequestBuilder newBuilder$() =>
       RemoveCustomerQualifierApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RemoveCustomerQualifierApiRequest);
 }

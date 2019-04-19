@@ -170,18 +170,18 @@ typedef StatefulActionsOptions<
 
 class _$GetInvoiceApiRequestActions extends GetInvoiceApiRequestActions {
   final StatefulActionsOptions<GetInvoiceApiRequest,
-      GetInvoiceApiRequestBuilder, GetInvoiceApiRequestActions> $options;
+      GetInvoiceApiRequestBuilder, GetInvoiceApiRequestActions> options$;
 
-  final ActionDispatcher<GetInvoiceApiRequest> $replace;
+  final ActionDispatcher<GetInvoiceApiRequest> replace$;
   final FieldDispatcher<String> invoiceId;
   final FieldDispatcher<bool> skipPresence;
 
-  _$GetInvoiceApiRequestActions._(this.$options)
-      : $replace = $options.action<GetInvoiceApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        invoiceId = $options.field<String>('invoiceId', (a) => a?.invoiceId,
+  _$GetInvoiceApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetInvoiceApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        invoiceId = options$.field<String>('invoiceId', (a) => a?.invoiceId,
             (s) => s?.invoiceId, (p, b) => p?.invoiceId = b),
-        skipPresence = $options.field<bool>(
+        skipPresence = options$.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -193,33 +193,29 @@ class _$GetInvoiceApiRequestActions extends GetInvoiceApiRequestActions {
       _$GetInvoiceApiRequestActions._(options());
 
   @override
-  GetInvoiceApiRequest get $initial => GetInvoiceApiRequest();
+  GetInvoiceApiRequest get initialState$ => GetInvoiceApiRequest();
 
   @override
-  GetInvoiceApiRequestBuilder $newBuilder() => GetInvoiceApiRequestBuilder();
+  GetInvoiceApiRequestBuilder newBuilder$() => GetInvoiceApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.invoiceId,
         this.skipPresence,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    invoiceId.$reducer(reducer);
-    skipPresence.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    invoiceId.reducer$(reducer);
+    skipPresence.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetInvoiceApiRequest);
 }

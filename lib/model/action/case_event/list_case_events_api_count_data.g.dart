@@ -175,18 +175,18 @@ class _$ListCaseEventsApiCountDataActions
   final StatefulActionsOptions<
       ListCaseEventsApiCountData,
       ListCaseEventsApiCountDataBuilder,
-      ListCaseEventsApiCountDataActions> $options;
+      ListCaseEventsApiCountDataActions> options$;
 
-  final ActionDispatcher<ListCaseEventsApiCountData> $replace;
+  final ActionDispatcher<ListCaseEventsApiCountData> replace$;
   final FieldDispatcher<DateTime> date;
   final FieldDispatcher<int> count;
 
-  _$ListCaseEventsApiCountDataActions._(this.$options)
-      : $replace = $options.action<ListCaseEventsApiCountData>(
-            '\$replace', (a) => a?.$replace),
-        date = $options.field<DateTime>(
+  _$ListCaseEventsApiCountDataActions._(this.options$)
+      : replace$ = options$.action<ListCaseEventsApiCountData>(
+            'replace\$', (a) => a?.replace$),
+        date = options$.field<DateTime>(
             'date', (a) => a?.date, (s) => s?.date, (p, b) => p?.date = b),
-        count = $options.field<int>(
+        count = options$.field<int>(
             'count', (a) => a?.count, (s) => s?.count, (p, b) => p?.count = b),
         super._();
 
@@ -195,34 +195,30 @@ class _$ListCaseEventsApiCountDataActions
       _$ListCaseEventsApiCountDataActions._(options());
 
   @override
-  ListCaseEventsApiCountData get $initial => ListCaseEventsApiCountData();
+  ListCaseEventsApiCountData get initialState$ => ListCaseEventsApiCountData();
 
   @override
-  ListCaseEventsApiCountDataBuilder $newBuilder() =>
+  ListCaseEventsApiCountDataBuilder newBuilder$() =>
       ListCaseEventsApiCountDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.date,
         this.count,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    date.$reducer(reducer);
-    count.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    date.reducer$(reducer);
+    count.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListCaseEventsApiCountData);
 }

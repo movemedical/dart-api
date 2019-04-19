@@ -162,15 +162,15 @@ class _$RemoveProcedureFromItemCategoryApiRequestActions
   final StatefulActionsOptions<
       RemoveProcedureFromItemCategoryApiRequest,
       RemoveProcedureFromItemCategoryApiRequestBuilder,
-      RemoveProcedureFromItemCategoryApiRequestActions> $options;
+      RemoveProcedureFromItemCategoryApiRequestActions> options$;
 
-  final ActionDispatcher<RemoveProcedureFromItemCategoryApiRequest> $replace;
+  final ActionDispatcher<RemoveProcedureFromItemCategoryApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$RemoveProcedureFromItemCategoryApiRequestActions._(this.$options)
-      : $replace = $options.action<RemoveProcedureFromItemCategoryApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$RemoveProcedureFromItemCategoryApiRequestActions._(this.options$)
+      : replace$ = options$.action<RemoveProcedureFromItemCategoryApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -179,34 +179,29 @@ class _$RemoveProcedureFromItemCategoryApiRequestActions
       _$RemoveProcedureFromItemCategoryApiRequestActions._(options());
 
   @override
-  RemoveProcedureFromItemCategoryApiRequest get $initial =>
+  RemoveProcedureFromItemCategoryApiRequest get initialState$ =>
       RemoveProcedureFromItemCategoryApiRequest();
 
   @override
-  RemoveProcedureFromItemCategoryApiRequestBuilder $newBuilder() =>
+  RemoveProcedureFromItemCategoryApiRequestBuilder newBuilder$() =>
       RemoveProcedureFromItemCategoryApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RemoveProcedureFromItemCategoryApiRequest);
 }

@@ -187,17 +187,17 @@ class _$GetCustomerRelationshipsApiResponseActions
   final StatefulActionsOptions<
       GetCustomerRelationshipsApiResponse,
       GetCustomerRelationshipsApiResponseBuilder,
-      GetCustomerRelationshipsApiResponseActions> $options;
+      GetCustomerRelationshipsApiResponseActions> options$;
 
-  final ActionDispatcher<GetCustomerRelationshipsApiResponse> $replace;
+  final ActionDispatcher<GetCustomerRelationshipsApiResponse> replace$;
   final FieldDispatcher<
           BuiltList<GetCustomerRelationshipsApiCustomerRelationship>>
       customerRelationships;
 
-  _$GetCustomerRelationshipsApiResponseActions._(this.$options)
-      : $replace = $options.action<GetCustomerRelationshipsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        customerRelationships = $options
+  _$GetCustomerRelationshipsApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetCustomerRelationshipsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        customerRelationships = options$
             .field<BuiltList<GetCustomerRelationshipsApiCustomerRelationship>>(
                 'customerRelationships',
                 (a) => a?.customerRelationships,
@@ -210,34 +210,29 @@ class _$GetCustomerRelationshipsApiResponseActions
       _$GetCustomerRelationshipsApiResponseActions._(options());
 
   @override
-  GetCustomerRelationshipsApiResponse get $initial =>
+  GetCustomerRelationshipsApiResponse get initialState$ =>
       GetCustomerRelationshipsApiResponse();
 
   @override
-  GetCustomerRelationshipsApiResponseBuilder $newBuilder() =>
+  GetCustomerRelationshipsApiResponseBuilder newBuilder$() =>
       GetCustomerRelationshipsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customerRelationships,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    customerRelationships.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    customerRelationships.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCustomerRelationshipsApiResponse);
 }

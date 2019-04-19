@@ -158,15 +158,15 @@ class _$GetAdjustmentApiDisplayRulesActions
   final StatefulActionsOptions<
       GetAdjustmentApiDisplayRules,
       GetAdjustmentApiDisplayRulesBuilder,
-      GetAdjustmentApiDisplayRulesActions> $options;
+      GetAdjustmentApiDisplayRulesActions> options$;
 
-  final ActionDispatcher<GetAdjustmentApiDisplayRules> $replace;
+  final ActionDispatcher<GetAdjustmentApiDisplayRules> replace$;
   final FieldDispatcher<bool> confirm;
 
-  _$GetAdjustmentApiDisplayRulesActions._(this.$options)
-      : $replace = $options.action<GetAdjustmentApiDisplayRules>(
-            '\$replace', (a) => a?.$replace),
-        confirm = $options.field<bool>('confirm', (a) => a?.confirm,
+  _$GetAdjustmentApiDisplayRulesActions._(this.options$)
+      : replace$ = options$.action<GetAdjustmentApiDisplayRules>(
+            'replace\$', (a) => a?.replace$),
+        confirm = options$.field<bool>('confirm', (a) => a?.confirm,
             (s) => s?.confirm, (p, b) => p?.confirm = b),
         super._();
 
@@ -175,33 +175,29 @@ class _$GetAdjustmentApiDisplayRulesActions
       _$GetAdjustmentApiDisplayRulesActions._(options());
 
   @override
-  GetAdjustmentApiDisplayRules get $initial => GetAdjustmentApiDisplayRules();
+  GetAdjustmentApiDisplayRules get initialState$ =>
+      GetAdjustmentApiDisplayRules();
 
   @override
-  GetAdjustmentApiDisplayRulesBuilder $newBuilder() =>
+  GetAdjustmentApiDisplayRulesBuilder newBuilder$() =>
       GetAdjustmentApiDisplayRulesBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.confirm,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    confirm.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    confirm.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetAdjustmentApiDisplayRules);
 }

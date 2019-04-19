@@ -227,30 +227,30 @@ class _$CloneCaseEventApiRequestActions
   final StatefulActionsOptions<
       CloneCaseEventApiRequest,
       CloneCaseEventApiRequestBuilder,
-      CloneCaseEventApiRequestActions> $options;
+      CloneCaseEventApiRequestActions> options$;
 
-  final ActionDispatcher<CloneCaseEventApiRequest> $replace;
+  final ActionDispatcher<CloneCaseEventApiRequest> replace$;
   final FieldDispatcher<String> caseId;
   final FieldDispatcher<DateTime> surgeryDate;
   final FieldDispatcher<bool> eventTimeUnknown;
   final FieldDispatcher<bool> cloneRequirements;
 
-  _$CloneCaseEventApiRequestActions._(this.$options)
-      : $replace = $options.action<CloneCaseEventApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseId = $options.field<String>('caseId', (a) => a?.caseId,
+  _$CloneCaseEventApiRequestActions._(this.options$)
+      : replace$ = options$.action<CloneCaseEventApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseId = options$.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        surgeryDate = $options.field<DateTime>(
+        surgeryDate = options$.field<DateTime>(
             'surgeryDate',
             (a) => a?.surgeryDate,
             (s) => s?.surgeryDate,
             (p, b) => p?.surgeryDate = b),
-        eventTimeUnknown = $options.field<bool>(
+        eventTimeUnknown = options$.field<bool>(
             'eventTimeUnknown',
             (a) => a?.eventTimeUnknown,
             (s) => s?.eventTimeUnknown,
             (p, b) => p?.eventTimeUnknown = b),
-        cloneRequirements = $options.field<bool>(
+        cloneRequirements = options$.field<bool>(
             'cloneRequirements',
             (a) => a?.cloneRequirements,
             (s) => s?.cloneRequirements,
@@ -262,17 +262,17 @@ class _$CloneCaseEventApiRequestActions
       _$CloneCaseEventApiRequestActions._(options());
 
   @override
-  CloneCaseEventApiRequest get $initial => CloneCaseEventApiRequest();
+  CloneCaseEventApiRequest get initialState$ => CloneCaseEventApiRequest();
 
   @override
-  CloneCaseEventApiRequestBuilder $newBuilder() =>
+  CloneCaseEventApiRequestBuilder newBuilder$() =>
       CloneCaseEventApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseId,
         this.surgeryDate,
         this.eventTimeUnknown,
@@ -280,20 +280,16 @@ class _$CloneCaseEventApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseId.$reducer(reducer);
-    surgeryDate.$reducer(reducer);
-    eventTimeUnknown.$reducer(reducer);
-    cloneRequirements.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseId.reducer$(reducer);
+    surgeryDate.reducer$(reducer);
+    eventTimeUnknown.reducer$(reducer);
+    cloneRequirements.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CloneCaseEventApiRequest);
 }

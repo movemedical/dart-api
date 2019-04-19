@@ -196,22 +196,22 @@ class _$GetCaseEventDetailApiLoanReturnDataActions
   final StatefulActionsOptions<
       GetCaseEventDetailApiLoanReturnData,
       GetCaseEventDetailApiLoanReturnDataBuilder,
-      GetCaseEventDetailApiLoanReturnDataActions> $options;
+      GetCaseEventDetailApiLoanReturnDataActions> options$;
 
-  final ActionDispatcher<GetCaseEventDetailApiLoanReturnData> $replace;
+  final ActionDispatcher<GetCaseEventDetailApiLoanReturnData> replace$;
   final FieldDispatcher<String> transferTypeId;
   final LocationActions returnTo;
 
-  _$GetCaseEventDetailApiLoanReturnDataActions._(this.$options)
-      : $replace = $options.action<GetCaseEventDetailApiLoanReturnData>(
-            '\$replace', (a) => a?.$replace),
-        transferTypeId = $options.field<String>(
+  _$GetCaseEventDetailApiLoanReturnDataActions._(this.options$)
+      : replace$ = options$.action<GetCaseEventDetailApiLoanReturnData>(
+            'replace\$', (a) => a?.replace$),
+        transferTypeId = options$.field<String>(
             'transferTypeId',
             (a) => a?.transferTypeId,
             (s) => s?.transferTypeId,
             (p, b) => p?.transferTypeId = b),
         returnTo = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'returnTo',
                 (a) => a.returnTo,
                 (s) => s?.returnTo,
@@ -224,42 +224,37 @@ class _$GetCaseEventDetailApiLoanReturnDataActions
       _$GetCaseEventDetailApiLoanReturnDataActions._(options());
 
   @override
-  GetCaseEventDetailApiLoanReturnData get $initial =>
+  GetCaseEventDetailApiLoanReturnData get initialState$ =>
       GetCaseEventDetailApiLoanReturnData();
 
   @override
-  GetCaseEventDetailApiLoanReturnDataBuilder $newBuilder() =>
+  GetCaseEventDetailApiLoanReturnDataBuilder newBuilder$() =>
       GetCaseEventDetailApiLoanReturnDataBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.returnTo,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.transferTypeId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    transferTypeId.$reducer(reducer);
-    returnTo.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    transferTypeId.reducer$(reducer);
+    returnTo.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    returnTo.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    returnTo.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCaseEventDetailApiLoanReturnData);
 }

@@ -154,15 +154,15 @@ class _$GetOrderHistoryApiRequestActions
   final StatefulActionsOptions<
       GetOrderHistoryApiRequest,
       GetOrderHistoryApiRequestBuilder,
-      GetOrderHistoryApiRequestActions> $options;
+      GetOrderHistoryApiRequestActions> options$;
 
-  final ActionDispatcher<GetOrderHistoryApiRequest> $replace;
+  final ActionDispatcher<GetOrderHistoryApiRequest> replace$;
   final FieldDispatcher<String> orderId;
 
-  _$GetOrderHistoryApiRequestActions._(this.$options)
-      : $replace = $options.action<GetOrderHistoryApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$GetOrderHistoryApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetOrderHistoryApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         super._();
 
@@ -171,32 +171,28 @@ class _$GetOrderHistoryApiRequestActions
       _$GetOrderHistoryApiRequestActions._(options());
 
   @override
-  GetOrderHistoryApiRequest get $initial => GetOrderHistoryApiRequest();
+  GetOrderHistoryApiRequest get initialState$ => GetOrderHistoryApiRequest();
 
   @override
-  GetOrderHistoryApiRequestBuilder $newBuilder() =>
+  GetOrderHistoryApiRequestBuilder newBuilder$() =>
       GetOrderHistoryApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetOrderHistoryApiRequest);
 }

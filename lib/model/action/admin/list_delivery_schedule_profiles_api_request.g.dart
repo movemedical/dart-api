@@ -283,23 +283,23 @@ class _$ListDeliveryScheduleProfilesApiRequestActions
   final StatefulActionsOptions<
       ListDeliveryScheduleProfilesApiRequest,
       ListDeliveryScheduleProfilesApiRequestBuilder,
-      ListDeliveryScheduleProfilesApiRequestActions> $options;
+      ListDeliveryScheduleProfilesApiRequestActions> options$;
 
-  final ActionDispatcher<ListDeliveryScheduleProfilesApiRequest> $replace;
+  final ActionDispatcher<ListDeliveryScheduleProfilesApiRequest> replace$;
   final FieldDispatcher<String> search;
   final FieldDispatcher<bool> active;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListDeliveryScheduleProfilesApiOrderBy> orderBy;
   final FieldDispatcher<BuiltList<String>> profileIds;
 
-  _$ListDeliveryScheduleProfilesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListDeliveryScheduleProfilesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$ListDeliveryScheduleProfilesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListDeliveryScheduleProfilesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -309,7 +309,7 @@ class _$ListDeliveryScheduleProfilesApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<
-            ListDeliveryScheduleProfilesApiOrderBy>(() => $options.stateful<
+            ListDeliveryScheduleProfilesApiOrderBy>(() => options$.stateful<
                 OrderByParams<ListDeliveryScheduleProfilesApiOrderBy>,
                 OrderByParamsBuilder<ListDeliveryScheduleProfilesApiOrderBy>,
                 OrderByParamsActions<ListDeliveryScheduleProfilesApiOrderBy>>(
@@ -318,7 +318,7 @@ class _$ListDeliveryScheduleProfilesApiRequestActions
             (s) => s?.orderBy,
             (b) => b?.orderBy,
             (parent, builder) => parent?.orderBy = builder)),
-        profileIds = $options.field<BuiltList<String>>(
+        profileIds = options$.field<BuiltList<String>>(
             'profileIds',
             (a) => a?.profileIds,
             (s) => s?.profileIds,
@@ -330,49 +330,44 @@ class _$ListDeliveryScheduleProfilesApiRequestActions
       _$ListDeliveryScheduleProfilesApiRequestActions._(options());
 
   @override
-  ListDeliveryScheduleProfilesApiRequest get $initial =>
+  ListDeliveryScheduleProfilesApiRequest get initialState$ =>
       ListDeliveryScheduleProfilesApiRequest();
 
   @override
-  ListDeliveryScheduleProfilesApiRequestBuilder $newBuilder() =>
+  ListDeliveryScheduleProfilesApiRequestBuilder newBuilder$() =>
       ListDeliveryScheduleProfilesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
         this.active,
         this.profileIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
-    active.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
-    profileIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
+    active.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
+    profileIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListDeliveryScheduleProfilesApiRequest);
 }

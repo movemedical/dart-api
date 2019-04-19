@@ -192,18 +192,18 @@ class _$RemoveAssigneesApiRequestActions
   final StatefulActionsOptions<
       RemoveAssigneesApiRequest,
       RemoveAssigneesApiRequestBuilder,
-      RemoveAssigneesApiRequestActions> $options;
+      RemoveAssigneesApiRequestActions> options$;
 
-  final ActionDispatcher<RemoveAssigneesApiRequest> $replace;
+  final ActionDispatcher<RemoveAssigneesApiRequest> replace$;
   final FieldDispatcher<String> auditId;
   final FieldDispatcher<BuiltList<String>> ids;
 
-  _$RemoveAssigneesApiRequestActions._(this.$options)
-      : $replace = $options.action<RemoveAssigneesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+  _$RemoveAssigneesApiRequestActions._(this.options$)
+      : replace$ = options$.action<RemoveAssigneesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        ids = $options.field<BuiltList<String>>(
+        ids = options$.field<BuiltList<String>>(
             'ids', (a) => a?.ids, (s) => s?.ids, (p, b) => p?.ids = b),
         super._();
 
@@ -212,34 +212,30 @@ class _$RemoveAssigneesApiRequestActions
       _$RemoveAssigneesApiRequestActions._(options());
 
   @override
-  RemoveAssigneesApiRequest get $initial => RemoveAssigneesApiRequest();
+  RemoveAssigneesApiRequest get initialState$ => RemoveAssigneesApiRequest();
 
   @override
-  RemoveAssigneesApiRequestBuilder $newBuilder() =>
+  RemoveAssigneesApiRequestBuilder newBuilder$() =>
       RemoveAssigneesApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
         this.ids,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditId.$reducer(reducer);
-    ids.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditId.reducer$(reducer);
+    ids.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(RemoveAssigneesApiRequest);
 }

@@ -161,15 +161,15 @@ class _$RequestAuditItemExportDocApiResponseActions
   final StatefulActionsOptions<
       RequestAuditItemExportDocApiResponse,
       RequestAuditItemExportDocApiResponseBuilder,
-      RequestAuditItemExportDocApiResponseActions> $options;
+      RequestAuditItemExportDocApiResponseActions> options$;
 
-  final ActionDispatcher<RequestAuditItemExportDocApiResponse> $replace;
+  final ActionDispatcher<RequestAuditItemExportDocApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
 
-  _$RequestAuditItemExportDocApiResponseActions._(this.$options)
-      : $replace = $options.action<RequestAuditItemExportDocApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$RequestAuditItemExportDocApiResponseActions._(this.options$)
+      : replace$ = options$.action<RequestAuditItemExportDocApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -181,34 +181,29 @@ class _$RequestAuditItemExportDocApiResponseActions
       _$RequestAuditItemExportDocApiResponseActions._(options());
 
   @override
-  RequestAuditItemExportDocApiResponse get $initial =>
+  RequestAuditItemExportDocApiResponse get initialState$ =>
       RequestAuditItemExportDocApiResponse();
 
   @override
-  RequestAuditItemExportDocApiResponseBuilder $newBuilder() =>
+  RequestAuditItemExportDocApiResponseBuilder newBuilder$() =>
       RequestAuditItemExportDocApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestAuditItemExportDocApiResponse);
 }

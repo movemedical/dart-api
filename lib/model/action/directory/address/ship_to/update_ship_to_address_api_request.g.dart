@@ -181,21 +181,21 @@ class _$UpdateShipToAddressApiRequestActions
   final StatefulActionsOptions<
       UpdateShipToAddressApiRequest,
       UpdateShipToAddressApiRequestBuilder,
-      UpdateShipToAddressApiRequestActions> $options;
+      UpdateShipToAddressApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateShipToAddressApiRequest> $replace;
+  final ActionDispatcher<UpdateShipToAddressApiRequest> replace$;
   final FieldDispatcher<String> shipToAddressId;
   final FieldDispatcher<bool> active;
 
-  _$UpdateShipToAddressApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateShipToAddressApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        shipToAddressId = $options.field<String>(
+  _$UpdateShipToAddressApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateShipToAddressApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        shipToAddressId = options$.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
             (p, b) => p?.shipToAddressId = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -204,35 +204,31 @@ class _$UpdateShipToAddressApiRequestActions
       _$UpdateShipToAddressApiRequestActions._(options());
 
   @override
-  UpdateShipToAddressApiRequest get $initial => UpdateShipToAddressApiRequest();
+  UpdateShipToAddressApiRequest get initialState$ =>
+      UpdateShipToAddressApiRequest();
 
   @override
-  UpdateShipToAddressApiRequestBuilder $newBuilder() =>
+  UpdateShipToAddressApiRequestBuilder newBuilder$() =>
       UpdateShipToAddressApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.shipToAddressId,
         this.active,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    shipToAddressId.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    shipToAddressId.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateShipToAddressApiRequest);
 }

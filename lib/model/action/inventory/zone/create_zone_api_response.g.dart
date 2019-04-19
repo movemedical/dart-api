@@ -170,18 +170,18 @@ typedef StatefulActionsOptions<
 
 class _$CreateZoneApiResponseActions extends CreateZoneApiResponseActions {
   final StatefulActionsOptions<CreateZoneApiResponse,
-      CreateZoneApiResponseBuilder, CreateZoneApiResponseActions> $options;
+      CreateZoneApiResponseBuilder, CreateZoneApiResponseActions> options$;
 
-  final ActionDispatcher<CreateZoneApiResponse> $replace;
+  final ActionDispatcher<CreateZoneApiResponse> replace$;
   final FieldDispatcher<String> zoneId;
   final FieldDispatcher<String> binId;
 
-  _$CreateZoneApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateZoneApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        zoneId = $options.field<String>('zoneId', (a) => a?.zoneId,
+  _$CreateZoneApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateZoneApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        zoneId = options$.field<String>('zoneId', (a) => a?.zoneId,
             (s) => s?.zoneId, (p, b) => p?.zoneId = b),
-        binId = $options.field<String>(
+        binId = options$.field<String>(
             'binId', (a) => a?.binId, (s) => s?.binId, (p, b) => p?.binId = b),
         super._();
 
@@ -190,33 +190,29 @@ class _$CreateZoneApiResponseActions extends CreateZoneApiResponseActions {
       _$CreateZoneApiResponseActions._(options());
 
   @override
-  CreateZoneApiResponse get $initial => CreateZoneApiResponse();
+  CreateZoneApiResponse get initialState$ => CreateZoneApiResponse();
 
   @override
-  CreateZoneApiResponseBuilder $newBuilder() => CreateZoneApiResponseBuilder();
+  CreateZoneApiResponseBuilder newBuilder$() => CreateZoneApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.zoneId,
         this.binId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    zoneId.$reducer(reducer);
-    binId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    zoneId.reducer$(reducer);
+    binId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateZoneApiResponse);
 }

@@ -221,19 +221,19 @@ class _$ListOrderFilesApiRequestActions
   final StatefulActionsOptions<
       ListOrderFilesApiRequest,
       ListOrderFilesApiRequestBuilder,
-      ListOrderFilesApiRequestActions> $options;
+      ListOrderFilesApiRequestActions> options$;
 
-  final ActionDispatcher<ListOrderFilesApiRequest> $replace;
+  final ActionDispatcher<ListOrderFilesApiRequest> replace$;
   final FieldDispatcher<String> orderId;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListOrderFilesApiOrderBy> orderBy;
 
-  _$ListOrderFilesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListOrderFilesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$ListOrderFilesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListOrderFilesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -243,7 +243,7 @@ class _$ListOrderFilesApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListOrderFilesApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListOrderFilesApiOrderBy>,
                     OrderByParamsBuilder<ListOrderFilesApiOrderBy>,
                     OrderByParamsActions<ListOrderFilesApiOrderBy>>(
@@ -259,43 +259,39 @@ class _$ListOrderFilesApiRequestActions
       _$ListOrderFilesApiRequestActions._(options());
 
   @override
-  ListOrderFilesApiRequest get $initial => ListOrderFilesApiRequest();
+  ListOrderFilesApiRequest get initialState$ => ListOrderFilesApiRequest();
 
   @override
-  ListOrderFilesApiRequestBuilder $newBuilder() =>
+  ListOrderFilesApiRequestBuilder newBuilder$() =>
       ListOrderFilesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListOrderFilesApiRequest);
 }

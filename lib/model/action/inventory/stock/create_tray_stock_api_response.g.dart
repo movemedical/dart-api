@@ -157,15 +157,15 @@ class _$CreateTrayStockApiResponseActions
   final StatefulActionsOptions<
       CreateTrayStockApiResponse,
       CreateTrayStockApiResponseBuilder,
-      CreateTrayStockApiResponseActions> $options;
+      CreateTrayStockApiResponseActions> options$;
 
-  final ActionDispatcher<CreateTrayStockApiResponse> $replace;
+  final ActionDispatcher<CreateTrayStockApiResponse> replace$;
   final FieldDispatcher<String> stockSummaryKey;
 
-  _$CreateTrayStockApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateTrayStockApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        stockSummaryKey = $options.field<String>(
+  _$CreateTrayStockApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateTrayStockApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        stockSummaryKey = options$.field<String>(
             'stockSummaryKey',
             (a) => a?.stockSummaryKey,
             (s) => s?.stockSummaryKey,
@@ -177,32 +177,28 @@ class _$CreateTrayStockApiResponseActions
       _$CreateTrayStockApiResponseActions._(options());
 
   @override
-  CreateTrayStockApiResponse get $initial => CreateTrayStockApiResponse();
+  CreateTrayStockApiResponse get initialState$ => CreateTrayStockApiResponse();
 
   @override
-  CreateTrayStockApiResponseBuilder $newBuilder() =>
+  CreateTrayStockApiResponseBuilder newBuilder$() =>
       CreateTrayStockApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockSummaryKey,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockSummaryKey.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockSummaryKey.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateTrayStockApiResponse);
 }

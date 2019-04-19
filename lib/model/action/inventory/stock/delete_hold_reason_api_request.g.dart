@@ -154,15 +154,15 @@ class _$DeleteHoldReasonApiRequestActions
   final StatefulActionsOptions<
       DeleteHoldReasonApiRequest,
       DeleteHoldReasonApiRequestBuilder,
-      DeleteHoldReasonApiRequestActions> $options;
+      DeleteHoldReasonApiRequestActions> options$;
 
-  final ActionDispatcher<DeleteHoldReasonApiRequest> $replace;
+  final ActionDispatcher<DeleteHoldReasonApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$DeleteHoldReasonApiRequestActions._(this.$options)
-      : $replace = $options.action<DeleteHoldReasonApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$DeleteHoldReasonApiRequestActions._(this.options$)
+      : replace$ = options$.action<DeleteHoldReasonApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -171,32 +171,28 @@ class _$DeleteHoldReasonApiRequestActions
       _$DeleteHoldReasonApiRequestActions._(options());
 
   @override
-  DeleteHoldReasonApiRequest get $initial => DeleteHoldReasonApiRequest();
+  DeleteHoldReasonApiRequest get initialState$ => DeleteHoldReasonApiRequest();
 
   @override
-  DeleteHoldReasonApiRequestBuilder $newBuilder() =>
+  DeleteHoldReasonApiRequestBuilder newBuilder$() =>
       DeleteHoldReasonApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(DeleteHoldReasonApiRequest);
 }

@@ -200,18 +200,18 @@ class _$AddContainersToBeCountedApiRequestActions
   final StatefulActionsOptions<
       AddContainersToBeCountedApiRequest,
       AddContainersToBeCountedApiRequestBuilder,
-      AddContainersToBeCountedApiRequestActions> $options;
+      AddContainersToBeCountedApiRequestActions> options$;
 
-  final ActionDispatcher<AddContainersToBeCountedApiRequest> $replace;
+  final ActionDispatcher<AddContainersToBeCountedApiRequest> replace$;
   final FieldDispatcher<String> auditId;
   final FieldDispatcher<BuiltList<StockContainer>> containers;
 
-  _$AddContainersToBeCountedApiRequestActions._(this.$options)
-      : $replace = $options.action<AddContainersToBeCountedApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+  _$AddContainersToBeCountedApiRequestActions._(this.options$)
+      : replace$ = options$.action<AddContainersToBeCountedApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        containers = $options.field<BuiltList<StockContainer>>(
+        containers = options$.field<BuiltList<StockContainer>>(
             'containers',
             (a) => a?.containers,
             (s) => s?.containers,
@@ -223,36 +223,31 @@ class _$AddContainersToBeCountedApiRequestActions
       _$AddContainersToBeCountedApiRequestActions._(options());
 
   @override
-  AddContainersToBeCountedApiRequest get $initial =>
+  AddContainersToBeCountedApiRequest get initialState$ =>
       AddContainersToBeCountedApiRequest();
 
   @override
-  AddContainersToBeCountedApiRequestBuilder $newBuilder() =>
+  AddContainersToBeCountedApiRequestBuilder newBuilder$() =>
       AddContainersToBeCountedApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
         this.containers,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditId.$reducer(reducer);
-    containers.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditId.reducer$(reducer);
+    containers.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AddContainersToBeCountedApiRequest);
 }

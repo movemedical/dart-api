@@ -254,9 +254,9 @@ typedef StatefulActionsOptions<CaseType, CaseTypeBuilder,
 
 class _$CaseTypeActions extends CaseTypeActions {
   final StatefulActionsOptions<CaseType, CaseTypeBuilder, CaseTypeActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<CaseType> $replace;
+  final ActionDispatcher<CaseType> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<String> bizUnitId;
@@ -264,19 +264,19 @@ class _$CaseTypeActions extends CaseTypeActions {
   final FieldDispatcher<bool> active;
   final FieldDispatcher<String> bizUnitName;
 
-  _$CaseTypeActions._(this.$options)
-      : $replace = $options.action<CaseType>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$CaseTypeActions._(this.options$)
+      : replace$ = options$.action<CaseType>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        bizUnitName = $options.field<String>(
+        bizUnitName = options$.field<String>(
             'bizUnitName',
             (a) => a?.bizUnitName,
             (s) => s?.bizUnitName,
@@ -287,16 +287,16 @@ class _$CaseTypeActions extends CaseTypeActions {
       _$CaseTypeActions._(options());
 
   @override
-  CaseType get $initial => CaseType();
+  CaseType get initialState$ => CaseType();
 
   @override
-  CaseTypeBuilder $newBuilder() => CaseTypeBuilder();
+  CaseTypeBuilder newBuilder$() => CaseTypeBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgId,
         this.bizUnitId,
@@ -306,22 +306,18 @@ class _$CaseTypeActions extends CaseTypeActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgId.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    name.$reducer(reducer);
-    active.$reducer(reducer);
-    bizUnitName.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgId.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    name.reducer$(reducer);
+    active.reducer$(reducer);
+    bizUnitName.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CaseType);
 }

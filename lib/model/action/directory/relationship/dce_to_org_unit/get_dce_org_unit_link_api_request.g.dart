@@ -160,15 +160,15 @@ class _$GetDceOrgUnitLinkApiRequestActions
   final StatefulActionsOptions<
       GetDceOrgUnitLinkApiRequest,
       GetDceOrgUnitLinkApiRequestBuilder,
-      GetDceOrgUnitLinkApiRequestActions> $options;
+      GetDceOrgUnitLinkApiRequestActions> options$;
 
-  final ActionDispatcher<GetDceOrgUnitLinkApiRequest> $replace;
+  final ActionDispatcher<GetDceOrgUnitLinkApiRequest> replace$;
   final FieldDispatcher<String> dceToOrgUnitId;
 
-  _$GetDceOrgUnitLinkApiRequestActions._(this.$options)
-      : $replace = $options.action<GetDceOrgUnitLinkApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        dceToOrgUnitId = $options.field<String>(
+  _$GetDceOrgUnitLinkApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetDceOrgUnitLinkApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        dceToOrgUnitId = options$.field<String>(
             'dceToOrgUnitId',
             (a) => a?.dceToOrgUnitId,
             (s) => s?.dceToOrgUnitId,
@@ -180,33 +180,29 @@ class _$GetDceOrgUnitLinkApiRequestActions
       _$GetDceOrgUnitLinkApiRequestActions._(options());
 
   @override
-  GetDceOrgUnitLinkApiRequest get $initial => GetDceOrgUnitLinkApiRequest();
+  GetDceOrgUnitLinkApiRequest get initialState$ =>
+      GetDceOrgUnitLinkApiRequest();
 
   @override
-  GetDceOrgUnitLinkApiRequestBuilder $newBuilder() =>
+  GetDceOrgUnitLinkApiRequestBuilder newBuilder$() =>
       GetDceOrgUnitLinkApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.dceToOrgUnitId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    dceToOrgUnitId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    dceToOrgUnitId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetDceOrgUnitLinkApiRequest);
 }

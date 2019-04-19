@@ -284,19 +284,19 @@ typedef StatefulActionsOptions<
 
 class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
   final StatefulActionsOptions<GetShipmentApiResponse,
-      GetShipmentApiResponseBuilder, GetShipmentApiResponseActions> $options;
+      GetShipmentApiResponseBuilder, GetShipmentApiResponseActions> options$;
 
-  final ActionDispatcher<GetShipmentApiResponse> $replace;
+  final ActionDispatcher<GetShipmentApiResponse> replace$;
   final GetShipmentApiShipmentActions shipment;
   final ListPackagesForShipmentApiResponseActions pkgResponse;
   final FieldDispatcher<BuiltList<CustomDoc>> customDocs;
   final GetShipmentApiDisplayRuleActions displayRule;
   final FieldDispatcher<BuiltList<GetShipmentApiShipmentAttribute>> attributes;
 
-  _$GetShipmentApiResponseActions._(this.$options)
-      : $replace = $options.action<GetShipmentApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        shipment = GetShipmentApiShipmentActions(() => $options.stateful<
+  _$GetShipmentApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetShipmentApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        shipment = GetShipmentApiShipmentActions(() => options$.stateful<
                 GetShipmentApiShipment,
                 GetShipmentApiShipmentBuilder,
                 GetShipmentApiShipmentActions>(
@@ -306,7 +306,7 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
             (b) => b?.shipment,
             (parent, builder) => parent?.shipment = builder)),
         pkgResponse = ListPackagesForShipmentApiResponseActions(() =>
-            $options.stateful<
+            options$.stateful<
                     ListPackagesForShipmentApiResponse,
                     ListPackagesForShipmentApiResponseBuilder,
                     ListPackagesForShipmentApiResponseActions>(
@@ -315,12 +315,12 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
                 (s) => s?.pkgResponse,
                 (b) => b?.pkgResponse,
                 (parent, builder) => parent?.pkgResponse = builder)),
-        customDocs = $options.field<BuiltList<CustomDoc>>(
+        customDocs = options$.field<BuiltList<CustomDoc>>(
             'customDocs',
             (a) => a?.customDocs,
             (s) => s?.customDocs,
             (p, b) => p?.customDocs = b),
-        displayRule = GetShipmentApiDisplayRuleActions(() => $options.stateful<
+        displayRule = GetShipmentApiDisplayRuleActions(() => options$.stateful<
                 GetShipmentApiDisplayRule,
                 GetShipmentApiDisplayRuleBuilder,
                 GetShipmentApiDisplayRuleActions>(
@@ -329,7 +329,7 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
             (s) => s?.displayRule,
             (b) => b?.displayRule,
             (parent, builder) => parent?.displayRule = builder)),
-        attributes = $options.field<BuiltList<GetShipmentApiShipmentAttribute>>(
+        attributes = options$.field<BuiltList<GetShipmentApiShipmentAttribute>>(
             'attributes',
             (a) => a?.attributes,
             (s) => s?.attributes,
@@ -341,48 +341,44 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
       _$GetShipmentApiResponseActions._(options());
 
   @override
-  GetShipmentApiResponse get $initial => GetShipmentApiResponse();
+  GetShipmentApiResponse get initialState$ => GetShipmentApiResponse();
 
   @override
-  GetShipmentApiResponseBuilder $newBuilder() =>
+  GetShipmentApiResponseBuilder newBuilder$() =>
       GetShipmentApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.shipment,
         this.pkgResponse,
         this.displayRule,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customDocs,
         this.attributes,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    shipment.$reducer(reducer);
-    pkgResponse.$reducer(reducer);
-    customDocs.$reducer(reducer);
-    displayRule.$reducer(reducer);
-    attributes.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    shipment.reducer$(reducer);
+    pkgResponse.reducer$(reducer);
+    customDocs.reducer$(reducer);
+    displayRule.reducer$(reducer);
+    attributes.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    shipment.$middleware(middleware);
-    pkgResponse.$middleware(middleware);
-    displayRule.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    shipment.middleware$(middleware);
+    pkgResponse.middleware$(middleware);
+    displayRule.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetShipmentApiResponse);
 }

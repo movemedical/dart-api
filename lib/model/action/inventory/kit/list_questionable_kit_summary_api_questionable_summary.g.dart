@@ -334,10 +334,10 @@ class _$ListQuestionableKitSummaryApiQuestionableSummaryActions
   final StatefulActionsOptions<
       ListQuestionableKitSummaryApiQuestionableSummary,
       ListQuestionableKitSummaryApiQuestionableSummaryBuilder,
-      ListQuestionableKitSummaryApiQuestionableSummaryActions> $options;
+      ListQuestionableKitSummaryApiQuestionableSummaryActions> options$;
 
   final ActionDispatcher<ListQuestionableKitSummaryApiQuestionableSummary>
-      $replace;
+      replace$;
   final FieldDispatcher<String> kitId;
   final FieldDispatcher<String> kitItemNumber;
   final FieldDispatcher<int> kitSerialNumber;
@@ -347,40 +347,40 @@ class _$ListQuestionableKitSummaryApiQuestionableSummaryActions
   final FieldDispatcher<bool> kitHasMissing;
   final FieldDispatcher<int> percentageMissing;
 
-  _$ListQuestionableKitSummaryApiQuestionableSummaryActions._(this.$options)
-      : $replace =
-            $options.action<ListQuestionableKitSummaryApiQuestionableSummary>(
-                '\$replace', (a) => a?.$replace),
-        kitId = $options.field<String>(
+  _$ListQuestionableKitSummaryApiQuestionableSummaryActions._(this.options$)
+      : replace$ =
+            options$.action<ListQuestionableKitSummaryApiQuestionableSummary>(
+                'replace\$', (a) => a?.replace$),
+        kitId = options$.field<String>(
             'kitId', (a) => a?.kitId, (s) => s?.kitId, (p, b) => p?.kitId = b),
-        kitItemNumber = $options.field<String>(
+        kitItemNumber = options$.field<String>(
             'kitItemNumber',
             (a) => a?.kitItemNumber,
             (s) => s?.kitItemNumber,
             (p, b) => p?.kitItemNumber = b),
-        kitSerialNumber = $options.field<int>(
+        kitSerialNumber = options$.field<int>(
             'kitSerialNumber',
             (a) => a?.kitSerialNumber,
             (s) => s?.kitSerialNumber,
             (p, b) => p?.kitSerialNumber = b),
-        kitSerialRef = $options.field<String>(
+        kitSerialRef = options$.field<String>(
             'kitSerialRef',
             (a) => a?.kitSerialRef,
             (s) => s?.kitSerialRef,
             (p, b) => p?.kitSerialRef = b),
-        kitVerified = $options.field<bool>('kitVerified', (a) => a?.kitVerified,
+        kitVerified = options$.field<bool>('kitVerified', (a) => a?.kitVerified,
             (s) => s?.kitVerified, (p, b) => p?.kitVerified = b),
-        kitHasExtras = $options.field<bool>(
+        kitHasExtras = options$.field<bool>(
             'kitHasExtras',
             (a) => a?.kitHasExtras,
             (s) => s?.kitHasExtras,
             (p, b) => p?.kitHasExtras = b),
-        kitHasMissing = $options.field<bool>(
+        kitHasMissing = options$.field<bool>(
             'kitHasMissing',
             (a) => a?.kitHasMissing,
             (s) => s?.kitHasMissing,
             (p, b) => p?.kitHasMissing = b),
-        percentageMissing = $options.field<int>(
+        percentageMissing = options$.field<int>(
             'percentageMissing',
             (a) => a?.percentageMissing,
             (s) => s?.percentageMissing,
@@ -393,18 +393,18 @@ class _$ListQuestionableKitSummaryApiQuestionableSummaryActions
       _$ListQuestionableKitSummaryApiQuestionableSummaryActions._(options());
 
   @override
-  ListQuestionableKitSummaryApiQuestionableSummary get $initial =>
+  ListQuestionableKitSummaryApiQuestionableSummary get initialState$ =>
       ListQuestionableKitSummaryApiQuestionableSummary();
 
   @override
-  ListQuestionableKitSummaryApiQuestionableSummaryBuilder $newBuilder() =>
+  ListQuestionableKitSummaryApiQuestionableSummaryBuilder newBuilder$() =>
       ListQuestionableKitSummaryApiQuestionableSummaryBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.kitId,
         this.kitItemNumber,
         this.kitSerialNumber,
@@ -416,25 +416,20 @@ class _$ListQuestionableKitSummaryApiQuestionableSummaryActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    kitId.$reducer(reducer);
-    kitItemNumber.$reducer(reducer);
-    kitSerialNumber.$reducer(reducer);
-    kitSerialRef.$reducer(reducer);
-    kitVerified.$reducer(reducer);
-    kitHasExtras.$reducer(reducer);
-    kitHasMissing.$reducer(reducer);
-    percentageMissing.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    kitId.reducer$(reducer);
+    kitItemNumber.reducer$(reducer);
+    kitSerialNumber.reducer$(reducer);
+    kitSerialRef.reducer$(reducer);
+    kitVerified.reducer$(reducer);
+    kitHasExtras.reducer$(reducer);
+    kitHasMissing.reducer$(reducer);
+    percentageMissing.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListQuestionableKitSummaryApiQuestionableSummary);
 }

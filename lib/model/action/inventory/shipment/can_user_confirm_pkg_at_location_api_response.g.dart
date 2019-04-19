@@ -165,15 +165,15 @@ class _$CanUserConfirmPkgAtLocationApiResponseActions
   final StatefulActionsOptions<
       CanUserConfirmPkgAtLocationApiResponse,
       CanUserConfirmPkgAtLocationApiResponseBuilder,
-      CanUserConfirmPkgAtLocationApiResponseActions> $options;
+      CanUserConfirmPkgAtLocationApiResponseActions> options$;
 
-  final ActionDispatcher<CanUserConfirmPkgAtLocationApiResponse> $replace;
+  final ActionDispatcher<CanUserConfirmPkgAtLocationApiResponse> replace$;
   final FieldDispatcher<bool> canDeliverAndConfirm;
 
-  _$CanUserConfirmPkgAtLocationApiResponseActions._(this.$options)
-      : $replace = $options.action<CanUserConfirmPkgAtLocationApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        canDeliverAndConfirm = $options.field<bool>(
+  _$CanUserConfirmPkgAtLocationApiResponseActions._(this.options$)
+      : replace$ = options$.action<CanUserConfirmPkgAtLocationApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        canDeliverAndConfirm = options$.field<bool>(
             'canDeliverAndConfirm',
             (a) => a?.canDeliverAndConfirm,
             (s) => s?.canDeliverAndConfirm,
@@ -185,34 +185,29 @@ class _$CanUserConfirmPkgAtLocationApiResponseActions
       _$CanUserConfirmPkgAtLocationApiResponseActions._(options());
 
   @override
-  CanUserConfirmPkgAtLocationApiResponse get $initial =>
+  CanUserConfirmPkgAtLocationApiResponse get initialState$ =>
       CanUserConfirmPkgAtLocationApiResponse();
 
   @override
-  CanUserConfirmPkgAtLocationApiResponseBuilder $newBuilder() =>
+  CanUserConfirmPkgAtLocationApiResponseBuilder newBuilder$() =>
       CanUserConfirmPkgAtLocationApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.canDeliverAndConfirm,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    canDeliverAndConfirm.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    canDeliverAndConfirm.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CanUserConfirmPkgAtLocationApiResponse);
 }

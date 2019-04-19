@@ -20,84 +20,50 @@ class _$GetAeApi extends GetAeApi {
       CommandState<ApiCommand<GetAeApiRequest>, ApiResult<GetAeApiResponse>>,
       CommandStateBuilder<ApiCommand<GetAeApiRequest>,
           ApiResult<GetAeApiResponse>>,
-      GetAeApi> $options;
+      GetAeApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetAeApiRequest>,
-          ApiResult<GetAeApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetAeApiRequest>, ApiResult<GetAeApiResponse>,
-          GetAeApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetAeApiRequest>, ApiResult<GetAeApiResponse>,
-          GetAeApi, Command<ApiCommand<GetAeApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetAeApiRequest>, ApiResult<GetAeApiResponse>,
-          GetAeApi, CommandResult<ApiResult<GetAeApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetAeApiRequest>, ApiResult<GetAeApiResponse>,
-          GetAeApi, CommandProgress>> $progress;
+          ApiResult<GetAeApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetAeApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<GetAeApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetAeApi._(this.$options)
-      : $replace = $options.action<
+  _$GetAeApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<GetAeApiRequest>,
-                ApiResult<GetAeApiResponse>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetAeApiRequest>,
-                ApiResult<GetAeApiResponse>,
-                GetAeApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetAeApiRequest>,
-                    ApiResult<GetAeApiResponse>,
-                    GetAeApi,
-                    Command<ApiCommand<GetAeApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetAeApiRequest>,
-                    ApiResult<GetAeApiResponse>,
-                    GetAeApi,
-                    CommandResult<ApiResult<GetAeApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetAeApiRequest>,
-                ApiResult<GetAeApiResponse>,
-                GetAeApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<GetAeApiResponse>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<GetAeApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<GetAeApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetAeApi(GetAeApiOptions options) => _$GetAeApi._(options());
 
   @override
   CommandState<ApiCommand<GetAeApiRequest>, ApiResult<GetAeApiResponse>>
-      get $initial => CommandState<ApiCommand<GetAeApiRequest>,
+      get initialState$ => CommandState<ApiCommand<GetAeApiRequest>,
           ApiResult<GetAeApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetAeApiRequest>, ApiResult<GetAeApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<GetAeApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<GetAeApiRequest>,
           ApiResult<GetAeApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetAeApiRequest)]),
-        FullType(ApiResult, [FullType(GetAeApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

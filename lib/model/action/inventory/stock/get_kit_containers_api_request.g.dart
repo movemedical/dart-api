@@ -178,18 +178,18 @@ class _$GetKitContainersApiRequestActions
   final StatefulActionsOptions<
       GetKitContainersApiRequest,
       GetKitContainersApiRequestBuilder,
-      GetKitContainersApiRequestActions> $options;
+      GetKitContainersApiRequestActions> options$;
 
-  final ActionDispatcher<GetKitContainersApiRequest> $replace;
+  final ActionDispatcher<GetKitContainersApiRequest> replace$;
   final FieldDispatcher<String> kitStockId;
   final FieldDispatcher<String> kitStockSummaryId;
 
-  _$GetKitContainersApiRequestActions._(this.$options)
-      : $replace = $options.action<GetKitContainersApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        kitStockId = $options.field<String>('kitStockId', (a) => a?.kitStockId,
+  _$GetKitContainersApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetKitContainersApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        kitStockId = options$.field<String>('kitStockId', (a) => a?.kitStockId,
             (s) => s?.kitStockId, (p, b) => p?.kitStockId = b),
-        kitStockSummaryId = $options.field<String>(
+        kitStockSummaryId = options$.field<String>(
             'kitStockSummaryId',
             (a) => a?.kitStockSummaryId,
             (s) => s?.kitStockSummaryId,
@@ -201,34 +201,30 @@ class _$GetKitContainersApiRequestActions
       _$GetKitContainersApiRequestActions._(options());
 
   @override
-  GetKitContainersApiRequest get $initial => GetKitContainersApiRequest();
+  GetKitContainersApiRequest get initialState$ => GetKitContainersApiRequest();
 
   @override
-  GetKitContainersApiRequestBuilder $newBuilder() =>
+  GetKitContainersApiRequestBuilder newBuilder$() =>
       GetKitContainersApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.kitStockId,
         this.kitStockSummaryId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    kitStockId.$reducer(reducer);
-    kitStockSummaryId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    kitStockId.reducer$(reducer);
+    kitStockSummaryId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetKitContainersApiRequest);
 }

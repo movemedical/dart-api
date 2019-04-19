@@ -169,15 +169,15 @@ typedef StatefulActionsOptions<
 
 class _$SourceStockApiResponseActions extends SourceStockApiResponseActions {
   final StatefulActionsOptions<SourceStockApiResponse,
-      SourceStockApiResponseBuilder, SourceStockApiResponseActions> $options;
+      SourceStockApiResponseBuilder, SourceStockApiResponseActions> options$;
 
-  final ActionDispatcher<SourceStockApiResponse> $replace;
+  final ActionDispatcher<SourceStockApiResponse> replace$;
   final FieldDispatcher<BuiltList<SourceStockApiSourceError>> errors;
 
-  _$SourceStockApiResponseActions._(this.$options)
-      : $replace = $options.action<SourceStockApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        errors = $options.field<BuiltList<SourceStockApiSourceError>>('errors',
+  _$SourceStockApiResponseActions._(this.options$)
+      : replace$ = options$.action<SourceStockApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        errors = options$.field<BuiltList<SourceStockApiSourceError>>('errors',
             (a) => a?.errors, (s) => s?.errors, (p, b) => p?.errors = b),
         super._();
 
@@ -186,32 +186,28 @@ class _$SourceStockApiResponseActions extends SourceStockApiResponseActions {
       _$SourceStockApiResponseActions._(options());
 
   @override
-  SourceStockApiResponse get $initial => SourceStockApiResponse();
+  SourceStockApiResponse get initialState$ => SourceStockApiResponse();
 
   @override
-  SourceStockApiResponseBuilder $newBuilder() =>
+  SourceStockApiResponseBuilder newBuilder$() =>
       SourceStockApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.errors,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    errors.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    errors.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SourceStockApiResponse);
 }

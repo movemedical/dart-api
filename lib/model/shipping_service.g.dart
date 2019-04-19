@@ -259,9 +259,9 @@ typedef StatefulActionsOptions<ShippingService, ShippingServiceBuilder,
 
 class _$ShippingServiceActions extends ShippingServiceActions {
   final StatefulActionsOptions<ShippingService, ShippingServiceBuilder,
-      ShippingServiceActions> $options;
+      ShippingServiceActions> options$;
 
-  final ActionDispatcher<ShippingService> $replace;
+  final ActionDispatcher<ShippingService> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<int> daysInTransit;
@@ -269,26 +269,26 @@ class _$ShippingServiceActions extends ShippingServiceActions {
   final FieldDispatcher<bool> active;
   final FieldDispatcher<String> erpCode;
 
-  _$ShippingServiceActions._(this.$options)
-      : $replace =
-            $options.action<ShippingService>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ShippingServiceActions._(this.options$)
+      : replace$ =
+            options$.action<ShippingService>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        daysInTransit = $options.field<int>(
+        daysInTransit = options$.field<int>(
             'daysInTransit',
             (a) => a?.daysInTransit,
             (s) => s?.daysInTransit,
             (p, b) => p?.daysInTransit = b),
-        hoursInTransit = $options.field<int>(
+        hoursInTransit = options$.field<int>(
             'hoursInTransit',
             (a) => a?.hoursInTransit,
             (s) => s?.hoursInTransit,
             (p, b) => p?.hoursInTransit = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        erpCode = $options.field<String>('erpCode', (a) => a?.erpCode,
+        erpCode = options$.field<String>('erpCode', (a) => a?.erpCode,
             (s) => s?.erpCode, (p, b) => p?.erpCode = b),
         super._();
 
@@ -296,16 +296,16 @@ class _$ShippingServiceActions extends ShippingServiceActions {
       _$ShippingServiceActions._(options());
 
   @override
-  ShippingService get $initial => ShippingService();
+  ShippingService get initialState$ => ShippingService();
 
   @override
-  ShippingServiceBuilder $newBuilder() => ShippingServiceBuilder();
+  ShippingServiceBuilder newBuilder$() => ShippingServiceBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.daysInTransit,
@@ -315,22 +315,18 @@ class _$ShippingServiceActions extends ShippingServiceActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    daysInTransit.$reducer(reducer);
-    hoursInTransit.$reducer(reducer);
-    active.$reducer(reducer);
-    erpCode.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    daysInTransit.reducer$(reducer);
+    hoursInTransit.reducer$(reducer);
+    active.reducer$(reducer);
+    erpCode.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ShippingService);
 }

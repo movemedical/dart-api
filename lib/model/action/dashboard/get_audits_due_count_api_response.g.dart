@@ -157,15 +157,15 @@ class _$GetAuditsDueCountApiResponseActions
   final StatefulActionsOptions<
       GetAuditsDueCountApiResponse,
       GetAuditsDueCountApiResponseBuilder,
-      GetAuditsDueCountApiResponseActions> $options;
+      GetAuditsDueCountApiResponseActions> options$;
 
-  final ActionDispatcher<GetAuditsDueCountApiResponse> $replace;
+  final ActionDispatcher<GetAuditsDueCountApiResponse> replace$;
   final FieldDispatcher<int> count;
 
-  _$GetAuditsDueCountApiResponseActions._(this.$options)
-      : $replace = $options.action<GetAuditsDueCountApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        count = $options.field<int>(
+  _$GetAuditsDueCountApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetAuditsDueCountApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        count = options$.field<int>(
             'count', (a) => a?.count, (s) => s?.count, (p, b) => p?.count = b),
         super._();
 
@@ -174,33 +174,29 @@ class _$GetAuditsDueCountApiResponseActions
       _$GetAuditsDueCountApiResponseActions._(options());
 
   @override
-  GetAuditsDueCountApiResponse get $initial => GetAuditsDueCountApiResponse();
+  GetAuditsDueCountApiResponse get initialState$ =>
+      GetAuditsDueCountApiResponse();
 
   @override
-  GetAuditsDueCountApiResponseBuilder $newBuilder() =>
+  GetAuditsDueCountApiResponseBuilder newBuilder$() =>
       GetAuditsDueCountApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.count,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    count.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    count.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetAuditsDueCountApiResponse);
 }

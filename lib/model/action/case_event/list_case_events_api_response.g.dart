@@ -248,27 +248,27 @@ class _$ListCaseEventsApiResponseActions
   final StatefulActionsOptions<
       ListCaseEventsApiResponse,
       ListCaseEventsApiResponseBuilder,
-      ListCaseEventsApiResponseActions> $options;
+      ListCaseEventsApiResponseActions> options$;
 
-  final ActionDispatcher<ListCaseEventsApiResponse> $replace;
+  final ActionDispatcher<ListCaseEventsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListCaseEventsApiCaseEvent>> data;
   final FieldDispatcher<bool> moreData;
   final FieldDispatcher<bool> returnedCounts;
   final FieldDispatcher<BuiltList<ListCaseEventsApiCountData>> countData;
 
-  _$ListCaseEventsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListCaseEventsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListCaseEventsApiCaseEvent>>(
+  _$ListCaseEventsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListCaseEventsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListCaseEventsApiCaseEvent>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
-        returnedCounts = $options.field<bool>(
+        returnedCounts = options$.field<bool>(
             'returnedCounts',
             (a) => a?.returnedCounts,
             (s) => s?.returnedCounts,
             (p, b) => p?.returnedCounts = b),
-        countData = $options.field<BuiltList<ListCaseEventsApiCountData>>(
+        countData = options$.field<BuiltList<ListCaseEventsApiCountData>>(
             'countData',
             (a) => a?.countData,
             (s) => s?.countData,
@@ -280,17 +280,17 @@ class _$ListCaseEventsApiResponseActions
       _$ListCaseEventsApiResponseActions._(options());
 
   @override
-  ListCaseEventsApiResponse get $initial => ListCaseEventsApiResponse();
+  ListCaseEventsApiResponse get initialState$ => ListCaseEventsApiResponse();
 
   @override
-  ListCaseEventsApiResponseBuilder $newBuilder() =>
+  ListCaseEventsApiResponseBuilder newBuilder$() =>
       ListCaseEventsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
         this.returnedCounts,
@@ -298,20 +298,16 @@ class _$ListCaseEventsApiResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
-    returnedCounts.$reducer(reducer);
-    countData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
+    returnedCounts.reducer$(reducer);
+    countData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListCaseEventsApiResponse);
 }

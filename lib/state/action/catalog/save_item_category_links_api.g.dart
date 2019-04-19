@@ -22,63 +22,29 @@ class _$SaveItemCategoryLinksApi extends SaveItemCategoryLinksApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<SaveItemCategoryLinksApiRequest>,
           ApiResult<Nothing>>,
-      SaveItemCategoryLinksApi> $options;
+      SaveItemCategoryLinksApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Nothing>, SaveItemCategoryLinksApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Nothing>,
-          SaveItemCategoryLinksApi,
-          Command<ApiCommand<SaveItemCategoryLinksApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Nothing>,
-          SaveItemCategoryLinksApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Nothing>,
-          SaveItemCategoryLinksApi,
-          CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<SaveItemCategoryLinksApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$SaveItemCategoryLinksApi._(this.$options)
-      : $replace = $options.action<
+  _$SaveItemCategoryLinksApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<SaveItemCategoryLinksApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<SaveItemCategoryLinksApiRequest>,
-                ApiResult<Nothing>,
-                SaveItemCategoryLinksApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<SaveItemCategoryLinksApiRequest>,
-                    ApiResult<Nothing>,
-                    SaveItemCategoryLinksApi,
-                    Command<ApiCommand<SaveItemCategoryLinksApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<SaveItemCategoryLinksApiRequest>,
-                    ApiResult<Nothing>,
-                    SaveItemCategoryLinksApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<SaveItemCategoryLinksApiRequest>,
-                ApiResult<Nothing>,
-                SaveItemCategoryLinksApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<SaveItemCategoryLinksApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$SaveItemCategoryLinksApi(SaveItemCategoryLinksApiOptions options) =>
@@ -86,31 +52,24 @@ class _$SaveItemCategoryLinksApi extends SaveItemCategoryLinksApi {
 
   @override
   CommandState<ApiCommand<SaveItemCategoryLinksApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Nothing>>();
+      get initialState$ => CommandState<
+          ApiCommand<SaveItemCategoryLinksApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<SaveItemCategoryLinksApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<SaveItemCategoryLinksApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(SaveItemCategoryLinksApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

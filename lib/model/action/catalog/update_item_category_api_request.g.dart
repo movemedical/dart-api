@@ -219,24 +219,24 @@ class _$UpdateItemCategoryApiRequestActions
   final StatefulActionsOptions<
       UpdateItemCategoryApiRequest,
       UpdateItemCategoryApiRequestBuilder,
-      UpdateItemCategoryApiRequestActions> $options;
+      UpdateItemCategoryApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateItemCategoryApiRequest> $replace;
+  final ActionDispatcher<UpdateItemCategoryApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> code;
   final FieldDispatcher<bool> delete;
 
-  _$UpdateItemCategoryApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateItemCategoryApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdateItemCategoryApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateItemCategoryApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        code = $options.field<String>(
+        code = options$.field<String>(
             'code', (a) => a?.code, (s) => s?.code, (p, b) => p?.code = b),
-        delete = $options.field<bool>('delete', (a) => a?.delete,
+        delete = options$.field<bool>('delete', (a) => a?.delete,
             (s) => s?.delete, (p, b) => p?.delete = b),
         super._();
 
@@ -245,17 +245,18 @@ class _$UpdateItemCategoryApiRequestActions
       _$UpdateItemCategoryApiRequestActions._(options());
 
   @override
-  UpdateItemCategoryApiRequest get $initial => UpdateItemCategoryApiRequest();
+  UpdateItemCategoryApiRequest get initialState$ =>
+      UpdateItemCategoryApiRequest();
 
   @override
-  UpdateItemCategoryApiRequestBuilder $newBuilder() =>
+  UpdateItemCategoryApiRequestBuilder newBuilder$() =>
       UpdateItemCategoryApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.code,
@@ -263,21 +264,16 @@ class _$UpdateItemCategoryApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    code.$reducer(reducer);
-    delete.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    code.reducer$(reducer);
+    delete.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateItemCategoryApiRequest);
 }

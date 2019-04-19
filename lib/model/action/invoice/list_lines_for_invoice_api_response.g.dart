@@ -176,15 +176,15 @@ class _$ListLinesForInvoiceApiResponseActions
   final StatefulActionsOptions<
       ListLinesForInvoiceApiResponse,
       ListLinesForInvoiceApiResponseBuilder,
-      ListLinesForInvoiceApiResponseActions> $options;
+      ListLinesForInvoiceApiResponseActions> options$;
 
-  final ActionDispatcher<ListLinesForInvoiceApiResponse> $replace;
+  final ActionDispatcher<ListLinesForInvoiceApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListLinesForInvoiceApiInvoiceLine>> lines;
 
-  _$ListLinesForInvoiceApiResponseActions._(this.$options)
-      : $replace = $options.action<ListLinesForInvoiceApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        lines = $options.field<BuiltList<ListLinesForInvoiceApiInvoiceLine>>(
+  _$ListLinesForInvoiceApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListLinesForInvoiceApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        lines = options$.field<BuiltList<ListLinesForInvoiceApiInvoiceLine>>(
             'lines', (a) => a?.lines, (s) => s?.lines, (p, b) => p?.lines = b),
         super._();
 
@@ -193,34 +193,29 @@ class _$ListLinesForInvoiceApiResponseActions
       _$ListLinesForInvoiceApiResponseActions._(options());
 
   @override
-  ListLinesForInvoiceApiResponse get $initial =>
+  ListLinesForInvoiceApiResponse get initialState$ =>
       ListLinesForInvoiceApiResponse();
 
   @override
-  ListLinesForInvoiceApiResponseBuilder $newBuilder() =>
+  ListLinesForInvoiceApiResponseBuilder newBuilder$() =>
       ListLinesForInvoiceApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.lines,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    lines.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    lines.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListLinesForInvoiceApiResponse);
 }

@@ -160,15 +160,15 @@ class _$RequestDueBackReportApiResponseActions
   final StatefulActionsOptions<
       RequestDueBackReportApiResponse,
       RequestDueBackReportApiResponseBuilder,
-      RequestDueBackReportApiResponseActions> $options;
+      RequestDueBackReportApiResponseActions> options$;
 
-  final ActionDispatcher<RequestDueBackReportApiResponse> $replace;
+  final ActionDispatcher<RequestDueBackReportApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
 
-  _$RequestDueBackReportApiResponseActions._(this.$options)
-      : $replace = $options.action<RequestDueBackReportApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$RequestDueBackReportApiResponseActions._(this.options$)
+      : replace$ = options$.action<RequestDueBackReportApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -180,34 +180,29 @@ class _$RequestDueBackReportApiResponseActions
       _$RequestDueBackReportApiResponseActions._(options());
 
   @override
-  RequestDueBackReportApiResponse get $initial =>
+  RequestDueBackReportApiResponse get initialState$ =>
       RequestDueBackReportApiResponse();
 
   @override
-  RequestDueBackReportApiResponseBuilder $newBuilder() =>
+  RequestDueBackReportApiResponseBuilder newBuilder$() =>
       RequestDueBackReportApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestDueBackReportApiResponse);
 }

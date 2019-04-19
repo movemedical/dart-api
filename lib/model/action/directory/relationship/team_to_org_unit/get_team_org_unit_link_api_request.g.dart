@@ -160,15 +160,15 @@ class _$GetTeamOrgUnitLinkApiRequestActions
   final StatefulActionsOptions<
       GetTeamOrgUnitLinkApiRequest,
       GetTeamOrgUnitLinkApiRequestBuilder,
-      GetTeamOrgUnitLinkApiRequestActions> $options;
+      GetTeamOrgUnitLinkApiRequestActions> options$;
 
-  final ActionDispatcher<GetTeamOrgUnitLinkApiRequest> $replace;
+  final ActionDispatcher<GetTeamOrgUnitLinkApiRequest> replace$;
   final FieldDispatcher<String> teamToOrgUnitId;
 
-  _$GetTeamOrgUnitLinkApiRequestActions._(this.$options)
-      : $replace = $options.action<GetTeamOrgUnitLinkApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        teamToOrgUnitId = $options.field<String>(
+  _$GetTeamOrgUnitLinkApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetTeamOrgUnitLinkApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        teamToOrgUnitId = options$.field<String>(
             'teamToOrgUnitId',
             (a) => a?.teamToOrgUnitId,
             (s) => s?.teamToOrgUnitId,
@@ -180,33 +180,29 @@ class _$GetTeamOrgUnitLinkApiRequestActions
       _$GetTeamOrgUnitLinkApiRequestActions._(options());
 
   @override
-  GetTeamOrgUnitLinkApiRequest get $initial => GetTeamOrgUnitLinkApiRequest();
+  GetTeamOrgUnitLinkApiRequest get initialState$ =>
+      GetTeamOrgUnitLinkApiRequest();
 
   @override
-  GetTeamOrgUnitLinkApiRequestBuilder $newBuilder() =>
+  GetTeamOrgUnitLinkApiRequestBuilder newBuilder$() =>
       GetTeamOrgUnitLinkApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.teamToOrgUnitId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    teamToOrgUnitId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    teamToOrgUnitId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetTeamOrgUnitLinkApiRequest);
 }

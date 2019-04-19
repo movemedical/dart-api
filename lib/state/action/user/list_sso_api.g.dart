@@ -21,95 +21,52 @@ class _$ListSSOApi extends ListSSOApi {
           ApiResult<ListSSOApiResponse>>,
       CommandStateBuilder<ApiCommand<ListSSOApiRequest>,
           ApiResult<ListSSOApiResponse>>,
-      ListSSOApi> $options;
+      ListSSOApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListSSOApiRequest>,
-          ApiResult<ListSSOApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ListSSOApiRequest>,
-          ApiResult<ListSSOApiResponse>, ListSSOApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListSSOApiRequest>,
-          ApiResult<ListSSOApiResponse>,
-          ListSSOApi,
-          Command<ApiCommand<ListSSOApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListSSOApiRequest>,
-          ApiResult<ListSSOApiResponse>,
-          ListSSOApi,
-          CommandResult<ApiResult<ListSSOApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListSSOApiRequest>,
-          ApiResult<ListSSOApiResponse>,
-          ListSSOApi,
-          CommandProgress>> $progress;
+          ApiResult<ListSSOApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListSSOApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<ListSSOApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListSSOApi._(this.$options)
-      : $replace = $options.action<
+  _$ListSSOApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListSSOApiRequest>,
                     ApiResult<ListSSOApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListSSOApiRequest>,
-                ApiResult<ListSSOApiResponse>,
-                ListSSOApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListSSOApiRequest>,
-                    ApiResult<ListSSOApiResponse>,
-                    ListSSOApi,
-                    Command<ApiCommand<ListSSOApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListSSOApiRequest>,
-                    ApiResult<ListSSOApiResponse>,
-                    ListSSOApi,
-                    CommandResult<ApiResult<ListSSOApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListSSOApiRequest>,
-                ApiResult<ListSSOApiResponse>,
-                ListSSOApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<ListSSOApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<ListSSOApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListSSOApi(ListSSOApiOptions options) => _$ListSSOApi._(options());
 
   @override
   CommandState<ApiCommand<ListSSOApiRequest>, ApiResult<ListSSOApiResponse>>
-      get $initial => CommandState<ApiCommand<ListSSOApiRequest>,
+      get initialState$ => CommandState<ApiCommand<ListSSOApiRequest>,
           ApiResult<ListSSOApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListSSOApiRequest>,
           ApiResult<ListSSOApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<ListSSOApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<ListSSOApiRequest>,
           ApiResult<ListSSOApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListSSOApiRequest)]),
-        FullType(ApiResult, [FullType(ListSSOApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

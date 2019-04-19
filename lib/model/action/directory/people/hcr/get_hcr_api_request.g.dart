@@ -141,15 +141,15 @@ typedef StatefulActionsOptions<GetHcrApiRequest, GetHcrApiRequestBuilder,
 
 class _$GetHcrApiRequestActions extends GetHcrApiRequestActions {
   final StatefulActionsOptions<GetHcrApiRequest, GetHcrApiRequestBuilder,
-      GetHcrApiRequestActions> $options;
+      GetHcrApiRequestActions> options$;
 
-  final ActionDispatcher<GetHcrApiRequest> $replace;
+  final ActionDispatcher<GetHcrApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$GetHcrApiRequestActions._(this.$options)
-      : $replace =
-            $options.action<GetHcrApiRequest>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetHcrApiRequestActions._(this.options$)
+      : replace$ =
+            options$.action<GetHcrApiRequest>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -157,31 +157,27 @@ class _$GetHcrApiRequestActions extends GetHcrApiRequestActions {
       _$GetHcrApiRequestActions._(options());
 
   @override
-  GetHcrApiRequest get $initial => GetHcrApiRequest();
+  GetHcrApiRequest get initialState$ => GetHcrApiRequest();
 
   @override
-  GetHcrApiRequestBuilder $newBuilder() => GetHcrApiRequestBuilder();
+  GetHcrApiRequestBuilder newBuilder$() => GetHcrApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetHcrApiRequest);
 }

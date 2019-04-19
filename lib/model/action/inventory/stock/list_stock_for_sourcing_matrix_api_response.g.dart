@@ -215,24 +215,24 @@ class _$ListStockForSourcingMatrixApiResponseActions
   final StatefulActionsOptions<
       ListStockForSourcingMatrixApiResponse,
       ListStockForSourcingMatrixApiResponseBuilder,
-      ListStockForSourcingMatrixApiResponseActions> $options;
+      ListStockForSourcingMatrixApiResponseActions> options$;
 
-  final ActionDispatcher<ListStockForSourcingMatrixApiResponse> $replace;
+  final ActionDispatcher<ListStockForSourcingMatrixApiResponse> replace$;
   final FieldDispatcher<
       BuiltList<ListStockForSourcingMatrixApiSourcingLocation>> locations;
   final FieldDispatcher<BuiltList<ListStockForSourcingMatrixApiSourcingLine>>
       items;
 
-  _$ListStockForSourcingMatrixApiResponseActions._(this.$options)
-      : $replace = $options.action<ListStockForSourcingMatrixApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        locations = $options
+  _$ListStockForSourcingMatrixApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListStockForSourcingMatrixApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        locations = options$
             .field<BuiltList<ListStockForSourcingMatrixApiSourcingLocation>>(
                 'locations',
                 (a) => a?.locations,
                 (s) => s?.locations,
                 (p, b) => p?.locations = b),
-        items = $options
+        items = options$
             .field<BuiltList<ListStockForSourcingMatrixApiSourcingLine>>(
                 'items',
                 (a) => a?.items,
@@ -245,36 +245,31 @@ class _$ListStockForSourcingMatrixApiResponseActions
       _$ListStockForSourcingMatrixApiResponseActions._(options());
 
   @override
-  ListStockForSourcingMatrixApiResponse get $initial =>
+  ListStockForSourcingMatrixApiResponse get initialState$ =>
       ListStockForSourcingMatrixApiResponse();
 
   @override
-  ListStockForSourcingMatrixApiResponseBuilder $newBuilder() =>
+  ListStockForSourcingMatrixApiResponseBuilder newBuilder$() =>
       ListStockForSourcingMatrixApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.locations,
         this.items,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    locations.$reducer(reducer);
-    items.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    locations.reducer$(reducer);
+    items.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListStockForSourcingMatrixApiResponse);
 }

@@ -338,9 +338,9 @@ typedef StatefulActionsOptions<
 
 class _$ListZonesApiZoneDetailActions extends ListZonesApiZoneDetailActions {
   final StatefulActionsOptions<ListZonesApiZoneDetail,
-      ListZonesApiZoneDetailBuilder, ListZonesApiZoneDetailActions> $options;
+      ListZonesApiZoneDetailBuilder, ListZonesApiZoneDetailActions> options$;
 
-  final ActionDispatcher<ListZonesApiZoneDetail> $replace;
+  final ActionDispatcher<ListZonesApiZoneDetail> replace$;
   final FieldDispatcher<String> zoneId;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> name;
@@ -351,29 +351,29 @@ class _$ListZonesApiZoneDetailActions extends ListZonesApiZoneDetailActions {
   final FieldDispatcher<bool> receivable;
   final FieldDispatcher<bool> hasBin;
 
-  _$ListZonesApiZoneDetailActions._(this.$options)
-      : $replace = $options.action<ListZonesApiZoneDetail>(
-            '\$replace', (a) => a?.$replace),
-        zoneId = $options.field<String>('zoneId', (a) => a?.zoneId,
+  _$ListZonesApiZoneDetailActions._(this.options$)
+      : replace$ = options$.action<ListZonesApiZoneDetail>(
+            'replace\$', (a) => a?.replace$),
+        zoneId = options$.field<String>('zoneId', (a) => a?.zoneId,
             (s) => s?.zoneId, (p, b) => p?.zoneId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        type = $options.field<ZoneType>(
+        type = options$.field<ZoneType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        sourceable = $options.field<bool>('sourceable', (a) => a?.sourceable,
+        sourceable = options$.field<bool>('sourceable', (a) => a?.sourceable,
             (s) => s?.sourceable, (p, b) => p?.sourceable = b),
-        receivable = $options.field<bool>('receivable', (a) => a?.receivable,
+        receivable = options$.field<bool>('receivable', (a) => a?.receivable,
             (s) => s?.receivable, (p, b) => p?.receivable = b),
-        hasBin = $options.field<bool>('hasBin', (a) => a?.hasBin,
+        hasBin = options$.field<bool>('hasBin', (a) => a?.hasBin,
             (s) => s?.hasBin, (p, b) => p?.hasBin = b),
         super._();
 
@@ -382,17 +382,17 @@ class _$ListZonesApiZoneDetailActions extends ListZonesApiZoneDetailActions {
       _$ListZonesApiZoneDetailActions._(options());
 
   @override
-  ListZonesApiZoneDetail get $initial => ListZonesApiZoneDetail();
+  ListZonesApiZoneDetail get initialState$ => ListZonesApiZoneDetail();
 
   @override
-  ListZonesApiZoneDetailBuilder $newBuilder() =>
+  ListZonesApiZoneDetailBuilder newBuilder$() =>
       ListZonesApiZoneDetailBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.zoneId,
         this.facilityId,
         this.name,
@@ -405,25 +405,21 @@ class _$ListZonesApiZoneDetailActions extends ListZonesApiZoneDetailActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    zoneId.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    name.$reducer(reducer);
-    description.$reducer(reducer);
-    active.$reducer(reducer);
-    type.$reducer(reducer);
-    sourceable.$reducer(reducer);
-    receivable.$reducer(reducer);
-    hasBin.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    zoneId.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    name.reducer$(reducer);
+    description.reducer$(reducer);
+    active.reducer$(reducer);
+    type.reducer$(reducer);
+    sourceable.reducer$(reducer);
+    receivable.reducer$(reducer);
+    hasBin.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListZonesApiZoneDetail);
 }

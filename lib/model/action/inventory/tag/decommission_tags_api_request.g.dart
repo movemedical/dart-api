@@ -172,15 +172,15 @@ class _$DecommissionTagsApiRequestActions
   final StatefulActionsOptions<
       DecommissionTagsApiRequest,
       DecommissionTagsApiRequestBuilder,
-      DecommissionTagsApiRequestActions> $options;
+      DecommissionTagsApiRequestActions> options$;
 
-  final ActionDispatcher<DecommissionTagsApiRequest> $replace;
+  final ActionDispatcher<DecommissionTagsApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> tagIds;
 
-  _$DecommissionTagsApiRequestActions._(this.$options)
-      : $replace = $options.action<DecommissionTagsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        tagIds = $options.field<BuiltList<String>>('tagIds', (a) => a?.tagIds,
+  _$DecommissionTagsApiRequestActions._(this.options$)
+      : replace$ = options$.action<DecommissionTagsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        tagIds = options$.field<BuiltList<String>>('tagIds', (a) => a?.tagIds,
             (s) => s?.tagIds, (p, b) => p?.tagIds = b),
         super._();
 
@@ -189,32 +189,28 @@ class _$DecommissionTagsApiRequestActions
       _$DecommissionTagsApiRequestActions._(options());
 
   @override
-  DecommissionTagsApiRequest get $initial => DecommissionTagsApiRequest();
+  DecommissionTagsApiRequest get initialState$ => DecommissionTagsApiRequest();
 
   @override
-  DecommissionTagsApiRequestBuilder $newBuilder() =>
+  DecommissionTagsApiRequestBuilder newBuilder$() =>
       DecommissionTagsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.tagIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    tagIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    tagIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(DecommissionTagsApiRequest);
 }

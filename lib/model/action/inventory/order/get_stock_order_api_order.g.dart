@@ -1044,9 +1044,9 @@ typedef StatefulActionsOptions<
 
 class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
   final StatefulActionsOptions<GetStockOrderApiOrder,
-      GetStockOrderApiOrderBuilder, GetStockOrderApiOrderActions> $options;
+      GetStockOrderApiOrderBuilder, GetStockOrderApiOrderActions> options$;
 
-  final ActionDispatcher<GetStockOrderApiOrder> $replace;
+  final ActionDispatcher<GetStockOrderApiOrder> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<DateTime> createdDate;
   final FieldDispatcher<String> createdBy;
@@ -1085,63 +1085,63 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
   final StockItemActions restockingKitTray;
   final FieldDispatcher<String> lastWebServiceLogId;
 
-  _$GetStockOrderApiOrderActions._(this.$options)
-      : $replace = $options.action<GetStockOrderApiOrder>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetStockOrderApiOrderActions._(this.options$)
+      : replace$ = options$.action<GetStockOrderApiOrder>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        createdDate = $options.field<DateTime>(
+        createdDate = options$.field<DateTime>(
             'createdDate',
             (a) => a?.createdDate,
             (s) => s?.createdDate,
             (p, b) => p?.createdDate = b),
-        createdBy = $options.field<String>('createdBy', (a) => a?.createdBy,
+        createdBy = options$.field<String>('createdBy', (a) => a?.createdBy,
             (s) => s?.createdBy, (p, b) => p?.createdBy = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<OrderStatus>('status', (a) => a?.status,
+        status = options$.field<OrderStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        email = $options.field<String>(
+        email = options$.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        attention = $options.field<String>('attention', (a) => a?.attention,
+        attention = options$.field<String>('attention', (a) => a?.attention,
             (s) => s?.attention, (p, b) => p?.attention = b),
-        orderReason = OrderReasonActions(() => $options
+        orderReason = OrderReasonActions(() => options$
             .stateful<OrderReason, OrderReasonBuilder, OrderReasonActions>(
                 'orderReason',
                 (a) => a.orderReason,
                 (s) => s?.orderReason,
                 (b) => b?.orderReason,
                 (parent, builder) => parent?.orderReason = builder)),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
         location = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
         deliveryWindow = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'deliveryWindow',
                 (a) => a.deliveryWindow,
                 (s) => s?.deliveryWindow,
                 (b) => b?.deliveryWindow,
                 (parent, builder) => parent?.deliveryWindow = builder)),
-        sourceStartDate = $options.field<DateTime>(
+        sourceStartDate = options$.field<DateTime>(
             'sourceStartDate',
             (a) => a?.sourceStartDate,
             (s) => s?.sourceStartDate,
             (p, b) => p?.sourceStartDate = b),
-        expirationCutoff = $options.field<DateTime>(
+        expirationCutoff = options$.field<DateTime>(
             'expirationCutoff',
             (a) => a?.expirationCutoff,
             (s) => s?.expirationCutoff,
             (p, b) => p?.expirationCutoff = b),
-        shippingService = ShippingServiceActions(() => $options.stateful<
+        shippingService = ShippingServiceActions(() => options$.stateful<
                 ShippingService,
                 ShippingServiceBuilder,
                 ShippingServiceActions>(
@@ -1151,34 +1151,34 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
             (b) => b?.shippingService,
             (parent, builder) => parent?.shippingService = builder)),
         opsOrgUnit = OrgUnitActions(() =>
-            $options.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
+            options$.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
                 'opsOrgUnit',
                 (a) => a.opsOrgUnit,
                 (s) => s?.opsOrgUnit,
                 (b) => b?.opsOrgUnit,
                 (parent, builder) => parent?.opsOrgUnit = builder)),
         salesOrgUnit = OrgUnitActions(() =>
-            $options.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
+            options$.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
                 'salesOrgUnit',
                 (a) => a.salesOrgUnit,
                 (s) => s?.salesOrgUnit,
                 (b) => b?.salesOrgUnit,
                 (parent, builder) => parent?.salesOrgUnit = builder)),
         loan = LoanLiteActions(() =>
-            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+            options$.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
                 'loan',
                 (a) => a.loan,
                 (s) => s?.loan,
                 (b) => b?.loan,
                 (parent, builder) => parent?.loan = builder)),
         rootLoan = LoanLiteActions(() =>
-            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+            options$.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
                 'rootLoan',
                 (a) => a.rootLoan,
                 (s) => s?.rootLoan,
                 (b) => b?.rootLoan,
                 (parent, builder) => parent?.rootLoan = builder)),
-        parentOrder = OrderHeaderLiteActions(() => $options.stateful<
+        parentOrder = OrderHeaderLiteActions(() => options$.stateful<
                 OrderHeaderLite,
                 OrderHeaderLiteBuilder,
                 OrderHeaderLiteActions>(
@@ -1187,7 +1187,7 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
             (s) => s?.parentOrder,
             (b) => b?.parentOrder,
             (parent, builder) => parent?.parentOrder = builder)),
-        restockForOrder = OrderHeaderLiteActions(() => $options.stateful<
+        restockForOrder = OrderHeaderLiteActions(() => options$.stateful<
                 OrderHeaderLite,
                 OrderHeaderLiteBuilder,
                 OrderHeaderLiteActions>(
@@ -1196,22 +1196,22 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
             (s) => s?.restockForOrder,
             (b) => b?.restockForOrder,
             (parent, builder) => parent?.restockForOrder = builder)),
-        childOrders = $options.field<BuiltList<OrderHeaderLite>>(
+        childOrders = options$.field<BuiltList<OrderHeaderLite>>(
             'childOrders',
             (a) => a?.childOrders,
             (s) => s?.childOrders,
             (p, b) => p?.childOrders = b),
-        restockOrders = $options.field<BuiltList<OrderHeaderLite>>(
+        restockOrders = options$.field<BuiltList<OrderHeaderLite>>(
             'restockOrders',
             (a) => a?.restockOrders,
             (s) => s?.restockOrders,
             (p, b) => p?.restockOrders = b),
-        caseEvents = $options.field<BuiltList<CaseEventLite>>(
+        caseEvents = options$.field<BuiltList<CaseEventLite>>(
             'caseEvents',
             (a) => a?.caseEvents,
             (s) => s?.caseEvents,
             (p, b) => p?.caseEvents = b),
-        shipToAddress = CustomerAddressActions(() => $options.stateful<
+        shipToAddress = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -1220,12 +1220,12 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
             (s) => s?.shipToAddress,
             (b) => b?.shipToAddress,
             (parent, builder) => parent?.shipToAddress = builder)),
-        deliverToAttn = $options.field<String>(
+        deliverToAttn = options$.field<String>(
             'deliverToAttn',
             (a) => a?.deliverToAttn,
             (s) => s?.deliverToAttn,
             (p, b) => p?.deliverToAttn = b),
-        deliverToAddress = CustomerAddressActions(() => $options.stateful<
+        deliverToAddress = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -1235,26 +1235,26 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
             (b) => b?.deliverToAddress,
             (parent, builder) => parent?.deliverToAddress = builder)),
         deliverToOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToOverride',
                 (a) => a.deliverToOverride,
                 (s) => s?.deliverToOverride,
                 (b) => b?.deliverToOverride,
                 (parent, builder) => parent?.deliverToOverride = builder)),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        erpReference = $options.field<String>(
+        erpReference = options$.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
         validationMsgs =
-            $options.field<BuiltList<GetStockOrderApiValidationMsg>>(
+            options$.field<BuiltList<GetStockOrderApiValidationMsg>>(
                 'validationMsgs',
                 (a) => a?.validationMsgs,
                 (s) => s?.validationMsgs,
                 (p, b) => p?.validationMsgs = b),
-        toInventoryType = InventoryTypeActions(() => $options.stateful<
+        toInventoryType = InventoryTypeActions(() => options$.stateful<
                 InventoryType, InventoryTypeBuilder, InventoryTypeActions>(
             'toInventoryType',
             (a) => a.toInventoryType,
@@ -1262,13 +1262,13 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
             (b) => b?.toInventoryType,
             (parent, builder) => parent?.toInventoryType = builder)),
         toHomeLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'toHomeLocation',
                 (a) => a.toHomeLocation,
                 (s) => s?.toHomeLocation,
                 (b) => b?.toHomeLocation,
                 (parent, builder) => parent?.toHomeLocation = builder)),
-        toResponsibleParty = ResponsiblePartyActions(() => $options.stateful<
+        toResponsibleParty = ResponsiblePartyActions(() => options$.stateful<
                 ResponsibleParty,
                 ResponsiblePartyBuilder,
                 ResponsiblePartyActions>(
@@ -1277,19 +1277,19 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
             (s) => s?.toResponsibleParty,
             (b) => b?.toResponsibleParty,
             (parent, builder) => parent?.toResponsibleParty = builder)),
-        kitTrayStockId = $options.field<String>(
+        kitTrayStockId = options$.field<String>(
             'kitTrayStockId',
             (a) => a?.kitTrayStockId,
             (s) => s?.kitTrayStockId,
             (p, b) => p?.kitTrayStockId = b),
         restockingKitTray = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'restockingKitTray',
                 (a) => a.restockingKitTray,
                 (s) => s?.restockingKitTray,
                 (b) => b?.restockingKitTray,
                 (parent, builder) => parent?.restockingKitTray = builder)),
-        lastWebServiceLogId = $options.field<String>(
+        lastWebServiceLogId = options$.field<String>(
             'lastWebServiceLogId',
             (a) => a?.lastWebServiceLogId,
             (s) => s?.lastWebServiceLogId,
@@ -1301,14 +1301,14 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
       _$GetStockOrderApiOrderActions._(options());
 
   @override
-  GetStockOrderApiOrder get $initial => GetStockOrderApiOrder();
+  GetStockOrderApiOrder get initialState$ => GetStockOrderApiOrder();
 
   @override
-  GetStockOrderApiOrderBuilder $newBuilder() => GetStockOrderApiOrderBuilder();
+  GetStockOrderApiOrderBuilder newBuilder$() => GetStockOrderApiOrderBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.orderReason,
         this.location,
         this.deliveryWindow,
@@ -1328,11 +1328,11 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
         this.restockingKitTray,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.createdDate,
         this.createdBy,
@@ -1355,69 +1355,65 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    createdDate.$reducer(reducer);
-    createdBy.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
-    email.$reducer(reducer);
-    attention.$reducer(reducer);
-    orderReason.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    location.$reducer(reducer);
-    deliveryWindow.$reducer(reducer);
-    sourceStartDate.$reducer(reducer);
-    expirationCutoff.$reducer(reducer);
-    shippingService.$reducer(reducer);
-    opsOrgUnit.$reducer(reducer);
-    salesOrgUnit.$reducer(reducer);
-    loan.$reducer(reducer);
-    rootLoan.$reducer(reducer);
-    parentOrder.$reducer(reducer);
-    restockForOrder.$reducer(reducer);
-    childOrders.$reducer(reducer);
-    restockOrders.$reducer(reducer);
-    caseEvents.$reducer(reducer);
-    shipToAddress.$reducer(reducer);
-    deliverToAttn.$reducer(reducer);
-    deliverToAddress.$reducer(reducer);
-    deliverToOverride.$reducer(reducer);
-    poNumber.$reducer(reducer);
-    erpReference.$reducer(reducer);
-    validationMsgs.$reducer(reducer);
-    toInventoryType.$reducer(reducer);
-    toHomeLocation.$reducer(reducer);
-    toResponsibleParty.$reducer(reducer);
-    kitTrayStockId.$reducer(reducer);
-    restockingKitTray.$reducer(reducer);
-    lastWebServiceLogId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    createdDate.reducer$(reducer);
+    createdBy.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
+    email.reducer$(reducer);
+    attention.reducer$(reducer);
+    orderReason.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    location.reducer$(reducer);
+    deliveryWindow.reducer$(reducer);
+    sourceStartDate.reducer$(reducer);
+    expirationCutoff.reducer$(reducer);
+    shippingService.reducer$(reducer);
+    opsOrgUnit.reducer$(reducer);
+    salesOrgUnit.reducer$(reducer);
+    loan.reducer$(reducer);
+    rootLoan.reducer$(reducer);
+    parentOrder.reducer$(reducer);
+    restockForOrder.reducer$(reducer);
+    childOrders.reducer$(reducer);
+    restockOrders.reducer$(reducer);
+    caseEvents.reducer$(reducer);
+    shipToAddress.reducer$(reducer);
+    deliverToAttn.reducer$(reducer);
+    deliverToAddress.reducer$(reducer);
+    deliverToOverride.reducer$(reducer);
+    poNumber.reducer$(reducer);
+    erpReference.reducer$(reducer);
+    validationMsgs.reducer$(reducer);
+    toInventoryType.reducer$(reducer);
+    toHomeLocation.reducer$(reducer);
+    toResponsibleParty.reducer$(reducer);
+    kitTrayStockId.reducer$(reducer);
+    restockingKitTray.reducer$(reducer);
+    lastWebServiceLogId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    orderReason.$middleware(middleware);
-    location.$middleware(middleware);
-    deliveryWindow.$middleware(middleware);
-    shippingService.$middleware(middleware);
-    opsOrgUnit.$middleware(middleware);
-    salesOrgUnit.$middleware(middleware);
-    loan.$middleware(middleware);
-    rootLoan.$middleware(middleware);
-    parentOrder.$middleware(middleware);
-    restockForOrder.$middleware(middleware);
-    shipToAddress.$middleware(middleware);
-    deliverToAddress.$middleware(middleware);
-    deliverToOverride.$middleware(middleware);
-    toInventoryType.$middleware(middleware);
-    toHomeLocation.$middleware(middleware);
-    toResponsibleParty.$middleware(middleware);
-    restockingKitTray.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    orderReason.middleware$(middleware);
+    location.middleware$(middleware);
+    deliveryWindow.middleware$(middleware);
+    shippingService.middleware$(middleware);
+    opsOrgUnit.middleware$(middleware);
+    salesOrgUnit.middleware$(middleware);
+    loan.middleware$(middleware);
+    rootLoan.middleware$(middleware);
+    parentOrder.middleware$(middleware);
+    restockForOrder.middleware$(middleware);
+    shipToAddress.middleware$(middleware);
+    deliverToAddress.middleware$(middleware);
+    deliverToOverride.middleware$(middleware);
+    toInventoryType.middleware$(middleware);
+    toHomeLocation.middleware$(middleware);
+    toResponsibleParty.middleware$(middleware);
+    restockingKitTray.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetStockOrderApiOrder);
 }

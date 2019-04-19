@@ -254,30 +254,30 @@ class _$CreateStocks2ApiStockResponseActions
   final StatefulActionsOptions<
       CreateStocks2ApiStockResponse,
       CreateStocks2ApiStockResponseBuilder,
-      CreateStocks2ApiStockResponseActions> $options;
+      CreateStocks2ApiStockResponseActions> options$;
 
-  final ActionDispatcher<CreateStocks2ApiStockResponse> $replace;
+  final ActionDispatcher<CreateStocks2ApiStockResponse> replace$;
   final FieldDispatcher<String> requestId;
   final FieldDispatcher<String> stockSummaryKey;
   final FieldDispatcher<BuiltList<String>> stockIdsCreated;
   final FieldDispatcher<BuiltList<String>> serialIdsCreated;
 
-  _$CreateStocks2ApiStockResponseActions._(this.$options)
-      : $replace = $options.action<CreateStocks2ApiStockResponse>(
-            '\$replace', (a) => a?.$replace),
-        requestId = $options.field<String>('requestId', (a) => a?.requestId,
+  _$CreateStocks2ApiStockResponseActions._(this.options$)
+      : replace$ = options$.action<CreateStocks2ApiStockResponse>(
+            'replace\$', (a) => a?.replace$),
+        requestId = options$.field<String>('requestId', (a) => a?.requestId,
             (s) => s?.requestId, (p, b) => p?.requestId = b),
-        stockSummaryKey = $options.field<String>(
+        stockSummaryKey = options$.field<String>(
             'stockSummaryKey',
             (a) => a?.stockSummaryKey,
             (s) => s?.stockSummaryKey,
             (p, b) => p?.stockSummaryKey = b),
-        stockIdsCreated = $options.field<BuiltList<String>>(
+        stockIdsCreated = options$.field<BuiltList<String>>(
             'stockIdsCreated',
             (a) => a?.stockIdsCreated,
             (s) => s?.stockIdsCreated,
             (p, b) => p?.stockIdsCreated = b),
-        serialIdsCreated = $options.field<BuiltList<String>>(
+        serialIdsCreated = options$.field<BuiltList<String>>(
             'serialIdsCreated',
             (a) => a?.serialIdsCreated,
             (s) => s?.serialIdsCreated,
@@ -289,17 +289,18 @@ class _$CreateStocks2ApiStockResponseActions
       _$CreateStocks2ApiStockResponseActions._(options());
 
   @override
-  CreateStocks2ApiStockResponse get $initial => CreateStocks2ApiStockResponse();
+  CreateStocks2ApiStockResponse get initialState$ =>
+      CreateStocks2ApiStockResponse();
 
   @override
-  CreateStocks2ApiStockResponseBuilder $newBuilder() =>
+  CreateStocks2ApiStockResponseBuilder newBuilder$() =>
       CreateStocks2ApiStockResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.requestId,
         this.stockSummaryKey,
         this.stockIdsCreated,
@@ -307,21 +308,16 @@ class _$CreateStocks2ApiStockResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    requestId.$reducer(reducer);
-    stockSummaryKey.$reducer(reducer);
-    stockIdsCreated.$reducer(reducer);
-    serialIdsCreated.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    requestId.reducer$(reducer);
+    stockSummaryKey.reducer$(reducer);
+    stockIdsCreated.reducer$(reducer);
+    serialIdsCreated.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateStocks2ApiStockResponse);
 }

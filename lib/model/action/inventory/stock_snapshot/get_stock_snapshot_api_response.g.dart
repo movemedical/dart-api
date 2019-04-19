@@ -174,15 +174,15 @@ class _$GetStockSnapshotApiResponseActions
   final StatefulActionsOptions<
       GetStockSnapshotApiResponse,
       GetStockSnapshotApiResponseBuilder,
-      GetStockSnapshotApiResponseActions> $options;
+      GetStockSnapshotApiResponseActions> options$;
 
-  final ActionDispatcher<GetStockSnapshotApiResponse> $replace;
+  final ActionDispatcher<GetStockSnapshotApiResponse> replace$;
   final GetStockSnapshotApiSnapshotActions snapshot;
 
-  _$GetStockSnapshotApiResponseActions._(this.$options)
-      : $replace = $options.action<GetStockSnapshotApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        snapshot = GetStockSnapshotApiSnapshotActions(() => $options.stateful<
+  _$GetStockSnapshotApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetStockSnapshotApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        snapshot = GetStockSnapshotApiSnapshotActions(() => options$.stateful<
                 GetStockSnapshotApiSnapshot,
                 GetStockSnapshotApiSnapshotBuilder,
                 GetStockSnapshotApiSnapshotActions>(
@@ -198,39 +198,35 @@ class _$GetStockSnapshotApiResponseActions
       _$GetStockSnapshotApiResponseActions._(options());
 
   @override
-  GetStockSnapshotApiResponse get $initial => GetStockSnapshotApiResponse();
+  GetStockSnapshotApiResponse get initialState$ =>
+      GetStockSnapshotApiResponse();
 
   @override
-  GetStockSnapshotApiResponseBuilder $newBuilder() =>
+  GetStockSnapshotApiResponseBuilder newBuilder$() =>
       GetStockSnapshotApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.snapshot,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    snapshot.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    snapshot.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    snapshot.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    snapshot.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetStockSnapshotApiResponse);
 }

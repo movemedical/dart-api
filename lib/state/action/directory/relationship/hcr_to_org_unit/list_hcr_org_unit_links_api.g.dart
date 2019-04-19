@@ -22,67 +22,32 @@ class _$ListHcrOrgUnitLinksApi extends ListHcrOrgUnitLinksApi {
           ApiResult<ListHcrOrgUnitLinksApiResponse>>,
       CommandStateBuilder<ApiCommand<ListHcrOrgUnitLinksApiRequest>,
           ApiResult<ListHcrOrgUnitLinksApiResponse>>,
-      ListHcrOrgUnitLinksApi> $options;
+      ListHcrOrgUnitLinksApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListHcrOrgUnitLinksApiRequest>,
-          ApiResult<ListHcrOrgUnitLinksApiResponse>>> $replace;
+          ApiResult<ListHcrOrgUnitLinksApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListHcrOrgUnitLinksApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrOrgUnitLinksApiRequest>,
-          ApiResult<ListHcrOrgUnitLinksApiResponse>,
-          ListHcrOrgUnitLinksApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrOrgUnitLinksApiRequest>,
-          ApiResult<ListHcrOrgUnitLinksApiResponse>,
-          ListHcrOrgUnitLinksApi,
-          Command<ApiCommand<ListHcrOrgUnitLinksApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrOrgUnitLinksApiRequest>,
-          ApiResult<ListHcrOrgUnitLinksApiResponse>,
-          ListHcrOrgUnitLinksApi,
-          CommandResult<ApiResult<ListHcrOrgUnitLinksApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrOrgUnitLinksApiRequest>,
-          ApiResult<ListHcrOrgUnitLinksApiResponse>,
-          ListHcrOrgUnitLinksApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListHcrOrgUnitLinksApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListHcrOrgUnitLinksApi._(this.$options)
-      : $replace = $options.action<
+  _$ListHcrOrgUnitLinksApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListHcrOrgUnitLinksApiRequest>,
                     ApiResult<ListHcrOrgUnitLinksApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListHcrOrgUnitLinksApiRequest>,
-                ApiResult<ListHcrOrgUnitLinksApiResponse>,
-                ListHcrOrgUnitLinksApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListHcrOrgUnitLinksApiRequest>,
-                    ApiResult<ListHcrOrgUnitLinksApiResponse>,
-                    ListHcrOrgUnitLinksApi,
-                    Command<ApiCommand<ListHcrOrgUnitLinksApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListHcrOrgUnitLinksApiRequest>,
-                    ApiResult<ListHcrOrgUnitLinksApiResponse>,
-                    ListHcrOrgUnitLinksApi,
-                    CommandResult<ApiResult<ListHcrOrgUnitLinksApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListHcrOrgUnitLinksApiRequest>,
-                ApiResult<ListHcrOrgUnitLinksApiResponse>,
-                ListHcrOrgUnitLinksApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListHcrOrgUnitLinksApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListHcrOrgUnitLinksApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListHcrOrgUnitLinksApi(ListHcrOrgUnitLinksApiOptions options) =>
@@ -91,32 +56,26 @@ class _$ListHcrOrgUnitLinksApi extends ListHcrOrgUnitLinksApi {
   @override
   CommandState<ApiCommand<ListHcrOrgUnitLinksApiRequest>,
           ApiResult<ListHcrOrgUnitLinksApiResponse>>
-      get $initial => CommandState<ApiCommand<ListHcrOrgUnitLinksApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<ListHcrOrgUnitLinksApiRequest>,
           ApiResult<ListHcrOrgUnitLinksApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListHcrOrgUnitLinksApiRequest>,
           ApiResult<ListHcrOrgUnitLinksApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListHcrOrgUnitLinksApiRequest>,
           ApiResult<ListHcrOrgUnitLinksApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListHcrOrgUnitLinksApiRequest)]),
-        FullType(ApiResult, [FullType(ListHcrOrgUnitLinksApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

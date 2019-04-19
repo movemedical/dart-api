@@ -181,15 +181,15 @@ class _$ListQuestionableTraySummaryApiRequestActions
   final StatefulActionsOptions<
       ListQuestionableTraySummaryApiRequest,
       ListQuestionableTraySummaryApiRequestBuilder,
-      ListQuestionableTraySummaryApiRequestActions> $options;
+      ListQuestionableTraySummaryApiRequestActions> options$;
 
-  final ActionDispatcher<ListQuestionableTraySummaryApiRequest> $replace;
+  final ActionDispatcher<ListQuestionableTraySummaryApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> trayIds;
 
-  _$ListQuestionableTraySummaryApiRequestActions._(this.$options)
-      : $replace = $options.action<ListQuestionableTraySummaryApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        trayIds = $options.field<BuiltList<String>>('trayIds',
+  _$ListQuestionableTraySummaryApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListQuestionableTraySummaryApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        trayIds = options$.field<BuiltList<String>>('trayIds',
             (a) => a?.trayIds, (s) => s?.trayIds, (p, b) => p?.trayIds = b),
         super._();
 
@@ -198,34 +198,29 @@ class _$ListQuestionableTraySummaryApiRequestActions
       _$ListQuestionableTraySummaryApiRequestActions._(options());
 
   @override
-  ListQuestionableTraySummaryApiRequest get $initial =>
+  ListQuestionableTraySummaryApiRequest get initialState$ =>
       ListQuestionableTraySummaryApiRequest();
 
   @override
-  ListQuestionableTraySummaryApiRequestBuilder $newBuilder() =>
+  ListQuestionableTraySummaryApiRequestBuilder newBuilder$() =>
       ListQuestionableTraySummaryApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.trayIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    trayIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    trayIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListQuestionableTraySummaryApiRequest);
 }

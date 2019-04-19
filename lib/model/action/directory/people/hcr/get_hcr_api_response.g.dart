@@ -157,15 +157,15 @@ typedef StatefulActionsOptions<GetHcrApiResponse, GetHcrApiResponseBuilder,
 
 class _$GetHcrApiResponseActions extends GetHcrApiResponseActions {
   final StatefulActionsOptions<GetHcrApiResponse, GetHcrApiResponseBuilder,
-      GetHcrApiResponseActions> $options;
+      GetHcrApiResponseActions> options$;
 
-  final ActionDispatcher<GetHcrApiResponse> $replace;
+  final ActionDispatcher<GetHcrApiResponse> replace$;
   final GetHcrApiHcrDetailActions detail;
 
-  _$GetHcrApiResponseActions._(this.$options)
-      : $replace =
-            $options.action<GetHcrApiResponse>('\$replace', (a) => a?.$replace),
-        detail = GetHcrApiHcrDetailActions(() => $options.stateful<
+  _$GetHcrApiResponseActions._(this.options$)
+      : replace$ =
+            options$.action<GetHcrApiResponse>('replace\$', (a) => a?.replace$),
+        detail = GetHcrApiHcrDetailActions(() => options$.stateful<
                 GetHcrApiHcrDetail,
                 GetHcrApiHcrDetailBuilder,
                 GetHcrApiHcrDetailActions>(
@@ -180,37 +180,33 @@ class _$GetHcrApiResponseActions extends GetHcrApiResponseActions {
       _$GetHcrApiResponseActions._(options());
 
   @override
-  GetHcrApiResponse get $initial => GetHcrApiResponse();
+  GetHcrApiResponse get initialState$ => GetHcrApiResponse();
 
   @override
-  GetHcrApiResponseBuilder $newBuilder() => GetHcrApiResponseBuilder();
+  GetHcrApiResponseBuilder newBuilder$() => GetHcrApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.detail,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    detail.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    detail.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    detail.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    detail.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetHcrApiResponse);
 }

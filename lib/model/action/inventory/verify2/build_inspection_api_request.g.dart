@@ -371,9 +371,9 @@ class _$BuildInspectionApiRequestActions
   final StatefulActionsOptions<
       BuildInspectionApiRequest,
       BuildInspectionApiRequestBuilder,
-      BuildInspectionApiRequestActions> $options;
+      BuildInspectionApiRequestActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiRequest> $replace;
+  final ActionDispatcher<BuildInspectionApiRequest> replace$;
   final FieldDispatcher<String> processKey;
   final FieldDispatcher<bool> cancelPreviousProcess;
   final LocationDataActions receivingAtLocation;
@@ -384,17 +384,17 @@ class _$BuildInspectionApiRequestActions
   final FieldDispatcher<BuiltList<BuildInspectionApiUpdateExpectedStock>>
       expectedStockUpdates;
 
-  _$BuildInspectionApiRequestActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        processKey = $options.field<String>('processKey', (a) => a?.processKey,
+  _$BuildInspectionApiRequestActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        processKey = options$.field<String>('processKey', (a) => a?.processKey,
             (s) => s?.processKey, (p, b) => p?.processKey = b),
-        cancelPreviousProcess = $options.field<bool>(
+        cancelPreviousProcess = options$.field<bool>(
             'cancelPreviousProcess',
             (a) => a?.cancelPreviousProcess,
             (s) => s?.cancelPreviousProcess,
             (p, b) => p?.cancelPreviousProcess = b),
-        receivingAtLocation = LocationDataActions(() => $options
+        receivingAtLocation = LocationDataActions(() => options$
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
                 'receivingAtLocation',
                 (a) => a.receivingAtLocation,
@@ -402,7 +402,7 @@ class _$BuildInspectionApiRequestActions
                 (b) => b?.receivingAtLocation,
                 (parent, builder) => parent?.receivingAtLocation = builder)),
         addReceipt = BuildInspectionApiAddReceiptActions(() =>
-            $options.stateful<
+            options$.stateful<
                     BuildInspectionApiAddReceipt,
                     BuildInspectionApiAddReceiptBuilder,
                     BuildInspectionApiAddReceiptActions>(
@@ -412,7 +412,7 @@ class _$BuildInspectionApiRequestActions
                 (b) => b?.addReceipt,
                 (parent, builder) => parent?.addReceipt = builder)),
         updateReceipt = BuildInspectionApiReceiptUpdateActions(() =>
-            $options.stateful<
+            options$.stateful<
                     BuildInspectionApiReceiptUpdate,
                     BuildInspectionApiReceiptUpdateBuilder,
                     BuildInspectionApiReceiptUpdateActions>(
@@ -421,18 +421,18 @@ class _$BuildInspectionApiRequestActions
                 (s) => s?.updateReceipt,
                 (b) => b?.updateReceipt,
                 (parent, builder) => parent?.updateReceipt = builder)),
-        entryAdditions = $options.field<BuiltList<BuildInspectionApiAddEntry>>(
+        entryAdditions = options$.field<BuiltList<BuildInspectionApiAddEntry>>(
             'entryAdditions',
             (a) => a?.entryAdditions,
             (s) => s?.entryAdditions,
             (p, b) => p?.entryAdditions = b),
-        entryUpdates = $options.field<BuiltList<BuildInspectionApiUpdateEntry>>(
+        entryUpdates = options$.field<BuiltList<BuildInspectionApiUpdateEntry>>(
             'entryUpdates',
             (a) => a?.entryUpdates,
             (s) => s?.entryUpdates,
             (p, b) => p?.entryUpdates = b),
         expectedStockUpdates =
-            $options.field<BuiltList<BuildInspectionApiUpdateExpectedStock>>(
+            options$.field<BuiltList<BuildInspectionApiUpdateExpectedStock>>(
                 'expectedStockUpdates',
                 (a) => a?.expectedStockUpdates,
                 (s) => s?.expectedStockUpdates,
@@ -444,25 +444,25 @@ class _$BuildInspectionApiRequestActions
       _$BuildInspectionApiRequestActions._(options());
 
   @override
-  BuildInspectionApiRequest get $initial => BuildInspectionApiRequest();
+  BuildInspectionApiRequest get initialState$ => BuildInspectionApiRequest();
 
   @override
-  BuildInspectionApiRequestBuilder $newBuilder() =>
+  BuildInspectionApiRequestBuilder newBuilder$() =>
       BuildInspectionApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.receivingAtLocation,
         this.addReceipt,
         this.updateReceipt,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.processKey,
         this.cancelPreviousProcess,
         this.entryAdditions,
@@ -471,27 +471,23 @@ class _$BuildInspectionApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    processKey.$reducer(reducer);
-    cancelPreviousProcess.$reducer(reducer);
-    receivingAtLocation.$reducer(reducer);
-    addReceipt.$reducer(reducer);
-    updateReceipt.$reducer(reducer);
-    entryAdditions.$reducer(reducer);
-    entryUpdates.$reducer(reducer);
-    expectedStockUpdates.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    processKey.reducer$(reducer);
+    cancelPreviousProcess.reducer$(reducer);
+    receivingAtLocation.reducer$(reducer);
+    addReceipt.reducer$(reducer);
+    updateReceipt.reducer$(reducer);
+    entryAdditions.reducer$(reducer);
+    entryUpdates.reducer$(reducer);
+    expectedStockUpdates.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    receivingAtLocation.$middleware(middleware);
-    addReceipt.$middleware(middleware);
-    updateReceipt.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    receivingAtLocation.middleware$(middleware);
+    addReceipt.middleware$(middleware);
+    updateReceipt.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(BuildInspectionApiRequest);
 }

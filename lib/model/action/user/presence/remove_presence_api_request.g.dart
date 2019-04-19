@@ -155,15 +155,15 @@ class _$RemovePresenceApiRequestActions
   final StatefulActionsOptions<
       RemovePresenceApiRequest,
       RemovePresenceApiRequestBuilder,
-      RemovePresenceApiRequestActions> $options;
+      RemovePresenceApiRequestActions> options$;
 
-  final ActionDispatcher<RemovePresenceApiRequest> $replace;
+  final ActionDispatcher<RemovePresenceApiRequest> replace$;
   final FieldDispatcher<String> objectId;
 
-  _$RemovePresenceApiRequestActions._(this.$options)
-      : $replace = $options.action<RemovePresenceApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        objectId = $options.field<String>('objectId', (a) => a?.objectId,
+  _$RemovePresenceApiRequestActions._(this.options$)
+      : replace$ = options$.action<RemovePresenceApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        objectId = options$.field<String>('objectId', (a) => a?.objectId,
             (s) => s?.objectId, (p, b) => p?.objectId = b),
         super._();
 
@@ -172,32 +172,28 @@ class _$RemovePresenceApiRequestActions
       _$RemovePresenceApiRequestActions._(options());
 
   @override
-  RemovePresenceApiRequest get $initial => RemovePresenceApiRequest();
+  RemovePresenceApiRequest get initialState$ => RemovePresenceApiRequest();
 
   @override
-  RemovePresenceApiRequestBuilder $newBuilder() =>
+  RemovePresenceApiRequestBuilder newBuilder$() =>
       RemovePresenceApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.objectId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    objectId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    objectId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(RemovePresenceApiRequest);
 }

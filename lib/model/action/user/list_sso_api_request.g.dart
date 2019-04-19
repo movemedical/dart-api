@@ -101,32 +101,28 @@ typedef StatefulActionsOptions<ListSSOApiRequest, ListSSOApiRequestBuilder,
 
 class _$ListSSOApiRequestActions extends ListSSOApiRequestActions {
   final StatefulActionsOptions<ListSSOApiRequest, ListSSOApiRequestBuilder,
-      ListSSOApiRequestActions> $options;
+      ListSSOApiRequestActions> options$;
 
-  final ActionDispatcher<ListSSOApiRequest> $replace;
+  final ActionDispatcher<ListSSOApiRequest> replace$;
 
-  _$ListSSOApiRequestActions._(this.$options)
-      : $replace =
-            $options.action<ListSSOApiRequest>('\$replace', (a) => a?.$replace),
+  _$ListSSOApiRequestActions._(this.options$)
+      : replace$ =
+            options$.action<ListSSOApiRequest>('replace\$', (a) => a?.replace$),
         super._();
 
   factory _$ListSSOApiRequestActions(ListSSOApiRequestActionsOptions options) =>
       _$ListSSOApiRequestActions._(options());
 
   @override
-  ListSSOApiRequest get $initial => ListSSOApiRequest();
+  ListSSOApiRequest get initialState$ => ListSSOApiRequest();
 
   @override
-  ListSSOApiRequestBuilder $newBuilder() => ListSSOApiRequestBuilder();
+  ListSSOApiRequestBuilder newBuilder$() => ListSSOApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListSSOApiRequest);
 }

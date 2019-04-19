@@ -627,9 +627,9 @@ typedef StatefulActionsOptions<
 
 class _$CreateItemApiRequestActions extends CreateItemApiRequestActions {
   final StatefulActionsOptions<CreateItemApiRequest,
-      CreateItemApiRequestBuilder, CreateItemApiRequestActions> $options;
+      CreateItemApiRequestBuilder, CreateItemApiRequestActions> options$;
 
-  final ActionDispatcher<CreateItemApiRequest> $replace;
+  final ActionDispatcher<CreateItemApiRequest> replace$;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> itemCategoryId;
   final FieldDispatcher<String> itemNumber;
@@ -651,84 +651,84 @@ class _$CreateItemApiRequestActions extends CreateItemApiRequestActions {
   final FieldDispatcher<bool> forceContainersOnDelivery;
   final FieldDispatcher<BuiltList<ItemSpec>> containers;
 
-  _$CreateItemApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateItemApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+  _$CreateItemApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateItemApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        itemCategoryId = $options.field<String>(
+        itemCategoryId = options$.field<String>(
             'itemCategoryId',
             (a) => a?.itemCategoryId,
             (s) => s?.itemCategoryId,
             (p, b) => p?.itemCategoryId = b),
-        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+        itemNumber = options$.field<String>('itemNumber', (a) => a?.itemNumber,
             (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
-        sizeSequence = $options.field<int>(
+        sizeSequence = options$.field<int>(
             'sizeSequence',
             (a) => a?.sizeSequence,
             (s) => s?.sizeSequence,
             (p, b) => p?.sizeSequence = b),
-        skuNumber = $options.field<String>('skuNumber', (a) => a?.skuNumber,
+        skuNumber = options$.field<String>('skuNumber', (a) => a?.skuNumber,
             (s) => s?.skuNumber, (p, b) => p?.skuNumber = b),
-        longDescription = $options.field<String>(
+        longDescription = options$.field<String>(
             'longDescription',
             (a) => a?.longDescription,
             (s) => s?.longDescription,
             (p, b) => p?.longDescription = b),
-        shortDescription = $options.field<String>(
+        shortDescription = options$.field<String>(
             'shortDescription',
             (a) => a?.shortDescription,
             (s) => s?.shortDescription,
             (p, b) => p?.shortDescription = b),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        moveItemType = $options.field<MoveItemType>(
+        moveItemType = options$.field<MoveItemType>(
             'moveItemType',
             (a) => a?.moveItemType,
             (s) => s?.moveItemType,
             (p, b) => p?.moveItemType = b),
-        unitOfMeasureId = $options.field<String>(
+        unitOfMeasureId = options$.field<String>(
             'unitOfMeasureId',
             (a) => a?.unitOfMeasureId,
             (s) => s?.unitOfMeasureId,
             (p, b) => p?.unitOfMeasureId = b),
-        linkedToItemId = $options.field<String>(
+        linkedToItemId = options$.field<String>(
             'linkedToItemId',
             (a) => a?.linkedToItemId,
             (s) => s?.linkedToItemId,
             (p, b) => p?.linkedToItemId = b),
-        auditCode = $options.field<AuditCode>('auditCode', (a) => a?.auditCode,
+        auditCode = options$.field<AuditCode>('auditCode', (a) => a?.auditCode,
             (s) => s?.auditCode, (p, b) => p?.auditCode = b),
-        lotTracked = $options.field<bool>('lotTracked', (a) => a?.lotTracked,
+        lotTracked = options$.field<bool>('lotTracked', (a) => a?.lotTracked,
             (s) => s?.lotTracked, (p, b) => p?.lotTracked = b),
-        serialTracked = $options.field<bool>(
+        serialTracked = options$.field<bool>(
             'serialTracked',
             (a) => a?.serialTracked,
             (s) => s?.serialTracked,
             (p, b) => p?.serialTracked = b),
-        shippable = $options.field<bool>('shippable', (a) => a?.shippable,
+        shippable = options$.field<bool>('shippable', (a) => a?.shippable,
             (s) => s?.shippable, (p, b) => p?.shippable = b),
-        startManufactureDate = $options.field<DateTime>(
+        startManufactureDate = options$.field<DateTime>(
             'startManufactureDate',
             (a) => a?.startManufactureDate,
             (s) => s?.startManufactureDate,
             (p, b) => p?.startManufactureDate = b),
-        endManufactureDate = $options.field<DateTime>(
+        endManufactureDate = options$.field<DateTime>(
             'endManufactureDate',
             (a) => a?.endManufactureDate,
             (s) => s?.endManufactureDate,
             (p, b) => p?.endManufactureDate = b),
-        layerCount = $options.field<int>('layerCount', (a) => a?.layerCount,
+        layerCount = options$.field<int>('layerCount', (a) => a?.layerCount,
             (s) => s?.layerCount, (p, b) => p?.layerCount = b),
-        forceContainersOnDelivery = $options.field<bool>(
+        forceContainersOnDelivery = options$.field<bool>(
             'forceContainersOnDelivery',
             (a) => a?.forceContainersOnDelivery,
             (s) => s?.forceContainersOnDelivery,
             (p, b) => p?.forceContainersOnDelivery = b),
-        containers = $options.field<BuiltList<ItemSpec>>(
+        containers = options$.field<BuiltList<ItemSpec>>(
             'containers',
             (a) => a?.containers,
             (s) => s?.containers,
@@ -740,16 +740,16 @@ class _$CreateItemApiRequestActions extends CreateItemApiRequestActions {
       _$CreateItemApiRequestActions._(options());
 
   @override
-  CreateItemApiRequest get $initial => CreateItemApiRequest();
+  CreateItemApiRequest get initialState$ => CreateItemApiRequest();
 
   @override
-  CreateItemApiRequestBuilder $newBuilder() => CreateItemApiRequestBuilder();
+  CreateItemApiRequestBuilder newBuilder$() => CreateItemApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.bizUnitId,
         this.itemCategoryId,
         this.itemNumber,
@@ -773,36 +773,32 @@ class _$CreateItemApiRequestActions extends CreateItemApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    itemCategoryId.$reducer(reducer);
-    itemNumber.$reducer(reducer);
-    sizeSequence.$reducer(reducer);
-    skuNumber.$reducer(reducer);
-    longDescription.$reducer(reducer);
-    shortDescription.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    moveItemType.$reducer(reducer);
-    unitOfMeasureId.$reducer(reducer);
-    linkedToItemId.$reducer(reducer);
-    auditCode.$reducer(reducer);
-    lotTracked.$reducer(reducer);
-    serialTracked.$reducer(reducer);
-    shippable.$reducer(reducer);
-    startManufactureDate.$reducer(reducer);
-    endManufactureDate.$reducer(reducer);
-    layerCount.$reducer(reducer);
-    forceContainersOnDelivery.$reducer(reducer);
-    containers.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    itemCategoryId.reducer$(reducer);
+    itemNumber.reducer$(reducer);
+    sizeSequence.reducer$(reducer);
+    skuNumber.reducer$(reducer);
+    longDescription.reducer$(reducer);
+    shortDescription.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    moveItemType.reducer$(reducer);
+    unitOfMeasureId.reducer$(reducer);
+    linkedToItemId.reducer$(reducer);
+    auditCode.reducer$(reducer);
+    lotTracked.reducer$(reducer);
+    serialTracked.reducer$(reducer);
+    shippable.reducer$(reducer);
+    startManufactureDate.reducer$(reducer);
+    endManufactureDate.reducer$(reducer);
+    layerCount.reducer$(reducer);
+    forceContainersOnDelivery.reducer$(reducer);
+    containers.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateItemApiRequest);
 }

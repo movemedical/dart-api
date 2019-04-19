@@ -22,63 +22,29 @@ class _$RequestPendingPoReportApi extends RequestPendingPoReportApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestPendingPoReportApiRequest>,
           ApiResult<Nothing>>,
-      RequestPendingPoReportApi> $options;
+      RequestPendingPoReportApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Nothing>, RequestPendingPoReportApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestPendingPoReportApi,
-          Command<ApiCommand<RequestPendingPoReportApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestPendingPoReportApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestPendingPoReportApi,
-          CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<RequestPendingPoReportApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RequestPendingPoReportApi._(this.$options)
-      : $replace = $options.action<
+  _$RequestPendingPoReportApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<RequestPendingPoReportApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RequestPendingPoReportApiRequest>,
-                ApiResult<Nothing>,
-                RequestPendingPoReportApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestPendingPoReportApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestPendingPoReportApi,
-                    Command<ApiCommand<RequestPendingPoReportApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestPendingPoReportApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestPendingPoReportApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RequestPendingPoReportApiRequest>,
-                ApiResult<Nothing>,
-                RequestPendingPoReportApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<RequestPendingPoReportApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RequestPendingPoReportApi(
@@ -87,31 +53,24 @@ class _$RequestPendingPoReportApi extends RequestPendingPoReportApi {
 
   @override
   CommandState<ApiCommand<RequestPendingPoReportApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Nothing>>();
+      get initialState$ => CommandState<
+          ApiCommand<RequestPendingPoReportApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestPendingPoReportApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RequestPendingPoReportApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RequestPendingPoReportApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

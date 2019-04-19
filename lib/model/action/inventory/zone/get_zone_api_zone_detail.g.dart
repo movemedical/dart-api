@@ -351,9 +351,9 @@ typedef StatefulActionsOptions<
 
 class _$GetZoneApiZoneDetailActions extends GetZoneApiZoneDetailActions {
   final StatefulActionsOptions<GetZoneApiZoneDetail,
-      GetZoneApiZoneDetailBuilder, GetZoneApiZoneDetailActions> $options;
+      GetZoneApiZoneDetailBuilder, GetZoneApiZoneDetailActions> options$;
 
-  final ActionDispatcher<GetZoneApiZoneDetail> $replace;
+  final ActionDispatcher<GetZoneApiZoneDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> facilityName;
@@ -364,32 +364,32 @@ class _$GetZoneApiZoneDetailActions extends GetZoneApiZoneDetailActions {
   final FieldDispatcher<bool> sourceable;
   final GetZoneApiDisplayRuleActions editAllowed;
 
-  _$GetZoneApiZoneDetailActions._(this.$options)
-      : $replace = $options.action<GetZoneApiZoneDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetZoneApiZoneDetailActions._(this.options$)
+      : replace$ = options$.action<GetZoneApiZoneDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        facilityName = $options.field<String>(
+        facilityName = options$.field<String>(
             'facilityName',
             (a) => a?.facilityName,
             (s) => s?.facilityName,
             (p, b) => p?.facilityName = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        zoneDescription = $options.field<String>(
+        zoneDescription = options$.field<String>(
             'zoneDescription',
             (a) => a?.zoneDescription,
             (s) => s?.zoneDescription,
             (p, b) => p?.zoneDescription = b),
-        isActive = $options.field<bool>('isActive', (a) => a?.isActive,
+        isActive = options$.field<bool>('isActive', (a) => a?.isActive,
             (s) => s?.isActive, (p, b) => p?.isActive = b),
-        type = $options.field<ZoneType>(
+        type = options$.field<ZoneType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        sourceable = $options.field<bool>('sourceable', (a) => a?.sourceable,
+        sourceable = options$.field<bool>('sourceable', (a) => a?.sourceable,
             (s) => s?.sourceable, (p, b) => p?.sourceable = b),
-        editAllowed = GetZoneApiDisplayRuleActions(() => $options.stateful<
+        editAllowed = GetZoneApiDisplayRuleActions(() => options$.stateful<
                 GetZoneApiDisplayRule,
                 GetZoneApiDisplayRuleBuilder,
                 GetZoneApiDisplayRuleActions>(
@@ -405,22 +405,22 @@ class _$GetZoneApiZoneDetailActions extends GetZoneApiZoneDetailActions {
       _$GetZoneApiZoneDetailActions._(options());
 
   @override
-  GetZoneApiZoneDetail get $initial => GetZoneApiZoneDetail();
+  GetZoneApiZoneDetail get initialState$ => GetZoneApiZoneDetail();
 
   @override
-  GetZoneApiZoneDetailBuilder $newBuilder() => GetZoneApiZoneDetailBuilder();
+  GetZoneApiZoneDetailBuilder newBuilder$() => GetZoneApiZoneDetailBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.editAllowed,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.facilityId,
         this.facilityName,
@@ -432,26 +432,22 @@ class _$GetZoneApiZoneDetailActions extends GetZoneApiZoneDetailActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    facilityName.$reducer(reducer);
-    name.$reducer(reducer);
-    zoneDescription.$reducer(reducer);
-    isActive.$reducer(reducer);
-    type.$reducer(reducer);
-    sourceable.$reducer(reducer);
-    editAllowed.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    facilityName.reducer$(reducer);
+    name.reducer$(reducer);
+    zoneDescription.reducer$(reducer);
+    isActive.reducer$(reducer);
+    type.reducer$(reducer);
+    sourceable.reducer$(reducer);
+    editAllowed.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    editAllowed.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    editAllowed.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetZoneApiZoneDetail);
 }

@@ -231,29 +231,29 @@ class _$ListFacilityPhysicianOptionsApiPhysicianOptionActions
   final StatefulActionsOptions<
       ListFacilityPhysicianOptionsApiPhysicianOption,
       ListFacilityPhysicianOptionsApiPhysicianOptionBuilder,
-      ListFacilityPhysicianOptionsApiPhysicianOptionActions> $options;
+      ListFacilityPhysicianOptionsApiPhysicianOptionActions> options$;
 
   final ActionDispatcher<ListFacilityPhysicianOptionsApiPhysicianOption>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<PhysicianType> physicianType;
   final FieldDispatcher<String> npi;
 
-  _$ListFacilityPhysicianOptionsApiPhysicianOptionActions._(this.$options)
-      : $replace =
-            $options.action<ListFacilityPhysicianOptionsApiPhysicianOption>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListFacilityPhysicianOptionsApiPhysicianOptionActions._(this.options$)
+      : replace$ =
+            options$.action<ListFacilityPhysicianOptionsApiPhysicianOption>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        physicianType = $options.field<PhysicianType>(
+        physicianType = options$.field<PhysicianType>(
             'physicianType',
             (a) => a?.physicianType,
             (s) => s?.physicianType,
             (p, b) => p?.physicianType = b),
-        npi = $options.field<String>(
+        npi = options$.field<String>(
             'npi', (a) => a?.npi, (s) => s?.npi, (p, b) => p?.npi = b),
         super._();
 
@@ -263,18 +263,18 @@ class _$ListFacilityPhysicianOptionsApiPhysicianOptionActions
       _$ListFacilityPhysicianOptionsApiPhysicianOptionActions._(options());
 
   @override
-  ListFacilityPhysicianOptionsApiPhysicianOption get $initial =>
+  ListFacilityPhysicianOptionsApiPhysicianOption get initialState$ =>
       ListFacilityPhysicianOptionsApiPhysicianOption();
 
   @override
-  ListFacilityPhysicianOptionsApiPhysicianOptionBuilder $newBuilder() =>
+  ListFacilityPhysicianOptionsApiPhysicianOptionBuilder newBuilder$() =>
       ListFacilityPhysicianOptionsApiPhysicianOptionBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.physicianType,
@@ -282,21 +282,16 @@ class _$ListFacilityPhysicianOptionsApiPhysicianOptionActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    physicianType.$reducer(reducer);
-    npi.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    physicianType.reducer$(reducer);
+    npi.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListFacilityPhysicianOptionsApiPhysicianOption);
 }

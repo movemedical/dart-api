@@ -180,16 +180,16 @@ class _$GetWebServiceLogApiResponseActions
   final StatefulActionsOptions<
       GetWebServiceLogApiResponse,
       GetWebServiceLogApiResponseBuilder,
-      GetWebServiceLogApiResponseActions> $options;
+      GetWebServiceLogApiResponseActions> options$;
 
-  final ActionDispatcher<GetWebServiceLogApiResponse> $replace;
+  final ActionDispatcher<GetWebServiceLogApiResponse> replace$;
   final GetWebServiceLogApiWebServiceLogDetailActions webServiceLogDetail;
 
-  _$GetWebServiceLogApiResponseActions._(this.$options)
-      : $replace = $options.action<GetWebServiceLogApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$GetWebServiceLogApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetWebServiceLogApiResponse>(
+            'replace\$', (a) => a?.replace$),
         webServiceLogDetail = GetWebServiceLogApiWebServiceLogDetailActions(
-            () => $options.stateful<
+            () => options$.stateful<
                     GetWebServiceLogApiWebServiceLogDetail,
                     GetWebServiceLogApiWebServiceLogDetailBuilder,
                     GetWebServiceLogApiWebServiceLogDetailActions>(
@@ -205,39 +205,35 @@ class _$GetWebServiceLogApiResponseActions
       _$GetWebServiceLogApiResponseActions._(options());
 
   @override
-  GetWebServiceLogApiResponse get $initial => GetWebServiceLogApiResponse();
+  GetWebServiceLogApiResponse get initialState$ =>
+      GetWebServiceLogApiResponse();
 
   @override
-  GetWebServiceLogApiResponseBuilder $newBuilder() =>
+  GetWebServiceLogApiResponseBuilder newBuilder$() =>
       GetWebServiceLogApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.webServiceLogDetail,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    webServiceLogDetail.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    webServiceLogDetail.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    webServiceLogDetail.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    webServiceLogDetail.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetWebServiceLogApiResponse);
 }

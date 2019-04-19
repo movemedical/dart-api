@@ -149,15 +149,15 @@ typedef StatefulActionsOptions<
 
 class _$MoveStock2ApiResponseActions extends MoveStock2ApiResponseActions {
   final StatefulActionsOptions<MoveStock2ApiResponse,
-      MoveStock2ApiResponseBuilder, MoveStock2ApiResponseActions> $options;
+      MoveStock2ApiResponseBuilder, MoveStock2ApiResponseActions> options$;
 
-  final ActionDispatcher<MoveStock2ApiResponse> $replace;
+  final ActionDispatcher<MoveStock2ApiResponse> replace$;
   final FieldDispatcher<String> orderId;
 
-  _$MoveStock2ApiResponseActions._(this.$options)
-      : $replace = $options.action<MoveStock2ApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$MoveStock2ApiResponseActions._(this.options$)
+      : replace$ = options$.action<MoveStock2ApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         super._();
 
@@ -166,31 +166,27 @@ class _$MoveStock2ApiResponseActions extends MoveStock2ApiResponseActions {
       _$MoveStock2ApiResponseActions._(options());
 
   @override
-  MoveStock2ApiResponse get $initial => MoveStock2ApiResponse();
+  MoveStock2ApiResponse get initialState$ => MoveStock2ApiResponse();
 
   @override
-  MoveStock2ApiResponseBuilder $newBuilder() => MoveStock2ApiResponseBuilder();
+  MoveStock2ApiResponseBuilder newBuilder$() => MoveStock2ApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(MoveStock2ApiResponse);
 }

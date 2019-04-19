@@ -204,21 +204,21 @@ class _$BuildInspectionApiEntryReceiptOverrideActions
   final StatefulActionsOptions<
       BuildInspectionApiEntryReceiptOverride,
       BuildInspectionApiEntryReceiptOverrideBuilder,
-      BuildInspectionApiEntryReceiptOverrideActions> $options;
+      BuildInspectionApiEntryReceiptOverrideActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiEntryReceiptOverride> $replace;
+  final ActionDispatcher<BuildInspectionApiEntryReceiptOverride> replace$;
   final FieldDispatcher<String> entryId;
   final FieldDispatcher<String> receiptId;
   final FieldDispatcher<String> containerId;
 
-  _$BuildInspectionApiEntryReceiptOverrideActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiEntryReceiptOverride>(
-            '\$replace', (a) => a?.$replace),
-        entryId = $options.field<String>('entryId', (a) => a?.entryId,
+  _$BuildInspectionApiEntryReceiptOverrideActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiEntryReceiptOverride>(
+            'replace\$', (a) => a?.replace$),
+        entryId = options$.field<String>('entryId', (a) => a?.entryId,
             (s) => s?.entryId, (p, b) => p?.entryId = b),
-        receiptId = $options.field<String>('receiptId', (a) => a?.receiptId,
+        receiptId = options$.field<String>('receiptId', (a) => a?.receiptId,
             (s) => s?.receiptId, (p, b) => p?.receiptId = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
@@ -230,38 +230,33 @@ class _$BuildInspectionApiEntryReceiptOverrideActions
       _$BuildInspectionApiEntryReceiptOverrideActions._(options());
 
   @override
-  BuildInspectionApiEntryReceiptOverride get $initial =>
+  BuildInspectionApiEntryReceiptOverride get initialState$ =>
       BuildInspectionApiEntryReceiptOverride();
 
   @override
-  BuildInspectionApiEntryReceiptOverrideBuilder $newBuilder() =>
+  BuildInspectionApiEntryReceiptOverrideBuilder newBuilder$() =>
       BuildInspectionApiEntryReceiptOverrideBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.entryId,
         this.receiptId,
         this.containerId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    entryId.$reducer(reducer);
-    receiptId.$reducer(reducer);
-    containerId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    entryId.reducer$(reducer);
+    receiptId.reducer$(reducer);
+    containerId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiEntryReceiptOverride);
 }

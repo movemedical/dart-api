@@ -316,9 +316,9 @@ typedef StatefulActionsOptions<
 
 class _$AddHcrMatrixApiRequestActions extends AddHcrMatrixApiRequestActions {
   final StatefulActionsOptions<AddHcrMatrixApiRequest,
-      AddHcrMatrixApiRequestBuilder, AddHcrMatrixApiRequestActions> $options;
+      AddHcrMatrixApiRequestBuilder, AddHcrMatrixApiRequestActions> options$;
 
-  final ActionDispatcher<AddHcrMatrixApiRequest> $replace;
+  final ActionDispatcher<AddHcrMatrixApiRequest> replace$;
   final FieldDispatcher<String> hcrId;
   final FieldDispatcher<String> teamId;
   final FieldDispatcher<String> facilityId;
@@ -328,36 +328,36 @@ class _$AddHcrMatrixApiRequestActions extends AddHcrMatrixApiRequestActions {
   final FieldDispatcher<String> procedureId;
   final FieldDispatcher<bool> allProcedures;
 
-  _$AddHcrMatrixApiRequestActions._(this.$options)
-      : $replace = $options.action<AddHcrMatrixApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        hcrId = $options.field<String>(
+  _$AddHcrMatrixApiRequestActions._(this.options$)
+      : replace$ = options$.action<AddHcrMatrixApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        hcrId = options$.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        allFacilities = $options.field<bool>(
+        allFacilities = options$.field<bool>(
             'allFacilities',
             (a) => a?.allFacilities,
             (s) => s?.allFacilities,
             (p, b) => p?.allFacilities = b),
-        physicianId = $options.field<String>(
+        physicianId = options$.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        allPhysicians = $options.field<bool>(
+        allPhysicians = options$.field<bool>(
             'allPhysicians',
             (a) => a?.allPhysicians,
             (s) => s?.allPhysicians,
             (p, b) => p?.allPhysicians = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        allProcedures = $options.field<bool>(
+        allProcedures = options$.field<bool>(
             'allProcedures',
             (a) => a?.allProcedures,
             (s) => s?.allProcedures,
@@ -369,17 +369,17 @@ class _$AddHcrMatrixApiRequestActions extends AddHcrMatrixApiRequestActions {
       _$AddHcrMatrixApiRequestActions._(options());
 
   @override
-  AddHcrMatrixApiRequest get $initial => AddHcrMatrixApiRequest();
+  AddHcrMatrixApiRequest get initialState$ => AddHcrMatrixApiRequest();
 
   @override
-  AddHcrMatrixApiRequestBuilder $newBuilder() =>
+  AddHcrMatrixApiRequestBuilder newBuilder$() =>
       AddHcrMatrixApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.hcrId,
         this.teamId,
         this.facilityId,
@@ -391,24 +391,20 @@ class _$AddHcrMatrixApiRequestActions extends AddHcrMatrixApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    hcrId.$reducer(reducer);
-    teamId.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    allFacilities.$reducer(reducer);
-    physicianId.$reducer(reducer);
-    allPhysicians.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    allProcedures.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    hcrId.reducer$(reducer);
+    teamId.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    allFacilities.reducer$(reducer);
+    physicianId.reducer$(reducer);
+    allPhysicians.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    allProcedures.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(AddHcrMatrixApiRequest);
 }

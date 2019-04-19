@@ -205,23 +205,23 @@ class _$UpdateImportLogErrorApiRequestActions
   final StatefulActionsOptions<
       UpdateImportLogErrorApiRequest,
       UpdateImportLogErrorApiRequestBuilder,
-      UpdateImportLogErrorApiRequestActions> $options;
+      UpdateImportLogErrorApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateImportLogErrorApiRequest> $replace;
+  final ActionDispatcher<UpdateImportLogErrorApiRequest> replace$;
   final FieldDispatcher<String> integrationIssueId;
   final FieldDispatcher<BuiltList<UpdateImportLogErrorApiImportLogError>>
       importLogErrors;
 
-  _$UpdateImportLogErrorApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateImportLogErrorApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        integrationIssueId = $options.field<String>(
+  _$UpdateImportLogErrorApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateImportLogErrorApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        integrationIssueId = options$.field<String>(
             'integrationIssueId',
             (a) => a?.integrationIssueId,
             (s) => s?.integrationIssueId,
             (p, b) => p?.integrationIssueId = b),
         importLogErrors =
-            $options.field<BuiltList<UpdateImportLogErrorApiImportLogError>>(
+            options$.field<BuiltList<UpdateImportLogErrorApiImportLogError>>(
                 'importLogErrors',
                 (a) => a?.importLogErrors,
                 (s) => s?.importLogErrors,
@@ -233,36 +233,31 @@ class _$UpdateImportLogErrorApiRequestActions
       _$UpdateImportLogErrorApiRequestActions._(options());
 
   @override
-  UpdateImportLogErrorApiRequest get $initial =>
+  UpdateImportLogErrorApiRequest get initialState$ =>
       UpdateImportLogErrorApiRequest();
 
   @override
-  UpdateImportLogErrorApiRequestBuilder $newBuilder() =>
+  UpdateImportLogErrorApiRequestBuilder newBuilder$() =>
       UpdateImportLogErrorApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.integrationIssueId,
         this.importLogErrors,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    integrationIssueId.$reducer(reducer);
-    importLogErrors.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    integrationIssueId.reducer$(reducer);
+    importLogErrors.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateImportLogErrorApiRequest);
 }

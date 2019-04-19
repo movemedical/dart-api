@@ -430,9 +430,9 @@ class _$ListChildOrderLinesApiOrderLineActions
   final StatefulActionsOptions<
       ListChildOrderLinesApiOrderLine,
       ListChildOrderLinesApiOrderLineBuilder,
-      ListChildOrderLinesApiOrderLineActions> $options;
+      ListChildOrderLinesApiOrderLineActions> options$;
 
-  final ActionDispatcher<ListChildOrderLinesApiOrderLine> $replace;
+  final ActionDispatcher<ListChildOrderLinesApiOrderLine> replace$;
   final FieldDispatcher<String> id;
   final StockItemActions stockItem;
   final FieldDispatcher<int> qtyRequested;
@@ -446,52 +446,52 @@ class _$ListChildOrderLinesApiOrderLineActions
   final FieldDispatcher<int> qtyUnexpected;
   final FieldDispatcher<int> qtyReallocated;
 
-  _$ListChildOrderLinesApiOrderLineActions._(this.$options)
-      : $replace = $options.action<ListChildOrderLinesApiOrderLine>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListChildOrderLinesApiOrderLineActions._(this.options$)
+      : replace$ = options$.action<ListChildOrderLinesApiOrderLine>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         stockItem = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
                 (a) => a.stockItem,
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
-        qtyRequested = $options.field<int>(
+        qtyRequested = options$.field<int>(
             'qtyRequested',
             (a) => a?.qtyRequested,
             (s) => s?.qtyRequested,
             (p, b) => p?.qtyRequested = b),
-        qtyOpen = $options.field<int>('qtyOpen', (a) => a?.qtyOpen,
+        qtyOpen = options$.field<int>('qtyOpen', (a) => a?.qtyOpen,
             (s) => s?.qtyOpen, (p, b) => p?.qtyOpen = b),
-        qtyAllocated = $options.field<int>(
+        qtyAllocated = options$.field<int>(
             'qtyAllocated',
             (a) => a?.qtyAllocated,
             (s) => s?.qtyAllocated,
             (p, b) => p?.qtyAllocated = b),
-        qtyPicked = $options.field<int>('qtyPicked', (a) => a?.qtyPicked,
+        qtyPicked = options$.field<int>('qtyPicked', (a) => a?.qtyPicked,
             (s) => s?.qtyPicked, (p, b) => p?.qtyPicked = b),
-        qtyShipped = $options.field<int>('qtyShipped', (a) => a?.qtyShipped,
+        qtyShipped = options$.field<int>('qtyShipped', (a) => a?.qtyShipped,
             (s) => s?.qtyShipped, (p, b) => p?.qtyShipped = b),
-        qtyDelivered = $options.field<int>(
+        qtyDelivered = options$.field<int>(
             'qtyDelivered',
             (a) => a?.qtyDelivered,
             (s) => s?.qtyDelivered,
             (p, b) => p?.qtyDelivered = b),
-        qtyConfirmed = $options.field<int>(
+        qtyConfirmed = options$.field<int>(
             'qtyConfirmed',
             (a) => a?.qtyConfirmed,
             (s) => s?.qtyConfirmed,
             (p, b) => p?.qtyConfirmed = b),
-        qtyMissing = $options.field<int>('qtyMissing', (a) => a?.qtyMissing,
+        qtyMissing = options$.field<int>('qtyMissing', (a) => a?.qtyMissing,
             (s) => s?.qtyMissing, (p, b) => p?.qtyMissing = b),
-        qtyUnexpected = $options.field<int>(
+        qtyUnexpected = options$.field<int>(
             'qtyUnexpected',
             (a) => a?.qtyUnexpected,
             (s) => s?.qtyUnexpected,
             (p, b) => p?.qtyUnexpected = b),
-        qtyReallocated = $options.field<int>(
+        qtyReallocated = options$.field<int>(
             'qtyReallocated',
             (a) => a?.qtyReallocated,
             (s) => s?.qtyReallocated,
@@ -503,24 +503,24 @@ class _$ListChildOrderLinesApiOrderLineActions
       _$ListChildOrderLinesApiOrderLineActions._(options());
 
   @override
-  ListChildOrderLinesApiOrderLine get $initial =>
+  ListChildOrderLinesApiOrderLine get initialState$ =>
       ListChildOrderLinesApiOrderLine();
 
   @override
-  ListChildOrderLinesApiOrderLineBuilder $newBuilder() =>
+  ListChildOrderLinesApiOrderLineBuilder newBuilder$() =>
       ListChildOrderLinesApiOrderLineBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.qtyRequested,
         this.qtyOpen,
@@ -535,30 +535,25 @@ class _$ListChildOrderLinesApiOrderLineActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    stockItem.$reducer(reducer);
-    qtyRequested.$reducer(reducer);
-    qtyOpen.$reducer(reducer);
-    qtyAllocated.$reducer(reducer);
-    qtyPicked.$reducer(reducer);
-    qtyShipped.$reducer(reducer);
-    qtyDelivered.$reducer(reducer);
-    qtyConfirmed.$reducer(reducer);
-    qtyMissing.$reducer(reducer);
-    qtyUnexpected.$reducer(reducer);
-    qtyReallocated.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    stockItem.reducer$(reducer);
+    qtyRequested.reducer$(reducer);
+    qtyOpen.reducer$(reducer);
+    qtyAllocated.reducer$(reducer);
+    qtyPicked.reducer$(reducer);
+    qtyShipped.reducer$(reducer);
+    qtyDelivered.reducer$(reducer);
+    qtyConfirmed.reducer$(reducer);
+    qtyMissing.reducer$(reducer);
+    qtyUnexpected.reducer$(reducer);
+    qtyReallocated.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    stockItem.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    stockItem.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListChildOrderLinesApiOrderLine);
 }

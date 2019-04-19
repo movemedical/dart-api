@@ -364,10 +364,10 @@ class _$ListProcedureToItemCategoryApiProcedureToItemCategoryActions
   final StatefulActionsOptions<
       ListProcedureToItemCategoryApiProcedureToItemCategory,
       ListProcedureToItemCategoryApiProcedureToItemCategoryBuilder,
-      ListProcedureToItemCategoryApiProcedureToItemCategoryActions> $options;
+      ListProcedureToItemCategoryApiProcedureToItemCategoryActions> options$;
 
   final ActionDispatcher<ListProcedureToItemCategoryApiProcedureToItemCategory>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> itemCategoryId;
   final FieldDispatcher<String> itemCategoryName;
@@ -379,45 +379,45 @@ class _$ListProcedureToItemCategoryApiProcedureToItemCategoryActions
   final FieldDispatcher<String> reference2;
 
   _$ListProcedureToItemCategoryApiProcedureToItemCategoryActions._(
-      this.$options)
-      : $replace = $options
+      this.options$)
+      : replace$ = options$
             .action<ListProcedureToItemCategoryApiProcedureToItemCategory>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        itemCategoryId = $options.field<String>(
+        itemCategoryId = options$.field<String>(
             'itemCategoryId',
             (a) => a?.itemCategoryId,
             (s) => s?.itemCategoryId,
             (p, b) => p?.itemCategoryId = b),
-        itemCategoryName = $options.field<String>(
+        itemCategoryName = options$.field<String>(
             'itemCategoryName',
             (a) => a?.itemCategoryName,
             (s) => s?.itemCategoryName,
             (p, b) => p?.itemCategoryName = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        procedureName = $options.field<String>(
+        procedureName = options$.field<String>(
             'procedureName',
             (a) => a?.procedureName,
             (s) => s?.procedureName,
             (p, b) => p?.procedureName = b),
-        subProcedureId = $options.field<String>(
+        subProcedureId = options$.field<String>(
             'subProcedureId',
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
             (p, b) => p?.subProcedureId = b),
-        subProcedureName = $options.field<String>(
+        subProcedureName = options$.field<String>(
             'subProcedureName',
             (a) => a?.subProcedureName,
             (s) => s?.subProcedureName,
             (p, b) => p?.subProcedureName = b),
-        reference1 = $options.field<String>('reference1', (a) => a?.reference1,
+        reference1 = options$.field<String>('reference1', (a) => a?.reference1,
             (s) => s?.reference1, (p, b) => p?.reference1 = b),
-        reference2 = $options.field<String>('reference2', (a) => a?.reference2,
+        reference2 = options$.field<String>('reference2', (a) => a?.reference2,
             (s) => s?.reference2, (p, b) => p?.reference2 = b),
         super._();
 
@@ -428,18 +428,18 @@ class _$ListProcedureToItemCategoryApiProcedureToItemCategoryActions
           ._(options());
 
   @override
-  ListProcedureToItemCategoryApiProcedureToItemCategory get $initial =>
+  ListProcedureToItemCategoryApiProcedureToItemCategory get initialState$ =>
       ListProcedureToItemCategoryApiProcedureToItemCategory();
 
   @override
-  ListProcedureToItemCategoryApiProcedureToItemCategoryBuilder $newBuilder() =>
+  ListProcedureToItemCategoryApiProcedureToItemCategoryBuilder newBuilder$() =>
       ListProcedureToItemCategoryApiProcedureToItemCategoryBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.itemCategoryId,
         this.itemCategoryName,
@@ -452,26 +452,21 @@ class _$ListProcedureToItemCategoryApiProcedureToItemCategoryActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    itemCategoryId.$reducer(reducer);
-    itemCategoryName.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    procedureName.$reducer(reducer);
-    subProcedureId.$reducer(reducer);
-    subProcedureName.$reducer(reducer);
-    reference1.$reducer(reducer);
-    reference2.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    itemCategoryId.reducer$(reducer);
+    itemCategoryName.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    procedureName.reducer$(reducer);
+    subProcedureId.reducer$(reducer);
+    subProcedureName.reducer$(reducer);
+    reference1.reducer$(reducer);
+    reference2.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(ListProcedureToItemCategoryApiProcedureToItemCategory);
 }

@@ -247,22 +247,22 @@ class _$ListAeOrgUnitLinksApiRequestActions
   final StatefulActionsOptions<
       ListAeOrgUnitLinksApiRequest,
       ListAeOrgUnitLinksApiRequestBuilder,
-      ListAeOrgUnitLinksApiRequestActions> $options;
+      ListAeOrgUnitLinksApiRequestActions> options$;
 
-  final ActionDispatcher<ListAeOrgUnitLinksApiRequest> $replace;
+  final ActionDispatcher<ListAeOrgUnitLinksApiRequest> replace$;
   final FieldDispatcher<String> aeId;
   final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListAeOrgUnitLinksApiOrderBy> orderBy;
 
-  _$ListAeOrgUnitLinksApiRequestActions._(this.$options)
-      : $replace = $options.action<ListAeOrgUnitLinksApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        aeId = $options.field<String>(
+  _$ListAeOrgUnitLinksApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListAeOrgUnitLinksApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        aeId = options$.field<String>(
             'aeId', (a) => a?.aeId, (s) => s?.aeId, (p, b) => p?.aeId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -272,7 +272,7 @@ class _$ListAeOrgUnitLinksApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListAeOrgUnitLinksApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListAeOrgUnitLinksApiOrderBy>,
                     OrderByParamsBuilder<ListAeOrgUnitLinksApiOrderBy>,
                     OrderByParamsActions<ListAeOrgUnitLinksApiOrderBy>>(
@@ -288,46 +288,42 @@ class _$ListAeOrgUnitLinksApiRequestActions
       _$ListAeOrgUnitLinksApiRequestActions._(options());
 
   @override
-  ListAeOrgUnitLinksApiRequest get $initial => ListAeOrgUnitLinksApiRequest();
+  ListAeOrgUnitLinksApiRequest get initialState$ =>
+      ListAeOrgUnitLinksApiRequest();
 
   @override
-  ListAeOrgUnitLinksApiRequestBuilder $newBuilder() =>
+  ListAeOrgUnitLinksApiRequestBuilder newBuilder$() =>
       ListAeOrgUnitLinksApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.aeId,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    aeId.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    aeId.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListAeOrgUnitLinksApiRequest);
 }

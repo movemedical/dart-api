@@ -22,64 +22,30 @@ class _$CreateOrgApi extends CreateOrgApi {
           ApiResult<CreateOrgApiResponse>>,
       CommandStateBuilder<ApiCommand<CreateOrgApiRequest>,
           ApiResult<CreateOrgApiResponse>>,
-      CreateOrgApi> $options;
+      CreateOrgApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateOrgApiRequest>,
-          ApiResult<CreateOrgApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateOrgApiRequest>,
-          ApiResult<CreateOrgApiResponse>, CreateOrgApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateOrgApiRequest>,
-          ApiResult<CreateOrgApiResponse>,
-          CreateOrgApi,
-          Command<ApiCommand<CreateOrgApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateOrgApiRequest>,
-          ApiResult<CreateOrgApiResponse>,
-          CreateOrgApi,
-          CommandResult<ApiResult<CreateOrgApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateOrgApiRequest>,
-          ApiResult<CreateOrgApiResponse>,
-          CreateOrgApi,
-          CommandProgress>> $progress;
+          ApiResult<CreateOrgApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<CreateOrgApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<CreateOrgApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CreateOrgApi._(this.$options)
-      : $replace = $options.action<
+  _$CreateOrgApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<CreateOrgApiRequest>,
                     ApiResult<CreateOrgApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CreateOrgApiRequest>,
-                ApiResult<CreateOrgApiResponse>,
-                CreateOrgApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateOrgApiRequest>,
-                    ApiResult<CreateOrgApiResponse>,
-                    CreateOrgApi,
-                    Command<ApiCommand<CreateOrgApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateOrgApiRequest>,
-                    ApiResult<CreateOrgApiResponse>,
-                    CreateOrgApi,
-                    CommandResult<ApiResult<CreateOrgApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CreateOrgApiRequest>,
-                ApiResult<CreateOrgApiResponse>,
-                CreateOrgApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<CreateOrgApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<CreateOrgApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CreateOrgApi(CreateOrgApiOptions options) =>
@@ -87,31 +53,24 @@ class _$CreateOrgApi extends CreateOrgApi {
 
   @override
   CommandState<ApiCommand<CreateOrgApiRequest>, ApiResult<CreateOrgApiResponse>>
-      get $initial => CommandState<ApiCommand<CreateOrgApiRequest>,
+      get initialState$ => CommandState<ApiCommand<CreateOrgApiRequest>,
           ApiResult<CreateOrgApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateOrgApiRequest>,
           ApiResult<CreateOrgApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<CreateOrgApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<CreateOrgApiRequest>,
           ApiResult<CreateOrgApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CreateOrgApiRequest)]),
-        FullType(ApiResult, [FullType(CreateOrgApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

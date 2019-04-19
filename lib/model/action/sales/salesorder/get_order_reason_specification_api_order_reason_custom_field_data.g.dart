@@ -306,10 +306,10 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldDataActions
   final StatefulActionsOptions<
       GetOrderReasonSpecificationApiOrderReasonCustomFieldData,
       GetOrderReasonSpecificationApiOrderReasonCustomFieldDataBuilder,
-      GetOrderReasonSpecificationApiOrderReasonCustomFieldDataActions> $options;
+      GetOrderReasonSpecificationApiOrderReasonCustomFieldDataActions> options$;
 
   final ActionDispatcher<
-      GetOrderReasonSpecificationApiOrderReasonCustomFieldData> $replace;
+      GetOrderReasonSpecificationApiOrderReasonCustomFieldData> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<CustomFieldDataType> dataType;
@@ -318,21 +318,21 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldDataActions
   final FieldDispatcher<bool> required;
 
   _$GetOrderReasonSpecificationApiOrderReasonCustomFieldDataActions._(
-      this.$options)
-      : $replace = $options
+      this.options$)
+      : replace$ = options$
             .action<GetOrderReasonSpecificationApiOrderReasonCustomFieldData>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        dataType = $options.field<CustomFieldDataType>('dataType',
+        dataType = options$.field<CustomFieldDataType>('dataType',
             (a) => a?.dataType, (s) => s?.dataType, (p, b) => p?.dataType = b),
-        choices = $options.field<BuiltList<String>>('choices',
+        choices = options$.field<BuiltList<String>>('choices',
             (a) => a?.choices, (s) => s?.choices, (p, b) => p?.choices = b),
-        sort = $options.field<int>(
+        sort = options$.field<int>(
             'sort', (a) => a?.sort, (s) => s?.sort, (p, b) => p?.sort = b),
-        required = $options.field<bool>('required', (a) => a?.required,
+        required = options$.field<bool>('required', (a) => a?.required,
             (s) => s?.required, (p, b) => p?.required = b),
         super._();
 
@@ -343,19 +343,19 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldDataActions
           ._(options());
 
   @override
-  GetOrderReasonSpecificationApiOrderReasonCustomFieldData get $initial =>
+  GetOrderReasonSpecificationApiOrderReasonCustomFieldData get initialState$ =>
       GetOrderReasonSpecificationApiOrderReasonCustomFieldData();
 
   @override
   GetOrderReasonSpecificationApiOrderReasonCustomFieldDataBuilder
-      $newBuilder() =>
+      newBuilder$() =>
           GetOrderReasonSpecificationApiOrderReasonCustomFieldDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.dataType,
@@ -365,23 +365,18 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldDataActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    dataType.$reducer(reducer);
-    choices.$reducer(reducer);
-    sort.$reducer(reducer);
-    required.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    dataType.reducer$(reducer);
+    choices.reducer$(reducer);
+    sort.reducer$(reducer);
+    required.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(GetOrderReasonSpecificationApiOrderReasonCustomFieldData);
 }

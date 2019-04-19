@@ -180,17 +180,17 @@ class _$ProcessInspectionApiResponseActions
   final StatefulActionsOptions<
       ProcessInspectionApiResponse,
       ProcessInspectionApiResponseBuilder,
-      ProcessInspectionApiResponseActions> $options;
+      ProcessInspectionApiResponseActions> options$;
 
-  final ActionDispatcher<ProcessInspectionApiResponse> $replace;
+  final ActionDispatcher<ProcessInspectionApiResponse> replace$;
   final FieldDispatcher<BuiltList<ProcessInspectionApiProcessingError>>
       processingErrors;
 
-  _$ProcessInspectionApiResponseActions._(this.$options)
-      : $replace = $options.action<ProcessInspectionApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$ProcessInspectionApiResponseActions._(this.options$)
+      : replace$ = options$.action<ProcessInspectionApiResponse>(
+            'replace\$', (a) => a?.replace$),
         processingErrors =
-            $options.field<BuiltList<ProcessInspectionApiProcessingError>>(
+            options$.field<BuiltList<ProcessInspectionApiProcessingError>>(
                 'processingErrors',
                 (a) => a?.processingErrors,
                 (s) => s?.processingErrors,
@@ -202,33 +202,29 @@ class _$ProcessInspectionApiResponseActions
       _$ProcessInspectionApiResponseActions._(options());
 
   @override
-  ProcessInspectionApiResponse get $initial => ProcessInspectionApiResponse();
+  ProcessInspectionApiResponse get initialState$ =>
+      ProcessInspectionApiResponse();
 
   @override
-  ProcessInspectionApiResponseBuilder $newBuilder() =>
+  ProcessInspectionApiResponseBuilder newBuilder$() =>
       ProcessInspectionApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.processingErrors,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    processingErrors.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    processingErrors.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ProcessInspectionApiResponse);
 }

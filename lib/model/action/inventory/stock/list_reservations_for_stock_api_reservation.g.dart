@@ -319,9 +319,9 @@ class _$ListReservationsForStockApiReservationActions
   final StatefulActionsOptions<
       ListReservationsForStockApiReservation,
       ListReservationsForStockApiReservationBuilder,
-      ListReservationsForStockApiReservationActions> $options;
+      ListReservationsForStockApiReservationActions> options$;
 
-  final ActionDispatcher<ListReservationsForStockApiReservation> $replace;
+  final ActionDispatcher<ListReservationsForStockApiReservation> replace$;
   final FieldDispatcher<int> pickNumber;
   final FieldDispatcher<String> loanId;
   final FieldDispatcher<String> orderId;
@@ -330,22 +330,22 @@ class _$ListReservationsForStockApiReservationActions
   final FieldDispatcher<DateTime> endDate;
   final FieldDispatcher<String> displayText;
 
-  _$ListReservationsForStockApiReservationActions._(this.$options)
-      : $replace = $options.action<ListReservationsForStockApiReservation>(
-            '\$replace', (a) => a?.$replace),
-        pickNumber = $options.field<int>('pickNumber', (a) => a?.pickNumber,
+  _$ListReservationsForStockApiReservationActions._(this.options$)
+      : replace$ = options$.action<ListReservationsForStockApiReservation>(
+            'replace\$', (a) => a?.replace$),
+        pickNumber = options$.field<int>('pickNumber', (a) => a?.pickNumber,
             (s) => s?.pickNumber, (p, b) => p?.pickNumber = b),
-        loanId = $options.field<String>('loanId', (a) => a?.loanId,
+        loanId = options$.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        caseIds = $options.field<BuiltList<String>>('caseIds',
+        caseIds = options$.field<BuiltList<String>>('caseIds',
             (a) => a?.caseIds, (s) => s?.caseIds, (p, b) => p?.caseIds = b),
-        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+        startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
-        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
+        endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        displayText = $options.field<String>(
+        displayText = options$.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
@@ -357,18 +357,18 @@ class _$ListReservationsForStockApiReservationActions
       _$ListReservationsForStockApiReservationActions._(options());
 
   @override
-  ListReservationsForStockApiReservation get $initial =>
+  ListReservationsForStockApiReservation get initialState$ =>
       ListReservationsForStockApiReservation();
 
   @override
-  ListReservationsForStockApiReservationBuilder $newBuilder() =>
+  ListReservationsForStockApiReservationBuilder newBuilder$() =>
       ListReservationsForStockApiReservationBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.pickNumber,
         this.loanId,
         this.orderId,
@@ -379,24 +379,19 @@ class _$ListReservationsForStockApiReservationActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    pickNumber.$reducer(reducer);
-    loanId.$reducer(reducer);
-    orderId.$reducer(reducer);
-    caseIds.$reducer(reducer);
-    startDate.$reducer(reducer);
-    endDate.$reducer(reducer);
-    displayText.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    pickNumber.reducer$(reducer);
+    loanId.reducer$(reducer);
+    orderId.reducer$(reducer);
+    caseIds.reducer$(reducer);
+    startDate.reducer$(reducer);
+    endDate.reducer$(reducer);
+    displayText.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListReservationsForStockApiReservation);
 }

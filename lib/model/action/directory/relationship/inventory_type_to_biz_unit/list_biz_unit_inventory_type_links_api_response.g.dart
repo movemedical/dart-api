@@ -208,20 +208,20 @@ class _$ListBizUnitInventoryTypeLinksApiResponseActions
   final StatefulActionsOptions<
       ListBizUnitInventoryTypeLinksApiResponse,
       ListBizUnitInventoryTypeLinksApiResponseBuilder,
-      ListBizUnitInventoryTypeLinksApiResponseActions> $options;
+      ListBizUnitInventoryTypeLinksApiResponseActions> options$;
 
-  final ActionDispatcher<ListBizUnitInventoryTypeLinksApiResponse> $replace;
+  final ActionDispatcher<ListBizUnitInventoryTypeLinksApiResponse> replace$;
   final FieldDispatcher<
       BuiltList<ListBizUnitInventoryTypeLinksApiInventoryTypeLink>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListBizUnitInventoryTypeLinksApiResponseActions._(this.$options)
-      : $replace = $options.action<ListBizUnitInventoryTypeLinksApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<
+  _$ListBizUnitInventoryTypeLinksApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListBizUnitInventoryTypeLinksApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<
                 BuiltList<ListBizUnitInventoryTypeLinksApiInventoryTypeLink>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -230,36 +230,31 @@ class _$ListBizUnitInventoryTypeLinksApiResponseActions
       _$ListBizUnitInventoryTypeLinksApiResponseActions._(options());
 
   @override
-  ListBizUnitInventoryTypeLinksApiResponse get $initial =>
+  ListBizUnitInventoryTypeLinksApiResponse get initialState$ =>
       ListBizUnitInventoryTypeLinksApiResponse();
 
   @override
-  ListBizUnitInventoryTypeLinksApiResponseBuilder $newBuilder() =>
+  ListBizUnitInventoryTypeLinksApiResponseBuilder newBuilder$() =>
       ListBizUnitInventoryTypeLinksApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListBizUnitInventoryTypeLinksApiResponse);
 }

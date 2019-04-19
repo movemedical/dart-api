@@ -241,33 +241,33 @@ typedef StatefulActionsOptions<UpdateLotApiRequest, UpdateLotApiRequestBuilder,
 
 class _$UpdateLotApiRequestActions extends UpdateLotApiRequestActions {
   final StatefulActionsOptions<UpdateLotApiRequest, UpdateLotApiRequestBuilder,
-      UpdateLotApiRequestActions> $options;
+      UpdateLotApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateLotApiRequest> $replace;
+  final ActionDispatcher<UpdateLotApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> lotNumber;
   final FieldDispatcher<DateTime> expirationDate;
   final FieldDispatcher<DateTime> manufactureDate;
   final FieldDispatcher<bool> active;
 
-  _$UpdateLotApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateLotApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$UpdateLotApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateLotApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        lotNumber = $options.field<String>('lotNumber', (a) => a?.lotNumber,
+        lotNumber = options$.field<String>('lotNumber', (a) => a?.lotNumber,
             (s) => s?.lotNumber, (p, b) => p?.lotNumber = b),
-        expirationDate = $options.field<DateTime>(
+        expirationDate = options$.field<DateTime>(
             'expirationDate',
             (a) => a?.expirationDate,
             (s) => s?.expirationDate,
             (p, b) => p?.expirationDate = b),
-        manufactureDate = $options.field<DateTime>(
+        manufactureDate = options$.field<DateTime>(
             'manufactureDate',
             (a) => a?.manufactureDate,
             (s) => s?.manufactureDate,
             (p, b) => p?.manufactureDate = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -276,16 +276,16 @@ class _$UpdateLotApiRequestActions extends UpdateLotApiRequestActions {
       _$UpdateLotApiRequestActions._(options());
 
   @override
-  UpdateLotApiRequest get $initial => UpdateLotApiRequest();
+  UpdateLotApiRequest get initialState$ => UpdateLotApiRequest();
 
   @override
-  UpdateLotApiRequestBuilder $newBuilder() => UpdateLotApiRequestBuilder();
+  UpdateLotApiRequestBuilder newBuilder$() => UpdateLotApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.lotNumber,
         this.expirationDate,
@@ -294,21 +294,17 @@ class _$UpdateLotApiRequestActions extends UpdateLotApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    lotNumber.$reducer(reducer);
-    expirationDate.$reducer(reducer);
-    manufactureDate.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    lotNumber.reducer$(reducer);
+    expirationDate.reducer$(reducer);
+    manufactureDate.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(UpdateLotApiRequest);
 }

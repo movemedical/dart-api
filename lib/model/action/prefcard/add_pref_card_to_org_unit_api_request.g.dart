@@ -180,18 +180,18 @@ class _$AddPrefCardToOrgUnitApiRequestActions
   final StatefulActionsOptions<
       AddPrefCardToOrgUnitApiRequest,
       AddPrefCardToOrgUnitApiRequestBuilder,
-      AddPrefCardToOrgUnitApiRequestActions> $options;
+      AddPrefCardToOrgUnitApiRequestActions> options$;
 
-  final ActionDispatcher<AddPrefCardToOrgUnitApiRequest> $replace;
+  final ActionDispatcher<AddPrefCardToOrgUnitApiRequest> replace$;
   final FieldDispatcher<String> prefCardId;
   final FieldDispatcher<String> orgUnitId;
 
-  _$AddPrefCardToOrgUnitApiRequestActions._(this.$options)
-      : $replace = $options.action<AddPrefCardToOrgUnitApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        prefCardId = $options.field<String>('prefCardId', (a) => a?.prefCardId,
+  _$AddPrefCardToOrgUnitApiRequestActions._(this.options$)
+      : replace$ = options$.action<AddPrefCardToOrgUnitApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        prefCardId = options$.field<String>('prefCardId', (a) => a?.prefCardId,
             (s) => s?.prefCardId, (p, b) => p?.prefCardId = b),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
         super._();
 
@@ -200,36 +200,31 @@ class _$AddPrefCardToOrgUnitApiRequestActions
       _$AddPrefCardToOrgUnitApiRequestActions._(options());
 
   @override
-  AddPrefCardToOrgUnitApiRequest get $initial =>
+  AddPrefCardToOrgUnitApiRequest get initialState$ =>
       AddPrefCardToOrgUnitApiRequest();
 
   @override
-  AddPrefCardToOrgUnitApiRequestBuilder $newBuilder() =>
+  AddPrefCardToOrgUnitApiRequestBuilder newBuilder$() =>
       AddPrefCardToOrgUnitApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.prefCardId,
         this.orgUnitId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    prefCardId.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    prefCardId.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AddPrefCardToOrgUnitApiRequest);
 }

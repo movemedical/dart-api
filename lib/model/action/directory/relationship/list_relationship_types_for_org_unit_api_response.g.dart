@@ -187,15 +187,15 @@ class _$ListRelationshipTypesForOrgUnitApiResponseActions
   final StatefulActionsOptions<
       ListRelationshipTypesForOrgUnitApiResponse,
       ListRelationshipTypesForOrgUnitApiResponseBuilder,
-      ListRelationshipTypesForOrgUnitApiResponseActions> $options;
+      ListRelationshipTypesForOrgUnitApiResponseActions> options$;
 
-  final ActionDispatcher<ListRelationshipTypesForOrgUnitApiResponse> $replace;
+  final ActionDispatcher<ListRelationshipTypesForOrgUnitApiResponse> replace$;
   final FieldDispatcher<BuiltList<RelationshipType>> relationshipTypes;
 
-  _$ListRelationshipTypesForOrgUnitApiResponseActions._(this.$options)
-      : $replace = $options.action<ListRelationshipTypesForOrgUnitApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        relationshipTypes = $options.field<BuiltList<RelationshipType>>(
+  _$ListRelationshipTypesForOrgUnitApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListRelationshipTypesForOrgUnitApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        relationshipTypes = options$.field<BuiltList<RelationshipType>>(
             'relationshipTypes',
             (a) => a?.relationshipTypes,
             (s) => s?.relationshipTypes,
@@ -207,34 +207,29 @@ class _$ListRelationshipTypesForOrgUnitApiResponseActions
       _$ListRelationshipTypesForOrgUnitApiResponseActions._(options());
 
   @override
-  ListRelationshipTypesForOrgUnitApiResponse get $initial =>
+  ListRelationshipTypesForOrgUnitApiResponse get initialState$ =>
       ListRelationshipTypesForOrgUnitApiResponse();
 
   @override
-  ListRelationshipTypesForOrgUnitApiResponseBuilder $newBuilder() =>
+  ListRelationshipTypesForOrgUnitApiResponseBuilder newBuilder$() =>
       ListRelationshipTypesForOrgUnitApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.relationshipTypes,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    relationshipTypes.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    relationshipTypes.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListRelationshipTypesForOrgUnitApiResponse);
 }

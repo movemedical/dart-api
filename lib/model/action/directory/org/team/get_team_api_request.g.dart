@@ -141,15 +141,15 @@ typedef StatefulActionsOptions<GetTeamApiRequest, GetTeamApiRequestBuilder,
 
 class _$GetTeamApiRequestActions extends GetTeamApiRequestActions {
   final StatefulActionsOptions<GetTeamApiRequest, GetTeamApiRequestBuilder,
-      GetTeamApiRequestActions> $options;
+      GetTeamApiRequestActions> options$;
 
-  final ActionDispatcher<GetTeamApiRequest> $replace;
+  final ActionDispatcher<GetTeamApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$GetTeamApiRequestActions._(this.$options)
-      : $replace =
-            $options.action<GetTeamApiRequest>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetTeamApiRequestActions._(this.options$)
+      : replace$ =
+            options$.action<GetTeamApiRequest>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -157,31 +157,27 @@ class _$GetTeamApiRequestActions extends GetTeamApiRequestActions {
       _$GetTeamApiRequestActions._(options());
 
   @override
-  GetTeamApiRequest get $initial => GetTeamApiRequest();
+  GetTeamApiRequest get initialState$ => GetTeamApiRequest();
 
   @override
-  GetTeamApiRequestBuilder $newBuilder() => GetTeamApiRequestBuilder();
+  GetTeamApiRequestBuilder newBuilder$() => GetTeamApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetTeamApiRequest);
 }

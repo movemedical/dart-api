@@ -157,15 +157,15 @@ typedef StatefulActionsOptions<GetTeamApiResponse, GetTeamApiResponseBuilder,
 
 class _$GetTeamApiResponseActions extends GetTeamApiResponseActions {
   final StatefulActionsOptions<GetTeamApiResponse, GetTeamApiResponseBuilder,
-      GetTeamApiResponseActions> $options;
+      GetTeamApiResponseActions> options$;
 
-  final ActionDispatcher<GetTeamApiResponse> $replace;
+  final ActionDispatcher<GetTeamApiResponse> replace$;
   final GetTeamApiTeamDetailActions detail;
 
-  _$GetTeamApiResponseActions._(this.$options)
-      : $replace = $options.action<GetTeamApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        detail = GetTeamApiTeamDetailActions(() => $options.stateful<
+  _$GetTeamApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetTeamApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        detail = GetTeamApiTeamDetailActions(() => options$.stateful<
                 GetTeamApiTeamDetail,
                 GetTeamApiTeamDetailBuilder,
                 GetTeamApiTeamDetailActions>(
@@ -181,37 +181,33 @@ class _$GetTeamApiResponseActions extends GetTeamApiResponseActions {
       _$GetTeamApiResponseActions._(options());
 
   @override
-  GetTeamApiResponse get $initial => GetTeamApiResponse();
+  GetTeamApiResponse get initialState$ => GetTeamApiResponse();
 
   @override
-  GetTeamApiResponseBuilder $newBuilder() => GetTeamApiResponseBuilder();
+  GetTeamApiResponseBuilder newBuilder$() => GetTeamApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.detail,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    detail.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    detail.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    detail.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    detail.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetTeamApiResponse);
 }

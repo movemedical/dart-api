@@ -175,18 +175,18 @@ class _$GetStockApiStockAttributeActions
   final StatefulActionsOptions<
       GetStockApiStockAttribute,
       GetStockApiStockAttributeBuilder,
-      GetStockApiStockAttributeActions> $options;
+      GetStockApiStockAttributeActions> options$;
 
-  final ActionDispatcher<GetStockApiStockAttribute> $replace;
+  final ActionDispatcher<GetStockApiStockAttribute> replace$;
   final FieldDispatcher<String> label;
   final FieldDispatcher<String> value;
 
-  _$GetStockApiStockAttributeActions._(this.$options)
-      : $replace = $options.action<GetStockApiStockAttribute>(
-            '\$replace', (a) => a?.$replace),
-        label = $options.field<String>(
+  _$GetStockApiStockAttributeActions._(this.options$)
+      : replace$ = options$.action<GetStockApiStockAttribute>(
+            'replace\$', (a) => a?.replace$),
+        label = options$.field<String>(
             'label', (a) => a?.label, (s) => s?.label, (p, b) => p?.label = b),
-        value = $options.field<String>(
+        value = options$.field<String>(
             'value', (a) => a?.value, (s) => s?.value, (p, b) => p?.value = b),
         super._();
 
@@ -195,34 +195,30 @@ class _$GetStockApiStockAttributeActions
       _$GetStockApiStockAttributeActions._(options());
 
   @override
-  GetStockApiStockAttribute get $initial => GetStockApiStockAttribute();
+  GetStockApiStockAttribute get initialState$ => GetStockApiStockAttribute();
 
   @override
-  GetStockApiStockAttributeBuilder $newBuilder() =>
+  GetStockApiStockAttributeBuilder newBuilder$() =>
       GetStockApiStockAttributeBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.label,
         this.value,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    label.$reducer(reducer);
-    value.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    label.reducer$(reducer);
+    value.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetStockApiStockAttribute);
 }

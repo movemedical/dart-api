@@ -178,15 +178,15 @@ class _$RequestStockBarcodeDocApiRequestActions
   final StatefulActionsOptions<
       RequestStockBarcodeDocApiRequest,
       RequestStockBarcodeDocApiRequestBuilder,
-      RequestStockBarcodeDocApiRequestActions> $options;
+      RequestStockBarcodeDocApiRequestActions> options$;
 
-  final ActionDispatcher<RequestStockBarcodeDocApiRequest> $replace;
+  final ActionDispatcher<RequestStockBarcodeDocApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> stockIds;
 
-  _$RequestStockBarcodeDocApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestStockBarcodeDocApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        stockIds = $options.field<BuiltList<String>>('stockIds',
+  _$RequestStockBarcodeDocApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestStockBarcodeDocApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        stockIds = options$.field<BuiltList<String>>('stockIds',
             (a) => a?.stockIds, (s) => s?.stockIds, (p, b) => p?.stockIds = b),
         super._();
 
@@ -195,34 +195,29 @@ class _$RequestStockBarcodeDocApiRequestActions
       _$RequestStockBarcodeDocApiRequestActions._(options());
 
   @override
-  RequestStockBarcodeDocApiRequest get $initial =>
+  RequestStockBarcodeDocApiRequest get initialState$ =>
       RequestStockBarcodeDocApiRequest();
 
   @override
-  RequestStockBarcodeDocApiRequestBuilder $newBuilder() =>
+  RequestStockBarcodeDocApiRequestBuilder newBuilder$() =>
       RequestStockBarcodeDocApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.stockIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    stockIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    stockIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestStockBarcodeDocApiRequest);
 }

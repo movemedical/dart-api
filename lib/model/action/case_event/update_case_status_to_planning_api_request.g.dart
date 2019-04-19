@@ -161,15 +161,15 @@ class _$UpdateCaseStatusToPlanningApiRequestActions
   final StatefulActionsOptions<
       UpdateCaseStatusToPlanningApiRequest,
       UpdateCaseStatusToPlanningApiRequestBuilder,
-      UpdateCaseStatusToPlanningApiRequestActions> $options;
+      UpdateCaseStatusToPlanningApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateCaseStatusToPlanningApiRequest> $replace;
+  final ActionDispatcher<UpdateCaseStatusToPlanningApiRequest> replace$;
   final FieldDispatcher<String> caseEventId;
 
-  _$UpdateCaseStatusToPlanningApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateCaseStatusToPlanningApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$UpdateCaseStatusToPlanningApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateCaseStatusToPlanningApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
@@ -181,34 +181,29 @@ class _$UpdateCaseStatusToPlanningApiRequestActions
       _$UpdateCaseStatusToPlanningApiRequestActions._(options());
 
   @override
-  UpdateCaseStatusToPlanningApiRequest get $initial =>
+  UpdateCaseStatusToPlanningApiRequest get initialState$ =>
       UpdateCaseStatusToPlanningApiRequest();
 
   @override
-  UpdateCaseStatusToPlanningApiRequestBuilder $newBuilder() =>
+  UpdateCaseStatusToPlanningApiRequestBuilder newBuilder$() =>
       UpdateCaseStatusToPlanningApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateCaseStatusToPlanningApiRequest);
 }

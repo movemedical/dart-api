@@ -180,21 +180,21 @@ typedef StatefulActionsOptions<ListSSOApiSSO, ListSSOApiSSOBuilder,
 
 class _$ListSSOApiSSOActions extends ListSSOApiSSOActions {
   final StatefulActionsOptions<ListSSOApiSSO, ListSSOApiSSOBuilder,
-      ListSSOApiSSOActions> $options;
+      ListSSOApiSSOActions> options$;
 
-  final ActionDispatcher<ListSSOApiSSO> $replace;
+  final ActionDispatcher<ListSSOApiSSO> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<SSOType> ssoType;
   final FieldDispatcher<String> ssoName;
 
-  _$ListSSOApiSSOActions._(this.$options)
-      : $replace =
-            $options.action<ListSSOApiSSO>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListSSOApiSSOActions._(this.options$)
+      : replace$ =
+            options$.action<ListSSOApiSSO>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        ssoType = $options.field<SSOType>('ssoType', (a) => a?.ssoType,
+        ssoType = options$.field<SSOType>('ssoType', (a) => a?.ssoType,
             (s) => s?.ssoType, (p, b) => p?.ssoType = b),
-        ssoName = $options.field<String>('ssoName', (a) => a?.ssoName,
+        ssoName = options$.field<String>('ssoName', (a) => a?.ssoName,
             (s) => s?.ssoName, (p, b) => p?.ssoName = b),
         super._();
 
@@ -202,35 +202,31 @@ class _$ListSSOApiSSOActions extends ListSSOApiSSOActions {
       _$ListSSOApiSSOActions._(options());
 
   @override
-  ListSSOApiSSO get $initial => ListSSOApiSSO();
+  ListSSOApiSSO get initialState$ => ListSSOApiSSO();
 
   @override
-  ListSSOApiSSOBuilder $newBuilder() => ListSSOApiSSOBuilder();
+  ListSSOApiSSOBuilder newBuilder$() => ListSSOApiSSOBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.ssoType,
         this.ssoName,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    ssoType.$reducer(reducer);
-    ssoName.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    ssoType.reducer$(reducer);
+    ssoName.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListSSOApiSSO);
 }

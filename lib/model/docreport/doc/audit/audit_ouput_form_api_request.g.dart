@@ -268,19 +268,19 @@ class _$AuditOuputFormApiRequestActions
   final StatefulActionsOptions<
       AuditOuputFormApiRequest,
       AuditOuputFormApiRequestBuilder,
-      AuditOuputFormApiRequestActions> $options;
+      AuditOuputFormApiRequestActions> options$;
 
-  final ActionDispatcher<AuditOuputFormApiRequest> $replace;
+  final ActionDispatcher<AuditOuputFormApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<String> orderReasonDocId;
   final FieldDispatcher<DocReportDisplayType> displayType;
   final FieldDispatcher<DocReportFormat> format;
   final FieldDispatcher<String> auditId;
 
-  _$AuditOuputFormApiRequestActions._(this.$options)
-      : $replace = $options.action<AuditOuputFormApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$AuditOuputFormApiRequestActions._(this.options$)
+      : replace$ = options$.action<AuditOuputFormApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -289,19 +289,19 @@ class _$AuditOuputFormApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        orderReasonDocId = $options.field<String>(
+        orderReasonDocId = options$.field<String>(
             'orderReasonDocId',
             (a) => a?.orderReasonDocId,
             (s) => s?.orderReasonDocId,
             (p, b) => p?.orderReasonDocId = b),
-        displayType = $options.field<DocReportDisplayType>(
+        displayType = options$.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         super._();
 
@@ -310,23 +310,23 @@ class _$AuditOuputFormApiRequestActions
       _$AuditOuputFormApiRequestActions._(options());
 
   @override
-  AuditOuputFormApiRequest get $initial => AuditOuputFormApiRequest();
+  AuditOuputFormApiRequest get initialState$ => AuditOuputFormApiRequest();
 
   @override
-  AuditOuputFormApiRequestBuilder $newBuilder() =>
+  AuditOuputFormApiRequestBuilder newBuilder$() =>
       AuditOuputFormApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderReasonDocId,
         this.displayType,
         this.format,
@@ -334,22 +334,18 @@ class _$AuditOuputFormApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    orderReasonDocId.$reducer(reducer);
-    displayType.$reducer(reducer);
-    format.$reducer(reducer);
-    auditId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    orderReasonDocId.reducer$(reducer);
+    displayType.reducer$(reducer);
+    format.reducer$(reducer);
+    auditId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(AuditOuputFormApiRequest);
 }

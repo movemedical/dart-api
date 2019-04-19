@@ -223,24 +223,24 @@ class _$CreateCustomerQualifierApiRequestActions
   final StatefulActionsOptions<
       CreateCustomerQualifierApiRequest,
       CreateCustomerQualifierApiRequestBuilder,
-      CreateCustomerQualifierApiRequestActions> $options;
+      CreateCustomerQualifierApiRequestActions> options$;
 
-  final ActionDispatcher<CreateCustomerQualifierApiRequest> $replace;
+  final ActionDispatcher<CreateCustomerQualifierApiRequest> replace$;
   final FieldDispatcher<String> orgUnitId;
   final FieldDispatcher<CustomerQualifierType> type;
   final FieldDispatcher<String> value;
   final FieldDispatcher<int> priority;
 
-  _$CreateCustomerQualifierApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateCustomerQualifierApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+  _$CreateCustomerQualifierApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateCustomerQualifierApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orgUnitId = options$.field<String>('orgUnitId', (a) => a?.orgUnitId,
             (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
-        type = $options.field<CustomerQualifierType>(
+        type = options$.field<CustomerQualifierType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        value = $options.field<String>(
+        value = options$.field<String>(
             'value', (a) => a?.value, (s) => s?.value, (p, b) => p?.value = b),
-        priority = $options.field<int>('priority', (a) => a?.priority,
+        priority = options$.field<int>('priority', (a) => a?.priority,
             (s) => s?.priority, (p, b) => p?.priority = b),
         super._();
 
@@ -249,18 +249,18 @@ class _$CreateCustomerQualifierApiRequestActions
       _$CreateCustomerQualifierApiRequestActions._(options());
 
   @override
-  CreateCustomerQualifierApiRequest get $initial =>
+  CreateCustomerQualifierApiRequest get initialState$ =>
       CreateCustomerQualifierApiRequest();
 
   @override
-  CreateCustomerQualifierApiRequestBuilder $newBuilder() =>
+  CreateCustomerQualifierApiRequestBuilder newBuilder$() =>
       CreateCustomerQualifierApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orgUnitId,
         this.type,
         this.value,
@@ -268,21 +268,16 @@ class _$CreateCustomerQualifierApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orgUnitId.$reducer(reducer);
-    type.$reducer(reducer);
-    value.$reducer(reducer);
-    priority.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orgUnitId.reducer$(reducer);
+    type.reducer$(reducer);
+    value.reducer$(reducer);
+    priority.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateCustomerQualifierApiRequest);
 }

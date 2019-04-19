@@ -624,9 +624,9 @@ typedef StatefulActionsOptions<GetStockApiStock, GetStockApiStockBuilder,
 
 class _$GetStockApiStockActions extends GetStockApiStockActions {
   final StatefulActionsOptions<GetStockApiStock, GetStockApiStockBuilder,
-      GetStockApiStockActions> $options;
+      GetStockApiStockActions> options$;
 
-  final ActionDispatcher<GetStockApiStock> $replace;
+  final ActionDispatcher<GetStockApiStock> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> stockNumber;
   final StockItemActions stockItem;
@@ -647,21 +647,21 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
   final FieldDispatcher<bool> hasUnverified;
   final FieldDispatcher<BuiltList<GetStockApiStockAttribute>> attributes;
 
-  _$GetStockApiStockActions._(this.$options)
-      : $replace =
-            $options.action<GetStockApiStock>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetStockApiStockActions._(this.options$)
+      : replace$ =
+            options$.action<GetStockApiStock>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        stockNumber = $options.field<int>('stockNumber', (a) => a?.stockNumber,
+        stockNumber = options$.field<int>('stockNumber', (a) => a?.stockNumber,
             (s) => s?.stockNumber, (p, b) => p?.stockNumber = b),
         stockItem = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
                 (a) => a.stockItem,
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
-        inventoryType = InventoryTypeActions(() => $options.stateful<
+        inventoryType = InventoryTypeActions(() => options$.stateful<
                 InventoryType, InventoryTypeBuilder, InventoryTypeActions>(
             'inventoryType',
             (a) => a.inventoryType,
@@ -669,22 +669,22 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
             (b) => b?.inventoryType,
             (parent, builder) => parent?.inventoryType = builder)),
         stockPlace = StockPlaceActions(() =>
-            $options.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
+            options$.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
                 'stockPlace',
                 (a) => a.stockPlace,
                 (s) => s?.stockPlace,
                 (b) => b?.stockPlace,
                 (parent, builder) => parent?.stockPlace = builder)),
-        kitStockId = $options.field<String>('kitStockId', (a) => a?.kitStockId,
+        kitStockId = options$.field<String>('kitStockId', (a) => a?.kitStockId,
             (s) => s?.kitStockId, (p, b) => p?.kitStockId = b),
         kitStockItem = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'kitStockItem',
                 (a) => a.kitStockItem,
                 (s) => s?.kitStockItem,
                 (b) => b?.kitStockItem,
                 (parent, builder) => parent?.kitStockItem = builder)),
-        responsibleParty = ResponsiblePartyActions(() => $options.stateful<
+        responsibleParty = ResponsiblePartyActions(() => options$.stateful<
                 ResponsibleParty,
                 ResponsiblePartyBuilder,
                 ResponsiblePartyActions>(
@@ -694,42 +694,42 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
             (b) => b?.responsibleParty,
             (parent, builder) => parent?.responsibleParty = builder)),
         demandLoan = LoanLiteActions(() =>
-            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+            options$.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
                 'demandLoan',
                 (a) => a.demandLoan,
                 (s) => s?.demandLoan,
                 (b) => b?.demandLoan,
                 (parent, builder) => parent?.demandLoan = builder)),
         consignmentLoan = LoanLiteActions(() =>
-            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+            options$.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
                 'consignmentLoan',
                 (a) => a.consignmentLoan,
                 (s) => s?.consignmentLoan,
                 (b) => b?.consignmentLoan,
                 (parent, builder) => parent?.consignmentLoan = builder)),
-        activeRestockOrders = $options.field<BuiltList<OrderHeaderLite>>(
+        activeRestockOrders = options$.field<BuiltList<OrderHeaderLite>>(
             'activeRestockOrders',
             (a) => a?.activeRestockOrders,
             (s) => s?.activeRestockOrders,
             (p, b) => p?.activeRestockOrders = b),
-        allocated = $options.field<bool>('allocated', (a) => a?.allocated,
+        allocated = options$.field<bool>('allocated', (a) => a?.allocated,
             (s) => s?.allocated, (p, b) => p?.allocated = b),
-        onHold = $options.field<bool>('onHold', (a) => a?.onHold,
+        onHold = options$.field<bool>('onHold', (a) => a?.onHold,
             (s) => s?.onHold, (p, b) => p?.onHold = b),
-        lostFound = $options.field<LostFound>('lostFound', (a) => a?.lostFound,
+        lostFound = options$.field<LostFound>('lostFound', (a) => a?.lostFound,
             (s) => s?.lostFound, (p, b) => p?.lostFound = b),
-        verified = $options.field<bool>('verified', (a) => a?.verified,
+        verified = options$.field<bool>('verified', (a) => a?.verified,
             (s) => s?.verified, (p, b) => p?.verified = b),
-        hasExtras = $options.field<bool>('hasExtras', (a) => a?.hasExtras,
+        hasExtras = options$.field<bool>('hasExtras', (a) => a?.hasExtras,
             (s) => s?.hasExtras, (p, b) => p?.hasExtras = b),
-        hasMissing = $options.field<bool>('hasMissing', (a) => a?.hasMissing,
+        hasMissing = options$.field<bool>('hasMissing', (a) => a?.hasMissing,
             (s) => s?.hasMissing, (p, b) => p?.hasMissing = b),
-        hasUnverified = $options.field<bool>(
+        hasUnverified = options$.field<bool>(
             'hasUnverified',
             (a) => a?.hasUnverified,
             (s) => s?.hasUnverified,
             (p, b) => p?.hasUnverified = b),
-        attributes = $options.field<BuiltList<GetStockApiStockAttribute>>(
+        attributes = options$.field<BuiltList<GetStockApiStockAttribute>>(
             'attributes',
             (a) => a?.attributes,
             (s) => s?.attributes,
@@ -740,14 +740,14 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
       _$GetStockApiStockActions._(options());
 
   @override
-  GetStockApiStock get $initial => GetStockApiStock();
+  GetStockApiStock get initialState$ => GetStockApiStock();
 
   @override
-  GetStockApiStockBuilder $newBuilder() => GetStockApiStockBuilder();
+  GetStockApiStockBuilder newBuilder$() => GetStockApiStockBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
         this.inventoryType,
         this.stockPlace,
@@ -757,11 +757,11 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
         this.consignmentLoan,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.stockNumber,
         this.kitStockId,
@@ -777,42 +777,38 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    stockNumber.$reducer(reducer);
-    stockItem.$reducer(reducer);
-    inventoryType.$reducer(reducer);
-    stockPlace.$reducer(reducer);
-    kitStockId.$reducer(reducer);
-    kitStockItem.$reducer(reducer);
-    responsibleParty.$reducer(reducer);
-    demandLoan.$reducer(reducer);
-    consignmentLoan.$reducer(reducer);
-    activeRestockOrders.$reducer(reducer);
-    allocated.$reducer(reducer);
-    onHold.$reducer(reducer);
-    lostFound.$reducer(reducer);
-    verified.$reducer(reducer);
-    hasExtras.$reducer(reducer);
-    hasMissing.$reducer(reducer);
-    hasUnverified.$reducer(reducer);
-    attributes.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    stockNumber.reducer$(reducer);
+    stockItem.reducer$(reducer);
+    inventoryType.reducer$(reducer);
+    stockPlace.reducer$(reducer);
+    kitStockId.reducer$(reducer);
+    kitStockItem.reducer$(reducer);
+    responsibleParty.reducer$(reducer);
+    demandLoan.reducer$(reducer);
+    consignmentLoan.reducer$(reducer);
+    activeRestockOrders.reducer$(reducer);
+    allocated.reducer$(reducer);
+    onHold.reducer$(reducer);
+    lostFound.reducer$(reducer);
+    verified.reducer$(reducer);
+    hasExtras.reducer$(reducer);
+    hasMissing.reducer$(reducer);
+    hasUnverified.reducer$(reducer);
+    attributes.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    stockItem.$middleware(middleware);
-    inventoryType.$middleware(middleware);
-    stockPlace.$middleware(middleware);
-    kitStockItem.$middleware(middleware);
-    responsibleParty.$middleware(middleware);
-    demandLoan.$middleware(middleware);
-    consignmentLoan.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    stockItem.middleware$(middleware);
+    inventoryType.middleware$(middleware);
+    stockPlace.middleware$(middleware);
+    kitStockItem.middleware$(middleware);
+    responsibleParty.middleware$(middleware);
+    demandLoan.middleware$(middleware);
+    consignmentLoan.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetStockApiStock);
 }

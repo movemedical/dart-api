@@ -163,15 +163,15 @@ class _$RequestUserPermissionsReportApiResponseActions
   final StatefulActionsOptions<
       RequestUserPermissionsReportApiResponse,
       RequestUserPermissionsReportApiResponseBuilder,
-      RequestUserPermissionsReportApiResponseActions> $options;
+      RequestUserPermissionsReportApiResponseActions> options$;
 
-  final ActionDispatcher<RequestUserPermissionsReportApiResponse> $replace;
+  final ActionDispatcher<RequestUserPermissionsReportApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
 
-  _$RequestUserPermissionsReportApiResponseActions._(this.$options)
-      : $replace = $options.action<RequestUserPermissionsReportApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$RequestUserPermissionsReportApiResponseActions._(this.options$)
+      : replace$ = options$.action<RequestUserPermissionsReportApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -183,34 +183,29 @@ class _$RequestUserPermissionsReportApiResponseActions
       _$RequestUserPermissionsReportApiResponseActions._(options());
 
   @override
-  RequestUserPermissionsReportApiResponse get $initial =>
+  RequestUserPermissionsReportApiResponse get initialState$ =>
       RequestUserPermissionsReportApiResponse();
 
   @override
-  RequestUserPermissionsReportApiResponseBuilder $newBuilder() =>
+  RequestUserPermissionsReportApiResponseBuilder newBuilder$() =>
       RequestUserPermissionsReportApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestUserPermissionsReportApiResponse);
 }

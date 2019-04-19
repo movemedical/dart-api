@@ -228,24 +228,24 @@ class _$ListPriceConstructsForCaseApiPriceConstructActions
   final StatefulActionsOptions<
       ListPriceConstructsForCaseApiPriceConstruct,
       ListPriceConstructsForCaseApiPriceConstructBuilder,
-      ListPriceConstructsForCaseApiPriceConstructActions> $options;
+      ListPriceConstructsForCaseApiPriceConstructActions> options$;
 
-  final ActionDispatcher<ListPriceConstructsForCaseApiPriceConstruct> $replace;
+  final ActionDispatcher<ListPriceConstructsForCaseApiPriceConstruct> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<String> number;
   final FieldDispatcher<String> description;
 
-  _$ListPriceConstructsForCaseApiPriceConstructActions._(this.$options)
-      : $replace = $options.action<ListPriceConstructsForCaseApiPriceConstruct>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListPriceConstructsForCaseApiPriceConstructActions._(this.options$)
+      : replace$ = options$.action<ListPriceConstructsForCaseApiPriceConstruct>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        number = $options.field<String>('number', (a) => a?.number,
+        number = options$.field<String>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -257,18 +257,18 @@ class _$ListPriceConstructsForCaseApiPriceConstructActions
       _$ListPriceConstructsForCaseApiPriceConstructActions._(options());
 
   @override
-  ListPriceConstructsForCaseApiPriceConstruct get $initial =>
+  ListPriceConstructsForCaseApiPriceConstruct get initialState$ =>
       ListPriceConstructsForCaseApiPriceConstruct();
 
   @override
-  ListPriceConstructsForCaseApiPriceConstructBuilder $newBuilder() =>
+  ListPriceConstructsForCaseApiPriceConstructBuilder newBuilder$() =>
       ListPriceConstructsForCaseApiPriceConstructBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgId,
         this.number,
@@ -276,21 +276,16 @@ class _$ListPriceConstructsForCaseApiPriceConstructActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgId.$reducer(reducer);
-    number.$reducer(reducer);
-    description.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgId.reducer$(reducer);
+    number.reducer$(reducer);
+    description.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPriceConstructsForCaseApiPriceConstruct);
 }

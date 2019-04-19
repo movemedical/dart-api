@@ -301,9 +301,9 @@ typedef StatefulActionsOptions<CreateDceApiRequest, CreateDceApiRequestBuilder,
 
 class _$CreateDceApiRequestActions extends CreateDceApiRequestActions {
   final StatefulActionsOptions<CreateDceApiRequest, CreateDceApiRequestBuilder,
-      CreateDceApiRequestActions> $options;
+      CreateDceApiRequestActions> options$;
 
-  final ActionDispatcher<CreateDceApiRequest> $replace;
+  final ActionDispatcher<CreateDceApiRequest> replace$;
   final FieldDispatcher<String> reference;
   final PersonNameActions name;
   final EmailActions email;
@@ -312,38 +312,38 @@ class _$CreateDceApiRequestActions extends CreateDceApiRequestActions {
   final FieldDispatcher<String> workingAtId;
   final FieldDispatcher<bool> active;
 
-  _$CreateDceApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateDceApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+  _$CreateDceApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateDceApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        workingHomeId = $options.field<String>(
+        workingHomeId = options$.field<String>(
             'workingHomeId',
             (a) => a?.workingHomeId,
             (s) => s?.workingHomeId,
             (p, b) => p?.workingHomeId = b),
-        workingAtId = $options.field<String>(
+        workingAtId = options$.field<String>(
             'workingAtId',
             (a) => a?.workingAtId,
             (s) => s?.workingAtId,
             (p, b) => p?.workingAtId = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -352,23 +352,23 @@ class _$CreateDceApiRequestActions extends CreateDceApiRequestActions {
       _$CreateDceApiRequestActions._(options());
 
   @override
-  CreateDceApiRequest get $initial => CreateDceApiRequest();
+  CreateDceApiRequest get initialState$ => CreateDceApiRequest();
 
   @override
-  CreateDceApiRequestBuilder $newBuilder() => CreateDceApiRequestBuilder();
+  CreateDceApiRequestBuilder newBuilder$() => CreateDceApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.reference,
         this.timeZone,
         this.workingHomeId,
@@ -377,25 +377,21 @@ class _$CreateDceApiRequestActions extends CreateDceApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    reference.$reducer(reducer);
-    name.$reducer(reducer);
-    email.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    workingHomeId.$reducer(reducer);
-    workingAtId.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    reference.reducer$(reducer);
+    name.reducer$(reducer);
+    email.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    workingHomeId.reducer$(reducer);
+    workingAtId.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    name.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    name.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateDceApiRequest);
 }

@@ -202,18 +202,18 @@ class _$BuildInspectionApiLocationReceiptDataBinActions
   final StatefulActionsOptions<
       BuildInspectionApiLocationReceiptDataBin,
       BuildInspectionApiLocationReceiptDataBinBuilder,
-      BuildInspectionApiLocationReceiptDataBinActions> $options;
+      BuildInspectionApiLocationReceiptDataBinActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiLocationReceiptDataBin> $replace;
+  final ActionDispatcher<BuildInspectionApiLocationReceiptDataBin> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<BuiltList<String>> entryIds;
 
-  _$BuildInspectionApiLocationReceiptDataBinActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiLocationReceiptDataBin>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BuildInspectionApiLocationReceiptDataBinActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiLocationReceiptDataBin>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        entryIds = $options.field<BuiltList<String>>('entryIds',
+        entryIds = options$.field<BuiltList<String>>('entryIds',
             (a) => a?.entryIds, (s) => s?.entryIds, (p, b) => p?.entryIds = b),
         super._();
 
@@ -222,36 +222,31 @@ class _$BuildInspectionApiLocationReceiptDataBinActions
       _$BuildInspectionApiLocationReceiptDataBinActions._(options());
 
   @override
-  BuildInspectionApiLocationReceiptDataBin get $initial =>
+  BuildInspectionApiLocationReceiptDataBin get initialState$ =>
       BuildInspectionApiLocationReceiptDataBin();
 
   @override
-  BuildInspectionApiLocationReceiptDataBinBuilder $newBuilder() =>
+  BuildInspectionApiLocationReceiptDataBinBuilder newBuilder$() =>
       BuildInspectionApiLocationReceiptDataBinBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.entryIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    entryIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    entryIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiLocationReceiptDataBin);
 }

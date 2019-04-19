@@ -197,21 +197,21 @@ class _$CreateCaseTypeApiRequestActions
   final StatefulActionsOptions<
       CreateCaseTypeApiRequest,
       CreateCaseTypeApiRequestBuilder,
-      CreateCaseTypeApiRequestActions> $options;
+      CreateCaseTypeApiRequestActions> options$;
 
-  final ActionDispatcher<CreateCaseTypeApiRequest> $replace;
+  final ActionDispatcher<CreateCaseTypeApiRequest> replace$;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> name;
   final FieldDispatcher<bool> active;
 
-  _$CreateCaseTypeApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateCaseTypeApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+  _$CreateCaseTypeApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateCaseTypeApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -220,36 +220,32 @@ class _$CreateCaseTypeApiRequestActions
       _$CreateCaseTypeApiRequestActions._(options());
 
   @override
-  CreateCaseTypeApiRequest get $initial => CreateCaseTypeApiRequest();
+  CreateCaseTypeApiRequest get initialState$ => CreateCaseTypeApiRequest();
 
   @override
-  CreateCaseTypeApiRequestBuilder $newBuilder() =>
+  CreateCaseTypeApiRequestBuilder newBuilder$() =>
       CreateCaseTypeApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.bizUnitId,
         this.name,
         this.active,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    name.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    name.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateCaseTypeApiRequest);
 }

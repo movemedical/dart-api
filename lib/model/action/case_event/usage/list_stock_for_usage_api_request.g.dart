@@ -613,9 +613,9 @@ class _$ListStockForUsageApiRequestActions
   final StatefulActionsOptions<
       ListStockForUsageApiRequest,
       ListStockForUsageApiRequestBuilder,
-      ListStockForUsageApiRequestActions> $options;
+      ListStockForUsageApiRequestActions> options$;
 
-  final ActionDispatcher<ListStockForUsageApiRequest> $replace;
+  final ActionDispatcher<ListStockForUsageApiRequest> replace$;
   final FieldDispatcher<String> caseId;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<String> auditId;
@@ -635,17 +635,17 @@ class _$ListStockForUsageApiRequestActions
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListStockForUsageApiOrderBy> orderBy;
 
-  _$ListStockForUsageApiRequestActions._(this.$options)
-      : $replace = $options.action<ListStockForUsageApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseId = $options.field<String>('caseId', (a) => a?.caseId,
+  _$ListStockForUsageApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListStockForUsageApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseId = options$.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         createOrderData = ListStockForUsageApiCreateOrderDataActions(() =>
-            $options.stateful<
+            options$.stateful<
                     ListStockForUsageApiCreateOrderData,
                     ListStockForUsageApiCreateOrderDataBuilder,
                     ListStockForUsageApiCreateOrderDataActions>(
@@ -654,54 +654,54 @@ class _$ListStockForUsageApiRequestActions
                 (s) => s?.createOrderData,
                 (b) => b?.createOrderData,
                 (parent, builder) => parent?.createOrderData = builder)),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        searchText = $options.field<String>('searchText', (a) => a?.searchText,
+        searchText = options$.field<String>('searchText', (a) => a?.searchText,
             (s) => s?.searchText, (p, b) => p?.searchText = b),
-        categoryIds = $options.field<BuiltList<String>>(
+        categoryIds = options$.field<BuiltList<String>>(
             'categoryIds',
             (a) => a?.categoryIds,
             (s) => s?.categoryIds,
             (p, b) => p?.categoryIds = b),
-        location = LocationDataActions(() => $options
+        location = LocationDataActions(() => options$
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        inventoryTypeId = $options.field<String>(
+        inventoryTypeId = options$.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        loanId = $options.field<String>('loanId', (a) => a?.loanId,
+        loanId = options$.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
-        moveItemClass = $options.field<MoveItemClass>(
+        moveItemClass = options$.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        moveItemType = $options.field<MoveItemType>(
+        moveItemType = options$.field<MoveItemType>(
             'moveItemType',
             (a) => a?.moveItemType,
             (s) => s?.moveItemType,
             (p, b) => p?.moveItemType = b),
-        excludeStockIds = $options.field<BuiltList<String>>(
+        excludeStockIds = options$.field<BuiltList<String>>(
             'excludeStockIds',
             (a) => a?.excludeStockIds,
             (s) => s?.excludeStockIds,
             (p, b) => p?.excludeStockIds = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -711,7 +711,7 @@ class _$ListStockForUsageApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListStockForUsageApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListStockForUsageApiOrderBy>,
                     OrderByParamsBuilder<ListStockForUsageApiOrderBy>,
                     OrderByParamsActions<ListStockForUsageApiOrderBy>>(
@@ -727,26 +727,27 @@ class _$ListStockForUsageApiRequestActions
       _$ListStockForUsageApiRequestActions._(options());
 
   @override
-  ListStockForUsageApiRequest get $initial => ListStockForUsageApiRequest();
+  ListStockForUsageApiRequest get initialState$ =>
+      ListStockForUsageApiRequest();
 
   @override
-  ListStockForUsageApiRequestBuilder $newBuilder() =>
+  ListStockForUsageApiRequestBuilder newBuilder$() =>
       ListStockForUsageApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.createOrderData,
         this.location,
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseId,
         this.orderId,
         this.auditId,
@@ -764,39 +765,34 @@ class _$ListStockForUsageApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseId.$reducer(reducer);
-    orderId.$reducer(reducer);
-    auditId.$reducer(reducer);
-    createOrderData.$reducer(reducer);
-    itemId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    searchText.$reducer(reducer);
-    categoryIds.$reducer(reducer);
-    location.$reducer(reducer);
-    inventoryTypeId.$reducer(reducer);
-    containerId.$reducer(reducer);
-    loanId.$reducer(reducer);
-    moveItemClass.$reducer(reducer);
-    moveItemType.$reducer(reducer);
-    excludeStockIds.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseId.reducer$(reducer);
+    orderId.reducer$(reducer);
+    auditId.reducer$(reducer);
+    createOrderData.reducer$(reducer);
+    itemId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    searchText.reducer$(reducer);
+    categoryIds.reducer$(reducer);
+    location.reducer$(reducer);
+    inventoryTypeId.reducer$(reducer);
+    containerId.reducer$(reducer);
+    loanId.reducer$(reducer);
+    moveItemClass.reducer$(reducer);
+    moveItemType.reducer$(reducer);
+    excludeStockIds.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    createOrderData.$middleware(middleware);
-    location.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    createOrderData.middleware$(middleware);
+    location.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListStockForUsageApiRequest);
 }

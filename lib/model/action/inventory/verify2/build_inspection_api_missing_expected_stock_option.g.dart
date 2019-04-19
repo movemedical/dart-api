@@ -341,9 +341,9 @@ class _$BuildInspectionApiMissingExpectedStockOptionActions
   final StatefulActionsOptions<
       BuildInspectionApiMissingExpectedStockOption,
       BuildInspectionApiMissingExpectedStockOptionBuilder,
-      BuildInspectionApiMissingExpectedStockOptionActions> $options;
+      BuildInspectionApiMissingExpectedStockOptionActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiMissingExpectedStockOption> $replace;
+  final ActionDispatcher<BuildInspectionApiMissingExpectedStockOption> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<BuildInspectionApiMissingExpectedStockOptionType> type;
   final FieldDispatcher<AssociationType> pushBackAssociationType;
@@ -353,40 +353,40 @@ class _$BuildInspectionApiMissingExpectedStockOptionActions
   final FieldDispatcher<StockContainerType> pushBackContainerType;
   final FieldDispatcher<String> pushBackContainerId;
 
-  _$BuildInspectionApiMissingExpectedStockOptionActions._(this.$options)
-      : $replace =
-            $options.action<BuildInspectionApiMissingExpectedStockOption>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BuildInspectionApiMissingExpectedStockOptionActions._(this.options$)
+      : replace$ =
+            options$.action<BuildInspectionApiMissingExpectedStockOption>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.field<BuildInspectionApiMissingExpectedStockOptionType>(
+        type = options$.field<BuildInspectionApiMissingExpectedStockOptionType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        pushBackAssociationType = $options.field<AssociationType>(
+        pushBackAssociationType = options$.field<AssociationType>(
             'pushBackAssociationType',
             (a) => a?.pushBackAssociationType,
             (s) => s?.pushBackAssociationType,
             (p, b) => p?.pushBackAssociationType = b),
-        pushBackAssociationId = $options.field<String>(
+        pushBackAssociationId = options$.field<String>(
             'pushBackAssociationId',
             (a) => a?.pushBackAssociationId,
             (s) => s?.pushBackAssociationId,
             (p, b) => p?.pushBackAssociationId = b),
-        pushBackLocationType = $options.field<LocationType>(
+        pushBackLocationType = options$.field<LocationType>(
             'pushBackLocationType',
             (a) => a?.pushBackLocationType,
             (s) => s?.pushBackLocationType,
             (p, b) => p?.pushBackLocationType = b),
-        pushBackLocationId = $options.field<String>(
+        pushBackLocationId = options$.field<String>(
             'pushBackLocationId',
             (a) => a?.pushBackLocationId,
             (s) => s?.pushBackLocationId,
             (p, b) => p?.pushBackLocationId = b),
-        pushBackContainerType = $options.field<StockContainerType>(
+        pushBackContainerType = options$.field<StockContainerType>(
             'pushBackContainerType',
             (a) => a?.pushBackContainerType,
             (s) => s?.pushBackContainerType,
             (p, b) => p?.pushBackContainerType = b),
-        pushBackContainerId = $options.field<String>(
+        pushBackContainerId = options$.field<String>(
             'pushBackContainerId',
             (a) => a?.pushBackContainerId,
             (s) => s?.pushBackContainerId,
@@ -398,18 +398,18 @@ class _$BuildInspectionApiMissingExpectedStockOptionActions
       _$BuildInspectionApiMissingExpectedStockOptionActions._(options());
 
   @override
-  BuildInspectionApiMissingExpectedStockOption get $initial =>
+  BuildInspectionApiMissingExpectedStockOption get initialState$ =>
       BuildInspectionApiMissingExpectedStockOption();
 
   @override
-  BuildInspectionApiMissingExpectedStockOptionBuilder $newBuilder() =>
+  BuildInspectionApiMissingExpectedStockOptionBuilder newBuilder$() =>
       BuildInspectionApiMissingExpectedStockOptionBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.type,
         this.pushBackAssociationType,
@@ -421,25 +421,20 @@ class _$BuildInspectionApiMissingExpectedStockOptionActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    type.$reducer(reducer);
-    pushBackAssociationType.$reducer(reducer);
-    pushBackAssociationId.$reducer(reducer);
-    pushBackLocationType.$reducer(reducer);
-    pushBackLocationId.$reducer(reducer);
-    pushBackContainerType.$reducer(reducer);
-    pushBackContainerId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    type.reducer$(reducer);
+    pushBackAssociationType.reducer$(reducer);
+    pushBackAssociationId.reducer$(reducer);
+    pushBackLocationType.reducer$(reducer);
+    pushBackLocationId.reducer$(reducer);
+    pushBackContainerType.reducer$(reducer);
+    pushBackContainerId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiMissingExpectedStockOption);
 }

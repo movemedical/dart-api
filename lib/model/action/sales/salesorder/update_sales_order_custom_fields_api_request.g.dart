@@ -186,17 +186,17 @@ class _$UpdateSalesOrderCustomFieldsApiRequestActions
   final StatefulActionsOptions<
       UpdateSalesOrderCustomFieldsApiRequest,
       UpdateSalesOrderCustomFieldsApiRequestBuilder,
-      UpdateSalesOrderCustomFieldsApiRequestActions> $options;
+      UpdateSalesOrderCustomFieldsApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateSalesOrderCustomFieldsApiRequest> $replace;
+  final ActionDispatcher<UpdateSalesOrderCustomFieldsApiRequest> replace$;
   final FieldDispatcher<BuiltList<OrderCustomFieldValue>>
       orderCustomFieldValues;
 
-  _$UpdateSalesOrderCustomFieldsApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateSalesOrderCustomFieldsApiRequest>(
-            '\$replace', (a) => a?.$replace),
+  _$UpdateSalesOrderCustomFieldsApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateSalesOrderCustomFieldsApiRequest>(
+            'replace\$', (a) => a?.replace$),
         orderCustomFieldValues =
-            $options.field<BuiltList<OrderCustomFieldValue>>(
+            options$.field<BuiltList<OrderCustomFieldValue>>(
                 'orderCustomFieldValues',
                 (a) => a?.orderCustomFieldValues,
                 (s) => s?.orderCustomFieldValues,
@@ -208,34 +208,29 @@ class _$UpdateSalesOrderCustomFieldsApiRequestActions
       _$UpdateSalesOrderCustomFieldsApiRequestActions._(options());
 
   @override
-  UpdateSalesOrderCustomFieldsApiRequest get $initial =>
+  UpdateSalesOrderCustomFieldsApiRequest get initialState$ =>
       UpdateSalesOrderCustomFieldsApiRequest();
 
   @override
-  UpdateSalesOrderCustomFieldsApiRequestBuilder $newBuilder() =>
+  UpdateSalesOrderCustomFieldsApiRequestBuilder newBuilder$() =>
       UpdateSalesOrderCustomFieldsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderCustomFieldValues,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderCustomFieldValues.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderCustomFieldValues.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateSalesOrderCustomFieldsApiRequest);
 }

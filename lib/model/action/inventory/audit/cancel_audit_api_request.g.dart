@@ -149,15 +149,15 @@ typedef StatefulActionsOptions<
 
 class _$CancelAuditApiRequestActions extends CancelAuditApiRequestActions {
   final StatefulActionsOptions<CancelAuditApiRequest,
-      CancelAuditApiRequestBuilder, CancelAuditApiRequestActions> $options;
+      CancelAuditApiRequestBuilder, CancelAuditApiRequestActions> options$;
 
-  final ActionDispatcher<CancelAuditApiRequest> $replace;
+  final ActionDispatcher<CancelAuditApiRequest> replace$;
   final FieldDispatcher<String> auditId;
 
-  _$CancelAuditApiRequestActions._(this.$options)
-      : $replace = $options.action<CancelAuditApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+  _$CancelAuditApiRequestActions._(this.options$)
+      : replace$ = options$.action<CancelAuditApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         super._();
 
@@ -166,31 +166,27 @@ class _$CancelAuditApiRequestActions extends CancelAuditApiRequestActions {
       _$CancelAuditApiRequestActions._(options());
 
   @override
-  CancelAuditApiRequest get $initial => CancelAuditApiRequest();
+  CancelAuditApiRequest get initialState$ => CancelAuditApiRequest();
 
   @override
-  CancelAuditApiRequestBuilder $newBuilder() => CancelAuditApiRequestBuilder();
+  CancelAuditApiRequestBuilder newBuilder$() => CancelAuditApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CancelAuditApiRequest);
 }

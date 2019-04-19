@@ -413,9 +413,9 @@ class _$UpdateSalesOrderHeaderApiRequestActions
   final StatefulActionsOptions<
       UpdateSalesOrderHeaderApiRequest,
       UpdateSalesOrderHeaderApiRequestBuilder,
-      UpdateSalesOrderHeaderApiRequestActions> $options;
+      UpdateSalesOrderHeaderApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateSalesOrderHeaderApiRequest> $replace;
+  final ActionDispatcher<UpdateSalesOrderHeaderApiRequest> replace$;
   final FieldDispatcher<bool> validateCanDo;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<String> poNumber;
@@ -428,54 +428,54 @@ class _$UpdateSalesOrderHeaderApiRequestActions
   final FieldDispatcher<String> attention;
   final FieldDispatcher<String> email;
 
-  _$UpdateSalesOrderHeaderApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateSalesOrderHeaderApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        validateCanDo = $options.field<bool>(
+  _$UpdateSalesOrderHeaderApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateSalesOrderHeaderApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        validateCanDo = options$.field<bool>(
             'validateCanDo',
             (a) => a?.validateCanDo,
             (s) => s?.validateCanDo,
             (p, b) => p?.validateCanDo = b),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        billToAddressId = $options.field<String>(
+        billToAddressId = options$.field<String>(
             'billToAddressId',
             (a) => a?.billToAddressId,
             (s) => s?.billToAddressId,
             (p, b) => p?.billToAddressId = b),
-        shipToAddressId = $options.field<String>(
+        shipToAddressId = options$.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
             (p, b) => p?.shipToAddressId = b),
-        deliverWindowStart = $options.field<DateTime>(
+        deliverWindowStart = options$.field<DateTime>(
             'deliverWindowStart',
             (a) => a?.deliverWindowStart,
             (s) => s?.deliverWindowStart,
             (p, b) => p?.deliverWindowStart = b),
-        deliverWindowEnd = $options.field<DateTime>(
+        deliverWindowEnd = options$.field<DateTime>(
             'deliverWindowEnd',
             (a) => a?.deliverWindowEnd,
             (s) => s?.deliverWindowEnd,
             (p, b) => p?.deliverWindowEnd = b),
-        deliverToAddressId = $options.field<String>(
+        deliverToAddressId = options$.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
             (p, b) => p?.deliverToAddressId = b),
         deliverToAddressOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToAddressOverride',
                 (a) => a.deliverToAddressOverride,
                 (s) => s?.deliverToAddressOverride,
                 (b) => b?.deliverToAddressOverride,
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
-        attention = $options.field<String>('attention', (a) => a?.attention,
+        attention = options$.field<String>('attention', (a) => a?.attention,
             (s) => s?.attention, (p, b) => p?.attention = b),
-        email = $options.field<String>(
+        email = options$.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
         super._();
 
@@ -484,24 +484,24 @@ class _$UpdateSalesOrderHeaderApiRequestActions
       _$UpdateSalesOrderHeaderApiRequestActions._(options());
 
   @override
-  UpdateSalesOrderHeaderApiRequest get $initial =>
+  UpdateSalesOrderHeaderApiRequest get initialState$ =>
       UpdateSalesOrderHeaderApiRequest();
 
   @override
-  UpdateSalesOrderHeaderApiRequestBuilder $newBuilder() =>
+  UpdateSalesOrderHeaderApiRequestBuilder newBuilder$() =>
       UpdateSalesOrderHeaderApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.validateCanDo,
         this.orderId,
         this.poNumber,
@@ -515,29 +515,24 @@ class _$UpdateSalesOrderHeaderApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    validateCanDo.$reducer(reducer);
-    orderId.$reducer(reducer);
-    poNumber.$reducer(reducer);
-    billToAddressId.$reducer(reducer);
-    shipToAddressId.$reducer(reducer);
-    deliverWindowStart.$reducer(reducer);
-    deliverWindowEnd.$reducer(reducer);
-    deliverToAddressId.$reducer(reducer);
-    deliverToAddressOverride.$reducer(reducer);
-    attention.$reducer(reducer);
-    email.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    validateCanDo.reducer$(reducer);
+    orderId.reducer$(reducer);
+    poNumber.reducer$(reducer);
+    billToAddressId.reducer$(reducer);
+    shipToAddressId.reducer$(reducer);
+    deliverWindowStart.reducer$(reducer);
+    deliverWindowEnd.reducer$(reducer);
+    deliverToAddressId.reducer$(reducer);
+    deliverToAddressOverride.reducer$(reducer);
+    attention.reducer$(reducer);
+    email.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    deliverToAddressOverride.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    deliverToAddressOverride.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateSalesOrderHeaderApiRequest);
 }

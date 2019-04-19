@@ -435,9 +435,9 @@ typedef StatefulActionsOptions<
 
 class _$CaseCustomFieldValueActions extends CaseCustomFieldValueActions {
   final StatefulActionsOptions<CaseCustomFieldValue,
-      CaseCustomFieldValueBuilder, CaseCustomFieldValueActions> $options;
+      CaseCustomFieldValueBuilder, CaseCustomFieldValueActions> options$;
 
-  final ActionDispatcher<CaseCustomFieldValue> $replace;
+  final ActionDispatcher<CaseCustomFieldValue> replace$;
   final FieldDispatcher<String> customFieldId;
   final FieldDispatcher<String> customFieldName;
   final FieldDispatcher<String> customFieldValueId;
@@ -452,55 +452,55 @@ class _$CaseCustomFieldValueActions extends CaseCustomFieldValueActions {
   final FieldDispatcher<double> doubleValue;
   final FieldDispatcher<int> longValue;
 
-  _$CaseCustomFieldValueActions._(this.$options)
-      : $replace = $options.action<CaseCustomFieldValue>(
-            '\$replace', (a) => a?.$replace),
-        customFieldId = $options.field<String>(
+  _$CaseCustomFieldValueActions._(this.options$)
+      : replace$ = options$.action<CaseCustomFieldValue>(
+            'replace\$', (a) => a?.replace$),
+        customFieldId = options$.field<String>(
             'customFieldId',
             (a) => a?.customFieldId,
             (s) => s?.customFieldId,
             (p, b) => p?.customFieldId = b),
-        customFieldName = $options.field<String>(
+        customFieldName = options$.field<String>(
             'customFieldName',
             (a) => a?.customFieldName,
             (s) => s?.customFieldName,
             (p, b) => p?.customFieldName = b),
-        customFieldValueId = $options.field<String>(
+        customFieldValueId = options$.field<String>(
             'customFieldValueId',
             (a) => a?.customFieldValueId,
             (s) => s?.customFieldValueId,
             (p, b) => p?.customFieldValueId = b),
-        customFieldDataType = $options.field<CustomFieldDataType>(
+        customFieldDataType = options$.field<CustomFieldDataType>(
             'customFieldDataType',
             (a) => a?.customFieldDataType,
             (s) => s?.customFieldDataType,
             (p, b) => p?.customFieldDataType = b),
-        sort = $options.field<int>(
+        sort = options$.field<int>(
             'sort', (a) => a?.sort, (s) => s?.sort, (p, b) => p?.sort = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        required = $options.field<bool>('required', (a) => a?.required,
+        required = options$.field<bool>('required', (a) => a?.required,
             (s) => s?.required, (p, b) => p?.required = b),
-        editable = $options.field<bool>('editable', (a) => a?.editable,
+        editable = options$.field<bool>('editable', (a) => a?.editable,
             (s) => s?.editable, (p, b) => p?.editable = b),
-        booleanValue = $options.field<bool>(
+        booleanValue = options$.field<bool>(
             'booleanValue',
             (a) => a?.booleanValue,
             (s) => s?.booleanValue,
             (p, b) => p?.booleanValue = b),
-        stringValue = $options.field<String>(
+        stringValue = options$.field<String>(
             'stringValue',
             (a) => a?.stringValue,
             (s) => s?.stringValue,
             (p, b) => p?.stringValue = b),
-        dateValue = $options.field<DateTime>('dateValue', (a) => a?.dateValue,
+        dateValue = options$.field<DateTime>('dateValue', (a) => a?.dateValue,
             (s) => s?.dateValue, (p, b) => p?.dateValue = b),
-        doubleValue = $options.field<double>(
+        doubleValue = options$.field<double>(
             'doubleValue',
             (a) => a?.doubleValue,
             (s) => s?.doubleValue,
             (p, b) => p?.doubleValue = b),
-        longValue = $options.field<int>('longValue', (a) => a?.longValue,
+        longValue = options$.field<int>('longValue', (a) => a?.longValue,
             (s) => s?.longValue, (p, b) => p?.longValue = b),
         super._();
 
@@ -509,16 +509,16 @@ class _$CaseCustomFieldValueActions extends CaseCustomFieldValueActions {
       _$CaseCustomFieldValueActions._(options());
 
   @override
-  CaseCustomFieldValue get $initial => CaseCustomFieldValue();
+  CaseCustomFieldValue get initialState$ => CaseCustomFieldValue();
 
   @override
-  CaseCustomFieldValueBuilder $newBuilder() => CaseCustomFieldValueBuilder();
+  CaseCustomFieldValueBuilder newBuilder$() => CaseCustomFieldValueBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customFieldId,
         this.customFieldName,
         this.customFieldValueId,
@@ -535,29 +535,25 @@ class _$CaseCustomFieldValueActions extends CaseCustomFieldValueActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    customFieldId.$reducer(reducer);
-    customFieldName.$reducer(reducer);
-    customFieldValueId.$reducer(reducer);
-    customFieldDataType.$reducer(reducer);
-    sort.$reducer(reducer);
-    active.$reducer(reducer);
-    required.$reducer(reducer);
-    editable.$reducer(reducer);
-    booleanValue.$reducer(reducer);
-    stringValue.$reducer(reducer);
-    dateValue.$reducer(reducer);
-    doubleValue.$reducer(reducer);
-    longValue.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    customFieldId.reducer$(reducer);
+    customFieldName.reducer$(reducer);
+    customFieldValueId.reducer$(reducer);
+    customFieldDataType.reducer$(reducer);
+    sort.reducer$(reducer);
+    active.reducer$(reducer);
+    required.reducer$(reducer);
+    editable.reducer$(reducer);
+    booleanValue.reducer$(reducer);
+    stringValue.reducer$(reducer);
+    dateValue.reducer$(reducer);
+    doubleValue.reducer$(reducer);
+    longValue.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CaseCustomFieldValue);
 }

@@ -160,15 +160,15 @@ class _$ConversationUpdatedPushMessageActions
   final StatefulActionsOptions<
       ConversationUpdatedPushMessage,
       ConversationUpdatedPushMessageBuilder,
-      ConversationUpdatedPushMessageActions> $options;
+      ConversationUpdatedPushMessageActions> options$;
 
-  final ActionDispatcher<ConversationUpdatedPushMessage> $replace;
+  final ActionDispatcher<ConversationUpdatedPushMessage> replace$;
   final FieldDispatcher<String> conversationId;
 
-  _$ConversationUpdatedPushMessageActions._(this.$options)
-      : $replace = $options.action<ConversationUpdatedPushMessage>(
-            '\$replace', (a) => a?.$replace),
-        conversationId = $options.field<String>(
+  _$ConversationUpdatedPushMessageActions._(this.options$)
+      : replace$ = options$.action<ConversationUpdatedPushMessage>(
+            'replace\$', (a) => a?.replace$),
+        conversationId = options$.field<String>(
             'conversationId',
             (a) => a?.conversationId,
             (s) => s?.conversationId,
@@ -180,34 +180,29 @@ class _$ConversationUpdatedPushMessageActions
       _$ConversationUpdatedPushMessageActions._(options());
 
   @override
-  ConversationUpdatedPushMessage get $initial =>
+  ConversationUpdatedPushMessage get initialState$ =>
       ConversationUpdatedPushMessage();
 
   @override
-  ConversationUpdatedPushMessageBuilder $newBuilder() =>
+  ConversationUpdatedPushMessageBuilder newBuilder$() =>
       ConversationUpdatedPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.conversationId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    conversationId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    conversationId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ConversationUpdatedPushMessage);
 }

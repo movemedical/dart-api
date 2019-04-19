@@ -22,67 +22,32 @@ class _$RegisterMobileDeviceApi extends RegisterMobileDeviceApi {
           ApiResult<RegisterMobileDeviceApiResponse>>,
       CommandStateBuilder<ApiCommand<RegisterMobileDeviceApiRequest>,
           ApiResult<RegisterMobileDeviceApiResponse>>,
-      RegisterMobileDeviceApi> $options;
+      RegisterMobileDeviceApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<RegisterMobileDeviceApiResponse>>> $replace;
+          ApiResult<RegisterMobileDeviceApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<RegisterMobileDeviceApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<RegisterMobileDeviceApiResponse>,
-          RegisterMobileDeviceApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<RegisterMobileDeviceApiResponse>,
-          RegisterMobileDeviceApi,
-          Command<ApiCommand<RegisterMobileDeviceApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<RegisterMobileDeviceApiResponse>,
-          RegisterMobileDeviceApi,
-          CommandResult<ApiResult<RegisterMobileDeviceApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<RegisterMobileDeviceApiResponse>,
-          RegisterMobileDeviceApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<RegisterMobileDeviceApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RegisterMobileDeviceApi._(this.$options)
-      : $replace = $options.action<
+  _$RegisterMobileDeviceApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<RegisterMobileDeviceApiRequest>,
                     ApiResult<RegisterMobileDeviceApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RegisterMobileDeviceApiRequest>,
-                ApiResult<RegisterMobileDeviceApiResponse>,
-                RegisterMobileDeviceApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RegisterMobileDeviceApiRequest>,
-                    ApiResult<RegisterMobileDeviceApiResponse>,
-                    RegisterMobileDeviceApi,
-                    Command<ApiCommand<RegisterMobileDeviceApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RegisterMobileDeviceApiRequest>,
-                    ApiResult<RegisterMobileDeviceApiResponse>,
-                    RegisterMobileDeviceApi,
-                    CommandResult<ApiResult<RegisterMobileDeviceApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RegisterMobileDeviceApiRequest>,
-                ApiResult<RegisterMobileDeviceApiResponse>,
-                RegisterMobileDeviceApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<RegisterMobileDeviceApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<RegisterMobileDeviceApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RegisterMobileDeviceApi(RegisterMobileDeviceApiOptions options) =>
@@ -91,32 +56,26 @@ class _$RegisterMobileDeviceApi extends RegisterMobileDeviceApi {
   @override
   CommandState<ApiCommand<RegisterMobileDeviceApiRequest>,
           ApiResult<RegisterMobileDeviceApiResponse>>
-      get $initial => CommandState<ApiCommand<RegisterMobileDeviceApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<RegisterMobileDeviceApiRequest>,
           ApiResult<RegisterMobileDeviceApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<RegisterMobileDeviceApiRequest>,
           ApiResult<RegisterMobileDeviceApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RegisterMobileDeviceApiRequest>,
           ApiResult<RegisterMobileDeviceApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RegisterMobileDeviceApiRequest)]),
-        FullType(ApiResult, [FullType(RegisterMobileDeviceApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

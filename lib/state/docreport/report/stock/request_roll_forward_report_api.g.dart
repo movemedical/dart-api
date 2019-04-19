@@ -22,63 +22,29 @@ class _$RequestRollForwardReportApi extends RequestRollForwardReportApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestRollForwardReportApiRequest>,
           ApiResult<Nothing>>,
-      RequestRollForwardReportApi> $options;
+      RequestRollForwardReportApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestRollForwardReportApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestRollForwardReportApiRequest>,
-          ApiResult<Nothing>, RequestRollForwardReportApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestRollForwardReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestRollForwardReportApi,
-          Command<ApiCommand<RequestRollForwardReportApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestRollForwardReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestRollForwardReportApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestRollForwardReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestRollForwardReportApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<RequestRollForwardReportApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RequestRollForwardReportApi._(this.$options)
-      : $replace = $options.action<
+  _$RequestRollForwardReportApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<RequestRollForwardReportApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RequestRollForwardReportApiRequest>,
-                ApiResult<Nothing>,
-                RequestRollForwardReportApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestRollForwardReportApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestRollForwardReportApi,
-                    Command<ApiCommand<RequestRollForwardReportApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestRollForwardReportApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestRollForwardReportApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RequestRollForwardReportApiRequest>,
-                ApiResult<Nothing>,
-                RequestRollForwardReportApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<RequestRollForwardReportApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RequestRollForwardReportApi(
@@ -88,31 +54,24 @@ class _$RequestRollForwardReportApi extends RequestRollForwardReportApi {
   @override
   CommandState<ApiCommand<RequestRollForwardReportApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<RequestRollForwardReportApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestRollForwardReportApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RequestRollForwardReportApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RequestRollForwardReportApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

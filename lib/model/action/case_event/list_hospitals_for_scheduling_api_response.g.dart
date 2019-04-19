@@ -181,15 +181,15 @@ class _$ListHospitalsForSchedulingApiResponseActions
   final StatefulActionsOptions<
       ListHospitalsForSchedulingApiResponse,
       ListHospitalsForSchedulingApiResponseBuilder,
-      ListHospitalsForSchedulingApiResponseActions> $options;
+      ListHospitalsForSchedulingApiResponseActions> options$;
 
-  final ActionDispatcher<ListHospitalsForSchedulingApiResponse> $replace;
+  final ActionDispatcher<ListHospitalsForSchedulingApiResponse> replace$;
   final FieldDispatcher<BuiltList<Hospital>> hospitals;
 
-  _$ListHospitalsForSchedulingApiResponseActions._(this.$options)
-      : $replace = $options.action<ListHospitalsForSchedulingApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        hospitals = $options.field<BuiltList<Hospital>>(
+  _$ListHospitalsForSchedulingApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListHospitalsForSchedulingApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        hospitals = options$.field<BuiltList<Hospital>>(
             'hospitals',
             (a) => a?.hospitals,
             (s) => s?.hospitals,
@@ -201,34 +201,29 @@ class _$ListHospitalsForSchedulingApiResponseActions
       _$ListHospitalsForSchedulingApiResponseActions._(options());
 
   @override
-  ListHospitalsForSchedulingApiResponse get $initial =>
+  ListHospitalsForSchedulingApiResponse get initialState$ =>
       ListHospitalsForSchedulingApiResponse();
 
   @override
-  ListHospitalsForSchedulingApiResponseBuilder $newBuilder() =>
+  ListHospitalsForSchedulingApiResponseBuilder newBuilder$() =>
       ListHospitalsForSchedulingApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.hospitals,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    hospitals.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    hospitals.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListHospitalsForSchedulingApiResponse);
 }

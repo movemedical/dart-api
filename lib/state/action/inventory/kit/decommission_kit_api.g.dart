@@ -20,57 +20,29 @@ class _$DecommissionKitApi extends DecommissionKitApi {
       CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<DecommissionKitApiRequest>,
           ApiResult<Nothing>>,
-      DecommissionKitApi> $options;
+      DecommissionKitApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<DecommissionKitApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>,
-          DecommissionKitApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<DecommissionKitApiRequest>,
-          ApiResult<Nothing>,
-          DecommissionKitApi,
-          Command<ApiCommand<DecommissionKitApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>,
-          DecommissionKitApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>,
-          DecommissionKitApi, CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<DecommissionKitApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$DecommissionKitApi._(this.$options)
-      : $replace = $options.action<
+  _$DecommissionKitApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Nothing>,
-                DecommissionKitApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<DecommissionKitApiRequest>,
-                    ApiResult<Nothing>,
-                    DecommissionKitApi,
-                    Command<ApiCommand<DecommissionKitApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<DecommissionKitApiRequest>,
-                    ApiResult<Nothing>,
-                    DecommissionKitApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Nothing>,
-                DecommissionKitApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<DecommissionKitApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$DecommissionKitApi(DecommissionKitApiOptions options) =>
@@ -78,30 +50,23 @@ class _$DecommissionKitApi extends DecommissionKitApi {
 
   @override
   CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<DecommissionKitApiRequest>,
+      get initialState$ => CommandState<ApiCommand<DecommissionKitApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(DecommissionKitApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

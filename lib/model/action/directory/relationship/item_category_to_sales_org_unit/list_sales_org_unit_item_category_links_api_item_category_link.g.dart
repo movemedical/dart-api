@@ -336,10 +336,10 @@ class _$ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkActions
   final StatefulActionsOptions<
       ListSalesOrgUnitItemCategoryLinksApiItemCategoryLink,
       ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkBuilder,
-      ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkActions> $options;
+      ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkActions> options$;
 
   final ActionDispatcher<ListSalesOrgUnitItemCategoryLinksApiItemCategoryLink>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> itemCategoryId;
   final FieldDispatcher<String> itemCategoryName;
@@ -349,37 +349,37 @@ class _$ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkActions
   final FieldDispatcher<bool> canSell;
   final FieldDispatcher<bool> inherited;
 
-  _$ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkActions._(this.$options)
-      : $replace = $options
+  _$ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkActions._(this.options$)
+      : replace$ = options$
             .action<ListSalesOrgUnitItemCategoryLinksApiItemCategoryLink>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        itemCategoryId = $options.field<String>(
+        itemCategoryId = options$.field<String>(
             'itemCategoryId',
             (a) => a?.itemCategoryId,
             (s) => s?.itemCategoryId,
             (p, b) => p?.itemCategoryId = b),
-        itemCategoryName = $options.field<String>(
+        itemCategoryName = options$.field<String>(
             'itemCategoryName',
             (a) => a?.itemCategoryName,
             (s) => s?.itemCategoryName,
             (p, b) => p?.itemCategoryName = b),
-        itemCategoryCode = $options.field<String>(
+        itemCategoryCode = options$.field<String>(
             'itemCategoryCode',
             (a) => a?.itemCategoryCode,
             (s) => s?.itemCategoryCode,
             (p, b) => p?.itemCategoryCode = b),
-        displayText = $options.field<String>(
+        displayText = options$.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
             (p, b) => p?.displayText = b),
-        canStock = $options.field<bool>('canStock', (a) => a?.canStock,
+        canStock = options$.field<bool>('canStock', (a) => a?.canStock,
             (s) => s?.canStock, (p, b) => p?.canStock = b),
-        canSell = $options.field<bool>('canSell', (a) => a?.canSell,
+        canSell = options$.field<bool>('canSell', (a) => a?.canSell,
             (s) => s?.canSell, (p, b) => p?.canSell = b),
-        inherited = $options.field<bool>('inherited', (a) => a?.inherited,
+        inherited = options$.field<bool>('inherited', (a) => a?.inherited,
             (s) => s?.inherited, (p, b) => p?.inherited = b),
         super._();
 
@@ -390,18 +390,18 @@ class _$ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkActions
           ._(options());
 
   @override
-  ListSalesOrgUnitItemCategoryLinksApiItemCategoryLink get $initial =>
+  ListSalesOrgUnitItemCategoryLinksApiItemCategoryLink get initialState$ =>
       ListSalesOrgUnitItemCategoryLinksApiItemCategoryLink();
 
   @override
-  ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkBuilder $newBuilder() =>
+  ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkBuilder newBuilder$() =>
       ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.itemCategoryId,
         this.itemCategoryName,
@@ -413,25 +413,20 @@ class _$ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    itemCategoryId.$reducer(reducer);
-    itemCategoryName.$reducer(reducer);
-    itemCategoryCode.$reducer(reducer);
-    displayText.$reducer(reducer);
-    canStock.$reducer(reducer);
-    canSell.$reducer(reducer);
-    inherited.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    itemCategoryId.reducer$(reducer);
+    itemCategoryName.reducer$(reducer);
+    itemCategoryCode.reducer$(reducer);
+    displayText.reducer$(reducer);
+    canStock.reducer$(reducer);
+    canSell.reducer$(reducer);
+    inherited.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(ListSalesOrgUnitItemCategoryLinksApiItemCategoryLink);
 }

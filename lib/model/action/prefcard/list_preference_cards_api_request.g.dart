@@ -490,9 +490,9 @@ class _$ListPreferenceCardsApiRequestActions
   final StatefulActionsOptions<
       ListPreferenceCardsApiRequest,
       ListPreferenceCardsApiRequestBuilder,
-      ListPreferenceCardsApiRequestActions> $options;
+      ListPreferenceCardsApiRequestActions> options$;
 
-  final ActionDispatcher<ListPreferenceCardsApiRequest> $replace;
+  final ActionDispatcher<ListPreferenceCardsApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> ids;
   final FieldDispatcher<BuiltList<String>> physicianIds;
   final FieldDispatcher<BuiltList<String>> facilityIds;
@@ -506,53 +506,53 @@ class _$ListPreferenceCardsApiRequestActions
   final FieldDispatcher<bool> active;
   final PaginationParamsActions paging;
 
-  _$ListPreferenceCardsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListPreferenceCardsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        ids = $options.field<BuiltList<String>>(
+  _$ListPreferenceCardsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListPreferenceCardsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        ids = options$.field<BuiltList<String>>(
             'ids', (a) => a?.ids, (s) => s?.ids, (p, b) => p?.ids = b),
-        physicianIds = $options.field<BuiltList<String>>(
+        physicianIds = options$.field<BuiltList<String>>(
             'physicianIds',
             (a) => a?.physicianIds,
             (s) => s?.physicianIds,
             (p, b) => p?.physicianIds = b),
-        facilityIds = $options.field<BuiltList<String>>(
+        facilityIds = options$.field<BuiltList<String>>(
             'facilityIds',
             (a) => a?.facilityIds,
             (s) => s?.facilityIds,
             (p, b) => p?.facilityIds = b),
-        techniqueIds = $options.field<BuiltList<String>>(
+        techniqueIds = options$.field<BuiltList<String>>(
             'techniqueIds',
             (a) => a?.techniqueIds,
             (s) => s?.techniqueIds,
             (p, b) => p?.techniqueIds = b),
-        procedureIds = $options.field<BuiltList<String>>(
+        procedureIds = options$.field<BuiltList<String>>(
             'procedureIds',
             (a) => a?.procedureIds,
             (s) => s?.procedureIds,
             (p, b) => p?.procedureIds = b),
-        subProcedureIds = $options.field<BuiltList<String>>(
+        subProcedureIds = options$.field<BuiltList<String>>(
             'subProcedureIds',
             (a) => a?.subProcedureIds,
             (s) => s?.subProcedureIds,
             (p, b) => p?.subProcedureIds = b),
-        itemIds = $options.field<BuiltList<String>>('itemIds',
+        itemIds = options$.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        productGroupIds = $options.field<BuiltList<String>>(
+        productGroupIds = options$.field<BuiltList<String>>(
             'productGroupIds',
             (a) => a?.productGroupIds,
             (s) => s?.productGroupIds,
             (p, b) => p?.productGroupIds = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -568,23 +568,24 @@ class _$ListPreferenceCardsApiRequestActions
       _$ListPreferenceCardsApiRequestActions._(options());
 
   @override
-  ListPreferenceCardsApiRequest get $initial => ListPreferenceCardsApiRequest();
+  ListPreferenceCardsApiRequest get initialState$ =>
+      ListPreferenceCardsApiRequest();
 
   @override
-  ListPreferenceCardsApiRequestBuilder $newBuilder() =>
+  ListPreferenceCardsApiRequestBuilder newBuilder$() =>
       ListPreferenceCardsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.ids,
         this.physicianIds,
         this.facilityIds,
@@ -599,30 +600,25 @@ class _$ListPreferenceCardsApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    ids.$reducer(reducer);
-    physicianIds.$reducer(reducer);
-    facilityIds.$reducer(reducer);
-    techniqueIds.$reducer(reducer);
-    procedureIds.$reducer(reducer);
-    subProcedureIds.$reducer(reducer);
-    itemIds.$reducer(reducer);
-    productGroupIds.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    search.$reducer(reducer);
-    active.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    ids.reducer$(reducer);
+    physicianIds.reducer$(reducer);
+    facilityIds.reducer$(reducer);
+    techniqueIds.reducer$(reducer);
+    procedureIds.reducer$(reducer);
+    subProcedureIds.reducer$(reducer);
+    itemIds.reducer$(reducer);
+    productGroupIds.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    search.reducer$(reducer);
+    active.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPreferenceCardsApiRequest);
 }

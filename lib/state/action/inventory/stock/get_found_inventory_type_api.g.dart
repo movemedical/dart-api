@@ -22,68 +22,32 @@ class _$GetFoundInventoryTypeApi extends GetFoundInventoryTypeApi {
           ApiResult<GetFoundInventoryTypeApiResponse>>,
       CommandStateBuilder<ApiCommand<GetFoundInventoryTypeApiRequest>,
           ApiResult<GetFoundInventoryTypeApiResponse>>,
-      GetFoundInventoryTypeApi> $options;
+      GetFoundInventoryTypeApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetFoundInventoryTypeApiRequest>,
-          ApiResult<GetFoundInventoryTypeApiResponse>>> $replace;
+          ApiResult<GetFoundInventoryTypeApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetFoundInventoryTypeApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetFoundInventoryTypeApiRequest>,
-          ApiResult<GetFoundInventoryTypeApiResponse>,
-          GetFoundInventoryTypeApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetFoundInventoryTypeApiRequest>,
-          ApiResult<GetFoundInventoryTypeApiResponse>,
-          GetFoundInventoryTypeApi,
-          Command<ApiCommand<GetFoundInventoryTypeApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetFoundInventoryTypeApiRequest>,
-          ApiResult<GetFoundInventoryTypeApiResponse>,
-          GetFoundInventoryTypeApi,
-          CommandResult<ApiResult<GetFoundInventoryTypeApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetFoundInventoryTypeApiRequest>,
-          ApiResult<GetFoundInventoryTypeApiResponse>,
-          GetFoundInventoryTypeApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<GetFoundInventoryTypeApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetFoundInventoryTypeApi._(this.$options)
-      : $replace = $options.action<
+  _$GetFoundInventoryTypeApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetFoundInventoryTypeApiRequest>,
                     ApiResult<GetFoundInventoryTypeApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetFoundInventoryTypeApiRequest>,
-                ApiResult<GetFoundInventoryTypeApiResponse>,
-                GetFoundInventoryTypeApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetFoundInventoryTypeApiRequest>,
-                    ApiResult<GetFoundInventoryTypeApiResponse>,
-                    GetFoundInventoryTypeApi,
-                    Command<ApiCommand<GetFoundInventoryTypeApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetFoundInventoryTypeApiRequest>,
-                    ApiResult<GetFoundInventoryTypeApiResponse>,
-                    GetFoundInventoryTypeApi,
-                    CommandResult<
-                        ApiResult<GetFoundInventoryTypeApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetFoundInventoryTypeApiRequest>,
-                ApiResult<GetFoundInventoryTypeApiResponse>,
-                GetFoundInventoryTypeApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<GetFoundInventoryTypeApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<GetFoundInventoryTypeApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetFoundInventoryTypeApi(GetFoundInventoryTypeApiOptions options) =>
@@ -92,32 +56,26 @@ class _$GetFoundInventoryTypeApi extends GetFoundInventoryTypeApi {
   @override
   CommandState<ApiCommand<GetFoundInventoryTypeApiRequest>,
           ApiResult<GetFoundInventoryTypeApiResponse>>
-      get $initial => CommandState<ApiCommand<GetFoundInventoryTypeApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<GetFoundInventoryTypeApiRequest>,
           ApiResult<GetFoundInventoryTypeApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetFoundInventoryTypeApiRequest>,
           ApiResult<GetFoundInventoryTypeApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetFoundInventoryTypeApiRequest>,
           ApiResult<GetFoundInventoryTypeApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetFoundInventoryTypeApiRequest)]),
-        FullType(ApiResult, [FullType(GetFoundInventoryTypeApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

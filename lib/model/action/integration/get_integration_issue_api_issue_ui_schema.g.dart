@@ -277,9 +277,9 @@ class _$GetIntegrationIssueApiIssueUiSchemaActions
   final StatefulActionsOptions<
       GetIntegrationIssueApiIssueUiSchema,
       GetIntegrationIssueApiIssueUiSchemaBuilder,
-      GetIntegrationIssueApiIssueUiSchemaActions> $options;
+      GetIntegrationIssueApiIssueUiSchemaActions> options$;
 
-  final ActionDispatcher<GetIntegrationIssueApiIssueUiSchema> $replace;
+  final ActionDispatcher<GetIntegrationIssueApiIssueUiSchema> replace$;
   final FieldDispatcher<bool> assign;
   final FieldDispatcher<bool> markResolved;
   final FieldDispatcher<bool> regenerate;
@@ -287,23 +287,23 @@ class _$GetIntegrationIssueApiIssueUiSchemaActions
   final FieldDispatcher<bool> reopen;
   final FieldDispatcher<bool> requeueImportJob;
 
-  _$GetIntegrationIssueApiIssueUiSchemaActions._(this.$options)
-      : $replace = $options.action<GetIntegrationIssueApiIssueUiSchema>(
-            '\$replace', (a) => a?.$replace),
-        assign = $options.field<bool>('assign', (a) => a?.assign,
+  _$GetIntegrationIssueApiIssueUiSchemaActions._(this.options$)
+      : replace$ = options$.action<GetIntegrationIssueApiIssueUiSchema>(
+            'replace\$', (a) => a?.replace$),
+        assign = options$.field<bool>('assign', (a) => a?.assign,
             (s) => s?.assign, (p, b) => p?.assign = b),
-        markResolved = $options.field<bool>(
+        markResolved = options$.field<bool>(
             'markResolved',
             (a) => a?.markResolved,
             (s) => s?.markResolved,
             (p, b) => p?.markResolved = b),
-        regenerate = $options.field<bool>('regenerate', (a) => a?.regenerate,
+        regenerate = options$.field<bool>('regenerate', (a) => a?.regenerate,
             (s) => s?.regenerate, (p, b) => p?.regenerate = b),
-        reprocess = $options.field<bool>('reprocess', (a) => a?.reprocess,
+        reprocess = options$.field<bool>('reprocess', (a) => a?.reprocess,
             (s) => s?.reprocess, (p, b) => p?.reprocess = b),
-        reopen = $options.field<bool>('reopen', (a) => a?.reopen,
+        reopen = options$.field<bool>('reopen', (a) => a?.reopen,
             (s) => s?.reopen, (p, b) => p?.reopen = b),
-        requeueImportJob = $options.field<bool>(
+        requeueImportJob = options$.field<bool>(
             'requeueImportJob',
             (a) => a?.requeueImportJob,
             (s) => s?.requeueImportJob,
@@ -315,18 +315,18 @@ class _$GetIntegrationIssueApiIssueUiSchemaActions
       _$GetIntegrationIssueApiIssueUiSchemaActions._(options());
 
   @override
-  GetIntegrationIssueApiIssueUiSchema get $initial =>
+  GetIntegrationIssueApiIssueUiSchema get initialState$ =>
       GetIntegrationIssueApiIssueUiSchema();
 
   @override
-  GetIntegrationIssueApiIssueUiSchemaBuilder $newBuilder() =>
+  GetIntegrationIssueApiIssueUiSchemaBuilder newBuilder$() =>
       GetIntegrationIssueApiIssueUiSchemaBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.assign,
         this.markResolved,
         this.regenerate,
@@ -336,23 +336,18 @@ class _$GetIntegrationIssueApiIssueUiSchemaActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    assign.$reducer(reducer);
-    markResolved.$reducer(reducer);
-    regenerate.$reducer(reducer);
-    reprocess.$reducer(reducer);
-    reopen.$reducer(reducer);
-    requeueImportJob.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    assign.reducer$(reducer);
+    markResolved.reducer$(reducer);
+    regenerate.reducer$(reducer);
+    reprocess.reducer$(reducer);
+    reopen.reducer$(reducer);
+    requeueImportJob.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetIntegrationIssueApiIssueUiSchema);
 }

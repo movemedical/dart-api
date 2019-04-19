@@ -179,18 +179,18 @@ class _$GetShipmentApiShipmentAttributeActions
   final StatefulActionsOptions<
       GetShipmentApiShipmentAttribute,
       GetShipmentApiShipmentAttributeBuilder,
-      GetShipmentApiShipmentAttributeActions> $options;
+      GetShipmentApiShipmentAttributeActions> options$;
 
-  final ActionDispatcher<GetShipmentApiShipmentAttribute> $replace;
+  final ActionDispatcher<GetShipmentApiShipmentAttribute> replace$;
   final FieldDispatcher<String> label;
   final FieldDispatcher<String> value;
 
-  _$GetShipmentApiShipmentAttributeActions._(this.$options)
-      : $replace = $options.action<GetShipmentApiShipmentAttribute>(
-            '\$replace', (a) => a?.$replace),
-        label = $options.field<String>(
+  _$GetShipmentApiShipmentAttributeActions._(this.options$)
+      : replace$ = options$.action<GetShipmentApiShipmentAttribute>(
+            'replace\$', (a) => a?.replace$),
+        label = options$.field<String>(
             'label', (a) => a?.label, (s) => s?.label, (p, b) => p?.label = b),
-        value = $options.field<String>(
+        value = options$.field<String>(
             'value', (a) => a?.value, (s) => s?.value, (p, b) => p?.value = b),
         super._();
 
@@ -199,36 +199,31 @@ class _$GetShipmentApiShipmentAttributeActions
       _$GetShipmentApiShipmentAttributeActions._(options());
 
   @override
-  GetShipmentApiShipmentAttribute get $initial =>
+  GetShipmentApiShipmentAttribute get initialState$ =>
       GetShipmentApiShipmentAttribute();
 
   @override
-  GetShipmentApiShipmentAttributeBuilder $newBuilder() =>
+  GetShipmentApiShipmentAttributeBuilder newBuilder$() =>
       GetShipmentApiShipmentAttributeBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.label,
         this.value,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    label.$reducer(reducer);
-    value.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    label.reducer$(reducer);
+    value.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetShipmentApiShipmentAttribute);
 }

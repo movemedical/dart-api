@@ -200,18 +200,18 @@ class _$ListItemCategoriesLinkedToItemApiRequestActions
   final StatefulActionsOptions<
       ListItemCategoriesLinkedToItemApiRequest,
       ListItemCategoriesLinkedToItemApiRequestBuilder,
-      ListItemCategoriesLinkedToItemApiRequestActions> $options;
+      ListItemCategoriesLinkedToItemApiRequestActions> options$;
 
-  final ActionDispatcher<ListItemCategoriesLinkedToItemApiRequest> $replace;
+  final ActionDispatcher<ListItemCategoriesLinkedToItemApiRequest> replace$;
   final FieldDispatcher<String> itemId;
   final PaginationParamsActions paging;
 
-  _$ListItemCategoriesLinkedToItemApiRequestActions._(this.$options)
-      : $replace = $options.action<ListItemCategoriesLinkedToItemApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$ListItemCategoriesLinkedToItemApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListItemCategoriesLinkedToItemApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -227,42 +227,37 @@ class _$ListItemCategoriesLinkedToItemApiRequestActions
       _$ListItemCategoriesLinkedToItemApiRequestActions._(options());
 
   @override
-  ListItemCategoriesLinkedToItemApiRequest get $initial =>
+  ListItemCategoriesLinkedToItemApiRequest get initialState$ =>
       ListItemCategoriesLinkedToItemApiRequest();
 
   @override
-  ListItemCategoriesLinkedToItemApiRequestBuilder $newBuilder() =>
+  ListItemCategoriesLinkedToItemApiRequestBuilder newBuilder$() =>
       ListItemCategoriesLinkedToItemApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListItemCategoriesLinkedToItemApiRequest);
 }

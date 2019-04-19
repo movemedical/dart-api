@@ -242,27 +242,27 @@ class _$SaveOrderLinesApiOrderLineActions
   final StatefulActionsOptions<
       SaveOrderLinesApiOrderLine,
       SaveOrderLinesApiOrderLineBuilder,
-      SaveOrderLinesApiOrderLineActions> $options;
+      SaveOrderLinesApiOrderLineActions> options$;
 
-  final ActionDispatcher<SaveOrderLinesApiOrderLine> $replace;
+  final ActionDispatcher<SaveOrderLinesApiOrderLine> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> lotId;
   final FieldDispatcher<String> serialId;
   final FieldDispatcher<int> quantity;
 
-  _$SaveOrderLinesApiOrderLineActions._(this.$options)
-      : $replace = $options.action<SaveOrderLinesApiOrderLine>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$SaveOrderLinesApiOrderLineActions._(this.options$)
+      : replace$ = options$.action<SaveOrderLinesApiOrderLine>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -271,17 +271,17 @@ class _$SaveOrderLinesApiOrderLineActions
       _$SaveOrderLinesApiOrderLineActions._(options());
 
   @override
-  SaveOrderLinesApiOrderLine get $initial => SaveOrderLinesApiOrderLine();
+  SaveOrderLinesApiOrderLine get initialState$ => SaveOrderLinesApiOrderLine();
 
   @override
-  SaveOrderLinesApiOrderLineBuilder $newBuilder() =>
+  SaveOrderLinesApiOrderLineBuilder newBuilder$() =>
       SaveOrderLinesApiOrderLineBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.itemId,
         this.lotId,
@@ -290,21 +290,17 @@ class _$SaveOrderLinesApiOrderLineActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    itemId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    quantity.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    itemId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    quantity.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SaveOrderLinesApiOrderLine);
 }

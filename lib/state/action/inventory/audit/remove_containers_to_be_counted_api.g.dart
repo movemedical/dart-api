@@ -22,64 +22,29 @@ class _$RemoveContainersToBeCountedApi extends RemoveContainersToBeCountedApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RemoveContainersToBeCountedApiRequest>,
           ApiResult<Nothing>>,
-      RemoveContainersToBeCountedApi> $options;
+      RemoveContainersToBeCountedApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemoveContainersToBeCountedApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveContainersToBeCountedApiRequest>,
-          ApiResult<Nothing>, RemoveContainersToBeCountedApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveContainersToBeCountedApiRequest>,
-          ApiResult<Nothing>,
-          RemoveContainersToBeCountedApi,
-          Command<ApiCommand<RemoveContainersToBeCountedApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveContainersToBeCountedApiRequest>,
-          ApiResult<Nothing>,
-          RemoveContainersToBeCountedApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveContainersToBeCountedApiRequest>,
-          ApiResult<Nothing>,
-          RemoveContainersToBeCountedApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<RemoveContainersToBeCountedApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RemoveContainersToBeCountedApi._(this.$options)
-      : $replace = $options.action<
+  _$RemoveContainersToBeCountedApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<RemoveContainersToBeCountedApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveContainersToBeCountedApiRequest>,
-                ApiResult<Nothing>,
-                RemoveContainersToBeCountedApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RemoveContainersToBeCountedApiRequest>,
-                    ApiResult<Nothing>,
-                    RemoveContainersToBeCountedApi,
-                    Command<
-                        ApiCommand<RemoveContainersToBeCountedApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RemoveContainersToBeCountedApiRequest>,
-                    ApiResult<Nothing>,
-                    RemoveContainersToBeCountedApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveContainersToBeCountedApiRequest>,
-                ApiResult<Nothing>,
-                RemoveContainersToBeCountedApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<RemoveContainersToBeCountedApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RemoveContainersToBeCountedApi(
@@ -89,33 +54,26 @@ class _$RemoveContainersToBeCountedApi extends RemoveContainersToBeCountedApi {
   @override
   CommandState<ApiCommand<RemoveContainersToBeCountedApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<RemoveContainersToBeCountedApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RemoveContainersToBeCountedApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RemoveContainersToBeCountedApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RemoveContainersToBeCountedApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

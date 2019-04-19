@@ -22,63 +22,29 @@ class _$RequestKitManifestDocApi extends RequestKitManifestDocApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestKitManifestDocApiRequest>,
           ApiResult<Nothing>>,
-      RequestKitManifestDocApi> $options;
+      RequestKitManifestDocApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Nothing>, RequestKitManifestDocApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Nothing>,
-          RequestKitManifestDocApi,
-          Command<ApiCommand<RequestKitManifestDocApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Nothing>,
-          RequestKitManifestDocApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Nothing>,
-          RequestKitManifestDocApi,
-          CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<RequestKitManifestDocApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RequestKitManifestDocApi._(this.$options)
-      : $replace = $options.action<
+  _$RequestKitManifestDocApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<RequestKitManifestDocApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RequestKitManifestDocApiRequest>,
-                ApiResult<Nothing>,
-                RequestKitManifestDocApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestKitManifestDocApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestKitManifestDocApi,
-                    Command<ApiCommand<RequestKitManifestDocApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestKitManifestDocApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestKitManifestDocApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RequestKitManifestDocApiRequest>,
-                ApiResult<Nothing>,
-                RequestKitManifestDocApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<RequestKitManifestDocApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RequestKitManifestDocApi(RequestKitManifestDocApiOptions options) =>
@@ -86,31 +52,24 @@ class _$RequestKitManifestDocApi extends RequestKitManifestDocApi {
 
   @override
   CommandState<ApiCommand<RequestKitManifestDocApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Nothing>>();
+      get initialState$ => CommandState<
+          ApiCommand<RequestKitManifestDocApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestKitManifestDocApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RequestKitManifestDocApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RequestKitManifestDocApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

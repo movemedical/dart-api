@@ -229,24 +229,24 @@ class _$SearchExpirationLevelsApiExpirationLevelActions
   final StatefulActionsOptions<
       SearchExpirationLevelsApiExpirationLevel,
       SearchExpirationLevelsApiExpirationLevelBuilder,
-      SearchExpirationLevelsApiExpirationLevelActions> $options;
+      SearchExpirationLevelsApiExpirationLevelActions> options$;
 
-  final ActionDispatcher<SearchExpirationLevelsApiExpirationLevel> $replace;
+  final ActionDispatcher<SearchExpirationLevelsApiExpirationLevel> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> groupName;
   final FieldDispatcher<String> levelName;
   final FieldDispatcher<ExpirationLevelColor> levelColor;
 
-  _$SearchExpirationLevelsApiExpirationLevelActions._(this.$options)
-      : $replace = $options.action<SearchExpirationLevelsApiExpirationLevel>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$SearchExpirationLevelsApiExpirationLevelActions._(this.options$)
+      : replace$ = options$.action<SearchExpirationLevelsApiExpirationLevel>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        groupName = $options.field<String>('groupName', (a) => a?.groupName,
+        groupName = options$.field<String>('groupName', (a) => a?.groupName,
             (s) => s?.groupName, (p, b) => p?.groupName = b),
-        levelName = $options.field<String>('levelName', (a) => a?.levelName,
+        levelName = options$.field<String>('levelName', (a) => a?.levelName,
             (s) => s?.levelName, (p, b) => p?.levelName = b),
-        levelColor = $options.field<ExpirationLevelColor>(
+        levelColor = options$.field<ExpirationLevelColor>(
             'levelColor',
             (a) => a?.levelColor,
             (s) => s?.levelColor,
@@ -258,18 +258,18 @@ class _$SearchExpirationLevelsApiExpirationLevelActions
       _$SearchExpirationLevelsApiExpirationLevelActions._(options());
 
   @override
-  SearchExpirationLevelsApiExpirationLevel get $initial =>
+  SearchExpirationLevelsApiExpirationLevel get initialState$ =>
       SearchExpirationLevelsApiExpirationLevel();
 
   @override
-  SearchExpirationLevelsApiExpirationLevelBuilder $newBuilder() =>
+  SearchExpirationLevelsApiExpirationLevelBuilder newBuilder$() =>
       SearchExpirationLevelsApiExpirationLevelBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.groupName,
         this.levelName,
@@ -277,21 +277,16 @@ class _$SearchExpirationLevelsApiExpirationLevelActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    groupName.$reducer(reducer);
-    levelName.$reducer(reducer);
-    levelColor.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    groupName.reducer$(reducer);
+    levelName.reducer$(reducer);
+    levelColor.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SearchExpirationLevelsApiExpirationLevel);
 }

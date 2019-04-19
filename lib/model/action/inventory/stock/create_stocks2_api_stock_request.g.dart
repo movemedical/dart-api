@@ -610,9 +610,9 @@ class _$CreateStocks2ApiStockRequestActions
   final StatefulActionsOptions<
       CreateStocks2ApiStockRequest,
       CreateStocks2ApiStockRequestBuilder,
-      CreateStocks2ApiStockRequestActions> $options;
+      CreateStocks2ApiStockRequestActions> options$;
 
-  final ActionDispatcher<CreateStocks2ApiStockRequest> $replace;
+  final ActionDispatcher<CreateStocks2ApiStockRequest> replace$;
   final FieldDispatcher<String> requestId;
   final FieldDispatcher<String> inventoryTypeId;
   final FieldDispatcher<String> itemId;
@@ -633,64 +633,64 @@ class _$CreateStocks2ApiStockRequestActions
   final FieldDispatcher<String> responsiblePartyId;
   final FieldDispatcher<bool> virtual;
 
-  _$CreateStocks2ApiStockRequestActions._(this.$options)
-      : $replace = $options.action<CreateStocks2ApiStockRequest>(
-            '\$replace', (a) => a?.$replace),
-        requestId = $options.field<String>('requestId', (a) => a?.requestId,
+  _$CreateStocks2ApiStockRequestActions._(this.options$)
+      : replace$ = options$.action<CreateStocks2ApiStockRequest>(
+            'replace\$', (a) => a?.replace$),
+        requestId = options$.field<String>('requestId', (a) => a?.requestId,
             (s) => s?.requestId, (p, b) => p?.requestId = b),
-        inventoryTypeId = $options.field<String>(
+        inventoryTypeId = options$.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionId = $options.field<String>(
+        itemVersionId = options$.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        generateSerials = $options.field<bool>(
+        generateSerials = options$.field<bool>(
             'generateSerials',
             (a) => a?.generateSerials,
             (s) => s?.generateSerials,
             (p, b) => p?.generateSerials = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        homeLocationType = $options.field<LocationType>(
+        homeLocationType = options$.field<LocationType>(
             'homeLocationType',
             (a) => a?.homeLocationType,
             (s) => s?.homeLocationType,
             (p, b) => p?.homeLocationType = b),
-        homeLocationId = $options.field<String>(
+        homeLocationId = options$.field<String>(
             'homeLocationId',
             (a) => a?.homeLocationId,
             (s) => s?.homeLocationId,
             (p, b) => p?.homeLocationId = b),
-        containerType = $options.field<StockContainerType>(
+        containerType = options$.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        found = $options.field<bool>(
+        found = options$.field<bool>(
             'found', (a) => a?.found, (s) => s?.found, (p, b) => p?.found = b),
-        adjustmentDetails = AdjustmentDetailsActions(() => $options.stateful<
+        adjustmentDetails = AdjustmentDetailsActions(() => options$.stateful<
                 AdjustmentDetails,
                 AdjustmentDetailsBuilder,
                 AdjustmentDetailsActions>(
@@ -699,17 +699,17 @@ class _$CreateStocks2ApiStockRequestActions
             (s) => s?.adjustmentDetails,
             (b) => b?.adjustmentDetails,
             (parent, builder) => parent?.adjustmentDetails = builder)),
-        responsiblePartyType = $options.field<ResponsiblePartyType>(
+        responsiblePartyType = options$.field<ResponsiblePartyType>(
             'responsiblePartyType',
             (a) => a?.responsiblePartyType,
             (s) => s?.responsiblePartyType,
             (p, b) => p?.responsiblePartyType = b),
-        responsiblePartyId = $options.field<String>(
+        responsiblePartyId = options$.field<String>(
             'responsiblePartyId',
             (a) => a?.responsiblePartyId,
             (s) => s?.responsiblePartyId,
             (p, b) => p?.responsiblePartyId = b),
-        virtual = $options.field<bool>('virtual', (a) => a?.virtual,
+        virtual = options$.field<bool>('virtual', (a) => a?.virtual,
             (s) => s?.virtual, (p, b) => p?.virtual = b),
         super._();
 
@@ -718,23 +718,24 @@ class _$CreateStocks2ApiStockRequestActions
       _$CreateStocks2ApiStockRequestActions._(options());
 
   @override
-  CreateStocks2ApiStockRequest get $initial => CreateStocks2ApiStockRequest();
+  CreateStocks2ApiStockRequest get initialState$ =>
+      CreateStocks2ApiStockRequest();
 
   @override
-  CreateStocks2ApiStockRequestBuilder $newBuilder() =>
+  CreateStocks2ApiStockRequestBuilder newBuilder$() =>
       CreateStocks2ApiStockRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.adjustmentDetails,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.requestId,
         this.inventoryTypeId,
         this.itemId,
@@ -756,37 +757,32 @@ class _$CreateStocks2ApiStockRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    requestId.$reducer(reducer);
-    inventoryTypeId.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemVersionId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    generateSerials.$reducer(reducer);
-    quantity.$reducer(reducer);
-    locationType.$reducer(reducer);
-    locationId.$reducer(reducer);
-    homeLocationType.$reducer(reducer);
-    homeLocationId.$reducer(reducer);
-    containerType.$reducer(reducer);
-    containerId.$reducer(reducer);
-    found.$reducer(reducer);
-    adjustmentDetails.$reducer(reducer);
-    responsiblePartyType.$reducer(reducer);
-    responsiblePartyId.$reducer(reducer);
-    virtual.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    requestId.reducer$(reducer);
+    inventoryTypeId.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemVersionId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    generateSerials.reducer$(reducer);
+    quantity.reducer$(reducer);
+    locationType.reducer$(reducer);
+    locationId.reducer$(reducer);
+    homeLocationType.reducer$(reducer);
+    homeLocationId.reducer$(reducer);
+    containerType.reducer$(reducer);
+    containerId.reducer$(reducer);
+    found.reducer$(reducer);
+    adjustmentDetails.reducer$(reducer);
+    responsiblePartyType.reducer$(reducer);
+    responsiblePartyId.reducer$(reducer);
+    virtual.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    adjustmentDetails.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    adjustmentDetails.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateStocks2ApiStockRequest);
 }

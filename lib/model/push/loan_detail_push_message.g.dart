@@ -148,15 +148,15 @@ typedef StatefulActionsOptions<
 
 class _$LoanDetailPushMessageActions extends LoanDetailPushMessageActions {
   final StatefulActionsOptions<LoanDetailPushMessage,
-      LoanDetailPushMessageBuilder, LoanDetailPushMessageActions> $options;
+      LoanDetailPushMessageBuilder, LoanDetailPushMessageActions> options$;
 
-  final ActionDispatcher<LoanDetailPushMessage> $replace;
+  final ActionDispatcher<LoanDetailPushMessage> replace$;
   final FieldDispatcher<String> content;
 
-  _$LoanDetailPushMessageActions._(this.$options)
-      : $replace = $options.action<LoanDetailPushMessage>(
-            '\$replace', (a) => a?.$replace),
-        content = $options.field<String>('content', (a) => a?.content,
+  _$LoanDetailPushMessageActions._(this.options$)
+      : replace$ = options$.action<LoanDetailPushMessage>(
+            'replace\$', (a) => a?.replace$),
+        content = options$.field<String>('content', (a) => a?.content,
             (s) => s?.content, (p, b) => p?.content = b),
         super._();
 
@@ -165,31 +165,27 @@ class _$LoanDetailPushMessageActions extends LoanDetailPushMessageActions {
       _$LoanDetailPushMessageActions._(options());
 
   @override
-  LoanDetailPushMessage get $initial => LoanDetailPushMessage();
+  LoanDetailPushMessage get initialState$ => LoanDetailPushMessage();
 
   @override
-  LoanDetailPushMessageBuilder $newBuilder() => LoanDetailPushMessageBuilder();
+  LoanDetailPushMessageBuilder newBuilder$() => LoanDetailPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.content,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    content.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    content.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(LoanDetailPushMessage);
 }

@@ -176,15 +176,15 @@ class _$GetCaseCountByDayApiResponseActions
   final StatefulActionsOptions<
       GetCaseCountByDayApiResponse,
       GetCaseCountByDayApiResponseBuilder,
-      GetCaseCountByDayApiResponseActions> $options;
+      GetCaseCountByDayApiResponseActions> options$;
 
-  final ActionDispatcher<GetCaseCountByDayApiResponse> $replace;
+  final ActionDispatcher<GetCaseCountByDayApiResponse> replace$;
   final FieldDispatcher<BuiltList<GetCaseCountByDayApiCaseCount>> counts;
 
-  _$GetCaseCountByDayApiResponseActions._(this.$options)
-      : $replace = $options.action<GetCaseCountByDayApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        counts = $options.field<BuiltList<GetCaseCountByDayApiCaseCount>>(
+  _$GetCaseCountByDayApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetCaseCountByDayApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        counts = options$.field<BuiltList<GetCaseCountByDayApiCaseCount>>(
             'counts',
             (a) => a?.counts,
             (s) => s?.counts,
@@ -196,33 +196,29 @@ class _$GetCaseCountByDayApiResponseActions
       _$GetCaseCountByDayApiResponseActions._(options());
 
   @override
-  GetCaseCountByDayApiResponse get $initial => GetCaseCountByDayApiResponse();
+  GetCaseCountByDayApiResponse get initialState$ =>
+      GetCaseCountByDayApiResponse();
 
   @override
-  GetCaseCountByDayApiResponseBuilder $newBuilder() =>
+  GetCaseCountByDayApiResponseBuilder newBuilder$() =>
       GetCaseCountByDayApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.counts,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    counts.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    counts.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCaseCountByDayApiResponse);
 }

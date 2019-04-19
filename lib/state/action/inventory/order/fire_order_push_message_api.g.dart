@@ -22,63 +22,29 @@ class _$FireOrderPushMessageApi extends FireOrderPushMessageApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<FireOrderPushMessageApiRequest>,
           ApiResult<Nothing>>,
-      FireOrderPushMessageApi> $options;
+      FireOrderPushMessageApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Nothing>, FireOrderPushMessageApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Nothing>,
-          FireOrderPushMessageApi,
-          Command<ApiCommand<FireOrderPushMessageApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Nothing>,
-          FireOrderPushMessageApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Nothing>,
-          FireOrderPushMessageApi,
-          CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<FireOrderPushMessageApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$FireOrderPushMessageApi._(this.$options)
-      : $replace = $options.action<
+  _$FireOrderPushMessageApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<FireOrderPushMessageApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<FireOrderPushMessageApiRequest>,
-                ApiResult<Nothing>,
-                FireOrderPushMessageApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<FireOrderPushMessageApiRequest>,
-                    ApiResult<Nothing>,
-                    FireOrderPushMessageApi,
-                    Command<ApiCommand<FireOrderPushMessageApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<FireOrderPushMessageApiRequest>,
-                    ApiResult<Nothing>,
-                    FireOrderPushMessageApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<FireOrderPushMessageApiRequest>,
-                ApiResult<Nothing>,
-                FireOrderPushMessageApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<FireOrderPushMessageApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$FireOrderPushMessageApi(FireOrderPushMessageApiOptions options) =>
@@ -86,31 +52,24 @@ class _$FireOrderPushMessageApi extends FireOrderPushMessageApi {
 
   @override
   CommandState<ApiCommand<FireOrderPushMessageApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Nothing>>();
+      get initialState$ => CommandState<
+          ApiCommand<FireOrderPushMessageApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<FireOrderPushMessageApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<FireOrderPushMessageApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(FireOrderPushMessageApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

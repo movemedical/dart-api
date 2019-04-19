@@ -421,9 +421,9 @@ class _$ListIntegrationIssuesApiRequestActions
   final StatefulActionsOptions<
       ListIntegrationIssuesApiRequest,
       ListIntegrationIssuesApiRequestBuilder,
-      ListIntegrationIssuesApiRequestActions> $options;
+      ListIntegrationIssuesApiRequestActions> options$;
 
-  final ActionDispatcher<ListIntegrationIssuesApiRequest> $replace;
+  final ActionDispatcher<ListIntegrationIssuesApiRequest> replace$;
   final FieldDispatcher<String> integrationReferenceId;
   final FieldDispatcher<String> search;
   final DateRangeActions createdDateRange;
@@ -436,42 +436,42 @@ class _$ListIntegrationIssuesApiRequestActions
   final PaginationParamsActions paging;
   final FieldDispatcher<bool> export;
 
-  _$ListIntegrationIssuesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListIntegrationIssuesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        integrationReferenceId = $options.field<String>(
+  _$ListIntegrationIssuesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListIntegrationIssuesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        integrationReferenceId = options$.field<String>(
             'integrationReferenceId',
             (a) => a?.integrationReferenceId,
             (s) => s?.integrationReferenceId,
             (p, b) => p?.integrationReferenceId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         createdDateRange = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'createdDateRange',
                 (a) => a.createdDateRange,
                 (s) => s?.createdDateRange,
                 (b) => b?.createdDateRange,
                 (parent, builder) => parent?.createdDateRange = builder)),
-        issueType = $options.field<IntegrationType>(
+        issueType = options$.field<IntegrationType>(
             'issueType',
             (a) => a?.issueType,
             (s) => s?.issueType,
             (p, b) => p?.issueType = b),
-        status = $options.field<IntegrationIssueStatus>('status',
+        status = options$.field<IntegrationIssueStatus>('status',
             (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        issueGroup = $options.field<String>('issueGroup', (a) => a?.issueGroup,
+        issueGroup = options$.field<String>('issueGroup', (a) => a?.issueGroup,
             (s) => s?.issueGroup, (p, b) => p?.issueGroup = b),
-        numberGreaterThan = $options.field<int>(
+        numberGreaterThan = options$.field<int>(
             'numberGreaterThan',
             (a) => a?.numberGreaterThan,
             (s) => s?.numberGreaterThan,
             (p, b) => p?.numberGreaterThan = b),
-        sortBy = $options.field<ListIntegrationIssuesApiSortBy>('sortBy',
+        sortBy = options$.field<ListIntegrationIssuesApiSortBy>('sortBy',
             (a) => a?.sortBy, (s) => s?.sortBy, (p, b) => p?.sortBy = b),
-        descending = $options.field<bool>('descending', (a) => a?.descending,
+        descending = options$.field<bool>('descending', (a) => a?.descending,
             (s) => s?.descending, (p, b) => p?.descending = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -480,7 +480,7 @@ class _$ListIntegrationIssuesApiRequestActions
             (s) => s?.paging,
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
-        export = $options.field<bool>('export', (a) => a?.export,
+        export = options$.field<bool>('export', (a) => a?.export,
             (s) => s?.export, (p, b) => p?.export = b),
         super._();
 
@@ -489,25 +489,25 @@ class _$ListIntegrationIssuesApiRequestActions
       _$ListIntegrationIssuesApiRequestActions._(options());
 
   @override
-  ListIntegrationIssuesApiRequest get $initial =>
+  ListIntegrationIssuesApiRequest get initialState$ =>
       ListIntegrationIssuesApiRequest();
 
   @override
-  ListIntegrationIssuesApiRequestBuilder $newBuilder() =>
+  ListIntegrationIssuesApiRequestBuilder newBuilder$() =>
       ListIntegrationIssuesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.createdDateRange,
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.integrationReferenceId,
         this.search,
         this.issueType,
@@ -520,30 +520,25 @@ class _$ListIntegrationIssuesApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    integrationReferenceId.$reducer(reducer);
-    search.$reducer(reducer);
-    createdDateRange.$reducer(reducer);
-    issueType.$reducer(reducer);
-    status.$reducer(reducer);
-    issueGroup.$reducer(reducer);
-    numberGreaterThan.$reducer(reducer);
-    sortBy.$reducer(reducer);
-    descending.$reducer(reducer);
-    paging.$reducer(reducer);
-    export.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    integrationReferenceId.reducer$(reducer);
+    search.reducer$(reducer);
+    createdDateRange.reducer$(reducer);
+    issueType.reducer$(reducer);
+    status.reducer$(reducer);
+    issueGroup.reducer$(reducer);
+    numberGreaterThan.reducer$(reducer);
+    sortBy.reducer$(reducer);
+    descending.reducer$(reducer);
+    paging.reducer$(reducer);
+    export.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    createdDateRange.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    createdDateRange.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListIntegrationIssuesApiRequest);
 }

@@ -22,70 +22,33 @@ class _$ListProcedureToItemCategoryApi extends ListProcedureToItemCategoryApi {
           ApiResult<ListProcedureToItemCategoryApiResponse>>,
       CommandStateBuilder<ApiCommand<ListProcedureToItemCategoryApiRequest>,
           ApiResult<ListProcedureToItemCategoryApiResponse>>,
-      ListProcedureToItemCategoryApi> $options;
+      ListProcedureToItemCategoryApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListProcedureToItemCategoryApiRequest>,
-          ApiResult<ListProcedureToItemCategoryApiResponse>>> $replace;
+          ApiResult<ListProcedureToItemCategoryApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProcedureToItemCategoryApiRequest>,
-          ApiResult<ListProcedureToItemCategoryApiResponse>,
-          ListProcedureToItemCategoryApi,
-          String>> $cancel;
+      Command<ApiCommand<ListProcedureToItemCategoryApiRequest>>> execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProcedureToItemCategoryApiRequest>,
-          ApiResult<ListProcedureToItemCategoryApiResponse>,
-          ListProcedureToItemCategoryApi,
-          Command<ApiCommand<ListProcedureToItemCategoryApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListProcedureToItemCategoryApiRequest>,
-              ApiResult<ListProcedureToItemCategoryApiResponse>,
-              ListProcedureToItemCategoryApi,
-              CommandResult<ApiResult<ListProcedureToItemCategoryApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProcedureToItemCategoryApiRequest>,
-          ApiResult<ListProcedureToItemCategoryApiResponse>,
-          ListProcedureToItemCategoryApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListProcedureToItemCategoryApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListProcedureToItemCategoryApi._(this.$options)
-      : $replace = $options.action<
+  _$ListProcedureToItemCategoryApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListProcedureToItemCategoryApiRequest>,
                     ApiResult<ListProcedureToItemCategoryApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListProcedureToItemCategoryApiRequest>,
-                ApiResult<ListProcedureToItemCategoryApiResponse>,
-                ListProcedureToItemCategoryApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListProcedureToItemCategoryApiRequest>,
-                    ApiResult<ListProcedureToItemCategoryApiResponse>,
-                    ListProcedureToItemCategoryApi,
-                    Command<
-                        ApiCommand<ListProcedureToItemCategoryApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListProcedureToItemCategoryApiRequest>,
-                    ApiResult<ListProcedureToItemCategoryApiResponse>,
-                    ListProcedureToItemCategoryApi,
-                    CommandResult<
-                        ApiResult<ListProcedureToItemCategoryApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListProcedureToItemCategoryApiRequest>,
-                ApiResult<ListProcedureToItemCategoryApiResponse>,
-                ListProcedureToItemCategoryApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListProcedureToItemCategoryApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<ListProcedureToItemCategoryApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListProcedureToItemCategoryApi(
@@ -95,33 +58,26 @@ class _$ListProcedureToItemCategoryApi extends ListProcedureToItemCategoryApi {
   @override
   CommandState<ApiCommand<ListProcedureToItemCategoryApiRequest>,
           ApiResult<ListProcedureToItemCategoryApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListProcedureToItemCategoryApiRequest>,
           ApiResult<ListProcedureToItemCategoryApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListProcedureToItemCategoryApiRequest>,
           ApiResult<ListProcedureToItemCategoryApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListProcedureToItemCategoryApiRequest>,
           ApiResult<ListProcedureToItemCategoryApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListProcedureToItemCategoryApiRequest)]),
-        FullType(ApiResult, [FullType(ListProcedureToItemCategoryApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

@@ -183,18 +183,18 @@ typedef StatefulActionsOptions<ListTagsApiResponse, ListTagsApiResponseBuilder,
 
 class _$ListTagsApiResponseActions extends ListTagsApiResponseActions {
   final StatefulActionsOptions<ListTagsApiResponse, ListTagsApiResponseBuilder,
-      ListTagsApiResponseActions> $options;
+      ListTagsApiResponseActions> options$;
 
-  final ActionDispatcher<ListTagsApiResponse> $replace;
+  final ActionDispatcher<ListTagsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListTagsApiTag>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListTagsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListTagsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListTagsApiTag>>(
+  _$ListTagsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListTagsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListTagsApiTag>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -203,33 +203,29 @@ class _$ListTagsApiResponseActions extends ListTagsApiResponseActions {
       _$ListTagsApiResponseActions._(options());
 
   @override
-  ListTagsApiResponse get $initial => ListTagsApiResponse();
+  ListTagsApiResponse get initialState$ => ListTagsApiResponse();
 
   @override
-  ListTagsApiResponseBuilder $newBuilder() => ListTagsApiResponseBuilder();
+  ListTagsApiResponseBuilder newBuilder$() => ListTagsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListTagsApiResponse);
 }

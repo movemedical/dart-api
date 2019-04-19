@@ -426,9 +426,9 @@ class _$GetCaseCountByDayApiRequestActions
   final StatefulActionsOptions<
       GetCaseCountByDayApiRequest,
       GetCaseCountByDayApiRequestBuilder,
-      GetCaseCountByDayApiRequestActions> $options;
+      GetCaseCountByDayApiRequestActions> options$;
 
-  final ActionDispatcher<GetCaseCountByDayApiRequest> $replace;
+  final ActionDispatcher<GetCaseCountByDayApiRequest> replace$;
   final FieldDispatcher<DateTime> startDate;
   final FieldDispatcher<DateTime> endDate;
   final FieldDispatcher<BuiltList<String>> caseTypeIds;
@@ -440,40 +440,40 @@ class _$GetCaseCountByDayApiRequestActions
   final FieldDispatcher<BuiltList<CaseEventStatus>> statuses;
   final FieldDispatcher<String> patientName;
 
-  _$GetCaseCountByDayApiRequestActions._(this.$options)
-      : $replace = $options.action<GetCaseCountByDayApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+  _$GetCaseCountByDayApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetCaseCountByDayApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
-        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
+        endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        caseTypeIds = $options.field<BuiltList<String>>(
+        caseTypeIds = options$.field<BuiltList<String>>(
             'caseTypeIds',
             (a) => a?.caseTypeIds,
             (s) => s?.caseTypeIds,
             (p, b) => p?.caseTypeIds = b),
-        hcrIds = $options.field<BuiltList<String>>('hcrIds', (a) => a?.hcrIds,
+        hcrIds = options$.field<BuiltList<String>>('hcrIds', (a) => a?.hcrIds,
             (s) => s?.hcrIds, (p, b) => p?.hcrIds = b),
-        teamIds = $options.field<BuiltList<String>>('teamIds',
+        teamIds = options$.field<BuiltList<String>>('teamIds',
             (a) => a?.teamIds, (s) => s?.teamIds, (p, b) => p?.teamIds = b),
-        facilityIds = $options.field<BuiltList<String>>(
+        facilityIds = options$.field<BuiltList<String>>(
             'facilityIds',
             (a) => a?.facilityIds,
             (s) => s?.facilityIds,
             (p, b) => p?.facilityIds = b),
-        surgeonIds = $options.field<BuiltList<String>>(
+        surgeonIds = options$.field<BuiltList<String>>(
             'surgeonIds',
             (a) => a?.surgeonIds,
             (s) => s?.surgeonIds,
             (p, b) => p?.surgeonIds = b),
-        procedureIds = $options.field<BuiltList<String>>(
+        procedureIds = options$.field<BuiltList<String>>(
             'procedureIds',
             (a) => a?.procedureIds,
             (s) => s?.procedureIds,
             (p, b) => p?.procedureIds = b),
-        statuses = $options.field<BuiltList<CaseEventStatus>>('statuses',
+        statuses = options$.field<BuiltList<CaseEventStatus>>('statuses',
             (a) => a?.statuses, (s) => s?.statuses, (p, b) => p?.statuses = b),
-        patientName = $options.field<String>(
+        patientName = options$.field<String>(
             'patientName',
             (a) => a?.patientName,
             (s) => s?.patientName,
@@ -485,17 +485,18 @@ class _$GetCaseCountByDayApiRequestActions
       _$GetCaseCountByDayApiRequestActions._(options());
 
   @override
-  GetCaseCountByDayApiRequest get $initial => GetCaseCountByDayApiRequest();
+  GetCaseCountByDayApiRequest get initialState$ =>
+      GetCaseCountByDayApiRequest();
 
   @override
-  GetCaseCountByDayApiRequestBuilder $newBuilder() =>
+  GetCaseCountByDayApiRequestBuilder newBuilder$() =>
       GetCaseCountByDayApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.startDate,
         this.endDate,
         this.caseTypeIds,
@@ -509,27 +510,22 @@ class _$GetCaseCountByDayApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    startDate.$reducer(reducer);
-    endDate.$reducer(reducer);
-    caseTypeIds.$reducer(reducer);
-    hcrIds.$reducer(reducer);
-    teamIds.$reducer(reducer);
-    facilityIds.$reducer(reducer);
-    surgeonIds.$reducer(reducer);
-    procedureIds.$reducer(reducer);
-    statuses.$reducer(reducer);
-    patientName.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    startDate.reducer$(reducer);
+    endDate.reducer$(reducer);
+    caseTypeIds.reducer$(reducer);
+    hcrIds.reducer$(reducer);
+    teamIds.reducer$(reducer);
+    facilityIds.reducer$(reducer);
+    surgeonIds.reducer$(reducer);
+    procedureIds.reducer$(reducer);
+    statuses.reducer$(reducer);
+    patientName.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCaseCountByDayApiRequest);
 }

@@ -22,68 +22,32 @@ class _$PrepareOrderFileUploadApi extends PrepareOrderFileUploadApi {
           ApiResult<PrepareOrderFileUploadApiResponse>>,
       CommandStateBuilder<ApiCommand<PrepareOrderFileUploadApiRequest>,
           ApiResult<PrepareOrderFileUploadApiResponse>>,
-      PrepareOrderFileUploadApi> $options;
+      PrepareOrderFileUploadApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<PrepareOrderFileUploadApiRequest>,
-          ApiResult<PrepareOrderFileUploadApiResponse>>> $replace;
+          ApiResult<PrepareOrderFileUploadApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<PrepareOrderFileUploadApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareOrderFileUploadApiRequest>,
-          ApiResult<PrepareOrderFileUploadApiResponse>,
-          PrepareOrderFileUploadApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareOrderFileUploadApiRequest>,
-          ApiResult<PrepareOrderFileUploadApiResponse>,
-          PrepareOrderFileUploadApi,
-          Command<ApiCommand<PrepareOrderFileUploadApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareOrderFileUploadApiRequest>,
-          ApiResult<PrepareOrderFileUploadApiResponse>,
-          PrepareOrderFileUploadApi,
-          CommandResult<ApiResult<PrepareOrderFileUploadApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareOrderFileUploadApiRequest>,
-          ApiResult<PrepareOrderFileUploadApiResponse>,
-          PrepareOrderFileUploadApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<PrepareOrderFileUploadApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$PrepareOrderFileUploadApi._(this.$options)
-      : $replace = $options.action<
+  _$PrepareOrderFileUploadApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<PrepareOrderFileUploadApiRequest>,
                     ApiResult<PrepareOrderFileUploadApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareOrderFileUploadApiRequest>,
-                ApiResult<PrepareOrderFileUploadApiResponse>,
-                PrepareOrderFileUploadApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<PrepareOrderFileUploadApiRequest>,
-                    ApiResult<PrepareOrderFileUploadApiResponse>,
-                    PrepareOrderFileUploadApi,
-                    Command<ApiCommand<PrepareOrderFileUploadApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<PrepareOrderFileUploadApiRequest>,
-                    ApiResult<PrepareOrderFileUploadApiResponse>,
-                    PrepareOrderFileUploadApi,
-                    CommandResult<
-                        ApiResult<PrepareOrderFileUploadApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareOrderFileUploadApiRequest>,
-                ApiResult<PrepareOrderFileUploadApiResponse>,
-                PrepareOrderFileUploadApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<PrepareOrderFileUploadApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<PrepareOrderFileUploadApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$PrepareOrderFileUploadApi(
@@ -93,32 +57,26 @@ class _$PrepareOrderFileUploadApi extends PrepareOrderFileUploadApi {
   @override
   CommandState<ApiCommand<PrepareOrderFileUploadApiRequest>,
           ApiResult<PrepareOrderFileUploadApiResponse>>
-      get $initial => CommandState<ApiCommand<PrepareOrderFileUploadApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<PrepareOrderFileUploadApiRequest>,
           ApiResult<PrepareOrderFileUploadApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<PrepareOrderFileUploadApiRequest>,
           ApiResult<PrepareOrderFileUploadApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<PrepareOrderFileUploadApiRequest>,
           ApiResult<PrepareOrderFileUploadApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(PrepareOrderFileUploadApiRequest)]),
-        FullType(ApiResult, [FullType(PrepareOrderFileUploadApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

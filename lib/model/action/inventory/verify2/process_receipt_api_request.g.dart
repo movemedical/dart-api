@@ -176,18 +176,18 @@ class _$ProcessReceiptApiRequestActions
   final StatefulActionsOptions<
       ProcessReceiptApiRequest,
       ProcessReceiptApiRequestBuilder,
-      ProcessReceiptApiRequestActions> $options;
+      ProcessReceiptApiRequestActions> options$;
 
-  final ActionDispatcher<ProcessReceiptApiRequest> $replace;
+  final ActionDispatcher<ProcessReceiptApiRequest> replace$;
   final FieldDispatcher<String> processKey;
   final FieldDispatcher<String> receiptId;
 
-  _$ProcessReceiptApiRequestActions._(this.$options)
-      : $replace = $options.action<ProcessReceiptApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        processKey = $options.field<String>('processKey', (a) => a?.processKey,
+  _$ProcessReceiptApiRequestActions._(this.options$)
+      : replace$ = options$.action<ProcessReceiptApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        processKey = options$.field<String>('processKey', (a) => a?.processKey,
             (s) => s?.processKey, (p, b) => p?.processKey = b),
-        receiptId = $options.field<String>('receiptId', (a) => a?.receiptId,
+        receiptId = options$.field<String>('receiptId', (a) => a?.receiptId,
             (s) => s?.receiptId, (p, b) => p?.receiptId = b),
         super._();
 
@@ -196,34 +196,30 @@ class _$ProcessReceiptApiRequestActions
       _$ProcessReceiptApiRequestActions._(options());
 
   @override
-  ProcessReceiptApiRequest get $initial => ProcessReceiptApiRequest();
+  ProcessReceiptApiRequest get initialState$ => ProcessReceiptApiRequest();
 
   @override
-  ProcessReceiptApiRequestBuilder $newBuilder() =>
+  ProcessReceiptApiRequestBuilder newBuilder$() =>
       ProcessReceiptApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.processKey,
         this.receiptId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    processKey.$reducer(reducer);
-    receiptId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    processKey.reducer$(reducer);
+    receiptId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ProcessReceiptApiRequest);
 }

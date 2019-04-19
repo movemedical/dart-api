@@ -179,18 +179,18 @@ typedef StatefulActionsOptions<OrderByParams<F>, OrderByParamsBuilder<F>,
 
 class _$OrderByParamsActions<F> extends OrderByParamsActions<F> {
   final StatefulActionsOptions<OrderByParams<F>, OrderByParamsBuilder<F>,
-      OrderByParamsActions<F>> $options;
+      OrderByParamsActions<F>> options$;
 
-  final ActionDispatcher<OrderByParams<F>> $replace;
+  final ActionDispatcher<OrderByParams<F>> replace$;
   final FieldDispatcher<F> field;
   final FieldDispatcher<OrderByDirection> direction;
 
-  _$OrderByParamsActions._(this.$options)
-      : $replace =
-            $options.action<OrderByParams<F>>('\$replace', (a) => a?.$replace),
-        field = $options.field<F>(
+  _$OrderByParamsActions._(this.options$)
+      : replace$ =
+            options$.action<OrderByParams<F>>('replace\$', (a) => a?.replace$),
+        field = options$.field<F>(
             'field', (a) => a?.field, (s) => s?.field, (p, b) => p?.field = b),
-        direction = $options.field<OrderByDirection>(
+        direction = options$.field<OrderByDirection>(
             'direction',
             (a) => a?.direction,
             (s) => s?.direction,
@@ -201,34 +201,29 @@ class _$OrderByParamsActions<F> extends OrderByParamsActions<F> {
       _$OrderByParamsActions._(options());
 
   @override
-  OrderByParams<F> get $initial => OrderByParams<F>();
+  OrderByParams<F> get initialState$ => OrderByParams<F>();
 
   @override
-  OrderByParamsBuilder<F> $newBuilder() => OrderByParamsBuilder<F>();
+  OrderByParamsBuilder<F> newBuilder$() => OrderByParamsBuilder<F>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.field,
         this.direction,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    field.$reducer(reducer);
-    direction.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    field.reducer$(reducer);
+    direction.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(OrderByParams, [FullType(F)]);
 }

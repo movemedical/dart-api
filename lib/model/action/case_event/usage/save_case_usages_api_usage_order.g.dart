@@ -227,27 +227,27 @@ class _$SaveCaseUsagesApiUsageOrderActions
   final StatefulActionsOptions<
       SaveCaseUsagesApiUsageOrder,
       SaveCaseUsagesApiUsageOrderBuilder,
-      SaveCaseUsagesApiUsageOrderActions> $options;
+      SaveCaseUsagesApiUsageOrderActions> options$;
 
-  final ActionDispatcher<SaveCaseUsagesApiUsageOrder> $replace;
+  final ActionDispatcher<SaveCaseUsagesApiUsageOrder> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> referenceString;
   final FieldDispatcher<String> poNumber;
   final FieldDispatcher<String> billToAddressId;
 
-  _$SaveCaseUsagesApiUsageOrderActions._(this.$options)
-      : $replace = $options.action<SaveCaseUsagesApiUsageOrder>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$SaveCaseUsagesApiUsageOrderActions._(this.options$)
+      : replace$ = options$.action<SaveCaseUsagesApiUsageOrder>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        referenceString = $options.field<String>(
+        referenceString = options$.field<String>(
             'referenceString',
             (a) => a?.referenceString,
             (s) => s?.referenceString,
             (p, b) => p?.referenceString = b),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        billToAddressId = $options.field<String>(
+        billToAddressId = options$.field<String>(
             'billToAddressId',
             (a) => a?.billToAddressId,
             (s) => s?.billToAddressId,
@@ -259,17 +259,18 @@ class _$SaveCaseUsagesApiUsageOrderActions
       _$SaveCaseUsagesApiUsageOrderActions._(options());
 
   @override
-  SaveCaseUsagesApiUsageOrder get $initial => SaveCaseUsagesApiUsageOrder();
+  SaveCaseUsagesApiUsageOrder get initialState$ =>
+      SaveCaseUsagesApiUsageOrder();
 
   @override
-  SaveCaseUsagesApiUsageOrderBuilder $newBuilder() =>
+  SaveCaseUsagesApiUsageOrderBuilder newBuilder$() =>
       SaveCaseUsagesApiUsageOrderBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.referenceString,
         this.poNumber,
@@ -277,21 +278,16 @@ class _$SaveCaseUsagesApiUsageOrderActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    referenceString.$reducer(reducer);
-    poNumber.$reducer(reducer);
-    billToAddressId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    referenceString.reducer$(reducer);
+    poNumber.reducer$(reducer);
+    billToAddressId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SaveCaseUsagesApiUsageOrder);
 }

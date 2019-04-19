@@ -184,17 +184,17 @@ class _$GetItemLotSerialHistoryApiResponseActions
   final StatefulActionsOptions<
       GetItemLotSerialHistoryApiResponse,
       GetItemLotSerialHistoryApiResponseBuilder,
-      GetItemLotSerialHistoryApiResponseActions> $options;
+      GetItemLotSerialHistoryApiResponseActions> options$;
 
-  final ActionDispatcher<GetItemLotSerialHistoryApiResponse> $replace;
+  final ActionDispatcher<GetItemLotSerialHistoryApiResponse> replace$;
   final FieldDispatcher<BuiltList<GetItemLotSerialHistoryApiHistoryRecord>>
       historyRecords;
 
-  _$GetItemLotSerialHistoryApiResponseActions._(this.$options)
-      : $replace = $options.action<GetItemLotSerialHistoryApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$GetItemLotSerialHistoryApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetItemLotSerialHistoryApiResponse>(
+            'replace\$', (a) => a?.replace$),
         historyRecords =
-            $options.field<BuiltList<GetItemLotSerialHistoryApiHistoryRecord>>(
+            options$.field<BuiltList<GetItemLotSerialHistoryApiHistoryRecord>>(
                 'historyRecords',
                 (a) => a?.historyRecords,
                 (s) => s?.historyRecords,
@@ -206,34 +206,29 @@ class _$GetItemLotSerialHistoryApiResponseActions
       _$GetItemLotSerialHistoryApiResponseActions._(options());
 
   @override
-  GetItemLotSerialHistoryApiResponse get $initial =>
+  GetItemLotSerialHistoryApiResponse get initialState$ =>
       GetItemLotSerialHistoryApiResponse();
 
   @override
-  GetItemLotSerialHistoryApiResponseBuilder $newBuilder() =>
+  GetItemLotSerialHistoryApiResponseBuilder newBuilder$() =>
       GetItemLotSerialHistoryApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.historyRecords,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    historyRecords.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    historyRecords.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetItemLotSerialHistoryApiResponse);
 }

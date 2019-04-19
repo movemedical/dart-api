@@ -170,18 +170,18 @@ typedef StatefulActionsOptions<
 
 class _$AddAeToTeamApiRequestActions extends AddAeToTeamApiRequestActions {
   final StatefulActionsOptions<AddAeToTeamApiRequest,
-      AddAeToTeamApiRequestBuilder, AddAeToTeamApiRequestActions> $options;
+      AddAeToTeamApiRequestBuilder, AddAeToTeamApiRequestActions> options$;
 
-  final ActionDispatcher<AddAeToTeamApiRequest> $replace;
+  final ActionDispatcher<AddAeToTeamApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> teamId;
 
-  _$AddAeToTeamApiRequestActions._(this.$options)
-      : $replace = $options.action<AddAeToTeamApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$AddAeToTeamApiRequestActions._(this.options$)
+      : replace$ = options$.action<AddAeToTeamApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
         super._();
 
@@ -190,33 +190,29 @@ class _$AddAeToTeamApiRequestActions extends AddAeToTeamApiRequestActions {
       _$AddAeToTeamApiRequestActions._(options());
 
   @override
-  AddAeToTeamApiRequest get $initial => AddAeToTeamApiRequest();
+  AddAeToTeamApiRequest get initialState$ => AddAeToTeamApiRequest();
 
   @override
-  AddAeToTeamApiRequestBuilder $newBuilder() => AddAeToTeamApiRequestBuilder();
+  AddAeToTeamApiRequestBuilder newBuilder$() => AddAeToTeamApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.teamId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    teamId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    teamId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(AddAeToTeamApiRequest);
 }

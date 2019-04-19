@@ -234,31 +234,31 @@ typedef StatefulActionsOptions<ItemSpec, ItemSpecBuilder,
 
 class _$ItemSpecActions extends ItemSpecActions {
   final StatefulActionsOptions<ItemSpec, ItemSpecBuilder, ItemSpecActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<ItemSpec> $replace;
+  final ActionDispatcher<ItemSpec> replace$;
   final ItemActions item;
   final FieldDispatcher<BuiltList<ItemVersion>> itemVersions;
   final FieldDispatcher<BuiltList<Lot>> lots;
   final FieldDispatcher<BuiltList<Serial>> serials;
 
-  _$ItemSpecActions._(this.$options)
-      : $replace = $options.action<ItemSpec>('\$replace', (a) => a?.$replace),
+  _$ItemSpecActions._(this.options$)
+      : replace$ = options$.action<ItemSpec>('replace\$', (a) => a?.replace$),
         item = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'item',
                 (a) => a.item,
                 (s) => s?.item,
                 (b) => b?.item,
                 (parent, builder) => parent?.item = builder)),
-        itemVersions = $options.field<BuiltList<ItemVersion>>(
+        itemVersions = options$.field<BuiltList<ItemVersion>>(
             'itemVersions',
             (a) => a?.itemVersions,
             (s) => s?.itemVersions,
             (p, b) => p?.itemVersions = b),
-        lots = $options.field<BuiltList<Lot>>(
+        lots = options$.field<BuiltList<Lot>>(
             'lots', (a) => a?.lots, (s) => s?.lots, (p, b) => p?.lots = b),
-        serials = $options.field<BuiltList<Serial>>('serials',
+        serials = options$.field<BuiltList<Serial>>('serials',
             (a) => a?.serials, (s) => s?.serials, (p, b) => p?.serials = b),
         super._();
 
@@ -266,43 +266,39 @@ class _$ItemSpecActions extends ItemSpecActions {
       _$ItemSpecActions._(options());
 
   @override
-  ItemSpec get $initial => ItemSpec();
+  ItemSpec get initialState$ => ItemSpec();
 
   @override
-  ItemSpecBuilder $newBuilder() => ItemSpecBuilder();
+  ItemSpecBuilder newBuilder$() => ItemSpecBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.item,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemVersions,
         this.lots,
         this.serials,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    item.$reducer(reducer);
-    itemVersions.$reducer(reducer);
-    lots.$reducer(reducer);
-    serials.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    item.reducer$(reducer);
+    itemVersions.reducer$(reducer);
+    lots.reducer$(reducer);
+    serials.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    item.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    item.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ItemSpec);
 }

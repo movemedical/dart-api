@@ -278,9 +278,9 @@ typedef StatefulActionsOptions<StockItem, StockItemBuilder,
 
 class _$StockItemActions extends StockItemActions {
   final StatefulActionsOptions<StockItem, StockItemBuilder, StockItemActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<StockItem> $replace;
+  final ActionDispatcher<StockItem> replace$;
   final ItemActions item;
   final ItemVersionActions itemVersion;
   final LotActions lot;
@@ -288,41 +288,41 @@ class _$StockItemActions extends StockItemActions {
   final FieldDispatcher<String> rawLotNumber;
   final TagActions tag;
 
-  _$StockItemActions._(this.$options)
-      : $replace = $options.action<StockItem>('\$replace', (a) => a?.$replace),
+  _$StockItemActions._(this.options$)
+      : replace$ = options$.action<StockItem>('replace\$', (a) => a?.replace$),
         item = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'item',
                 (a) => a.item,
                 (s) => s?.item,
                 (b) => b?.item,
                 (parent, builder) => parent?.item = builder)),
-        itemVersion = ItemVersionActions(() => $options
+        itemVersion = ItemVersionActions(() => options$
             .stateful<ItemVersion, ItemVersionBuilder, ItemVersionActions>(
                 'itemVersion',
                 (a) => a.itemVersion,
                 (s) => s?.itemVersion,
                 (b) => b?.itemVersion,
                 (parent, builder) => parent?.itemVersion = builder)),
-        lot = LotActions(() => $options.stateful<Lot, LotBuilder, LotActions>(
+        lot = LotActions(() => options$.stateful<Lot, LotBuilder, LotActions>(
             'lot',
             (a) => a.lot,
             (s) => s?.lot,
             (b) => b?.lot,
             (parent, builder) => parent?.lot = builder)),
         serial = SerialActions(() =>
-            $options.stateful<Serial, SerialBuilder, SerialActions>(
+            options$.stateful<Serial, SerialBuilder, SerialActions>(
                 'serial',
                 (a) => a.serial,
                 (s) => s?.serial,
                 (b) => b?.serial,
                 (parent, builder) => parent?.serial = builder)),
-        rawLotNumber = $options.field<String>(
+        rawLotNumber = options$.field<String>(
             'rawLotNumber',
             (a) => a?.rawLotNumber,
             (s) => s?.rawLotNumber,
             (p, b) => p?.rawLotNumber = b),
-        tag = TagActions(() => $options.stateful<Tag, TagBuilder, TagActions>(
+        tag = TagActions(() => options$.stateful<Tag, TagBuilder, TagActions>(
             'tag',
             (a) => a.tag,
             (s) => s?.tag,
@@ -334,14 +334,14 @@ class _$StockItemActions extends StockItemActions {
       _$StockItemActions._(options());
 
   @override
-  StockItem get $initial => StockItem();
+  StockItem get initialState$ => StockItem();
 
   @override
-  StockItemBuilder $newBuilder() => StockItemBuilder();
+  StockItemBuilder newBuilder$() => StockItemBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.item,
         this.itemVersion,
         this.lot,
@@ -349,36 +349,32 @@ class _$StockItemActions extends StockItemActions {
         this.tag,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.rawLotNumber,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    item.$reducer(reducer);
-    itemVersion.$reducer(reducer);
-    lot.$reducer(reducer);
-    serial.$reducer(reducer);
-    rawLotNumber.$reducer(reducer);
-    tag.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    item.reducer$(reducer);
+    itemVersion.reducer$(reducer);
+    lot.reducer$(reducer);
+    serial.reducer$(reducer);
+    rawLotNumber.reducer$(reducer);
+    tag.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    item.$middleware(middleware);
-    itemVersion.$middleware(middleware);
-    lot.$middleware(middleware);
-    serial.$middleware(middleware);
-    tag.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    item.middleware$(middleware);
+    itemVersion.middleware$(middleware);
+    lot.middleware$(middleware);
+    serial.middleware$(middleware);
+    tag.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(StockItem);
 }

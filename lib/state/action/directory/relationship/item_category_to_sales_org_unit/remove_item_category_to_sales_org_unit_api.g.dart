@@ -24,69 +24,30 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
       CommandStateBuilder<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
           ApiResult<Nothing>>,
-      RemoveItemCategoryToSalesOrgUnitApi> $options;
+      RemoveItemCategoryToSalesOrgUnitApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Nothing>>> $replace;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Nothing>,
-          RemoveItemCategoryToSalesOrgUnitApi,
-          String>> $cancel;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-              ApiResult<Nothing>,
-              RemoveItemCategoryToSalesOrgUnitApi,
-              Command<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Nothing>,
-          RemoveItemCategoryToSalesOrgUnitApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Nothing>,
-          RemoveItemCategoryToSalesOrgUnitApi,
-          CommandProgress>> $progress;
+      Command<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RemoveItemCategoryToSalesOrgUnitApi._(this.$options)
-      : $replace = $options.action<
+  _$RemoveItemCategoryToSalesOrgUnitApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Nothing>,
-                RemoveItemCategoryToSalesOrgUnitApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                    ApiResult<Nothing>,
-                    RemoveItemCategoryToSalesOrgUnitApi,
-                    Command<
-                        ApiCommand<
-                            RemoveItemCategoryToSalesOrgUnitApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                    ApiResult<Nothing>,
-                    RemoveItemCategoryToSalesOrgUnitApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Nothing>,
-                RemoveItemCategoryToSalesOrgUnitApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<
+                    ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RemoveItemCategoryToSalesOrgUnitApi(
@@ -96,34 +57,26 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
   @override
   CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(
-            ApiCommand, [FullType(RemoveItemCategoryToSalesOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

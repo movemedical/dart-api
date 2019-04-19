@@ -261,33 +261,33 @@ class _$PreviewApplyPreferenceCardsToCaseApiPreviewActions
   final StatefulActionsOptions<
       PreviewApplyPreferenceCardsToCaseApiPreview,
       PreviewApplyPreferenceCardsToCaseApiPreviewBuilder,
-      PreviewApplyPreferenceCardsToCaseApiPreviewActions> $options;
+      PreviewApplyPreferenceCardsToCaseApiPreviewActions> options$;
 
-  final ActionDispatcher<PreviewApplyPreferenceCardsToCaseApiPreview> $replace;
+  final ActionDispatcher<PreviewApplyPreferenceCardsToCaseApiPreview> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> itemNumber;
   final FieldDispatcher<String> itemDescription;
   final FieldDispatcher<int> quantityToIncrement;
   final FieldDispatcher<int> quantityDeduplicated;
 
-  _$PreviewApplyPreferenceCardsToCaseApiPreviewActions._(this.$options)
-      : $replace = $options.action<PreviewApplyPreferenceCardsToCaseApiPreview>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$PreviewApplyPreferenceCardsToCaseApiPreviewActions._(this.options$)
+      : replace$ = options$.action<PreviewApplyPreferenceCardsToCaseApiPreview>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+        itemNumber = options$.field<String>('itemNumber', (a) => a?.itemNumber,
             (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
-        itemDescription = $options.field<String>(
+        itemDescription = options$.field<String>(
             'itemDescription',
             (a) => a?.itemDescription,
             (s) => s?.itemDescription,
             (p, b) => p?.itemDescription = b),
-        quantityToIncrement = $options.field<int>(
+        quantityToIncrement = options$.field<int>(
             'quantityToIncrement',
             (a) => a?.quantityToIncrement,
             (s) => s?.quantityToIncrement,
             (p, b) => p?.quantityToIncrement = b),
-        quantityDeduplicated = $options.field<int>(
+        quantityDeduplicated = options$.field<int>(
             'quantityDeduplicated',
             (a) => a?.quantityDeduplicated,
             (s) => s?.quantityDeduplicated,
@@ -299,18 +299,18 @@ class _$PreviewApplyPreferenceCardsToCaseApiPreviewActions
       _$PreviewApplyPreferenceCardsToCaseApiPreviewActions._(options());
 
   @override
-  PreviewApplyPreferenceCardsToCaseApiPreview get $initial =>
+  PreviewApplyPreferenceCardsToCaseApiPreview get initialState$ =>
       PreviewApplyPreferenceCardsToCaseApiPreview();
 
   @override
-  PreviewApplyPreferenceCardsToCaseApiPreviewBuilder $newBuilder() =>
+  PreviewApplyPreferenceCardsToCaseApiPreviewBuilder newBuilder$() =>
       PreviewApplyPreferenceCardsToCaseApiPreviewBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.itemNumber,
         this.itemDescription,
@@ -319,22 +319,17 @@ class _$PreviewApplyPreferenceCardsToCaseApiPreviewActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemNumber.$reducer(reducer);
-    itemDescription.$reducer(reducer);
-    quantityToIncrement.$reducer(reducer);
-    quantityDeduplicated.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemNumber.reducer$(reducer);
+    itemDescription.reducer$(reducer);
+    quantityToIncrement.reducer$(reducer);
+    quantityDeduplicated.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(PreviewApplyPreferenceCardsToCaseApiPreview);
 }

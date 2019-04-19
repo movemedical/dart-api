@@ -198,21 +198,21 @@ class _$ArchiveConversationsApiRequestActions
   final StatefulActionsOptions<
       ArchiveConversationsApiRequest,
       ArchiveConversationsApiRequestBuilder,
-      ArchiveConversationsApiRequestActions> $options;
+      ArchiveConversationsApiRequestActions> options$;
 
-  final ActionDispatcher<ArchiveConversationsApiRequest> $replace;
+  final ActionDispatcher<ArchiveConversationsApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> conversationIds;
   final FieldDispatcher<bool> archive;
 
-  _$ArchiveConversationsApiRequestActions._(this.$options)
-      : $replace = $options.action<ArchiveConversationsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        conversationIds = $options.field<BuiltList<String>>(
+  _$ArchiveConversationsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ArchiveConversationsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        conversationIds = options$.field<BuiltList<String>>(
             'conversationIds',
             (a) => a?.conversationIds,
             (s) => s?.conversationIds,
             (p, b) => p?.conversationIds = b),
-        archive = $options.field<bool>('archive', (a) => a?.archive,
+        archive = options$.field<bool>('archive', (a) => a?.archive,
             (s) => s?.archive, (p, b) => p?.archive = b),
         super._();
 
@@ -221,36 +221,31 @@ class _$ArchiveConversationsApiRequestActions
       _$ArchiveConversationsApiRequestActions._(options());
 
   @override
-  ArchiveConversationsApiRequest get $initial =>
+  ArchiveConversationsApiRequest get initialState$ =>
       ArchiveConversationsApiRequest();
 
   @override
-  ArchiveConversationsApiRequestBuilder $newBuilder() =>
+  ArchiveConversationsApiRequestBuilder newBuilder$() =>
       ArchiveConversationsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.conversationIds,
         this.archive,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    conversationIds.$reducer(reducer);
-    archive.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    conversationIds.reducer$(reducer);
+    archive.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ArchiveConversationsApiRequest);
 }

@@ -22,69 +22,32 @@ class _$GetItemLotSerialHistoryApi extends GetItemLotSerialHistoryApi {
           ApiResult<GetItemLotSerialHistoryApiResponse>>,
       CommandStateBuilder<ApiCommand<GetItemLotSerialHistoryApiRequest>,
           ApiResult<GetItemLotSerialHistoryApiResponse>>,
-      GetItemLotSerialHistoryApi> $options;
+      GetItemLotSerialHistoryApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetItemLotSerialHistoryApiRequest>,
-          ApiResult<GetItemLotSerialHistoryApiResponse>>> $replace;
+          ApiResult<GetItemLotSerialHistoryApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetItemLotSerialHistoryApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetItemLotSerialHistoryApiRequest>,
-          ApiResult<GetItemLotSerialHistoryApiResponse>,
-          GetItemLotSerialHistoryApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetItemLotSerialHistoryApiRequest>,
-          ApiResult<GetItemLotSerialHistoryApiResponse>,
-          GetItemLotSerialHistoryApi,
-          Command<ApiCommand<GetItemLotSerialHistoryApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<GetItemLotSerialHistoryApiRequest>,
-              ApiResult<GetItemLotSerialHistoryApiResponse>,
-              GetItemLotSerialHistoryApi,
-              CommandResult<ApiResult<GetItemLotSerialHistoryApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetItemLotSerialHistoryApiRequest>,
-          ApiResult<GetItemLotSerialHistoryApiResponse>,
-          GetItemLotSerialHistoryApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<GetItemLotSerialHistoryApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetItemLotSerialHistoryApi._(this.$options)
-      : $replace = $options.action<
+  _$GetItemLotSerialHistoryApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetItemLotSerialHistoryApiRequest>,
                     ApiResult<GetItemLotSerialHistoryApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetItemLotSerialHistoryApiRequest>,
-                ApiResult<GetItemLotSerialHistoryApiResponse>,
-                GetItemLotSerialHistoryApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetItemLotSerialHistoryApiRequest>,
-                    ApiResult<GetItemLotSerialHistoryApiResponse>,
-                    GetItemLotSerialHistoryApi,
-                    Command<ApiCommand<GetItemLotSerialHistoryApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetItemLotSerialHistoryApiRequest>,
-                    ApiResult<GetItemLotSerialHistoryApiResponse>,
-                    GetItemLotSerialHistoryApi,
-                    CommandResult<
-                        ApiResult<GetItemLotSerialHistoryApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetItemLotSerialHistoryApiRequest>,
-                ApiResult<GetItemLotSerialHistoryApiResponse>,
-                GetItemLotSerialHistoryApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<GetItemLotSerialHistoryApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<GetItemLotSerialHistoryApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetItemLotSerialHistoryApi(
@@ -94,33 +57,26 @@ class _$GetItemLotSerialHistoryApi extends GetItemLotSerialHistoryApi {
   @override
   CommandState<ApiCommand<GetItemLotSerialHistoryApiRequest>,
           ApiResult<GetItemLotSerialHistoryApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<GetItemLotSerialHistoryApiRequest>,
           ApiResult<GetItemLotSerialHistoryApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetItemLotSerialHistoryApiRequest>,
           ApiResult<GetItemLotSerialHistoryApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetItemLotSerialHistoryApiRequest>,
           ApiResult<GetItemLotSerialHistoryApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetItemLotSerialHistoryApiRequest)]),
-        FullType(ApiResult, [FullType(GetItemLotSerialHistoryApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

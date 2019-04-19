@@ -397,9 +397,9 @@ class _$CreateTrayStockApiRequestActions
   final StatefulActionsOptions<
       CreateTrayStockApiRequest,
       CreateTrayStockApiRequestBuilder,
-      CreateTrayStockApiRequestActions> $options;
+      CreateTrayStockApiRequestActions> options$;
 
-  final ActionDispatcher<CreateTrayStockApiRequest> $replace;
+  final ActionDispatcher<CreateTrayStockApiRequest> replace$;
   final FieldDispatcher<String> inventoryTypeId;
   final FieldDispatcher<String> trayItemId;
   final FieldDispatcher<LocationType> locationType;
@@ -412,54 +412,54 @@ class _$CreateTrayStockApiRequestActions
   final FieldDispatcher<String> responsiblePartyId;
   final FieldDispatcher<bool> fill;
 
-  _$CreateTrayStockApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateTrayStockApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        inventoryTypeId = $options.field<String>(
+  _$CreateTrayStockApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateTrayStockApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        inventoryTypeId = options$.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        trayItemId = $options.field<String>('trayItemId', (a) => a?.trayItemId,
+        trayItemId = options$.field<String>('trayItemId', (a) => a?.trayItemId,
             (s) => s?.trayItemId, (p, b) => p?.trayItemId = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        homeLocationType = $options.field<LocationType>(
+        homeLocationType = options$.field<LocationType>(
             'homeLocationType',
             (a) => a?.homeLocationType,
             (s) => s?.homeLocationType,
             (p, b) => p?.homeLocationType = b),
-        homeLocationId = $options.field<String>(
+        homeLocationId = options$.field<String>(
             'homeLocationId',
             (a) => a?.homeLocationId,
             (s) => s?.homeLocationId,
             (p, b) => p?.homeLocationId = b),
-        containerType = $options.field<StockContainerType>(
+        containerType = options$.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        responsiblePartyType = $options.field<ResponsiblePartyType>(
+        responsiblePartyType = options$.field<ResponsiblePartyType>(
             'responsiblePartyType',
             (a) => a?.responsiblePartyType,
             (s) => s?.responsiblePartyType,
             (p, b) => p?.responsiblePartyType = b),
-        responsiblePartyId = $options.field<String>(
+        responsiblePartyId = options$.field<String>(
             'responsiblePartyId',
             (a) => a?.responsiblePartyId,
             (s) => s?.responsiblePartyId,
             (p, b) => p?.responsiblePartyId = b),
-        fill = $options.field<bool>(
+        fill = options$.field<bool>(
             'fill', (a) => a?.fill, (s) => s?.fill, (p, b) => p?.fill = b),
         super._();
 
@@ -468,17 +468,17 @@ class _$CreateTrayStockApiRequestActions
       _$CreateTrayStockApiRequestActions._(options());
 
   @override
-  CreateTrayStockApiRequest get $initial => CreateTrayStockApiRequest();
+  CreateTrayStockApiRequest get initialState$ => CreateTrayStockApiRequest();
 
   @override
-  CreateTrayStockApiRequestBuilder $newBuilder() =>
+  CreateTrayStockApiRequestBuilder newBuilder$() =>
       CreateTrayStockApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.inventoryTypeId,
         this.trayItemId,
         this.locationType,
@@ -493,27 +493,23 @@ class _$CreateTrayStockApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    inventoryTypeId.$reducer(reducer);
-    trayItemId.$reducer(reducer);
-    locationType.$reducer(reducer);
-    locationId.$reducer(reducer);
-    homeLocationType.$reducer(reducer);
-    homeLocationId.$reducer(reducer);
-    containerType.$reducer(reducer);
-    containerId.$reducer(reducer);
-    responsiblePartyType.$reducer(reducer);
-    responsiblePartyId.$reducer(reducer);
-    fill.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    inventoryTypeId.reducer$(reducer);
+    trayItemId.reducer$(reducer);
+    locationType.reducer$(reducer);
+    locationId.reducer$(reducer);
+    homeLocationType.reducer$(reducer);
+    homeLocationId.reducer$(reducer);
+    containerType.reducer$(reducer);
+    containerId.reducer$(reducer);
+    responsiblePartyType.reducer$(reducer);
+    responsiblePartyId.reducer$(reducer);
+    fill.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateTrayStockApiRequest);
 }

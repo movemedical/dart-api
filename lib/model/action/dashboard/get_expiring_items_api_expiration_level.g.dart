@@ -261,39 +261,39 @@ class _$GetExpiringItemsApiExpirationLevelActions
   final StatefulActionsOptions<
       GetExpiringItemsApiExpirationLevel,
       GetExpiringItemsApiExpirationLevelBuilder,
-      GetExpiringItemsApiExpirationLevelActions> $options;
+      GetExpiringItemsApiExpirationLevelActions> options$;
 
-  final ActionDispatcher<GetExpiringItemsApiExpirationLevel> $replace;
+  final ActionDispatcher<GetExpiringItemsApiExpirationLevel> replace$;
   final FieldDispatcher<String> expirationLevelId;
   final FieldDispatcher<String> expirationLevelName;
   final FieldDispatcher<int> expirationLevelSequence;
   final FieldDispatcher<ExpirationLevelColor> expirationLevelColor;
   final FieldDispatcher<int> quantityStockExpired;
 
-  _$GetExpiringItemsApiExpirationLevelActions._(this.$options)
-      : $replace = $options.action<GetExpiringItemsApiExpirationLevel>(
-            '\$replace', (a) => a?.$replace),
-        expirationLevelId = $options.field<String>(
+  _$GetExpiringItemsApiExpirationLevelActions._(this.options$)
+      : replace$ = options$.action<GetExpiringItemsApiExpirationLevel>(
+            'replace\$', (a) => a?.replace$),
+        expirationLevelId = options$.field<String>(
             'expirationLevelId',
             (a) => a?.expirationLevelId,
             (s) => s?.expirationLevelId,
             (p, b) => p?.expirationLevelId = b),
-        expirationLevelName = $options.field<String>(
+        expirationLevelName = options$.field<String>(
             'expirationLevelName',
             (a) => a?.expirationLevelName,
             (s) => s?.expirationLevelName,
             (p, b) => p?.expirationLevelName = b),
-        expirationLevelSequence = $options.field<int>(
+        expirationLevelSequence = options$.field<int>(
             'expirationLevelSequence',
             (a) => a?.expirationLevelSequence,
             (s) => s?.expirationLevelSequence,
             (p, b) => p?.expirationLevelSequence = b),
-        expirationLevelColor = $options.field<ExpirationLevelColor>(
+        expirationLevelColor = options$.field<ExpirationLevelColor>(
             'expirationLevelColor',
             (a) => a?.expirationLevelColor,
             (s) => s?.expirationLevelColor,
             (p, b) => p?.expirationLevelColor = b),
-        quantityStockExpired = $options.field<int>(
+        quantityStockExpired = options$.field<int>(
             'quantityStockExpired',
             (a) => a?.quantityStockExpired,
             (s) => s?.quantityStockExpired,
@@ -305,18 +305,18 @@ class _$GetExpiringItemsApiExpirationLevelActions
       _$GetExpiringItemsApiExpirationLevelActions._(options());
 
   @override
-  GetExpiringItemsApiExpirationLevel get $initial =>
+  GetExpiringItemsApiExpirationLevel get initialState$ =>
       GetExpiringItemsApiExpirationLevel();
 
   @override
-  GetExpiringItemsApiExpirationLevelBuilder $newBuilder() =>
+  GetExpiringItemsApiExpirationLevelBuilder newBuilder$() =>
       GetExpiringItemsApiExpirationLevelBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.expirationLevelId,
         this.expirationLevelName,
         this.expirationLevelSequence,
@@ -325,22 +325,17 @@ class _$GetExpiringItemsApiExpirationLevelActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    expirationLevelId.$reducer(reducer);
-    expirationLevelName.$reducer(reducer);
-    expirationLevelSequence.$reducer(reducer);
-    expirationLevelColor.$reducer(reducer);
-    quantityStockExpired.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    expirationLevelId.reducer$(reducer);
+    expirationLevelName.reducer$(reducer);
+    expirationLevelSequence.reducer$(reducer);
+    expirationLevelColor.reducer$(reducer);
+    quantityStockExpired.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetExpiringItemsApiExpirationLevel);
 }

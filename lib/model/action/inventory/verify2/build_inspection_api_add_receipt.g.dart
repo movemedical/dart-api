@@ -248,30 +248,30 @@ class _$BuildInspectionApiAddReceiptActions
   final StatefulActionsOptions<
       BuildInspectionApiAddReceipt,
       BuildInspectionApiAddReceiptBuilder,
-      BuildInspectionApiAddReceiptActions> $options;
+      BuildInspectionApiAddReceiptActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiAddReceipt> $replace;
+  final ActionDispatcher<BuildInspectionApiAddReceipt> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<BuildInspectionApiReceiptType> type;
   final FieldDispatcher<String> pkgId;
   final FieldDispatcher<LocationType> locationType;
   final FieldDispatcher<String> inventoryTypeId;
 
-  _$BuildInspectionApiAddReceiptActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiAddReceipt>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BuildInspectionApiAddReceiptActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiAddReceipt>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.field<BuildInspectionApiReceiptType>(
+        type = options$.field<BuildInspectionApiReceiptType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        pkgId = $options.field<String>(
+        pkgId = options$.field<String>(
             'pkgId', (a) => a?.pkgId, (s) => s?.pkgId, (p, b) => p?.pkgId = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        inventoryTypeId = $options.field<String>(
+        inventoryTypeId = options$.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
@@ -283,17 +283,18 @@ class _$BuildInspectionApiAddReceiptActions
       _$BuildInspectionApiAddReceiptActions._(options());
 
   @override
-  BuildInspectionApiAddReceipt get $initial => BuildInspectionApiAddReceipt();
+  BuildInspectionApiAddReceipt get initialState$ =>
+      BuildInspectionApiAddReceipt();
 
   @override
-  BuildInspectionApiAddReceiptBuilder $newBuilder() =>
+  BuildInspectionApiAddReceiptBuilder newBuilder$() =>
       BuildInspectionApiAddReceiptBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.type,
         this.pkgId,
@@ -302,22 +303,17 @@ class _$BuildInspectionApiAddReceiptActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    type.$reducer(reducer);
-    pkgId.$reducer(reducer);
-    locationType.$reducer(reducer);
-    inventoryTypeId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    type.reducer$(reducer);
+    pkgId.reducer$(reducer);
+    locationType.reducer$(reducer);
+    inventoryTypeId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiAddReceipt);
 }

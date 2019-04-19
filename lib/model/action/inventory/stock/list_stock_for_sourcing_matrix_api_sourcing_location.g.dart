@@ -450,10 +450,10 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
   final StatefulActionsOptions<
       ListStockForSourcingMatrixApiSourcingLocation,
       ListStockForSourcingMatrixApiSourcingLocationBuilder,
-      ListStockForSourcingMatrixApiSourcingLocationActions> $options;
+      ListStockForSourcingMatrixApiSourcingLocationActions> options$;
 
   final ActionDispatcher<ListStockForSourcingMatrixApiSourcingLocation>
-      $replace;
+      replace$;
   final FieldDispatcher<String> locationKey;
   final FieldDispatcher<String> responsibleParty;
   final LocationActions location;
@@ -467,69 +467,69 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
   final FieldDispatcher<double> percentageMatch;
   final FieldDispatcher<bool> virtualStock;
 
-  _$ListStockForSourcingMatrixApiSourcingLocationActions._(this.$options)
-      : $replace =
-            $options.action<ListStockForSourcingMatrixApiSourcingLocation>(
-                '\$replace', (a) => a?.$replace),
-        locationKey = $options.field<String>(
+  _$ListStockForSourcingMatrixApiSourcingLocationActions._(this.options$)
+      : replace$ =
+            options$.action<ListStockForSourcingMatrixApiSourcingLocation>(
+                'replace\$', (a) => a?.replace$),
+        locationKey = options$.field<String>(
             'locationKey',
             (a) => a?.locationKey,
             (s) => s?.locationKey,
             (p, b) => p?.locationKey = b),
-        responsibleParty = $options.field<String>(
+        responsibleParty = options$.field<String>(
             'responsibleParty',
             (a) => a?.responsibleParty,
             (s) => s?.responsibleParty,
             (p, b) => p?.responsibleParty = b),
         location = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
         homeLocation = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'homeLocation',
                 (a) => a.homeLocation,
                 (s) => s?.homeLocation,
                 (b) => b?.homeLocation,
                 (parent, builder) => parent?.homeLocation = builder)),
-        demandLoanId = $options.field<String>(
+        demandLoanId = options$.field<String>(
             'demandLoanId',
             (a) => a?.demandLoanId,
             (s) => s?.demandLoanId,
             (p, b) => p?.demandLoanId = b),
-        consignmentLoanId = $options.field<String>(
+        consignmentLoanId = options$.field<String>(
             'consignmentLoanId',
             (a) => a?.consignmentLoanId,
             (s) => s?.consignmentLoanId,
             (p, b) => p?.consignmentLoanId = b),
-        loanDisplay = $options.field<String>(
+        loanDisplay = options$.field<String>(
             'loanDisplay',
             (a) => a?.loanDisplay,
             (s) => s?.loanDisplay,
             (p, b) => p?.loanDisplay = b),
-        caseEventLite = CaseEventLiteActions(() => $options.stateful<
+        caseEventLite = CaseEventLiteActions(() => options$.stateful<
                 CaseEventLite, CaseEventLiteBuilder, CaseEventLiteActions>(
             'caseEventLite',
             (a) => a.caseEventLite,
             (s) => s?.caseEventLite,
             (b) => b?.caseEventLite,
             (parent, builder) => parent?.caseEventLite = builder)),
-        lastLoanSurgeryDate = $options.field<DateTime>(
+        lastLoanSurgeryDate = options$.field<DateTime>(
             'lastLoanSurgeryDate',
             (a) => a?.lastLoanSurgeryDate,
             (s) => s?.lastLoanSurgeryDate,
             (p, b) => p?.lastLoanSurgeryDate = b),
-        inTransit = $options.field<bool>('inTransit', (a) => a?.inTransit,
+        inTransit = options$.field<bool>('inTransit', (a) => a?.inTransit,
             (s) => s?.inTransit, (p, b) => p?.inTransit = b),
-        percentageMatch = $options.field<double>(
+        percentageMatch = options$.field<double>(
             'percentageMatch',
             (a) => a?.percentageMatch,
             (s) => s?.percentageMatch,
             (p, b) => p?.percentageMatch = b),
-        virtualStock = $options.field<bool>(
+        virtualStock = options$.field<bool>(
             'virtualStock',
             (a) => a?.virtualStock,
             (s) => s?.virtualStock,
@@ -542,26 +542,26 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
       _$ListStockForSourcingMatrixApiSourcingLocationActions._(options());
 
   @override
-  ListStockForSourcingMatrixApiSourcingLocation get $initial =>
+  ListStockForSourcingMatrixApiSourcingLocation get initialState$ =>
       ListStockForSourcingMatrixApiSourcingLocation();
 
   @override
-  ListStockForSourcingMatrixApiSourcingLocationBuilder $newBuilder() =>
+  ListStockForSourcingMatrixApiSourcingLocationBuilder newBuilder$() =>
       ListStockForSourcingMatrixApiSourcingLocationBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
         this.homeLocation,
         this.caseEventLite,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.locationKey,
         this.responsibleParty,
         this.demandLoanId,
@@ -574,32 +574,27 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    locationKey.$reducer(reducer);
-    responsibleParty.$reducer(reducer);
-    location.$reducer(reducer);
-    homeLocation.$reducer(reducer);
-    demandLoanId.$reducer(reducer);
-    consignmentLoanId.$reducer(reducer);
-    loanDisplay.$reducer(reducer);
-    caseEventLite.$reducer(reducer);
-    lastLoanSurgeryDate.$reducer(reducer);
-    inTransit.$reducer(reducer);
-    percentageMatch.$reducer(reducer);
-    virtualStock.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    locationKey.reducer$(reducer);
+    responsibleParty.reducer$(reducer);
+    location.reducer$(reducer);
+    homeLocation.reducer$(reducer);
+    demandLoanId.reducer$(reducer);
+    consignmentLoanId.reducer$(reducer);
+    loanDisplay.reducer$(reducer);
+    caseEventLite.reducer$(reducer);
+    lastLoanSurgeryDate.reducer$(reducer);
+    inTransit.reducer$(reducer);
+    percentageMatch.reducer$(reducer);
+    virtualStock.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    location.$middleware(middleware);
-    homeLocation.$middleware(middleware);
-    caseEventLite.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    location.middleware$(middleware);
+    homeLocation.middleware$(middleware);
+    caseEventLite.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListStockForSourcingMatrixApiSourcingLocation);
 }

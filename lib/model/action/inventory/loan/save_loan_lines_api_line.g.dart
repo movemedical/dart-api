@@ -312,9 +312,9 @@ typedef StatefulActionsOptions<
 
 class _$SaveLoanLinesApiLineActions extends SaveLoanLinesApiLineActions {
   final StatefulActionsOptions<SaveLoanLinesApiLine,
-      SaveLoanLinesApiLineBuilder, SaveLoanLinesApiLineActions> $options;
+      SaveLoanLinesApiLineBuilder, SaveLoanLinesApiLineActions> options$;
 
-  final ActionDispatcher<SaveLoanLinesApiLine> $replace;
+  final ActionDispatcher<SaveLoanLinesApiLine> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<bool> remove;
   final FieldDispatcher<String> itemId;
@@ -324,27 +324,27 @@ class _$SaveLoanLinesApiLineActions extends SaveLoanLinesApiLineActions {
   final FieldDispatcher<String> serialId;
   final FieldDispatcher<int> quantity;
 
-  _$SaveLoanLinesApiLineActions._(this.$options)
-      : $replace = $options.action<SaveLoanLinesApiLine>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$SaveLoanLinesApiLineActions._(this.options$)
+      : replace$ = options$.action<SaveLoanLinesApiLine>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        remove = $options.field<bool>('remove', (a) => a?.remove,
+        remove = options$.field<bool>('remove', (a) => a?.remove,
             (s) => s?.remove, (p, b) => p?.remove = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        uomId = $options.field<String>(
+        uomId = options$.field<String>(
             'uomId', (a) => a?.uomId, (s) => s?.uomId, (p, b) => p?.uomId = b),
-        itemVersionId = $options.field<String>(
+        itemVersionId = options$.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -353,16 +353,16 @@ class _$SaveLoanLinesApiLineActions extends SaveLoanLinesApiLineActions {
       _$SaveLoanLinesApiLineActions._(options());
 
   @override
-  SaveLoanLinesApiLine get $initial => SaveLoanLinesApiLine();
+  SaveLoanLinesApiLine get initialState$ => SaveLoanLinesApiLine();
 
   @override
-  SaveLoanLinesApiLineBuilder $newBuilder() => SaveLoanLinesApiLineBuilder();
+  SaveLoanLinesApiLineBuilder newBuilder$() => SaveLoanLinesApiLineBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.remove,
         this.itemId,
@@ -374,24 +374,20 @@ class _$SaveLoanLinesApiLineActions extends SaveLoanLinesApiLineActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    remove.$reducer(reducer);
-    itemId.$reducer(reducer);
-    uomId.$reducer(reducer);
-    itemVersionId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    quantity.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    remove.reducer$(reducer);
+    itemId.reducer$(reducer);
+    uomId.reducer$(reducer);
+    itemVersionId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    quantity.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SaveLoanLinesApiLine);
 }

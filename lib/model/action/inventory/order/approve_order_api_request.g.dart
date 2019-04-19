@@ -150,15 +150,15 @@ typedef StatefulActionsOptions<
 
 class _$ApproveOrderApiRequestActions extends ApproveOrderApiRequestActions {
   final StatefulActionsOptions<ApproveOrderApiRequest,
-      ApproveOrderApiRequestBuilder, ApproveOrderApiRequestActions> $options;
+      ApproveOrderApiRequestBuilder, ApproveOrderApiRequestActions> options$;
 
-  final ActionDispatcher<ApproveOrderApiRequest> $replace;
+  final ActionDispatcher<ApproveOrderApiRequest> replace$;
   final FieldDispatcher<String> orderId;
 
-  _$ApproveOrderApiRequestActions._(this.$options)
-      : $replace = $options.action<ApproveOrderApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$ApproveOrderApiRequestActions._(this.options$)
+      : replace$ = options$.action<ApproveOrderApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         super._();
 
@@ -167,32 +167,28 @@ class _$ApproveOrderApiRequestActions extends ApproveOrderApiRequestActions {
       _$ApproveOrderApiRequestActions._(options());
 
   @override
-  ApproveOrderApiRequest get $initial => ApproveOrderApiRequest();
+  ApproveOrderApiRequest get initialState$ => ApproveOrderApiRequest();
 
   @override
-  ApproveOrderApiRequestBuilder $newBuilder() =>
+  ApproveOrderApiRequestBuilder newBuilder$() =>
       ApproveOrderApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ApproveOrderApiRequest);
 }

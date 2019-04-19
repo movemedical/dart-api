@@ -196,21 +196,21 @@ class _$ListChildLoanLinesApiRequestActions
   final StatefulActionsOptions<
       ListChildLoanLinesApiRequest,
       ListChildLoanLinesApiRequestBuilder,
-      ListChildLoanLinesApiRequestActions> $options;
+      ListChildLoanLinesApiRequestActions> options$;
 
-  final ActionDispatcher<ListChildLoanLinesApiRequest> $replace;
+  final ActionDispatcher<ListChildLoanLinesApiRequest> replace$;
   final FieldDispatcher<String> parentLoanLineId;
   final PaginationParamsActions paging;
 
-  _$ListChildLoanLinesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListChildLoanLinesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        parentLoanLineId = $options.field<String>(
+  _$ListChildLoanLinesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListChildLoanLinesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        parentLoanLineId = options$.field<String>(
             'parentLoanLineId',
             (a) => a?.parentLoanLineId,
             (s) => s?.parentLoanLineId,
             (p, b) => p?.parentLoanLineId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -226,41 +226,37 @@ class _$ListChildLoanLinesApiRequestActions
       _$ListChildLoanLinesApiRequestActions._(options());
 
   @override
-  ListChildLoanLinesApiRequest get $initial => ListChildLoanLinesApiRequest();
+  ListChildLoanLinesApiRequest get initialState$ =>
+      ListChildLoanLinesApiRequest();
 
   @override
-  ListChildLoanLinesApiRequestBuilder $newBuilder() =>
+  ListChildLoanLinesApiRequestBuilder newBuilder$() =>
       ListChildLoanLinesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.parentLoanLineId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    parentLoanLineId.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    parentLoanLineId.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListChildLoanLinesApiRequest);
 }

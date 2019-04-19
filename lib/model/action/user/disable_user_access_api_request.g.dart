@@ -158,15 +158,15 @@ class _$DisableUserAccessApiRequestActions
   final StatefulActionsOptions<
       DisableUserAccessApiRequest,
       DisableUserAccessApiRequestBuilder,
-      DisableUserAccessApiRequestActions> $options;
+      DisableUserAccessApiRequestActions> options$;
 
-  final ActionDispatcher<DisableUserAccessApiRequest> $replace;
+  final ActionDispatcher<DisableUserAccessApiRequest> replace$;
   final FieldDispatcher<String> linkedId;
 
-  _$DisableUserAccessApiRequestActions._(this.$options)
-      : $replace = $options.action<DisableUserAccessApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
+  _$DisableUserAccessApiRequestActions._(this.options$)
+      : replace$ = options$.action<DisableUserAccessApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        linkedId = options$.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
         super._();
 
@@ -175,33 +175,29 @@ class _$DisableUserAccessApiRequestActions
       _$DisableUserAccessApiRequestActions._(options());
 
   @override
-  DisableUserAccessApiRequest get $initial => DisableUserAccessApiRequest();
+  DisableUserAccessApiRequest get initialState$ =>
+      DisableUserAccessApiRequest();
 
   @override
-  DisableUserAccessApiRequestBuilder $newBuilder() =>
+  DisableUserAccessApiRequestBuilder newBuilder$() =>
       DisableUserAccessApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.linkedId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    linkedId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    linkedId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(DisableUserAccessApiRequest);
 }

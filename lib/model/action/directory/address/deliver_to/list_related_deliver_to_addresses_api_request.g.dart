@@ -328,9 +328,9 @@ class _$ListRelatedDeliverToAddressesApiRequestActions
   final StatefulActionsOptions<
       ListRelatedDeliverToAddressesApiRequest,
       ListRelatedDeliverToAddressesApiRequestBuilder,
-      ListRelatedDeliverToAddressesApiRequestActions> $options;
+      ListRelatedDeliverToAddressesApiRequestActions> options$;
 
-  final ActionDispatcher<ListRelatedDeliverToAddressesApiRequest> $replace;
+  final ActionDispatcher<ListRelatedDeliverToAddressesApiRequest> replace$;
   final FieldDispatcher<String> hcrId;
   final FieldDispatcher<String> customerId;
   final FieldDispatcher<String> facilityId;
@@ -339,20 +339,20 @@ class _$ListRelatedDeliverToAddressesApiRequestActions
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListRelatedDeliverToAddressesApiOrderBy> orderBy;
 
-  _$ListRelatedDeliverToAddressesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListRelatedDeliverToAddressesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        hcrId = $options.field<String>(
+  _$ListRelatedDeliverToAddressesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListRelatedDeliverToAddressesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        hcrId = options$.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -362,7 +362,7 @@ class _$ListRelatedDeliverToAddressesApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<
-            ListRelatedDeliverToAddressesApiOrderBy>(() => $options.stateful<
+            ListRelatedDeliverToAddressesApiOrderBy>(() => options$.stateful<
                 OrderByParams<ListRelatedDeliverToAddressesApiOrderBy>,
                 OrderByParamsBuilder<ListRelatedDeliverToAddressesApiOrderBy>,
                 OrderByParamsActions<ListRelatedDeliverToAddressesApiOrderBy>>(
@@ -378,25 +378,25 @@ class _$ListRelatedDeliverToAddressesApiRequestActions
       _$ListRelatedDeliverToAddressesApiRequestActions._(options());
 
   @override
-  ListRelatedDeliverToAddressesApiRequest get $initial =>
+  ListRelatedDeliverToAddressesApiRequest get initialState$ =>
       ListRelatedDeliverToAddressesApiRequest();
 
   @override
-  ListRelatedDeliverToAddressesApiRequestBuilder $newBuilder() =>
+  ListRelatedDeliverToAddressesApiRequestBuilder newBuilder$() =>
       ListRelatedDeliverToAddressesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.hcrId,
         this.customerId,
         this.facilityId,
@@ -405,26 +405,21 @@ class _$ListRelatedDeliverToAddressesApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    hcrId.$reducer(reducer);
-    customerId.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    search.$reducer(reducer);
-    active.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    hcrId.reducer$(reducer);
+    customerId.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    search.reducer$(reducer);
+    active.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListRelatedDeliverToAddressesApiRequest);
 }

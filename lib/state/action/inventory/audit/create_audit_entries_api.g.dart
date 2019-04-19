@@ -22,67 +22,32 @@ class _$CreateAuditEntriesApi extends CreateAuditEntriesApi {
           ApiResult<CreateAuditEntriesApiResponse>>,
       CommandStateBuilder<ApiCommand<CreateAuditEntriesApiRequest>,
           ApiResult<CreateAuditEntriesApiResponse>>,
-      CreateAuditEntriesApi> $options;
+      CreateAuditEntriesApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateAuditEntriesApiRequest>,
-          ApiResult<CreateAuditEntriesApiResponse>>> $replace;
+          ApiResult<CreateAuditEntriesApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<CreateAuditEntriesApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateAuditEntriesApiRequest>,
-          ApiResult<CreateAuditEntriesApiResponse>,
-          CreateAuditEntriesApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateAuditEntriesApiRequest>,
-          ApiResult<CreateAuditEntriesApiResponse>,
-          CreateAuditEntriesApi,
-          Command<ApiCommand<CreateAuditEntriesApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateAuditEntriesApiRequest>,
-          ApiResult<CreateAuditEntriesApiResponse>,
-          CreateAuditEntriesApi,
-          CommandResult<ApiResult<CreateAuditEntriesApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateAuditEntriesApiRequest>,
-          ApiResult<CreateAuditEntriesApiResponse>,
-          CreateAuditEntriesApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<CreateAuditEntriesApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CreateAuditEntriesApi._(this.$options)
-      : $replace = $options.action<
+  _$CreateAuditEntriesApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<CreateAuditEntriesApiRequest>,
                     ApiResult<CreateAuditEntriesApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CreateAuditEntriesApiRequest>,
-                ApiResult<CreateAuditEntriesApiResponse>,
-                CreateAuditEntriesApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateAuditEntriesApiRequest>,
-                    ApiResult<CreateAuditEntriesApiResponse>,
-                    CreateAuditEntriesApi,
-                    Command<ApiCommand<CreateAuditEntriesApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateAuditEntriesApiRequest>,
-                    ApiResult<CreateAuditEntriesApiResponse>,
-                    CreateAuditEntriesApi,
-                    CommandResult<ApiResult<CreateAuditEntriesApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CreateAuditEntriesApiRequest>,
-                ApiResult<CreateAuditEntriesApiResponse>,
-                CreateAuditEntriesApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<CreateAuditEntriesApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<CreateAuditEntriesApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CreateAuditEntriesApi(CreateAuditEntriesApiOptions options) =>
@@ -91,32 +56,26 @@ class _$CreateAuditEntriesApi extends CreateAuditEntriesApi {
   @override
   CommandState<ApiCommand<CreateAuditEntriesApiRequest>,
           ApiResult<CreateAuditEntriesApiResponse>>
-      get $initial => CommandState<ApiCommand<CreateAuditEntriesApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<CreateAuditEntriesApiRequest>,
           ApiResult<CreateAuditEntriesApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateAuditEntriesApiRequest>,
           ApiResult<CreateAuditEntriesApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<CreateAuditEntriesApiRequest>,
           ApiResult<CreateAuditEntriesApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CreateAuditEntriesApiRequest)]),
-        FullType(ApiResult, [FullType(CreateAuditEntriesApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

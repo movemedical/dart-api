@@ -159,15 +159,15 @@ class _$UnregisterMobileDeviceApiRequestActions
   final StatefulActionsOptions<
       UnregisterMobileDeviceApiRequest,
       UnregisterMobileDeviceApiRequestBuilder,
-      UnregisterMobileDeviceApiRequestActions> $options;
+      UnregisterMobileDeviceApiRequestActions> options$;
 
-  final ActionDispatcher<UnregisterMobileDeviceApiRequest> $replace;
+  final ActionDispatcher<UnregisterMobileDeviceApiRequest> replace$;
   final FieldDispatcher<String> token;
 
-  _$UnregisterMobileDeviceApiRequestActions._(this.$options)
-      : $replace = $options.action<UnregisterMobileDeviceApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        token = $options.field<String>(
+  _$UnregisterMobileDeviceApiRequestActions._(this.options$)
+      : replace$ = options$.action<UnregisterMobileDeviceApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        token = options$.field<String>(
             'token', (a) => a?.token, (s) => s?.token, (p, b) => p?.token = b),
         super._();
 
@@ -176,34 +176,29 @@ class _$UnregisterMobileDeviceApiRequestActions
       _$UnregisterMobileDeviceApiRequestActions._(options());
 
   @override
-  UnregisterMobileDeviceApiRequest get $initial =>
+  UnregisterMobileDeviceApiRequest get initialState$ =>
       UnregisterMobileDeviceApiRequest();
 
   @override
-  UnregisterMobileDeviceApiRequestBuilder $newBuilder() =>
+  UnregisterMobileDeviceApiRequestBuilder newBuilder$() =>
       UnregisterMobileDeviceApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.token,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    token.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    token.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UnregisterMobileDeviceApiRequest);
 }

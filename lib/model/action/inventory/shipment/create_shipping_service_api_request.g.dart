@@ -227,30 +227,30 @@ class _$CreateShippingServiceApiRequestActions
   final StatefulActionsOptions<
       CreateShippingServiceApiRequest,
       CreateShippingServiceApiRequestBuilder,
-      CreateShippingServiceApiRequestActions> $options;
+      CreateShippingServiceApiRequestActions> options$;
 
-  final ActionDispatcher<CreateShippingServiceApiRequest> $replace;
+  final ActionDispatcher<CreateShippingServiceApiRequest> replace$;
   final FieldDispatcher<String> name;
   final FieldDispatcher<int> daysInTransit;
   final FieldDispatcher<int> hoursInTransit;
   final FieldDispatcher<String> erpCode;
 
-  _$CreateShippingServiceApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateShippingServiceApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        name = $options.field<String>(
+  _$CreateShippingServiceApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateShippingServiceApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        daysInTransit = $options.field<int>(
+        daysInTransit = options$.field<int>(
             'daysInTransit',
             (a) => a?.daysInTransit,
             (s) => s?.daysInTransit,
             (p, b) => p?.daysInTransit = b),
-        hoursInTransit = $options.field<int>(
+        hoursInTransit = options$.field<int>(
             'hoursInTransit',
             (a) => a?.hoursInTransit,
             (s) => s?.hoursInTransit,
             (p, b) => p?.hoursInTransit = b),
-        erpCode = $options.field<String>('erpCode', (a) => a?.erpCode,
+        erpCode = options$.field<String>('erpCode', (a) => a?.erpCode,
             (s) => s?.erpCode, (p, b) => p?.erpCode = b),
         super._();
 
@@ -259,18 +259,18 @@ class _$CreateShippingServiceApiRequestActions
       _$CreateShippingServiceApiRequestActions._(options());
 
   @override
-  CreateShippingServiceApiRequest get $initial =>
+  CreateShippingServiceApiRequest get initialState$ =>
       CreateShippingServiceApiRequest();
 
   @override
-  CreateShippingServiceApiRequestBuilder $newBuilder() =>
+  CreateShippingServiceApiRequestBuilder newBuilder$() =>
       CreateShippingServiceApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.name,
         this.daysInTransit,
         this.hoursInTransit,
@@ -278,21 +278,16 @@ class _$CreateShippingServiceApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    name.$reducer(reducer);
-    daysInTransit.$reducer(reducer);
-    hoursInTransit.$reducer(reducer);
-    erpCode.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    name.reducer$(reducer);
+    daysInTransit.reducer$(reducer);
+    hoursInTransit.reducer$(reducer);
+    erpCode.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateShippingServiceApiRequest);
 }

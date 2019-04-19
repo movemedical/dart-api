@@ -231,33 +231,33 @@ class _$CancelOrderLinesApiCancellationsActions
   final StatefulActionsOptions<
       CancelOrderLinesApiCancellations,
       CancelOrderLinesApiCancellationsBuilder,
-      CancelOrderLinesApiCancellationsActions> $options;
+      CancelOrderLinesApiCancellationsActions> options$;
 
-  final ActionDispatcher<CancelOrderLinesApiCancellations> $replace;
+  final ActionDispatcher<CancelOrderLinesApiCancellations> replace$;
   final FieldDispatcher<String> orderLineId;
   final FieldDispatcher<String> orderCancelReasonId;
   final FieldDispatcher<String> cancelNotes;
   final FieldDispatcher<int> quantityCancelled;
 
-  _$CancelOrderLinesApiCancellationsActions._(this.$options)
-      : $replace = $options.action<CancelOrderLinesApiCancellations>(
-            '\$replace', (a) => a?.$replace),
-        orderLineId = $options.field<String>(
+  _$CancelOrderLinesApiCancellationsActions._(this.options$)
+      : replace$ = options$.action<CancelOrderLinesApiCancellations>(
+            'replace\$', (a) => a?.replace$),
+        orderLineId = options$.field<String>(
             'orderLineId',
             (a) => a?.orderLineId,
             (s) => s?.orderLineId,
             (p, b) => p?.orderLineId = b),
-        orderCancelReasonId = $options.field<String>(
+        orderCancelReasonId = options$.field<String>(
             'orderCancelReasonId',
             (a) => a?.orderCancelReasonId,
             (s) => s?.orderCancelReasonId,
             (p, b) => p?.orderCancelReasonId = b),
-        cancelNotes = $options.field<String>(
+        cancelNotes = options$.field<String>(
             'cancelNotes',
             (a) => a?.cancelNotes,
             (s) => s?.cancelNotes,
             (p, b) => p?.cancelNotes = b),
-        quantityCancelled = $options.field<int>(
+        quantityCancelled = options$.field<int>(
             'quantityCancelled',
             (a) => a?.quantityCancelled,
             (s) => s?.quantityCancelled,
@@ -269,18 +269,18 @@ class _$CancelOrderLinesApiCancellationsActions
       _$CancelOrderLinesApiCancellationsActions._(options());
 
   @override
-  CancelOrderLinesApiCancellations get $initial =>
+  CancelOrderLinesApiCancellations get initialState$ =>
       CancelOrderLinesApiCancellations();
 
   @override
-  CancelOrderLinesApiCancellationsBuilder $newBuilder() =>
+  CancelOrderLinesApiCancellationsBuilder newBuilder$() =>
       CancelOrderLinesApiCancellationsBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderLineId,
         this.orderCancelReasonId,
         this.cancelNotes,
@@ -288,21 +288,16 @@ class _$CancelOrderLinesApiCancellationsActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderLineId.$reducer(reducer);
-    orderCancelReasonId.$reducer(reducer);
-    cancelNotes.$reducer(reducer);
-    quantityCancelled.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderLineId.reducer$(reducer);
+    orderCancelReasonId.reducer$(reducer);
+    cancelNotes.reducer$(reducer);
+    quantityCancelled.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CancelOrderLinesApiCancellations);
 }

@@ -22,67 +22,32 @@ class _$ListUpcomingCasesApi extends ListUpcomingCasesApi {
           ApiResult<ListUpcomingCasesApiResponse>>,
       CommandStateBuilder<ApiCommand<ListUpcomingCasesApiRequest>,
           ApiResult<ListUpcomingCasesApiResponse>>,
-      ListUpcomingCasesApi> $options;
+      ListUpcomingCasesApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListUpcomingCasesApiRequest>,
-          ApiResult<ListUpcomingCasesApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListUpcomingCasesApiRequest>,
-          ApiResult<ListUpcomingCasesApiResponse>,
-          ListUpcomingCasesApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListUpcomingCasesApiRequest>,
-          ApiResult<ListUpcomingCasesApiResponse>,
-          ListUpcomingCasesApi,
-          Command<ApiCommand<ListUpcomingCasesApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListUpcomingCasesApiRequest>,
-          ApiResult<ListUpcomingCasesApiResponse>,
-          ListUpcomingCasesApi,
-          CommandResult<ApiResult<ListUpcomingCasesApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListUpcomingCasesApiRequest>,
-          ApiResult<ListUpcomingCasesApiResponse>,
-          ListUpcomingCasesApi,
-          CommandProgress>> $progress;
+          ApiResult<ListUpcomingCasesApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListUpcomingCasesApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<ListUpcomingCasesApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListUpcomingCasesApi._(this.$options)
-      : $replace = $options.action<
+  _$ListUpcomingCasesApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListUpcomingCasesApiRequest>,
                     ApiResult<ListUpcomingCasesApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListUpcomingCasesApiRequest>,
-                ApiResult<ListUpcomingCasesApiResponse>,
-                ListUpcomingCasesApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListUpcomingCasesApiRequest>,
-                    ApiResult<ListUpcomingCasesApiResponse>,
-                    ListUpcomingCasesApi,
-                    Command<ApiCommand<ListUpcomingCasesApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListUpcomingCasesApiRequest>,
-                    ApiResult<ListUpcomingCasesApiResponse>,
-                    ListUpcomingCasesApi,
-                    CommandResult<ApiResult<ListUpcomingCasesApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListUpcomingCasesApiRequest>,
-                ApiResult<ListUpcomingCasesApiResponse>,
-                ListUpcomingCasesApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListUpcomingCasesApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListUpcomingCasesApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListUpcomingCasesApi(ListUpcomingCasesApiOptions options) =>
@@ -91,32 +56,25 @@ class _$ListUpcomingCasesApi extends ListUpcomingCasesApi {
   @override
   CommandState<ApiCommand<ListUpcomingCasesApiRequest>,
           ApiResult<ListUpcomingCasesApiResponse>>
-      get $initial => CommandState<ApiCommand<ListUpcomingCasesApiRequest>,
+      get initialState$ => CommandState<ApiCommand<ListUpcomingCasesApiRequest>,
           ApiResult<ListUpcomingCasesApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListUpcomingCasesApiRequest>,
           ApiResult<ListUpcomingCasesApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListUpcomingCasesApiRequest>,
           ApiResult<ListUpcomingCasesApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListUpcomingCasesApiRequest)]),
-        FullType(ApiResult, [FullType(ListUpcomingCasesApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

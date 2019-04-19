@@ -199,16 +199,16 @@ class _$GetAdjustmentApiResponseActions
   final StatefulActionsOptions<
       GetAdjustmentApiResponse,
       GetAdjustmentApiResponseBuilder,
-      GetAdjustmentApiResponseActions> $options;
+      GetAdjustmentApiResponseActions> options$;
 
-  final ActionDispatcher<GetAdjustmentApiResponse> $replace;
+  final ActionDispatcher<GetAdjustmentApiResponse> replace$;
   final GetAdjustmentApiAdjustmentActions adjustment;
   final GetAdjustmentApiDisplayRulesActions displayRules;
 
-  _$GetAdjustmentApiResponseActions._(this.$options)
-      : $replace = $options.action<GetAdjustmentApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        adjustment = GetAdjustmentApiAdjustmentActions(() => $options.stateful<
+  _$GetAdjustmentApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetAdjustmentApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        adjustment = GetAdjustmentApiAdjustmentActions(() => options$.stateful<
                 GetAdjustmentApiAdjustment,
                 GetAdjustmentApiAdjustmentBuilder,
                 GetAdjustmentApiAdjustmentActions>(
@@ -218,7 +218,7 @@ class _$GetAdjustmentApiResponseActions
             (b) => b?.adjustment,
             (parent, builder) => parent?.adjustment = builder)),
         displayRules = GetAdjustmentApiDisplayRulesActions(() =>
-            $options.stateful<
+            options$.stateful<
                     GetAdjustmentApiDisplayRules,
                     GetAdjustmentApiDisplayRulesBuilder,
                     GetAdjustmentApiDisplayRulesActions>(
@@ -234,41 +234,37 @@ class _$GetAdjustmentApiResponseActions
       _$GetAdjustmentApiResponseActions._(options());
 
   @override
-  GetAdjustmentApiResponse get $initial => GetAdjustmentApiResponse();
+  GetAdjustmentApiResponse get initialState$ => GetAdjustmentApiResponse();
 
   @override
-  GetAdjustmentApiResponseBuilder $newBuilder() =>
+  GetAdjustmentApiResponseBuilder newBuilder$() =>
       GetAdjustmentApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.adjustment,
         this.displayRules,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    adjustment.$reducer(reducer);
-    displayRules.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    adjustment.reducer$(reducer);
+    displayRules.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    adjustment.$middleware(middleware);
-    displayRules.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    adjustment.middleware$(middleware);
+    displayRules.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetAdjustmentApiResponse);
 }

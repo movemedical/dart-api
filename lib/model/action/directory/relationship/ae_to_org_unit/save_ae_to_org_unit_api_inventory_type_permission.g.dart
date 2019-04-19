@@ -256,30 +256,30 @@ class _$SaveAeToOrgUnitApiInventoryTypePermissionActions
   final StatefulActionsOptions<
       SaveAeToOrgUnitApiInventoryTypePermission,
       SaveAeToOrgUnitApiInventoryTypePermissionBuilder,
-      SaveAeToOrgUnitApiInventoryTypePermissionActions> $options;
+      SaveAeToOrgUnitApiInventoryTypePermissionActions> options$;
 
-  final ActionDispatcher<SaveAeToOrgUnitApiInventoryTypePermission> $replace;
+  final ActionDispatcher<SaveAeToOrgUnitApiInventoryTypePermission> replace$;
   final FieldDispatcher<String> inventoryTypeId;
   final FieldDispatcher<bool> view;
   final FieldDispatcher<bool> source;
   final FieldDispatcher<bool> reconcile;
   final FieldDispatcher<bool> admin;
 
-  _$SaveAeToOrgUnitApiInventoryTypePermissionActions._(this.$options)
-      : $replace = $options.action<SaveAeToOrgUnitApiInventoryTypePermission>(
-            '\$replace', (a) => a?.$replace),
-        inventoryTypeId = $options.field<String>(
+  _$SaveAeToOrgUnitApiInventoryTypePermissionActions._(this.options$)
+      : replace$ = options$.action<SaveAeToOrgUnitApiInventoryTypePermission>(
+            'replace\$', (a) => a?.replace$),
+        inventoryTypeId = options$.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        view = $options.field<bool>(
+        view = options$.field<bool>(
             'view', (a) => a?.view, (s) => s?.view, (p, b) => p?.view = b),
-        source = $options.field<bool>('source', (a) => a?.source,
+        source = options$.field<bool>('source', (a) => a?.source,
             (s) => s?.source, (p, b) => p?.source = b),
-        reconcile = $options.field<bool>('reconcile', (a) => a?.reconcile,
+        reconcile = options$.field<bool>('reconcile', (a) => a?.reconcile,
             (s) => s?.reconcile, (p, b) => p?.reconcile = b),
-        admin = $options.field<bool>(
+        admin = options$.field<bool>(
             'admin', (a) => a?.admin, (s) => s?.admin, (p, b) => p?.admin = b),
         super._();
 
@@ -288,18 +288,18 @@ class _$SaveAeToOrgUnitApiInventoryTypePermissionActions
       _$SaveAeToOrgUnitApiInventoryTypePermissionActions._(options());
 
   @override
-  SaveAeToOrgUnitApiInventoryTypePermission get $initial =>
+  SaveAeToOrgUnitApiInventoryTypePermission get initialState$ =>
       SaveAeToOrgUnitApiInventoryTypePermission();
 
   @override
-  SaveAeToOrgUnitApiInventoryTypePermissionBuilder $newBuilder() =>
+  SaveAeToOrgUnitApiInventoryTypePermissionBuilder newBuilder$() =>
       SaveAeToOrgUnitApiInventoryTypePermissionBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.inventoryTypeId,
         this.view,
         this.source,
@@ -308,22 +308,17 @@ class _$SaveAeToOrgUnitApiInventoryTypePermissionActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    inventoryTypeId.$reducer(reducer);
-    view.$reducer(reducer);
-    source.$reducer(reducer);
-    reconcile.$reducer(reducer);
-    admin.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    inventoryTypeId.reducer$(reducer);
+    view.reducer$(reducer);
+    source.reducer$(reducer);
+    reconcile.reducer$(reducer);
+    admin.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SaveAeToOrgUnitApiInventoryTypePermission);
 }

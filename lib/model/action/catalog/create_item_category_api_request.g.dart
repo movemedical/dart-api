@@ -252,30 +252,30 @@ class _$CreateItemCategoryApiRequestActions
   final StatefulActionsOptions<
       CreateItemCategoryApiRequest,
       CreateItemCategoryApiRequestBuilder,
-      CreateItemCategoryApiRequestActions> $options;
+      CreateItemCategoryApiRequestActions> options$;
 
-  final ActionDispatcher<CreateItemCategoryApiRequest> $replace;
+  final ActionDispatcher<CreateItemCategoryApiRequest> replace$;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> opsOuId;
   final FieldDispatcher<String> parentCategoryId;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> code;
 
-  _$CreateItemCategoryApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateItemCategoryApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+  _$CreateItemCategoryApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateItemCategoryApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        opsOuId = $options.field<String>('opsOuId', (a) => a?.opsOuId,
+        opsOuId = options$.field<String>('opsOuId', (a) => a?.opsOuId,
             (s) => s?.opsOuId, (p, b) => p?.opsOuId = b),
-        parentCategoryId = $options.field<String>(
+        parentCategoryId = options$.field<String>(
             'parentCategoryId',
             (a) => a?.parentCategoryId,
             (s) => s?.parentCategoryId,
             (p, b) => p?.parentCategoryId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        code = $options.field<String>(
+        code = options$.field<String>(
             'code', (a) => a?.code, (s) => s?.code, (p, b) => p?.code = b),
         super._();
 
@@ -284,17 +284,18 @@ class _$CreateItemCategoryApiRequestActions
       _$CreateItemCategoryApiRequestActions._(options());
 
   @override
-  CreateItemCategoryApiRequest get $initial => CreateItemCategoryApiRequest();
+  CreateItemCategoryApiRequest get initialState$ =>
+      CreateItemCategoryApiRequest();
 
   @override
-  CreateItemCategoryApiRequestBuilder $newBuilder() =>
+  CreateItemCategoryApiRequestBuilder newBuilder$() =>
       CreateItemCategoryApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.bizUnitId,
         this.opsOuId,
         this.parentCategoryId,
@@ -303,22 +304,17 @@ class _$CreateItemCategoryApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    opsOuId.$reducer(reducer);
-    parentCategoryId.$reducer(reducer);
-    name.$reducer(reducer);
-    code.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    opsOuId.reducer$(reducer);
+    parentCategoryId.reducer$(reducer);
+    name.reducer$(reducer);
+    code.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateItemCategoryApiRequest);
 }

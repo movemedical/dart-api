@@ -324,9 +324,9 @@ typedef StatefulActionsOptions<Serial, SerialBuilder,
     SerialActions> SerialActionsOptions();
 
 class _$SerialActions extends SerialActions {
-  final StatefulActionsOptions<Serial, SerialBuilder, SerialActions> $options;
+  final StatefulActionsOptions<Serial, SerialBuilder, SerialActions> options$;
 
-  final ActionDispatcher<Serial> $replace;
+  final ActionDispatcher<Serial> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> kitSerialId;
   final FieldDispatcher<String> stockId;
@@ -337,37 +337,37 @@ class _$SerialActions extends SerialActions {
   final FieldDispatcher<bool> sealed;
   final FieldDispatcher<bool> active;
 
-  _$SerialActions._(this.$options)
-      : $replace = $options.action<Serial>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$SerialActions._(this.options$)
+      : replace$ = options$.action<Serial>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        kitSerialId = $options.field<String>(
+        kitSerialId = options$.field<String>(
             'kitSerialId',
             (a) => a?.kitSerialId,
             (s) => s?.kitSerialId,
             (p, b) => p?.kitSerialId = b),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        serialNumber = $options.field<int>(
+        serialNumber = options$.field<int>(
             'serialNumber',
             (a) => a?.serialNumber,
             (s) => s?.serialNumber,
             (p, b) => p?.serialNumber = b),
-        serialRef = $options.field<String>('serialRef', (a) => a?.serialRef,
+        serialRef = options$.field<String>('serialRef', (a) => a?.serialRef,
             (s) => s?.serialRef, (p, b) => p?.serialRef = b),
-        expirationDate = $options.field<DateTime>(
+        expirationDate = options$.field<DateTime>(
             'expirationDate',
             (a) => a?.expirationDate,
             (s) => s?.expirationDate,
             (p, b) => p?.expirationDate = b),
-        manufactureDate = $options.field<DateTime>(
+        manufactureDate = options$.field<DateTime>(
             'manufactureDate',
             (a) => a?.manufactureDate,
             (s) => s?.manufactureDate,
             (p, b) => p?.manufactureDate = b),
-        sealed = $options.field<bool>('sealed', (a) => a?.sealed,
+        sealed = options$.field<bool>('sealed', (a) => a?.sealed,
             (s) => s?.sealed, (p, b) => p?.sealed = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -375,16 +375,16 @@ class _$SerialActions extends SerialActions {
       _$SerialActions._(options());
 
   @override
-  Serial get $initial => Serial();
+  Serial get initialState$ => Serial();
 
   @override
-  SerialBuilder $newBuilder() => SerialBuilder();
+  SerialBuilder newBuilder$() => SerialBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.kitSerialId,
         this.stockId,
@@ -397,25 +397,21 @@ class _$SerialActions extends SerialActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    kitSerialId.$reducer(reducer);
-    stockId.$reducer(reducer);
-    serialNumber.$reducer(reducer);
-    serialRef.$reducer(reducer);
-    expirationDate.$reducer(reducer);
-    manufactureDate.$reducer(reducer);
-    sealed.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    kitSerialId.reducer$(reducer);
+    stockId.reducer$(reducer);
+    serialNumber.reducer$(reducer);
+    serialRef.reducer$(reducer);
+    expirationDate.reducer$(reducer);
+    manufactureDate.reducer$(reducer);
+    sealed.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Serial);
 }

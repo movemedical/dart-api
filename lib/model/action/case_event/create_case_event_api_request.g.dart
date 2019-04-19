@@ -856,9 +856,9 @@ class _$CreateCaseEventApiRequestActions
   final StatefulActionsOptions<
       CreateCaseEventApiRequest,
       CreateCaseEventApiRequestBuilder,
-      CreateCaseEventApiRequestActions> $options;
+      CreateCaseEventApiRequestActions> options$;
 
-  final ActionDispatcher<CreateCaseEventApiRequest> $replace;
+  final ActionDispatcher<CreateCaseEventApiRequest> replace$;
   final FieldDispatcher<String> caseTypeId;
   final FieldDispatcher<DateTime> surgeryDate;
   final FieldDispatcher<bool> eventTimeUnknown;
@@ -890,105 +890,105 @@ class _$CreateCaseEventApiRequestActions
   final FieldDispatcher<String> procedureDesc;
   final FieldDispatcher<BuiltList<CaseCustomValue>> customFieldValues;
 
-  _$CreateCaseEventApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateCaseEventApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseTypeId = $options.field<String>('caseTypeId', (a) => a?.caseTypeId,
+  _$CreateCaseEventApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateCaseEventApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseTypeId = options$.field<String>('caseTypeId', (a) => a?.caseTypeId,
             (s) => s?.caseTypeId, (p, b) => p?.caseTypeId = b),
-        surgeryDate = $options.field<DateTime>(
+        surgeryDate = options$.field<DateTime>(
             'surgeryDate',
             (a) => a?.surgeryDate,
             (s) => s?.surgeryDate,
             (p, b) => p?.surgeryDate = b),
-        eventTimeUnknown = $options.field<bool>(
+        eventTimeUnknown = options$.field<bool>(
             'eventTimeUnknown',
             (a) => a?.eventTimeUnknown,
             (s) => s?.eventTimeUnknown,
             (p, b) => p?.eventTimeUnknown = b),
-        eventDuration = $options.field<int>(
+        eventDuration = options$.field<int>(
             'eventDuration',
             (a) => a?.eventDuration,
             (s) => s?.eventDuration,
             (p, b) => p?.eventDuration = b),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        salesOuId = $options.field<String>('salesOuId', (a) => a?.salesOuId,
+        salesOuId = options$.field<String>('salesOuId', (a) => a?.salesOuId,
             (s) => s?.salesOuId, (p, b) => p?.salesOuId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        procedureId = $options.field<String>(
+        procedureId = options$.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        subProcedureId = $options.field<String>(
+        subProcedureId = options$.field<String>(
             'subProcedureId',
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
             (p, b) => p?.subProcedureId = b),
-        surgeonPhysicianId = $options.field<String>(
+        surgeonPhysicianId = options$.field<String>(
             'surgeonPhysicianId',
             (a) => a?.surgeonPhysicianId,
             (s) => s?.surgeonPhysicianId,
             (p, b) => p?.surgeonPhysicianId = b),
-        surgeonPhysicianTemp = $options.field<String>(
+        surgeonPhysicianTemp = options$.field<String>(
             'surgeonPhysicianTemp',
             (a) => a?.surgeonPhysicianTemp,
             (s) => s?.surgeonPhysicianTemp,
             (p, b) => p?.surgeonPhysicianTemp = b),
-        hcrId = $options.field<String>(
+        hcrId = options$.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        coverageId = $options.field<String>('coverageId', (a) => a?.coverageId,
+        coverageId = options$.field<String>('coverageId', (a) => a?.coverageId,
             (s) => s?.coverageId, (p, b) => p?.coverageId = b),
-        bodySide = $options.field<BodySide>('bodySide', (a) => a?.bodySide,
+        bodySide = options$.field<BodySide>('bodySide', (a) => a?.bodySide,
             (s) => s?.bodySide, (p, b) => p?.bodySide = b),
-        patientId = $options.field<String>('patientId', (a) => a?.patientId,
+        patientId = options$.field<String>('patientId', (a) => a?.patientId,
             (s) => s?.patientId, (p, b) => p?.patientId = b),
         patientName = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'patientName',
                 (a) => a.patientName,
                 (s) => s?.patientName,
                 (b) => b?.patientName,
                 (parent, builder) => parent?.patientName = builder)),
-        patientMrn = $options.field<String>('patientMrn', (a) => a?.patientMrn,
+        patientMrn = options$.field<String>('patientMrn', (a) => a?.patientMrn,
             (s) => s?.patientMrn, (p, b) => p?.patientMrn = b),
-        patientDob = $options.field<DateTime>(
+        patientDob = options$.field<DateTime>(
             'patientDob',
             (a) => a?.patientDob,
             (s) => s?.patientDob,
             (p, b) => p?.patientDob = b),
-        patientGender = $options.field<Gender>(
+        patientGender = options$.field<Gender>(
             'patientGender',
             (a) => a?.patientGender,
             (s) => s?.patientGender,
             (p, b) => p?.patientGender = b),
-        heightMeasurement = $options.field<double>(
+        heightMeasurement = options$.field<double>(
             'heightMeasurement',
             (a) => a?.heightMeasurement,
             (s) => s?.heightMeasurement,
             (p, b) => p?.heightMeasurement = b),
-        heightMeasurementType = $options.field<LengthMeasurementType>(
+        heightMeasurementType = options$.field<LengthMeasurementType>(
             'heightMeasurementType',
             (a) => a?.heightMeasurementType,
             (s) => s?.heightMeasurementType,
             (p, b) => p?.heightMeasurementType = b),
-        weightMeasurement = $options.field<double>(
+        weightMeasurement = options$.field<double>(
             'weightMeasurement',
             (a) => a?.weightMeasurement,
             (s) => s?.weightMeasurement,
             (p, b) => p?.weightMeasurement = b),
-        weightMeasurementType = $options.field<WeightMeasurementType>(
+        weightMeasurementType = options$.field<WeightMeasurementType>(
             'weightMeasurementType',
             (a) => a?.weightMeasurementType,
             (s) => s?.weightMeasurementType,
             (p, b) => p?.weightMeasurementType = b),
-        ethnicity = $options.field<Ethnicity>('ethnicity', (a) => a?.ethnicity,
+        ethnicity = options$.field<Ethnicity>('ethnicity', (a) => a?.ethnicity,
             (s) => s?.ethnicity, (p, b) => p?.ethnicity = b),
         primaryInsurance = CreateCaseEventApiInsuranceActions(() =>
-            $options.stateful<
+            options$.stateful<
                     CreateCaseEventApiInsurance,
                     CreateCaseEventApiInsuranceBuilder,
                     CreateCaseEventApiInsuranceActions>(
@@ -998,7 +998,7 @@ class _$CreateCaseEventApiRequestActions
                 (b) => b?.primaryInsurance,
                 (parent, builder) => parent?.primaryInsurance = builder)),
         secondaryInsurance = CreateCaseEventApiInsuranceActions(() =>
-            $options.stateful<
+            options$.stateful<
                     CreateCaseEventApiInsurance,
                     CreateCaseEventApiInsuranceBuilder,
                     CreateCaseEventApiInsuranceActions>(
@@ -1007,17 +1007,17 @@ class _$CreateCaseEventApiRequestActions
                 (s) => s?.secondaryInsurance,
                 (b) => b?.secondaryInsurance,
                 (parent, builder) => parent?.secondaryInsurance = builder)),
-        fastForward = $options.field<CaseEventStatus>(
+        fastForward = options$.field<CaseEventStatus>(
             'fastForward',
             (a) => a?.fastForward,
             (s) => s?.fastForward,
             (p, b) => p?.fastForward = b),
-        procedureDesc = $options.field<String>(
+        procedureDesc = options$.field<String>(
             'procedureDesc',
             (a) => a?.procedureDesc,
             (s) => s?.procedureDesc,
             (p, b) => p?.procedureDesc = b),
-        customFieldValues = $options.field<BuiltList<CaseCustomValue>>(
+        customFieldValues = options$.field<BuiltList<CaseCustomValue>>(
             'customFieldValues',
             (a) => a?.customFieldValues,
             (s) => s?.customFieldValues,
@@ -1029,25 +1029,25 @@ class _$CreateCaseEventApiRequestActions
       _$CreateCaseEventApiRequestActions._(options());
 
   @override
-  CreateCaseEventApiRequest get $initial => CreateCaseEventApiRequest();
+  CreateCaseEventApiRequest get initialState$ => CreateCaseEventApiRequest();
 
   @override
-  CreateCaseEventApiRequestBuilder $newBuilder() =>
+  CreateCaseEventApiRequestBuilder newBuilder$() =>
       CreateCaseEventApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.patientName,
         this.primaryInsurance,
         this.secondaryInsurance,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseTypeId,
         this.surgeryDate,
         this.eventTimeUnknown,
@@ -1078,49 +1078,45 @@ class _$CreateCaseEventApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseTypeId.$reducer(reducer);
-    surgeryDate.$reducer(reducer);
-    eventTimeUnknown.$reducer(reducer);
-    eventDuration.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    salesOuId.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    procedureId.$reducer(reducer);
-    subProcedureId.$reducer(reducer);
-    surgeonPhysicianId.$reducer(reducer);
-    surgeonPhysicianTemp.$reducer(reducer);
-    hcrId.$reducer(reducer);
-    teamId.$reducer(reducer);
-    coverageId.$reducer(reducer);
-    bodySide.$reducer(reducer);
-    patientId.$reducer(reducer);
-    patientName.$reducer(reducer);
-    patientMrn.$reducer(reducer);
-    patientDob.$reducer(reducer);
-    patientGender.$reducer(reducer);
-    heightMeasurement.$reducer(reducer);
-    heightMeasurementType.$reducer(reducer);
-    weightMeasurement.$reducer(reducer);
-    weightMeasurementType.$reducer(reducer);
-    ethnicity.$reducer(reducer);
-    primaryInsurance.$reducer(reducer);
-    secondaryInsurance.$reducer(reducer);
-    fastForward.$reducer(reducer);
-    procedureDesc.$reducer(reducer);
-    customFieldValues.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseTypeId.reducer$(reducer);
+    surgeryDate.reducer$(reducer);
+    eventTimeUnknown.reducer$(reducer);
+    eventDuration.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    salesOuId.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    procedureId.reducer$(reducer);
+    subProcedureId.reducer$(reducer);
+    surgeonPhysicianId.reducer$(reducer);
+    surgeonPhysicianTemp.reducer$(reducer);
+    hcrId.reducer$(reducer);
+    teamId.reducer$(reducer);
+    coverageId.reducer$(reducer);
+    bodySide.reducer$(reducer);
+    patientId.reducer$(reducer);
+    patientName.reducer$(reducer);
+    patientMrn.reducer$(reducer);
+    patientDob.reducer$(reducer);
+    patientGender.reducer$(reducer);
+    heightMeasurement.reducer$(reducer);
+    heightMeasurementType.reducer$(reducer);
+    weightMeasurement.reducer$(reducer);
+    weightMeasurementType.reducer$(reducer);
+    ethnicity.reducer$(reducer);
+    primaryInsurance.reducer$(reducer);
+    secondaryInsurance.reducer$(reducer);
+    fastForward.reducer$(reducer);
+    procedureDesc.reducer$(reducer);
+    customFieldValues.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    patientName.$middleware(middleware);
-    primaryInsurance.$middleware(middleware);
-    secondaryInsurance.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    patientName.middleware$(middleware);
+    primaryInsurance.middleware$(middleware);
+    secondaryInsurance.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateCaseEventApiRequest);
 }

@@ -187,17 +187,17 @@ class _$ListCalendarSubscriptionsApiResponseActions
   final StatefulActionsOptions<
       ListCalendarSubscriptionsApiResponse,
       ListCalendarSubscriptionsApiResponseBuilder,
-      ListCalendarSubscriptionsApiResponseActions> $options;
+      ListCalendarSubscriptionsApiResponseActions> options$;
 
-  final ActionDispatcher<ListCalendarSubscriptionsApiResponse> $replace;
+  final ActionDispatcher<ListCalendarSubscriptionsApiResponse> replace$;
   final FieldDispatcher<
           BuiltList<ListCalendarSubscriptionsApiCalendarSubscription>>
       subscriptions;
 
-  _$ListCalendarSubscriptionsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListCalendarSubscriptionsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        subscriptions = $options
+  _$ListCalendarSubscriptionsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListCalendarSubscriptionsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        subscriptions = options$
             .field<BuiltList<ListCalendarSubscriptionsApiCalendarSubscription>>(
                 'subscriptions',
                 (a) => a?.subscriptions,
@@ -210,34 +210,29 @@ class _$ListCalendarSubscriptionsApiResponseActions
       _$ListCalendarSubscriptionsApiResponseActions._(options());
 
   @override
-  ListCalendarSubscriptionsApiResponse get $initial =>
+  ListCalendarSubscriptionsApiResponse get initialState$ =>
       ListCalendarSubscriptionsApiResponse();
 
   @override
-  ListCalendarSubscriptionsApiResponseBuilder $newBuilder() =>
+  ListCalendarSubscriptionsApiResponseBuilder newBuilder$() =>
       ListCalendarSubscriptionsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.subscriptions,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    subscriptions.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    subscriptions.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListCalendarSubscriptionsApiResponse);
 }

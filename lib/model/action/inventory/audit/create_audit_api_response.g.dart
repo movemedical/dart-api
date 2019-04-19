@@ -150,15 +150,15 @@ typedef StatefulActionsOptions<
 
 class _$CreateAuditApiResponseActions extends CreateAuditApiResponseActions {
   final StatefulActionsOptions<CreateAuditApiResponse,
-      CreateAuditApiResponseBuilder, CreateAuditApiResponseActions> $options;
+      CreateAuditApiResponseBuilder, CreateAuditApiResponseActions> options$;
 
-  final ActionDispatcher<CreateAuditApiResponse> $replace;
+  final ActionDispatcher<CreateAuditApiResponse> replace$;
   final FieldDispatcher<String> id;
 
-  _$CreateAuditApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateAuditApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$CreateAuditApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateAuditApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -167,32 +167,28 @@ class _$CreateAuditApiResponseActions extends CreateAuditApiResponseActions {
       _$CreateAuditApiResponseActions._(options());
 
   @override
-  CreateAuditApiResponse get $initial => CreateAuditApiResponse();
+  CreateAuditApiResponse get initialState$ => CreateAuditApiResponse();
 
   @override
-  CreateAuditApiResponseBuilder $newBuilder() =>
+  CreateAuditApiResponseBuilder newBuilder$() =>
       CreateAuditApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateAuditApiResponse);
 }

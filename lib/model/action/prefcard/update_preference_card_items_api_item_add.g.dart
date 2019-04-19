@@ -182,18 +182,18 @@ class _$UpdatePreferenceCardItemsApiItemAddActions
   final StatefulActionsOptions<
       UpdatePreferenceCardItemsApiItemAdd,
       UpdatePreferenceCardItemsApiItemAddBuilder,
-      UpdatePreferenceCardItemsApiItemAddActions> $options;
+      UpdatePreferenceCardItemsApiItemAddActions> options$;
 
-  final ActionDispatcher<UpdatePreferenceCardItemsApiItemAdd> $replace;
+  final ActionDispatcher<UpdatePreferenceCardItemsApiItemAdd> replace$;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<int> quantity;
 
-  _$UpdatePreferenceCardItemsApiItemAddActions._(this.$options)
-      : $replace = $options.action<UpdatePreferenceCardItemsApiItemAdd>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$UpdatePreferenceCardItemsApiItemAddActions._(this.options$)
+      : replace$ = options$.action<UpdatePreferenceCardItemsApiItemAdd>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -202,36 +202,31 @@ class _$UpdatePreferenceCardItemsApiItemAddActions
       _$UpdatePreferenceCardItemsApiItemAddActions._(options());
 
   @override
-  UpdatePreferenceCardItemsApiItemAdd get $initial =>
+  UpdatePreferenceCardItemsApiItemAdd get initialState$ =>
       UpdatePreferenceCardItemsApiItemAdd();
 
   @override
-  UpdatePreferenceCardItemsApiItemAddBuilder $newBuilder() =>
+  UpdatePreferenceCardItemsApiItemAddBuilder newBuilder$() =>
       UpdatePreferenceCardItemsApiItemAddBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
         this.quantity,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
-    quantity.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
+    quantity.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdatePreferenceCardItemsApiItemAdd);
 }

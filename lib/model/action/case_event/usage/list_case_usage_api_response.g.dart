@@ -400,9 +400,9 @@ class _$ListCaseUsageApiResponseActions
   final StatefulActionsOptions<
       ListCaseUsageApiResponse,
       ListCaseUsageApiResponseBuilder,
-      ListCaseUsageApiResponseActions> $options;
+      ListCaseUsageApiResponseActions> options$;
 
-  final ActionDispatcher<ListCaseUsageApiResponse> $replace;
+  final ActionDispatcher<ListCaseUsageApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListCaseUsageApiCaseUsageOrder>> orders;
   final FieldDispatcher<BuiltList<ListCaseUsageApiCaseUsageConstruct>>
       constructs;
@@ -415,44 +415,44 @@ class _$ListCaseUsageApiResponseActions
   final FieldDispatcher<String> hcrId;
   final FieldDispatcher<String> teamId;
 
-  _$ListCaseUsageApiResponseActions._(this.$options)
-      : $replace = $options.action<ListCaseUsageApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        orders = $options.field<BuiltList<ListCaseUsageApiCaseUsageOrder>>(
+  _$ListCaseUsageApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListCaseUsageApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        orders = options$.field<BuiltList<ListCaseUsageApiCaseUsageOrder>>(
             'orders',
             (a) => a?.orders,
             (s) => s?.orders,
             (p, b) => p?.orders = b),
         constructs =
-            $options.field<BuiltList<ListCaseUsageApiCaseUsageConstruct>>(
+            options$.field<BuiltList<ListCaseUsageApiCaseUsageConstruct>>(
                 'constructs',
                 (a) => a?.constructs,
                 (s) => s?.constructs,
                 (p, b) => p?.constructs = b),
-        usages = $options.field<BuiltList<ListCaseUsageApiUsage>>('usages',
+        usages = options$.field<BuiltList<ListCaseUsageApiUsage>>('usages',
             (a) => a?.usages, (s) => s?.usages, (p, b) => p?.usages = b),
-        canEditUsage = $options.field<bool>(
+        canEditUsage = options$.field<bool>(
             'canEditUsage',
             (a) => a?.canEditUsage,
             (s) => s?.canEditUsage,
             (p, b) => p?.canEditUsage = b),
-        canConfirmUsage = $options.field<bool>(
+        canConfirmUsage = options$.field<bool>(
             'canConfirmUsage',
             (a) => a?.canConfirmUsage,
             (s) => s?.canConfirmUsage,
             (p, b) => p?.canConfirmUsage = b),
-        ownerOrgUnitId = $options.field<String>(
+        ownerOrgUnitId = options$.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        hcrId = $options.field<String>(
+        hcrId = options$.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
         super._();
 
@@ -461,17 +461,17 @@ class _$ListCaseUsageApiResponseActions
       _$ListCaseUsageApiResponseActions._(options());
 
   @override
-  ListCaseUsageApiResponse get $initial => ListCaseUsageApiResponse();
+  ListCaseUsageApiResponse get initialState$ => ListCaseUsageApiResponse();
 
   @override
-  ListCaseUsageApiResponseBuilder $newBuilder() =>
+  ListCaseUsageApiResponseBuilder newBuilder$() =>
       ListCaseUsageApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orders,
         this.constructs,
         this.usages,
@@ -485,26 +485,22 @@ class _$ListCaseUsageApiResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orders.$reducer(reducer);
-    constructs.$reducer(reducer);
-    usages.$reducer(reducer);
-    canEditUsage.$reducer(reducer);
-    canConfirmUsage.$reducer(reducer);
-    ownerOrgUnitId.$reducer(reducer);
-    customerId.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    hcrId.$reducer(reducer);
-    teamId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orders.reducer$(reducer);
+    constructs.reducer$(reducer);
+    usages.reducer$(reducer);
+    canEditUsage.reducer$(reducer);
+    canConfirmUsage.reducer$(reducer);
+    ownerOrgUnitId.reducer$(reducer);
+    customerId.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    hcrId.reducer$(reducer);
+    teamId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListCaseUsageApiResponse);
 }

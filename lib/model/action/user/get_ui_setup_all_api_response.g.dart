@@ -371,9 +371,9 @@ class _$GetUiSetupAllApiResponseActions
   final StatefulActionsOptions<
       GetUiSetupAllApiResponse,
       GetUiSetupAllApiResponseBuilder,
-      GetUiSetupAllApiResponseActions> $options;
+      GetUiSetupAllApiResponseActions> options$;
 
-  final ActionDispatcher<GetUiSetupAllApiResponse> $replace;
+  final ActionDispatcher<GetUiSetupAllApiResponse> replace$;
   final FieldDispatcher<bool> inventoryEnabled;
   final FieldDispatcher<bool> stockAutoSearch;
   final FieldDispatcher<bool> tempPhysicianEnabled;
@@ -385,42 +385,42 @@ class _$GetUiSetupAllApiResponseActions
   final GetUiSetupAllApiUserActions user;
   final FieldDispatcher<BuiltList<UiClientConfiguration>> uiConfigs;
 
-  _$GetUiSetupAllApiResponseActions._(this.$options)
-      : $replace = $options.action<GetUiSetupAllApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        inventoryEnabled = $options.field<bool>(
+  _$GetUiSetupAllApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetUiSetupAllApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        inventoryEnabled = options$.field<bool>(
             'inventoryEnabled',
             (a) => a?.inventoryEnabled,
             (s) => s?.inventoryEnabled,
             (p, b) => p?.inventoryEnabled = b),
-        stockAutoSearch = $options.field<bool>(
+        stockAutoSearch = options$.field<bool>(
             'stockAutoSearch',
             (a) => a?.stockAutoSearch,
             (s) => s?.stockAutoSearch,
             (p, b) => p?.stockAutoSearch = b),
-        tempPhysicianEnabled = $options.field<bool>(
+        tempPhysicianEnabled = options$.field<bool>(
             'tempPhysicianEnabled',
             (a) => a?.tempPhysicianEnabled,
             (s) => s?.tempPhysicianEnabled,
             (p, b) => p?.tempPhysicianEnabled = b),
         invTransferTypes =
-            $options.field<BuiltList<GetUiSetupAllApiInvTransferType>>(
+            options$.field<BuiltList<GetUiSetupAllApiInvTransferType>>(
                 'invTransferTypes',
                 (a) => a?.invTransferTypes,
                 (s) => s?.invTransferTypes,
                 (p, b) => p?.invTransferTypes = b),
-        timezones = $options.field<BuiltList<String>>(
+        timezones = options$.field<BuiltList<String>>(
             'timezones',
             (a) => a?.timezones,
             (s) => s?.timezones,
             (p, b) => p?.timezones = b),
         consignmentLoanSpecs =
-            $options.field<BuiltList<GetConsignmentLoanFieldsApiLoanFieldData>>(
+            options$.field<BuiltList<GetConsignmentLoanFieldsApiLoanFieldData>>(
                 'consignmentLoanSpecs',
                 (a) => a?.consignmentLoanSpecs,
                 (s) => s?.consignmentLoanSpecs,
                 (p, b) => p?.consignmentLoanSpecs = b),
-        user = GetUiSetupAllApiUserActions(() => $options.stateful<
+        user = GetUiSetupAllApiUserActions(() => options$.stateful<
                 GetUiSetupAllApiUser,
                 GetUiSetupAllApiUserBuilder,
                 GetUiSetupAllApiUserActions>(
@@ -429,7 +429,7 @@ class _$GetUiSetupAllApiResponseActions
             (s) => s?.user,
             (b) => b?.user,
             (parent, builder) => parent?.user = builder)),
-        uiConfigs = $options.field<BuiltList<UiClientConfiguration>>(
+        uiConfigs = options$.field<BuiltList<UiClientConfiguration>>(
             'uiConfigs',
             (a) => a?.uiConfigs,
             (s) => s?.uiConfigs,
@@ -441,23 +441,23 @@ class _$GetUiSetupAllApiResponseActions
       _$GetUiSetupAllApiResponseActions._(options());
 
   @override
-  GetUiSetupAllApiResponse get $initial => GetUiSetupAllApiResponse();
+  GetUiSetupAllApiResponse get initialState$ => GetUiSetupAllApiResponse();
 
   @override
-  GetUiSetupAllApiResponseBuilder $newBuilder() =>
+  GetUiSetupAllApiResponseBuilder newBuilder$() =>
       GetUiSetupAllApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.user,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.inventoryEnabled,
         this.stockAutoSearch,
         this.tempPhysicianEnabled,
@@ -468,25 +468,21 @@ class _$GetUiSetupAllApiResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    inventoryEnabled.$reducer(reducer);
-    stockAutoSearch.$reducer(reducer);
-    tempPhysicianEnabled.$reducer(reducer);
-    invTransferTypes.$reducer(reducer);
-    timezones.$reducer(reducer);
-    consignmentLoanSpecs.$reducer(reducer);
-    user.$reducer(reducer);
-    uiConfigs.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    inventoryEnabled.reducer$(reducer);
+    stockAutoSearch.reducer$(reducer);
+    tempPhysicianEnabled.reducer$(reducer);
+    invTransferTypes.reducer$(reducer);
+    timezones.reducer$(reducer);
+    consignmentLoanSpecs.reducer$(reducer);
+    user.reducer$(reducer);
+    uiConfigs.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    user.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    user.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetUiSetupAllApiResponse);
 }

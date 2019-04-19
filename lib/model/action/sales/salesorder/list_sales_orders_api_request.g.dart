@@ -794,9 +794,9 @@ class _$ListSalesOrdersApiRequestActions
   final StatefulActionsOptions<
       ListSalesOrdersApiRequest,
       ListSalesOrdersApiRequestBuilder,
-      ListSalesOrdersApiRequestActions> $options;
+      ListSalesOrdersApiRequestActions> options$;
 
-  final ActionDispatcher<ListSalesOrdersApiRequest> $replace;
+  final ActionDispatcher<ListSalesOrdersApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> customerIds;
   final FieldDispatcher<BuiltList<OrderStatus>> orderStatuses;
   final FieldDispatcher<BuiltList<String>> orderReasonIds;
@@ -822,95 +822,95 @@ class _$ListSalesOrdersApiRequestActions
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListSalesOrdersApiOrderBy> orderBy;
 
-  _$ListSalesOrdersApiRequestActions._(this.$options)
-      : $replace = $options.action<ListSalesOrdersApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        customerIds = $options.field<BuiltList<String>>(
+  _$ListSalesOrdersApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListSalesOrdersApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        customerIds = options$.field<BuiltList<String>>(
             'customerIds',
             (a) => a?.customerIds,
             (s) => s?.customerIds,
             (p, b) => p?.customerIds = b),
-        orderStatuses = $options.field<BuiltList<OrderStatus>>(
+        orderStatuses = options$.field<BuiltList<OrderStatus>>(
             'orderStatuses',
             (a) => a?.orderStatuses,
             (s) => s?.orderStatuses,
             (p, b) => p?.orderStatuses = b),
-        orderReasonIds = $options.field<BuiltList<String>>(
+        orderReasonIds = options$.field<BuiltList<String>>(
             'orderReasonIds',
             (a) => a?.orderReasonIds,
             (s) => s?.orderReasonIds,
             (p, b) => p?.orderReasonIds = b),
-        locationIds = $options.field<BuiltList<String>>(
+        locationIds = options$.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        locationTypes = $options.field<BuiltList<LocationType>>(
+        locationTypes = options$.field<BuiltList<LocationType>>(
             'locationTypes',
             (a) => a?.locationTypes,
             (s) => s?.locationTypes,
             (p, b) => p?.locationTypes = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        itemCategoryIds = $options.field<BuiltList<String>>(
+        itemCategoryIds = options$.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
             (p, b) => p?.itemCategoryIds = b),
-        createdByContactIds = $options.field<BuiltList<String>>(
+        createdByContactIds = options$.field<BuiltList<String>>(
             'createdByContactIds',
             (a) => a?.createdByContactIds,
             (s) => s?.createdByContactIds,
             (p, b) => p?.createdByContactIds = b),
-        hcrIds = $options.field<BuiltList<String>>('hcrIds', (a) => a?.hcrIds,
+        hcrIds = options$.field<BuiltList<String>>('hcrIds', (a) => a?.hcrIds,
             (s) => s?.hcrIds, (p, b) => p?.hcrIds = b),
-        teamIds = $options.field<BuiltList<String>>('teamIds',
+        teamIds = options$.field<BuiltList<String>>('teamIds',
             (a) => a?.teamIds, (s) => s?.teamIds, (p, b) => p?.teamIds = b),
-        itemIds = $options.field<BuiltList<String>>('itemIds',
+        itemIds = options$.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        lotIds = $options.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
+        lotIds = options$.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
             (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        serialIds = $options.field<BuiltList<String>>(
+        serialIds = options$.field<BuiltList<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
             (p, b) => p?.serialIds = b),
         createdDateRange = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'createdDateRange',
                 (a) => a.createdDateRange,
                 (s) => s?.createdDateRange,
                 (b) => b?.createdDateRange,
                 (parent, builder) => parent?.createdDateRange = builder)),
-        hasErpError = $options.field<bool>('hasErpError', (a) => a?.hasErpError,
+        hasErpError = options$.field<bool>('hasErpError', (a) => a?.hasErpError,
             (s) => s?.hasErpError, (p, b) => p?.hasErpError = b),
-        billOnly = $options.field<bool>('billOnly', (a) => a?.billOnly,
+        billOnly = options$.field<bool>('billOnly', (a) => a?.billOnly,
             (s) => s?.billOnly, (p, b) => p?.billOnly = b),
-        erpOrderNumberSearch = $options.field<String>(
+        erpOrderNumberSearch = options$.field<String>(
             'erpOrderNumberSearch',
             (a) => a?.erpOrderNumberSearch,
             (s) => s?.erpOrderNumberSearch,
             (p, b) => p?.erpOrderNumberSearch = b),
-        poNumberSearch = $options.field<String>(
+        poNumberSearch = options$.field<String>(
             'poNumberSearch',
             (a) => a?.poNumberSearch,
             (s) => s?.poNumberSearch,
             (p, b) => p?.poNumberSearch = b),
-        pendingPo = $options.field<bool>('pendingPo', (a) => a?.pendingPo,
+        pendingPo = options$.field<bool>('pendingPo', (a) => a?.pendingPo,
             (s) => s?.pendingPo, (p, b) => p?.pendingPo = b),
-        orderNumber = $options.field<String>(
+        orderNumber = options$.field<String>(
             'orderNumber',
             (a) => a?.orderNumber,
             (s) => s?.orderNumber,
             (p, b) => p?.orderNumber = b),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        forExport = $options.field<bool>('forExport', (a) => a?.forExport,
+        forExport = options$.field<bool>('forExport', (a) => a?.forExport,
             (s) => s?.forExport, (p, b) => p?.forExport = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -920,7 +920,7 @@ class _$ListSalesOrdersApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListSalesOrdersApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListSalesOrdersApiOrderBy>,
                     OrderByParamsBuilder<ListSalesOrdersApiOrderBy>,
                     OrderByParamsActions<ListSalesOrdersApiOrderBy>>(
@@ -936,25 +936,25 @@ class _$ListSalesOrdersApiRequestActions
       _$ListSalesOrdersApiRequestActions._(options());
 
   @override
-  ListSalesOrdersApiRequest get $initial => ListSalesOrdersApiRequest();
+  ListSalesOrdersApiRequest get initialState$ => ListSalesOrdersApiRequest();
 
   @override
-  ListSalesOrdersApiRequestBuilder $newBuilder() =>
+  ListSalesOrdersApiRequestBuilder newBuilder$() =>
       ListSalesOrdersApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.createdDateRange,
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customerIds,
         this.orderStatuses,
         this.orderReasonIds,
@@ -979,43 +979,39 @@ class _$ListSalesOrdersApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    customerIds.$reducer(reducer);
-    orderStatuses.$reducer(reducer);
-    orderReasonIds.$reducer(reducer);
-    locationIds.$reducer(reducer);
-    locationTypes.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    itemCategoryIds.$reducer(reducer);
-    createdByContactIds.$reducer(reducer);
-    hcrIds.$reducer(reducer);
-    teamIds.$reducer(reducer);
-    itemIds.$reducer(reducer);
-    lotIds.$reducer(reducer);
-    serialIds.$reducer(reducer);
-    createdDateRange.$reducer(reducer);
-    hasErpError.$reducer(reducer);
-    billOnly.$reducer(reducer);
-    erpOrderNumberSearch.$reducer(reducer);
-    poNumberSearch.$reducer(reducer);
-    pendingPo.$reducer(reducer);
-    orderNumber.$reducer(reducer);
-    search.$reducer(reducer);
-    forExport.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    customerIds.reducer$(reducer);
+    orderStatuses.reducer$(reducer);
+    orderReasonIds.reducer$(reducer);
+    locationIds.reducer$(reducer);
+    locationTypes.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    itemCategoryIds.reducer$(reducer);
+    createdByContactIds.reducer$(reducer);
+    hcrIds.reducer$(reducer);
+    teamIds.reducer$(reducer);
+    itemIds.reducer$(reducer);
+    lotIds.reducer$(reducer);
+    serialIds.reducer$(reducer);
+    createdDateRange.reducer$(reducer);
+    hasErpError.reducer$(reducer);
+    billOnly.reducer$(reducer);
+    erpOrderNumberSearch.reducer$(reducer);
+    poNumberSearch.reducer$(reducer);
+    pendingPo.reducer$(reducer);
+    orderNumber.reducer$(reducer);
+    search.reducer$(reducer);
+    forExport.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    createdDateRange.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    createdDateRange.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListSalesOrdersApiRequest);
 }

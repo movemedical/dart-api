@@ -22,69 +22,32 @@ class _$ConfirmMfaSmsEnrollmentApi extends ConfirmMfaSmsEnrollmentApi {
           ApiResult<ConfirmMfaSmsEnrollmentApiResponse>>,
       CommandStateBuilder<ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
           ApiResult<ConfirmMfaSmsEnrollmentApiResponse>>,
-      ConfirmMfaSmsEnrollmentApi> $options;
+      ConfirmMfaSmsEnrollmentApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
-          ApiResult<ConfirmMfaSmsEnrollmentApiResponse>>> $replace;
+          ApiResult<ConfirmMfaSmsEnrollmentApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
-          ApiResult<ConfirmMfaSmsEnrollmentApiResponse>,
-          ConfirmMfaSmsEnrollmentApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
-          ApiResult<ConfirmMfaSmsEnrollmentApiResponse>,
-          ConfirmMfaSmsEnrollmentApi,
-          Command<ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
-              ApiResult<ConfirmMfaSmsEnrollmentApiResponse>,
-              ConfirmMfaSmsEnrollmentApi,
-              CommandResult<ApiResult<ConfirmMfaSmsEnrollmentApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
-          ApiResult<ConfirmMfaSmsEnrollmentApiResponse>,
-          ConfirmMfaSmsEnrollmentApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ConfirmMfaSmsEnrollmentApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ConfirmMfaSmsEnrollmentApi._(this.$options)
-      : $replace = $options.action<
+  _$ConfirmMfaSmsEnrollmentApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
                     ApiResult<ConfirmMfaSmsEnrollmentApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
-                ApiResult<ConfirmMfaSmsEnrollmentApiResponse>,
-                ConfirmMfaSmsEnrollmentApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
-                    ApiResult<ConfirmMfaSmsEnrollmentApiResponse>,
-                    ConfirmMfaSmsEnrollmentApi,
-                    Command<ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
-                    ApiResult<ConfirmMfaSmsEnrollmentApiResponse>,
-                    ConfirmMfaSmsEnrollmentApi,
-                    CommandResult<
-                        ApiResult<ConfirmMfaSmsEnrollmentApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
-                ApiResult<ConfirmMfaSmsEnrollmentApiResponse>,
-                ConfirmMfaSmsEnrollmentApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<ConfirmMfaSmsEnrollmentApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ConfirmMfaSmsEnrollmentApi(
@@ -94,33 +57,26 @@ class _$ConfirmMfaSmsEnrollmentApi extends ConfirmMfaSmsEnrollmentApi {
   @override
   CommandState<ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
           ApiResult<ConfirmMfaSmsEnrollmentApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
           ApiResult<ConfirmMfaSmsEnrollmentApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
           ApiResult<ConfirmMfaSmsEnrollmentApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ConfirmMfaSmsEnrollmentApiRequest>,
           ApiResult<ConfirmMfaSmsEnrollmentApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ConfirmMfaSmsEnrollmentApiRequest)]),
-        FullType(ApiResult, [FullType(ConfirmMfaSmsEnrollmentApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

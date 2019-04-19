@@ -149,15 +149,15 @@ typedef StatefulActionsOptions<
 
 class _$CreateItemApiResponseActions extends CreateItemApiResponseActions {
   final StatefulActionsOptions<CreateItemApiResponse,
-      CreateItemApiResponseBuilder, CreateItemApiResponseActions> $options;
+      CreateItemApiResponseBuilder, CreateItemApiResponseActions> options$;
 
-  final ActionDispatcher<CreateItemApiResponse> $replace;
+  final ActionDispatcher<CreateItemApiResponse> replace$;
   final FieldDispatcher<String> itemId;
 
-  _$CreateItemApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateItemApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+  _$CreateItemApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateItemApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
         super._();
 
@@ -166,31 +166,27 @@ class _$CreateItemApiResponseActions extends CreateItemApiResponseActions {
       _$CreateItemApiResponseActions._(options());
 
   @override
-  CreateItemApiResponse get $initial => CreateItemApiResponse();
+  CreateItemApiResponse get initialState$ => CreateItemApiResponse();
 
   @override
-  CreateItemApiResponseBuilder $newBuilder() => CreateItemApiResponseBuilder();
+  CreateItemApiResponseBuilder newBuilder$() => CreateItemApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.itemId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    itemId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    itemId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateItemApiResponse);
 }

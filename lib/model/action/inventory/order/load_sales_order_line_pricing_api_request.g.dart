@@ -161,15 +161,15 @@ class _$LoadSalesOrderLinePricingApiRequestActions
   final StatefulActionsOptions<
       LoadSalesOrderLinePricingApiRequest,
       LoadSalesOrderLinePricingApiRequestBuilder,
-      LoadSalesOrderLinePricingApiRequestActions> $options;
+      LoadSalesOrderLinePricingApiRequestActions> options$;
 
-  final ActionDispatcher<LoadSalesOrderLinePricingApiRequest> $replace;
+  final ActionDispatcher<LoadSalesOrderLinePricingApiRequest> replace$;
   final FieldDispatcher<String> salesOrderId;
 
-  _$LoadSalesOrderLinePricingApiRequestActions._(this.$options)
-      : $replace = $options.action<LoadSalesOrderLinePricingApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        salesOrderId = $options.field<String>(
+  _$LoadSalesOrderLinePricingApiRequestActions._(this.options$)
+      : replace$ = options$.action<LoadSalesOrderLinePricingApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        salesOrderId = options$.field<String>(
             'salesOrderId',
             (a) => a?.salesOrderId,
             (s) => s?.salesOrderId,
@@ -181,34 +181,29 @@ class _$LoadSalesOrderLinePricingApiRequestActions
       _$LoadSalesOrderLinePricingApiRequestActions._(options());
 
   @override
-  LoadSalesOrderLinePricingApiRequest get $initial =>
+  LoadSalesOrderLinePricingApiRequest get initialState$ =>
       LoadSalesOrderLinePricingApiRequest();
 
   @override
-  LoadSalesOrderLinePricingApiRequestBuilder $newBuilder() =>
+  LoadSalesOrderLinePricingApiRequestBuilder newBuilder$() =>
       LoadSalesOrderLinePricingApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.salesOrderId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    salesOrderId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    salesOrderId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(LoadSalesOrderLinePricingApiRequest);
 }

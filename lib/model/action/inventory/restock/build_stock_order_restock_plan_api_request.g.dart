@@ -186,18 +186,18 @@ class _$BuildStockOrderRestockPlanApiRequestActions
   final StatefulActionsOptions<
       BuildStockOrderRestockPlanApiRequest,
       BuildStockOrderRestockPlanApiRequestBuilder,
-      BuildStockOrderRestockPlanApiRequestActions> $options;
+      BuildStockOrderRestockPlanApiRequestActions> options$;
 
-  final ActionDispatcher<BuildStockOrderRestockPlanApiRequest> $replace;
+  final ActionDispatcher<BuildStockOrderRestockPlanApiRequest> replace$;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<bool> checkReplenishmentAvailable;
 
-  _$BuildStockOrderRestockPlanApiRequestActions._(this.$options)
-      : $replace = $options.action<BuildStockOrderRestockPlanApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$BuildStockOrderRestockPlanApiRequestActions._(this.options$)
+      : replace$ = options$.action<BuildStockOrderRestockPlanApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        checkReplenishmentAvailable = $options.field<bool>(
+        checkReplenishmentAvailable = options$.field<bool>(
             'checkReplenishmentAvailable',
             (a) => a?.checkReplenishmentAvailable,
             (s) => s?.checkReplenishmentAvailable,
@@ -209,36 +209,31 @@ class _$BuildStockOrderRestockPlanApiRequestActions
       _$BuildStockOrderRestockPlanApiRequestActions._(options());
 
   @override
-  BuildStockOrderRestockPlanApiRequest get $initial =>
+  BuildStockOrderRestockPlanApiRequest get initialState$ =>
       BuildStockOrderRestockPlanApiRequest();
 
   @override
-  BuildStockOrderRestockPlanApiRequestBuilder $newBuilder() =>
+  BuildStockOrderRestockPlanApiRequestBuilder newBuilder$() =>
       BuildStockOrderRestockPlanApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
         this.checkReplenishmentAvailable,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
-    checkReplenishmentAvailable.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
+    checkReplenishmentAvailable.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildStockOrderRestockPlanApiRequest);
 }

@@ -844,9 +844,9 @@ typedef StatefulActionsOptions<
 
 class _$SaveCaseUsagesApiUsageActions extends SaveCaseUsagesApiUsageActions {
   final StatefulActionsOptions<SaveCaseUsagesApiUsage,
-      SaveCaseUsagesApiUsageBuilder, SaveCaseUsagesApiUsageActions> $options;
+      SaveCaseUsagesApiUsageBuilder, SaveCaseUsagesApiUsageActions> options$;
 
-  final ActionDispatcher<SaveCaseUsagesApiUsage> $replace;
+  final ActionDispatcher<SaveCaseUsagesApiUsage> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<bool> remove;
   final FieldDispatcher<String> caseUsageOrderId;
@@ -878,128 +878,128 @@ class _$SaveCaseUsagesApiUsageActions extends SaveCaseUsagesApiUsageActions {
   final FieldDispatcher<String> billingCodeId;
   final FieldDispatcher<double> overridePrice;
 
-  _$SaveCaseUsagesApiUsageActions._(this.$options)
-      : $replace = $options.action<SaveCaseUsagesApiUsage>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$SaveCaseUsagesApiUsageActions._(this.options$)
+      : replace$ = options$.action<SaveCaseUsagesApiUsage>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        remove = $options.field<bool>('remove', (a) => a?.remove,
+        remove = options$.field<bool>('remove', (a) => a?.remove,
             (s) => s?.remove, (p, b) => p?.remove = b),
-        caseUsageOrderId = $options.field<String>(
+        caseUsageOrderId = options$.field<String>(
             'caseUsageOrderId',
             (a) => a?.caseUsageOrderId,
             (s) => s?.caseUsageOrderId,
             (p, b) => p?.caseUsageOrderId = b),
-        caseUsageConstructId = $options.field<String>(
+        caseUsageConstructId = options$.field<String>(
             'caseUsageConstructId',
             (a) => a?.caseUsageConstructId,
             (s) => s?.caseUsageConstructId,
             (p, b) => p?.caseUsageConstructId = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+        itemNumber = options$.field<String>('itemNumber', (a) => a?.itemNumber,
             (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
-        lotNumber = $options.field<String>('lotNumber', (a) => a?.lotNumber,
+        lotNumber = options$.field<String>('lotNumber', (a) => a?.lotNumber,
             (s) => s?.lotNumber, (p, b) => p?.lotNumber = b),
-        serialNumber = $options.field<String>(
+        serialNumber = options$.field<String>(
             'serialNumber',
             (a) => a?.serialNumber,
             (s) => s?.serialNumber,
             (p, b) => p?.serialNumber = b),
-        rawBarcodeData = $options.field<String>(
+        rawBarcodeData = options$.field<String>(
             'rawBarcodeData',
             (a) => a?.rawBarcodeData,
             (s) => s?.rawBarcodeData,
             (p, b) => p?.rawBarcodeData = b),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        caseUsageDisposition = $options.field<CaseUsageDisposition>(
+        caseUsageDisposition = options$.field<CaseUsageDisposition>(
             'caseUsageDisposition',
             (a) => a?.caseUsageDisposition,
             (s) => s?.caseUsageDisposition,
             (p, b) => p?.caseUsageDisposition = b),
-        usageCaptureType = $options.field<ItemCaptureType>(
+        usageCaptureType = options$.field<ItemCaptureType>(
             'usageCaptureType',
             (a) => a?.usageCaptureType,
             (s) => s?.usageCaptureType,
             (p, b) => p?.usageCaptureType = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        note = $options.field<String>(
+        note = options$.field<String>(
             'note', (a) => a?.note, (s) => s?.note, (p, b) => p?.note = b),
-        locationHint = $options.field<LocationHint>(
+        locationHint = options$.field<LocationHint>(
             'locationHint',
             (a) => a?.locationHint,
             (s) => s?.locationHint,
             (p, b) => p?.locationHint = b),
-        replenishOption = $options.field<ReplenishOption>(
+        replenishOption = options$.field<ReplenishOption>(
             'replenishOption',
             (a) => a?.replenishOption,
             (s) => s?.replenishOption,
             (p, b) => p?.replenishOption = b),
-        replenishLocationType = $options.field<LocationType>(
+        replenishLocationType = options$.field<LocationType>(
             'replenishLocationType',
             (a) => a?.replenishLocationType,
             (s) => s?.replenishLocationType,
             (p, b) => p?.replenishLocationType = b),
-        replenishLocationId = $options.field<String>(
+        replenishLocationId = options$.field<String>(
             'replenishLocationId',
             (a) => a?.replenishLocationId,
             (s) => s?.replenishLocationId,
             (p, b) => p?.replenishLocationId = b),
-        replenishContainerType = $options.field<StockContainerType>(
+        replenishContainerType = options$.field<StockContainerType>(
             'replenishContainerType',
             (a) => a?.replenishContainerType,
             (s) => s?.replenishContainerType,
             (p, b) => p?.replenishContainerType = b),
-        replenishContainerId = $options.field<String>(
+        replenishContainerId = options$.field<String>(
             'replenishContainerId',
             (a) => a?.replenishContainerId,
             (s) => s?.replenishContainerId,
             (p, b) => p?.replenishContainerId = b),
-        replenishByDate = $options.field<DateTime>(
+        replenishByDate = options$.field<DateTime>(
             'replenishByDate',
             (a) => a?.replenishByDate,
             (s) => s?.replenishByDate,
             (p, b) => p?.replenishByDate = b),
-        shippingServiceId = $options.field<String>(
+        shippingServiceId = options$.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
-        restockDeliverToAttn = $options.field<String>(
+        restockDeliverToAttn = options$.field<String>(
             'restockDeliverToAttn',
             (a) => a?.restockDeliverToAttn,
             (s) => s?.restockDeliverToAttn,
             (p, b) => p?.restockDeliverToAttn = b),
-        restockDeliverToAddressId = $options.field<String>(
+        restockDeliverToAddressId = options$.field<String>(
             'restockDeliverToAddressId',
             (a) => a?.restockDeliverToAddressId,
             (s) => s?.restockDeliverToAddressId,
             (p, b) => p?.restockDeliverToAddressId = b),
         restockDeliverToAddressOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'restockDeliverToAddressOverride',
                 (a) => a.restockDeliverToAddressOverride,
                 (s) => s?.restockDeliverToAddressOverride,
                 (b) => b?.restockDeliverToAddressOverride,
                 (parent, builder) =>
                     parent?.restockDeliverToAddressOverride = builder)),
-        doNotRestock = $options.field<bool>(
+        doNotRestock = options$.field<bool>(
             'doNotRestock',
             (a) => a?.doNotRestock,
             (s) => s?.doNotRestock,
             (p, b) => p?.doNotRestock = b),
-        billingCodeId = $options.field<String>(
+        billingCodeId = options$.field<String>(
             'billingCodeId',
             (a) => a?.billingCodeId,
             (s) => s?.billingCodeId,
             (p, b) => p?.billingCodeId = b),
-        overridePrice = $options.field<double>(
+        overridePrice = options$.field<double>(
             'overridePrice',
             (a) => a?.overridePrice,
             (s) => s?.overridePrice,
@@ -1011,23 +1011,23 @@ class _$SaveCaseUsagesApiUsageActions extends SaveCaseUsagesApiUsageActions {
       _$SaveCaseUsagesApiUsageActions._(options());
 
   @override
-  SaveCaseUsagesApiUsage get $initial => SaveCaseUsagesApiUsage();
+  SaveCaseUsagesApiUsage get initialState$ => SaveCaseUsagesApiUsage();
 
   @override
-  SaveCaseUsagesApiUsageBuilder $newBuilder() =>
+  SaveCaseUsagesApiUsageBuilder newBuilder$() =>
       SaveCaseUsagesApiUsageBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.restockDeliverToAddressOverride,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.remove,
         this.caseUsageOrderId,
@@ -1060,47 +1060,43 @@ class _$SaveCaseUsagesApiUsageActions extends SaveCaseUsagesApiUsageActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    remove.$reducer(reducer);
-    caseUsageOrderId.$reducer(reducer);
-    caseUsageConstructId.$reducer(reducer);
-    itemId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    itemNumber.$reducer(reducer);
-    lotNumber.$reducer(reducer);
-    serialNumber.$reducer(reducer);
-    rawBarcodeData.$reducer(reducer);
-    stockId.$reducer(reducer);
-    caseUsageDisposition.$reducer(reducer);
-    usageCaptureType.$reducer(reducer);
-    quantity.$reducer(reducer);
-    note.$reducer(reducer);
-    locationHint.$reducer(reducer);
-    replenishOption.$reducer(reducer);
-    replenishLocationType.$reducer(reducer);
-    replenishLocationId.$reducer(reducer);
-    replenishContainerType.$reducer(reducer);
-    replenishContainerId.$reducer(reducer);
-    replenishByDate.$reducer(reducer);
-    shippingServiceId.$reducer(reducer);
-    restockDeliverToAttn.$reducer(reducer);
-    restockDeliverToAddressId.$reducer(reducer);
-    restockDeliverToAddressOverride.$reducer(reducer);
-    doNotRestock.$reducer(reducer);
-    billingCodeId.$reducer(reducer);
-    overridePrice.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    remove.reducer$(reducer);
+    caseUsageOrderId.reducer$(reducer);
+    caseUsageConstructId.reducer$(reducer);
+    itemId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    itemNumber.reducer$(reducer);
+    lotNumber.reducer$(reducer);
+    serialNumber.reducer$(reducer);
+    rawBarcodeData.reducer$(reducer);
+    stockId.reducer$(reducer);
+    caseUsageDisposition.reducer$(reducer);
+    usageCaptureType.reducer$(reducer);
+    quantity.reducer$(reducer);
+    note.reducer$(reducer);
+    locationHint.reducer$(reducer);
+    replenishOption.reducer$(reducer);
+    replenishLocationType.reducer$(reducer);
+    replenishLocationId.reducer$(reducer);
+    replenishContainerType.reducer$(reducer);
+    replenishContainerId.reducer$(reducer);
+    replenishByDate.reducer$(reducer);
+    shippingServiceId.reducer$(reducer);
+    restockDeliverToAttn.reducer$(reducer);
+    restockDeliverToAddressId.reducer$(reducer);
+    restockDeliverToAddressOverride.reducer$(reducer);
+    doNotRestock.reducer$(reducer);
+    billingCodeId.reducer$(reducer);
+    overridePrice.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    restockDeliverToAddressOverride.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    restockDeliverToAddressOverride.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SaveCaseUsagesApiUsage);
 }

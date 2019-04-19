@@ -249,25 +249,25 @@ typedef StatefulActionsOptions<
 
 class _$GetPackageApiResponseActions extends GetPackageApiResponseActions {
   final StatefulActionsOptions<GetPackageApiResponse,
-      GetPackageApiResponseBuilder, GetPackageApiResponseActions> $options;
+      GetPackageApiResponseBuilder, GetPackageApiResponseActions> options$;
 
-  final ActionDispatcher<GetPackageApiResponse> $replace;
+  final ActionDispatcher<GetPackageApiResponse> replace$;
   final GetPackageApiPkgActions pkg;
   final GetPackageApiUiSchemaActions uiSchema;
   final FieldDispatcher<BuiltList<CustomDoc>> customDocs;
   final FieldDispatcher<BuiltList<GetPackageApiPackageAttribute>> attributes;
 
-  _$GetPackageApiResponseActions._(this.$options)
-      : $replace = $options.action<GetPackageApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        pkg = GetPackageApiPkgActions(() => $options.stateful<GetPackageApiPkg,
+  _$GetPackageApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetPackageApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        pkg = GetPackageApiPkgActions(() => options$.stateful<GetPackageApiPkg,
                 GetPackageApiPkgBuilder, GetPackageApiPkgActions>(
             'pkg',
             (a) => a.pkg,
             (s) => s?.pkg,
             (b) => b?.pkg,
             (parent, builder) => parent?.pkg = builder)),
-        uiSchema = GetPackageApiUiSchemaActions(() => $options.stateful<
+        uiSchema = GetPackageApiUiSchemaActions(() => options$.stateful<
                 GetPackageApiUiSchema,
                 GetPackageApiUiSchemaBuilder,
                 GetPackageApiUiSchemaActions>(
@@ -276,12 +276,12 @@ class _$GetPackageApiResponseActions extends GetPackageApiResponseActions {
             (s) => s?.uiSchema,
             (b) => b?.uiSchema,
             (parent, builder) => parent?.uiSchema = builder)),
-        customDocs = $options.field<BuiltList<CustomDoc>>(
+        customDocs = options$.field<BuiltList<CustomDoc>>(
             'customDocs',
             (a) => a?.customDocs,
             (s) => s?.customDocs,
             (p, b) => p?.customDocs = b),
-        attributes = $options.field<BuiltList<GetPackageApiPackageAttribute>>(
+        attributes = options$.field<BuiltList<GetPackageApiPackageAttribute>>(
             'attributes',
             (a) => a?.attributes,
             (s) => s?.attributes,
@@ -293,44 +293,40 @@ class _$GetPackageApiResponseActions extends GetPackageApiResponseActions {
       _$GetPackageApiResponseActions._(options());
 
   @override
-  GetPackageApiResponse get $initial => GetPackageApiResponse();
+  GetPackageApiResponse get initialState$ => GetPackageApiResponse();
 
   @override
-  GetPackageApiResponseBuilder $newBuilder() => GetPackageApiResponseBuilder();
+  GetPackageApiResponseBuilder newBuilder$() => GetPackageApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.pkg,
         this.uiSchema,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customDocs,
         this.attributes,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    pkg.$reducer(reducer);
-    uiSchema.$reducer(reducer);
-    customDocs.$reducer(reducer);
-    attributes.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    pkg.reducer$(reducer);
+    uiSchema.reducer$(reducer);
+    customDocs.reducer$(reducer);
+    attributes.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    pkg.$middleware(middleware);
-    uiSchema.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    pkg.middleware$(middleware);
+    uiSchema.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetPackageApiResponse);
 }

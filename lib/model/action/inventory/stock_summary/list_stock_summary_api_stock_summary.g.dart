@@ -729,9 +729,9 @@ class _$ListStockSummaryApiStockSummaryActions
   final StatefulActionsOptions<
       ListStockSummaryApiStockSummary,
       ListStockSummaryApiStockSummaryBuilder,
-      ListStockSummaryApiStockSummaryActions> $options;
+      ListStockSummaryApiStockSummaryActions> options$;
 
-  final ActionDispatcher<ListStockSummaryApiStockSummary> $replace;
+  final ActionDispatcher<ListStockSummaryApiStockSummary> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> key;
   final FieldDispatcher<int> qty;
@@ -757,43 +757,43 @@ class _$ListStockSummaryApiStockSummaryActions
   final FieldDispatcher<String> attributeLabel;
   final FieldDispatcher<String> attributeValue;
 
-  _$ListStockSummaryApiStockSummaryActions._(this.$options)
-      : $replace = $options.action<ListStockSummaryApiStockSummary>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListStockSummaryApiStockSummaryActions._(this.options$)
+      : replace$ = options$.action<ListStockSummaryApiStockSummary>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        key = $options.field<String>(
+        key = options$.field<String>(
             'key', (a) => a?.key, (s) => s?.key, (p, b) => p?.key = b),
-        qty = $options.field<int>(
+        qty = options$.field<int>(
             'qty', (a) => a?.qty, (s) => s?.qty, (p, b) => p?.qty = b),
-        holdQty = $options.field<int>('holdQty', (a) => a?.holdQty,
+        holdQty = options$.field<int>('holdQty', (a) => a?.holdQty,
             (s) => s?.holdQty, (p, b) => p?.holdQty = b),
-        lostQty = $options.field<int>('lostQty', (a) => a?.lostQty,
+        lostQty = options$.field<int>('lostQty', (a) => a?.lostQty,
             (s) => s?.lostQty, (p, b) => p?.lostQty = b),
-        foundQty = $options.field<int>('foundQty', (a) => a?.foundQty,
+        foundQty = options$.field<int>('foundQty', (a) => a?.foundQty,
             (s) => s?.foundQty, (p, b) => p?.foundQty = b),
         place = StockPlaceActions(() =>
-            $options.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
+            options$.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
                 'place',
                 (a) => a.place,
                 (s) => s?.place,
                 (b) => b?.place,
                 (parent, builder) => parent?.place = builder)),
         stockItem = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
                 (a) => a.stockItem,
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
-        expirationInfo = ExpirationInfoActions(() => $options.stateful<
+        expirationInfo = ExpirationInfoActions(() => options$.stateful<
                 ExpirationInfo, ExpirationInfoBuilder, ExpirationInfoActions>(
             'expirationInfo',
             (a) => a.expirationInfo,
             (s) => s?.expirationInfo,
             (b) => b?.expirationInfo,
             (parent, builder) => parent?.expirationInfo = builder)),
-        responsibleParty = ResponsiblePartyActions(() => $options.stateful<
+        responsibleParty = ResponsiblePartyActions(() => options$.stateful<
                 ResponsibleParty,
                 ResponsiblePartyBuilder,
                 ResponsiblePartyActions>(
@@ -802,7 +802,7 @@ class _$ListStockSummaryApiStockSummaryActions
             (s) => s?.responsibleParty,
             (b) => b?.responsibleParty,
             (parent, builder) => parent?.responsibleParty = builder)),
-        inventoryType = InventoryTypeActions(() => $options.stateful<
+        inventoryType = InventoryTypeActions(() => options$.stateful<
                 InventoryType, InventoryTypeBuilder, InventoryTypeActions>(
             'inventoryType',
             (a) => a.inventoryType,
@@ -810,13 +810,13 @@ class _$ListStockSummaryApiStockSummaryActions
             (b) => b?.inventoryType,
             (parent, builder) => parent?.inventoryType = builder)),
         demandLoan = LoanLiteActions(() =>
-            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+            options$.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
                 'demandLoan',
                 (a) => a.demandLoan,
                 (s) => s?.demandLoan,
                 (b) => b?.demandLoan,
                 (parent, builder) => parent?.demandLoan = builder)),
-        caseEvent = CaseEventLiteActions(() => $options.stateful<CaseEventLite,
+        caseEvent = CaseEventLiteActions(() => options$.stateful<CaseEventLite,
                 CaseEventLiteBuilder, CaseEventLiteActions>(
             'caseEvent',
             (a) => a.caseEvent,
@@ -824,52 +824,52 @@ class _$ListStockSummaryApiStockSummaryActions
             (b) => b?.caseEvent,
             (parent, builder) => parent?.caseEvent = builder)),
         consignmentLoan = LoanLiteActions(() =>
-            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+            options$.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
                 'consignmentLoan',
                 (a) => a.consignmentLoan,
                 (s) => s?.consignmentLoan,
                 (b) => b?.consignmentLoan,
                 (parent, builder) => parent?.consignmentLoan = builder)),
-        kitId = $options.field<String>(
+        kitId = options$.field<String>(
             'kitId', (a) => a?.kitId, (s) => s?.kitId, (p, b) => p?.kitId = b),
-        kitItemNumber = $options.field<String>(
+        kitItemNumber = options$.field<String>(
             'kitItemNumber',
             (a) => a?.kitItemNumber,
             (s) => s?.kitItemNumber,
             (p, b) => p?.kitItemNumber = b),
-        kitSerialNumber = $options.field<int>(
+        kitSerialNumber = options$.field<int>(
             'kitSerialNumber',
             (a) => a?.kitSerialNumber,
             (s) => s?.kitSerialNumber,
             (p, b) => p?.kitSerialNumber = b),
-        kitSerialRef = $options.field<String>(
+        kitSerialRef = options$.field<String>(
             'kitSerialRef',
             (a) => a?.kitSerialRef,
             (s) => s?.kitSerialRef,
             (p, b) => p?.kitSerialRef = b),
-        kitVerified = $options.field<bool>('kitVerified', (a) => a?.kitVerified,
+        kitVerified = options$.field<bool>('kitVerified', (a) => a?.kitVerified,
             (s) => s?.kitVerified, (p, b) => p?.kitVerified = b),
-        kitHasExtras = $options.field<bool>(
+        kitHasExtras = options$.field<bool>(
             'kitHasExtras',
             (a) => a?.kitHasExtras,
             (s) => s?.kitHasExtras,
             (p, b) => p?.kitHasExtras = b),
-        kitHasMissing = $options.field<bool>(
+        kitHasMissing = options$.field<bool>(
             'kitHasMissing',
             (a) => a?.kitHasMissing,
             (s) => s?.kitHasMissing,
             (p, b) => p?.kitHasMissing = b),
-        kitHasUnverified = $options.field<bool>(
+        kitHasUnverified = options$.field<bool>(
             'kitHasUnverified',
             (a) => a?.kitHasUnverified,
             (s) => s?.kitHasUnverified,
             (p, b) => p?.kitHasUnverified = b),
-        attributeLabel = $options.field<String>(
+        attributeLabel = options$.field<String>(
             'attributeLabel',
             (a) => a?.attributeLabel,
             (s) => s?.attributeLabel,
             (p, b) => p?.attributeLabel = b),
-        attributeValue = $options.field<String>(
+        attributeValue = options$.field<String>(
             'attributeValue',
             (a) => a?.attributeValue,
             (s) => s?.attributeValue,
@@ -881,16 +881,16 @@ class _$ListStockSummaryApiStockSummaryActions
       _$ListStockSummaryApiStockSummaryActions._(options());
 
   @override
-  ListStockSummaryApiStockSummary get $initial =>
+  ListStockSummaryApiStockSummary get initialState$ =>
       ListStockSummaryApiStockSummary();
 
   @override
-  ListStockSummaryApiStockSummaryBuilder $newBuilder() =>
+  ListStockSummaryApiStockSummaryBuilder newBuilder$() =>
       ListStockSummaryApiStockSummaryBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.place,
         this.stockItem,
         this.expirationInfo,
@@ -901,11 +901,11 @@ class _$ListStockSummaryApiStockSummaryActions
         this.consignmentLoan,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.key,
         this.qty,
@@ -925,49 +925,44 @@ class _$ListStockSummaryApiStockSummaryActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    key.$reducer(reducer);
-    qty.$reducer(reducer);
-    holdQty.$reducer(reducer);
-    lostQty.$reducer(reducer);
-    foundQty.$reducer(reducer);
-    place.$reducer(reducer);
-    stockItem.$reducer(reducer);
-    expirationInfo.$reducer(reducer);
-    responsibleParty.$reducer(reducer);
-    inventoryType.$reducer(reducer);
-    demandLoan.$reducer(reducer);
-    caseEvent.$reducer(reducer);
-    consignmentLoan.$reducer(reducer);
-    kitId.$reducer(reducer);
-    kitItemNumber.$reducer(reducer);
-    kitSerialNumber.$reducer(reducer);
-    kitSerialRef.$reducer(reducer);
-    kitVerified.$reducer(reducer);
-    kitHasExtras.$reducer(reducer);
-    kitHasMissing.$reducer(reducer);
-    kitHasUnverified.$reducer(reducer);
-    attributeLabel.$reducer(reducer);
-    attributeValue.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    key.reducer$(reducer);
+    qty.reducer$(reducer);
+    holdQty.reducer$(reducer);
+    lostQty.reducer$(reducer);
+    foundQty.reducer$(reducer);
+    place.reducer$(reducer);
+    stockItem.reducer$(reducer);
+    expirationInfo.reducer$(reducer);
+    responsibleParty.reducer$(reducer);
+    inventoryType.reducer$(reducer);
+    demandLoan.reducer$(reducer);
+    caseEvent.reducer$(reducer);
+    consignmentLoan.reducer$(reducer);
+    kitId.reducer$(reducer);
+    kitItemNumber.reducer$(reducer);
+    kitSerialNumber.reducer$(reducer);
+    kitSerialRef.reducer$(reducer);
+    kitVerified.reducer$(reducer);
+    kitHasExtras.reducer$(reducer);
+    kitHasMissing.reducer$(reducer);
+    kitHasUnverified.reducer$(reducer);
+    attributeLabel.reducer$(reducer);
+    attributeValue.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    place.$middleware(middleware);
-    stockItem.$middleware(middleware);
-    expirationInfo.$middleware(middleware);
-    responsibleParty.$middleware(middleware);
-    inventoryType.$middleware(middleware);
-    demandLoan.$middleware(middleware);
-    caseEvent.$middleware(middleware);
-    consignmentLoan.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    place.middleware$(middleware);
+    stockItem.middleware$(middleware);
+    expirationInfo.middleware$(middleware);
+    responsibleParty.middleware$(middleware);
+    inventoryType.middleware$(middleware);
+    demandLoan.middleware$(middleware);
+    caseEvent.middleware$(middleware);
+    consignmentLoan.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListStockSummaryApiStockSummary);
 }

@@ -182,18 +182,18 @@ class _$ProcessInspectionApiProcessingErrorActions
   final StatefulActionsOptions<
       ProcessInspectionApiProcessingError,
       ProcessInspectionApiProcessingErrorBuilder,
-      ProcessInspectionApiProcessingErrorActions> $options;
+      ProcessInspectionApiProcessingErrorActions> options$;
 
-  final ActionDispatcher<ProcessInspectionApiProcessingError> $replace;
+  final ActionDispatcher<ProcessInspectionApiProcessingError> replace$;
   final FieldDispatcher<String> receiptId;
   final FieldDispatcher<String> error;
 
-  _$ProcessInspectionApiProcessingErrorActions._(this.$options)
-      : $replace = $options.action<ProcessInspectionApiProcessingError>(
-            '\$replace', (a) => a?.$replace),
-        receiptId = $options.field<String>('receiptId', (a) => a?.receiptId,
+  _$ProcessInspectionApiProcessingErrorActions._(this.options$)
+      : replace$ = options$.action<ProcessInspectionApiProcessingError>(
+            'replace\$', (a) => a?.replace$),
+        receiptId = options$.field<String>('receiptId', (a) => a?.receiptId,
             (s) => s?.receiptId, (p, b) => p?.receiptId = b),
-        error = $options.field<String>(
+        error = options$.field<String>(
             'error', (a) => a?.error, (s) => s?.error, (p, b) => p?.error = b),
         super._();
 
@@ -202,36 +202,31 @@ class _$ProcessInspectionApiProcessingErrorActions
       _$ProcessInspectionApiProcessingErrorActions._(options());
 
   @override
-  ProcessInspectionApiProcessingError get $initial =>
+  ProcessInspectionApiProcessingError get initialState$ =>
       ProcessInspectionApiProcessingError();
 
   @override
-  ProcessInspectionApiProcessingErrorBuilder $newBuilder() =>
+  ProcessInspectionApiProcessingErrorBuilder newBuilder$() =>
       ProcessInspectionApiProcessingErrorBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.receiptId,
         this.error,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    receiptId.$reducer(reducer);
-    error.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    receiptId.reducer$(reducer);
+    error.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ProcessInspectionApiProcessingError);
 }

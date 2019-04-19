@@ -159,15 +159,15 @@ class _$ListPackageTrackingApiRequestActions
   final StatefulActionsOptions<
       ListPackageTrackingApiRequest,
       ListPackageTrackingApiRequestBuilder,
-      ListPackageTrackingApiRequestActions> $options;
+      ListPackageTrackingApiRequestActions> options$;
 
-  final ActionDispatcher<ListPackageTrackingApiRequest> $replace;
+  final ActionDispatcher<ListPackageTrackingApiRequest> replace$;
   final FieldDispatcher<String> packageId;
 
-  _$ListPackageTrackingApiRequestActions._(this.$options)
-      : $replace = $options.action<ListPackageTrackingApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        packageId = $options.field<String>('packageId', (a) => a?.packageId,
+  _$ListPackageTrackingApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListPackageTrackingApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        packageId = options$.field<String>('packageId', (a) => a?.packageId,
             (s) => s?.packageId, (p, b) => p?.packageId = b),
         super._();
 
@@ -176,33 +176,29 @@ class _$ListPackageTrackingApiRequestActions
       _$ListPackageTrackingApiRequestActions._(options());
 
   @override
-  ListPackageTrackingApiRequest get $initial => ListPackageTrackingApiRequest();
+  ListPackageTrackingApiRequest get initialState$ =>
+      ListPackageTrackingApiRequest();
 
   @override
-  ListPackageTrackingApiRequestBuilder $newBuilder() =>
+  ListPackageTrackingApiRequestBuilder newBuilder$() =>
       ListPackageTrackingApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.packageId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    packageId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    packageId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPackageTrackingApiRequest);
 }

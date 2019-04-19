@@ -206,27 +206,27 @@ class _$ListAuditEntriesApiAuditEntryActions
   final StatefulActionsOptions<
       ListAuditEntriesApiAuditEntry,
       ListAuditEntriesApiAuditEntryBuilder,
-      ListAuditEntriesApiAuditEntryActions> $options;
+      ListAuditEntriesApiAuditEntryActions> options$;
 
-  final ActionDispatcher<ListAuditEntriesApiAuditEntry> $replace;
+  final ActionDispatcher<ListAuditEntriesApiAuditEntry> replace$;
   final FieldDispatcher<String> enteredByUserId;
   final FieldDispatcher<DateTime> enteredTimestamp;
   final FieldDispatcher<int> quantity;
 
-  _$ListAuditEntriesApiAuditEntryActions._(this.$options)
-      : $replace = $options.action<ListAuditEntriesApiAuditEntry>(
-            '\$replace', (a) => a?.$replace),
-        enteredByUserId = $options.field<String>(
+  _$ListAuditEntriesApiAuditEntryActions._(this.options$)
+      : replace$ = options$.action<ListAuditEntriesApiAuditEntry>(
+            'replace\$', (a) => a?.replace$),
+        enteredByUserId = options$.field<String>(
             'enteredByUserId',
             (a) => a?.enteredByUserId,
             (s) => s?.enteredByUserId,
             (p, b) => p?.enteredByUserId = b),
-        enteredTimestamp = $options.field<DateTime>(
+        enteredTimestamp = options$.field<DateTime>(
             'enteredTimestamp',
             (a) => a?.enteredTimestamp,
             (s) => s?.enteredTimestamp,
             (p, b) => p?.enteredTimestamp = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -235,37 +235,33 @@ class _$ListAuditEntriesApiAuditEntryActions
       _$ListAuditEntriesApiAuditEntryActions._(options());
 
   @override
-  ListAuditEntriesApiAuditEntry get $initial => ListAuditEntriesApiAuditEntry();
+  ListAuditEntriesApiAuditEntry get initialState$ =>
+      ListAuditEntriesApiAuditEntry();
 
   @override
-  ListAuditEntriesApiAuditEntryBuilder $newBuilder() =>
+  ListAuditEntriesApiAuditEntryBuilder newBuilder$() =>
       ListAuditEntriesApiAuditEntryBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.enteredByUserId,
         this.enteredTimestamp,
         this.quantity,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    enteredByUserId.$reducer(reducer);
-    enteredTimestamp.$reducer(reducer);
-    quantity.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    enteredByUserId.reducer$(reducer);
+    enteredTimestamp.reducer$(reducer);
+    quantity.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListAuditEntriesApiAuditEntry);
 }

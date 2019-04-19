@@ -201,20 +201,20 @@ class _$AddInvTypesToBeCountedApiRequestActions
   final StatefulActionsOptions<
       AddInvTypesToBeCountedApiRequest,
       AddInvTypesToBeCountedApiRequestBuilder,
-      AddInvTypesToBeCountedApiRequestActions> $options;
+      AddInvTypesToBeCountedApiRequestActions> options$;
 
-  final ActionDispatcher<AddInvTypesToBeCountedApiRequest> $replace;
+  final ActionDispatcher<AddInvTypesToBeCountedApiRequest> replace$;
   final FieldDispatcher<String> auditId;
   final FieldDispatcher<BuiltList<AddInvTypesToBeCountedApiInvTypeToCount>>
       invTypes;
 
-  _$AddInvTypesToBeCountedApiRequestActions._(this.$options)
-      : $replace = $options.action<AddInvTypesToBeCountedApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+  _$AddInvTypesToBeCountedApiRequestActions._(this.options$)
+      : replace$ = options$.action<AddInvTypesToBeCountedApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         invTypes =
-            $options.field<BuiltList<AddInvTypesToBeCountedApiInvTypeToCount>>(
+            options$.field<BuiltList<AddInvTypesToBeCountedApiInvTypeToCount>>(
                 'invTypes',
                 (a) => a?.invTypes,
                 (s) => s?.invTypes,
@@ -226,36 +226,31 @@ class _$AddInvTypesToBeCountedApiRequestActions
       _$AddInvTypesToBeCountedApiRequestActions._(options());
 
   @override
-  AddInvTypesToBeCountedApiRequest get $initial =>
+  AddInvTypesToBeCountedApiRequest get initialState$ =>
       AddInvTypesToBeCountedApiRequest();
 
   @override
-  AddInvTypesToBeCountedApiRequestBuilder $newBuilder() =>
+  AddInvTypesToBeCountedApiRequestBuilder newBuilder$() =>
       AddInvTypesToBeCountedApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
         this.invTypes,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditId.$reducer(reducer);
-    invTypes.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditId.reducer$(reducer);
+    invTypes.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AddInvTypesToBeCountedApiRequest);
 }

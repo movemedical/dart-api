@@ -204,24 +204,24 @@ class _$UpdateMobileVersionDetailsApiRequestActions
   final StatefulActionsOptions<
       UpdateMobileVersionDetailsApiRequest,
       UpdateMobileVersionDetailsApiRequestBuilder,
-      UpdateMobileVersionDetailsApiRequestActions> $options;
+      UpdateMobileVersionDetailsApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateMobileVersionDetailsApiRequest> $replace;
+  final ActionDispatcher<UpdateMobileVersionDetailsApiRequest> replace$;
   final FieldDispatcher<MobilePlatform> platform;
   final FieldDispatcher<String> latestVersion;
   final FieldDispatcher<String> appUrl;
 
-  _$UpdateMobileVersionDetailsApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateMobileVersionDetailsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        platform = $options.field<MobilePlatform>('platform',
+  _$UpdateMobileVersionDetailsApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateMobileVersionDetailsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        platform = options$.field<MobilePlatform>('platform',
             (a) => a?.platform, (s) => s?.platform, (p, b) => p?.platform = b),
-        latestVersion = $options.field<String>(
+        latestVersion = options$.field<String>(
             'latestVersion',
             (a) => a?.latestVersion,
             (s) => s?.latestVersion,
             (p, b) => p?.latestVersion = b),
-        appUrl = $options.field<String>('appUrl', (a) => a?.appUrl,
+        appUrl = options$.field<String>('appUrl', (a) => a?.appUrl,
             (s) => s?.appUrl, (p, b) => p?.appUrl = b),
         super._();
 
@@ -230,38 +230,33 @@ class _$UpdateMobileVersionDetailsApiRequestActions
       _$UpdateMobileVersionDetailsApiRequestActions._(options());
 
   @override
-  UpdateMobileVersionDetailsApiRequest get $initial =>
+  UpdateMobileVersionDetailsApiRequest get initialState$ =>
       UpdateMobileVersionDetailsApiRequest();
 
   @override
-  UpdateMobileVersionDetailsApiRequestBuilder $newBuilder() =>
+  UpdateMobileVersionDetailsApiRequestBuilder newBuilder$() =>
       UpdateMobileVersionDetailsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.platform,
         this.latestVersion,
         this.appUrl,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    platform.$reducer(reducer);
-    latestVersion.$reducer(reducer);
-    appUrl.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    platform.reducer$(reducer);
+    latestVersion.reducer$(reducer);
+    appUrl.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateMobileVersionDetailsApiRequest);
 }

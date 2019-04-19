@@ -22,69 +22,32 @@ class _$ListInvTypesToBeCountedApi extends ListInvTypesToBeCountedApi {
           ApiResult<ListInvTypesToBeCountedApiResponse>>,
       CommandStateBuilder<ApiCommand<ListInvTypesToBeCountedApiRequest>,
           ApiResult<ListInvTypesToBeCountedApiResponse>>,
-      ListInvTypesToBeCountedApi> $options;
+      ListInvTypesToBeCountedApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListInvTypesToBeCountedApiRequest>,
-          ApiResult<ListInvTypesToBeCountedApiResponse>>> $replace;
+          ApiResult<ListInvTypesToBeCountedApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListInvTypesToBeCountedApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListInvTypesToBeCountedApiRequest>,
-          ApiResult<ListInvTypesToBeCountedApiResponse>,
-          ListInvTypesToBeCountedApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListInvTypesToBeCountedApiRequest>,
-          ApiResult<ListInvTypesToBeCountedApiResponse>,
-          ListInvTypesToBeCountedApi,
-          Command<ApiCommand<ListInvTypesToBeCountedApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListInvTypesToBeCountedApiRequest>,
-              ApiResult<ListInvTypesToBeCountedApiResponse>,
-              ListInvTypesToBeCountedApi,
-              CommandResult<ApiResult<ListInvTypesToBeCountedApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListInvTypesToBeCountedApiRequest>,
-          ApiResult<ListInvTypesToBeCountedApiResponse>,
-          ListInvTypesToBeCountedApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<ListInvTypesToBeCountedApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListInvTypesToBeCountedApi._(this.$options)
-      : $replace = $options.action<
+  _$ListInvTypesToBeCountedApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListInvTypesToBeCountedApiRequest>,
                     ApiResult<ListInvTypesToBeCountedApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListInvTypesToBeCountedApiRequest>,
-                ApiResult<ListInvTypesToBeCountedApiResponse>,
-                ListInvTypesToBeCountedApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListInvTypesToBeCountedApiRequest>,
-                    ApiResult<ListInvTypesToBeCountedApiResponse>,
-                    ListInvTypesToBeCountedApi,
-                    Command<ApiCommand<ListInvTypesToBeCountedApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListInvTypesToBeCountedApiRequest>,
-                    ApiResult<ListInvTypesToBeCountedApiResponse>,
-                    ListInvTypesToBeCountedApi,
-                    CommandResult<
-                        ApiResult<ListInvTypesToBeCountedApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListInvTypesToBeCountedApiRequest>,
-                ApiResult<ListInvTypesToBeCountedApiResponse>,
-                ListInvTypesToBeCountedApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<ListInvTypesToBeCountedApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<ListInvTypesToBeCountedApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListInvTypesToBeCountedApi(
@@ -94,33 +57,26 @@ class _$ListInvTypesToBeCountedApi extends ListInvTypesToBeCountedApi {
   @override
   CommandState<ApiCommand<ListInvTypesToBeCountedApiRequest>,
           ApiResult<ListInvTypesToBeCountedApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListInvTypesToBeCountedApiRequest>,
           ApiResult<ListInvTypesToBeCountedApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListInvTypesToBeCountedApiRequest>,
           ApiResult<ListInvTypesToBeCountedApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListInvTypesToBeCountedApiRequest>,
           ApiResult<ListInvTypesToBeCountedApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListInvTypesToBeCountedApiRequest)]),
-        FullType(ApiResult, [FullType(ListInvTypesToBeCountedApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

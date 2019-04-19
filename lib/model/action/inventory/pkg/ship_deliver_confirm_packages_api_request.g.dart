@@ -215,23 +215,23 @@ class _$ShipDeliverConfirmPackagesApiRequestActions
   final StatefulActionsOptions<
       ShipDeliverConfirmPackagesApiRequest,
       ShipDeliverConfirmPackagesApiRequestBuilder,
-      ShipDeliverConfirmPackagesApiRequestActions> $options;
+      ShipDeliverConfirmPackagesApiRequestActions> options$;
 
-  final ActionDispatcher<ShipDeliverConfirmPackagesApiRequest> $replace;
+  final ActionDispatcher<ShipDeliverConfirmPackagesApiRequest> replace$;
   final FieldDispatcher<BuiltList<ShipDeliverConfirmPackagesApiProcessingSteps>>
       processingSteps;
   final FieldDispatcher<BuiltList<String>> packageIds;
 
-  _$ShipDeliverConfirmPackagesApiRequestActions._(this.$options)
-      : $replace = $options.action<ShipDeliverConfirmPackagesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        processingSteps = $options
+  _$ShipDeliverConfirmPackagesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ShipDeliverConfirmPackagesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        processingSteps = options$
             .field<BuiltList<ShipDeliverConfirmPackagesApiProcessingSteps>>(
                 'processingSteps',
                 (a) => a?.processingSteps,
                 (s) => s?.processingSteps,
                 (p, b) => p?.processingSteps = b),
-        packageIds = $options.field<BuiltList<String>>(
+        packageIds = options$.field<BuiltList<String>>(
             'packageIds',
             (a) => a?.packageIds,
             (s) => s?.packageIds,
@@ -243,36 +243,31 @@ class _$ShipDeliverConfirmPackagesApiRequestActions
       _$ShipDeliverConfirmPackagesApiRequestActions._(options());
 
   @override
-  ShipDeliverConfirmPackagesApiRequest get $initial =>
+  ShipDeliverConfirmPackagesApiRequest get initialState$ =>
       ShipDeliverConfirmPackagesApiRequest();
 
   @override
-  ShipDeliverConfirmPackagesApiRequestBuilder $newBuilder() =>
+  ShipDeliverConfirmPackagesApiRequestBuilder newBuilder$() =>
       ShipDeliverConfirmPackagesApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.processingSteps,
         this.packageIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    processingSteps.$reducer(reducer);
-    packageIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    processingSteps.reducer$(reducer);
+    packageIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ShipDeliverConfirmPackagesApiRequest);
 }

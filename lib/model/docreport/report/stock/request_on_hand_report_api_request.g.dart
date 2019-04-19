@@ -332,9 +332,9 @@ class _$RequestOnHandReportApiRequestActions
   final StatefulActionsOptions<
       RequestOnHandReportApiRequest,
       RequestOnHandReportApiRequestBuilder,
-      RequestOnHandReportApiRequestActions> $options;
+      RequestOnHandReportApiRequestActions> options$;
 
-  final ActionDispatcher<RequestOnHandReportApiRequest> $replace;
+  final ActionDispatcher<RequestOnHandReportApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final FieldDispatcher<DocReportDisplayType> displayType;
@@ -343,10 +343,10 @@ class _$RequestOnHandReportApiRequestActions
   final FieldDispatcher<BuiltList<String>> inventoryTypeIds;
   final FieldDispatcher<BuiltList<String>> itemCategoryIds;
 
-  _$RequestOnHandReportApiRequestActions._(this.$options)
-      : $replace = $options.action<RequestOnHandReportApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$RequestOnHandReportApiRequestActions._(this.options$)
+      : replace$ = options$.action<RequestOnHandReportApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -355,26 +355,26 @@ class _$RequestOnHandReportApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.field<DocReportDisplayType>(
+        displayType = options$.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        inventoryTypeIds = $options.field<BuiltList<String>>(
+        inventoryTypeIds = options$.field<BuiltList<String>>(
             'inventoryTypeIds',
             (a) => a?.inventoryTypeIds,
             (s) => s?.inventoryTypeIds,
             (p, b) => p?.inventoryTypeIds = b),
-        itemCategoryIds = $options.field<BuiltList<String>>(
+        itemCategoryIds = options$.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
@@ -386,23 +386,24 @@ class _$RequestOnHandReportApiRequestActions
       _$RequestOnHandReportApiRequestActions._(options());
 
   @override
-  RequestOnHandReportApiRequest get $initial => RequestOnHandReportApiRequest();
+  RequestOnHandReportApiRequest get initialState$ =>
+      RequestOnHandReportApiRequest();
 
   @override
-  RequestOnHandReportApiRequestBuilder $newBuilder() =>
+  RequestOnHandReportApiRequestBuilder newBuilder$() =>
       RequestOnHandReportApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.format,
         this.displayType,
         this.locationId,
@@ -412,25 +413,20 @@ class _$RequestOnHandReportApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    format.$reducer(reducer);
-    displayType.$reducer(reducer);
-    locationId.$reducer(reducer);
-    locationType.$reducer(reducer);
-    inventoryTypeIds.$reducer(reducer);
-    itemCategoryIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    format.reducer$(reducer);
+    displayType.reducer$(reducer);
+    locationId.reducer$(reducer);
+    locationType.reducer$(reducer);
+    inventoryTypeIds.reducer$(reducer);
+    itemCategoryIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestOnHandReportApiRequest);
 }

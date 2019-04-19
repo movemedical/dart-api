@@ -155,15 +155,15 @@ class _$CancelStockOrderApiRequestActions
   final StatefulActionsOptions<
       CancelStockOrderApiRequest,
       CancelStockOrderApiRequestBuilder,
-      CancelStockOrderApiRequestActions> $options;
+      CancelStockOrderApiRequestActions> options$;
 
-  final ActionDispatcher<CancelStockOrderApiRequest> $replace;
+  final ActionDispatcher<CancelStockOrderApiRequest> replace$;
   final FieldDispatcher<String> orderId;
 
-  _$CancelStockOrderApiRequestActions._(this.$options)
-      : $replace = $options.action<CancelStockOrderApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$CancelStockOrderApiRequestActions._(this.options$)
+      : replace$ = options$.action<CancelStockOrderApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         super._();
 
@@ -172,32 +172,28 @@ class _$CancelStockOrderApiRequestActions
       _$CancelStockOrderApiRequestActions._(options());
 
   @override
-  CancelStockOrderApiRequest get $initial => CancelStockOrderApiRequest();
+  CancelStockOrderApiRequest get initialState$ => CancelStockOrderApiRequest();
 
   @override
-  CancelStockOrderApiRequestBuilder $newBuilder() =>
+  CancelStockOrderApiRequestBuilder newBuilder$() =>
       CancelStockOrderApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CancelStockOrderApiRequest);
 }

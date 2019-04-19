@@ -193,18 +193,18 @@ class _$ListShipmentsApiResponseActions
   final StatefulActionsOptions<
       ListShipmentsApiResponse,
       ListShipmentsApiResponseBuilder,
-      ListShipmentsApiResponseActions> $options;
+      ListShipmentsApiResponseActions> options$;
 
-  final ActionDispatcher<ListShipmentsApiResponse> $replace;
+  final ActionDispatcher<ListShipmentsApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListShipmentsApiShipment>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListShipmentsApiResponseActions._(this.$options)
-      : $replace = $options.action<ListShipmentsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<ListShipmentsApiShipment>>(
+  _$ListShipmentsApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListShipmentsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<ListShipmentsApiShipment>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -213,34 +213,30 @@ class _$ListShipmentsApiResponseActions
       _$ListShipmentsApiResponseActions._(options());
 
   @override
-  ListShipmentsApiResponse get $initial => ListShipmentsApiResponse();
+  ListShipmentsApiResponse get initialState$ => ListShipmentsApiResponse();
 
   @override
-  ListShipmentsApiResponseBuilder $newBuilder() =>
+  ListShipmentsApiResponseBuilder newBuilder$() =>
       ListShipmentsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListShipmentsApiResponse);
 }

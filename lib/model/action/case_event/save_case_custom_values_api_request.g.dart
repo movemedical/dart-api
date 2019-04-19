@@ -199,21 +199,21 @@ class _$SaveCaseCustomValuesApiRequestActions
   final StatefulActionsOptions<
       SaveCaseCustomValuesApiRequest,
       SaveCaseCustomValuesApiRequestBuilder,
-      SaveCaseCustomValuesApiRequestActions> $options;
+      SaveCaseCustomValuesApiRequestActions> options$;
 
-  final ActionDispatcher<SaveCaseCustomValuesApiRequest> $replace;
+  final ActionDispatcher<SaveCaseCustomValuesApiRequest> replace$;
   final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<BuiltList<CaseCustomFieldValue>> customFieldValues;
 
-  _$SaveCaseCustomValuesApiRequestActions._(this.$options)
-      : $replace = $options.action<SaveCaseCustomValuesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$SaveCaseCustomValuesApiRequestActions._(this.options$)
+      : replace$ = options$.action<SaveCaseCustomValuesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        customFieldValues = $options.field<BuiltList<CaseCustomFieldValue>>(
+        customFieldValues = options$.field<BuiltList<CaseCustomFieldValue>>(
             'customFieldValues',
             (a) => a?.customFieldValues,
             (s) => s?.customFieldValues,
@@ -225,36 +225,31 @@ class _$SaveCaseCustomValuesApiRequestActions
       _$SaveCaseCustomValuesApiRequestActions._(options());
 
   @override
-  SaveCaseCustomValuesApiRequest get $initial =>
+  SaveCaseCustomValuesApiRequest get initialState$ =>
       SaveCaseCustomValuesApiRequest();
 
   @override
-  SaveCaseCustomValuesApiRequestBuilder $newBuilder() =>
+  SaveCaseCustomValuesApiRequestBuilder newBuilder$() =>
       SaveCaseCustomValuesApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
         this.customFieldValues,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
-    customFieldValues.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
+    customFieldValues.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(SaveCaseCustomValuesApiRequest);
 }

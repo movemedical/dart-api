@@ -114,13 +114,13 @@ class _$GetInvoiceApiDisplayRulesActions
   final StatefulActionsOptions<
       GetInvoiceApiDisplayRules,
       GetInvoiceApiDisplayRulesBuilder,
-      GetInvoiceApiDisplayRulesActions> $options;
+      GetInvoiceApiDisplayRulesActions> options$;
 
-  final ActionDispatcher<GetInvoiceApiDisplayRules> $replace;
+  final ActionDispatcher<GetInvoiceApiDisplayRules> replace$;
 
-  _$GetInvoiceApiDisplayRulesActions._(this.$options)
-      : $replace = $options.action<GetInvoiceApiDisplayRules>(
-            '\$replace', (a) => a?.$replace),
+  _$GetInvoiceApiDisplayRulesActions._(this.options$)
+      : replace$ = options$.action<GetInvoiceApiDisplayRules>(
+            'replace\$', (a) => a?.replace$),
         super._();
 
   factory _$GetInvoiceApiDisplayRulesActions(
@@ -128,20 +128,16 @@ class _$GetInvoiceApiDisplayRulesActions
       _$GetInvoiceApiDisplayRulesActions._(options());
 
   @override
-  GetInvoiceApiDisplayRules get $initial => GetInvoiceApiDisplayRules();
+  GetInvoiceApiDisplayRules get initialState$ => GetInvoiceApiDisplayRules();
 
   @override
-  GetInvoiceApiDisplayRulesBuilder $newBuilder() =>
+  GetInvoiceApiDisplayRulesBuilder newBuilder$() =>
       GetInvoiceApiDisplayRulesBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetInvoiceApiDisplayRules);
 }

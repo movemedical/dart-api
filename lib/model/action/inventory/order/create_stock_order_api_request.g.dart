@@ -498,9 +498,9 @@ class _$CreateStockOrderApiRequestActions
   final StatefulActionsOptions<
       CreateStockOrderApiRequest,
       CreateStockOrderApiRequestBuilder,
-      CreateStockOrderApiRequestActions> $options;
+      CreateStockOrderApiRequestActions> options$;
 
-  final ActionDispatcher<CreateStockOrderApiRequest> $replace;
+  final ActionDispatcher<CreateStockOrderApiRequest> replace$;
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> opsOrgUnitId;
   final FieldDispatcher<String> salesOrgUnitid;
@@ -517,47 +517,47 @@ class _$CreateStockOrderApiRequestActions
   final FieldDispatcher<BuiltList<OrderCustomFieldValue>>
       orderCustomFieldValues;
 
-  _$CreateStockOrderApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateStockOrderApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+  _$CreateStockOrderApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateStockOrderApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        bizUnitId = options$.field<String>('bizUnitId', (a) => a?.bizUnitId,
             (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
-        opsOrgUnitId = $options.field<String>(
+        opsOrgUnitId = options$.field<String>(
             'opsOrgUnitId',
             (a) => a?.opsOrgUnitId,
             (s) => s?.opsOrgUnitId,
             (p, b) => p?.opsOrgUnitId = b),
-        salesOrgUnitid = $options.field<String>(
+        salesOrgUnitid = options$.field<String>(
             'salesOrgUnitid',
             (a) => a?.salesOrgUnitid,
             (s) => s?.salesOrgUnitid,
             (p, b) => p?.salesOrgUnitid = b),
-        orderReasonId = $options.field<String>(
+        orderReasonId = options$.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
             (p, b) => p?.orderReasonId = b),
-        toLocation = LocationDataActions(() => $options
+        toLocation = LocationDataActions(() => options$
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
                 'toLocation',
                 (a) => a.toLocation,
                 (s) => s?.toLocation,
                 (b) => b?.toLocation,
                 (parent, builder) => parent?.toLocation = builder)),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        shipToAddressId = $options.field<String>(
+        shipToAddressId = options$.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
             (p, b) => p?.shipToAddressId = b),
-        deliverToAddressId = $options.field<String>(
+        deliverToAddressId = options$.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
             (p, b) => p?.deliverToAddressId = b),
         deliverToAddressOverride = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToAddressOverride',
                 (a) => a.deliverToAddressOverride,
                 (s) => s?.deliverToAddressOverride,
@@ -565,23 +565,23 @@ class _$CreateStockOrderApiRequestActions
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
         deliveryWindow = DateRangeActions(() =>
-            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+            options$.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'deliveryWindow',
                 (a) => a.deliveryWindow,
                 (s) => s?.deliveryWindow,
                 (b) => b?.deliveryWindow,
                 (parent, builder) => parent?.deliveryWindow = builder)),
-        shippingServiceId = $options.field<String>(
+        shippingServiceId = options$.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
-        email = $options.field<String>(
+        email = options$.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        attention = $options.field<String>('attention', (a) => a?.attention,
+        attention = options$.field<String>('attention', (a) => a?.attention,
             (s) => s?.attention, (p, b) => p?.attention = b),
         orderCustomFieldValues =
-            $options.field<BuiltList<OrderCustomFieldValue>>(
+            options$.field<BuiltList<OrderCustomFieldValue>>(
                 'orderCustomFieldValues',
                 (a) => a?.orderCustomFieldValues,
                 (s) => s?.orderCustomFieldValues,
@@ -593,25 +593,25 @@ class _$CreateStockOrderApiRequestActions
       _$CreateStockOrderApiRequestActions._(options());
 
   @override
-  CreateStockOrderApiRequest get $initial => CreateStockOrderApiRequest();
+  CreateStockOrderApiRequest get initialState$ => CreateStockOrderApiRequest();
 
   @override
-  CreateStockOrderApiRequestBuilder $newBuilder() =>
+  CreateStockOrderApiRequestBuilder newBuilder$() =>
       CreateStockOrderApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toLocation,
         this.deliverToAddressOverride,
         this.deliveryWindow,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.bizUnitId,
         this.opsOrgUnitId,
         this.salesOrgUnitid,
@@ -626,33 +626,29 @@ class _$CreateStockOrderApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    bizUnitId.$reducer(reducer);
-    opsOrgUnitId.$reducer(reducer);
-    salesOrgUnitid.$reducer(reducer);
-    orderReasonId.$reducer(reducer);
-    toLocation.$reducer(reducer);
-    poNumber.$reducer(reducer);
-    shipToAddressId.$reducer(reducer);
-    deliverToAddressId.$reducer(reducer);
-    deliverToAddressOverride.$reducer(reducer);
-    deliveryWindow.$reducer(reducer);
-    shippingServiceId.$reducer(reducer);
-    email.$reducer(reducer);
-    attention.$reducer(reducer);
-    orderCustomFieldValues.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    bizUnitId.reducer$(reducer);
+    opsOrgUnitId.reducer$(reducer);
+    salesOrgUnitid.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
+    toLocation.reducer$(reducer);
+    poNumber.reducer$(reducer);
+    shipToAddressId.reducer$(reducer);
+    deliverToAddressId.reducer$(reducer);
+    deliverToAddressOverride.reducer$(reducer);
+    deliveryWindow.reducer$(reducer);
+    shippingServiceId.reducer$(reducer);
+    email.reducer$(reducer);
+    attention.reducer$(reducer);
+    orderCustomFieldValues.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    toLocation.$middleware(middleware);
-    deliverToAddressOverride.$middleware(middleware);
-    deliveryWindow.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    toLocation.middleware$(middleware);
+    deliverToAddressOverride.middleware$(middleware);
+    deliveryWindow.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateStockOrderApiRequest);
 }

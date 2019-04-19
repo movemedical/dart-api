@@ -277,9 +277,9 @@ typedef StatefulActionsOptions<CreateOrgApiRequest, CreateOrgApiRequestBuilder,
 
 class _$CreateOrgApiRequestActions extends CreateOrgApiRequestActions {
   final StatefulActionsOptions<CreateOrgApiRequest, CreateOrgApiRequestBuilder,
-      CreateOrgApiRequestActions> $options;
+      CreateOrgApiRequestActions> options$;
 
-  final ActionDispatcher<CreateOrgApiRequest> $replace;
+  final ActionDispatcher<CreateOrgApiRequest> replace$;
   final FieldDispatcher<String> reference;
   final FieldDispatcher<String> name;
   final FieldDispatcher<OrgType> type;
@@ -287,30 +287,30 @@ class _$CreateOrgApiRequestActions extends CreateOrgApiRequestActions {
   final EmailActions email;
   final FieldDispatcher<bool> active;
 
-  _$CreateOrgApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateOrgApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+  _$CreateOrgApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateOrgApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        type = $options.field<OrgType>(
+        type = options$.field<OrgType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
         address = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'address',
                 (a) => a.address,
                 (s) => s?.address,
                 (b) => b?.address,
                 (parent, builder) => parent?.address = builder)),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -319,23 +319,23 @@ class _$CreateOrgApiRequestActions extends CreateOrgApiRequestActions {
       _$CreateOrgApiRequestActions._(options());
 
   @override
-  CreateOrgApiRequest get $initial => CreateOrgApiRequest();
+  CreateOrgApiRequest get initialState$ => CreateOrgApiRequest();
 
   @override
-  CreateOrgApiRequestBuilder $newBuilder() => CreateOrgApiRequestBuilder();
+  CreateOrgApiRequestBuilder newBuilder$() => CreateOrgApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.address,
         this.email,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.reference,
         this.name,
         this.type,
@@ -343,24 +343,20 @@ class _$CreateOrgApiRequestActions extends CreateOrgApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    reference.$reducer(reducer);
-    name.$reducer(reducer);
-    type.$reducer(reducer);
-    address.$reducer(reducer);
-    email.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    reference.reducer$(reducer);
+    name.reducer$(reducer);
+    type.reducer$(reducer);
+    address.reducer$(reducer);
+    email.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    address.$middleware(middleware);
-    email.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    address.middleware$(middleware);
+    email.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateOrgApiRequest);
 }

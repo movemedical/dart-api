@@ -258,9 +258,9 @@ typedef StatefulActionsOptions<TransferTypeLite, TransferTypeLiteBuilder,
 
 class _$TransferTypeLiteActions extends TransferTypeLiteActions {
   final StatefulActionsOptions<TransferTypeLite, TransferTypeLiteBuilder,
-      TransferTypeLiteActions> $options;
+      TransferTypeLiteActions> options$;
 
-  final ActionDispatcher<TransferTypeLite> $replace;
+  final ActionDispatcher<TransferTypeLite> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<String> name;
@@ -268,23 +268,23 @@ class _$TransferTypeLiteActions extends TransferTypeLiteActions {
   final FieldDispatcher<bool> active;
   final FieldDispatcher<bool> shipAndConfirmEnabled;
 
-  _$TransferTypeLiteActions._(this.$options)
-      : $replace =
-            $options.action<TransferTypeLite>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$TransferTypeLiteActions._(this.options$)
+      : replace$ =
+            options$.action<TransferTypeLite>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        orderReasonId = $options.field<String>(
+        orderReasonId = options$.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
             (p, b) => p?.orderReasonId = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        shipAndConfirmEnabled = $options.field<bool>(
+        shipAndConfirmEnabled = options$.field<bool>(
             'shipAndConfirmEnabled',
             (a) => a?.shipAndConfirmEnabled,
             (s) => s?.shipAndConfirmEnabled,
@@ -295,16 +295,16 @@ class _$TransferTypeLiteActions extends TransferTypeLiteActions {
       _$TransferTypeLiteActions._(options());
 
   @override
-  TransferTypeLite get $initial => TransferTypeLite();
+  TransferTypeLite get initialState$ => TransferTypeLite();
 
   @override
-  TransferTypeLiteBuilder $newBuilder() => TransferTypeLiteBuilder();
+  TransferTypeLiteBuilder newBuilder$() => TransferTypeLiteBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgId,
         this.name,
@@ -314,22 +314,18 @@ class _$TransferTypeLiteActions extends TransferTypeLiteActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgId.$reducer(reducer);
-    name.$reducer(reducer);
-    orderReasonId.$reducer(reducer);
-    active.$reducer(reducer);
-    shipAndConfirmEnabled.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgId.reducer$(reducer);
+    name.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
+    active.reducer$(reducer);
+    shipAndConfirmEnabled.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(TransferTypeLite);
 }

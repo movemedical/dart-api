@@ -198,24 +198,24 @@ typedef StatefulActionsOptions<
 
 class _$ResetPasswordApiRequestActions extends ResetPasswordApiRequestActions {
   final StatefulActionsOptions<ResetPasswordApiRequest,
-      ResetPasswordApiRequestBuilder, ResetPasswordApiRequestActions> $options;
+      ResetPasswordApiRequestBuilder, ResetPasswordApiRequestActions> options$;
 
-  final ActionDispatcher<ResetPasswordApiRequest> $replace;
+  final ActionDispatcher<ResetPasswordApiRequest> replace$;
   final FieldDispatcher<String> email;
   final FieldDispatcher<String> currentPassword;
   final FieldDispatcher<String> newPassword;
 
-  _$ResetPasswordApiRequestActions._(this.$options)
-      : $replace = $options.action<ResetPasswordApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        email = $options.field<String>(
+  _$ResetPasswordApiRequestActions._(this.options$)
+      : replace$ = options$.action<ResetPasswordApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        email = options$.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        currentPassword = $options.field<String>(
+        currentPassword = options$.field<String>(
             'currentPassword',
             (a) => a?.currentPassword,
             (s) => s?.currentPassword,
             (p, b) => p?.currentPassword = b),
-        newPassword = $options.field<String>(
+        newPassword = options$.field<String>(
             'newPassword',
             (a) => a?.newPassword,
             (s) => s?.newPassword,
@@ -227,36 +227,32 @@ class _$ResetPasswordApiRequestActions extends ResetPasswordApiRequestActions {
       _$ResetPasswordApiRequestActions._(options());
 
   @override
-  ResetPasswordApiRequest get $initial => ResetPasswordApiRequest();
+  ResetPasswordApiRequest get initialState$ => ResetPasswordApiRequest();
 
   @override
-  ResetPasswordApiRequestBuilder $newBuilder() =>
+  ResetPasswordApiRequestBuilder newBuilder$() =>
       ResetPasswordApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.email,
         this.currentPassword,
         this.newPassword,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    email.$reducer(reducer);
-    currentPassword.$reducer(reducer);
-    newPassword.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    email.reducer$(reducer);
+    currentPassword.reducer$(reducer);
+    newPassword.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ResetPasswordApiRequest);
 }

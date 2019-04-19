@@ -221,19 +221,19 @@ class _$ListTeamMembersApiRequestActions
   final StatefulActionsOptions<
       ListTeamMembersApiRequest,
       ListTeamMembersApiRequestBuilder,
-      ListTeamMembersApiRequestActions> $options;
+      ListTeamMembersApiRequestActions> options$;
 
-  final ActionDispatcher<ListTeamMembersApiRequest> $replace;
+  final ActionDispatcher<ListTeamMembersApiRequest> replace$;
   final FieldDispatcher<String> teamId;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListTeamMembersApiOrderBy> orderBy;
 
-  _$ListTeamMembersApiRequestActions._(this.$options)
-      : $replace = $options.action<ListTeamMembersApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        teamId = $options.field<String>('teamId', (a) => a?.teamId,
+  _$ListTeamMembersApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListTeamMembersApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -243,7 +243,7 @@ class _$ListTeamMembersApiRequestActions
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListTeamMembersApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListTeamMembersApiOrderBy>,
                     OrderByParamsBuilder<ListTeamMembersApiOrderBy>,
                     OrderByParamsActions<ListTeamMembersApiOrderBy>>(
@@ -259,43 +259,39 @@ class _$ListTeamMembersApiRequestActions
       _$ListTeamMembersApiRequestActions._(options());
 
   @override
-  ListTeamMembersApiRequest get $initial => ListTeamMembersApiRequest();
+  ListTeamMembersApiRequest get initialState$ => ListTeamMembersApiRequest();
 
   @override
-  ListTeamMembersApiRequestBuilder $newBuilder() =>
+  ListTeamMembersApiRequestBuilder newBuilder$() =>
       ListTeamMembersApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.teamId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    teamId.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    teamId.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListTeamMembersApiRequest);
 }

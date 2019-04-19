@@ -225,27 +225,27 @@ class _$BuildInspectionApiStockHoldActions
   final StatefulActionsOptions<
       BuildInspectionApiStockHold,
       BuildInspectionApiStockHoldBuilder,
-      BuildInspectionApiStockHoldActions> $options;
+      BuildInspectionApiStockHoldActions> options$;
 
-  final ActionDispatcher<BuildInspectionApiStockHold> $replace;
+  final ActionDispatcher<BuildInspectionApiStockHold> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> stockId;
   final FieldDispatcher<String> holdReasonId;
   final FieldDispatcher<String> holdReasonName;
 
-  _$BuildInspectionApiStockHoldActions._(this.$options)
-      : $replace = $options.action<BuildInspectionApiStockHold>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BuildInspectionApiStockHoldActions._(this.options$)
+      : replace$ = options$.action<BuildInspectionApiStockHold>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        stockId = $options.field<String>('stockId', (a) => a?.stockId,
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        holdReasonId = $options.field<String>(
+        holdReasonId = options$.field<String>(
             'holdReasonId',
             (a) => a?.holdReasonId,
             (s) => s?.holdReasonId,
             (p, b) => p?.holdReasonId = b),
-        holdReasonName = $options.field<String>(
+        holdReasonName = options$.field<String>(
             'holdReasonName',
             (a) => a?.holdReasonName,
             (s) => s?.holdReasonName,
@@ -257,17 +257,18 @@ class _$BuildInspectionApiStockHoldActions
       _$BuildInspectionApiStockHoldActions._(options());
 
   @override
-  BuildInspectionApiStockHold get $initial => BuildInspectionApiStockHold();
+  BuildInspectionApiStockHold get initialState$ =>
+      BuildInspectionApiStockHold();
 
   @override
-  BuildInspectionApiStockHoldBuilder $newBuilder() =>
+  BuildInspectionApiStockHoldBuilder newBuilder$() =>
       BuildInspectionApiStockHoldBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.stockId,
         this.holdReasonId,
@@ -275,21 +276,16 @@ class _$BuildInspectionApiStockHoldActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    stockId.$reducer(reducer);
-    holdReasonId.$reducer(reducer);
-    holdReasonName.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    stockId.reducer$(reducer);
+    holdReasonId.reducer$(reducer);
+    holdReasonName.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(BuildInspectionApiStockHold);
 }

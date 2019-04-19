@@ -264,19 +264,19 @@ typedef StatefulActionsOptions<
 
 class _$CustomCaseDocApiRequestActions extends CustomCaseDocApiRequestActions {
   final StatefulActionsOptions<CustomCaseDocApiRequest,
-      CustomCaseDocApiRequestBuilder, CustomCaseDocApiRequestActions> $options;
+      CustomCaseDocApiRequestBuilder, CustomCaseDocApiRequestActions> options$;
 
-  final ActionDispatcher<CustomCaseDocApiRequest> $replace;
+  final ActionDispatcher<CustomCaseDocApiRequest> replace$;
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<String> caseDocId;
   final FieldDispatcher<String> caseId;
   final FieldDispatcher<DocReportDisplayType> displayType;
   final FieldDispatcher<DocReportFormat> format;
 
-  _$CustomCaseDocApiRequestActions._(this.$options)
-      : $replace = $options.action<CustomCaseDocApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        docReport = DBGeneratedDocReportActions(() => $options.stateful<
+  _$CustomCaseDocApiRequestActions._(this.options$)
+      : replace$ = options$.action<CustomCaseDocApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        docReport = DBGeneratedDocReportActions(() => options$.stateful<
                 DBGeneratedDocReport,
                 DBGeneratedDocReportBuilder,
                 DBGeneratedDocReportActions>(
@@ -285,16 +285,16 @@ class _$CustomCaseDocApiRequestActions extends CustomCaseDocApiRequestActions {
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        caseDocId = $options.field<String>('caseDocId', (a) => a?.caseDocId,
+        caseDocId = options$.field<String>('caseDocId', (a) => a?.caseDocId,
             (s) => s?.caseDocId, (p, b) => p?.caseDocId = b),
-        caseId = $options.field<String>('caseId', (a) => a?.caseId,
+        caseId = options$.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        displayType = $options.field<DocReportDisplayType>(
+        displayType = options$.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+        format = options$.field<DocReportFormat>('format', (a) => a?.format,
             (s) => s?.format, (p, b) => p?.format = b),
         super._();
 
@@ -303,23 +303,23 @@ class _$CustomCaseDocApiRequestActions extends CustomCaseDocApiRequestActions {
       _$CustomCaseDocApiRequestActions._(options());
 
   @override
-  CustomCaseDocApiRequest get $initial => CustomCaseDocApiRequest();
+  CustomCaseDocApiRequest get initialState$ => CustomCaseDocApiRequest();
 
   @override
-  CustomCaseDocApiRequestBuilder $newBuilder() =>
+  CustomCaseDocApiRequestBuilder newBuilder$() =>
       CustomCaseDocApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseDocId,
         this.caseId,
         this.displayType,
@@ -327,22 +327,18 @@ class _$CustomCaseDocApiRequestActions extends CustomCaseDocApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReport.$reducer(reducer);
-    caseDocId.$reducer(reducer);
-    caseId.$reducer(reducer);
-    displayType.$reducer(reducer);
-    format.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReport.reducer$(reducer);
+    caseDocId.reducer$(reducer);
+    caseId.reducer$(reducer);
+    displayType.reducer$(reducer);
+    format.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    docReport.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    docReport.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CustomCaseDocApiRequest);
 }

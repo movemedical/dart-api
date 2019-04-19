@@ -120,13 +120,13 @@ class _$CaseRequirementsUpdatedPushMessageActions
   final StatefulActionsOptions<
       CaseRequirementsUpdatedPushMessage,
       CaseRequirementsUpdatedPushMessageBuilder,
-      CaseRequirementsUpdatedPushMessageActions> $options;
+      CaseRequirementsUpdatedPushMessageActions> options$;
 
-  final ActionDispatcher<CaseRequirementsUpdatedPushMessage> $replace;
+  final ActionDispatcher<CaseRequirementsUpdatedPushMessage> replace$;
 
-  _$CaseRequirementsUpdatedPushMessageActions._(this.$options)
-      : $replace = $options.action<CaseRequirementsUpdatedPushMessage>(
-            '\$replace', (a) => a?.$replace),
+  _$CaseRequirementsUpdatedPushMessageActions._(this.options$)
+      : replace$ = options$.action<CaseRequirementsUpdatedPushMessage>(
+            'replace\$', (a) => a?.replace$),
         super._();
 
   factory _$CaseRequirementsUpdatedPushMessageActions(
@@ -134,22 +134,17 @@ class _$CaseRequirementsUpdatedPushMessageActions
       _$CaseRequirementsUpdatedPushMessageActions._(options());
 
   @override
-  CaseRequirementsUpdatedPushMessage get $initial =>
+  CaseRequirementsUpdatedPushMessage get initialState$ =>
       CaseRequirementsUpdatedPushMessage();
 
   @override
-  CaseRequirementsUpdatedPushMessageBuilder $newBuilder() =>
+  CaseRequirementsUpdatedPushMessageBuilder newBuilder$() =>
       CaseRequirementsUpdatedPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CaseRequirementsUpdatedPushMessage);
 }

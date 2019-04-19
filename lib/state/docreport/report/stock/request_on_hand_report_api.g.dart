@@ -22,67 +22,32 @@ class _$RequestOnHandReportApi extends RequestOnHandReportApi {
           ApiResult<RequestOnHandReportApiResponse>>,
       CommandStateBuilder<ApiCommand<RequestOnHandReportApiRequest>,
           ApiResult<RequestOnHandReportApiResponse>>,
-      RequestOnHandReportApi> $options;
+      RequestOnHandReportApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestOnHandReportApiRequest>,
-          ApiResult<RequestOnHandReportApiResponse>>> $replace;
+          ApiResult<RequestOnHandReportApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<RequestOnHandReportApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestOnHandReportApiRequest>,
-          ApiResult<RequestOnHandReportApiResponse>,
-          RequestOnHandReportApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestOnHandReportApiRequest>,
-          ApiResult<RequestOnHandReportApiResponse>,
-          RequestOnHandReportApi,
-          Command<ApiCommand<RequestOnHandReportApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestOnHandReportApiRequest>,
-          ApiResult<RequestOnHandReportApiResponse>,
-          RequestOnHandReportApi,
-          CommandResult<ApiResult<RequestOnHandReportApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestOnHandReportApiRequest>,
-          ApiResult<RequestOnHandReportApiResponse>,
-          RequestOnHandReportApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<RequestOnHandReportApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RequestOnHandReportApi._(this.$options)
-      : $replace = $options.action<
+  _$RequestOnHandReportApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<RequestOnHandReportApiRequest>,
                     ApiResult<RequestOnHandReportApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RequestOnHandReportApiRequest>,
-                ApiResult<RequestOnHandReportApiResponse>,
-                RequestOnHandReportApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestOnHandReportApiRequest>,
-                    ApiResult<RequestOnHandReportApiResponse>,
-                    RequestOnHandReportApi,
-                    Command<ApiCommand<RequestOnHandReportApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestOnHandReportApiRequest>,
-                    ApiResult<RequestOnHandReportApiResponse>,
-                    RequestOnHandReportApi,
-                    CommandResult<ApiResult<RequestOnHandReportApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RequestOnHandReportApiRequest>,
-                ApiResult<RequestOnHandReportApiResponse>,
-                RequestOnHandReportApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<RequestOnHandReportApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<RequestOnHandReportApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RequestOnHandReportApi(RequestOnHandReportApiOptions options) =>
@@ -91,32 +56,26 @@ class _$RequestOnHandReportApi extends RequestOnHandReportApi {
   @override
   CommandState<ApiCommand<RequestOnHandReportApiRequest>,
           ApiResult<RequestOnHandReportApiResponse>>
-      get $initial => CommandState<ApiCommand<RequestOnHandReportApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<RequestOnHandReportApiRequest>,
           ApiResult<RequestOnHandReportApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestOnHandReportApiRequest>,
           ApiResult<RequestOnHandReportApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RequestOnHandReportApiRequest>,
           ApiResult<RequestOnHandReportApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RequestOnHandReportApiRequest)]),
-        FullType(ApiResult, [FullType(RequestOnHandReportApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

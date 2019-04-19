@@ -20,57 +20,29 @@ class _$CreateDelegateApi extends CreateDelegateApi {
       CommandState<ApiCommand<CreateDelegateApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<CreateDelegateApiRequest>,
           ApiResult<Nothing>>,
-      CreateDelegateApi> $options;
+      CreateDelegateApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateDelegateApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateDelegateApiRequest>, ApiResult<Nothing>,
-          CreateDelegateApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateDelegateApiRequest>,
-          ApiResult<Nothing>,
-          CreateDelegateApi,
-          Command<ApiCommand<CreateDelegateApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateDelegateApiRequest>, ApiResult<Nothing>,
-          CreateDelegateApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateDelegateApiRequest>, ApiResult<Nothing>,
-          CreateDelegateApi, CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<CreateDelegateApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$CreateDelegateApi._(this.$options)
-      : $replace = $options.action<
+  _$CreateDelegateApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<CreateDelegateApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<CreateDelegateApiRequest>,
-                ApiResult<Nothing>,
-                CreateDelegateApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateDelegateApiRequest>,
-                    ApiResult<Nothing>,
-                    CreateDelegateApi,
-                    Command<ApiCommand<CreateDelegateApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<CreateDelegateApiRequest>,
-                    ApiResult<Nothing>,
-                    CreateDelegateApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<CreateDelegateApiRequest>,
-                ApiResult<Nothing>,
-                CreateDelegateApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<CreateDelegateApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$CreateDelegateApi(CreateDelegateApiOptions options) =>
@@ -78,30 +50,23 @@ class _$CreateDelegateApi extends CreateDelegateApi {
 
   @override
   CommandState<ApiCommand<CreateDelegateApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<CreateDelegateApiRequest>,
+      get initialState$ => CommandState<ApiCommand<CreateDelegateApiRequest>,
           ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateDelegateApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<CreateDelegateApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<CreateDelegateApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(CreateDelegateApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

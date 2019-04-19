@@ -188,18 +188,18 @@ class _$GetDeliveryScheduleProfileApiResponseActions
   final StatefulActionsOptions<
       GetDeliveryScheduleProfileApiResponse,
       GetDeliveryScheduleProfileApiResponseBuilder,
-      GetDeliveryScheduleProfileApiResponseActions> $options;
+      GetDeliveryScheduleProfileApiResponseActions> options$;
 
-  final ActionDispatcher<GetDeliveryScheduleProfileApiResponse> $replace;
+  final ActionDispatcher<GetDeliveryScheduleProfileApiResponse> replace$;
   final GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailActions
       deliveryScheduleProfile;
 
-  _$GetDeliveryScheduleProfileApiResponseActions._(this.$options)
-      : $replace = $options.action<GetDeliveryScheduleProfileApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$GetDeliveryScheduleProfileApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetDeliveryScheduleProfileApiResponse>(
+            'replace\$', (a) => a?.replace$),
         deliveryScheduleProfile =
             GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailActions(
-                () => $options.stateful<
+                () => options$.stateful<
                         GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetail,
                         GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailBuilder,
                         GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailActions>(
@@ -216,40 +216,35 @@ class _$GetDeliveryScheduleProfileApiResponseActions
       _$GetDeliveryScheduleProfileApiResponseActions._(options());
 
   @override
-  GetDeliveryScheduleProfileApiResponse get $initial =>
+  GetDeliveryScheduleProfileApiResponse get initialState$ =>
       GetDeliveryScheduleProfileApiResponse();
 
   @override
-  GetDeliveryScheduleProfileApiResponseBuilder $newBuilder() =>
+  GetDeliveryScheduleProfileApiResponseBuilder newBuilder$() =>
       GetDeliveryScheduleProfileApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliveryScheduleProfile,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    deliveryScheduleProfile.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    deliveryScheduleProfile.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    deliveryScheduleProfile.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    deliveryScheduleProfile.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetDeliveryScheduleProfileApiResponse);
 }

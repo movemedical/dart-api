@@ -189,18 +189,18 @@ typedef StatefulActionsOptions<
 
 class _$AddAssigneeApiRequestActions extends AddAssigneeApiRequestActions {
   final StatefulActionsOptions<AddAssigneeApiRequest,
-      AddAssigneeApiRequestBuilder, AddAssigneeApiRequestActions> $options;
+      AddAssigneeApiRequestBuilder, AddAssigneeApiRequestActions> options$;
 
-  final ActionDispatcher<AddAssigneeApiRequest> $replace;
+  final ActionDispatcher<AddAssigneeApiRequest> replace$;
   final FieldDispatcher<String> auditId;
   final FieldDispatcher<BuiltList<AddAssigneeApiAssignee>> assignees;
 
-  _$AddAssigneeApiRequestActions._(this.$options)
-      : $replace = $options.action<AddAssigneeApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+  _$AddAssigneeApiRequestActions._(this.options$)
+      : replace$ = options$.action<AddAssigneeApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        auditId = options$.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        assignees = $options.field<BuiltList<AddAssigneeApiAssignee>>(
+        assignees = options$.field<BuiltList<AddAssigneeApiAssignee>>(
             'assignees',
             (a) => a?.assignees,
             (s) => s?.assignees,
@@ -212,33 +212,29 @@ class _$AddAssigneeApiRequestActions extends AddAssigneeApiRequestActions {
       _$AddAssigneeApiRequestActions._(options());
 
   @override
-  AddAssigneeApiRequest get $initial => AddAssigneeApiRequest();
+  AddAssigneeApiRequest get initialState$ => AddAssigneeApiRequest();
 
   @override
-  AddAssigneeApiRequestBuilder $newBuilder() => AddAssigneeApiRequestBuilder();
+  AddAssigneeApiRequestBuilder newBuilder$() => AddAssigneeApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.auditId,
         this.assignees,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    auditId.$reducer(reducer);
-    assignees.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    auditId.reducer$(reducer);
+    assignees.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(AddAssigneeApiRequest);
 }

@@ -22,67 +22,32 @@ class _$GetShippingServiceApi extends GetShippingServiceApi {
           ApiResult<GetShippingServiceApiResponse>>,
       CommandStateBuilder<ApiCommand<GetShippingServiceApiRequest>,
           ApiResult<GetShippingServiceApiResponse>>,
-      GetShippingServiceApi> $options;
+      GetShippingServiceApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetShippingServiceApiRequest>,
-          ApiResult<GetShippingServiceApiResponse>>> $replace;
+          ApiResult<GetShippingServiceApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetShippingServiceApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetShippingServiceApiRequest>,
-          ApiResult<GetShippingServiceApiResponse>,
-          GetShippingServiceApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetShippingServiceApiRequest>,
-          ApiResult<GetShippingServiceApiResponse>,
-          GetShippingServiceApi,
-          Command<ApiCommand<GetShippingServiceApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetShippingServiceApiRequest>,
-          ApiResult<GetShippingServiceApiResponse>,
-          GetShippingServiceApi,
-          CommandResult<ApiResult<GetShippingServiceApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetShippingServiceApiRequest>,
-          ApiResult<GetShippingServiceApiResponse>,
-          GetShippingServiceApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<GetShippingServiceApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetShippingServiceApi._(this.$options)
-      : $replace = $options.action<
+  _$GetShippingServiceApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetShippingServiceApiRequest>,
                     ApiResult<GetShippingServiceApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetShippingServiceApiRequest>,
-                ApiResult<GetShippingServiceApiResponse>,
-                GetShippingServiceApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetShippingServiceApiRequest>,
-                    ApiResult<GetShippingServiceApiResponse>,
-                    GetShippingServiceApi,
-                    Command<ApiCommand<GetShippingServiceApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetShippingServiceApiRequest>,
-                    ApiResult<GetShippingServiceApiResponse>,
-                    GetShippingServiceApi,
-                    CommandResult<ApiResult<GetShippingServiceApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetShippingServiceApiRequest>,
-                ApiResult<GetShippingServiceApiResponse>,
-                GetShippingServiceApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<GetShippingServiceApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<GetShippingServiceApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetShippingServiceApi(GetShippingServiceApiOptions options) =>
@@ -91,32 +56,26 @@ class _$GetShippingServiceApi extends GetShippingServiceApi {
   @override
   CommandState<ApiCommand<GetShippingServiceApiRequest>,
           ApiResult<GetShippingServiceApiResponse>>
-      get $initial => CommandState<ApiCommand<GetShippingServiceApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<GetShippingServiceApiRequest>,
           ApiResult<GetShippingServiceApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetShippingServiceApiRequest>,
           ApiResult<GetShippingServiceApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetShippingServiceApiRequest>,
           ApiResult<GetShippingServiceApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetShippingServiceApiRequest)]),
-        FullType(ApiResult, [FullType(GetShippingServiceApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

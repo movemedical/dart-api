@@ -187,18 +187,18 @@ typedef StatefulActionsOptions<
 
 class _$ListRootOrgsApiRequestActions extends ListRootOrgsApiRequestActions {
   final StatefulActionsOptions<ListRootOrgsApiRequest,
-      ListRootOrgsApiRequestBuilder, ListRootOrgsApiRequestActions> $options;
+      ListRootOrgsApiRequestBuilder, ListRootOrgsApiRequestActions> options$;
 
-  final ActionDispatcher<ListRootOrgsApiRequest> $replace;
+  final ActionDispatcher<ListRootOrgsApiRequest> replace$;
   final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
 
-  _$ListRootOrgsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListRootOrgsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$ListRootOrgsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListRootOrgsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -214,40 +214,36 @@ class _$ListRootOrgsApiRequestActions extends ListRootOrgsApiRequestActions {
       _$ListRootOrgsApiRequestActions._(options());
 
   @override
-  ListRootOrgsApiRequest get $initial => ListRootOrgsApiRequest();
+  ListRootOrgsApiRequest get initialState$ => ListRootOrgsApiRequest();
 
   @override
-  ListRootOrgsApiRequestBuilder $newBuilder() =>
+  ListRootOrgsApiRequestBuilder newBuilder$() =>
       ListRootOrgsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
-    paging.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
+    paging.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListRootOrgsApiRequest);
 }

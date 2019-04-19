@@ -207,27 +207,27 @@ typedef StatefulActionsOptions<CaseEventLite, CaseEventLiteBuilder,
 
 class _$CaseEventLiteActions extends CaseEventLiteActions {
   final StatefulActionsOptions<CaseEventLite, CaseEventLiteBuilder,
-      CaseEventLiteActions> $options;
+      CaseEventLiteActions> options$;
 
-  final ActionDispatcher<CaseEventLite> $replace;
+  final ActionDispatcher<CaseEventLite> replace$;
   final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<String> eventId;
   final FieldDispatcher<int> number;
   final FieldDispatcher<CaseEventStatus> status;
 
-  _$CaseEventLiteActions._(this.$options)
-      : $replace =
-            $options.action<CaseEventLite>('\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$CaseEventLiteActions._(this.options$)
+      : replace$ =
+            options$.action<CaseEventLite>('replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        eventId = $options.field<String>('eventId', (a) => a?.eventId,
+        eventId = options$.field<String>('eventId', (a) => a?.eventId,
             (s) => s?.eventId, (p, b) => p?.eventId = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<CaseEventStatus>('status', (a) => a?.status,
+        status = options$.field<CaseEventStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
         super._();
 
@@ -235,16 +235,16 @@ class _$CaseEventLiteActions extends CaseEventLiteActions {
       _$CaseEventLiteActions._(options());
 
   @override
-  CaseEventLite get $initial => CaseEventLite();
+  CaseEventLite get initialState$ => CaseEventLite();
 
   @override
-  CaseEventLiteBuilder $newBuilder() => CaseEventLiteBuilder();
+  CaseEventLiteBuilder newBuilder$() => CaseEventLiteBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
         this.eventId,
         this.number,
@@ -252,20 +252,16 @@ class _$CaseEventLiteActions extends CaseEventLiteActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
-    eventId.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
+    eventId.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CaseEventLite);
 }

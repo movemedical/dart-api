@@ -1031,9 +1031,9 @@ class _$GetFacilityApiFacilityDetailActions
   final StatefulActionsOptions<
       GetFacilityApiFacilityDetail,
       GetFacilityApiFacilityDetailBuilder,
-      GetFacilityApiFacilityDetailActions> $options;
+      GetFacilityApiFacilityDetailActions> options$;
 
-  final ActionDispatcher<GetFacilityApiFacilityDetail> $replace;
+  final ActionDispatcher<GetFacilityApiFacilityDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<OrgType> orgType;
@@ -1072,32 +1072,32 @@ class _$GetFacilityApiFacilityDetailActions
   final FieldDispatcher<BuiltList<AttributeContact>> attributeContacts;
   final FieldDispatcher<BuiltList<CustomAction>> customActions;
 
-  _$GetFacilityApiFacilityDetailActions._(this.$options)
-      : $replace = $options.action<GetFacilityApiFacilityDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetFacilityApiFacilityDetailActions._(this.options$)
+      : replace$ = options$.action<GetFacilityApiFacilityDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
+        orgType = options$.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        orgName = $options.field<String>('orgName', (a) => a?.orgName,
+        orgName = options$.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        facilityType = $options.field<FacilityType>(
+        facilityType = options$.field<FacilityType>(
             'facilityType',
             (a) => a?.facilityType,
             (s) => s?.facilityType,
             (p, b) => p?.facilityType = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         contactName = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'contactName',
                 (a) => a.contactName,
                 (s) => s?.contactName,
                 (b) => b?.contactName,
                 (parent, builder) => parent?.contactName = builder)),
-        contactPhone = PhoneNumberActions(() => $options
+        contactPhone = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'contactPhone',
                 (a) => a.contactPhone,
@@ -1105,105 +1105,105 @@ class _$GetFacilityApiFacilityDetailActions
                 (b) => b?.contactPhone,
                 (parent, builder) => parent?.contactPhone = builder)),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        caseLoaningMethodology = $options.field<CaseLoaningMethodology>(
+        caseLoaningMethodology = options$.field<CaseLoaningMethodology>(
             'caseLoaningMethodology',
             (a) => a?.caseLoaningMethodology,
             (s) => s?.caseLoaningMethodology,
             (p, b) => p?.caseLoaningMethodology = b),
-        restockType = $options.field<RestockType>(
+        restockType = options$.field<RestockType>(
             'restockType',
             (a) => a?.restockType,
             (s) => s?.restockType,
             (p, b) => p?.restockType = b),
-        publicVisible = $options.field<bool>(
+        publicVisible = options$.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
             (p, b) => p?.publicVisible = b),
-        binManaged = $options.field<bool>('binManaged', (a) => a?.binManaged,
+        binManaged = options$.field<bool>('binManaged', (a) => a?.binManaged,
             (s) => s?.binManaged, (p, b) => p?.binManaged = b),
-        autoPutAway = $options.field<bool>('autoPutAway', (a) => a?.autoPutAway,
+        autoPutAway = options$.field<bool>('autoPutAway', (a) => a?.autoPutAway,
             (s) => s?.autoPutAway, (p, b) => p?.autoPutAway = b),
-        opsScheduleProfileName = $options.field<String>(
+        opsScheduleProfileName = options$.field<String>(
             'opsScheduleProfileName',
             (a) => a?.opsScheduleProfileName,
             (s) => s?.opsScheduleProfileName,
             (p, b) => p?.opsScheduleProfileName = b),
-        opsScheduleProfileId = $options.field<String>(
+        opsScheduleProfileId = options$.field<String>(
             'opsScheduleProfileId',
             (a) => a?.opsScheduleProfileId,
             (s) => s?.opsScheduleProfileId,
             (p, b) => p?.opsScheduleProfileId = b),
-        deliveryScheduleProfileName = $options.field<String>(
+        deliveryScheduleProfileName = options$.field<String>(
             'deliveryScheduleProfileName',
             (a) => a?.deliveryScheduleProfileName,
             (s) => s?.deliveryScheduleProfileName,
             (p, b) => p?.deliveryScheduleProfileName = b),
-        deliveryScheduleProfileId = $options.field<String>(
+        deliveryScheduleProfileId = options$.field<String>(
             'deliveryScheduleProfileId',
             (a) => a?.deliveryScheduleProfileId,
             (s) => s?.deliveryScheduleProfileId,
             (p, b) => p?.deliveryScheduleProfileId = b),
-        courierProfileName = $options.field<String>(
+        courierProfileName = options$.field<String>(
             'courierProfileName',
             (a) => a?.courierProfileName,
             (s) => s?.courierProfileName,
             (p, b) => p?.courierProfileName = b),
-        courierProfileId = $options.field<String>(
+        courierProfileId = options$.field<String>(
             'courierProfileId',
             (a) => a?.courierProfileId,
             (s) => s?.courierProfileId,
             (p, b) => p?.courierProfileId = b),
-        lagTime = $options.field<int>('lagTime', (a) => a?.lagTime,
+        lagTime = options$.field<int>('lagTime', (a) => a?.lagTime,
             (s) => s?.lagTime, (p, b) => p?.lagTime = b),
-        splitImplantsAndInstruments = $options.field<bool>(
+        splitImplantsAndInstruments = options$.field<bool>(
             'splitImplantsAndInstruments',
             (a) => a?.splitImplantsAndInstruments,
             (s) => s?.splitImplantsAndInstruments,
             (p, b) => p?.splitImplantsAndInstruments = b),
-        turnTimeInMinutes = $options.field<int>(
+        turnTimeInMinutes = options$.field<int>(
             'turnTimeInMinutes',
             (a) => a?.turnTimeInMinutes,
             (s) => s?.turnTimeInMinutes,
             (p, b) => p?.turnTimeInMinutes = b),
-        loanSplitMethod = $options.field<LoanSplitMethod>(
+        loanSplitMethod = options$.field<LoanSplitMethod>(
             'loanSplitMethod',
             (a) => a?.loanSplitMethod,
             (s) => s?.loanSplitMethod,
             (p, b) => p?.loanSplitMethod = b),
-        optimizeLoans = $options.field<bool>(
+        optimizeLoans = options$.field<bool>(
             'optimizeLoans',
             (a) => a?.optimizeLoans,
             (s) => s?.optimizeLoans,
             (p, b) => p?.optimizeLoans = b),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
-        customerName = $options.field<String>(
+        customerName = options$.field<String>(
             'customerName',
             (a) => a?.customerName,
             (s) => s?.customerName,
             (p, b) => p?.customerName = b),
-        customerNumber = $options.field<String>(
+        customerNumber = options$.field<String>(
             'customerNumber',
             (a) => a?.customerNumber,
             (s) => s?.customerNumber,
             (p, b) => p?.customerNumber = b),
-        shipTo = CustomerAddressActions(() => $options.stateful<CustomerAddress,
+        shipTo = CustomerAddressActions(() => options$.stateful<CustomerAddress,
                 CustomerAddressBuilder, CustomerAddressActions>(
             'shipTo',
             (a) => a.shipTo,
             (s) => s?.shipTo,
             (b) => b?.shipTo,
             (parent, builder) => parent?.shipTo = builder)),
-        defaultBillTo = CustomerAddressActions(() => $options.stateful<
+        defaultBillTo = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -1212,32 +1212,32 @@ class _$GetFacilityApiFacilityDetailActions
             (s) => s?.defaultBillTo,
             (b) => b?.defaultBillTo,
             (parent, builder) => parent?.defaultBillTo = builder)),
-        defaultDeliverToAddressId = $options.field<String>(
+        defaultDeliverToAddressId = options$.field<String>(
             'defaultDeliverToAddressId',
             (a) => a?.defaultDeliverToAddressId,
             (s) => s?.defaultDeliverToAddressId,
             (p, b) => p?.defaultDeliverToAddressId = b),
         defaultDeliverToAddress = AddressActions(() =>
-            $options.stateful<Address, AddressBuilder, AddressActions>(
+            options$.stateful<Address, AddressBuilder, AddressActions>(
                 'defaultDeliverToAddress',
                 (a) => a.defaultDeliverToAddress,
                 (s) => s?.defaultDeliverToAddress,
                 (b) => b?.defaultDeliverToAddress,
                 (parent, builder) =>
                     parent?.defaultDeliverToAddress = builder)),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        attributes = $options.field<BuiltList<FacilityAttribute>>(
+        attributes = options$.field<BuiltList<FacilityAttribute>>(
             'attributes',
             (a) => a?.attributes,
             (s) => s?.attributes,
             (p, b) => p?.attributes = b),
-        attributeContacts = $options.field<BuiltList<AttributeContact>>(
+        attributeContacts = options$.field<BuiltList<AttributeContact>>(
             'attributeContacts',
             (a) => a?.attributeContacts,
             (s) => s?.attributeContacts,
             (p, b) => p?.attributeContacts = b),
-        customActions = $options.field<BuiltList<CustomAction>>(
+        customActions = options$.field<BuiltList<CustomAction>>(
             'customActions',
             (a) => a?.customActions,
             (s) => s?.customActions,
@@ -1249,15 +1249,16 @@ class _$GetFacilityApiFacilityDetailActions
       _$GetFacilityApiFacilityDetailActions._(options());
 
   @override
-  GetFacilityApiFacilityDetail get $initial => GetFacilityApiFacilityDetail();
+  GetFacilityApiFacilityDetail get initialState$ =>
+      GetFacilityApiFacilityDetail();
 
   @override
-  GetFacilityApiFacilityDetailBuilder $newBuilder() =>
+  GetFacilityApiFacilityDetailBuilder newBuilder$() =>
       GetFacilityApiFacilityDetailBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.contactName,
         this.contactPhone,
         this.email,
@@ -1266,11 +1267,11 @@ class _$GetFacilityApiFacilityDetailActions
         this.defaultDeliverToAddress,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.orgId,
         this.orgType,
@@ -1305,60 +1306,55 @@ class _$GetFacilityApiFacilityDetailActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    orgId.$reducer(reducer);
-    orgType.$reducer(reducer);
-    orgName.$reducer(reducer);
-    facilityType.$reducer(reducer);
-    name.$reducer(reducer);
-    contactName.$reducer(reducer);
-    contactPhone.$reducer(reducer);
-    email.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    caseLoaningMethodology.$reducer(reducer);
-    restockType.$reducer(reducer);
-    publicVisible.$reducer(reducer);
-    binManaged.$reducer(reducer);
-    autoPutAway.$reducer(reducer);
-    opsScheduleProfileName.$reducer(reducer);
-    opsScheduleProfileId.$reducer(reducer);
-    deliveryScheduleProfileName.$reducer(reducer);
-    deliveryScheduleProfileId.$reducer(reducer);
-    courierProfileName.$reducer(reducer);
-    courierProfileId.$reducer(reducer);
-    lagTime.$reducer(reducer);
-    splitImplantsAndInstruments.$reducer(reducer);
-    turnTimeInMinutes.$reducer(reducer);
-    loanSplitMethod.$reducer(reducer);
-    optimizeLoans.$reducer(reducer);
-    customerId.$reducer(reducer);
-    customerName.$reducer(reducer);
-    customerNumber.$reducer(reducer);
-    shipTo.$reducer(reducer);
-    defaultBillTo.$reducer(reducer);
-    defaultDeliverToAddressId.$reducer(reducer);
-    defaultDeliverToAddress.$reducer(reducer);
-    active.$reducer(reducer);
-    attributes.$reducer(reducer);
-    attributeContacts.$reducer(reducer);
-    customActions.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    orgId.reducer$(reducer);
+    orgType.reducer$(reducer);
+    orgName.reducer$(reducer);
+    facilityType.reducer$(reducer);
+    name.reducer$(reducer);
+    contactName.reducer$(reducer);
+    contactPhone.reducer$(reducer);
+    email.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    caseLoaningMethodology.reducer$(reducer);
+    restockType.reducer$(reducer);
+    publicVisible.reducer$(reducer);
+    binManaged.reducer$(reducer);
+    autoPutAway.reducer$(reducer);
+    opsScheduleProfileName.reducer$(reducer);
+    opsScheduleProfileId.reducer$(reducer);
+    deliveryScheduleProfileName.reducer$(reducer);
+    deliveryScheduleProfileId.reducer$(reducer);
+    courierProfileName.reducer$(reducer);
+    courierProfileId.reducer$(reducer);
+    lagTime.reducer$(reducer);
+    splitImplantsAndInstruments.reducer$(reducer);
+    turnTimeInMinutes.reducer$(reducer);
+    loanSplitMethod.reducer$(reducer);
+    optimizeLoans.reducer$(reducer);
+    customerId.reducer$(reducer);
+    customerName.reducer$(reducer);
+    customerNumber.reducer$(reducer);
+    shipTo.reducer$(reducer);
+    defaultBillTo.reducer$(reducer);
+    defaultDeliverToAddressId.reducer$(reducer);
+    defaultDeliverToAddress.reducer$(reducer);
+    active.reducer$(reducer);
+    attributes.reducer$(reducer);
+    attributeContacts.reducer$(reducer);
+    customActions.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    contactName.$middleware(middleware);
-    contactPhone.$middleware(middleware);
-    email.$middleware(middleware);
-    shipTo.$middleware(middleware);
-    defaultBillTo.$middleware(middleware);
-    defaultDeliverToAddress.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    contactName.middleware$(middleware);
+    contactPhone.middleware$(middleware);
+    email.middleware$(middleware);
+    shipTo.middleware$(middleware);
+    defaultBillTo.middleware$(middleware);
+    defaultDeliverToAddress.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetFacilityApiFacilityDetail);
 }

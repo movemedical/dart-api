@@ -22,67 +22,31 @@ class _$GetUiSetupAllApi extends GetUiSetupAllApi {
           ApiResult<GetUiSetupAllApiResponse>>,
       CommandStateBuilder<ApiCommand<GetUiSetupAllApiRequest>,
           ApiResult<GetUiSetupAllApiResponse>>,
-      GetUiSetupAllApi> $options;
+      GetUiSetupAllApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetUiSetupAllApiRequest>,
-          ApiResult<GetUiSetupAllApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUiSetupAllApiRequest>,
-          ApiResult<GetUiSetupAllApiResponse>,
-          GetUiSetupAllApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUiSetupAllApiRequest>,
-          ApiResult<GetUiSetupAllApiResponse>,
-          GetUiSetupAllApi,
-          Command<ApiCommand<GetUiSetupAllApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUiSetupAllApiRequest>,
-          ApiResult<GetUiSetupAllApiResponse>,
-          GetUiSetupAllApi,
-          CommandResult<ApiResult<GetUiSetupAllApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUiSetupAllApiRequest>,
-          ApiResult<GetUiSetupAllApiResponse>,
-          GetUiSetupAllApi,
-          CommandProgress>> $progress;
+          ApiResult<GetUiSetupAllApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetUiSetupAllApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<GetUiSetupAllApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetUiSetupAllApi._(this.$options)
-      : $replace = $options.action<
+  _$GetUiSetupAllApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetUiSetupAllApiRequest>,
                     ApiResult<GetUiSetupAllApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetUiSetupAllApiRequest>,
-                ApiResult<GetUiSetupAllApiResponse>,
-                GetUiSetupAllApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetUiSetupAllApiRequest>,
-                    ApiResult<GetUiSetupAllApiResponse>,
-                    GetUiSetupAllApi,
-                    Command<ApiCommand<GetUiSetupAllApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetUiSetupAllApiRequest>,
-                    ApiResult<GetUiSetupAllApiResponse>,
-                    GetUiSetupAllApi,
-                    CommandResult<ApiResult<GetUiSetupAllApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetUiSetupAllApiRequest>,
-                ApiResult<GetUiSetupAllApiResponse>,
-                GetUiSetupAllApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<GetUiSetupAllApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ =
+            options$.action<CommandResult<ApiResult<GetUiSetupAllApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetUiSetupAllApi(GetUiSetupAllApiOptions options) =>
@@ -91,31 +55,24 @@ class _$GetUiSetupAllApi extends GetUiSetupAllApi {
   @override
   CommandState<ApiCommand<GetUiSetupAllApiRequest>,
           ApiResult<GetUiSetupAllApiResponse>>
-      get $initial => CommandState<ApiCommand<GetUiSetupAllApiRequest>,
+      get initialState$ => CommandState<ApiCommand<GetUiSetupAllApiRequest>,
           ApiResult<GetUiSetupAllApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetUiSetupAllApiRequest>,
           ApiResult<GetUiSetupAllApiResponse>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<GetUiSetupAllApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<GetUiSetupAllApiRequest>,
           ApiResult<GetUiSetupAllApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetUiSetupAllApiRequest)]),
-        FullType(ApiResult, [FullType(GetUiSetupAllApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

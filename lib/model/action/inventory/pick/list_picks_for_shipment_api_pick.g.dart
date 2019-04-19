@@ -366,9 +366,9 @@ class _$ListPicksForShipmentApiPickActions
   final StatefulActionsOptions<
       ListPicksForShipmentApiPick,
       ListPicksForShipmentApiPickBuilder,
-      ListPicksForShipmentApiPickActions> $options;
+      ListPicksForShipmentApiPickActions> options$;
 
-  final ActionDispatcher<ListPicksForShipmentApiPick> $replace;
+  final ActionDispatcher<ListPicksForShipmentApiPick> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> dependsOnPickId;
   final FieldDispatcher<int> pickNumber;
@@ -379,49 +379,49 @@ class _$ListPicksForShipmentApiPickActions
   final ItemActions kitItem;
   final SerialActions kitSerial;
 
-  _$ListPicksForShipmentApiPickActions._(this.$options)
-      : $replace = $options.action<ListPicksForShipmentApiPick>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListPicksForShipmentApiPickActions._(this.options$)
+      : replace$ = options$.action<ListPicksForShipmentApiPick>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        dependsOnPickId = $options.field<String>(
+        dependsOnPickId = options$.field<String>(
             'dependsOnPickId',
             (a) => a?.dependsOnPickId,
             (s) => s?.dependsOnPickId,
             (p, b) => p?.dependsOnPickId = b),
-        pickNumber = $options.field<int>('pickNumber', (a) => a?.pickNumber,
+        pickNumber = options$.field<int>('pickNumber', (a) => a?.pickNumber,
             (s) => s?.pickNumber, (p, b) => p?.pickNumber = b),
-        pickStatus = $options.field<PickStatus>(
+        pickStatus = options$.field<PickStatus>(
             'pickStatus',
             (a) => a?.pickStatus,
             (s) => s?.pickStatus,
             (p, b) => p?.pickStatus = b),
-        assignedUserId = $options.field<String>(
+        assignedUserId = options$.field<String>(
             'assignedUserId',
             (a) => a?.assignedUserId,
             (s) => s?.assignedUserId,
             (p, b) => p?.assignedUserId = b),
-        assignedUserDisplayName = $options.field<String>(
+        assignedUserDisplayName = options$.field<String>(
             'assignedUserDisplayName',
             (a) => a?.assignedUserDisplayName,
             (s) => s?.assignedUserDisplayName,
             (p, b) => p?.assignedUserDisplayName = b),
         stockItem = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
                 (a) => a.stockItem,
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
         kitItem = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'kitItem',
                 (a) => a.kitItem,
                 (s) => s?.kitItem,
                 (b) => b?.kitItem,
                 (parent, builder) => parent?.kitItem = builder)),
         kitSerial = SerialActions(() =>
-            $options.stateful<Serial, SerialBuilder, SerialActions>(
+            options$.stateful<Serial, SerialBuilder, SerialActions>(
                 'kitSerial',
                 (a) => a.kitSerial,
                 (s) => s?.kitSerial,
@@ -434,25 +434,26 @@ class _$ListPicksForShipmentApiPickActions
       _$ListPicksForShipmentApiPickActions._(options());
 
   @override
-  ListPicksForShipmentApiPick get $initial => ListPicksForShipmentApiPick();
+  ListPicksForShipmentApiPick get initialState$ =>
+      ListPicksForShipmentApiPick();
 
   @override
-  ListPicksForShipmentApiPickBuilder $newBuilder() =>
+  ListPicksForShipmentApiPickBuilder newBuilder$() =>
       ListPicksForShipmentApiPickBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
         this.kitItem,
         this.kitSerial,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.dependsOnPickId,
         this.pickNumber,
@@ -462,29 +463,24 @@ class _$ListPicksForShipmentApiPickActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    dependsOnPickId.$reducer(reducer);
-    pickNumber.$reducer(reducer);
-    pickStatus.$reducer(reducer);
-    assignedUserId.$reducer(reducer);
-    assignedUserDisplayName.$reducer(reducer);
-    stockItem.$reducer(reducer);
-    kitItem.$reducer(reducer);
-    kitSerial.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    dependsOnPickId.reducer$(reducer);
+    pickNumber.reducer$(reducer);
+    pickStatus.reducer$(reducer);
+    assignedUserId.reducer$(reducer);
+    assignedUserDisplayName.reducer$(reducer);
+    stockItem.reducer$(reducer);
+    kitItem.reducer$(reducer);
+    kitSerial.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    stockItem.$middleware(middleware);
-    kitItem.$middleware(middleware);
-    kitSerial.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    stockItem.middleware$(middleware);
+    kitItem.middleware$(middleware);
+    kitSerial.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPicksForShipmentApiPick);
 }

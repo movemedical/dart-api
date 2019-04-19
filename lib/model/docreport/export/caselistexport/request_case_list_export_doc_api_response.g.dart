@@ -161,15 +161,15 @@ class _$RequestCaseListExportDocApiResponseActions
   final StatefulActionsOptions<
       RequestCaseListExportDocApiResponse,
       RequestCaseListExportDocApiResponseBuilder,
-      RequestCaseListExportDocApiResponseActions> $options;
+      RequestCaseListExportDocApiResponseActions> options$;
 
-  final ActionDispatcher<RequestCaseListExportDocApiResponse> $replace;
+  final ActionDispatcher<RequestCaseListExportDocApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
 
-  _$RequestCaseListExportDocApiResponseActions._(this.$options)
-      : $replace = $options.action<RequestCaseListExportDocApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$RequestCaseListExportDocApiResponseActions._(this.options$)
+      : replace$ = options$.action<RequestCaseListExportDocApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -181,34 +181,29 @@ class _$RequestCaseListExportDocApiResponseActions
       _$RequestCaseListExportDocApiResponseActions._(options());
 
   @override
-  RequestCaseListExportDocApiResponse get $initial =>
+  RequestCaseListExportDocApiResponse get initialState$ =>
       RequestCaseListExportDocApiResponse();
 
   @override
-  RequestCaseListExportDocApiResponseBuilder $newBuilder() =>
+  RequestCaseListExportDocApiResponseBuilder newBuilder$() =>
       RequestCaseListExportDocApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestCaseListExportDocApiResponse);
 }

@@ -375,9 +375,9 @@ class _$CreateLoanLinesApiCreateLineRequestActions
   final StatefulActionsOptions<
       CreateLoanLinesApiCreateLineRequest,
       CreateLoanLinesApiCreateLineRequestBuilder,
-      CreateLoanLinesApiCreateLineRequestActions> $options;
+      CreateLoanLinesApiCreateLineRequestActions> options$;
 
-  final ActionDispatcher<CreateLoanLinesApiCreateLineRequest> $replace;
+  final ActionDispatcher<CreateLoanLinesApiCreateLineRequest> replace$;
   final FieldDispatcher<String> caseRequirementId;
   final FieldDispatcher<String> loanId;
   final FieldDispatcher<String> itemId;
@@ -389,40 +389,40 @@ class _$CreateLoanLinesApiCreateLineRequestActions
   final FieldDispatcher<String> setComponentId;
   final FieldDispatcher<int> quantityRequested;
 
-  _$CreateLoanLinesApiCreateLineRequestActions._(this.$options)
-      : $replace = $options.action<CreateLoanLinesApiCreateLineRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseRequirementId = $options.field<String>(
+  _$CreateLoanLinesApiCreateLineRequestActions._(this.options$)
+      : replace$ = options$.action<CreateLoanLinesApiCreateLineRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseRequirementId = options$.field<String>(
             'caseRequirementId',
             (a) => a?.caseRequirementId,
             (s) => s?.caseRequirementId,
             (p, b) => p?.caseRequirementId = b),
-        loanId = $options.field<String>('loanId', (a) => a?.loanId,
+        loanId = options$.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionId = $options.field<String>(
+        itemVersionId = options$.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        parentId = $options.field<String>('parentId', (a) => a?.parentId,
+        parentId = options$.field<String>('parentId', (a) => a?.parentId,
             (s) => s?.parentId, (p, b) => p?.parentId = b),
-        kitComponentId = $options.field<String>(
+        kitComponentId = options$.field<String>(
             'kitComponentId',
             (a) => a?.kitComponentId,
             (s) => s?.kitComponentId,
             (p, b) => p?.kitComponentId = b),
-        setComponentId = $options.field<String>(
+        setComponentId = options$.field<String>(
             'setComponentId',
             (a) => a?.setComponentId,
             (s) => s?.setComponentId,
             (p, b) => p?.setComponentId = b),
-        quantityRequested = $options.field<int>(
+        quantityRequested = options$.field<int>(
             'quantityRequested',
             (a) => a?.quantityRequested,
             (s) => s?.quantityRequested,
@@ -434,18 +434,18 @@ class _$CreateLoanLinesApiCreateLineRequestActions
       _$CreateLoanLinesApiCreateLineRequestActions._(options());
 
   @override
-  CreateLoanLinesApiCreateLineRequest get $initial =>
+  CreateLoanLinesApiCreateLineRequest get initialState$ =>
       CreateLoanLinesApiCreateLineRequest();
 
   @override
-  CreateLoanLinesApiCreateLineRequestBuilder $newBuilder() =>
+  CreateLoanLinesApiCreateLineRequestBuilder newBuilder$() =>
       CreateLoanLinesApiCreateLineRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseRequirementId,
         this.loanId,
         this.itemId,
@@ -459,27 +459,22 @@ class _$CreateLoanLinesApiCreateLineRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseRequirementId.$reducer(reducer);
-    loanId.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemVersionId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    parentId.$reducer(reducer);
-    kitComponentId.$reducer(reducer);
-    setComponentId.$reducer(reducer);
-    quantityRequested.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseRequirementId.reducer$(reducer);
+    loanId.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemVersionId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    parentId.reducer$(reducer);
+    kitComponentId.reducer$(reducer);
+    setComponentId.reducer$(reducer);
+    quantityRequested.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreateLoanLinesApiCreateLineRequest);
 }

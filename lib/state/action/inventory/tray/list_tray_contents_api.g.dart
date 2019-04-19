@@ -22,67 +22,32 @@ class _$ListTrayContentsApi extends ListTrayContentsApi {
           ApiResult<ListTrayContentsApiResponse>>,
       CommandStateBuilder<ApiCommand<ListTrayContentsApiRequest>,
           ApiResult<ListTrayContentsApiResponse>>,
-      ListTrayContentsApi> $options;
+      ListTrayContentsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListTrayContentsApiRequest>,
-          ApiResult<ListTrayContentsApiResponse>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListTrayContentsApiRequest>,
-          ApiResult<ListTrayContentsApiResponse>,
-          ListTrayContentsApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListTrayContentsApiRequest>,
-          ApiResult<ListTrayContentsApiResponse>,
-          ListTrayContentsApi,
-          Command<ApiCommand<ListTrayContentsApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListTrayContentsApiRequest>,
-          ApiResult<ListTrayContentsApiResponse>,
-          ListTrayContentsApi,
-          CommandResult<ApiResult<ListTrayContentsApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListTrayContentsApiRequest>,
-          ApiResult<ListTrayContentsApiResponse>,
-          ListTrayContentsApi,
-          CommandProgress>> $progress;
+          ApiResult<ListTrayContentsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<ListTrayContentsApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<ListTrayContentsApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListTrayContentsApi._(this.$options)
-      : $replace = $options.action<
+  _$ListTrayContentsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<ListTrayContentsApiRequest>,
                     ApiResult<ListTrayContentsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListTrayContentsApiRequest>,
-                ApiResult<ListTrayContentsApiResponse>,
-                ListTrayContentsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListTrayContentsApiRequest>,
-                    ApiResult<ListTrayContentsApiResponse>,
-                    ListTrayContentsApi,
-                    Command<ApiCommand<ListTrayContentsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListTrayContentsApiRequest>,
-                    ApiResult<ListTrayContentsApiResponse>,
-                    ListTrayContentsApi,
-                    CommandResult<ApiResult<ListTrayContentsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListTrayContentsApiRequest>,
-                ApiResult<ListTrayContentsApiResponse>,
-                ListTrayContentsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<ListTrayContentsApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<ListTrayContentsApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListTrayContentsApi(ListTrayContentsApiOptions options) =>
@@ -91,32 +56,25 @@ class _$ListTrayContentsApi extends ListTrayContentsApi {
   @override
   CommandState<ApiCommand<ListTrayContentsApiRequest>,
           ApiResult<ListTrayContentsApiResponse>>
-      get $initial => CommandState<ApiCommand<ListTrayContentsApiRequest>,
+      get initialState$ => CommandState<ApiCommand<ListTrayContentsApiRequest>,
           ApiResult<ListTrayContentsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListTrayContentsApiRequest>,
           ApiResult<ListTrayContentsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListTrayContentsApiRequest>,
           ApiResult<ListTrayContentsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(ListTrayContentsApiRequest)]),
-        FullType(ApiResult, [FullType(ListTrayContentsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

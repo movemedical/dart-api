@@ -638,9 +638,9 @@ class _$ListStockSnapshotsApiSnapshotActions
   final StatefulActionsOptions<
       ListStockSnapshotsApiSnapshot,
       ListStockSnapshotsApiSnapshotBuilder,
-      ListStockSnapshotsApiSnapshotActions> $options;
+      ListStockSnapshotsApiSnapshotActions> options$;
 
-  final ActionDispatcher<ListStockSnapshotsApiSnapshot> $replace;
+  final ActionDispatcher<ListStockSnapshotsApiSnapshot> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<StockTransactionType> transactionType;
   final FieldDispatcher<StockReferenceType> transactionReferenceType;
@@ -661,39 +661,39 @@ class _$ListStockSnapshotsApiSnapshotActions
   final FieldDispatcher<DateTime> start;
   final FieldDispatcher<DateTime> end;
 
-  _$ListStockSnapshotsApiSnapshotActions._(this.$options)
-      : $replace = $options.action<ListStockSnapshotsApiSnapshot>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListStockSnapshotsApiSnapshotActions._(this.options$)
+      : replace$ = options$.action<ListStockSnapshotsApiSnapshot>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        transactionType = $options.field<StockTransactionType>(
+        transactionType = options$.field<StockTransactionType>(
             'transactionType',
             (a) => a?.transactionType,
             (s) => s?.transactionType,
             (p, b) => p?.transactionType = b),
-        transactionReferenceType = $options.field<StockReferenceType>(
+        transactionReferenceType = options$.field<StockReferenceType>(
             'transactionReferenceType',
             (a) => a?.transactionReferenceType,
             (s) => s?.transactionReferenceType,
             (p, b) => p?.transactionReferenceType = b),
-        transactionReferenceId = $options.field<String>(
+        transactionReferenceId = options$.field<String>(
             'transactionReferenceId',
             (a) => a?.transactionReferenceId,
             (s) => s?.transactionReferenceId,
             (p, b) => p?.transactionReferenceId = b),
-        transactionReferenceDisplayText = $options.field<String>(
+        transactionReferenceDisplayText = options$.field<String>(
             'transactionReferenceDisplayText',
             (a) => a?.transactionReferenceDisplayText,
             (s) => s?.transactionReferenceDisplayText,
             (p, b) => p?.transactionReferenceDisplayText = b),
         stockPlace = StockPlaceActions(() =>
-            $options.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
+            options$.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
                 'stockPlace',
                 (a) => a.stockPlace,
                 (s) => s?.stockPlace,
                 (b) => b?.stockPlace,
                 (parent, builder) => parent?.stockPlace = builder)),
-        responsibleParty = ResponsiblePartyActions(() => $options.stateful<
+        responsibleParty = ResponsiblePartyActions(() => options$.stateful<
                 ResponsibleParty,
                 ResponsiblePartyBuilder,
                 ResponsiblePartyActions>(
@@ -702,7 +702,7 @@ class _$ListStockSnapshotsApiSnapshotActions
             (s) => s?.responsibleParty,
             (b) => b?.responsibleParty,
             (parent, builder) => parent?.responsibleParty = builder)),
-        inventoryType = InventoryTypeActions(() => $options.stateful<
+        inventoryType = InventoryTypeActions(() => options$.stateful<
                 InventoryType, InventoryTypeBuilder, InventoryTypeActions>(
             'inventoryType',
             (a) => a.inventoryType,
@@ -710,27 +710,27 @@ class _$ListStockSnapshotsApiSnapshotActions
             (b) => b?.inventoryType,
             (parent, builder) => parent?.inventoryType = builder)),
         demandLoan = LoanLiteActions(() =>
-            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+            options$.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
                 'demandLoan',
                 (a) => a.demandLoan,
                 (s) => s?.demandLoan,
                 (b) => b?.demandLoan,
                 (parent, builder) => parent?.demandLoan = builder)),
         consignmentLoan = LoanLiteActions(() =>
-            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+            options$.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
                 'consignmentLoan',
                 (a) => a.consignmentLoan,
                 (s) => s?.consignmentLoan,
                 (b) => b?.consignmentLoan,
                 (parent, builder) => parent?.consignmentLoan = builder)),
-        order = OrderHeaderLiteActions(() => $options.stateful<OrderHeaderLite,
+        order = OrderHeaderLiteActions(() => options$.stateful<OrderHeaderLite,
                 OrderHeaderLiteBuilder, OrderHeaderLiteActions>(
             'order',
             (a) => a.order,
             (s) => s?.order,
             (b) => b?.order,
             (parent, builder) => parent?.order = builder)),
-        caseEvent = CaseEventLiteActions(() => $options.stateful<CaseEventLite,
+        caseEvent = CaseEventLiteActions(() => options$.stateful<CaseEventLite,
                 CaseEventLiteBuilder, CaseEventLiteActions>(
             'caseEvent',
             (a) => a.caseEvent,
@@ -738,26 +738,26 @@ class _$ListStockSnapshotsApiSnapshotActions
             (b) => b?.caseEvent,
             (parent, builder) => parent?.caseEvent = builder)),
         kit = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'kit',
                 (a) => a.kit,
                 (s) => s?.kit,
                 (b) => b?.kit,
                 (parent, builder) => parent?.kit = builder)),
-        kitContainerDefId = $options.field<String>(
+        kitContainerDefId = options$.field<String>(
             'kitContainerDefId',
             (a) => a?.kitContainerDefId,
             (s) => s?.kitContainerDefId,
             (p, b) => p?.kitContainerDefId = b),
-        pickId = $options.field<String>('pickId', (a) => a?.pickId,
+        pickId = options$.field<String>('pickId', (a) => a?.pickId,
             (s) => s?.pickId, (p, b) => p?.pickId = b),
-        lostFound = $options.field<LostFound>('lostFound', (a) => a?.lostFound,
+        lostFound = options$.field<LostFound>('lostFound', (a) => a?.lostFound,
             (s) => s?.lostFound, (p, b) => p?.lostFound = b),
-        onHold = $options.field<bool>('onHold', (a) => a?.onHold,
+        onHold = options$.field<bool>('onHold', (a) => a?.onHold,
             (s) => s?.onHold, (p, b) => p?.onHold = b),
-        start = $options.field<DateTime>(
+        start = options$.field<DateTime>(
             'start', (a) => a?.start, (s) => s?.start, (p, b) => p?.start = b),
-        end = $options.field<DateTime>(
+        end = options$.field<DateTime>(
             'end', (a) => a?.end, (s) => s?.end, (p, b) => p?.end = b),
         super._();
 
@@ -766,15 +766,16 @@ class _$ListStockSnapshotsApiSnapshotActions
       _$ListStockSnapshotsApiSnapshotActions._(options());
 
   @override
-  ListStockSnapshotsApiSnapshot get $initial => ListStockSnapshotsApiSnapshot();
+  ListStockSnapshotsApiSnapshot get initialState$ =>
+      ListStockSnapshotsApiSnapshot();
 
   @override
-  ListStockSnapshotsApiSnapshotBuilder $newBuilder() =>
+  ListStockSnapshotsApiSnapshotBuilder newBuilder$() =>
       ListStockSnapshotsApiSnapshotBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockPlace,
         this.responsibleParty,
         this.inventoryType,
@@ -785,11 +786,11 @@ class _$ListStockSnapshotsApiSnapshotActions
         this.kit,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.transactionType,
         this.transactionReferenceType,
@@ -804,44 +805,39 @@ class _$ListStockSnapshotsApiSnapshotActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    transactionType.$reducer(reducer);
-    transactionReferenceType.$reducer(reducer);
-    transactionReferenceId.$reducer(reducer);
-    transactionReferenceDisplayText.$reducer(reducer);
-    stockPlace.$reducer(reducer);
-    responsibleParty.$reducer(reducer);
-    inventoryType.$reducer(reducer);
-    demandLoan.$reducer(reducer);
-    consignmentLoan.$reducer(reducer);
-    order.$reducer(reducer);
-    caseEvent.$reducer(reducer);
-    kit.$reducer(reducer);
-    kitContainerDefId.$reducer(reducer);
-    pickId.$reducer(reducer);
-    lostFound.$reducer(reducer);
-    onHold.$reducer(reducer);
-    start.$reducer(reducer);
-    end.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    transactionType.reducer$(reducer);
+    transactionReferenceType.reducer$(reducer);
+    transactionReferenceId.reducer$(reducer);
+    transactionReferenceDisplayText.reducer$(reducer);
+    stockPlace.reducer$(reducer);
+    responsibleParty.reducer$(reducer);
+    inventoryType.reducer$(reducer);
+    demandLoan.reducer$(reducer);
+    consignmentLoan.reducer$(reducer);
+    order.reducer$(reducer);
+    caseEvent.reducer$(reducer);
+    kit.reducer$(reducer);
+    kitContainerDefId.reducer$(reducer);
+    pickId.reducer$(reducer);
+    lostFound.reducer$(reducer);
+    onHold.reducer$(reducer);
+    start.reducer$(reducer);
+    end.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    stockPlace.$middleware(middleware);
-    responsibleParty.$middleware(middleware);
-    inventoryType.$middleware(middleware);
-    demandLoan.$middleware(middleware);
-    consignmentLoan.$middleware(middleware);
-    order.$middleware(middleware);
-    caseEvent.$middleware(middleware);
-    kit.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    stockPlace.middleware$(middleware);
+    responsibleParty.middleware$(middleware);
+    inventoryType.middleware$(middleware);
+    demandLoan.middleware$(middleware);
+    consignmentLoan.middleware$(middleware);
+    order.middleware$(middleware);
+    caseEvent.middleware$(middleware);
+    kit.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListStockSnapshotsApiSnapshot);
 }

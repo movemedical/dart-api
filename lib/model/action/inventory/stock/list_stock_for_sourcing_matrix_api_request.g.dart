@@ -421,9 +421,9 @@ class _$ListStockForSourcingMatrixApiRequestActions
   final StatefulActionsOptions<
       ListStockForSourcingMatrixApiRequest,
       ListStockForSourcingMatrixApiRequestBuilder,
-      ListStockForSourcingMatrixApiRequestActions> $options;
+      ListStockForSourcingMatrixApiRequestActions> options$;
 
-  final ActionDispatcher<ListStockForSourcingMatrixApiRequest> $replace;
+  final ActionDispatcher<ListStockForSourcingMatrixApiRequest> replace$;
   final FieldDispatcher<String> orderId;
   final FieldDispatcher<double> minPercentageMatch;
   final FieldDispatcher<BuiltList<MoveItemClass>> moveItemClasses;
@@ -435,49 +435,49 @@ class _$ListStockForSourcingMatrixApiRequestActions
   final FieldDispatcher<bool> activeCases;
   final FieldDispatcher<bool> questionableKitsTrays;
 
-  _$ListStockForSourcingMatrixApiRequestActions._(this.$options)
-      : $replace = $options.action<ListStockForSourcingMatrixApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+  _$ListStockForSourcingMatrixApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListStockForSourcingMatrixApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orderId = options$.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        minPercentageMatch = $options.field<double>(
+        minPercentageMatch = options$.field<double>(
             'minPercentageMatch',
             (a) => a?.minPercentageMatch,
             (s) => s?.minPercentageMatch,
             (p, b) => p?.minPercentageMatch = b),
-        moveItemClasses = $options.field<BuiltList<MoveItemClass>>(
+        moveItemClasses = options$.field<BuiltList<MoveItemClass>>(
             'moveItemClasses',
             (a) => a?.moveItemClasses,
             (s) => s?.moveItemClasses,
             (p, b) => p?.moveItemClasses = b),
-        locationIds = $options.field<BuiltList<String>>(
+        locationIds = options$.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        locationTypes = $options.field<BuiltList<LocationType>>(
+        locationTypes = options$.field<BuiltList<LocationType>>(
             'locationTypes',
             (a) => a?.locationTypes,
             (s) => s?.locationTypes,
             (p, b) => p?.locationTypes = b),
-        facilityTypes = $options.field<BuiltList<FacilityType>>(
+        facilityTypes = options$.field<BuiltList<FacilityType>>(
             'facilityTypes',
             (a) => a?.facilityTypes,
             (s) => s?.facilityTypes,
             (p, b) => p?.facilityTypes = b),
-        inventoryTypeId = $options.field<String>(
+        inventoryTypeId = options$.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        activeCases = $options.field<bool>('activeCases', (a) => a?.activeCases,
+        activeCases = options$.field<bool>('activeCases', (a) => a?.activeCases,
             (s) => s?.activeCases, (p, b) => p?.activeCases = b),
-        questionableKitsTrays = $options.field<bool>(
+        questionableKitsTrays = options$.field<bool>(
             'questionableKitsTrays',
             (a) => a?.questionableKitsTrays,
             (s) => s?.questionableKitsTrays,
@@ -489,18 +489,18 @@ class _$ListStockForSourcingMatrixApiRequestActions
       _$ListStockForSourcingMatrixApiRequestActions._(options());
 
   @override
-  ListStockForSourcingMatrixApiRequest get $initial =>
+  ListStockForSourcingMatrixApiRequest get initialState$ =>
       ListStockForSourcingMatrixApiRequest();
 
   @override
-  ListStockForSourcingMatrixApiRequestBuilder $newBuilder() =>
+  ListStockForSourcingMatrixApiRequestBuilder newBuilder$() =>
       ListStockForSourcingMatrixApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderId,
         this.minPercentageMatch,
         this.moveItemClasses,
@@ -514,27 +514,22 @@ class _$ListStockForSourcingMatrixApiRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderId.$reducer(reducer);
-    minPercentageMatch.$reducer(reducer);
-    moveItemClasses.$reducer(reducer);
-    locationIds.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    locationTypes.$reducer(reducer);
-    facilityTypes.$reducer(reducer);
-    inventoryTypeId.$reducer(reducer);
-    activeCases.$reducer(reducer);
-    questionableKitsTrays.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderId.reducer$(reducer);
+    minPercentageMatch.reducer$(reducer);
+    moveItemClasses.reducer$(reducer);
+    locationIds.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    locationTypes.reducer$(reducer);
+    facilityTypes.reducer$(reducer);
+    inventoryTypeId.reducer$(reducer);
+    activeCases.reducer$(reducer);
+    questionableKitsTrays.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListStockForSourcingMatrixApiRequest);
 }

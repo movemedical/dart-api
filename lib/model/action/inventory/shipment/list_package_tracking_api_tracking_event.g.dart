@@ -203,21 +203,21 @@ class _$ListPackageTrackingApiTrackingEventActions
   final StatefulActionsOptions<
       ListPackageTrackingApiTrackingEvent,
       ListPackageTrackingApiTrackingEventBuilder,
-      ListPackageTrackingApiTrackingEventActions> $options;
+      ListPackageTrackingApiTrackingEventActions> options$;
 
-  final ActionDispatcher<ListPackageTrackingApiTrackingEvent> $replace;
+  final ActionDispatcher<ListPackageTrackingApiTrackingEvent> replace$;
   final FieldDispatcher<DateTime> timestamp;
   final FieldDispatcher<String> city;
   final FieldDispatcher<String> description;
 
-  _$ListPackageTrackingApiTrackingEventActions._(this.$options)
-      : $replace = $options.action<ListPackageTrackingApiTrackingEvent>(
-            '\$replace', (a) => a?.$replace),
-        timestamp = $options.field<DateTime>('timestamp', (a) => a?.timestamp,
+  _$ListPackageTrackingApiTrackingEventActions._(this.options$)
+      : replace$ = options$.action<ListPackageTrackingApiTrackingEvent>(
+            'replace\$', (a) => a?.replace$),
+        timestamp = options$.field<DateTime>('timestamp', (a) => a?.timestamp,
             (s) => s?.timestamp, (p, b) => p?.timestamp = b),
-        city = $options.field<String>(
+        city = options$.field<String>(
             'city', (a) => a?.city, (s) => s?.city, (p, b) => p?.city = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -229,38 +229,33 @@ class _$ListPackageTrackingApiTrackingEventActions
       _$ListPackageTrackingApiTrackingEventActions._(options());
 
   @override
-  ListPackageTrackingApiTrackingEvent get $initial =>
+  ListPackageTrackingApiTrackingEvent get initialState$ =>
       ListPackageTrackingApiTrackingEvent();
 
   @override
-  ListPackageTrackingApiTrackingEventBuilder $newBuilder() =>
+  ListPackageTrackingApiTrackingEventBuilder newBuilder$() =>
       ListPackageTrackingApiTrackingEventBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.timestamp,
         this.city,
         this.description,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    timestamp.$reducer(reducer);
-    city.$reducer(reducer);
-    description.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    timestamp.reducer$(reducer);
+    city.reducer$(reducer);
+    description.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListPackageTrackingApiTrackingEvent);
 }

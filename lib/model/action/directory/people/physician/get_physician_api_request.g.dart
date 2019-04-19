@@ -150,15 +150,15 @@ typedef StatefulActionsOptions<
 
 class _$GetPhysicianApiRequestActions extends GetPhysicianApiRequestActions {
   final StatefulActionsOptions<GetPhysicianApiRequest,
-      GetPhysicianApiRequestBuilder, GetPhysicianApiRequestActions> $options;
+      GetPhysicianApiRequestBuilder, GetPhysicianApiRequestActions> options$;
 
-  final ActionDispatcher<GetPhysicianApiRequest> $replace;
+  final ActionDispatcher<GetPhysicianApiRequest> replace$;
   final FieldDispatcher<String> id;
 
-  _$GetPhysicianApiRequestActions._(this.$options)
-      : $replace = $options.action<GetPhysicianApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetPhysicianApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetPhysicianApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -167,32 +167,28 @@ class _$GetPhysicianApiRequestActions extends GetPhysicianApiRequestActions {
       _$GetPhysicianApiRequestActions._(options());
 
   @override
-  GetPhysicianApiRequest get $initial => GetPhysicianApiRequest();
+  GetPhysicianApiRequest get initialState$ => GetPhysicianApiRequest();
 
   @override
-  GetPhysicianApiRequestBuilder $newBuilder() =>
+  GetPhysicianApiRequestBuilder newBuilder$() =>
       GetPhysicianApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetPhysicianApiRequest);
 }

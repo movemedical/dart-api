@@ -313,9 +313,9 @@ class _$ListLinesForInvoiceApiInvoiceLineActions
   final StatefulActionsOptions<
       ListLinesForInvoiceApiInvoiceLine,
       ListLinesForInvoiceApiInvoiceLineBuilder,
-      ListLinesForInvoiceApiInvoiceLineActions> $options;
+      ListLinesForInvoiceApiInvoiceLineActions> options$;
 
-  final ActionDispatcher<ListLinesForInvoiceApiInvoiceLine> $replace;
+  final ActionDispatcher<ListLinesForInvoiceApiInvoiceLine> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> invoiceLineNumber;
   final FieldDispatcher<int> quantity;
@@ -324,29 +324,29 @@ class _$ListLinesForInvoiceApiInvoiceLineActions
   final FieldDispatcher<String> erpOrderLineNumber;
   final ItemActions item;
 
-  _$ListLinesForInvoiceApiInvoiceLineActions._(this.$options)
-      : $replace = $options.action<ListLinesForInvoiceApiInvoiceLine>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListLinesForInvoiceApiInvoiceLineActions._(this.options$)
+      : replace$ = options$.action<ListLinesForInvoiceApiInvoiceLine>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        invoiceLineNumber = $options.field<int>(
+        invoiceLineNumber = options$.field<int>(
             'invoiceLineNumber',
             (a) => a?.invoiceLineNumber,
             (s) => s?.invoiceLineNumber,
             (p, b) => p?.invoiceLineNumber = b),
-        quantity = $options.field<int>('quantity', (a) => a?.quantity,
+        quantity = options$.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        price = $options.field<double>(
+        price = options$.field<double>(
             'price', (a) => a?.price, (s) => s?.price, (p, b) => p?.price = b),
-        unitPrice = $options.field<double>('unitPrice', (a) => a?.unitPrice,
+        unitPrice = options$.field<double>('unitPrice', (a) => a?.unitPrice,
             (s) => s?.unitPrice, (p, b) => p?.unitPrice = b),
-        erpOrderLineNumber = $options.field<String>(
+        erpOrderLineNumber = options$.field<String>(
             'erpOrderLineNumber',
             (a) => a?.erpOrderLineNumber,
             (s) => s?.erpOrderLineNumber,
             (p, b) => p?.erpOrderLineNumber = b),
         item = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'item',
                 (a) => a.item,
                 (s) => s?.item,
@@ -359,24 +359,24 @@ class _$ListLinesForInvoiceApiInvoiceLineActions
       _$ListLinesForInvoiceApiInvoiceLineActions._(options());
 
   @override
-  ListLinesForInvoiceApiInvoiceLine get $initial =>
+  ListLinesForInvoiceApiInvoiceLine get initialState$ =>
       ListLinesForInvoiceApiInvoiceLine();
 
   @override
-  ListLinesForInvoiceApiInvoiceLineBuilder $newBuilder() =>
+  ListLinesForInvoiceApiInvoiceLineBuilder newBuilder$() =>
       ListLinesForInvoiceApiInvoiceLineBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.item,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.invoiceLineNumber,
         this.quantity,
@@ -386,25 +386,20 @@ class _$ListLinesForInvoiceApiInvoiceLineActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    invoiceLineNumber.$reducer(reducer);
-    quantity.$reducer(reducer);
-    price.$reducer(reducer);
-    unitPrice.$reducer(reducer);
-    erpOrderLineNumber.$reducer(reducer);
-    item.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    invoiceLineNumber.reducer$(reducer);
+    quantity.reducer$(reducer);
+    price.reducer$(reducer);
+    unitPrice.reducer$(reducer);
+    erpOrderLineNumber.reducer$(reducer);
+    item.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    item.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    item.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListLinesForInvoiceApiInvoiceLine);
 }

@@ -255,9 +255,9 @@ class _$GetOrderReasonSpecificationApiResponseActions
   final StatefulActionsOptions<
       GetOrderReasonSpecificationApiResponse,
       GetOrderReasonSpecificationApiResponseBuilder,
-      GetOrderReasonSpecificationApiResponseActions> $options;
+      GetOrderReasonSpecificationApiResponseActions> options$;
 
-  final ActionDispatcher<GetOrderReasonSpecificationApiResponse> $replace;
+  final ActionDispatcher<GetOrderReasonSpecificationApiResponse> replace$;
   final FieldDispatcher<
       BuiltList<GetOrderReasonSpecificationApiOrderReasonFieldData>> fields;
   final FieldDispatcher<BuiltList<GetOrderReasonSpecificationApiOrderReasonDoc>>
@@ -266,19 +266,19 @@ class _$GetOrderReasonSpecificationApiResponseActions
           BuiltList<GetOrderReasonSpecificationApiOrderReasonCustomFieldData>>
       customFields;
 
-  _$GetOrderReasonSpecificationApiResponseActions._(this.$options)
-      : $replace = $options.action<GetOrderReasonSpecificationApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        fields = $options.field<
+  _$GetOrderReasonSpecificationApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetOrderReasonSpecificationApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        fields = options$.field<
                 BuiltList<GetOrderReasonSpecificationApiOrderReasonFieldData>>(
             'fields',
             (a) => a?.fields,
             (s) => s?.fields,
             (p, b) => p?.fields = b),
-        docs = $options
+        docs = options$
             .field<BuiltList<GetOrderReasonSpecificationApiOrderReasonDoc>>(
                 'docs', (a) => a?.docs, (s) => s?.docs, (p, b) => p?.docs = b),
-        customFields = $options.field<
+        customFields = options$.field<
                 BuiltList<
                     GetOrderReasonSpecificationApiOrderReasonCustomFieldData>>(
             'customFields',
@@ -292,38 +292,33 @@ class _$GetOrderReasonSpecificationApiResponseActions
       _$GetOrderReasonSpecificationApiResponseActions._(options());
 
   @override
-  GetOrderReasonSpecificationApiResponse get $initial =>
+  GetOrderReasonSpecificationApiResponse get initialState$ =>
       GetOrderReasonSpecificationApiResponse();
 
   @override
-  GetOrderReasonSpecificationApiResponseBuilder $newBuilder() =>
+  GetOrderReasonSpecificationApiResponseBuilder newBuilder$() =>
       GetOrderReasonSpecificationApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.fields,
         this.docs,
         this.customFields,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    fields.$reducer(reducer);
-    docs.$reducer(reducer);
-    customFields.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    fields.reducer$(reducer);
+    docs.reducer$(reducer);
+    customFields.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetOrderReasonSpecificationApiResponse);
 }

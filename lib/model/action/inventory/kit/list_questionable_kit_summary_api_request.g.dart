@@ -181,15 +181,15 @@ class _$ListQuestionableKitSummaryApiRequestActions
   final StatefulActionsOptions<
       ListQuestionableKitSummaryApiRequest,
       ListQuestionableKitSummaryApiRequestBuilder,
-      ListQuestionableKitSummaryApiRequestActions> $options;
+      ListQuestionableKitSummaryApiRequestActions> options$;
 
-  final ActionDispatcher<ListQuestionableKitSummaryApiRequest> $replace;
+  final ActionDispatcher<ListQuestionableKitSummaryApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> kitIds;
 
-  _$ListQuestionableKitSummaryApiRequestActions._(this.$options)
-      : $replace = $options.action<ListQuestionableKitSummaryApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        kitIds = $options.field<BuiltList<String>>('kitIds', (a) => a?.kitIds,
+  _$ListQuestionableKitSummaryApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListQuestionableKitSummaryApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        kitIds = options$.field<BuiltList<String>>('kitIds', (a) => a?.kitIds,
             (s) => s?.kitIds, (p, b) => p?.kitIds = b),
         super._();
 
@@ -198,34 +198,29 @@ class _$ListQuestionableKitSummaryApiRequestActions
       _$ListQuestionableKitSummaryApiRequestActions._(options());
 
   @override
-  ListQuestionableKitSummaryApiRequest get $initial =>
+  ListQuestionableKitSummaryApiRequest get initialState$ =>
       ListQuestionableKitSummaryApiRequest();
 
   @override
-  ListQuestionableKitSummaryApiRequestBuilder $newBuilder() =>
+  ListQuestionableKitSummaryApiRequestBuilder newBuilder$() =>
       ListQuestionableKitSummaryApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.kitIds,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    kitIds.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    kitIds.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListQuestionableKitSummaryApiRequest);
 }

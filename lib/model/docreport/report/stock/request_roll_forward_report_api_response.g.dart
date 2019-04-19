@@ -371,9 +371,9 @@ class _$RequestRollForwardReportApiResponseActions
   final StatefulActionsOptions<
       RequestRollForwardReportApiResponse,
       RequestRollForwardReportApiResponseBuilder,
-      RequestRollForwardReportApiResponseActions> $options;
+      RequestRollForwardReportApiResponseActions> options$;
 
-  final ActionDispatcher<RequestRollForwardReportApiResponse> $replace;
+  final ActionDispatcher<RequestRollForwardReportApiResponse> replace$;
   final FieldDispatcher<String> docReportId;
   final LocationActions location;
   final ResponsiblePartyActions responsibleParty;
@@ -384,22 +384,22 @@ class _$RequestRollForwardReportApiResponseActions
   final FieldDispatcher<DateTime> startDate;
   final FieldDispatcher<DateTime> endDate;
 
-  _$RequestRollForwardReportApiResponseActions._(this.$options)
-      : $replace = $options.action<RequestRollForwardReportApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        docReportId = $options.field<String>(
+  _$RequestRollForwardReportApiResponseActions._(this.options$)
+      : replace$ = options$.action<RequestRollForwardReportApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        docReportId = options$.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
             (p, b) => p?.docReportId = b),
         location = LocationActions(() =>
-            $options.stateful<Location, LocationBuilder, LocationActions>(
+            options$.stateful<Location, LocationBuilder, LocationActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        responsibleParty = ResponsiblePartyActions(() => $options.stateful<
+        responsibleParty = ResponsiblePartyActions(() => options$.stateful<
                 ResponsibleParty,
                 ResponsiblePartyBuilder,
                 ResponsiblePartyActions>(
@@ -409,30 +409,30 @@ class _$RequestRollForwardReportApiResponseActions
             (b) => b?.responsibleParty,
             (parent, builder) => parent?.responsibleParty = builder)),
         item = ItemActions(() =>
-            $options.stateful<Item, ItemBuilder, ItemActions>(
+            options$.stateful<Item, ItemBuilder, ItemActions>(
                 'item',
                 (a) => a.item,
                 (s) => s?.item,
                 (b) => b?.item,
                 (parent, builder) => parent?.item = builder)),
-        lot = LotActions(() => $options.stateful<Lot, LotBuilder, LotActions>(
+        lot = LotActions(() => options$.stateful<Lot, LotBuilder, LotActions>(
             'lot',
             (a) => a.lot,
             (s) => s?.lot,
             (b) => b?.lot,
             (parent, builder) => parent?.lot = builder)),
         serial = SerialActions(() =>
-            $options.stateful<Serial, SerialBuilder, SerialActions>(
+            options$.stateful<Serial, SerialBuilder, SerialActions>(
                 'serial',
                 (a) => a.serial,
                 (s) => s?.serial,
                 (b) => b?.serial,
                 (parent, builder) => parent?.serial = builder)),
-        search = $options.field<String>('search', (a) => a?.search,
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+        startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
-        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
+        endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
         super._();
 
@@ -441,16 +441,16 @@ class _$RequestRollForwardReportApiResponseActions
       _$RequestRollForwardReportApiResponseActions._(options());
 
   @override
-  RequestRollForwardReportApiResponse get $initial =>
+  RequestRollForwardReportApiResponse get initialState$ =>
       RequestRollForwardReportApiResponse();
 
   @override
-  RequestRollForwardReportApiResponseBuilder $newBuilder() =>
+  RequestRollForwardReportApiResponseBuilder newBuilder$() =>
       RequestRollForwardReportApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
         this.responsibleParty,
         this.item,
@@ -458,11 +458,11 @@ class _$RequestRollForwardReportApiResponseActions
         this.serial,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.docReportId,
         this.search,
         this.startDate,
@@ -470,31 +470,26 @@ class _$RequestRollForwardReportApiResponseActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    docReportId.$reducer(reducer);
-    location.$reducer(reducer);
-    responsibleParty.$reducer(reducer);
-    item.$reducer(reducer);
-    lot.$reducer(reducer);
-    serial.$reducer(reducer);
-    search.$reducer(reducer);
-    startDate.$reducer(reducer);
-    endDate.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    docReportId.reducer$(reducer);
+    location.reducer$(reducer);
+    responsibleParty.reducer$(reducer);
+    item.reducer$(reducer);
+    lot.reducer$(reducer);
+    serial.reducer$(reducer);
+    search.reducer$(reducer);
+    startDate.reducer$(reducer);
+    endDate.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    location.$middleware(middleware);
-    responsibleParty.$middleware(middleware);
-    item.$middleware(middleware);
-    lot.$middleware(middleware);
-    serial.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    location.middleware$(middleware);
+    responsibleParty.middleware$(middleware);
+    item.middleware$(middleware);
+    lot.middleware$(middleware);
+    serial.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(RequestRollForwardReportApiResponse);
 }

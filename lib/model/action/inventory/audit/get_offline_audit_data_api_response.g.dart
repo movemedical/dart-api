@@ -233,17 +233,17 @@ class _$GetOfflineAuditDataApiResponseActions
   final StatefulActionsOptions<
       GetOfflineAuditDataApiResponse,
       GetOfflineAuditDataApiResponseBuilder,
-      GetOfflineAuditDataApiResponseActions> $options;
+      GetOfflineAuditDataApiResponseActions> options$;
 
-  final ActionDispatcher<GetOfflineAuditDataApiResponse> $replace;
+  final ActionDispatcher<GetOfflineAuditDataApiResponse> replace$;
   final ListAuditsApiResponseActions listResponse;
   final FieldDispatcher<BuiltList<GetAuditApiResponse>> detailResponses;
   final FieldDispatcher<BuiltList<GetOfflineAuditDataApiAuditItem>> auditItems;
 
-  _$GetOfflineAuditDataApiResponseActions._(this.$options)
-      : $replace = $options.action<GetOfflineAuditDataApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        listResponse = ListAuditsApiResponseActions(() => $options.stateful<
+  _$GetOfflineAuditDataApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetOfflineAuditDataApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        listResponse = ListAuditsApiResponseActions(() => options$.stateful<
                 ListAuditsApiResponse,
                 ListAuditsApiResponseBuilder,
                 ListAuditsApiResponseActions>(
@@ -252,12 +252,12 @@ class _$GetOfflineAuditDataApiResponseActions
             (s) => s?.listResponse,
             (b) => b?.listResponse,
             (parent, builder) => parent?.listResponse = builder)),
-        detailResponses = $options.field<BuiltList<GetAuditApiResponse>>(
+        detailResponses = options$.field<BuiltList<GetAuditApiResponse>>(
             'detailResponses',
             (a) => a?.detailResponses,
             (s) => s?.detailResponses,
             (p, b) => p?.detailResponses = b),
-        auditItems = $options.field<BuiltList<GetOfflineAuditDataApiAuditItem>>(
+        auditItems = options$.field<BuiltList<GetOfflineAuditDataApiAuditItem>>(
             'auditItems',
             (a) => a?.auditItems,
             (s) => s?.auditItems,
@@ -269,44 +269,39 @@ class _$GetOfflineAuditDataApiResponseActions
       _$GetOfflineAuditDataApiResponseActions._(options());
 
   @override
-  GetOfflineAuditDataApiResponse get $initial =>
+  GetOfflineAuditDataApiResponse get initialState$ =>
       GetOfflineAuditDataApiResponse();
 
   @override
-  GetOfflineAuditDataApiResponseBuilder $newBuilder() =>
+  GetOfflineAuditDataApiResponseBuilder newBuilder$() =>
       GetOfflineAuditDataApiResponseBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.listResponse,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.detailResponses,
         this.auditItems,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    listResponse.$reducer(reducer);
-    detailResponses.$reducer(reducer);
-    auditItems.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    listResponse.reducer$(reducer);
+    detailResponses.reducer$(reducer);
+    auditItems.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    listResponse.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    listResponse.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetOfflineAuditDataApiResponse);
 }

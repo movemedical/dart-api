@@ -340,9 +340,9 @@ class _$GetItemPricingApiItemPriceActions
   final StatefulActionsOptions<
       GetItemPricingApiItemPrice,
       GetItemPricingApiItemPriceBuilder,
-      GetItemPricingApiItemPriceActions> $options;
+      GetItemPricingApiItemPriceActions> options$;
 
-  final ActionDispatcher<GetItemPricingApiItemPrice> $replace;
+  final ActionDispatcher<GetItemPricingApiItemPrice> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<double> contractPrice;
@@ -352,33 +352,33 @@ class _$GetItemPricingApiItemPriceActions
   final FieldDispatcher<CaseUsageDisposition> caseUsageDisposition;
   final FieldDispatcher<String> billingCodeId;
 
-  _$GetItemPricingApiItemPriceActions._(this.$options)
-      : $replace = $options.action<GetItemPricingApiItemPrice>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetItemPricingApiItemPriceActions._(this.options$)
+      : replace$ = options$.action<GetItemPricingApiItemPrice>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        contractPrice = $options.field<double>(
+        contractPrice = options$.field<double>(
             'contractPrice',
             (a) => a?.contractPrice,
             (s) => s?.contractPrice,
             (p, b) => p?.contractPrice = b),
-        listPrice = $options.field<double>('listPrice', (a) => a?.listPrice,
+        listPrice = options$.field<double>('listPrice', (a) => a?.listPrice,
             (s) => s?.listPrice, (p, b) => p?.listPrice = b),
-        currency = $options.field<CurrencyType>('currency', (a) => a?.currency,
+        currency = options$.field<CurrencyType>('currency', (a) => a?.currency,
             (s) => s?.currency, (p, b) => p?.currency = b),
-        pricingInfoList = $options.field<BuiltList<GetItemPricingApiPriceInfo>>(
+        pricingInfoList = options$.field<BuiltList<GetItemPricingApiPriceInfo>>(
             'pricingInfoList',
             (a) => a?.pricingInfoList,
             (s) => s?.pricingInfoList,
             (p, b) => p?.pricingInfoList = b),
-        caseUsageDisposition = $options.field<CaseUsageDisposition>(
+        caseUsageDisposition = options$.field<CaseUsageDisposition>(
             'caseUsageDisposition',
             (a) => a?.caseUsageDisposition,
             (s) => s?.caseUsageDisposition,
             (p, b) => p?.caseUsageDisposition = b),
-        billingCodeId = $options.field<String>(
+        billingCodeId = options$.field<String>(
             'billingCodeId',
             (a) => a?.billingCodeId,
             (s) => s?.billingCodeId,
@@ -390,17 +390,17 @@ class _$GetItemPricingApiItemPriceActions
       _$GetItemPricingApiItemPriceActions._(options());
 
   @override
-  GetItemPricingApiItemPrice get $initial => GetItemPricingApiItemPrice();
+  GetItemPricingApiItemPrice get initialState$ => GetItemPricingApiItemPrice();
 
   @override
-  GetItemPricingApiItemPriceBuilder $newBuilder() =>
+  GetItemPricingApiItemPriceBuilder newBuilder$() =>
       GetItemPricingApiItemPriceBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.itemId,
         this.contractPrice,
@@ -412,24 +412,20 @@ class _$GetItemPricingApiItemPriceActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    itemId.$reducer(reducer);
-    contractPrice.$reducer(reducer);
-    listPrice.$reducer(reducer);
-    currency.$reducer(reducer);
-    pricingInfoList.$reducer(reducer);
-    caseUsageDisposition.$reducer(reducer);
-    billingCodeId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    itemId.reducer$(reducer);
+    contractPrice.reducer$(reducer);
+    listPrice.reducer$(reducer);
+    currency.reducer$(reducer);
+    pricingInfoList.reducer$(reducer);
+    caseUsageDisposition.reducer$(reducer);
+    billingCodeId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetItemPricingApiItemPrice);
 }

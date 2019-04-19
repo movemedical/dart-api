@@ -300,9 +300,9 @@ class _$ListCustomersApiCustomerDetailsActions
   final StatefulActionsOptions<
       ListCustomersApiCustomerDetails,
       ListCustomersApiCustomerDetailsBuilder,
-      ListCustomersApiCustomerDetailsActions> $options;
+      ListCustomersApiCustomerDetailsActions> options$;
 
-  final ActionDispatcher<ListCustomersApiCustomerDetails> $replace;
+  final ActionDispatcher<ListCustomersApiCustomerDetails> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> hsOrgId;
   final FieldDispatcher<String> hsOrgName;
@@ -311,28 +311,28 @@ class _$ListCustomersApiCustomerDetailsActions
   final FieldDispatcher<String> formattedName;
   final FieldDispatcher<bool> active;
 
-  _$ListCustomersApiCustomerDetailsActions._(this.$options)
-      : $replace = $options.action<ListCustomersApiCustomerDetails>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListCustomersApiCustomerDetailsActions._(this.options$)
+      : replace$ = options$.action<ListCustomersApiCustomerDetails>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        hsOrgId = $options.field<String>('hsOrgId', (a) => a?.hsOrgId,
+        hsOrgId = options$.field<String>('hsOrgId', (a) => a?.hsOrgId,
             (s) => s?.hsOrgId, (p, b) => p?.hsOrgId = b),
-        hsOrgName = $options.field<String>('hsOrgName', (a) => a?.hsOrgName,
+        hsOrgName = options$.field<String>('hsOrgName', (a) => a?.hsOrgName,
             (s) => s?.hsOrgName, (p, b) => p?.hsOrgName = b),
-        customerNumber = $options.field<String>(
+        customerNumber = options$.field<String>(
             'customerNumber',
             (a) => a?.customerNumber,
             (s) => s?.customerNumber,
             (p, b) => p?.customerNumber = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        formattedName = $options.field<String>(
+        formattedName = options$.field<String>(
             'formattedName',
             (a) => a?.formattedName,
             (s) => s?.formattedName,
             (p, b) => p?.formattedName = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -341,18 +341,18 @@ class _$ListCustomersApiCustomerDetailsActions
       _$ListCustomersApiCustomerDetailsActions._(options());
 
   @override
-  ListCustomersApiCustomerDetails get $initial =>
+  ListCustomersApiCustomerDetails get initialState$ =>
       ListCustomersApiCustomerDetails();
 
   @override
-  ListCustomersApiCustomerDetailsBuilder $newBuilder() =>
+  ListCustomersApiCustomerDetailsBuilder newBuilder$() =>
       ListCustomersApiCustomerDetailsBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.hsOrgId,
         this.hsOrgName,
@@ -363,24 +363,19 @@ class _$ListCustomersApiCustomerDetailsActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    hsOrgId.$reducer(reducer);
-    hsOrgName.$reducer(reducer);
-    customerNumber.$reducer(reducer);
-    name.$reducer(reducer);
-    formattedName.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    hsOrgId.reducer$(reducer);
+    hsOrgName.reducer$(reducer);
+    customerNumber.reducer$(reducer);
+    name.reducer$(reducer);
+    formattedName.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListCustomersApiCustomerDetails);
 }

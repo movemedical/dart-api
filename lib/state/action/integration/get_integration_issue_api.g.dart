@@ -22,67 +22,32 @@ class _$GetIntegrationIssueApi extends GetIntegrationIssueApi {
           ApiResult<GetIntegrationIssueApiResponse>>,
       CommandStateBuilder<ApiCommand<GetIntegrationIssueApiRequest>,
           ApiResult<GetIntegrationIssueApiResponse>>,
-      GetIntegrationIssueApi> $options;
+      GetIntegrationIssueApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GetIntegrationIssueApiRequest>,
-          ApiResult<GetIntegrationIssueApiResponse>>> $replace;
+          ApiResult<GetIntegrationIssueApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<GetIntegrationIssueApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetIntegrationIssueApiRequest>,
-          ApiResult<GetIntegrationIssueApiResponse>,
-          GetIntegrationIssueApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetIntegrationIssueApiRequest>,
-          ApiResult<GetIntegrationIssueApiResponse>,
-          GetIntegrationIssueApi,
-          Command<ApiCommand<GetIntegrationIssueApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetIntegrationIssueApiRequest>,
-          ApiResult<GetIntegrationIssueApiResponse>,
-          GetIntegrationIssueApi,
-          CommandResult<ApiResult<GetIntegrationIssueApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetIntegrationIssueApiRequest>,
-          ApiResult<GetIntegrationIssueApiResponse>,
-          GetIntegrationIssueApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<GetIntegrationIssueApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$GetIntegrationIssueApi._(this.$options)
-      : $replace = $options.action<
+  _$GetIntegrationIssueApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<GetIntegrationIssueApiRequest>,
                     ApiResult<GetIntegrationIssueApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<GetIntegrationIssueApiRequest>,
-                ApiResult<GetIntegrationIssueApiResponse>,
-                GetIntegrationIssueApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<GetIntegrationIssueApiRequest>,
-                    ApiResult<GetIntegrationIssueApiResponse>,
-                    GetIntegrationIssueApi,
-                    Command<ApiCommand<GetIntegrationIssueApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<GetIntegrationIssueApiRequest>,
-                    ApiResult<GetIntegrationIssueApiResponse>,
-                    GetIntegrationIssueApi,
-                    CommandResult<ApiResult<GetIntegrationIssueApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<GetIntegrationIssueApiRequest>,
-                ApiResult<GetIntegrationIssueApiResponse>,
-                GetIntegrationIssueApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ =
+            options$.action<Command<ApiCommand<GetIntegrationIssueApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$
+            .action<CommandResult<ApiResult<GetIntegrationIssueApiResponse>>>(
+                'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$GetIntegrationIssueApi(GetIntegrationIssueApiOptions options) =>
@@ -91,32 +56,26 @@ class _$GetIntegrationIssueApi extends GetIntegrationIssueApi {
   @override
   CommandState<ApiCommand<GetIntegrationIssueApiRequest>,
           ApiResult<GetIntegrationIssueApiResponse>>
-      get $initial => CommandState<ApiCommand<GetIntegrationIssueApiRequest>,
+      get initialState$ => CommandState<
+          ApiCommand<GetIntegrationIssueApiRequest>,
           ApiResult<GetIntegrationIssueApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<GetIntegrationIssueApiRequest>,
           ApiResult<GetIntegrationIssueApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<GetIntegrationIssueApiRequest>,
           ApiResult<GetIntegrationIssueApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(GetIntegrationIssueApiRequest)]),
-        FullType(ApiResult, [FullType(GetIntegrationIssueApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

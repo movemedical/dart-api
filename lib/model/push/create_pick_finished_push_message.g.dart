@@ -201,21 +201,21 @@ class _$CreatePickFinishedPushMessageActions
   final StatefulActionsOptions<
       CreatePickFinishedPushMessage,
       CreatePickFinishedPushMessageBuilder,
-      CreatePickFinishedPushMessageActions> $options;
+      CreatePickFinishedPushMessageActions> options$;
 
-  final ActionDispatcher<CreatePickFinishedPushMessage> $replace;
+  final ActionDispatcher<CreatePickFinishedPushMessage> replace$;
   final FieldDispatcher<String> requestId;
   final FieldDispatcher<bool> success;
   final FieldDispatcher<String> failureMsg;
 
-  _$CreatePickFinishedPushMessageActions._(this.$options)
-      : $replace = $options.action<CreatePickFinishedPushMessage>(
-            '\$replace', (a) => a?.$replace),
-        requestId = $options.field<String>('requestId', (a) => a?.requestId,
+  _$CreatePickFinishedPushMessageActions._(this.options$)
+      : replace$ = options$.action<CreatePickFinishedPushMessage>(
+            'replace\$', (a) => a?.replace$),
+        requestId = options$.field<String>('requestId', (a) => a?.requestId,
             (s) => s?.requestId, (p, b) => p?.requestId = b),
-        success = $options.field<bool>('success', (a) => a?.success,
+        success = options$.field<bool>('success', (a) => a?.success,
             (s) => s?.success, (p, b) => p?.success = b),
-        failureMsg = $options.field<String>('failureMsg', (a) => a?.failureMsg,
+        failureMsg = options$.field<String>('failureMsg', (a) => a?.failureMsg,
             (s) => s?.failureMsg, (p, b) => p?.failureMsg = b),
         super._();
 
@@ -224,37 +224,33 @@ class _$CreatePickFinishedPushMessageActions
       _$CreatePickFinishedPushMessageActions._(options());
 
   @override
-  CreatePickFinishedPushMessage get $initial => CreatePickFinishedPushMessage();
+  CreatePickFinishedPushMessage get initialState$ =>
+      CreatePickFinishedPushMessage();
 
   @override
-  CreatePickFinishedPushMessageBuilder $newBuilder() =>
+  CreatePickFinishedPushMessageBuilder newBuilder$() =>
       CreatePickFinishedPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.requestId,
         this.success,
         this.failureMsg,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    requestId.$reducer(reducer);
-    success.$reducer(reducer);
-    failureMsg.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    requestId.reducer$(reducer);
+    success.reducer$(reducer);
+    failureMsg.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CreatePickFinishedPushMessage);
 }

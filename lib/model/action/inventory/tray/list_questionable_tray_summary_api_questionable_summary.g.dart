@@ -340,10 +340,10 @@ class _$ListQuestionableTraySummaryApiQuestionableSummaryActions
   final StatefulActionsOptions<
       ListQuestionableTraySummaryApiQuestionableSummary,
       ListQuestionableTraySummaryApiQuestionableSummaryBuilder,
-      ListQuestionableTraySummaryApiQuestionableSummaryActions> $options;
+      ListQuestionableTraySummaryApiQuestionableSummaryActions> options$;
 
   final ActionDispatcher<ListQuestionableTraySummaryApiQuestionableSummary>
-      $replace;
+      replace$;
   final FieldDispatcher<String> trayId;
   final FieldDispatcher<String> trayItemNumber;
   final FieldDispatcher<int> traySerialNumber;
@@ -353,43 +353,43 @@ class _$ListQuestionableTraySummaryApiQuestionableSummaryActions
   final FieldDispatcher<bool> trayHasMissing;
   final FieldDispatcher<int> percentageMissing;
 
-  _$ListQuestionableTraySummaryApiQuestionableSummaryActions._(this.$options)
-      : $replace =
-            $options.action<ListQuestionableTraySummaryApiQuestionableSummary>(
-                '\$replace', (a) => a?.$replace),
-        trayId = $options.field<String>('trayId', (a) => a?.trayId,
+  _$ListQuestionableTraySummaryApiQuestionableSummaryActions._(this.options$)
+      : replace$ =
+            options$.action<ListQuestionableTraySummaryApiQuestionableSummary>(
+                'replace\$', (a) => a?.replace$),
+        trayId = options$.field<String>('trayId', (a) => a?.trayId,
             (s) => s?.trayId, (p, b) => p?.trayId = b),
-        trayItemNumber = $options.field<String>(
+        trayItemNumber = options$.field<String>(
             'trayItemNumber',
             (a) => a?.trayItemNumber,
             (s) => s?.trayItemNumber,
             (p, b) => p?.trayItemNumber = b),
-        traySerialNumber = $options.field<int>(
+        traySerialNumber = options$.field<int>(
             'traySerialNumber',
             (a) => a?.traySerialNumber,
             (s) => s?.traySerialNumber,
             (p, b) => p?.traySerialNumber = b),
-        traySerialRef = $options.field<String>(
+        traySerialRef = options$.field<String>(
             'traySerialRef',
             (a) => a?.traySerialRef,
             (s) => s?.traySerialRef,
             (p, b) => p?.traySerialRef = b),
-        trayVerified = $options.field<bool>(
+        trayVerified = options$.field<bool>(
             'trayVerified',
             (a) => a?.trayVerified,
             (s) => s?.trayVerified,
             (p, b) => p?.trayVerified = b),
-        trayHasExtras = $options.field<bool>(
+        trayHasExtras = options$.field<bool>(
             'trayHasExtras',
             (a) => a?.trayHasExtras,
             (s) => s?.trayHasExtras,
             (p, b) => p?.trayHasExtras = b),
-        trayHasMissing = $options.field<bool>(
+        trayHasMissing = options$.field<bool>(
             'trayHasMissing',
             (a) => a?.trayHasMissing,
             (s) => s?.trayHasMissing,
             (p, b) => p?.trayHasMissing = b),
-        percentageMissing = $options.field<int>(
+        percentageMissing = options$.field<int>(
             'percentageMissing',
             (a) => a?.percentageMissing,
             (s) => s?.percentageMissing,
@@ -402,18 +402,18 @@ class _$ListQuestionableTraySummaryApiQuestionableSummaryActions
       _$ListQuestionableTraySummaryApiQuestionableSummaryActions._(options());
 
   @override
-  ListQuestionableTraySummaryApiQuestionableSummary get $initial =>
+  ListQuestionableTraySummaryApiQuestionableSummary get initialState$ =>
       ListQuestionableTraySummaryApiQuestionableSummary();
 
   @override
-  ListQuestionableTraySummaryApiQuestionableSummaryBuilder $newBuilder() =>
+  ListQuestionableTraySummaryApiQuestionableSummaryBuilder newBuilder$() =>
       ListQuestionableTraySummaryApiQuestionableSummaryBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.trayId,
         this.trayItemNumber,
         this.traySerialNumber,
@@ -425,25 +425,20 @@ class _$ListQuestionableTraySummaryApiQuestionableSummaryActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    trayId.$reducer(reducer);
-    trayItemNumber.$reducer(reducer);
-    traySerialNumber.$reducer(reducer);
-    traySerialRef.$reducer(reducer);
-    trayVerified.$reducer(reducer);
-    trayHasExtras.$reducer(reducer);
-    trayHasMissing.$reducer(reducer);
-    percentageMissing.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    trayId.reducer$(reducer);
+    trayItemNumber.reducer$(reducer);
+    traySerialNumber.reducer$(reducer);
+    traySerialRef.reducer$(reducer);
+    trayVerified.reducer$(reducer);
+    trayHasExtras.reducer$(reducer);
+    trayHasMissing.reducer$(reducer);
+    percentageMissing.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(ListQuestionableTraySummaryApiQuestionableSummary);
 }

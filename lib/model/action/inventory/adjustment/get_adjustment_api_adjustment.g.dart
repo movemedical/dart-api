@@ -590,9 +590,9 @@ class _$GetAdjustmentApiAdjustmentActions
   final StatefulActionsOptions<
       GetAdjustmentApiAdjustment,
       GetAdjustmentApiAdjustmentBuilder,
-      GetAdjustmentApiAdjustmentActions> $options;
+      GetAdjustmentApiAdjustmentActions> options$;
 
-  final ActionDispatcher<GetAdjustmentApiAdjustment> $replace;
+  final ActionDispatcher<GetAdjustmentApiAdjustment> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> number;
   final FieldDispatcher<AdjustmentStatus> status;
@@ -612,86 +612,86 @@ class _$GetAdjustmentApiAdjustmentActions
   final FieldDispatcher<String> reference2DisplayText;
   final FieldDispatcher<String> note;
 
-  _$GetAdjustmentApiAdjustmentActions._(this.$options)
-      : $replace = $options.action<GetAdjustmentApiAdjustment>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetAdjustmentApiAdjustmentActions._(this.options$)
+      : replace$ = options$.action<GetAdjustmentApiAdjustment>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<AdjustmentStatus>('status', (a) => a?.status,
+        status = options$.field<AdjustmentStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
         stockItem = StockItemActions(() =>
-            $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
+            options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
                 (a) => a.stockItem,
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
         stockPlace = StockPlaceActions(() =>
-            $options.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
+            options$.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
                 'stockPlace',
                 (a) => a.stockPlace,
                 (s) => s?.stockPlace,
                 (b) => b?.stockPlace,
                 (parent, builder) => parent?.stockPlace = builder)),
-        adjustedDate = $options.field<DateTime>(
+        adjustedDate = options$.field<DateTime>(
             'adjustedDate',
             (a) => a?.adjustedDate,
             (s) => s?.adjustedDate,
             (p, b) => p?.adjustedDate = b),
-        reason = $options.field<AdjustmentReason>('reason', (a) => a?.reason,
+        reason = options$.field<AdjustmentReason>('reason', (a) => a?.reason,
             (s) => s?.reason, (p, b) => p?.reason = b),
-        adjustedByUserId = $options.field<String>(
+        adjustedByUserId = options$.field<String>(
             'adjustedByUserId',
             (a) => a?.adjustedByUserId,
             (s) => s?.adjustedByUserId,
             (p, b) => p?.adjustedByUserId = b),
-        adjustedByUserDisplayName = $options.field<String>(
+        adjustedByUserDisplayName = options$.field<String>(
             'adjustedByUserDisplayName',
             (a) => a?.adjustedByUserDisplayName,
             (s) => s?.adjustedByUserDisplayName,
             (p, b) => p?.adjustedByUserDisplayName = b),
-        erpReferenceNumber = $options.field<String>(
+        erpReferenceNumber = options$.field<String>(
             'erpReferenceNumber',
             (a) => a?.erpReferenceNumber,
             (s) => s?.erpReferenceNumber,
             (p, b) => p?.erpReferenceNumber = b),
-        inventoryType = InventoryTypeActions(() => $options.stateful<
+        inventoryType = InventoryTypeActions(() => options$.stateful<
                 InventoryType, InventoryTypeBuilder, InventoryTypeActions>(
             'inventoryType',
             (a) => a.inventoryType,
             (s) => s?.inventoryType,
             (b) => b?.inventoryType,
             (parent, builder) => parent?.inventoryType = builder)),
-        qtyChange = $options.field<int>('qtyChange', (a) => a?.qtyChange,
+        qtyChange = options$.field<int>('qtyChange', (a) => a?.qtyChange,
             (s) => s?.qtyChange, (p, b) => p?.qtyChange = b),
-        referenceType = $options.field<AdjustmentReferenceType>(
+        referenceType = options$.field<AdjustmentReferenceType>(
             'referenceType',
             (a) => a?.referenceType,
             (s) => s?.referenceType,
             (p, b) => p?.referenceType = b),
-        referenceId = $options.field<String>(
+        referenceId = options$.field<String>(
             'referenceId',
             (a) => a?.referenceId,
             (s) => s?.referenceId,
             (p, b) => p?.referenceId = b),
-        referenceDisplayText = $options.field<String>(
+        referenceDisplayText = options$.field<String>(
             'referenceDisplayText',
             (a) => a?.referenceDisplayText,
             (s) => s?.referenceDisplayText,
             (p, b) => p?.referenceDisplayText = b),
-        reference2Id = $options.field<String>(
+        reference2Id = options$.field<String>(
             'reference2Id',
             (a) => a?.reference2Id,
             (s) => s?.reference2Id,
             (p, b) => p?.reference2Id = b),
-        reference2DisplayText = $options.field<String>(
+        reference2DisplayText = options$.field<String>(
             'reference2DisplayText',
             (a) => a?.reference2DisplayText,
             (s) => s?.reference2DisplayText,
             (p, b) => p?.reference2DisplayText = b),
-        note = $options.field<String>(
+        note = options$.field<String>(
             'note', (a) => a?.note, (s) => s?.note, (p, b) => p?.note = b),
         super._();
 
@@ -700,25 +700,25 @@ class _$GetAdjustmentApiAdjustmentActions
       _$GetAdjustmentApiAdjustmentActions._(options());
 
   @override
-  GetAdjustmentApiAdjustment get $initial => GetAdjustmentApiAdjustment();
+  GetAdjustmentApiAdjustment get initialState$ => GetAdjustmentApiAdjustment();
 
   @override
-  GetAdjustmentApiAdjustmentBuilder $newBuilder() =>
+  GetAdjustmentApiAdjustmentBuilder newBuilder$() =>
       GetAdjustmentApiAdjustmentBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
         this.stockPlace,
         this.inventoryType,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.number,
         this.status,
@@ -737,37 +737,33 @@ class _$GetAdjustmentApiAdjustmentActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
-    stockItem.$reducer(reducer);
-    stockPlace.$reducer(reducer);
-    adjustedDate.$reducer(reducer);
-    reason.$reducer(reducer);
-    adjustedByUserId.$reducer(reducer);
-    adjustedByUserDisplayName.$reducer(reducer);
-    erpReferenceNumber.$reducer(reducer);
-    inventoryType.$reducer(reducer);
-    qtyChange.$reducer(reducer);
-    referenceType.$reducer(reducer);
-    referenceId.$reducer(reducer);
-    referenceDisplayText.$reducer(reducer);
-    reference2Id.$reducer(reducer);
-    reference2DisplayText.$reducer(reducer);
-    note.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
+    stockItem.reducer$(reducer);
+    stockPlace.reducer$(reducer);
+    adjustedDate.reducer$(reducer);
+    reason.reducer$(reducer);
+    adjustedByUserId.reducer$(reducer);
+    adjustedByUserDisplayName.reducer$(reducer);
+    erpReferenceNumber.reducer$(reducer);
+    inventoryType.reducer$(reducer);
+    qtyChange.reducer$(reducer);
+    referenceType.reducer$(reducer);
+    referenceId.reducer$(reducer);
+    referenceDisplayText.reducer$(reducer);
+    reference2Id.reducer$(reducer);
+    reference2DisplayText.reducer$(reducer);
+    note.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    stockItem.$middleware(middleware);
-    stockPlace.$middleware(middleware);
-    inventoryType.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    stockItem.middleware$(middleware);
+    stockPlace.middleware$(middleware);
+    inventoryType.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetAdjustmentApiAdjustment);
 }

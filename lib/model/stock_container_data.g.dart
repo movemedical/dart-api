@@ -165,21 +165,21 @@ typedef StatefulActionsOptions<StockContainerData, StockContainerDataBuilder,
 
 class _$StockContainerDataActions extends StockContainerDataActions {
   final StatefulActionsOptions<StockContainerData, StockContainerDataBuilder,
-      StockContainerDataActions> $options;
+      StockContainerDataActions> options$;
 
-  final ActionDispatcher<StockContainerData> $replace;
+  final ActionDispatcher<StockContainerData> replace$;
   final FieldDispatcher<StockContainerType> containerType;
   final FieldDispatcher<String> containerId;
 
-  _$StockContainerDataActions._(this.$options)
-      : $replace = $options.action<StockContainerData>(
-            '\$replace', (a) => a?.$replace),
-        containerType = $options.field<StockContainerType>(
+  _$StockContainerDataActions._(this.options$)
+      : replace$ = options$.action<StockContainerData>(
+            'replace\$', (a) => a?.replace$),
+        containerType = options$.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
@@ -191,33 +191,29 @@ class _$StockContainerDataActions extends StockContainerDataActions {
       _$StockContainerDataActions._(options());
 
   @override
-  StockContainerData get $initial => StockContainerData();
+  StockContainerData get initialState$ => StockContainerData();
 
   @override
-  StockContainerDataBuilder $newBuilder() => StockContainerDataBuilder();
+  StockContainerDataBuilder newBuilder$() => StockContainerDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.containerType,
         this.containerId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    containerType.$reducer(reducer);
-    containerId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    containerType.reducer$(reducer);
+    containerId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(StockContainerData);
 }

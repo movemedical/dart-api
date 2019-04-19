@@ -234,26 +234,26 @@ class _$GetCaseCustomFieldsForCreateApiCaseCustomFieldDataActions
   final StatefulActionsOptions<
       GetCaseCustomFieldsForCreateApiCaseCustomFieldData,
       GetCaseCustomFieldsForCreateApiCaseCustomFieldDataBuilder,
-      GetCaseCustomFieldsForCreateApiCaseCustomFieldDataActions> $options;
+      GetCaseCustomFieldsForCreateApiCaseCustomFieldDataActions> options$;
 
   final ActionDispatcher<GetCaseCustomFieldsForCreateApiCaseCustomFieldData>
-      $replace;
+      replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<CustomFieldDataType> dataType;
   final FieldDispatcher<bool> required;
 
-  _$GetCaseCustomFieldsForCreateApiCaseCustomFieldDataActions._(this.$options)
-      : $replace =
-            $options.action<GetCaseCustomFieldsForCreateApiCaseCustomFieldData>(
-                '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetCaseCustomFieldsForCreateApiCaseCustomFieldDataActions._(this.options$)
+      : replace$ =
+            options$.action<GetCaseCustomFieldsForCreateApiCaseCustomFieldData>(
+                'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        dataType = $options.field<CustomFieldDataType>('dataType',
+        dataType = options$.field<CustomFieldDataType>('dataType',
             (a) => a?.dataType, (s) => s?.dataType, (p, b) => p?.dataType = b),
-        required = $options.field<bool>('required', (a) => a?.required,
+        required = options$.field<bool>('required', (a) => a?.required,
             (s) => s?.required, (p, b) => p?.required = b),
         super._();
 
@@ -263,18 +263,18 @@ class _$GetCaseCustomFieldsForCreateApiCaseCustomFieldDataActions
       _$GetCaseCustomFieldsForCreateApiCaseCustomFieldDataActions._(options());
 
   @override
-  GetCaseCustomFieldsForCreateApiCaseCustomFieldData get $initial =>
+  GetCaseCustomFieldsForCreateApiCaseCustomFieldData get initialState$ =>
       GetCaseCustomFieldsForCreateApiCaseCustomFieldData();
 
   @override
-  GetCaseCustomFieldsForCreateApiCaseCustomFieldDataBuilder $newBuilder() =>
+  GetCaseCustomFieldsForCreateApiCaseCustomFieldDataBuilder newBuilder$() =>
       GetCaseCustomFieldsForCreateApiCaseCustomFieldDataBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.dataType,
@@ -282,21 +282,16 @@ class _$GetCaseCustomFieldsForCreateApiCaseCustomFieldDataActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    dataType.$reducer(reducer);
-    required.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    dataType.reducer$(reducer);
+    required.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??=
-      FullType(GetCaseCustomFieldsForCreateApiCaseCustomFieldData);
 }

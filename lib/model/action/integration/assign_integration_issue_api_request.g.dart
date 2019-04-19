@@ -202,21 +202,21 @@ class _$AssignIntegrationIssueApiRequestActions
   final StatefulActionsOptions<
       AssignIntegrationIssueApiRequest,
       AssignIntegrationIssueApiRequestBuilder,
-      AssignIntegrationIssueApiRequestActions> $options;
+      AssignIntegrationIssueApiRequestActions> options$;
 
-  final ActionDispatcher<AssignIntegrationIssueApiRequest> $replace;
+  final ActionDispatcher<AssignIntegrationIssueApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> integrationIssueIds;
   final FieldDispatcher<String> assignUserId;
 
-  _$AssignIntegrationIssueApiRequestActions._(this.$options)
-      : $replace = $options.action<AssignIntegrationIssueApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        integrationIssueIds = $options.field<BuiltList<String>>(
+  _$AssignIntegrationIssueApiRequestActions._(this.options$)
+      : replace$ = options$.action<AssignIntegrationIssueApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        integrationIssueIds = options$.field<BuiltList<String>>(
             'integrationIssueIds',
             (a) => a?.integrationIssueIds,
             (s) => s?.integrationIssueIds,
             (p, b) => p?.integrationIssueIds = b),
-        assignUserId = $options.field<String>(
+        assignUserId = options$.field<String>(
             'assignUserId',
             (a) => a?.assignUserId,
             (s) => s?.assignUserId,
@@ -228,36 +228,31 @@ class _$AssignIntegrationIssueApiRequestActions
       _$AssignIntegrationIssueApiRequestActions._(options());
 
   @override
-  AssignIntegrationIssueApiRequest get $initial =>
+  AssignIntegrationIssueApiRequest get initialState$ =>
       AssignIntegrationIssueApiRequest();
 
   @override
-  AssignIntegrationIssueApiRequestBuilder $newBuilder() =>
+  AssignIntegrationIssueApiRequestBuilder newBuilder$() =>
       AssignIntegrationIssueApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.integrationIssueIds,
         this.assignUserId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    integrationIssueIds.$reducer(reducer);
-    assignUserId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    integrationIssueIds.reducer$(reducer);
+    assignUserId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AssignIntegrationIssueApiRequest);
 }

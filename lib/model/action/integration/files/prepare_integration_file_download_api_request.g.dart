@@ -162,15 +162,15 @@ class _$PrepareIntegrationFileDownloadApiRequestActions
   final StatefulActionsOptions<
       PrepareIntegrationFileDownloadApiRequest,
       PrepareIntegrationFileDownloadApiRequestBuilder,
-      PrepareIntegrationFileDownloadApiRequestActions> $options;
+      PrepareIntegrationFileDownloadApiRequestActions> options$;
 
-  final ActionDispatcher<PrepareIntegrationFileDownloadApiRequest> $replace;
+  final ActionDispatcher<PrepareIntegrationFileDownloadApiRequest> replace$;
   final FieldDispatcher<String> fileId;
 
-  _$PrepareIntegrationFileDownloadApiRequestActions._(this.$options)
-      : $replace = $options.action<PrepareIntegrationFileDownloadApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        fileId = $options.field<String>('fileId', (a) => a?.fileId,
+  _$PrepareIntegrationFileDownloadApiRequestActions._(this.options$)
+      : replace$ = options$.action<PrepareIntegrationFileDownloadApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        fileId = options$.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
         super._();
 
@@ -179,34 +179,29 @@ class _$PrepareIntegrationFileDownloadApiRequestActions
       _$PrepareIntegrationFileDownloadApiRequestActions._(options());
 
   @override
-  PrepareIntegrationFileDownloadApiRequest get $initial =>
+  PrepareIntegrationFileDownloadApiRequest get initialState$ =>
       PrepareIntegrationFileDownloadApiRequest();
 
   @override
-  PrepareIntegrationFileDownloadApiRequestBuilder $newBuilder() =>
+  PrepareIntegrationFileDownloadApiRequestBuilder newBuilder$() =>
       PrepareIntegrationFileDownloadApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.fileId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    fileId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    fileId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(PrepareIntegrationFileDownloadApiRequest);
 }

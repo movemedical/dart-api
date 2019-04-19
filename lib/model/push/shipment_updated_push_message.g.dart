@@ -156,15 +156,15 @@ class _$ShipmentUpdatedPushMessageActions
   final StatefulActionsOptions<
       ShipmentUpdatedPushMessage,
       ShipmentUpdatedPushMessageBuilder,
-      ShipmentUpdatedPushMessageActions> $options;
+      ShipmentUpdatedPushMessageActions> options$;
 
-  final ActionDispatcher<ShipmentUpdatedPushMessage> $replace;
+  final ActionDispatcher<ShipmentUpdatedPushMessage> replace$;
   final FieldDispatcher<String> shipmentId;
 
-  _$ShipmentUpdatedPushMessageActions._(this.$options)
-      : $replace = $options.action<ShipmentUpdatedPushMessage>(
-            '\$replace', (a) => a?.$replace),
-        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+  _$ShipmentUpdatedPushMessageActions._(this.options$)
+      : replace$ = options$.action<ShipmentUpdatedPushMessage>(
+            'replace\$', (a) => a?.replace$),
+        shipmentId = options$.field<String>('shipmentId', (a) => a?.shipmentId,
             (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
         super._();
 
@@ -173,32 +173,28 @@ class _$ShipmentUpdatedPushMessageActions
       _$ShipmentUpdatedPushMessageActions._(options());
 
   @override
-  ShipmentUpdatedPushMessage get $initial => ShipmentUpdatedPushMessage();
+  ShipmentUpdatedPushMessage get initialState$ => ShipmentUpdatedPushMessage();
 
   @override
-  ShipmentUpdatedPushMessageBuilder $newBuilder() =>
+  ShipmentUpdatedPushMessageBuilder newBuilder$() =>
       ShipmentUpdatedPushMessageBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.shipmentId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    shipmentId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    shipmentId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ShipmentUpdatedPushMessage);
 }

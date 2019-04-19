@@ -23,74 +23,35 @@ class _$ListBizUnitInventoryTypeOptionsApi
           ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>>,
       CommandStateBuilder<ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
           ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>>,
-      ListBizUnitInventoryTypeOptionsApi> $options;
+      ListBizUnitInventoryTypeOptionsApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
-          ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>>> $replace;
+          ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
-          ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>,
-          ListBizUnitInventoryTypeOptionsApi,
-          String>> $cancel;
+      Command<ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>>> execute$;
   final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
-              ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>,
-              ListBizUnitInventoryTypeOptionsApi,
-              Command<ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>>>>
-      $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
-          ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>,
-          ListBizUnitInventoryTypeOptionsApi,
-          CommandResult<
-              ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
-          ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>,
-          ListBizUnitInventoryTypeOptionsApi,
-          CommandProgress>> $progress;
+          CommandResult<ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>>>
+      result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$ListBizUnitInventoryTypeOptionsApi._(this.$options)
-      : $replace = $options.action<
+  _$ListBizUnitInventoryTypeOptionsApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<
                     ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
                     ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
-                ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>,
-                ListBizUnitInventoryTypeOptionsApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
-                    ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>,
-                    ListBizUnitInventoryTypeOptionsApi,
-                    Command<
-                        ApiCommand<
-                            ListBizUnitInventoryTypeOptionsApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
-                    ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>,
-                    ListBizUnitInventoryTypeOptionsApi,
-                    CommandResult<
-                        ApiResult<
-                            ListBizUnitInventoryTypeOptionsApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
-                ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>,
-                ListBizUnitInventoryTypeOptionsApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<
+                Command<ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<
+                    ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$ListBizUnitInventoryTypeOptionsApi(
@@ -100,35 +61,26 @@ class _$ListBizUnitInventoryTypeOptionsApi
   @override
   CommandState<ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
           ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
           ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
           ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>,
           ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(
-            ApiCommand, [FullType(ListBizUnitInventoryTypeOptionsApiRequest)]),
-        FullType(
-            ApiResult, [FullType(ListBizUnitInventoryTypeOptionsApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

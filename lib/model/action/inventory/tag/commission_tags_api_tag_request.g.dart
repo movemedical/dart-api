@@ -323,9 +323,9 @@ class _$CommissionTagsApiTagRequestActions
   final StatefulActionsOptions<
       CommissionTagsApiTagRequest,
       CommissionTagsApiTagRequestBuilder,
-      CommissionTagsApiTagRequestActions> $options;
+      CommissionTagsApiTagRequestActions> options$;
 
-  final ActionDispatcher<CommissionTagsApiTagRequest> $replace;
+  final ActionDispatcher<CommissionTagsApiTagRequest> replace$;
   final FieldDispatcher<String> tagNumber;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> itemVersionId;
@@ -335,33 +335,33 @@ class _$CommissionTagsApiTagRequestActions
   final FieldDispatcher<LocationType> locationType;
   final FieldDispatcher<String> locationId;
 
-  _$CommissionTagsApiTagRequestActions._(this.$options)
-      : $replace = $options.action<CommissionTagsApiTagRequest>(
-            '\$replace', (a) => a?.$replace),
-        tagNumber = $options.field<String>('tagNumber', (a) => a?.tagNumber,
+  _$CommissionTagsApiTagRequestActions._(this.options$)
+      : replace$ = options$.action<CommissionTagsApiTagRequest>(
+            'replace\$', (a) => a?.replace$),
+        tagNumber = options$.field<String>('tagNumber', (a) => a?.tagNumber,
             (s) => s?.tagNumber, (p, b) => p?.tagNumber = b),
-        itemId = $options.field<String>('itemId', (a) => a?.itemId,
+        itemId = options$.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionId = $options.field<String>(
+        itemVersionId = options$.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.field<String>(
+        lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.field<String>('serialId', (a) => a?.serialId,
+        serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        associatedStockId = $options.field<String>(
+        associatedStockId = options$.field<String>(
             'associatedStockId',
             (a) => a?.associatedStockId,
             (s) => s?.associatedStockId,
             (p, b) => p?.associatedStockId = b),
-        locationType = $options.field<LocationType>(
+        locationType = options$.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+        locationId = options$.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
         super._();
 
@@ -370,17 +370,18 @@ class _$CommissionTagsApiTagRequestActions
       _$CommissionTagsApiTagRequestActions._(options());
 
   @override
-  CommissionTagsApiTagRequest get $initial => CommissionTagsApiTagRequest();
+  CommissionTagsApiTagRequest get initialState$ =>
+      CommissionTagsApiTagRequest();
 
   @override
-  CommissionTagsApiTagRequestBuilder $newBuilder() =>
+  CommissionTagsApiTagRequestBuilder newBuilder$() =>
       CommissionTagsApiTagRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.tagNumber,
         this.itemId,
         this.itemVersionId,
@@ -392,25 +393,20 @@ class _$CommissionTagsApiTagRequestActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    tagNumber.$reducer(reducer);
-    itemId.$reducer(reducer);
-    itemVersionId.$reducer(reducer);
-    lotId.$reducer(reducer);
-    serialId.$reducer(reducer);
-    associatedStockId.$reducer(reducer);
-    locationType.$reducer(reducer);
-    locationId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    tagNumber.reducer$(reducer);
+    itemId.reducer$(reducer);
+    itemVersionId.reducer$(reducer);
+    lotId.reducer$(reducer);
+    serialId.reducer$(reducer);
+    associatedStockId.reducer$(reducer);
+    locationType.reducer$(reducer);
+    locationId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(CommissionTagsApiTagRequest);
 }

@@ -555,9 +555,9 @@ typedef StatefulActionsOptions<ListItemsApiRequest, ListItemsApiRequestBuilder,
 
 class _$ListItemsApiRequestActions extends ListItemsApiRequestActions {
   final StatefulActionsOptions<ListItemsApiRequest, ListItemsApiRequestBuilder,
-      ListItemsApiRequestActions> $options;
+      ListItemsApiRequestActions> options$;
 
-  final ActionDispatcher<ListItemsApiRequest> $replace;
+  final ActionDispatcher<ListItemsApiRequest> replace$;
   final FieldDispatcher<String> search;
   final FieldDispatcher<BuiltList<String>> bizUnitIds;
   final FieldDispatcher<BuiltList<String>> orgUnitIds;
@@ -574,60 +574,60 @@ class _$ListItemsApiRequestActions extends ListItemsApiRequestActions {
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListItemsApiOrderBy> orderBy;
 
-  _$ListItemsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListItemsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$ListItemsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListItemsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        bizUnitIds = $options.field<BuiltList<String>>(
+        bizUnitIds = options$.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        orgUnitIds = $options.field<BuiltList<String>>(
+        orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        itemCategoryIds = $options.field<BuiltList<String>>(
+        itemCategoryIds = options$.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
             (p, b) => p?.itemCategoryIds = b),
-        procedureIds = $options.field<BuiltList<String>>(
+        procedureIds = options$.field<BuiltList<String>>(
             'procedureIds',
             (a) => a?.procedureIds,
             (s) => s?.procedureIds,
             (p, b) => p?.procedureIds = b),
-        subProcedureIds = $options.field<BuiltList<String>>(
+        subProcedureIds = options$.field<BuiltList<String>>(
             'subProcedureIds',
             (a) => a?.subProcedureIds,
             (s) => s?.subProcedureIds,
             (p, b) => p?.subProcedureIds = b),
-        itemIds = $options.field<BuiltList<String>>('itemIds',
+        itemIds = options$.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        moveItemTypes = $options.field<BuiltList<MoveItemType>>(
+        moveItemTypes = options$.field<BuiltList<MoveItemType>>(
             'moveItemTypes',
             (a) => a?.moveItemTypes,
             (s) => s?.moveItemTypes,
             (p, b) => p?.moveItemTypes = b),
-        moveItemClasses = $options.field<BuiltList<MoveItemClass>>(
+        moveItemClasses = options$.field<BuiltList<MoveItemClass>>(
             'moveItemClasses',
             (a) => a?.moveItemClasses,
             (s) => s?.moveItemClasses,
             (p, b) => p?.moveItemClasses = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        canStock = $options.field<bool>('canStock', (a) => a?.canStock,
+        canStock = options$.field<bool>('canStock', (a) => a?.canStock,
             (s) => s?.canStock, (p, b) => p?.canStock = b),
-        canSell = $options.field<bool>('canSell', (a) => a?.canSell,
+        canSell = options$.field<bool>('canSell', (a) => a?.canSell,
             (s) => s?.canSell, (p, b) => p?.canSell = b),
-        includeListPrice = $options.field<bool>(
+        includeListPrice = options$.field<bool>(
             'includeListPrice',
             (a) => a?.includeListPrice,
             (s) => s?.includeListPrice,
             (p, b) => p?.includeListPrice = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -637,7 +637,7 @@ class _$ListItemsApiRequestActions extends ListItemsApiRequestActions {
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListItemsApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListItemsApiOrderBy>,
                     OrderByParamsBuilder<ListItemsApiOrderBy>,
                     OrderByParamsActions<ListItemsApiOrderBy>>(
@@ -653,23 +653,23 @@ class _$ListItemsApiRequestActions extends ListItemsApiRequestActions {
       _$ListItemsApiRequestActions._(options());
 
   @override
-  ListItemsApiRequest get $initial => ListItemsApiRequest();
+  ListItemsApiRequest get initialState$ => ListItemsApiRequest();
 
   @override
-  ListItemsApiRequestBuilder $newBuilder() => ListItemsApiRequestBuilder();
+  ListItemsApiRequestBuilder newBuilder$() => ListItemsApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
         this.bizUnitIds,
         this.orgUnitIds,
@@ -686,33 +686,29 @@ class _$ListItemsApiRequestActions extends ListItemsApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
-    bizUnitIds.$reducer(reducer);
-    orgUnitIds.$reducer(reducer);
-    itemCategoryIds.$reducer(reducer);
-    procedureIds.$reducer(reducer);
-    subProcedureIds.$reducer(reducer);
-    itemIds.$reducer(reducer);
-    moveItemTypes.$reducer(reducer);
-    moveItemClasses.$reducer(reducer);
-    active.$reducer(reducer);
-    canStock.$reducer(reducer);
-    canSell.$reducer(reducer);
-    includeListPrice.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
+    bizUnitIds.reducer$(reducer);
+    orgUnitIds.reducer$(reducer);
+    itemCategoryIds.reducer$(reducer);
+    procedureIds.reducer$(reducer);
+    subProcedureIds.reducer$(reducer);
+    itemIds.reducer$(reducer);
+    moveItemTypes.reducer$(reducer);
+    moveItemClasses.reducer$(reducer);
+    active.reducer$(reducer);
+    canStock.reducer$(reducer);
+    canSell.reducer$(reducer);
+    includeListPrice.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListItemsApiRequest);
 }

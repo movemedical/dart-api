@@ -158,15 +158,15 @@ class _$SaveCaseUsagesApiResponseActions
   final StatefulActionsOptions<
       SaveCaseUsagesApiResponse,
       SaveCaseUsagesApiResponseBuilder,
-      SaveCaseUsagesApiResponseActions> $options;
+      SaveCaseUsagesApiResponseActions> options$;
 
-  final ActionDispatcher<SaveCaseUsagesApiResponse> $replace;
+  final ActionDispatcher<SaveCaseUsagesApiResponse> replace$;
   final FieldDispatcher<bool> confirmUsageFailed;
 
-  _$SaveCaseUsagesApiResponseActions._(this.$options)
-      : $replace = $options.action<SaveCaseUsagesApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        confirmUsageFailed = $options.field<bool>(
+  _$SaveCaseUsagesApiResponseActions._(this.options$)
+      : replace$ = options$.action<SaveCaseUsagesApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        confirmUsageFailed = options$.field<bool>(
             'confirmUsageFailed',
             (a) => a?.confirmUsageFailed,
             (s) => s?.confirmUsageFailed,
@@ -178,32 +178,28 @@ class _$SaveCaseUsagesApiResponseActions
       _$SaveCaseUsagesApiResponseActions._(options());
 
   @override
-  SaveCaseUsagesApiResponse get $initial => SaveCaseUsagesApiResponse();
+  SaveCaseUsagesApiResponse get initialState$ => SaveCaseUsagesApiResponse();
 
   @override
-  SaveCaseUsagesApiResponseBuilder $newBuilder() =>
+  SaveCaseUsagesApiResponseBuilder newBuilder$() =>
       SaveCaseUsagesApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.confirmUsageFailed,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    confirmUsageFailed.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    confirmUsageFailed.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SaveCaseUsagesApiResponse);
 }

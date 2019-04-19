@@ -172,15 +172,15 @@ class _$SearchLocationsApiResponseActions
   final StatefulActionsOptions<
       SearchLocationsApiResponse,
       SearchLocationsApiResponseBuilder,
-      SearchLocationsApiResponseActions> $options;
+      SearchLocationsApiResponseActions> options$;
 
-  final ActionDispatcher<SearchLocationsApiResponse> $replace;
+  final ActionDispatcher<SearchLocationsApiResponse> replace$;
   final FieldDispatcher<BuiltList<Location>> locations;
 
-  _$SearchLocationsApiResponseActions._(this.$options)
-      : $replace = $options.action<SearchLocationsApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        locations = $options.field<BuiltList<Location>>(
+  _$SearchLocationsApiResponseActions._(this.options$)
+      : replace$ = options$.action<SearchLocationsApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        locations = options$.field<BuiltList<Location>>(
             'locations',
             (a) => a?.locations,
             (s) => s?.locations,
@@ -192,32 +192,28 @@ class _$SearchLocationsApiResponseActions
       _$SearchLocationsApiResponseActions._(options());
 
   @override
-  SearchLocationsApiResponse get $initial => SearchLocationsApiResponse();
+  SearchLocationsApiResponse get initialState$ => SearchLocationsApiResponse();
 
   @override
-  SearchLocationsApiResponseBuilder $newBuilder() =>
+  SearchLocationsApiResponseBuilder newBuilder$() =>
       SearchLocationsApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.locations,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    locations.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    locations.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SearchLocationsApiResponse);
 }

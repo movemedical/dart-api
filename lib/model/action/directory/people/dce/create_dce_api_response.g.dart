@@ -191,21 +191,21 @@ typedef StatefulActionsOptions<
 
 class _$CreateDceApiResponseActions extends CreateDceApiResponseActions {
   final StatefulActionsOptions<CreateDceApiResponse,
-      CreateDceApiResponseBuilder, CreateDceApiResponseActions> $options;
+      CreateDceApiResponseBuilder, CreateDceApiResponseActions> options$;
 
-  final ActionDispatcher<CreateDceApiResponse> $replace;
+  final ActionDispatcher<CreateDceApiResponse> replace$;
   final FieldDispatcher<String> dceId;
   final FieldDispatcher<String> userId;
   final FieldDispatcher<String> contactId;
 
-  _$CreateDceApiResponseActions._(this.$options)
-      : $replace = $options.action<CreateDceApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        dceId = $options.field<String>(
+  _$CreateDceApiResponseActions._(this.options$)
+      : replace$ = options$.action<CreateDceApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        dceId = options$.field<String>(
             'dceId', (a) => a?.dceId, (s) => s?.dceId, (p, b) => p?.dceId = b),
-        userId = $options.field<String>('userId', (a) => a?.userId,
+        userId = options$.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        contactId = $options.field<String>('contactId', (a) => a?.contactId,
+        contactId = options$.field<String>('contactId', (a) => a?.contactId,
             (s) => s?.contactId, (p, b) => p?.contactId = b),
         super._();
 
@@ -214,35 +214,31 @@ class _$CreateDceApiResponseActions extends CreateDceApiResponseActions {
       _$CreateDceApiResponseActions._(options());
 
   @override
-  CreateDceApiResponse get $initial => CreateDceApiResponse();
+  CreateDceApiResponse get initialState$ => CreateDceApiResponse();
 
   @override
-  CreateDceApiResponseBuilder $newBuilder() => CreateDceApiResponseBuilder();
+  CreateDceApiResponseBuilder newBuilder$() => CreateDceApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.dceId,
         this.userId,
         this.contactId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    dceId.$reducer(reducer);
-    userId.$reducer(reducer);
-    contactId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    dceId.reducer$(reducer);
+    userId.reducer$(reducer);
+    contactId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateDceApiResponse);
 }

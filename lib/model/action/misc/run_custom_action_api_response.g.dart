@@ -155,15 +155,15 @@ class _$RunCustomActionApiResponseActions
   final StatefulActionsOptions<
       RunCustomActionApiResponse,
       RunCustomActionApiResponseBuilder,
-      RunCustomActionApiResponseActions> $options;
+      RunCustomActionApiResponseActions> options$;
 
-  final ActionDispatcher<RunCustomActionApiResponse> $replace;
+  final ActionDispatcher<RunCustomActionApiResponse> replace$;
   final FieldDispatcher<String> message;
 
-  _$RunCustomActionApiResponseActions._(this.$options)
-      : $replace = $options.action<RunCustomActionApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        message = $options.field<String>('message', (a) => a?.message,
+  _$RunCustomActionApiResponseActions._(this.options$)
+      : replace$ = options$.action<RunCustomActionApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        message = options$.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
         super._();
 
@@ -172,32 +172,28 @@ class _$RunCustomActionApiResponseActions
       _$RunCustomActionApiResponseActions._(options());
 
   @override
-  RunCustomActionApiResponse get $initial => RunCustomActionApiResponse();
+  RunCustomActionApiResponse get initialState$ => RunCustomActionApiResponse();
 
   @override
-  RunCustomActionApiResponseBuilder $newBuilder() =>
+  RunCustomActionApiResponseBuilder newBuilder$() =>
       RunCustomActionApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.message,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    message.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    message.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(RunCustomActionApiResponse);
 }

@@ -170,15 +170,15 @@ class _$RemoveCacheKeysApiRequestActions
   final StatefulActionsOptions<
       RemoveCacheKeysApiRequest,
       RemoveCacheKeysApiRequestBuilder,
-      RemoveCacheKeysApiRequestActions> $options;
+      RemoveCacheKeysApiRequestActions> options$;
 
-  final ActionDispatcher<RemoveCacheKeysApiRequest> $replace;
+  final ActionDispatcher<RemoveCacheKeysApiRequest> replace$;
   final FieldDispatcher<BuiltList<String>> keys;
 
-  _$RemoveCacheKeysApiRequestActions._(this.$options)
-      : $replace = $options.action<RemoveCacheKeysApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        keys = $options.field<BuiltList<String>>(
+  _$RemoveCacheKeysApiRequestActions._(this.options$)
+      : replace$ = options$.action<RemoveCacheKeysApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        keys = options$.field<BuiltList<String>>(
             'keys', (a) => a?.keys, (s) => s?.keys, (p, b) => p?.keys = b),
         super._();
 
@@ -187,32 +187,28 @@ class _$RemoveCacheKeysApiRequestActions
       _$RemoveCacheKeysApiRequestActions._(options());
 
   @override
-  RemoveCacheKeysApiRequest get $initial => RemoveCacheKeysApiRequest();
+  RemoveCacheKeysApiRequest get initialState$ => RemoveCacheKeysApiRequest();
 
   @override
-  RemoveCacheKeysApiRequestBuilder $newBuilder() =>
+  RemoveCacheKeysApiRequestBuilder newBuilder$() =>
       RemoveCacheKeysApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.keys,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    keys.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    keys.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(RemoveCacheKeysApiRequest);
 }

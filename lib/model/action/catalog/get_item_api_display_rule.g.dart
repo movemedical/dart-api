@@ -150,15 +150,15 @@ typedef StatefulActionsOptions<
 
 class _$GetItemApiDisplayRuleActions extends GetItemApiDisplayRuleActions {
   final StatefulActionsOptions<GetItemApiDisplayRule,
-      GetItemApiDisplayRuleBuilder, GetItemApiDisplayRuleActions> $options;
+      GetItemApiDisplayRuleBuilder, GetItemApiDisplayRuleActions> options$;
 
-  final ActionDispatcher<GetItemApiDisplayRule> $replace;
+  final ActionDispatcher<GetItemApiDisplayRule> replace$;
   final FieldDispatcher<bool> editAllowed;
 
-  _$GetItemApiDisplayRuleActions._(this.$options)
-      : $replace = $options.action<GetItemApiDisplayRule>(
-            '\$replace', (a) => a?.$replace),
-        editAllowed = $options.field<bool>('editAllowed', (a) => a?.editAllowed,
+  _$GetItemApiDisplayRuleActions._(this.options$)
+      : replace$ = options$.action<GetItemApiDisplayRule>(
+            'replace\$', (a) => a?.replace$),
+        editAllowed = options$.field<bool>('editAllowed', (a) => a?.editAllowed,
             (s) => s?.editAllowed, (p, b) => p?.editAllowed = b),
         super._();
 
@@ -167,31 +167,27 @@ class _$GetItemApiDisplayRuleActions extends GetItemApiDisplayRuleActions {
       _$GetItemApiDisplayRuleActions._(options());
 
   @override
-  GetItemApiDisplayRule get $initial => GetItemApiDisplayRule();
+  GetItemApiDisplayRule get initialState$ => GetItemApiDisplayRule();
 
   @override
-  GetItemApiDisplayRuleBuilder $newBuilder() => GetItemApiDisplayRuleBuilder();
+  GetItemApiDisplayRuleBuilder newBuilder$() => GetItemApiDisplayRuleBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.editAllowed,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    editAllowed.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    editAllowed.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetItemApiDisplayRule);
 }

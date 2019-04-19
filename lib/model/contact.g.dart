@@ -437,9 +437,9 @@ typedef StatefulActionsOptions<Contact, ContactBuilder,
 
 class _$ContactActions extends ContactActions {
   final StatefulActionsOptions<Contact, ContactBuilder, ContactActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<Contact> $replace;
+  final ActionDispatcher<Contact> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<ContactType> linkedType;
   final FieldDispatcher<String> linkedId;
@@ -454,61 +454,61 @@ class _$ContactActions extends ContactActions {
   final FieldDispatcher<String> formattedName;
   final FieldDispatcher<bool> active;
 
-  _$ContactActions._(this.$options)
-      : $replace = $options.action<Contact>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ContactActions._(this.options$)
+      : replace$ = options$.action<Contact>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        linkedType = $options.field<ContactType>(
+        linkedType = options$.field<ContactType>(
             'linkedType',
             (a) => a?.linkedType,
             (s) => s?.linkedType,
             (p, b) => p?.linkedType = b),
-        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
+        linkedId = options$.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
-        generalLinkedType = $options.field<GeneralContactType>(
+        generalLinkedType = options$.field<GeneralContactType>(
             'generalLinkedType',
             (a) => a?.generalLinkedType,
             (s) => s?.generalLinkedType,
             (p, b) => p?.generalLinkedType = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        organizationName = $options.field<String>(
+        organizationName = options$.field<String>(
             'organizationName',
             (a) => a?.organizationName,
             (s) => s?.organizationName,
             (p, b) => p?.organizationName = b),
-        publicVisible = $options.field<bool>(
+        publicVisible = options$.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
             (p, b) => p?.publicVisible = b),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        reference = $options.field<String>('reference', (a) => a?.reference,
+        reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
         name = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
                 (a) => a.name,
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        formattedName = $options.field<String>(
+        formattedName = options$.field<String>(
             'formattedName',
             (a) => a?.formattedName,
             (s) => s?.formattedName,
             (p, b) => p?.formattedName = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -516,23 +516,23 @@ class _$ContactActions extends ContactActions {
       _$ContactActions._(options());
 
   @override
-  Contact get $initial => Contact();
+  Contact get initialState$ => Contact();
 
   @override
-  ContactBuilder $newBuilder() => ContactBuilder();
+  ContactBuilder newBuilder$() => ContactBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
         this.name,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.linkedType,
         this.linkedId,
@@ -547,31 +547,27 @@ class _$ContactActions extends ContactActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    linkedType.$reducer(reducer);
-    linkedId.$reducer(reducer);
-    generalLinkedType.$reducer(reducer);
-    orgId.$reducer(reducer);
-    organizationName.$reducer(reducer);
-    publicVisible.$reducer(reducer);
-    description.$reducer(reducer);
-    reference.$reducer(reducer);
-    email.$reducer(reducer);
-    name.$reducer(reducer);
-    formattedName.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    linkedType.reducer$(reducer);
+    linkedId.reducer$(reducer);
+    generalLinkedType.reducer$(reducer);
+    orgId.reducer$(reducer);
+    organizationName.reducer$(reducer);
+    publicVisible.reducer$(reducer);
+    description.reducer$(reducer);
+    reference.reducer$(reducer);
+    email.reducer$(reducer);
+    name.reducer$(reducer);
+    formattedName.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    email.$middleware(middleware);
-    name.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    email.middleware$(middleware);
+    name.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Contact);
 }

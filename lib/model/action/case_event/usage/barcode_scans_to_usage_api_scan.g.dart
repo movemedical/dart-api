@@ -318,9 +318,9 @@ class _$BarcodeScansToUsageApiScanActions
   final StatefulActionsOptions<
       BarcodeScansToUsageApiScan,
       BarcodeScansToUsageApiScanBuilder,
-      BarcodeScansToUsageApiScanActions> $options;
+      BarcodeScansToUsageApiScanActions> options$;
 
-  final ActionDispatcher<BarcodeScansToUsageApiScan> $replace;
+  final ActionDispatcher<BarcodeScansToUsageApiScan> replace$;
   final FieldDispatcher<String> loanId;
   final FieldDispatcher<String> containerId;
   final LocationDataActions location;
@@ -329,29 +329,29 @@ class _$BarcodeScansToUsageApiScanActions
   final FieldDispatcher<ItemCaptureType> capturedType;
   final FieldDispatcher<CaseUsageDisposition> disposition;
 
-  _$BarcodeScansToUsageApiScanActions._(this.$options)
-      : $replace = $options.action<BarcodeScansToUsageApiScan>(
-            '\$replace', (a) => a?.$replace),
-        loanId = $options.field<String>('loanId', (a) => a?.loanId,
+  _$BarcodeScansToUsageApiScanActions._(this.options$)
+      : replace$ = options$.action<BarcodeScansToUsageApiScan>(
+            'replace\$', (a) => a?.replace$),
+        loanId = options$.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
-        containerId = $options.field<String>(
+        containerId = options$.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        location = LocationDataActions(() => $options
+        location = LocationDataActions(() => options$
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
                 'location',
                 (a) => a.location,
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        inventoryType = $options.field<String>(
+        inventoryType = options$.field<String>(
             'inventoryType',
             (a) => a?.inventoryType,
             (s) => s?.inventoryType,
             (p, b) => p?.inventoryType = b),
-        scan = ReadBarcode2ApiResponseActions(() => $options.stateful<
+        scan = ReadBarcode2ApiResponseActions(() => options$.stateful<
                 ReadBarcode2ApiResponse,
                 ReadBarcode2ApiResponseBuilder,
                 ReadBarcode2ApiResponseActions>(
@@ -360,12 +360,12 @@ class _$BarcodeScansToUsageApiScanActions
             (s) => s?.scan,
             (b) => b?.scan,
             (parent, builder) => parent?.scan = builder)),
-        capturedType = $options.field<ItemCaptureType>(
+        capturedType = options$.field<ItemCaptureType>(
             'capturedType',
             (a) => a?.capturedType,
             (s) => s?.capturedType,
             (p, b) => p?.capturedType = b),
-        disposition = $options.field<CaseUsageDisposition>(
+        disposition = options$.field<CaseUsageDisposition>(
             'disposition',
             (a) => a?.disposition,
             (s) => s?.disposition,
@@ -377,24 +377,24 @@ class _$BarcodeScansToUsageApiScanActions
       _$BarcodeScansToUsageApiScanActions._(options());
 
   @override
-  BarcodeScansToUsageApiScan get $initial => BarcodeScansToUsageApiScan();
+  BarcodeScansToUsageApiScan get initialState$ => BarcodeScansToUsageApiScan();
 
   @override
-  BarcodeScansToUsageApiScanBuilder $newBuilder() =>
+  BarcodeScansToUsageApiScanBuilder newBuilder$() =>
       BarcodeScansToUsageApiScanBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
         this.scan,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.loanId,
         this.containerId,
         this.inventoryType,
@@ -403,25 +403,21 @@ class _$BarcodeScansToUsageApiScanActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    loanId.$reducer(reducer);
-    containerId.$reducer(reducer);
-    location.$reducer(reducer);
-    inventoryType.$reducer(reducer);
-    scan.$reducer(reducer);
-    capturedType.$reducer(reducer);
-    disposition.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    loanId.reducer$(reducer);
+    containerId.reducer$(reducer);
+    location.reducer$(reducer);
+    inventoryType.reducer$(reducer);
+    scan.reducer$(reducer);
+    capturedType.reducer$(reducer);
+    disposition.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    location.$middleware(middleware);
-    scan.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    location.middleware$(middleware);
+    scan.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(BarcodeScansToUsageApiScan);
 }

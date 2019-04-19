@@ -164,21 +164,21 @@ typedef StatefulActionsOptions<PaginationParams, PaginationParamsBuilder,
 
 class _$PaginationParamsActions extends PaginationParamsActions {
   final StatefulActionsOptions<PaginationParams, PaginationParamsBuilder,
-      PaginationParamsActions> $options;
+      PaginationParamsActions> options$;
 
-  final ActionDispatcher<PaginationParams> $replace;
+  final ActionDispatcher<PaginationParams> replace$;
   final FieldDispatcher<int> startRecordIdx;
   final FieldDispatcher<int> pageSize;
 
-  _$PaginationParamsActions._(this.$options)
-      : $replace =
-            $options.action<PaginationParams>('\$replace', (a) => a?.$replace),
-        startRecordIdx = $options.field<int>(
+  _$PaginationParamsActions._(this.options$)
+      : replace$ =
+            options$.action<PaginationParams>('replace\$', (a) => a?.replace$),
+        startRecordIdx = options$.field<int>(
             'startRecordIdx',
             (a) => a?.startRecordIdx,
             (s) => s?.startRecordIdx,
             (p, b) => p?.startRecordIdx = b),
-        pageSize = $options.field<int>('pageSize', (a) => a?.pageSize,
+        pageSize = options$.field<int>('pageSize', (a) => a?.pageSize,
             (s) => s?.pageSize, (p, b) => p?.pageSize = b),
         super._();
 
@@ -186,33 +186,29 @@ class _$PaginationParamsActions extends PaginationParamsActions {
       _$PaginationParamsActions._(options());
 
   @override
-  PaginationParams get $initial => PaginationParams();
+  PaginationParams get initialState$ => PaginationParams();
 
   @override
-  PaginationParamsBuilder $newBuilder() => PaginationParamsBuilder();
+  PaginationParamsBuilder newBuilder$() => PaginationParamsBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.startRecordIdx,
         this.pageSize,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    startRecordIdx.$reducer(reducer);
-    pageSize.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    startRecordIdx.reducer$(reducer);
+    pageSize.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(PaginationParams);
 }

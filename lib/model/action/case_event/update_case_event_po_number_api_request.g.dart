@@ -181,21 +181,21 @@ class _$UpdateCaseEventPONumberApiRequestActions
   final StatefulActionsOptions<
       UpdateCaseEventPONumberApiRequest,
       UpdateCaseEventPONumberApiRequestBuilder,
-      UpdateCaseEventPONumberApiRequestActions> $options;
+      UpdateCaseEventPONumberApiRequestActions> options$;
 
-  final ActionDispatcher<UpdateCaseEventPONumberApiRequest> $replace;
+  final ActionDispatcher<UpdateCaseEventPONumberApiRequest> replace$;
   final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<String> poNumber;
 
-  _$UpdateCaseEventPONumberApiRequestActions._(this.$options)
-      : $replace = $options.action<UpdateCaseEventPONumberApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        caseEventId = $options.field<String>(
+  _$UpdateCaseEventPONumberApiRequestActions._(this.options$)
+      : replace$ = options$.action<UpdateCaseEventPONumberApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        caseEventId = options$.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+        poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
         super._();
 
@@ -204,36 +204,31 @@ class _$UpdateCaseEventPONumberApiRequestActions
       _$UpdateCaseEventPONumberApiRequestActions._(options());
 
   @override
-  UpdateCaseEventPONumberApiRequest get $initial =>
+  UpdateCaseEventPONumberApiRequest get initialState$ =>
       UpdateCaseEventPONumberApiRequest();
 
   @override
-  UpdateCaseEventPONumberApiRequestBuilder $newBuilder() =>
+  UpdateCaseEventPONumberApiRequestBuilder newBuilder$() =>
       UpdateCaseEventPONumberApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.caseEventId,
         this.poNumber,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    caseEventId.$reducer(reducer);
-    poNumber.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    caseEventId.reducer$(reducer);
+    poNumber.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(UpdateCaseEventPONumberApiRequest);
 }

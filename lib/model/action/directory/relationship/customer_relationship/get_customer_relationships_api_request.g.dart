@@ -161,15 +161,15 @@ class _$GetCustomerRelationshipsApiRequestActions
   final StatefulActionsOptions<
       GetCustomerRelationshipsApiRequest,
       GetCustomerRelationshipsApiRequestBuilder,
-      GetCustomerRelationshipsApiRequestActions> $options;
+      GetCustomerRelationshipsApiRequestActions> options$;
 
-  final ActionDispatcher<GetCustomerRelationshipsApiRequest> $replace;
+  final ActionDispatcher<GetCustomerRelationshipsApiRequest> replace$;
   final FieldDispatcher<String> customerId;
 
-  _$GetCustomerRelationshipsApiRequestActions._(this.$options)
-      : $replace = $options.action<GetCustomerRelationshipsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+  _$GetCustomerRelationshipsApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetCustomerRelationshipsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        customerId = options$.field<String>('customerId', (a) => a?.customerId,
             (s) => s?.customerId, (p, b) => p?.customerId = b),
         super._();
 
@@ -178,34 +178,29 @@ class _$GetCustomerRelationshipsApiRequestActions
       _$GetCustomerRelationshipsApiRequestActions._(options());
 
   @override
-  GetCustomerRelationshipsApiRequest get $initial =>
+  GetCustomerRelationshipsApiRequest get initialState$ =>
       GetCustomerRelationshipsApiRequest();
 
   @override
-  GetCustomerRelationshipsApiRequestBuilder $newBuilder() =>
+  GetCustomerRelationshipsApiRequestBuilder newBuilder$() =>
       GetCustomerRelationshipsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.customerId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    customerId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    customerId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCustomerRelationshipsApiRequest);
 }

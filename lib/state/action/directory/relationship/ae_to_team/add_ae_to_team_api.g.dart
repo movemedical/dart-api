@@ -19,54 +19,27 @@ class _$AddAeToTeamApi extends AddAeToTeamApi {
       CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<AddAeToTeamApiRequest>,
           ApiResult<Nothing>>,
-      AddAeToTeamApi> $options;
+      AddAeToTeamApi> options$;
 
   final ActionDispatcher<
           CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>>>
-      $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>,
-          AddAeToTeamApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>,
-          AddAeToTeamApi, Command<ApiCommand<AddAeToTeamApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>,
-          AddAeToTeamApi, CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>,
-          AddAeToTeamApi, CommandProgress>> $progress;
+      replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<AddAeToTeamApiRequest>>> execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$AddAeToTeamApi._(this.$options)
-      : $replace = $options.action<
+  _$AddAeToTeamApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<AddAeToTeamApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<AddAeToTeamApiRequest>,
-                ApiResult<Nothing>,
-                AddAeToTeamApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<AddAeToTeamApiRequest>,
-                    ApiResult<Nothing>,
-                    AddAeToTeamApi,
-                    Command<ApiCommand<AddAeToTeamApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<AddAeToTeamApiRequest>,
-                    ApiResult<Nothing>,
-                    AddAeToTeamApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<AddAeToTeamApiRequest>,
-                ApiResult<Nothing>,
-                AddAeToTeamApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$.action<Command<ApiCommand<AddAeToTeamApiRequest>>>(
+            'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$AddAeToTeamApi(AddAeToTeamApiOptions options) =>
@@ -74,30 +47,23 @@ class _$AddAeToTeamApi extends AddAeToTeamApi {
 
   @override
   CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>>
-      get $initial =>
+      get initialState$ =>
           CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<ApiCommand<AddAeToTeamApiRequest>,
+      newBuilder$() => CommandStateBuilder<ApiCommand<AddAeToTeamApiRequest>,
           ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(AddAeToTeamApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

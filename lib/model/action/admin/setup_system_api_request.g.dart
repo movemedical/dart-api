@@ -624,9 +624,9 @@ typedef StatefulActionsOptions<
 
 class _$SetupSystemApiRequestActions extends SetupSystemApiRequestActions {
   final StatefulActionsOptions<SetupSystemApiRequest,
-      SetupSystemApiRequestBuilder, SetupSystemApiRequestActions> $options;
+      SetupSystemApiRequestBuilder, SetupSystemApiRequestActions> options$;
 
-  final ActionDispatcher<SetupSystemApiRequest> $replace;
+  final ActionDispatcher<SetupSystemApiRequest> replace$;
   final FieldDispatcher<String> orgName;
   final FieldDispatcher<String> orgReference;
   final FieldDispatcher<OrgType> orgType;
@@ -648,96 +648,96 @@ class _$SetupSystemApiRequestActions extends SetupSystemApiRequestActions {
   final FieldDispatcher<String> password;
   final PersonNameActions personName;
 
-  _$SetupSystemApiRequestActions._(this.$options)
-      : $replace = $options.action<SetupSystemApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        orgName = $options.field<String>('orgName', (a) => a?.orgName,
+  _$SetupSystemApiRequestActions._(this.options$)
+      : replace$ = options$.action<SetupSystemApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        orgName = options$.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        orgReference = $options.field<String>(
+        orgReference = options$.field<String>(
             'orgReference',
             (a) => a?.orgReference,
             (s) => s?.orgReference,
             (p, b) => p?.orgReference = b),
-        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
+        orgType = options$.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        orgUnitName = $options.field<String>(
+        orgUnitName = options$.field<String>(
             'orgUnitName',
             (a) => a?.orgUnitName,
             (s) => s?.orgUnitName,
             (p, b) => p?.orgUnitName = b),
-        orgUnitParentId = $options.field<String>(
+        orgUnitParentId = options$.field<String>(
             'orgUnitParentId',
             (a) => a?.orgUnitParentId,
             (s) => s?.orgUnitParentId,
             (p, b) => p?.orgUnitParentId = b),
-        orgUnitReference = $options.field<String>(
+        orgUnitReference = options$.field<String>(
             'orgUnitReference',
             (a) => a?.orgUnitReference,
             (s) => s?.orgUnitReference,
             (p, b) => p?.orgUnitReference = b),
-        fileLocation = $options.field<String>(
+        fileLocation = options$.field<String>(
             'fileLocation',
             (a) => a?.fileLocation,
             (s) => s?.fileLocation,
             (p, b) => p?.fileLocation = b),
-        addressLine1 = $options.field<String>(
+        addressLine1 = options$.field<String>(
             'addressLine1',
             (a) => a?.addressLine1,
             (s) => s?.addressLine1,
             (p, b) => p?.addressLine1 = b),
-        addressLine2 = $options.field<String>(
+        addressLine2 = options$.field<String>(
             'addressLine2',
             (a) => a?.addressLine2,
             (s) => s?.addressLine2,
             (p, b) => p?.addressLine2 = b),
-        addressLine3 = $options.field<String>(
+        addressLine3 = options$.field<String>(
             'addressLine3',
             (a) => a?.addressLine3,
             (s) => s?.addressLine3,
             (p, b) => p?.addressLine3 = b),
-        addressCity = $options.field<String>(
+        addressCity = options$.field<String>(
             'addressCity',
             (a) => a?.addressCity,
             (s) => s?.addressCity,
             (p, b) => p?.addressCity = b),
-        addressCounty = $options.field<String>(
+        addressCounty = options$.field<String>(
             'addressCounty',
             (a) => a?.addressCounty,
             (s) => s?.addressCounty,
             (p, b) => p?.addressCounty = b),
-        addressState = $options.field<String>(
+        addressState = options$.field<String>(
             'addressState',
             (a) => a?.addressState,
             (s) => s?.addressState,
             (p, b) => p?.addressState = b),
-        addressPostalCode = $options.field<String>(
+        addressPostalCode = options$.field<String>(
             'addressPostalCode',
             (a) => a?.addressPostalCode,
             (s) => s?.addressPostalCode,
             (p, b) => p?.addressPostalCode = b),
-        addressCountry = $options.field<String>(
+        addressCountry = options$.field<String>(
             'addressCountry',
             (a) => a?.addressCountry,
             (s) => s?.addressCountry,
             (p, b) => p?.addressCountry = b),
-        inventoryEnabled = $options.field<bool>(
+        inventoryEnabled = options$.field<bool>(
             'inventoryEnabled',
             (a) => a?.inventoryEnabled,
             (s) => s?.inventoryEnabled,
             (p, b) => p?.inventoryEnabled = b),
-        erpEnabled = $options.field<bool>('erpEnabled', (a) => a?.erpEnabled,
+        erpEnabled = options$.field<bool>('erpEnabled', (a) => a?.erpEnabled,
             (s) => s?.erpEnabled, (p, b) => p?.erpEnabled = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        password = $options.field<String>('password', (a) => a?.password,
+        password = options$.field<String>('password', (a) => a?.password,
             (s) => s?.password, (p, b) => p?.password = b),
         personName = PersonNameActions(() =>
-            $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
+            options$.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'personName',
                 (a) => a.personName,
                 (s) => s?.personName,
@@ -750,23 +750,23 @@ class _$SetupSystemApiRequestActions extends SetupSystemApiRequestActions {
       _$SetupSystemApiRequestActions._(options());
 
   @override
-  SetupSystemApiRequest get $initial => SetupSystemApiRequest();
+  SetupSystemApiRequest get initialState$ => SetupSystemApiRequest();
 
   @override
-  SetupSystemApiRequestBuilder $newBuilder() => SetupSystemApiRequestBuilder();
+  SetupSystemApiRequestBuilder newBuilder$() => SetupSystemApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
         this.personName,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orgName,
         this.orgReference,
         this.orgType,
@@ -788,38 +788,34 @@ class _$SetupSystemApiRequestActions extends SetupSystemApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orgName.$reducer(reducer);
-    orgReference.$reducer(reducer);
-    orgType.$reducer(reducer);
-    orgUnitName.$reducer(reducer);
-    orgUnitParentId.$reducer(reducer);
-    orgUnitReference.$reducer(reducer);
-    fileLocation.$reducer(reducer);
-    addressLine1.$reducer(reducer);
-    addressLine2.$reducer(reducer);
-    addressLine3.$reducer(reducer);
-    addressCity.$reducer(reducer);
-    addressCounty.$reducer(reducer);
-    addressState.$reducer(reducer);
-    addressPostalCode.$reducer(reducer);
-    addressCountry.$reducer(reducer);
-    inventoryEnabled.$reducer(reducer);
-    erpEnabled.$reducer(reducer);
-    email.$reducer(reducer);
-    password.$reducer(reducer);
-    personName.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orgName.reducer$(reducer);
+    orgReference.reducer$(reducer);
+    orgType.reducer$(reducer);
+    orgUnitName.reducer$(reducer);
+    orgUnitParentId.reducer$(reducer);
+    orgUnitReference.reducer$(reducer);
+    fileLocation.reducer$(reducer);
+    addressLine1.reducer$(reducer);
+    addressLine2.reducer$(reducer);
+    addressLine3.reducer$(reducer);
+    addressCity.reducer$(reducer);
+    addressCounty.reducer$(reducer);
+    addressState.reducer$(reducer);
+    addressPostalCode.reducer$(reducer);
+    addressCountry.reducer$(reducer);
+    inventoryEnabled.reducer$(reducer);
+    erpEnabled.reducer$(reducer);
+    email.reducer$(reducer);
+    password.reducer$(reducer);
+    personName.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    email.$middleware(middleware);
-    personName.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    email.middleware$(middleware);
+    personName.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(SetupSystemApiRequest);
 }

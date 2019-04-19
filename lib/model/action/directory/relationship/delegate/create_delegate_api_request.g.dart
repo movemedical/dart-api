@@ -218,21 +218,21 @@ class _$CreateDelegateApiRequestActions
   final StatefulActionsOptions<
       CreateDelegateApiRequest,
       CreateDelegateApiRequestBuilder,
-      CreateDelegateApiRequestActions> $options;
+      CreateDelegateApiRequestActions> options$;
 
-  final ActionDispatcher<CreateDelegateApiRequest> $replace;
+  final ActionDispatcher<CreateDelegateApiRequest> replace$;
   final FieldDispatcher<DirectoryNonPersonType> linkType;
   final FieldDispatcher<String> linkId;
   final FieldDispatcher<BuiltList<CreateDelegateApiDelegate>> delegates;
 
-  _$CreateDelegateApiRequestActions._(this.$options)
-      : $replace = $options.action<CreateDelegateApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        linkType = $options.field<DirectoryNonPersonType>('linkType',
+  _$CreateDelegateApiRequestActions._(this.options$)
+      : replace$ = options$.action<CreateDelegateApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        linkType = options$.field<DirectoryNonPersonType>('linkType',
             (a) => a?.linkType, (s) => s?.linkType, (p, b) => p?.linkType = b),
-        linkId = $options.field<String>('linkId', (a) => a?.linkId,
+        linkId = options$.field<String>('linkId', (a) => a?.linkId,
             (s) => s?.linkId, (p, b) => p?.linkId = b),
-        delegates = $options.field<BuiltList<CreateDelegateApiDelegate>>(
+        delegates = options$.field<BuiltList<CreateDelegateApiDelegate>>(
             'delegates',
             (a) => a?.delegates,
             (s) => s?.delegates,
@@ -244,36 +244,32 @@ class _$CreateDelegateApiRequestActions
       _$CreateDelegateApiRequestActions._(options());
 
   @override
-  CreateDelegateApiRequest get $initial => CreateDelegateApiRequest();
+  CreateDelegateApiRequest get initialState$ => CreateDelegateApiRequest();
 
   @override
-  CreateDelegateApiRequestBuilder $newBuilder() =>
+  CreateDelegateApiRequestBuilder newBuilder$() =>
       CreateDelegateApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.linkType,
         this.linkId,
         this.delegates,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    linkType.$reducer(reducer);
-    linkId.$reducer(reducer);
-    delegates.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    linkType.reducer$(reducer);
+    linkId.reducer$(reducer);
+    delegates.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateDelegateApiRequest);
 }

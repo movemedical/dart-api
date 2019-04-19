@@ -321,9 +321,9 @@ class BinBuilder implements Builder<Bin, BinBuilder> {
 typedef StatefulActionsOptions<Bin, BinBuilder, BinActions> BinActionsOptions();
 
 class _$BinActions extends BinActions {
-  final StatefulActionsOptions<Bin, BinBuilder, BinActions> $options;
+  final StatefulActionsOptions<Bin, BinBuilder, BinActions> options$;
 
-  final ActionDispatcher<Bin> $replace;
+  final ActionDispatcher<Bin> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> name;
@@ -334,41 +334,41 @@ class _$BinActions extends BinActions {
   final FieldDispatcher<int> position;
   final FieldDispatcher<bool> active;
 
-  _$BinActions._(this.$options)
-      : $replace = $options.action<Bin>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$BinActions._(this.options$)
+      : replace$ = options$.action<Bin>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        type = $options.field<BinType>(
+        type = options$.field<BinType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        aisle = $options.field<String>(
+        aisle = options$.field<String>(
             'aisle', (a) => a?.aisle, (s) => s?.aisle, (p, b) => p?.aisle = b),
-        section = $options.field<int>('section', (a) => a?.section,
+        section = options$.field<int>('section', (a) => a?.section,
             (s) => s?.section, (p, b) => p?.section = b),
-        shelf = $options.field<int>(
+        shelf = options$.field<int>(
             'shelf', (a) => a?.shelf, (s) => s?.shelf, (p, b) => p?.shelf = b),
-        position = $options.field<int>('position', (a) => a?.position,
+        position = options$.field<int>('position', (a) => a?.position,
             (s) => s?.position, (p, b) => p?.position = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
   factory _$BinActions(BinActionsOptions options) => _$BinActions._(options());
 
   @override
-  Bin get $initial => Bin();
+  Bin get initialState$ => Bin();
 
   @override
-  BinBuilder $newBuilder() => BinBuilder();
+  BinBuilder newBuilder$() => BinBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.facilityId,
         this.name,
@@ -381,25 +381,21 @@ class _$BinActions extends BinActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    name.$reducer(reducer);
-    type.$reducer(reducer);
-    aisle.$reducer(reducer);
-    section.$reducer(reducer);
-    shelf.$reducer(reducer);
-    position.$reducer(reducer);
-    active.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    name.reducer$(reducer);
+    type.reducer$(reducer);
+    aisle.reducer$(reducer);
+    section.reducer$(reducer);
+    shelf.reducer$(reducer);
+    position.reducer$(reducer);
+    active.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(Bin);
 }

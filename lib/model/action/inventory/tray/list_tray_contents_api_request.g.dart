@@ -156,15 +156,15 @@ class _$ListTrayContentsApiRequestActions
   final StatefulActionsOptions<
       ListTrayContentsApiRequest,
       ListTrayContentsApiRequestBuilder,
-      ListTrayContentsApiRequestActions> $options;
+      ListTrayContentsApiRequestActions> options$;
 
-  final ActionDispatcher<ListTrayContentsApiRequest> $replace;
+  final ActionDispatcher<ListTrayContentsApiRequest> replace$;
   final FieldDispatcher<String> trayStockId;
 
-  _$ListTrayContentsApiRequestActions._(this.$options)
-      : $replace = $options.action<ListTrayContentsApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        trayStockId = $options.field<String>(
+  _$ListTrayContentsApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListTrayContentsApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        trayStockId = options$.field<String>(
             'trayStockId',
             (a) => a?.trayStockId,
             (s) => s?.trayStockId,
@@ -176,32 +176,28 @@ class _$ListTrayContentsApiRequestActions
       _$ListTrayContentsApiRequestActions._(options());
 
   @override
-  ListTrayContentsApiRequest get $initial => ListTrayContentsApiRequest();
+  ListTrayContentsApiRequest get initialState$ => ListTrayContentsApiRequest();
 
   @override
-  ListTrayContentsApiRequestBuilder $newBuilder() =>
+  ListTrayContentsApiRequestBuilder newBuilder$() =>
       ListTrayContentsApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.trayStockId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    trayStockId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    trayStockId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListTrayContentsApiRequest);
 }

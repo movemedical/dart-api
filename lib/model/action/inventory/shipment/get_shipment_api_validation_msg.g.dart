@@ -228,30 +228,30 @@ class _$GetShipmentApiValidationMsgActions
   final StatefulActionsOptions<
       GetShipmentApiValidationMsg,
       GetShipmentApiValidationMsgBuilder,
-      GetShipmentApiValidationMsgActions> $options;
+      GetShipmentApiValidationMsgActions> options$;
 
-  final ActionDispatcher<GetShipmentApiValidationMsg> $replace;
+  final ActionDispatcher<GetShipmentApiValidationMsg> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> messageGroupId;
   final FieldDispatcher<ValidationMessageType> messageType;
   final FieldDispatcher<String> message;
 
-  _$GetShipmentApiValidationMsgActions._(this.$options)
-      : $replace = $options.action<GetShipmentApiValidationMsg>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetShipmentApiValidationMsgActions._(this.options$)
+      : replace$ = options$.action<GetShipmentApiValidationMsg>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        messageGroupId = $options.field<String>(
+        messageGroupId = options$.field<String>(
             'messageGroupId',
             (a) => a?.messageGroupId,
             (s) => s?.messageGroupId,
             (p, b) => p?.messageGroupId = b),
-        messageType = $options.field<ValidationMessageType>(
+        messageType = options$.field<ValidationMessageType>(
             'messageType',
             (a) => a?.messageType,
             (s) => s?.messageType,
             (p, b) => p?.messageType = b),
-        message = $options.field<String>('message', (a) => a?.message,
+        message = options$.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
         super._();
 
@@ -260,17 +260,18 @@ class _$GetShipmentApiValidationMsgActions
       _$GetShipmentApiValidationMsgActions._(options());
 
   @override
-  GetShipmentApiValidationMsg get $initial => GetShipmentApiValidationMsg();
+  GetShipmentApiValidationMsg get initialState$ =>
+      GetShipmentApiValidationMsg();
 
   @override
-  GetShipmentApiValidationMsgBuilder $newBuilder() =>
+  GetShipmentApiValidationMsgBuilder newBuilder$() =>
       GetShipmentApiValidationMsgBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.messageGroupId,
         this.messageType,
@@ -278,21 +279,16 @@ class _$GetShipmentApiValidationMsgActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    messageGroupId.$reducer(reducer);
-    messageType.$reducer(reducer);
-    message.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    messageGroupId.reducer$(reducer);
+    messageType.reducer$(reducer);
+    message.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetShipmentApiValidationMsg);
 }

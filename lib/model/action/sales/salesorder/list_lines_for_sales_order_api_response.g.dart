@@ -180,17 +180,17 @@ class _$ListLinesForSalesOrderApiResponseActions
   final StatefulActionsOptions<
       ListLinesForSalesOrderApiResponse,
       ListLinesForSalesOrderApiResponseBuilder,
-      ListLinesForSalesOrderApiResponseActions> $options;
+      ListLinesForSalesOrderApiResponseActions> options$;
 
-  final ActionDispatcher<ListLinesForSalesOrderApiResponse> $replace;
+  final ActionDispatcher<ListLinesForSalesOrderApiResponse> replace$;
   final FieldDispatcher<BuiltList<ListLinesForSalesOrderApiOrderLine>>
       orderLines;
 
-  _$ListLinesForSalesOrderApiResponseActions._(this.$options)
-      : $replace = $options.action<ListLinesForSalesOrderApiResponse>(
-            '\$replace', (a) => a?.$replace),
+  _$ListLinesForSalesOrderApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListLinesForSalesOrderApiResponse>(
+            'replace\$', (a) => a?.replace$),
         orderLines =
-            $options.field<BuiltList<ListLinesForSalesOrderApiOrderLine>>(
+            options$.field<BuiltList<ListLinesForSalesOrderApiOrderLine>>(
                 'orderLines',
                 (a) => a?.orderLines,
                 (s) => s?.orderLines,
@@ -202,34 +202,29 @@ class _$ListLinesForSalesOrderApiResponseActions
       _$ListLinesForSalesOrderApiResponseActions._(options());
 
   @override
-  ListLinesForSalesOrderApiResponse get $initial =>
+  ListLinesForSalesOrderApiResponse get initialState$ =>
       ListLinesForSalesOrderApiResponse();
 
   @override
-  ListLinesForSalesOrderApiResponseBuilder $newBuilder() =>
+  ListLinesForSalesOrderApiResponseBuilder newBuilder$() =>
       ListLinesForSalesOrderApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.orderLines,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    orderLines.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    orderLines.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListLinesForSalesOrderApiResponse);
 }

@@ -305,9 +305,9 @@ typedef StatefulActionsOptions<ListStockApiStock, ListStockApiStockBuilder,
 
 class _$ListStockApiStockActions extends ListStockApiStockActions {
   final StatefulActionsOptions<ListStockApiStock, ListStockApiStockBuilder,
-      ListStockApiStockActions> $options;
+      ListStockApiStockActions> options$;
 
-  final ActionDispatcher<ListStockApiStock> $replace;
+  final ActionDispatcher<ListStockApiStock> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> number;
   final FieldDispatcher<bool> allocated;
@@ -317,24 +317,24 @@ class _$ListStockApiStockActions extends ListStockApiStockActions {
   final FieldDispatcher<String> tagId;
   final FieldDispatcher<String> tagNumber;
 
-  _$ListStockApiStockActions._(this.$options)
-      : $replace =
-            $options.action<ListStockApiStock>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$ListStockApiStockActions._(this.options$)
+      : replace$ =
+            options$.action<ListStockApiStock>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        allocated = $options.field<bool>('allocated', (a) => a?.allocated,
+        allocated = options$.field<bool>('allocated', (a) => a?.allocated,
             (s) => s?.allocated, (p, b) => p?.allocated = b),
-        onHold = $options.field<bool>('onHold', (a) => a?.onHold,
+        onHold = options$.field<bool>('onHold', (a) => a?.onHold,
             (s) => s?.onHold, (p, b) => p?.onHold = b),
-        lost = $options.field<bool>(
+        lost = options$.field<bool>(
             'lost', (a) => a?.lost, (s) => s?.lost, (p, b) => p?.lost = b),
-        found = $options.field<bool>(
+        found = options$.field<bool>(
             'found', (a) => a?.found, (s) => s?.found, (p, b) => p?.found = b),
-        tagId = $options.field<String>(
+        tagId = options$.field<String>(
             'tagId', (a) => a?.tagId, (s) => s?.tagId, (p, b) => p?.tagId = b),
-        tagNumber = $options.field<String>('tagNumber', (a) => a?.tagNumber,
+        tagNumber = options$.field<String>('tagNumber', (a) => a?.tagNumber,
             (s) => s?.tagNumber, (p, b) => p?.tagNumber = b),
         super._();
 
@@ -342,16 +342,16 @@ class _$ListStockApiStockActions extends ListStockApiStockActions {
       _$ListStockApiStockActions._(options());
 
   @override
-  ListStockApiStock get $initial => ListStockApiStock();
+  ListStockApiStock get initialState$ => ListStockApiStock();
 
   @override
-  ListStockApiStockBuilder $newBuilder() => ListStockApiStockBuilder();
+  ListStockApiStockBuilder newBuilder$() => ListStockApiStockBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.number,
         this.allocated,
@@ -363,24 +363,20 @@ class _$ListStockApiStockActions extends ListStockApiStockActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    number.$reducer(reducer);
-    allocated.$reducer(reducer);
-    onHold.$reducer(reducer);
-    lost.$reducer(reducer);
-    found.$reducer(reducer);
-    tagId.$reducer(reducer);
-    tagNumber.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    number.reducer$(reducer);
+    allocated.reducer$(reducer);
+    onHold.reducer$(reducer);
+    lost.reducer$(reducer);
+    found.reducer$(reducer);
+    tagId.reducer$(reducer);
+    tagNumber.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListStockApiStock);
 }

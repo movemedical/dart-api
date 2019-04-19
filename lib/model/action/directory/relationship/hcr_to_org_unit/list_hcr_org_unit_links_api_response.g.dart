@@ -196,18 +196,18 @@ class _$ListHcrOrgUnitLinksApiResponseActions
   final StatefulActionsOptions<
       ListHcrOrgUnitLinksApiResponse,
       ListHcrOrgUnitLinksApiResponseBuilder,
-      ListHcrOrgUnitLinksApiResponseActions> $options;
+      ListHcrOrgUnitLinksApiResponseActions> options$;
 
-  final ActionDispatcher<ListHcrOrgUnitLinksApiResponse> $replace;
+  final ActionDispatcher<ListHcrOrgUnitLinksApiResponse> replace$;
   final FieldDispatcher<BuiltList<OrgUnitLink>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListHcrOrgUnitLinksApiResponseActions._(this.$options)
-      : $replace = $options.action<ListHcrOrgUnitLinksApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<OrgUnitLink>>(
+  _$ListHcrOrgUnitLinksApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListHcrOrgUnitLinksApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<OrgUnitLink>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -216,36 +216,31 @@ class _$ListHcrOrgUnitLinksApiResponseActions
       _$ListHcrOrgUnitLinksApiResponseActions._(options());
 
   @override
-  ListHcrOrgUnitLinksApiResponse get $initial =>
+  ListHcrOrgUnitLinksApiResponse get initialState$ =>
       ListHcrOrgUnitLinksApiResponse();
 
   @override
-  ListHcrOrgUnitLinksApiResponseBuilder $newBuilder() =>
+  ListHcrOrgUnitLinksApiResponseBuilder newBuilder$() =>
       ListHcrOrgUnitLinksApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(ListHcrOrgUnitLinksApiResponse);
 }

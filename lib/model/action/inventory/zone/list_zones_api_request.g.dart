@@ -307,9 +307,9 @@ typedef StatefulActionsOptions<ListZonesApiRequest, ListZonesApiRequestBuilder,
 
 class _$ListZonesApiRequestActions extends ListZonesApiRequestActions {
   final StatefulActionsOptions<ListZonesApiRequest, ListZonesApiRequestBuilder,
-      ListZonesApiRequestActions> $options;
+      ListZonesApiRequestActions> options$;
 
-  final ActionDispatcher<ListZonesApiRequest> $replace;
+  final ActionDispatcher<ListZonesApiRequest> replace$;
   final FieldDispatcher<String> search;
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> zoneId;
@@ -318,20 +318,20 @@ class _$ListZonesApiRequestActions extends ListZonesApiRequestActions {
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListZonesApiOrderBy> orderBy;
 
-  _$ListZonesApiRequestActions._(this.$options)
-      : $replace = $options.action<ListZonesApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        search = $options.field<String>('search', (a) => a?.search,
+  _$ListZonesApiRequestActions._(this.options$)
+      : replace$ = options$.action<ListZonesApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+        facilityId = options$.field<String>('facilityId', (a) => a?.facilityId,
             (s) => s?.facilityId, (p, b) => p?.facilityId = b),
-        zoneId = $options.field<String>('zoneId', (a) => a?.zoneId,
+        zoneId = options$.field<String>('zoneId', (a) => a?.zoneId,
             (s) => s?.zoneId, (p, b) => p?.zoneId = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        type = $options.field<ZoneType>(
+        type = options$.field<ZoneType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        paging = PaginationParamsActions(() => $options.stateful<
+        paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
                 PaginationParamsActions>(
@@ -341,7 +341,7 @@ class _$ListZonesApiRequestActions extends ListZonesApiRequestActions {
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
         orderBy = OrderByParamsActions<ListZonesApiOrderBy>(() =>
-            $options.stateful<
+            options$.stateful<
                     OrderByParams<ListZonesApiOrderBy>,
                     OrderByParamsBuilder<ListZonesApiOrderBy>,
                     OrderByParamsActions<ListZonesApiOrderBy>>(
@@ -357,23 +357,23 @@ class _$ListZonesApiRequestActions extends ListZonesApiRequestActions {
       _$ListZonesApiRequestActions._(options());
 
   @override
-  ListZonesApiRequest get $initial => ListZonesApiRequest();
+  ListZonesApiRequest get initialState$ => ListZonesApiRequest();
 
   @override
-  ListZonesApiRequestBuilder $newBuilder() => ListZonesApiRequestBuilder();
+  ListZonesApiRequestBuilder newBuilder$() => ListZonesApiRequestBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
         this.orderBy,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.search,
         this.facilityId,
         this.zoneId,
@@ -382,25 +382,21 @@ class _$ListZonesApiRequestActions extends ListZonesApiRequestActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    search.$reducer(reducer);
-    facilityId.$reducer(reducer);
-    zoneId.$reducer(reducer);
-    active.$reducer(reducer);
-    type.$reducer(reducer);
-    paging.$reducer(reducer);
-    orderBy.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    search.reducer$(reducer);
+    facilityId.reducer$(reducer);
+    zoneId.reducer$(reducer);
+    active.reducer$(reducer);
+    type.reducer$(reducer);
+    paging.reducer$(reducer);
+    orderBy.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    paging.$middleware(middleware);
-    orderBy.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    paging.middleware$(middleware);
+    orderBy.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListZonesApiRequest);
 }

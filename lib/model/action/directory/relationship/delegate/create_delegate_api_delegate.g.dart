@@ -178,18 +178,18 @@ class _$CreateDelegateApiDelegateActions
   final StatefulActionsOptions<
       CreateDelegateApiDelegate,
       CreateDelegateApiDelegateBuilder,
-      CreateDelegateApiDelegateActions> $options;
+      CreateDelegateApiDelegateActions> options$;
 
-  final ActionDispatcher<CreateDelegateApiDelegate> $replace;
+  final ActionDispatcher<CreateDelegateApiDelegate> replace$;
   final FieldDispatcher<String> delegateId;
   final FieldDispatcher<DelegateType> delegateType;
 
-  _$CreateDelegateApiDelegateActions._(this.$options)
-      : $replace = $options.action<CreateDelegateApiDelegate>(
-            '\$replace', (a) => a?.$replace),
-        delegateId = $options.field<String>('delegateId', (a) => a?.delegateId,
+  _$CreateDelegateApiDelegateActions._(this.options$)
+      : replace$ = options$.action<CreateDelegateApiDelegate>(
+            'replace\$', (a) => a?.replace$),
+        delegateId = options$.field<String>('delegateId', (a) => a?.delegateId,
             (s) => s?.delegateId, (p, b) => p?.delegateId = b),
-        delegateType = $options.field<DelegateType>(
+        delegateType = options$.field<DelegateType>(
             'delegateType',
             (a) => a?.delegateType,
             (s) => s?.delegateType,
@@ -201,34 +201,30 @@ class _$CreateDelegateApiDelegateActions
       _$CreateDelegateApiDelegateActions._(options());
 
   @override
-  CreateDelegateApiDelegate get $initial => CreateDelegateApiDelegate();
+  CreateDelegateApiDelegate get initialState$ => CreateDelegateApiDelegate();
 
   @override
-  CreateDelegateApiDelegateBuilder $newBuilder() =>
+  CreateDelegateApiDelegateBuilder newBuilder$() =>
       CreateDelegateApiDelegateBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.delegateId,
         this.delegateType,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    delegateId.$reducer(reducer);
-    delegateType.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    delegateId.reducer$(reducer);
+    delegateType.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CreateDelegateApiDelegate);
 }

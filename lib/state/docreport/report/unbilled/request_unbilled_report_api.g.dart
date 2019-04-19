@@ -22,63 +22,29 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestUnbilledReportApiRequest>,
           ApiResult<Nothing>>,
-      RequestUnbilledReportApi> $options;
+      RequestUnbilledReportApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Nothing>, RequestUnbilledReportApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestUnbilledReportApi,
-          Command<ApiCommand<RequestUnbilledReportApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestUnbilledReportApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Nothing>,
-          RequestUnbilledReportApi,
-          CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<RequestUnbilledReportApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$RequestUnbilledReportApi._(this.$options)
-      : $replace = $options.action<
+  _$RequestUnbilledReportApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Nothing>,
-                RequestUnbilledReportApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestUnbilledReportApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestUnbilledReportApi,
-                    Command<ApiCommand<RequestUnbilledReportApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<RequestUnbilledReportApiRequest>,
-                    ApiResult<Nothing>,
-                    RequestUnbilledReportApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Nothing>,
-                RequestUnbilledReportApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<RequestUnbilledReportApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$RequestUnbilledReportApi(RequestUnbilledReportApiOptions options) =>
@@ -86,31 +52,24 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
 
   @override
   CommandState<ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Nothing>>
-      get $initial => CommandState<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Nothing>>();
+      get initialState$ => CommandState<
+          ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestUnbilledReportApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(RequestUnbilledReportApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

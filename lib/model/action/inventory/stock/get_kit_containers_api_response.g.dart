@@ -177,15 +177,15 @@ class _$GetKitContainersApiResponseActions
   final StatefulActionsOptions<
       GetKitContainersApiResponse,
       GetKitContainersApiResponseBuilder,
-      GetKitContainersApiResponseActions> $options;
+      GetKitContainersApiResponseActions> options$;
 
-  final ActionDispatcher<GetKitContainersApiResponse> $replace;
+  final ActionDispatcher<GetKitContainersApiResponse> replace$;
   final FieldDispatcher<BuiltList<GetStockApiStock>> containers;
 
-  _$GetKitContainersApiResponseActions._(this.$options)
-      : $replace = $options.action<GetKitContainersApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        containers = $options.field<BuiltList<GetStockApiStock>>(
+  _$GetKitContainersApiResponseActions._(this.options$)
+      : replace$ = options$.action<GetKitContainersApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        containers = options$.field<BuiltList<GetStockApiStock>>(
             'containers',
             (a) => a?.containers,
             (s) => s?.containers,
@@ -197,33 +197,29 @@ class _$GetKitContainersApiResponseActions
       _$GetKitContainersApiResponseActions._(options());
 
   @override
-  GetKitContainersApiResponse get $initial => GetKitContainersApiResponse();
+  GetKitContainersApiResponse get initialState$ =>
+      GetKitContainersApiResponse();
 
   @override
-  GetKitContainersApiResponseBuilder $newBuilder() =>
+  GetKitContainersApiResponseBuilder newBuilder$() =>
       GetKitContainersApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.containers,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    containers.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    containers.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetKitContainersApiResponse);
 }

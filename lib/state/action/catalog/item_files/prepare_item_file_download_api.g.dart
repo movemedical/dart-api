@@ -22,69 +22,32 @@ class _$PrepareItemFileDownloadApi extends PrepareItemFileDownloadApi {
           ApiResult<PrepareItemFileDownloadApiResponse>>,
       CommandStateBuilder<ApiCommand<PrepareItemFileDownloadApiRequest>,
           ApiResult<PrepareItemFileDownloadApiResponse>>,
-      PrepareItemFileDownloadApi> $options;
+      PrepareItemFileDownloadApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<PrepareItemFileDownloadApiRequest>,
-          ApiResult<PrepareItemFileDownloadApiResponse>>> $replace;
+          ApiResult<PrepareItemFileDownloadApiResponse>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<PrepareItemFileDownloadApiRequest>>>
+      execute$;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareItemFileDownloadApiRequest>,
-          ApiResult<PrepareItemFileDownloadApiResponse>,
-          PrepareItemFileDownloadApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareItemFileDownloadApiRequest>,
-          ApiResult<PrepareItemFileDownloadApiResponse>,
-          PrepareItemFileDownloadApi,
-          Command<ApiCommand<PrepareItemFileDownloadApiRequest>>>> $execute;
-  final ActionDispatcher<
-          CommandPayload<
-              ApiCommand<PrepareItemFileDownloadApiRequest>,
-              ApiResult<PrepareItemFileDownloadApiResponse>,
-              PrepareItemFileDownloadApi,
-              CommandResult<ApiResult<PrepareItemFileDownloadApiResponse>>>>
-      $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareItemFileDownloadApiRequest>,
-          ApiResult<PrepareItemFileDownloadApiResponse>,
-          PrepareItemFileDownloadApi,
-          CommandProgress>> $progress;
+      CommandResult<ApiResult<PrepareItemFileDownloadApiResponse>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$PrepareItemFileDownloadApi._(this.$options)
-      : $replace = $options.action<
+  _$PrepareItemFileDownloadApi._(this.options$)
+      : replace$ = options$.action<
                 CommandState<ApiCommand<PrepareItemFileDownloadApiRequest>,
                     ApiResult<PrepareItemFileDownloadApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareItemFileDownloadApiRequest>,
-                ApiResult<PrepareItemFileDownloadApiResponse>,
-                PrepareItemFileDownloadApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<PrepareItemFileDownloadApiRequest>,
-                    ApiResult<PrepareItemFileDownloadApiResponse>,
-                    PrepareItemFileDownloadApi,
-                    Command<ApiCommand<PrepareItemFileDownloadApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<PrepareItemFileDownloadApiRequest>,
-                    ApiResult<PrepareItemFileDownloadApiResponse>,
-                    PrepareItemFileDownloadApi,
-                    CommandResult<
-                        ApiResult<PrepareItemFileDownloadApiResponse>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareItemFileDownloadApiRequest>,
-                ApiResult<PrepareItemFileDownloadApiResponse>,
-                PrepareItemFileDownloadApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+            'replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<PrepareItemFileDownloadApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<
+                CommandResult<ApiResult<PrepareItemFileDownloadApiResponse>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$PrepareItemFileDownloadApi(
@@ -94,33 +57,26 @@ class _$PrepareItemFileDownloadApi extends PrepareItemFileDownloadApi {
   @override
   CommandState<ApiCommand<PrepareItemFileDownloadApiRequest>,
           ApiResult<PrepareItemFileDownloadApiResponse>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<PrepareItemFileDownloadApiRequest>,
           ApiResult<PrepareItemFileDownloadApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<PrepareItemFileDownloadApiRequest>,
           ApiResult<PrepareItemFileDownloadApiResponse>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<PrepareItemFileDownloadApiRequest>,
           ApiResult<PrepareItemFileDownloadApiResponse>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(PrepareItemFileDownloadApiRequest)]),
-        FullType(ApiResult, [FullType(PrepareItemFileDownloadApiResponse)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

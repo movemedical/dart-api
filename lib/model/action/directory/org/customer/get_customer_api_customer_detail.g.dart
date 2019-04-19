@@ -620,9 +620,9 @@ class _$GetCustomerApiCustomerDetailActions
   final StatefulActionsOptions<
       GetCustomerApiCustomerDetail,
       GetCustomerApiCustomerDetailBuilder,
-      GetCustomerApiCustomerDetailActions> $options;
+      GetCustomerApiCustomerDetailActions> options$;
 
-  final ActionDispatcher<GetCustomerApiCustomerDetail> $replace;
+  final ActionDispatcher<GetCustomerApiCustomerDetail> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> number;
@@ -643,24 +643,24 @@ class _$GetCustomerApiCustomerDetailActions
   final FieldDispatcher<bool> moveManaged;
   final FieldDispatcher<BuiltList<AttributeContact>> attributeContacts;
 
-  _$GetCustomerApiCustomerDetailActions._(this.$options)
-      : $replace = $options.action<GetCustomerApiCustomerDetail>(
-            '\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$GetCustomerApiCustomerDetailActions._(this.options$)
+      : replace$ = options$.action<GetCustomerApiCustomerDetail>(
+            'replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.field<String>(
+        name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        number = $options.field<String>('number', (a) => a?.number,
+        number = options$.field<String>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        orgId = $options.field<String>(
+        orgId = options$.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgName = $options.field<String>('orgName', (a) => a?.orgName,
+        orgName = options$.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        hsOrgId = $options.field<String>('hsOrgId', (a) => a?.hsOrgId,
+        hsOrgId = options$.field<String>('hsOrgId', (a) => a?.hsOrgId,
             (s) => s?.hsOrgId, (p, b) => p?.hsOrgId = b),
-        hsOrgName = $options.field<String>('hsOrgName', (a) => a?.hsOrgName,
+        hsOrgName = options$.field<String>('hsOrgName', (a) => a?.hsOrgName,
             (s) => s?.hsOrgName, (p, b) => p?.hsOrgName = b),
-        defaultShipTo = CustomerAddressActions(() => $options.stateful<
+        defaultShipTo = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -669,7 +669,7 @@ class _$GetCustomerApiCustomerDetailActions
             (s) => s?.defaultShipTo,
             (b) => b?.defaultShipTo,
             (parent, builder) => parent?.defaultShipTo = builder)),
-        defaultBillTo = CustomerAddressActions(() => $options.stateful<
+        defaultBillTo = CustomerAddressActions(() => options$.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
                 CustomerAddressActions>(
@@ -678,44 +678,44 @@ class _$GetCustomerApiCustomerDetailActions
             (s) => s?.defaultBillTo,
             (b) => b?.defaultBillTo,
             (parent, builder) => parent?.defaultBillTo = builder)),
-        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
         email = EmailActions(() =>
-            $options.stateful<Email, EmailBuilder, EmailActions>(
+            options$.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
                 (a) => a.email,
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        phoneNumber = PhoneNumberActions(() => $options
+        phoneNumber = PhoneNumberActions(() => options$
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'phoneNumber',
                 (a) => a.phoneNumber,
                 (s) => s?.phoneNumber,
                 (b) => b?.phoneNumber,
                 (parent, builder) => parent?.phoneNumber = builder)),
-        description = $options.field<String>(
+        description = options$.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        publicListing = $options.field<bool>(
+        publicListing = options$.field<bool>(
             'publicListing',
             (a) => a?.publicListing,
             (s) => s?.publicListing,
             (p, b) => p?.publicListing = b),
-        creditHold = $options.field<bool>('creditHold', (a) => a?.creditHold,
+        creditHold = options$.field<bool>('creditHold', (a) => a?.creditHold,
             (s) => s?.creditHold, (p, b) => p?.creditHold = b),
-        paymentTerms = $options.field<String>(
+        paymentTerms = options$.field<String>(
             'paymentTerms',
             (a) => a?.paymentTerms,
             (s) => s?.paymentTerms,
             (p, b) => p?.paymentTerms = b),
-        active = $options.field<bool>('active', (a) => a?.active,
+        active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        moveManaged = $options.field<bool>('moveManaged', (a) => a?.moveManaged,
+        moveManaged = options$.field<bool>('moveManaged', (a) => a?.moveManaged,
             (s) => s?.moveManaged, (p, b) => p?.moveManaged = b),
-        attributeContacts = $options.field<BuiltList<AttributeContact>>(
+        attributeContacts = options$.field<BuiltList<AttributeContact>>(
             'attributeContacts',
             (a) => a?.attributeContacts,
             (s) => s?.attributeContacts,
@@ -727,26 +727,27 @@ class _$GetCustomerApiCustomerDetailActions
       _$GetCustomerApiCustomerDetailActions._(options());
 
   @override
-  GetCustomerApiCustomerDetail get $initial => GetCustomerApiCustomerDetail();
+  GetCustomerApiCustomerDetail get initialState$ =>
+      GetCustomerApiCustomerDetail();
 
   @override
-  GetCustomerApiCustomerDetailBuilder $newBuilder() =>
+  GetCustomerApiCustomerDetailBuilder newBuilder$() =>
       GetCustomerApiCustomerDetailBuilder();
 
-  BuiltList<ModuxActions> _$nested;
+  BuiltList<ModuxActions> _nested$;
   @override
-  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+  BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.defaultShipTo,
         this.defaultBillTo,
         this.email,
         this.phoneNumber,
       ]);
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.name,
         this.number,
@@ -765,40 +766,35 @@ class _$GetCustomerApiCustomerDetailActions
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    name.$reducer(reducer);
-    number.$reducer(reducer);
-    orgId.$reducer(reducer);
-    orgName.$reducer(reducer);
-    hsOrgId.$reducer(reducer);
-    hsOrgName.$reducer(reducer);
-    defaultShipTo.$reducer(reducer);
-    defaultBillTo.$reducer(reducer);
-    timeZone.$reducer(reducer);
-    email.$reducer(reducer);
-    phoneNumber.$reducer(reducer);
-    description.$reducer(reducer);
-    publicListing.$reducer(reducer);
-    creditHold.$reducer(reducer);
-    paymentTerms.$reducer(reducer);
-    active.$reducer(reducer);
-    moveManaged.$reducer(reducer);
-    attributeContacts.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    name.reducer$(reducer);
+    number.reducer$(reducer);
+    orgId.reducer$(reducer);
+    orgName.reducer$(reducer);
+    hsOrgId.reducer$(reducer);
+    hsOrgName.reducer$(reducer);
+    defaultShipTo.reducer$(reducer);
+    defaultBillTo.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    email.reducer$(reducer);
+    phoneNumber.reducer$(reducer);
+    description.reducer$(reducer);
+    publicListing.reducer$(reducer);
+    creditHold.reducer$(reducer);
+    paymentTerms.reducer$(reducer);
+    active.reducer$(reducer);
+    moveManaged.reducer$(reducer);
+    attributeContacts.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
-    defaultShipTo.$middleware(middleware);
-    defaultBillTo.$middleware(middleware);
-    email.$middleware(middleware);
-    phoneNumber.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
+    defaultShipTo.middleware$(middleware);
+    defaultBillTo.middleware$(middleware);
+    email.middleware$(middleware);
+    phoneNumber.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(GetCustomerApiCustomerDetail);
 }

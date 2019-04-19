@@ -181,18 +181,18 @@ class _$AdjustStockQuantityApiAdjustmentActions
   final StatefulActionsOptions<
       AdjustStockQuantityApiAdjustment,
       AdjustStockQuantityApiAdjustmentBuilder,
-      AdjustStockQuantityApiAdjustmentActions> $options;
+      AdjustStockQuantityApiAdjustmentActions> options$;
 
-  final ActionDispatcher<AdjustStockQuantityApiAdjustment> $replace;
+  final ActionDispatcher<AdjustStockQuantityApiAdjustment> replace$;
   final FieldDispatcher<String> summaryId;
   final FieldDispatcher<int> qtyChange;
 
-  _$AdjustStockQuantityApiAdjustmentActions._(this.$options)
-      : $replace = $options.action<AdjustStockQuantityApiAdjustment>(
-            '\$replace', (a) => a?.$replace),
-        summaryId = $options.field<String>('summaryId', (a) => a?.summaryId,
+  _$AdjustStockQuantityApiAdjustmentActions._(this.options$)
+      : replace$ = options$.action<AdjustStockQuantityApiAdjustment>(
+            'replace\$', (a) => a?.replace$),
+        summaryId = options$.field<String>('summaryId', (a) => a?.summaryId,
             (s) => s?.summaryId, (p, b) => p?.summaryId = b),
-        qtyChange = $options.field<int>('qtyChange', (a) => a?.qtyChange,
+        qtyChange = options$.field<int>('qtyChange', (a) => a?.qtyChange,
             (s) => s?.qtyChange, (p, b) => p?.qtyChange = b),
         super._();
 
@@ -201,36 +201,31 @@ class _$AdjustStockQuantityApiAdjustmentActions
       _$AdjustStockQuantityApiAdjustmentActions._(options());
 
   @override
-  AdjustStockQuantityApiAdjustment get $initial =>
+  AdjustStockQuantityApiAdjustment get initialState$ =>
       AdjustStockQuantityApiAdjustment();
 
   @override
-  AdjustStockQuantityApiAdjustmentBuilder $newBuilder() =>
+  AdjustStockQuantityApiAdjustmentBuilder newBuilder$() =>
       AdjustStockQuantityApiAdjustmentBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.summaryId,
         this.qtyChange,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    summaryId.$reducer(reducer);
-    qtyChange.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    summaryId.reducer$(reducer);
+    qtyChange.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(AdjustStockQuantityApiAdjustment);
 }

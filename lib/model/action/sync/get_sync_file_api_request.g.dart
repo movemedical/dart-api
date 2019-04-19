@@ -170,18 +170,18 @@ typedef StatefulActionsOptions<
 
 class _$GetSyncFileApiRequestActions extends GetSyncFileApiRequestActions {
   final StatefulActionsOptions<GetSyncFileApiRequest,
-      GetSyncFileApiRequestBuilder, GetSyncFileApiRequestActions> $options;
+      GetSyncFileApiRequestBuilder, GetSyncFileApiRequestActions> options$;
 
-  final ActionDispatcher<GetSyncFileApiRequest> $replace;
+  final ActionDispatcher<GetSyncFileApiRequest> replace$;
   final FieldDispatcher<String> deviceId;
   final FieldDispatcher<String> ackId;
 
-  _$GetSyncFileApiRequestActions._(this.$options)
-      : $replace = $options.action<GetSyncFileApiRequest>(
-            '\$replace', (a) => a?.$replace),
-        deviceId = $options.field<String>('deviceId', (a) => a?.deviceId,
+  _$GetSyncFileApiRequestActions._(this.options$)
+      : replace$ = options$.action<GetSyncFileApiRequest>(
+            'replace\$', (a) => a?.replace$),
+        deviceId = options$.field<String>('deviceId', (a) => a?.deviceId,
             (s) => s?.deviceId, (p, b) => p?.deviceId = b),
-        ackId = $options.field<String>(
+        ackId = options$.field<String>(
             'ackId', (a) => a?.ackId, (s) => s?.ackId, (p, b) => p?.ackId = b),
         super._();
 
@@ -190,33 +190,29 @@ class _$GetSyncFileApiRequestActions extends GetSyncFileApiRequestActions {
       _$GetSyncFileApiRequestActions._(options());
 
   @override
-  GetSyncFileApiRequest get $initial => GetSyncFileApiRequest();
+  GetSyncFileApiRequest get initialState$ => GetSyncFileApiRequest();
 
   @override
-  GetSyncFileApiRequestBuilder $newBuilder() => GetSyncFileApiRequestBuilder();
+  GetSyncFileApiRequestBuilder newBuilder$() => GetSyncFileApiRequestBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.deviceId,
         this.ackId,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    deviceId.$reducer(reducer);
-    ackId.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    deviceId.reducer$(reducer);
+    ackId.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetSyncFileApiRequest);
 }

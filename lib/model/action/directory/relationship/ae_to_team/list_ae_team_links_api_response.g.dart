@@ -192,18 +192,18 @@ class _$ListAeTeamLinksApiResponseActions
   final StatefulActionsOptions<
       ListAeTeamLinksApiResponse,
       ListAeTeamLinksApiResponseBuilder,
-      ListAeTeamLinksApiResponseActions> $options;
+      ListAeTeamLinksApiResponseActions> options$;
 
-  final ActionDispatcher<ListAeTeamLinksApiResponse> $replace;
+  final ActionDispatcher<ListAeTeamLinksApiResponse> replace$;
   final FieldDispatcher<BuiltList<TeamLink>> data;
   final FieldDispatcher<bool> moreData;
 
-  _$ListAeTeamLinksApiResponseActions._(this.$options)
-      : $replace = $options.action<ListAeTeamLinksApiResponse>(
-            '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<TeamLink>>(
+  _$ListAeTeamLinksApiResponseActions._(this.options$)
+      : replace$ = options$.action<ListAeTeamLinksApiResponse>(
+            'replace\$', (a) => a?.replace$),
+        data = options$.field<BuiltList<TeamLink>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
+        moreData = options$.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -212,34 +212,30 @@ class _$ListAeTeamLinksApiResponseActions
       _$ListAeTeamLinksApiResponseActions._(options());
 
   @override
-  ListAeTeamLinksApiResponse get $initial => ListAeTeamLinksApiResponse();
+  ListAeTeamLinksApiResponse get initialState$ => ListAeTeamLinksApiResponse();
 
   @override
-  ListAeTeamLinksApiResponseBuilder $newBuilder() =>
+  ListAeTeamLinksApiResponseBuilder newBuilder$() =>
       ListAeTeamLinksApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.data,
         this.moreData,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    data.$reducer(reducer);
-    moreData.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    data.reducer$(reducer);
+    moreData.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(ListAeTeamLinksApiResponse);
 }

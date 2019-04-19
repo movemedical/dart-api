@@ -253,9 +253,9 @@ typedef StatefulActionsOptions<LoanLite, LoanLiteBuilder,
 
 class _$LoanLiteActions extends LoanLiteActions {
   final StatefulActionsOptions<LoanLite, LoanLiteBuilder, LoanLiteActions>
-      $options;
+      options$;
 
-  final ActionDispatcher<LoanLite> $replace;
+  final ActionDispatcher<LoanLite> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> number;
   final FieldDispatcher<LoanStatus> status;
@@ -263,22 +263,22 @@ class _$LoanLiteActions extends LoanLiteActions {
   final FieldDispatcher<int> daysLate;
   final FieldDispatcher<LoanReason> reason;
 
-  _$LoanLiteActions._(this.$options)
-      : $replace = $options.action<LoanLite>('\$replace', (a) => a?.$replace),
-        id = $options.field<String>(
+  _$LoanLiteActions._(this.options$)
+      : replace$ = options$.action<LoanLite>('replace\$', (a) => a?.replace$),
+        id = options$.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.field<int>('number', (a) => a?.number,
+        number = options$.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.field<LoanStatus>('status', (a) => a?.status,
+        status = options$.field<LoanStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        serviceEndDate = $options.field<DateTime>(
+        serviceEndDate = options$.field<DateTime>(
             'serviceEndDate',
             (a) => a?.serviceEndDate,
             (s) => s?.serviceEndDate,
             (p, b) => p?.serviceEndDate = b),
-        daysLate = $options.field<int>('daysLate', (a) => a?.daysLate,
+        daysLate = options$.field<int>('daysLate', (a) => a?.daysLate,
             (s) => s?.daysLate, (p, b) => p?.daysLate = b),
-        reason = $options.field<LoanReason>('reason', (a) => a?.reason,
+        reason = options$.field<LoanReason>('reason', (a) => a?.reason,
             (s) => s?.reason, (p, b) => p?.reason = b),
         super._();
 
@@ -286,16 +286,16 @@ class _$LoanLiteActions extends LoanLiteActions {
       _$LoanLiteActions._(options());
 
   @override
-  LoanLite get $initial => LoanLite();
+  LoanLite get initialState$ => LoanLite();
 
   @override
-  LoanLiteBuilder $newBuilder() => LoanLiteBuilder();
+  LoanLiteBuilder newBuilder$() => LoanLiteBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.id,
         this.number,
         this.status,
@@ -305,22 +305,18 @@ class _$LoanLiteActions extends LoanLiteActions {
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    id.$reducer(reducer);
-    number.$reducer(reducer);
-    status.$reducer(reducer);
-    serviceEndDate.$reducer(reducer);
-    daysLate.$reducer(reducer);
-    reason.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    id.reducer$(reducer);
+    number.reducer$(reducer);
+    status.reducer$(reducer);
+    serviceEndDate.reducer$(reducer);
+    daysLate.reducer$(reducer);
+    reason.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(LoanLite);
 }

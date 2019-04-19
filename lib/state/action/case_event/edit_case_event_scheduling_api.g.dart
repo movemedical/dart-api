@@ -22,63 +22,29 @@ class _$EditCaseEventSchedulingApi extends EditCaseEventSchedulingApi {
           ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<EditCaseEventSchedulingApiRequest>,
           ApiResult<Nothing>>,
-      EditCaseEventSchedulingApi> $options;
+      EditCaseEventSchedulingApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<EditCaseEventSchedulingApiRequest>,
-          ApiResult<Nothing>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<EditCaseEventSchedulingApiRequest>,
-          ApiResult<Nothing>, EditCaseEventSchedulingApi, String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<EditCaseEventSchedulingApiRequest>,
-          ApiResult<Nothing>,
-          EditCaseEventSchedulingApi,
-          Command<ApiCommand<EditCaseEventSchedulingApiRequest>>>> $execute;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<EditCaseEventSchedulingApiRequest>,
-          ApiResult<Nothing>,
-          EditCaseEventSchedulingApi,
-          CommandResult<ApiResult<Nothing>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<EditCaseEventSchedulingApiRequest>,
-          ApiResult<Nothing>,
-          EditCaseEventSchedulingApi,
-          CommandProgress>> $progress;
+          ApiResult<Nothing>>> replace$;
+  final ActionDispatcher<String> cancel$;
+  final ActionDispatcher<Command<ApiCommand<EditCaseEventSchedulingApiRequest>>>
+      execute$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
+  final ActionDispatcher<CommandProgress> progress$;
 
-  _$EditCaseEventSchedulingApi._(this.$options)
-      : $replace = $options.action<
+  _$EditCaseEventSchedulingApi._(this.options$)
+      : replace$ = options$.action<
             CommandState<ApiCommand<EditCaseEventSchedulingApiRequest>,
-                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
-        $cancel = $options.action<
-            CommandPayload<
-                ApiCommand<EditCaseEventSchedulingApiRequest>,
-                ApiResult<Nothing>,
-                EditCaseEventSchedulingApi,
-                String>>('\$cancel', (a) => a?.$cancel),
-        $execute = $options.action<
-                CommandPayload<
-                    ApiCommand<EditCaseEventSchedulingApiRequest>,
-                    ApiResult<Nothing>,
-                    EditCaseEventSchedulingApi,
-                    Command<ApiCommand<EditCaseEventSchedulingApiRequest>>>>(
-            '\$execute', (a) => a?.$execute),
-        $result = $options.action<
-                CommandPayload<
-                    ApiCommand<EditCaseEventSchedulingApiRequest>,
-                    ApiResult<Nothing>,
-                    EditCaseEventSchedulingApi,
-                    CommandResult<ApiResult<Nothing>>>>(
-            '\$result', (a) => a?.$result),
-        $progress = $options.action<
-            CommandPayload<
-                ApiCommand<EditCaseEventSchedulingApiRequest>,
-                ApiResult<Nothing>,
-                EditCaseEventSchedulingApi,
-                CommandProgress>>('\$progress', (a) => a?.$progress),
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
+        cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
+        execute$ = options$
+            .action<Command<ApiCommand<EditCaseEventSchedulingApiRequest>>>(
+                'execute\$', (a) => a?.execute$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
+        progress$ =
+            options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
 
   factory _$EditCaseEventSchedulingApi(
@@ -88,31 +54,24 @@ class _$EditCaseEventSchedulingApi extends EditCaseEventSchedulingApi {
   @override
   CommandState<ApiCommand<EditCaseEventSchedulingApiRequest>,
           ApiResult<Nothing>>
-      get $initial => CommandState<
+      get initialState$ => CommandState<
           ApiCommand<EditCaseEventSchedulingApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<EditCaseEventSchedulingApiRequest>,
           ApiResult<Nothing>>
-      $newBuilder() => CommandStateBuilder<
+      newBuilder$() => CommandStateBuilder<
           ApiCommand<EditCaseEventSchedulingApiRequest>, ApiResult<Nothing>>();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
-        this.$cancel,
-        this.$execute,
-        this.$result,
-        this.$progress,
-      ]);
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(CommandState, [
-        FullType(ApiCommand, [FullType(EditCaseEventSchedulingApiRequest)]),
-        FullType(ApiResult, [FullType(Nothing)])
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
+        this.cancel$,
+        this.execute$,
+        this.result$,
+        this.progress$,
       ]);
 
   @override

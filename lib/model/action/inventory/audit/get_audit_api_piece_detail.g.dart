@@ -172,18 +172,18 @@ typedef StatefulActionsOptions<
 
 class _$GetAuditApiPieceDetailActions extends GetAuditApiPieceDetailActions {
   final StatefulActionsOptions<GetAuditApiPieceDetail,
-      GetAuditApiPieceDetailBuilder, GetAuditApiPieceDetailActions> $options;
+      GetAuditApiPieceDetailBuilder, GetAuditApiPieceDetailActions> options$;
 
-  final ActionDispatcher<GetAuditApiPieceDetail> $replace;
+  final ActionDispatcher<GetAuditApiPieceDetail> replace$;
   final FieldDispatcher<int> pieceQty;
   final FieldDispatcher<double> totalPrice;
 
-  _$GetAuditApiPieceDetailActions._(this.$options)
-      : $replace = $options.action<GetAuditApiPieceDetail>(
-            '\$replace', (a) => a?.$replace),
-        pieceQty = $options.field<int>('pieceQty', (a) => a?.pieceQty,
+  _$GetAuditApiPieceDetailActions._(this.options$)
+      : replace$ = options$.action<GetAuditApiPieceDetail>(
+            'replace\$', (a) => a?.replace$),
+        pieceQty = options$.field<int>('pieceQty', (a) => a?.pieceQty,
             (s) => s?.pieceQty, (p, b) => p?.pieceQty = b),
-        totalPrice = $options.field<double>('totalPrice', (a) => a?.totalPrice,
+        totalPrice = options$.field<double>('totalPrice', (a) => a?.totalPrice,
             (s) => s?.totalPrice, (p, b) => p?.totalPrice = b),
         super._();
 
@@ -192,34 +192,30 @@ class _$GetAuditApiPieceDetailActions extends GetAuditApiPieceDetailActions {
       _$GetAuditApiPieceDetailActions._(options());
 
   @override
-  GetAuditApiPieceDetail get $initial => GetAuditApiPieceDetail();
+  GetAuditApiPieceDetail get initialState$ => GetAuditApiPieceDetail();
 
   @override
-  GetAuditApiPieceDetailBuilder $newBuilder() =>
+  GetAuditApiPieceDetailBuilder newBuilder$() =>
       GetAuditApiPieceDetailBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.pieceQty,
         this.totalPrice,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    pieceQty.$reducer(reducer);
-    totalPrice.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    pieceQty.reducer$(reducer);
+    totalPrice.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType => _$fullType ??= FullType(GetAuditApiPieceDetail);
 }

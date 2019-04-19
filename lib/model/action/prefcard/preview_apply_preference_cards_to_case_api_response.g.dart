@@ -191,17 +191,17 @@ class _$PreviewApplyPreferenceCardsToCaseApiResponseActions
   final StatefulActionsOptions<
       PreviewApplyPreferenceCardsToCaseApiResponse,
       PreviewApplyPreferenceCardsToCaseApiResponseBuilder,
-      PreviewApplyPreferenceCardsToCaseApiResponseActions> $options;
+      PreviewApplyPreferenceCardsToCaseApiResponseActions> options$;
 
-  final ActionDispatcher<PreviewApplyPreferenceCardsToCaseApiResponse> $replace;
+  final ActionDispatcher<PreviewApplyPreferenceCardsToCaseApiResponse> replace$;
   final FieldDispatcher<BuiltList<PreviewApplyPreferenceCardsToCaseApiPreview>>
       preview;
 
-  _$PreviewApplyPreferenceCardsToCaseApiResponseActions._(this.$options)
-      : $replace =
-            $options.action<PreviewApplyPreferenceCardsToCaseApiResponse>(
-                '\$replace', (a) => a?.$replace),
-        preview = $options
+  _$PreviewApplyPreferenceCardsToCaseApiResponseActions._(this.options$)
+      : replace$ =
+            options$.action<PreviewApplyPreferenceCardsToCaseApiResponse>(
+                'replace\$', (a) => a?.replace$),
+        preview = options$
             .field<BuiltList<PreviewApplyPreferenceCardsToCaseApiPreview>>(
                 'preview',
                 (a) => a?.preview,
@@ -214,34 +214,29 @@ class _$PreviewApplyPreferenceCardsToCaseApiResponseActions
       _$PreviewApplyPreferenceCardsToCaseApiResponseActions._(options());
 
   @override
-  PreviewApplyPreferenceCardsToCaseApiResponse get $initial =>
+  PreviewApplyPreferenceCardsToCaseApiResponse get initialState$ =>
       PreviewApplyPreferenceCardsToCaseApiResponse();
 
   @override
-  PreviewApplyPreferenceCardsToCaseApiResponseBuilder $newBuilder() =>
+  PreviewApplyPreferenceCardsToCaseApiResponseBuilder newBuilder$() =>
       PreviewApplyPreferenceCardsToCaseApiResponseBuilder();
 
-  BuiltList<ActionDispatcher> _$actions;
+  BuiltList<ActionDispatcher> _actions$;
   @override
-  BuiltList<ActionDispatcher> get $actions =>
-      _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
+  BuiltList<ActionDispatcher> get actions$ =>
+      _actions$ ??= BuiltList<ActionDispatcher>([
+        this.replace$,
         this.preview,
       ]);
 
   @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-    preview.$reducer(reducer);
+  void reducer$(ReducerBuilder reducer) {
+    super.reducer$(reducer);
+    preview.reducer$(reducer);
   }
 
   @override
-  void $middleware(MiddlewareBuilder middleware) {
-    super.$middleware(middleware);
+  void middleware$(MiddlewareBuilder middleware) {
+    super.middleware$(middleware);
   }
-
-  FullType _$fullType;
-  @override
-  FullType get $fullType =>
-      _$fullType ??= FullType(PreviewApplyPreferenceCardsToCaseApiResponse);
 }
