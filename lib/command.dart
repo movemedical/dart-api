@@ -194,18 +194,30 @@ abstract class ApiDispatcher<
   String get path;
 
   ApiFuture<Req, ReqBuilder, Resp, RespBuilder, Actions> call(
-      {Req request,
-      void builder(ReqBuilder),
+      {void Function(ReqBuilder b) builder,
+      Req request,
       // Default timeout to 30 seconds.
       Duration timeout = const Duration(seconds: 30)}) {
     final r = create(
         request: request, builder: builder, timeout: timeout, path: path);
-    return store$.execute(this, r, timeout: timeout);
+    final future = store$.executeBuilt<
+        ApiCommand<Req>,
+        ApiCommandBuilder<Req>,
+        Req,
+        ReqBuilder,
+        ApiResult<Resp>,
+        ApiResultBuilder<Resp>,
+        Resp,
+        RespBuilder,
+        Actions>(this, request: r, timeout: timeout);
+    return future;
   }
 
+  void createWithBuilder(ReqBuilder Function(ReqBuilder b) builder) {}
+
   ApiCommand<Req> create(
-      {Req request,
-      void builder(ReqBuilder),
+      {void Function(ReqBuilder b) builder,
+      Req request,
       String path = '',
       Duration timeout = const Duration(seconds: 30),
       bool unsecured = false}) {
