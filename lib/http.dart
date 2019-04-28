@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:collection';
+import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:built_value/serializer.dart';
@@ -289,6 +290,16 @@ class HttpCall<ReqT, RespT> extends LinkedListEntry<HttpCall> {
 
   void _deserialize(Uint8List buffer) {
     if (completer.isCompleted) return;
+
+    final statusCode = _response.statusCode ?? 0;
+    if (statusCode != 200) {
+      completer.complete(HttpCallResult<RespT>.error(
+          elapsed, HttpCallErrorCode.error,
+          statusCode: statusCode,
+          error:
+              buffer != null && buffer.isNotEmpty ? utf8.decode(buffer) : ''));
+      return;
+    }
     if (buffer != null && buffer.length > 0 && respSerializer != null) {
       try {
         final f = jsonService.deserialize(respSerializer, buffer);
@@ -298,6 +309,7 @@ class HttpCall<ReqT, RespT> extends LinkedListEntry<HttpCall> {
         f.then((response) {
           _finish(response);
         }).catchError((e, stackTrace) {
+          final s = utf8.decode(buffer);
           completer.complete(HttpCallResult<RespT>.error(
               elapsed, HttpCallErrorCode.deserialization,
               statusCode: _response?.statusCode ?? 0,

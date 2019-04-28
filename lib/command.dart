@@ -49,23 +49,26 @@ abstract class ApiActions
   @override
   void middleware$(MiddlewareBuilder middleware) {
     super.middleware$(middleware);
-//    middleware
-//      ..add(loginCommand.result$, (api, next, action) {
-//        next(action);
-//        final payload = action.payload?.payload;
-//        if (payload is CommandResult<ApiResult<LoginResponse>>) {
-//          final response = payload?.value?.value;
-//          activeLogin(response);
-//        }
-//      })
-//      ..add(setupCommand.result$, (api, next, action) {
-//        next(action);
-//        final payload = action.payload?.payload;
-//        if (payload is CommandResult<ApiResult<GetUiSetupMobileApiResponse>>) {
-//          final response = payload?.value?.value;
-//          activeSetup(response);
-//        }
-//      });
+    middleware
+      ..add(loginCommand.result$,
+          (api, next, Action<CommandResult<ApiResult<LoginResponse>>> action) {
+        next(action);
+        final payload = action.payload;
+        if (payload != null &&
+            payload is CommandResult<ApiResult<LoginResponse>>) {
+          final response = payload?.value?.value;
+          activeLogin(response);
+        }
+      })
+      ..add(setupCommand.result$, (api, next, action) {
+        next(action);
+        final payload = action?.payload;
+        if (payload != null &&
+            payload is CommandResult<ApiResult<GetUiSetupMobileApiResponse>>) {
+          final response = payload?.value?.value;
+          activeSetup(response);
+        }
+      });
   }
 
   ApiActions._();
@@ -165,7 +168,7 @@ class ApiFuture<
 
   @override
   void done(CommandResult<ApiResult> result) {
-    service._callMap.remove(id);
+    service._callMap.remove(uid);
   }
 
   Serializer<Req> get reqSerializer => dispatcher.commandPayloadSerializer;
@@ -529,7 +532,7 @@ class ApiService extends StatefulActionsService<ApiState, ApiStateBuilder,
           headers: headers,
           timeout: timeout);
 
-      _callMap[future.id] = call;
+      _callMap[future.uid] = call;
       future._call = call;
 
       call.completer.future.then((result) {
