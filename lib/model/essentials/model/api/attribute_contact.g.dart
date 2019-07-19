@@ -284,55 +284,79 @@ class AttributeContactBuilder
   _$AttributeContact _$v;
 
   String _linkId;
+
   String get linkId => _$this._linkId;
+
   set linkId(String linkId) => _$this._linkId = linkId;
 
   AttributableType _attrType;
+
   AttributableType get attrType => _$this._attrType;
+
   set attrType(AttributableType attrType) => _$this._attrType = attrType;
 
   String _attrId;
+
   String get attrId => _$this._attrId;
+
   set attrId(String attrId) => _$this._attrId = attrId;
 
   String _contactId;
+
   String get contactId => _$this._contactId;
+
   set contactId(String contactId) => _$this._contactId = contactId;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   PersonNameBuilder _name;
+
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
+
   set name(PersonNameBuilder name) => _$this._name = name;
 
   PhoneNumberBuilder _workPhone;
+
   PhoneNumberBuilder get workPhone =>
       _$this._workPhone ??= new PhoneNumberBuilder();
+
   set workPhone(PhoneNumberBuilder workPhone) => _$this._workPhone = workPhone;
 
   PhoneNumberBuilder _mobilePhone;
+
   PhoneNumberBuilder get mobilePhone =>
       _$this._mobilePhone ??= new PhoneNumberBuilder();
+
   set mobilePhone(PhoneNumberBuilder mobilePhone) =>
       _$this._mobilePhone = mobilePhone;
 
   PhoneNumberBuilder _faxNumber;
+
   PhoneNumberBuilder get faxNumber =>
       _$this._faxNumber ??= new PhoneNumberBuilder();
+
   set faxNumber(PhoneNumberBuilder faxNumber) => _$this._faxNumber = faxNumber;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   AttributeContactBuilder();
@@ -508,6 +532,7 @@ class _$AttributeContactActions extends AttributeContactActions {
   AttributeContactBuilder newBuilder$() => AttributeContactBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
@@ -518,6 +543,7 @@ class _$AttributeContactActions extends AttributeContactActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

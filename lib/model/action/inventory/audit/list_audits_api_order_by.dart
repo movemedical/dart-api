@@ -32,11 +32,9 @@ class ListAuditsApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListAuditsApiOrderBy> get values =>
-      _$listAuditsApiOrderByValues;
+  static BuiltSet<ListAuditsApiOrderBy> get values => _$values;
 
-  static ListAuditsApiOrderBy valueOf(String name) =>
-      _$listAuditsApiOrderByValueOf(name);
+  static ListAuditsApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

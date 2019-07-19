@@ -69,6 +69,7 @@ class _$ListReservationsForStockApi extends ListReservationsForStockApi {
           ApiResult<ListReservationsForStockApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

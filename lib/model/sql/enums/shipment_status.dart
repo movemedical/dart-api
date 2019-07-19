@@ -31,9 +31,9 @@ class ShipmentStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ShipmentStatus> get values => _$shipmentStatusValues;
+  static BuiltSet<ShipmentStatus> get values => _$values;
 
-  static ShipmentStatus valueOf(String name) => _$shipmentStatusValueOf(name);
+  static ShipmentStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

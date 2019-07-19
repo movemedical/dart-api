@@ -17,7 +17,7 @@ const ListTagsApiOrderBy _$wireLOT_SERIAL =
 const ListTagsApiOrderBy _$wireLOCATION =
     const ListTagsApiOrderBy._('LOCATION');
 
-ListTagsApiOrderBy _$listTagsApiOrderByValueOf(String name) {
+ListTagsApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'ITEM_NUMBER':
       return _$wireITEM_NUMBER;
@@ -34,7 +34,7 @@ ListTagsApiOrderBy _$listTagsApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListTagsApiOrderBy> _$listTagsApiOrderByValues =
+final BuiltSet<ListTagsApiOrderBy> _$values =
     new BuiltSet<ListTagsApiOrderBy>(const <ListTagsApiOrderBy>[
   _$wireITEM_NUMBER,
   _$wireITEM_CLASS,

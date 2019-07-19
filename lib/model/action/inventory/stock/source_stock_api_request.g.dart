@@ -150,21 +150,29 @@ class SourceStockApiRequestBuilder
   _$SourceStockApiRequest _$v;
 
   ListBuilder<SourceStockApiSourceStock> _stockToSource;
+
   ListBuilder<SourceStockApiSourceStock> get stockToSource =>
       _$this._stockToSource ??= new ListBuilder<SourceStockApiSourceStock>();
+
   set stockToSource(ListBuilder<SourceStockApiSourceStock> stockToSource) =>
       _$this._stockToSource = stockToSource;
 
   String _caseId;
+
   String get caseId => _$this._caseId;
+
   set caseId(String caseId) => _$this._caseId = caseId;
 
   String _loanId;
+
   String get loanId => _$this._loanId;
+
   set loanId(String loanId) => _$this._loanId = loanId;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   SourceStockApiRequestBuilder();
@@ -270,6 +278,7 @@ class _$SourceStockApiRequestActions extends SourceStockApiRequestActions {
   SourceStockApiRequestBuilder newBuilder$() => SourceStockApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

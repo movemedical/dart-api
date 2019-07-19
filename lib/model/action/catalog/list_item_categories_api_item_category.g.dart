@@ -188,28 +188,40 @@ class ListItemCategoriesApiItemCategoryBuilder
   _$ListItemCategoriesApiItemCategory _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _code;
+
   String get code => _$this._code;
+
   set code(String code) => _$this._code = code;
 
   bool _hasChildren;
+
   bool get hasChildren => _$this._hasChildren;
+
   set hasChildren(bool hasChildren) => _$this._hasChildren = hasChildren;
 
   bool _linkedToItem;
+
   bool get linkedToItem => _$this._linkedToItem;
+
   set linkedToItem(bool linkedToItem) => _$this._linkedToItem = linkedToItem;
 
   int _nestedItemToCategoryLinkCount;
+
   int get nestedItemToCategoryLinkCount =>
       _$this._nestedItemToCategoryLinkCount;
+
   set nestedItemToCategoryLinkCount(int nestedItemToCategoryLinkCount) =>
       _$this._nestedItemToCategoryLinkCount = nestedItemToCategoryLinkCount;
 
@@ -321,6 +333,7 @@ class _$ListItemCategoriesApiItemCategoryActions
       ListItemCategoriesApiItemCategoryBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

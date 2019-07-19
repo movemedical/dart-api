@@ -11,8 +11,7 @@ const ListInvTypesToBeCountedApiOrderBy _$wireNAME =
 const ListInvTypesToBeCountedApiOrderBy _$wireSEQUENCE =
     const ListInvTypesToBeCountedApiOrderBy._('SEQUENCE');
 
-ListInvTypesToBeCountedApiOrderBy _$listInvTypesToBeCountedApiOrderByValueOf(
-    String name) {
+ListInvTypesToBeCountedApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -23,8 +22,7 @@ ListInvTypesToBeCountedApiOrderBy _$listInvTypesToBeCountedApiOrderByValueOf(
   }
 }
 
-final BuiltSet<ListInvTypesToBeCountedApiOrderBy>
-    _$listInvTypesToBeCountedApiOrderByValues =
+final BuiltSet<ListInvTypesToBeCountedApiOrderBy> _$values =
     new BuiltSet<ListInvTypesToBeCountedApiOrderBy>(const <
         ListInvTypesToBeCountedApiOrderBy>[
   _$wireNAME,

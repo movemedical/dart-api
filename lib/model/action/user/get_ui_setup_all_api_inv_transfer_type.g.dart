@@ -415,96 +415,130 @@ class GetUiSetupAllApiInvTransferTypeBuilder
   _$GetUiSetupAllApiInvTransferType _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
   OrderReasonBuilder _orderReason;
+
   OrderReasonBuilder get orderReason =>
       _$this._orderReason ??= new OrderReasonBuilder();
+
   set orderReason(OrderReasonBuilder orderReason) =>
       _$this._orderReason = orderReason;
 
   ListBuilder<InventoryType> _fromInventoryTypes;
+
   ListBuilder<InventoryType> get fromInventoryTypes =>
       _$this._fromInventoryTypes ??= new ListBuilder<InventoryType>();
+
   set fromInventoryTypes(ListBuilder<InventoryType> fromInventoryTypes) =>
       _$this._fromInventoryTypes = fromInventoryTypes;
 
   ListBuilder<MoveItemClass> _moveItemClasses;
+
   ListBuilder<MoveItemClass> get moveItemClasses =>
       _$this._moveItemClasses ??= new ListBuilder<MoveItemClass>();
+
   set moveItemClasses(ListBuilder<MoveItemClass> moveItemClasses) =>
       _$this._moveItemClasses = moveItemClasses;
 
   ListBuilder<MoveItemType> _moveItemTypes;
+
   ListBuilder<MoveItemType> get moveItemTypes =>
       _$this._moveItemTypes ??= new ListBuilder<MoveItemType>();
+
   set moveItemTypes(ListBuilder<MoveItemType> moveItemTypes) =>
       _$this._moveItemTypes = moveItemTypes;
 
   ListBuilder<LocationType> _fromLocationTypes;
+
   ListBuilder<LocationType> get fromLocationTypes =>
       _$this._fromLocationTypes ??= new ListBuilder<LocationType>();
+
   set fromLocationTypes(ListBuilder<LocationType> fromLocationTypes) =>
       _$this._fromLocationTypes = fromLocationTypes;
 
   ListBuilder<FacilityType> _fromFacilityTypes;
+
   ListBuilder<FacilityType> get fromFacilityTypes =>
       _$this._fromFacilityTypes ??= new ListBuilder<FacilityType>();
+
   set fromFacilityTypes(ListBuilder<FacilityType> fromFacilityTypes) =>
       _$this._fromFacilityTypes = fromFacilityTypes;
 
   ListBuilder<Location> _fromLocations;
+
   ListBuilder<Location> get fromLocations =>
       _$this._fromLocations ??= new ListBuilder<Location>();
+
   set fromLocations(ListBuilder<Location> fromLocations) =>
       _$this._fromLocations = fromLocations;
 
   ListBuilder<LocationType> _toLocationTypes;
+
   ListBuilder<LocationType> get toLocationTypes =>
       _$this._toLocationTypes ??= new ListBuilder<LocationType>();
+
   set toLocationTypes(ListBuilder<LocationType> toLocationTypes) =>
       _$this._toLocationTypes = toLocationTypes;
 
   ListBuilder<FacilityType> _toFacilityTypes;
+
   ListBuilder<FacilityType> get toFacilityTypes =>
       _$this._toFacilityTypes ??= new ListBuilder<FacilityType>();
+
   set toFacilityTypes(ListBuilder<FacilityType> toFacilityTypes) =>
       _$this._toFacilityTypes = toFacilityTypes;
 
   ListBuilder<Location> _toLocations;
+
   ListBuilder<Location> get toLocations =>
       _$this._toLocations ??= new ListBuilder<Location>();
+
   set toLocations(ListBuilder<Location> toLocations) =>
       _$this._toLocations = toLocations;
 
   bool _scopeToLocation;
+
   bool get scopeToLocation => _$this._scopeToLocation;
+
   set scopeToLocation(bool scopeToLocation) =>
       _$this._scopeToLocation = scopeToLocation;
 
   bool _shipAndConfirmEnabled;
+
   bool get shipAndConfirmEnabled => _$this._shipAndConfirmEnabled;
+
   set shipAndConfirmEnabled(bool shipAndConfirmEnabled) =>
       _$this._shipAndConfirmEnabled = shipAndConfirmEnabled;
 
   String _directDeliveryShippingServiceId;
+
   String get directDeliveryShippingServiceId =>
       _$this._directDeliveryShippingServiceId;
+
   set directDeliveryShippingServiceId(String directDeliveryShippingServiceId) =>
       _$this._directDeliveryShippingServiceId = directDeliveryShippingServiceId;
 
   bool _fromAllLocations;
+
   bool get fromAllLocations => _$this._fromAllLocations;
+
   set fromAllLocations(bool fromAllLocations) =>
       _$this._fromAllLocations = fromAllLocations;
 
@@ -743,12 +777,14 @@ class _$GetUiSetupAllApiInvTransferTypeActions
       GetUiSetupAllApiInvTransferTypeBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.orderReason,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -117,12 +117,16 @@ class GetKitStockApiRequestBuilder
   _$GetKitStockApiRequest _$v;
 
   String _kitStockIdOrStockSummaryId;
+
   String get kitStockIdOrStockSummaryId => _$this._kitStockIdOrStockSummaryId;
+
   set kitStockIdOrStockSummaryId(String kitStockIdOrStockSummaryId) =>
       _$this._kitStockIdOrStockSummaryId = kitStockIdOrStockSummaryId;
 
   bool _skipPresence;
+
   bool get skipPresence => _$this._skipPresence;
+
   set skipPresence(bool skipPresence) => _$this._skipPresence = skipPresence;
 
   GetKitStockApiRequestBuilder();
@@ -208,6 +212,7 @@ class _$GetKitStockApiRequestActions extends GetKitStockApiRequestActions {
   GetKitStockApiRequestBuilder newBuilder$() => GetKitStockApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

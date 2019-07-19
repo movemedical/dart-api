@@ -13,8 +13,7 @@ const ShipDeliverConfirmPackagesApiProcessingSteps _$wireDELIVER =
 const ShipDeliverConfirmPackagesApiProcessingSteps _$wireCONFIRM =
     const ShipDeliverConfirmPackagesApiProcessingSteps._('CONFIRM');
 
-ShipDeliverConfirmPackagesApiProcessingSteps
-    _$shipDeliverConfirmPackagesApiProcessingStepsValueOf(String name) {
+ShipDeliverConfirmPackagesApiProcessingSteps _$valueOf(String name) {
   switch (name) {
     case 'SHIP':
       return _$wireSHIP;
@@ -27,8 +26,7 @@ ShipDeliverConfirmPackagesApiProcessingSteps
   }
 }
 
-final BuiltSet<ShipDeliverConfirmPackagesApiProcessingSteps>
-    _$shipDeliverConfirmPackagesApiProcessingStepsValues =
+final BuiltSet<ShipDeliverConfirmPackagesApiProcessingSteps> _$values =
     new BuiltSet<ShipDeliverConfirmPackagesApiProcessingSteps>(const <
         ShipDeliverConfirmPackagesApiProcessingSteps>[
   _$wireSHIP,

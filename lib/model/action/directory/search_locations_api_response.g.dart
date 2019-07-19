@@ -103,8 +103,10 @@ class SearchLocationsApiResponseBuilder
   _$SearchLocationsApiResponse _$v;
 
   ListBuilder<Location> _locations;
+
   ListBuilder<Location> get locations =>
       _$this._locations ??= new ListBuilder<Location>();
+
   set locations(ListBuilder<Location> locations) =>
       _$this._locations = locations;
 
@@ -199,6 +201,7 @@ class _$SearchLocationsApiResponseActions
       SearchLocationsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

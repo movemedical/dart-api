@@ -43,6 +43,15 @@ abstract class ListLoansApiRequest
   BuiltList<LoanReason> get loanReasons;
 
   @nullable
+  String get salesLeadId;
+
+  @nullable
+  String get opsLeadId;
+
+  @nullable
+  String get search;
+
+  @nullable
   PaginationParams get paging;
 
   @nullable
@@ -86,6 +95,12 @@ abstract class ListLoansApiRequestActions extends ModelActions<
   FieldDispatcher<String> get loanNumber;
 
   FieldDispatcher<BuiltList<LoanReason>> get loanReasons;
+
+  FieldDispatcher<String> get salesLeadId;
+
+  FieldDispatcher<String> get opsLeadId;
+
+  FieldDispatcher<String> get search;
 
   PaginationParamsActions get paging;
 

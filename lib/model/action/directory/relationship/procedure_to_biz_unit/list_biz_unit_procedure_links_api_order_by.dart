@@ -21,11 +21,10 @@ class ListBizUnitProcedureLinksApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListBizUnitProcedureLinksApiOrderBy> get values =>
-      _$listBizUnitProcedureLinksApiOrderByValues;
+  static BuiltSet<ListBizUnitProcedureLinksApiOrderBy> get values => _$values;
 
   static ListBizUnitProcedureLinksApiOrderBy valueOf(String name) =>
-      _$listBizUnitProcedureLinksApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

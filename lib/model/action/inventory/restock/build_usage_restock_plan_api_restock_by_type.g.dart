@@ -11,8 +11,7 @@ const BuildUsageRestockPlanApiRestockByType _$wireDATE =
 const BuildUsageRestockPlanApiRestockByType _$wireSHIPPING_SERVICE =
     const BuildUsageRestockPlanApiRestockByType._('SHIPPING_SERVICE');
 
-BuildUsageRestockPlanApiRestockByType
-    _$buildUsageRestockPlanApiRestockByTypeValueOf(String name) {
+BuildUsageRestockPlanApiRestockByType _$valueOf(String name) {
   switch (name) {
     case 'DATE':
       return _$wireDATE;
@@ -23,8 +22,7 @@ BuildUsageRestockPlanApiRestockByType
   }
 }
 
-final BuiltSet<BuildUsageRestockPlanApiRestockByType>
-    _$buildUsageRestockPlanApiRestockByTypeValues =
+final BuiltSet<BuildUsageRestockPlanApiRestockByType> _$values =
     new BuiltSet<BuildUsageRestockPlanApiRestockByType>(const <
         BuildUsageRestockPlanApiRestockByType>[
   _$wireDATE,

@@ -20,6 +20,7 @@ import 'package:movemedical_api/model/shipping_service.dart';
 import 'package:movemedical_api/model/sql/enums/move_item_class.dart';
 import 'package:movemedical_api/model/sql/enums/order_status.dart';
 import 'package:movemedical_api/model/stock_item.dart';
+import 'package:movemedical_api/model/user_lite.dart';
 
 part 'get_stock_order_api_order.g.dart';
 
@@ -137,6 +138,12 @@ abstract class GetStockOrderApiOrder
   @nullable
   String get lastWebServiceLogId;
 
+  @nullable
+  UserLite get salesLead;
+
+  @nullable
+  UserLite get opsLead;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -233,6 +240,10 @@ abstract class GetStockOrderApiOrderActions extends ModelActions<
   StockItemActions get restockingKitTray;
 
   FieldDispatcher<String> get lastWebServiceLogId;
+
+  UserLiteActions get salesLead;
+
+  UserLiteActions get opsLead;
 
   ////////////////////////////////
   /// Constructors

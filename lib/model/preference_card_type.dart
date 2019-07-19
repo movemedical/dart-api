@@ -24,10 +24,9 @@ class PreferenceCardType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<PreferenceCardType> get values => _$preferenceCardTypeValues;
+  static BuiltSet<PreferenceCardType> get values => _$values;
 
-  static PreferenceCardType valueOf(String name) =>
-      _$preferenceCardTypeValueOf(name);
+  static PreferenceCardType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -9,7 +9,7 @@ part of 'lost_found.dart';
 const LostFound _$wireLOST = const LostFound._('LOST');
 const LostFound _$wireFOUND = const LostFound._('FOUND');
 
-LostFound _$lostFoundValueOf(String name) {
+LostFound _$valueOf(String name) {
   switch (name) {
     case 'LOST':
       return _$wireLOST;
@@ -20,8 +20,7 @@ LostFound _$lostFoundValueOf(String name) {
   }
 }
 
-final BuiltSet<LostFound> _$lostFoundValues =
-    new BuiltSet<LostFound>(const <LostFound>[
+final BuiltSet<LostFound> _$values = new BuiltSet<LostFound>(const <LostFound>[
   _$wireLOST,
   _$wireFOUND,
 ]);

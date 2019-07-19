@@ -40,8 +40,8 @@ class _$GetPackageApiResponseSerializer
       result
         ..add('customDocs')
         ..add(serializers.serialize(object.customDocs,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(CustomDoc)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(OrderCustomDoc)])));
     }
     if (object.attributes != null) {
       result
@@ -78,8 +78,9 @@ class _$GetPackageApiResponseSerializer
           break;
         case 'customDocs':
           result.customDocs.replace(serializers.deserialize(value,
-              specifiedType: const FullType(
-                  BuiltList, const [const FullType(CustomDoc)])) as BuiltList);
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(OrderCustomDoc)]))
+              as BuiltList);
           break;
         case 'attributes':
           result.attributes.replace(serializers.deserialize(value,
@@ -100,7 +101,7 @@ class _$GetPackageApiResponse extends GetPackageApiResponse {
   @override
   final GetPackageApiUiSchema uiSchema;
   @override
-  final BuiltList<CustomDoc> customDocs;
+  final BuiltList<OrderCustomDoc> customDocs;
   @override
   final BuiltList<GetPackageApiPackageAttribute> attributes;
 
@@ -153,25 +154,33 @@ class GetPackageApiResponseBuilder
   _$GetPackageApiResponse _$v;
 
   GetPackageApiPkgBuilder _pkg;
+
   GetPackageApiPkgBuilder get pkg =>
       _$this._pkg ??= new GetPackageApiPkgBuilder();
+
   set pkg(GetPackageApiPkgBuilder pkg) => _$this._pkg = pkg;
 
   GetPackageApiUiSchemaBuilder _uiSchema;
+
   GetPackageApiUiSchemaBuilder get uiSchema =>
       _$this._uiSchema ??= new GetPackageApiUiSchemaBuilder();
+
   set uiSchema(GetPackageApiUiSchemaBuilder uiSchema) =>
       _$this._uiSchema = uiSchema;
 
-  ListBuilder<CustomDoc> _customDocs;
-  ListBuilder<CustomDoc> get customDocs =>
-      _$this._customDocs ??= new ListBuilder<CustomDoc>();
-  set customDocs(ListBuilder<CustomDoc> customDocs) =>
+  ListBuilder<OrderCustomDoc> _customDocs;
+
+  ListBuilder<OrderCustomDoc> get customDocs =>
+      _$this._customDocs ??= new ListBuilder<OrderCustomDoc>();
+
+  set customDocs(ListBuilder<OrderCustomDoc> customDocs) =>
       _$this._customDocs = customDocs;
 
   ListBuilder<GetPackageApiPackageAttribute> _attributes;
+
   ListBuilder<GetPackageApiPackageAttribute> get attributes =>
       _$this._attributes ??= new ListBuilder<GetPackageApiPackageAttribute>();
+
   set attributes(ListBuilder<GetPackageApiPackageAttribute> attributes) =>
       _$this._attributes = attributes;
 
@@ -254,7 +263,7 @@ class _$GetPackageApiResponseActions extends GetPackageApiResponseActions {
   final ActionDispatcher<GetPackageApiResponse> replace$;
   final GetPackageApiPkgActions pkg;
   final GetPackageApiUiSchemaActions uiSchema;
-  final FieldDispatcher<BuiltList<CustomDoc>> customDocs;
+  final FieldDispatcher<BuiltList<OrderCustomDoc>> customDocs;
   final FieldDispatcher<BuiltList<GetPackageApiPackageAttribute>> attributes;
 
   _$GetPackageApiResponseActions._(this.options$)
@@ -276,7 +285,7 @@ class _$GetPackageApiResponseActions extends GetPackageApiResponseActions {
             (s) => s?.uiSchema,
             (b) => b?.uiSchema,
             (parent, builder) => parent?.uiSchema = builder)),
-        customDocs = options$.field<BuiltList<CustomDoc>>(
+        customDocs = options$.field<BuiltList<OrderCustomDoc>>(
             'customDocs',
             (a) => a?.customDocs,
             (s) => s?.customDocs,
@@ -299,6 +308,7 @@ class _$GetPackageApiResponseActions extends GetPackageApiResponseActions {
   GetPackageApiResponseBuilder newBuilder$() => GetPackageApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.pkg,
@@ -306,6 +316,7 @@ class _$GetPackageApiResponseActions extends GetPackageApiResponseActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -28,10 +28,10 @@ class AuditFileUpdatePushMessageAuditFileUpdateType extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<AuditFileUpdatePushMessageAuditFileUpdateType> get values =>
-      _$auditFileUpdatePushMessageAuditFileUpdateTypeValues;
+      _$values;
 
   static AuditFileUpdatePushMessageAuditFileUpdateType valueOf(String name) =>
-      _$auditFileUpdatePushMessageAuditFileUpdateTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

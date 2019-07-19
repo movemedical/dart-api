@@ -9,7 +9,7 @@ part of 'move_date_region.dart';
 const MoveDateRegion _$wireMDY = const MoveDateRegion._('MDY');
 const MoveDateRegion _$wireDMY = const MoveDateRegion._('DMY');
 
-MoveDateRegion _$moveDateRegionValueOf(String name) {
+MoveDateRegion _$valueOf(String name) {
   switch (name) {
     case 'MDY':
       return _$wireMDY;
@@ -20,7 +20,7 @@ MoveDateRegion _$moveDateRegionValueOf(String name) {
   }
 }
 
-final BuiltSet<MoveDateRegion> _$moveDateRegionValues =
+final BuiltSet<MoveDateRegion> _$values =
     new BuiltSet<MoveDateRegion>(const <MoveDateRegion>[
   _$wireMDY,
   _$wireDMY,

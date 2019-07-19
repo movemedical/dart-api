@@ -22,11 +22,10 @@ class RequestKitManifestDocApiReportOption extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<RequestKitManifestDocApiReportOption> get values =>
-      _$requestKitManifestDocApiReportOptionValues;
+  static BuiltSet<RequestKitManifestDocApiReportOption> get values => _$values;
 
   static RequestKitManifestDocApiReportOption valueOf(String name) =>
-      _$requestKitManifestDocApiReportOptionValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

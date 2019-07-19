@@ -224,40 +224,56 @@ class GetItemPricingApiItemPriceBuilder
   _$GetItemPricingApiItemPrice _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   double _contractPrice;
+
   double get contractPrice => _$this._contractPrice;
+
   set contractPrice(double contractPrice) =>
       _$this._contractPrice = contractPrice;
 
   double _listPrice;
+
   double get listPrice => _$this._listPrice;
+
   set listPrice(double listPrice) => _$this._listPrice = listPrice;
 
   CurrencyType _currency;
+
   CurrencyType get currency => _$this._currency;
+
   set currency(CurrencyType currency) => _$this._currency = currency;
 
   ListBuilder<GetItemPricingApiPriceInfo> _pricingInfoList;
+
   ListBuilder<GetItemPricingApiPriceInfo> get pricingInfoList =>
       _$this._pricingInfoList ??= new ListBuilder<GetItemPricingApiPriceInfo>();
+
   set pricingInfoList(
           ListBuilder<GetItemPricingApiPriceInfo> pricingInfoList) =>
       _$this._pricingInfoList = pricingInfoList;
 
   CaseUsageDisposition _caseUsageDisposition;
+
   CaseUsageDisposition get caseUsageDisposition => _$this._caseUsageDisposition;
+
   set caseUsageDisposition(CaseUsageDisposition caseUsageDisposition) =>
       _$this._caseUsageDisposition = caseUsageDisposition;
 
   String _billingCodeId;
+
   String get billingCodeId => _$this._billingCodeId;
+
   set billingCodeId(String billingCodeId) =>
       _$this._billingCodeId = billingCodeId;
 
@@ -397,6 +413,7 @@ class _$GetItemPricingApiItemPriceActions
       GetItemPricingApiItemPriceBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

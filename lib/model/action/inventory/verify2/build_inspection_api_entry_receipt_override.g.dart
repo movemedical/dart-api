@@ -139,15 +139,21 @@ class BuildInspectionApiEntryReceiptOverrideBuilder
   _$BuildInspectionApiEntryReceiptOverride _$v;
 
   String _entryId;
+
   String get entryId => _$this._entryId;
+
   set entryId(String entryId) => _$this._entryId = entryId;
 
   String _receiptId;
+
   String get receiptId => _$this._receiptId;
+
   set receiptId(String receiptId) => _$this._receiptId = receiptId;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   BuildInspectionApiEntryReceiptOverrideBuilder();
@@ -238,6 +244,7 @@ class _$BuildInspectionApiEntryReceiptOverrideActions
       BuildInspectionApiEntryReceiptOverrideBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

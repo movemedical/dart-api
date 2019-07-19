@@ -56,6 +56,9 @@ abstract class GetCustomerApiCustomerDetail
   PhoneNumber get phoneNumber;
 
   @nullable
+  PhoneNumber get mobileNumber;
+
+  @nullable
   String get description;
 
   @nullable
@@ -125,6 +128,8 @@ abstract class GetCustomerApiCustomerDetailActions extends ModelActions<
   EmailActions get email;
 
   PhoneNumberActions get phoneNumber;
+
+  PhoneNumberActions get mobileNumber;
 
   FieldDispatcher<String> get description;
 

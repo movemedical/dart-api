@@ -27,6 +27,9 @@ abstract class BarcodeScansToStockApiBarcodeStock
   ListStockSummaryApiStockSummary get stockSummary;
 
   @nullable
+  String get kitContainerSummaryKey;
+
+  @nullable
   StockItem get stockItem;
 
   ////////////////////////////////
@@ -60,6 +63,8 @@ abstract class BarcodeScansToStockApiBarcodeStockActions extends ModelActions<
   FieldDispatcher<bool> get multipleMatches;
 
   ListStockSummaryApiStockSummaryActions get stockSummary;
+
+  FieldDispatcher<String> get kitContainerSummaryKey;
 
   StockItemActions get stockItem;
 

@@ -47,9 +47,6 @@ abstract class CreateHcrApiRequest
   Email get email;
 
   @nullable
-  String get timeZone;
-
-  @nullable
   DateTime get startDate;
 
   @nullable
@@ -57,6 +54,18 @@ abstract class CreateHcrApiRequest
 
   @nullable
   bool get active;
+
+  @nullable
+  String get timeZone;
+
+  @nullable
+  String get erpUserId;
+
+  @nullable
+  String get defaultBizUnitId;
+
+  @nullable
+  String get defaultSalesOrgUnitId;
 
   ////////////////////////////////
   /// Constructors
@@ -103,13 +112,19 @@ abstract class CreateHcrApiRequestActions extends ModelActions<
 
   EmailActions get email;
 
-  FieldDispatcher<String> get timeZone;
-
   FieldDispatcher<DateTime> get startDate;
 
   FieldDispatcher<DateTime> get endDate;
 
   FieldDispatcher<bool> get active;
+
+  FieldDispatcher<String> get timeZone;
+
+  FieldDispatcher<String> get erpUserId;
+
+  FieldDispatcher<String> get defaultBizUnitId;
+
+  FieldDispatcher<String> get defaultSalesOrgUnitId;
 
   ////////////////////////////////
   /// Constructors

@@ -109,9 +109,11 @@ class BuildUsageRestockPlanApiResponseBuilder
   _$BuildUsageRestockPlanApiResponse _$v;
 
   ListBuilder<BuildUsageRestockPlanApiRestockItem> _restockItems;
+
   ListBuilder<BuildUsageRestockPlanApiRestockItem> get restockItems =>
       _$this._restockItems ??=
           new ListBuilder<BuildUsageRestockPlanApiRestockItem>();
+
   set restockItems(
           ListBuilder<BuildUsageRestockPlanApiRestockItem> restockItems) =>
       _$this._restockItems = restockItems;
@@ -211,6 +213,7 @@ class _$BuildUsageRestockPlanApiResponseActions
       BuildUsageRestockPlanApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

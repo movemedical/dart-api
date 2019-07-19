@@ -66,6 +66,7 @@ class _$RemoveInvTypesToBeCountedApi extends RemoveInvTypesToBeCountedApi {
           ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

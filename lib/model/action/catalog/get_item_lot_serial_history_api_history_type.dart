@@ -24,11 +24,10 @@ class GetItemLotSerialHistoryApiHistoryType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<GetItemLotSerialHistoryApiHistoryType> get values =>
-      _$getItemLotSerialHistoryApiHistoryTypeValues;
+  static BuiltSet<GetItemLotSerialHistoryApiHistoryType> get values => _$values;
 
   static GetItemLotSerialHistoryApiHistoryType valueOf(String name) =>
-      _$getItemLotSerialHistoryApiHistoryTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

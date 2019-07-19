@@ -69,6 +69,7 @@ class _$ListAuditsForDashboardApi extends ListAuditsForDashboardApi {
           ApiResult<ListAuditsForDashboardApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

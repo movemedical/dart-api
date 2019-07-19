@@ -23,9 +23,9 @@ class Gender extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<Gender> get values => _$genderValues;
+  static BuiltSet<Gender> get values => _$values;
 
-  static Gender valueOf(String name) => _$genderValueOf(name);
+  static Gender valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

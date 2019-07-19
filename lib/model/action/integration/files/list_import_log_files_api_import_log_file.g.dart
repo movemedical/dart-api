@@ -313,62 +313,88 @@ class ListImportLogFilesApiImportLogFileBuilder
   _$ListImportLogFilesApiImportLogFile _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _jobKey;
+
   String get jobKey => _$this._jobKey;
+
   set jobKey(String jobKey) => _$this._jobKey = jobKey;
 
   String _importLogId;
+
   String get importLogId => _$this._importLogId;
+
   set importLogId(String importLogId) => _$this._importLogId = importLogId;
 
   String _fileId;
+
   String get fileId => _$this._fileId;
+
   set fileId(String fileId) => _$this._fileId = fileId;
 
   String _fileName;
+
   String get fileName => _$this._fileName;
+
   set fileName(String fileName) => _$this._fileName = fileName;
 
   String _fileContentType;
+
   String get fileContentType => _$this._fileContentType;
+
   set fileContentType(String fileContentType) =>
       _$this._fileContentType = fileContentType;
 
   DateTime _fileCreatedDate;
+
   DateTime get fileCreatedDate => _$this._fileCreatedDate;
+
   set fileCreatedDate(DateTime fileCreatedDate) =>
       _$this._fileCreatedDate = fileCreatedDate;
 
   DateTime _fileExpiresDate;
+
   DateTime get fileExpiresDate => _$this._fileExpiresDate;
+
   set fileExpiresDate(DateTime fileExpiresDate) =>
       _$this._fileExpiresDate = fileExpiresDate;
 
   int _totalRecordCount;
+
   int get totalRecordCount => _$this._totalRecordCount;
+
   set totalRecordCount(int totalRecordCount) =>
       _$this._totalRecordCount = totalRecordCount;
 
   int _successRecordCount;
+
   int get successRecordCount => _$this._successRecordCount;
+
   set successRecordCount(int successRecordCount) =>
       _$this._successRecordCount = successRecordCount;
 
   int _failRecordCount;
+
   int get failRecordCount => _$this._failRecordCount;
+
   set failRecordCount(int failRecordCount) =>
       _$this._failRecordCount = failRecordCount;
 
   int _skipRecordCount;
+
   int get skipRecordCount => _$this._skipRecordCount;
+
   set skipRecordCount(int skipRecordCount) =>
       _$this._skipRecordCount = skipRecordCount;
 
   ImportLogFileOutcome _outcome;
+
   ImportLogFileOutcome get outcome => _$this._outcome;
+
   set outcome(ImportLogFileOutcome outcome) => _$this._outcome = outcome;
 
   ListImportLogFilesApiImportLogFileBuilder();
@@ -532,6 +558,7 @@ class _$ListImportLogFilesApiImportLogFileActions
       ListImportLogFilesApiImportLogFileBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

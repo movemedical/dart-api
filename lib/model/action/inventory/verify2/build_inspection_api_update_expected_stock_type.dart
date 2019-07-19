@@ -23,10 +23,10 @@ class BuildInspectionApiUpdateExpectedStockType extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<BuildInspectionApiUpdateExpectedStockType> get values =>
-      _$buildInspectionApiUpdateExpectedStockTypeValues;
+      _$values;
 
   static BuildInspectionApiUpdateExpectedStockType valueOf(String name) =>
-      _$buildInspectionApiUpdateExpectedStockTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

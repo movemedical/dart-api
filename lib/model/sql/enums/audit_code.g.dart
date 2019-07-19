@@ -10,7 +10,7 @@ const AuditCode _$wireA = const AuditCode._('A');
 const AuditCode _$wireB = const AuditCode._('B');
 const AuditCode _$wireC = const AuditCode._('C');
 
-AuditCode _$auditCodeValueOf(String name) {
+AuditCode _$valueOf(String name) {
   switch (name) {
     case 'A':
       return _$wireA;
@@ -23,8 +23,7 @@ AuditCode _$auditCodeValueOf(String name) {
   }
 }
 
-final BuiltSet<AuditCode> _$auditCodeValues =
-    new BuiltSet<AuditCode>(const <AuditCode>[
+final BuiltSet<AuditCode> _$values = new BuiltSet<AuditCode>(const <AuditCode>[
   _$wireA,
   _$wireB,
   _$wireC,

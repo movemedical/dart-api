@@ -11,7 +11,7 @@ const ExportLogFileOutcome _$wireUPLOADED =
 const ExportLogFileOutcome _$wireCOULD_NOT_UPLOAD =
     const ExportLogFileOutcome._('COULD_NOT_UPLOAD');
 
-ExportLogFileOutcome _$exportLogFileOutcomeValueOf(String name) {
+ExportLogFileOutcome _$valueOf(String name) {
   switch (name) {
     case 'UPLOADED':
       return _$wireUPLOADED;
@@ -22,7 +22,7 @@ ExportLogFileOutcome _$exportLogFileOutcomeValueOf(String name) {
   }
 }
 
-final BuiltSet<ExportLogFileOutcome> _$exportLogFileOutcomeValues =
+final BuiltSet<ExportLogFileOutcome> _$values =
     new BuiltSet<ExportLogFileOutcome>(const <ExportLogFileOutcome>[
   _$wireUPLOADED,
   _$wireCOULD_NOT_UPLOAD,

@@ -69,6 +69,7 @@ class _$GetMobileVersionDetailsApi extends GetMobileVersionDetailsApi {
           ApiResult<GetMobileVersionDetailsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -21,10 +21,9 @@ class FacilityFileType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<FacilityFileType> get values => _$facilityFileTypeValues;
+  static BuiltSet<FacilityFileType> get values => _$values;
 
-  static FacilityFileType valueOf(String name) =>
-      _$facilityFileTypeValueOf(name);
+  static FacilityFileType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -1,7 +1,6 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
-
 part 'get_offline_audit_data_api_request.g.dart';
 
 abstract class GetOfflineAuditDataApiRequest

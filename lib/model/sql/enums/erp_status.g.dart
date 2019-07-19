@@ -12,7 +12,7 @@ const ErpStatus _$wireSENDING_TO_ERP = const ErpStatus._('SENDING_TO_ERP');
 const ErpStatus _$wireERP_ERROR = const ErpStatus._('ERP_ERROR');
 const ErpStatus _$wireSUCCESS = const ErpStatus._('SUCCESS');
 
-ErpStatus _$erpStatusValueOf(String name) {
+ErpStatus _$valueOf(String name) {
   switch (name) {
     case 'VALIDATION_FAILED':
       return _$wireVALIDATION_FAILED;
@@ -27,8 +27,7 @@ ErpStatus _$erpStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<ErpStatus> _$erpStatusValues =
-    new BuiltSet<ErpStatus>(const <ErpStatus>[
+final BuiltSet<ErpStatus> _$values = new BuiltSet<ErpStatus>(const <ErpStatus>[
   _$wireVALIDATION_FAILED,
   _$wireSENDING_TO_ERP,
   _$wireERP_ERROR,

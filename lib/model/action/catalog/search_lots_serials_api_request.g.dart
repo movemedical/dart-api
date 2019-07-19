@@ -119,11 +119,15 @@ class SearchLotsSerialsApiRequestBuilder
   _$SearchLotsSerialsApiRequest _$v;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   SearchLotsSerialsApiRequestBuilder();
@@ -206,6 +210,7 @@ class _$SearchLotsSerialsApiRequestActions
       SearchLotsSerialsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

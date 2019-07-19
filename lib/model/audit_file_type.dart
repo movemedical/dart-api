@@ -21,9 +21,9 @@ class AuditFileType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<AuditFileType> get values => _$auditFileTypeValues;
+  static BuiltSet<AuditFileType> get values => _$values;
 
-  static AuditFileType valueOf(String name) => _$auditFileTypeValueOf(name);
+  static AuditFileType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

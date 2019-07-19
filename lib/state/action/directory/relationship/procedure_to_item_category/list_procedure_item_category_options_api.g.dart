@@ -75,6 +75,7 @@ class _$ListProcedureItemCategoryOptionsApi
           ApiResult<ListProcedureItemCategoryOptionsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

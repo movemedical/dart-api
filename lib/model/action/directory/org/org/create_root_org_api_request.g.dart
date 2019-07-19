@@ -363,69 +363,101 @@ class CreateRootOrgApiRequestBuilder
   _$CreateRootOrgApiRequest _$v;
 
   String _aeReference;
+
   String get aeReference => _$this._aeReference;
+
   set aeReference(String aeReference) => _$this._aeReference = aeReference;
 
   String _orgReference;
+
   String get orgReference => _$this._orgReference;
+
   set orgReference(String orgReference) => _$this._orgReference = orgReference;
 
   PersonNameBuilder _aeName;
+
   PersonNameBuilder get aeName => _$this._aeName ??= new PersonNameBuilder();
+
   set aeName(PersonNameBuilder aeName) => _$this._aeName = aeName;
 
   String _orgName;
+
   String get orgName => _$this._orgName;
+
   set orgName(String orgName) => _$this._orgName = orgName;
 
   OrgType _type;
+
   OrgType get type => _$this._type;
+
   set type(OrgType type) => _$this._type = type;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   String _addressLine1;
+
   String get addressLine1 => _$this._addressLine1;
+
   set addressLine1(String addressLine1) => _$this._addressLine1 = addressLine1;
 
   String _addressLine2;
+
   String get addressLine2 => _$this._addressLine2;
+
   set addressLine2(String addressLine2) => _$this._addressLine2 = addressLine2;
 
   String _addressLine3;
+
   String get addressLine3 => _$this._addressLine3;
+
   set addressLine3(String addressLine3) => _$this._addressLine3 = addressLine3;
 
   String _addressCity;
+
   String get addressCity => _$this._addressCity;
+
   set addressCity(String addressCity) => _$this._addressCity = addressCity;
 
   String _addressState;
+
   String get addressState => _$this._addressState;
+
   set addressState(String addressState) => _$this._addressState = addressState;
 
   String _addressPostalCode;
+
   String get addressPostalCode => _$this._addressPostalCode;
+
   set addressPostalCode(String addressPostalCode) =>
       _$this._addressPostalCode = addressPostalCode;
 
   String _addressCountry;
+
   String get addressCountry => _$this._addressCountry;
+
   set addressCountry(String addressCountry) =>
       _$this._addressCountry = addressCountry;
 
   String _aeTimezone;
+
   String get aeTimezone => _$this._aeTimezone;
+
   set aeTimezone(String aeTimezone) => _$this._aeTimezone = aeTimezone;
 
   String _aePassword;
+
   String get aePassword => _$this._aePassword;
+
   set aePassword(String aePassword) => _$this._aePassword = aePassword;
 
   bool _phiAllowed;
+
   bool get phiAllowed => _$this._phiAllowed;
+
   set phiAllowed(bool phiAllowed) => _$this._phiAllowed = phiAllowed;
 
   CreateRootOrgApiRequestBuilder();
@@ -629,6 +661,7 @@ class _$CreateRootOrgApiRequestActions extends CreateRootOrgApiRequestActions {
       CreateRootOrgApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.aeName,
@@ -636,6 +669,7 @@ class _$CreateRootOrgApiRequestActions extends CreateRootOrgApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

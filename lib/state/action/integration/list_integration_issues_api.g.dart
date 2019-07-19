@@ -68,6 +68,7 @@ class _$ListIntegrationIssuesApi extends ListIntegrationIssuesApi {
           ApiResult<ListIntegrationIssuesApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

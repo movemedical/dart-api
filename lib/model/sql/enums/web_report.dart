@@ -20,12 +20,15 @@ class WebReport extends EnumClass {
   static const WebReport UNBILLED = _$wireUNBILLED;
   static const WebReport USER_PERMISSIONS = _$wireUSER_PERMISSIONS;
   static const WebReport DUE_BACK = _$wireDUE_BACK;
+  static const WebReport CASE_LOAN_DUE_BACK = _$wireCASE_LOAN_DUE_BACK;
   static const WebReport BACK_ORDER = _$wireBACK_ORDER;
   static const WebReport CREDIT_HOLD = _$wireCREDIT_HOLD;
   static const WebReport ORDER_PRINTOUT = _$wireORDER_PRINTOUT;
   static const WebReport PROOF_OF_DELIVERY = _$wirePROOF_OF_DELIVERY;
   static const WebReport CONSIGNMENT_LOAN_EXPORT =
       _$wireCONSIGNMENT_LOAN_EXPORT;
+  static const WebReport REPLACEMENT = _$wireREPLACEMENT;
+  static const WebReport LOST_FOUND = _$wireLOST_FOUND;
 
   ////////////////////////////////
   /// Constructor
@@ -37,9 +40,9 @@ class WebReport extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<WebReport> get values => _$webReportValues;
+  static BuiltSet<WebReport> get values => _$values;
 
-  static WebReport valueOf(String name) => _$webReportValueOf(name);
+  static WebReport valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

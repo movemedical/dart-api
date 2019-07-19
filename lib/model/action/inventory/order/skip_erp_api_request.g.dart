@@ -109,11 +109,15 @@ class SkipErpApiRequestBuilder
   _$SkipErpApiRequest _$v;
 
   String _erpOrderId;
+
   String get erpOrderId => _$this._erpOrderId;
+
   set erpOrderId(String erpOrderId) => _$this._erpOrderId = erpOrderId;
 
   String _erpReference;
+
   String get erpReference => _$this._erpReference;
+
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   SkipErpApiRequestBuilder();
@@ -192,6 +196,7 @@ class _$SkipErpApiRequestActions extends SkipErpApiRequestActions {
   SkipErpApiRequestBuilder newBuilder$() => SkipErpApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

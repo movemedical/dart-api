@@ -22,11 +22,9 @@ class ValidationMessageType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ValidationMessageType> get values =>
-      _$validationMessageTypeValues;
+  static BuiltSet<ValidationMessageType> get values => _$values;
 
-  static ValidationMessageType valueOf(String name) =>
-      _$validationMessageTypeValueOf(name);
+  static ValidationMessageType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -9,7 +9,7 @@ part of 'item_file_type.dart';
 const ItemFileType _$wireTRAY_STANDARD_IMAGE =
     const ItemFileType._('TRAY_STANDARD_IMAGE');
 
-ItemFileType _$itemFileTypeValueOf(String name) {
+ItemFileType _$valueOf(String name) {
   switch (name) {
     case 'TRAY_STANDARD_IMAGE':
       return _$wireTRAY_STANDARD_IMAGE;
@@ -18,7 +18,7 @@ ItemFileType _$itemFileTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<ItemFileType> _$itemFileTypeValues =
+final BuiltSet<ItemFileType> _$values =
     new BuiltSet<ItemFileType>(const <ItemFileType>[
   _$wireTRAY_STANDARD_IMAGE,
 ]);

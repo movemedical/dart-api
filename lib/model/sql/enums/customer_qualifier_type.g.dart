@@ -13,7 +13,7 @@ const CustomerQualifierType _$wireCUSTOMER =
 const CustomerQualifierType _$wireFACILITY =
     const CustomerQualifierType._('FACILITY');
 
-CustomerQualifierType _$customerQualifierTypeValueOf(String name) {
+CustomerQualifierType _$valueOf(String name) {
   switch (name) {
     case 'ZIP_CODE':
       return _$wireZIP_CODE;
@@ -26,7 +26,7 @@ CustomerQualifierType _$customerQualifierTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<CustomerQualifierType> _$customerQualifierTypeValues =
+final BuiltSet<CustomerQualifierType> _$values =
     new BuiltSet<CustomerQualifierType>(const <CustomerQualifierType>[
   _$wireZIP_CODE,
   _$wireCUSTOMER,

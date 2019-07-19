@@ -120,12 +120,16 @@ class ListImportLogFilesApiRequestBuilder
   _$ListImportLogFilesApiRequest _$v;
 
   String _importLogId;
+
   String get importLogId => _$this._importLogId;
+
   set importLogId(String importLogId) => _$this._importLogId = importLogId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListImportLogFilesApiRequestBuilder();
@@ -232,12 +236,14 @@ class _$ListImportLogFilesApiRequestActions
       ListImportLogFilesApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

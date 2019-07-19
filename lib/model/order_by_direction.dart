@@ -22,10 +22,9 @@ class OrderByDirection extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<OrderByDirection> get values => _$orderByDirectionValues;
+  static BuiltSet<OrderByDirection> get values => _$values;
 
-  static OrderByDirection valueOf(String name) =>
-      _$orderByDirectionValueOf(name);
+  static OrderByDirection valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

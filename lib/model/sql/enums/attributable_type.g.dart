@@ -45,7 +45,7 @@ const AttributableType _$wireDELIVER_TO_ADDRESS =
 const AttributableType _$wireBILL_TO_ADDRESS =
     const AttributableType._('BILL_TO_ADDRESS');
 
-AttributableType _$attributableTypeValueOf(String name) {
+AttributableType _$valueOf(String name) {
   switch (name) {
     case 'MDC_CASE_EVENT':
       return _$wireMDC_CASE_EVENT;
@@ -110,7 +110,7 @@ AttributableType _$attributableTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<AttributableType> _$attributableTypeValues =
+final BuiltSet<AttributableType> _$values =
     new BuiltSet<AttributableType>(const <AttributableType>[
   _$wireMDC_CASE_EVENT,
   _$wireLOAN,

@@ -16,7 +16,7 @@ const DirectoryNonPersonType _$wireFACILITY =
 const DirectoryNonPersonType _$wireTEAM =
     const DirectoryNonPersonType._('TEAM');
 
-DirectoryNonPersonType _$directoryNonPersonTypeValueOf(String name) {
+DirectoryNonPersonType _$valueOf(String name) {
   switch (name) {
     case 'ORG':
       return _$wireORG;
@@ -33,7 +33,7 @@ DirectoryNonPersonType _$directoryNonPersonTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<DirectoryNonPersonType> _$directoryNonPersonTypeValues =
+final BuiltSet<DirectoryNonPersonType> _$values =
     new BuiltSet<DirectoryNonPersonType>(const <DirectoryNonPersonType>[
   _$wireORG,
   _$wireBIZ_UNIT,

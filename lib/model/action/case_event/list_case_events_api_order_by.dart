@@ -31,11 +31,9 @@ class ListCaseEventsApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListCaseEventsApiOrderBy> get values =>
-      _$listCaseEventsApiOrderByValues;
+  static BuiltSet<ListCaseEventsApiOrderBy> get values => _$values;
 
-  static ListCaseEventsApiOrderBy valueOf(String name) =>
-      _$listCaseEventsApiOrderByValueOf(name);
+  static ListCaseEventsApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

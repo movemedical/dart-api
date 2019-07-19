@@ -24,9 +24,9 @@ class LocationHint extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<LocationHint> get values => _$locationHintValues;
+  static BuiltSet<LocationHint> get values => _$values;
 
-  static LocationHint valueOf(String name) => _$locationHintValueOf(name);
+  static LocationHint valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

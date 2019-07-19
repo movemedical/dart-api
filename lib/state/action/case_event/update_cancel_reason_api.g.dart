@@ -61,6 +61,7 @@ class _$UpdateCancelReasonApi extends UpdateCancelReasonApi {
           ApiCommand<UpdateCancelReasonApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

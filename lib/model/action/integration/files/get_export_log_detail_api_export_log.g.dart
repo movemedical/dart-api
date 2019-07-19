@@ -344,68 +344,98 @@ class GetExportLogDetailApiExportLogBuilder
   _$GetExportLogDetailApiExportLog _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _jobId;
+
   String get jobId => _$this._jobId;
+
   set jobId(String jobId) => _$this._jobId = jobId;
 
   String _jobKey;
+
   String get jobKey => _$this._jobKey;
+
   set jobKey(String jobKey) => _$this._jobKey = jobKey;
 
   String _serverName;
+
   String get serverName => _$this._serverName;
+
   set serverName(String serverName) => _$this._serverName = serverName;
 
   String _directory;
+
   String get directory => _$this._directory;
+
   set directory(String directory) => _$this._directory = directory;
 
   DateTime _startDate;
+
   DateTime get startDate => _$this._startDate;
+
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
+
   DateTime get endDate => _$this._endDate;
+
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   int _processingTimeSec;
+
   int get processingTimeSec => _$this._processingTimeSec;
+
   set processingTimeSec(int processingTimeSec) =>
       _$this._processingTimeSec = processingTimeSec;
 
   ExportState _currentState;
+
   ExportState get currentState => _$this._currentState;
+
   set currentState(ExportState currentState) =>
       _$this._currentState = currentState;
 
   DateTime _currentStateEnteredTime;
+
   DateTime get currentStateEnteredTime => _$this._currentStateEnteredTime;
+
   set currentStateEnteredTime(DateTime currentStateEnteredTime) =>
       _$this._currentStateEnteredTime = currentStateEnteredTime;
 
   DateTime _currentStateTimeOut;
+
   DateTime get currentStateTimeOut => _$this._currentStateTimeOut;
+
   set currentStateTimeOut(DateTime currentStateTimeOut) =>
       _$this._currentStateTimeOut = currentStateTimeOut;
 
   String _statusMessage;
+
   String get statusMessage => _$this._statusMessage;
+
   set statusMessage(String statusMessage) =>
       _$this._statusMessage = statusMessage;
 
   bool _outcome;
+
   bool get outcome => _$this._outcome;
+
   set outcome(bool outcome) => _$this._outcome = outcome;
 
   String _outcomeMessage;
+
   String get outcomeMessage => _$this._outcomeMessage;
+
   set outcomeMessage(String outcomeMessage) =>
       _$this._outcomeMessage = outcomeMessage;
 
@@ -574,6 +604,7 @@ class _$GetExportLogDetailApiExportLogActions
       GetExportLogDetailApiExportLogBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

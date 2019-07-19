@@ -21,10 +21,9 @@ class ShipmentFileType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ShipmentFileType> get values => _$shipmentFileTypeValues;
+  static BuiltSet<ShipmentFileType> get values => _$values;
 
-  static ShipmentFileType valueOf(String name) =>
-      _$shipmentFileTypeValueOf(name);
+  static ShipmentFileType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

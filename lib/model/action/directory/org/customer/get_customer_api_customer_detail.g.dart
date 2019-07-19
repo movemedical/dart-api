@@ -98,6 +98,12 @@ class _$GetCustomerApiCustomerDetailSerializer
         ..add(serializers.serialize(object.phoneNumber,
             specifiedType: const FullType(PhoneNumber)));
     }
+    if (object.mobileNumber != null) {
+      result
+        ..add('mobileNumber')
+        ..add(serializers.serialize(object.mobileNumber,
+            specifiedType: const FullType(PhoneNumber)));
+    }
     if (object.description != null) {
       result
         ..add('description')
@@ -207,6 +213,10 @@ class _$GetCustomerApiCustomerDetailSerializer
           result.phoneNumber.replace(serializers.deserialize(value,
               specifiedType: const FullType(PhoneNumber)) as PhoneNumber);
           break;
+        case 'mobileNumber':
+          result.mobileNumber.replace(serializers.deserialize(value,
+              specifiedType: const FullType(PhoneNumber)) as PhoneNumber);
+          break;
         case 'description':
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -270,6 +280,8 @@ class _$GetCustomerApiCustomerDetail extends GetCustomerApiCustomerDetail {
   @override
   final PhoneNumber phoneNumber;
   @override
+  final PhoneNumber mobileNumber;
+  @override
   final String description;
   @override
   final bool publicListing;
@@ -301,6 +313,7 @@ class _$GetCustomerApiCustomerDetail extends GetCustomerApiCustomerDetail {
       this.timeZone,
       this.email,
       this.phoneNumber,
+      this.mobileNumber,
       this.description,
       this.publicListing,
       this.creditHold,
@@ -335,6 +348,7 @@ class _$GetCustomerApiCustomerDetail extends GetCustomerApiCustomerDetail {
         timeZone == other.timeZone &&
         email == other.email &&
         phoneNumber == other.phoneNumber &&
+        mobileNumber == other.mobileNumber &&
         description == other.description &&
         publicListing == other.publicListing &&
         creditHold == other.creditHold &&
@@ -364,25 +378,19 @@ class _$GetCustomerApiCustomerDetail extends GetCustomerApiCustomerDetail {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc(
-                                                                                0,
-                                                                                id
-                                                                                    .hashCode),
-                                                                            name
-                                                                                .hashCode),
-                                                                        number
-                                                                            .hashCode),
-                                                                    orgId
-                                                                        .hashCode),
-                                                                orgName
-                                                                    .hashCode),
-                                                            hsOrgId.hashCode),
-                                                        hsOrgName.hashCode),
-                                                    defaultShipTo.hashCode),
-                                                defaultBillTo.hashCode),
-                                            timeZone.hashCode),
-                                        email.hashCode),
-                                    phoneNumber.hashCode),
+                                                                            $jc($jc(0, id.hashCode),
+                                                                                name.hashCode),
+                                                                            number.hashCode),
+                                                                        orgId.hashCode),
+                                                                    orgName.hashCode),
+                                                                hsOrgId.hashCode),
+                                                            hsOrgName.hashCode),
+                                                        defaultShipTo.hashCode),
+                                                    defaultBillTo.hashCode),
+                                                timeZone.hashCode),
+                                            email.hashCode),
+                                        phoneNumber.hashCode),
+                                    mobileNumber.hashCode),
                                 description.hashCode),
                             publicListing.hashCode),
                         creditHold.hashCode),
@@ -407,6 +415,7 @@ class _$GetCustomerApiCustomerDetail extends GetCustomerApiCustomerDetail {
           ..add('timeZone', timeZone)
           ..add('email', email)
           ..add('phoneNumber', phoneNumber)
+          ..add('mobileNumber', mobileNumber)
           ..add('description', description)
           ..add('publicListing', publicListing)
           ..add('creditHold', creditHold)
@@ -425,87 +434,133 @@ class GetCustomerApiCustomerDetailBuilder
   _$GetCustomerApiCustomerDetail _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _number;
+
   String get number => _$this._number;
+
   set number(String number) => _$this._number = number;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _orgName;
+
   String get orgName => _$this._orgName;
+
   set orgName(String orgName) => _$this._orgName = orgName;
 
   String _hsOrgId;
+
   String get hsOrgId => _$this._hsOrgId;
+
   set hsOrgId(String hsOrgId) => _$this._hsOrgId = hsOrgId;
 
   String _hsOrgName;
+
   String get hsOrgName => _$this._hsOrgName;
+
   set hsOrgName(String hsOrgName) => _$this._hsOrgName = hsOrgName;
 
   CustomerAddressBuilder _defaultShipTo;
+
   CustomerAddressBuilder get defaultShipTo =>
       _$this._defaultShipTo ??= new CustomerAddressBuilder();
+
   set defaultShipTo(CustomerAddressBuilder defaultShipTo) =>
       _$this._defaultShipTo = defaultShipTo;
 
   CustomerAddressBuilder _defaultBillTo;
+
   CustomerAddressBuilder get defaultBillTo =>
       _$this._defaultBillTo ??= new CustomerAddressBuilder();
+
   set defaultBillTo(CustomerAddressBuilder defaultBillTo) =>
       _$this._defaultBillTo = defaultBillTo;
 
   String _timeZone;
+
   String get timeZone => _$this._timeZone;
+
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   PhoneNumberBuilder _phoneNumber;
+
   PhoneNumberBuilder get phoneNumber =>
       _$this._phoneNumber ??= new PhoneNumberBuilder();
+
   set phoneNumber(PhoneNumberBuilder phoneNumber) =>
       _$this._phoneNumber = phoneNumber;
 
+  PhoneNumberBuilder _mobileNumber;
+
+  PhoneNumberBuilder get mobileNumber =>
+      _$this._mobileNumber ??= new PhoneNumberBuilder();
+
+  set mobileNumber(PhoneNumberBuilder mobileNumber) =>
+      _$this._mobileNumber = mobileNumber;
+
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   bool _publicListing;
+
   bool get publicListing => _$this._publicListing;
+
   set publicListing(bool publicListing) =>
       _$this._publicListing = publicListing;
 
   bool _creditHold;
+
   bool get creditHold => _$this._creditHold;
+
   set creditHold(bool creditHold) => _$this._creditHold = creditHold;
 
   String _paymentTerms;
+
   String get paymentTerms => _$this._paymentTerms;
+
   set paymentTerms(String paymentTerms) => _$this._paymentTerms = paymentTerms;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   bool _moveManaged;
+
   bool get moveManaged => _$this._moveManaged;
+
   set moveManaged(bool moveManaged) => _$this._moveManaged = moveManaged;
 
   ListBuilder<AttributeContact> _attributeContacts;
+
   ListBuilder<AttributeContact> get attributeContacts =>
       _$this._attributeContacts ??= new ListBuilder<AttributeContact>();
+
   set attributeContacts(ListBuilder<AttributeContact> attributeContacts) =>
       _$this._attributeContacts = attributeContacts;
 
@@ -525,6 +580,7 @@ class GetCustomerApiCustomerDetailBuilder
       _timeZone = _$v.timeZone;
       _email = _$v.email?.toBuilder();
       _phoneNumber = _$v.phoneNumber?.toBuilder();
+      _mobileNumber = _$v.mobileNumber?.toBuilder();
       _description = _$v.description;
       _publicListing = _$v.publicListing;
       _creditHold = _$v.creditHold;
@@ -568,6 +624,7 @@ class GetCustomerApiCustomerDetailBuilder
               timeZone: timeZone,
               email: _email?.build(),
               phoneNumber: _phoneNumber?.build(),
+              mobileNumber: _mobileNumber?.build(),
               description: description,
               publicListing: publicListing,
               creditHold: creditHold,
@@ -587,6 +644,8 @@ class GetCustomerApiCustomerDetailBuilder
         _email?.build();
         _$failedField = 'phoneNumber';
         _phoneNumber?.build();
+        _$failedField = 'mobileNumber';
+        _mobileNumber?.build();
 
         _$failedField = 'attributeContacts';
         _attributeContacts?.build();
@@ -635,6 +694,7 @@ class _$GetCustomerApiCustomerDetailActions
   final FieldDispatcher<String> timeZone;
   final EmailActions email;
   final PhoneNumberActions phoneNumber;
+  final PhoneNumberActions mobileNumber;
   final FieldDispatcher<String> description;
   final FieldDispatcher<bool> publicListing;
   final FieldDispatcher<bool> creditHold;
@@ -694,6 +754,13 @@ class _$GetCustomerApiCustomerDetailActions
                 (s) => s?.phoneNumber,
                 (b) => b?.phoneNumber,
                 (parent, builder) => parent?.phoneNumber = builder)),
+        mobileNumber = PhoneNumberActions(() => options$
+            .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
+                'mobileNumber',
+                (a) => a.mobileNumber,
+                (s) => s?.mobileNumber,
+                (b) => b?.mobileNumber,
+                (parent, builder) => parent?.mobileNumber = builder)),
         description = options$.field<String>(
             'description',
             (a) => a?.description,
@@ -735,15 +802,18 @@ class _$GetCustomerApiCustomerDetailActions
       GetCustomerApiCustomerDetailBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.defaultShipTo,
         this.defaultBillTo,
         this.email,
         this.phoneNumber,
+        this.mobileNumber,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -780,6 +850,7 @@ class _$GetCustomerApiCustomerDetailActions
     timeZone.reducer$(reducer);
     email.reducer$(reducer);
     phoneNumber.reducer$(reducer);
+    mobileNumber.reducer$(reducer);
     description.reducer$(reducer);
     publicListing.reducer$(reducer);
     creditHold.reducer$(reducer);
@@ -796,5 +867,6 @@ class _$GetCustomerApiCustomerDetailActions
     defaultBillTo.middleware$(middleware);
     email.middleware$(middleware);
     phoneNumber.middleware$(middleware);
+    mobileNumber.middleware$(middleware);
   }
 }

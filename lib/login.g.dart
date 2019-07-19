@@ -205,15 +205,21 @@ class LoginRequestBuilder
   _$LoginRequest _$v;
 
   String _email;
+
   String get email => _$this._email;
+
   set email(String email) => _$this._email = email;
 
   String _password;
+
   String get password => _$this._password;
+
   set password(String password) => _$this._password = password;
 
   String _session;
+
   String get session => _$this._session;
+
   set session(String session) => _$this._session = session;
 
   LoginRequestBuilder();
@@ -321,26 +327,36 @@ class LoginResponseBuilder
   _$LoginResponse _$v;
 
   DateTime _moveSessionExpires;
+
   DateTime get moveSessionExpires => _$this._moveSessionExpires;
+
   set moveSessionExpires(DateTime moveSessionExpires) =>
       _$this._moveSessionExpires = moveSessionExpires;
 
   String _moveSessionId;
+
   String get moveSessionId => _$this._moveSessionId;
+
   set moveSessionId(String moveSessionId) =>
       _$this._moveSessionId = moveSessionId;
 
   String _moveUserId;
+
   String get moveUserId => _$this._moveUserId;
+
   set moveUserId(String moveUserId) => _$this._moveUserId = moveUserId;
 
   String _moveWebsocketEndpoint;
+
   String get moveWebsocketEndpoint => _$this._moveWebsocketEndpoint;
+
   set moveWebsocketEndpoint(String moveWebsocketEndpoint) =>
       _$this._moveWebsocketEndpoint = moveWebsocketEndpoint;
 
   bool _pendingMfa;
+
   bool get pendingMfa => _$this._pendingMfa;
+
   set pendingMfa(bool pendingMfa) => _$this._pendingMfa = pendingMfa;
 
   LoginResponseBuilder();
@@ -426,6 +442,7 @@ class _$LoginRequestActions extends LoginRequestActions {
   LoginRequestBuilder newBuilder$() => LoginRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -495,6 +512,7 @@ class _$LoginDispatcher extends LoginDispatcher {
           ApiResult<LoginResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

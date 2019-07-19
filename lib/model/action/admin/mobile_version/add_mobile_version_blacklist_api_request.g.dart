@@ -122,11 +122,15 @@ class AddMobileVersionBlacklistApiRequestBuilder
   _$AddMobileVersionBlacklistApiRequest _$v;
 
   MobilePlatform _platform;
+
   MobilePlatform get platform => _$this._platform;
+
   set platform(MobilePlatform platform) => _$this._platform = platform;
 
   String _versionNumber;
+
   String get versionNumber => _$this._versionNumber;
+
   set versionNumber(String versionNumber) =>
       _$this._versionNumber = versionNumber;
 
@@ -214,6 +218,7 @@ class _$AddMobileVersionBlacklistApiRequestActions
       AddMobileVersionBlacklistApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

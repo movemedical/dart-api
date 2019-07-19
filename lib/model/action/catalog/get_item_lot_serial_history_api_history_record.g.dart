@@ -158,20 +158,28 @@ class GetItemLotSerialHistoryApiHistoryRecordBuilder
   _$GetItemLotSerialHistoryApiHistoryRecord _$v;
 
   DateTime _date;
+
   DateTime get date => _$this._date;
+
   set date(DateTime date) => _$this._date = date;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   GetItemLotSerialHistoryApiHistoryType _historyType;
+
   GetItemLotSerialHistoryApiHistoryType get historyType => _$this._historyType;
+
   set historyType(GetItemLotSerialHistoryApiHistoryType historyType) =>
       _$this._historyType = historyType;
 
   String _referenceId;
+
   String get referenceId => _$this._referenceId;
+
   set referenceId(String referenceId) => _$this._referenceId = referenceId;
 
   GetItemLotSerialHistoryApiHistoryRecordBuilder();
@@ -275,6 +283,7 @@ class _$GetItemLotSerialHistoryApiHistoryRecordActions
       GetItemLotSerialHistoryApiHistoryRecordBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

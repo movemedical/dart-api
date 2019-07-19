@@ -25,9 +25,9 @@ class PickStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<PickStatus> get values => _$pickStatusValues;
+  static BuiltSet<PickStatus> get values => _$values;
 
-  static PickStatus valueOf(String name) => _$pickStatusValueOf(name);
+  static PickStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

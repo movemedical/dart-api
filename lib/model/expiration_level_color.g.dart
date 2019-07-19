@@ -16,7 +16,7 @@ const ExpirationLevelColor _$wireYELLOW =
 const ExpirationLevelColor _$wireBLUE = const ExpirationLevelColor._('BLUE');
 const ExpirationLevelColor _$wireGREEN = const ExpirationLevelColor._('GREEN');
 
-ExpirationLevelColor _$expirationLevelColorValueOf(String name) {
+ExpirationLevelColor _$valueOf(String name) {
   switch (name) {
     case 'RED':
       return _$wireRED;
@@ -35,7 +35,7 @@ ExpirationLevelColor _$expirationLevelColorValueOf(String name) {
   }
 }
 
-final BuiltSet<ExpirationLevelColor> _$expirationLevelColorValues =
+final BuiltSet<ExpirationLevelColor> _$values =
     new BuiltSet<ExpirationLevelColor>(const <ExpirationLevelColor>[
   _$wireRED,
   _$wireORANGE,

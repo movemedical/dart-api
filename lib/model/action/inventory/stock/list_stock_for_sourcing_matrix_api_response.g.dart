@@ -42,6 +42,12 @@ class _$ListStockForSourcingMatrixApiResponseSerializer
               const FullType(ListStockForSourcingMatrixApiSourcingLine)
             ])));
     }
+    if (object.more != null) {
+      result
+        ..add('more')
+        ..add(serializers.serialize(object.more,
+            specifiedType: const FullType(bool)));
+    }
 
     return result;
   }
@@ -70,6 +76,10 @@ class _$ListStockForSourcingMatrixApiResponseSerializer
                 const FullType(ListStockForSourcingMatrixApiSourcingLine)
               ])) as BuiltList);
           break;
+        case 'more':
+          result.more = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -83,13 +93,16 @@ class _$ListStockForSourcingMatrixApiResponse
   final BuiltList<ListStockForSourcingMatrixApiSourcingLocation> locations;
   @override
   final BuiltList<ListStockForSourcingMatrixApiSourcingLine> items;
+  @override
+  final bool more;
 
   factory _$ListStockForSourcingMatrixApiResponse(
           [void updates(ListStockForSourcingMatrixApiResponseBuilder b)]) =>
       (new ListStockForSourcingMatrixApiResponseBuilder()..update(updates))
           .build();
 
-  _$ListStockForSourcingMatrixApiResponse._({this.locations, this.items})
+  _$ListStockForSourcingMatrixApiResponse._(
+      {this.locations, this.items, this.more})
       : super._();
 
   @override
@@ -106,19 +119,22 @@ class _$ListStockForSourcingMatrixApiResponse
     if (identical(other, this)) return true;
     return other is ListStockForSourcingMatrixApiResponse &&
         locations == other.locations &&
-        items == other.items;
+        items == other.items &&
+        more == other.more;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, locations.hashCode), items.hashCode));
+    return $jf(
+        $jc($jc($jc(0, locations.hashCode), items.hashCode), more.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ListStockForSourcingMatrixApiResponse')
           ..add('locations', locations)
-          ..add('items', items))
+          ..add('items', items)
+          ..add('more', more))
         .toString();
   }
 }
@@ -130,20 +146,30 @@ class ListStockForSourcingMatrixApiResponseBuilder
   _$ListStockForSourcingMatrixApiResponse _$v;
 
   ListBuilder<ListStockForSourcingMatrixApiSourcingLocation> _locations;
+
   ListBuilder<ListStockForSourcingMatrixApiSourcingLocation> get locations =>
       _$this._locations ??=
           new ListBuilder<ListStockForSourcingMatrixApiSourcingLocation>();
+
   set locations(
           ListBuilder<ListStockForSourcingMatrixApiSourcingLocation>
               locations) =>
       _$this._locations = locations;
 
   ListBuilder<ListStockForSourcingMatrixApiSourcingLine> _items;
+
   ListBuilder<ListStockForSourcingMatrixApiSourcingLine> get items =>
       _$this._items ??=
           new ListBuilder<ListStockForSourcingMatrixApiSourcingLine>();
+
   set items(ListBuilder<ListStockForSourcingMatrixApiSourcingLine> items) =>
       _$this._items = items;
+
+  bool _more;
+
+  bool get more => _$this._more;
+
+  set more(bool more) => _$this._more = more;
 
   ListStockForSourcingMatrixApiResponseBuilder();
 
@@ -151,6 +177,7 @@ class ListStockForSourcingMatrixApiResponseBuilder
     if (_$v != null) {
       _locations = _$v.locations?.toBuilder();
       _items = _$v.items?.toBuilder();
+      _more = _$v.more;
       _$v = null;
     }
     return this;
@@ -175,7 +202,9 @@ class ListStockForSourcingMatrixApiResponseBuilder
     try {
       _$result = _$v ??
           new _$ListStockForSourcingMatrixApiResponse._(
-              locations: _locations?.build(), items: _items?.build());
+              locations: _locations?.build(),
+              items: _items?.build(),
+              more: more);
     } catch (_) {
       String _$failedField;
       try {
@@ -222,6 +251,7 @@ class _$ListStockForSourcingMatrixApiResponseActions
       BuiltList<ListStockForSourcingMatrixApiSourcingLocation>> locations;
   final FieldDispatcher<BuiltList<ListStockForSourcingMatrixApiSourcingLine>>
       items;
+  final FieldDispatcher<bool> more;
 
   _$ListStockForSourcingMatrixApiResponseActions._(this.options$)
       : replace$ = options$.action<ListStockForSourcingMatrixApiResponse>(
@@ -238,6 +268,8 @@ class _$ListStockForSourcingMatrixApiResponseActions
                 (a) => a?.items,
                 (s) => s?.items,
                 (p, b) => p?.items = b),
+        more = options$.field<bool>(
+            'more', (a) => a?.more, (s) => s?.more, (p, b) => p?.more = b),
         super._();
 
   factory _$ListStockForSourcingMatrixApiResponseActions(
@@ -253,12 +285,14 @@ class _$ListStockForSourcingMatrixApiResponseActions
       ListStockForSourcingMatrixApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
         this.replace$,
         this.locations,
         this.items,
+        this.more,
       ]);
 
   @override
@@ -266,6 +300,7 @@ class _$ListStockForSourcingMatrixApiResponseActions
     super.reducer$(reducer);
     locations.reducer$(reducer);
     items.reducer$(reducer);
+    more.reducer$(reducer);
   }
 
   @override

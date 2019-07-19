@@ -418,95 +418,133 @@ class GetStockApiStockBuilder
   _$GetStockApiStock _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _stockNumber;
+
   int get stockNumber => _$this._stockNumber;
+
   set stockNumber(int stockNumber) => _$this._stockNumber = stockNumber;
 
   StockItemBuilder _stockItem;
+
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
+
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   InventoryTypeBuilder _inventoryType;
+
   InventoryTypeBuilder get inventoryType =>
       _$this._inventoryType ??= new InventoryTypeBuilder();
+
   set inventoryType(InventoryTypeBuilder inventoryType) =>
       _$this._inventoryType = inventoryType;
 
   StockPlaceBuilder _stockPlace;
+
   StockPlaceBuilder get stockPlace =>
       _$this._stockPlace ??= new StockPlaceBuilder();
+
   set stockPlace(StockPlaceBuilder stockPlace) =>
       _$this._stockPlace = stockPlace;
 
   String _kitStockId;
+
   String get kitStockId => _$this._kitStockId;
+
   set kitStockId(String kitStockId) => _$this._kitStockId = kitStockId;
 
   StockItemBuilder _kitStockItem;
+
   StockItemBuilder get kitStockItem =>
       _$this._kitStockItem ??= new StockItemBuilder();
+
   set kitStockItem(StockItemBuilder kitStockItem) =>
       _$this._kitStockItem = kitStockItem;
 
   ResponsiblePartyBuilder _responsibleParty;
+
   ResponsiblePartyBuilder get responsibleParty =>
       _$this._responsibleParty ??= new ResponsiblePartyBuilder();
+
   set responsibleParty(ResponsiblePartyBuilder responsibleParty) =>
       _$this._responsibleParty = responsibleParty;
 
   LoanLiteBuilder _demandLoan;
+
   LoanLiteBuilder get demandLoan =>
       _$this._demandLoan ??= new LoanLiteBuilder();
+
   set demandLoan(LoanLiteBuilder demandLoan) => _$this._demandLoan = demandLoan;
 
   LoanLiteBuilder _consignmentLoan;
+
   LoanLiteBuilder get consignmentLoan =>
       _$this._consignmentLoan ??= new LoanLiteBuilder();
+
   set consignmentLoan(LoanLiteBuilder consignmentLoan) =>
       _$this._consignmentLoan = consignmentLoan;
 
   ListBuilder<OrderHeaderLite> _activeRestockOrders;
+
   ListBuilder<OrderHeaderLite> get activeRestockOrders =>
       _$this._activeRestockOrders ??= new ListBuilder<OrderHeaderLite>();
+
   set activeRestockOrders(ListBuilder<OrderHeaderLite> activeRestockOrders) =>
       _$this._activeRestockOrders = activeRestockOrders;
 
   bool _allocated;
+
   bool get allocated => _$this._allocated;
+
   set allocated(bool allocated) => _$this._allocated = allocated;
 
   bool _onHold;
+
   bool get onHold => _$this._onHold;
+
   set onHold(bool onHold) => _$this._onHold = onHold;
 
   LostFound _lostFound;
+
   LostFound get lostFound => _$this._lostFound;
+
   set lostFound(LostFound lostFound) => _$this._lostFound = lostFound;
 
   bool _verified;
+
   bool get verified => _$this._verified;
+
   set verified(bool verified) => _$this._verified = verified;
 
   bool _hasExtras;
+
   bool get hasExtras => _$this._hasExtras;
+
   set hasExtras(bool hasExtras) => _$this._hasExtras = hasExtras;
 
   bool _hasMissing;
+
   bool get hasMissing => _$this._hasMissing;
+
   set hasMissing(bool hasMissing) => _$this._hasMissing = hasMissing;
 
   bool _hasUnverified;
+
   bool get hasUnverified => _$this._hasUnverified;
+
   set hasUnverified(bool hasUnverified) =>
       _$this._hasUnverified = hasUnverified;
 
   ListBuilder<GetStockApiStockAttribute> _attributes;
+
   ListBuilder<GetStockApiStockAttribute> get attributes =>
       _$this._attributes ??= new ListBuilder<GetStockApiStockAttribute>();
+
   set attributes(ListBuilder<GetStockApiStockAttribute> attributes) =>
       _$this._attributes = attributes;
 
@@ -746,6 +784,7 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
   GetStockApiStockBuilder newBuilder$() => GetStockApiStockBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
@@ -758,6 +797,7 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

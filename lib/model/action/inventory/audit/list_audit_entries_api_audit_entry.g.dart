@@ -137,17 +137,23 @@ class ListAuditEntriesApiAuditEntryBuilder
   _$ListAuditEntriesApiAuditEntry _$v;
 
   String _enteredByUserId;
+
   String get enteredByUserId => _$this._enteredByUserId;
+
   set enteredByUserId(String enteredByUserId) =>
       _$this._enteredByUserId = enteredByUserId;
 
   DateTime _enteredTimestamp;
+
   DateTime get enteredTimestamp => _$this._enteredTimestamp;
+
   set enteredTimestamp(DateTime enteredTimestamp) =>
       _$this._enteredTimestamp = enteredTimestamp;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   ListAuditEntriesApiAuditEntryBuilder();
@@ -243,6 +249,7 @@ class _$ListAuditEntriesApiAuditEntryActions
       ListAuditEntriesApiAuditEntryBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

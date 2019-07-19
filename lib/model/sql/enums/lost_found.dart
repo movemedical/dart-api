@@ -22,9 +22,9 @@ class LostFound extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<LostFound> get values => _$lostFoundValues;
+  static BuiltSet<LostFound> get values => _$values;
 
-  static LostFound valueOf(String name) => _$lostFoundValueOf(name);
+  static LostFound valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

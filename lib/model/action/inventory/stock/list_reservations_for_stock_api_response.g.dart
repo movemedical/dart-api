@@ -110,9 +110,11 @@ class ListReservationsForStockApiResponseBuilder
   _$ListReservationsForStockApiResponse _$v;
 
   ListBuilder<ListReservationsForStockApiReservation> _picks;
+
   ListBuilder<ListReservationsForStockApiReservation> get picks =>
       _$this._picks ??=
           new ListBuilder<ListReservationsForStockApiReservation>();
+
   set picks(ListBuilder<ListReservationsForStockApiReservation> picks) =>
       _$this._picks = picks;
 
@@ -210,6 +212,7 @@ class _$ListReservationsForStockApiResponseActions
       ListReservationsForStockApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

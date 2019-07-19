@@ -10,7 +10,7 @@ const Gender _$wireMALE = const Gender._('MALE');
 const Gender _$wireFEMALE = const Gender._('FEMALE');
 const Gender _$wireUNKNOWN = const Gender._('UNKNOWN');
 
-Gender _$genderValueOf(String name) {
+Gender _$valueOf(String name) {
   switch (name) {
     case 'MALE':
       return _$wireMALE;
@@ -23,7 +23,7 @@ Gender _$genderValueOf(String name) {
   }
 }
 
-final BuiltSet<Gender> _$genderValues = new BuiltSet<Gender>(const <Gender>[
+final BuiltSet<Gender> _$values = new BuiltSet<Gender>(const <Gender>[
   _$wireMALE,
   _$wireFEMALE,
   _$wireUNKNOWN,

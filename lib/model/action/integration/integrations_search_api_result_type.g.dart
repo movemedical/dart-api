@@ -13,8 +13,7 @@ const IntegrationsSearchApiResultType _$wireIMPORT_LOG =
 const IntegrationsSearchApiResultType _$wireINTEGRATION_ISSUE =
     const IntegrationsSearchApiResultType._('INTEGRATION_ISSUE');
 
-IntegrationsSearchApiResultType _$integrationsSearchApiResultTypeValueOf(
-    String name) {
+IntegrationsSearchApiResultType _$valueOf(String name) {
   switch (name) {
     case 'ADJUSTMENT':
       return _$wireADJUSTMENT;
@@ -27,10 +26,8 @@ IntegrationsSearchApiResultType _$integrationsSearchApiResultTypeValueOf(
   }
 }
 
-final BuiltSet<IntegrationsSearchApiResultType>
-    _$integrationsSearchApiResultTypeValues =
-    new BuiltSet<IntegrationsSearchApiResultType>(const <
-        IntegrationsSearchApiResultType>[
+final BuiltSet<IntegrationsSearchApiResultType> _$values = new BuiltSet<
+    IntegrationsSearchApiResultType>(const <IntegrationsSearchApiResultType>[
   _$wireADJUSTMENT,
   _$wireIMPORT_LOG,
   _$wireINTEGRATION_ISSUE,

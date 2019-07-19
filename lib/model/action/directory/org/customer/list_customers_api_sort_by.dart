@@ -22,11 +22,9 @@ class ListCustomersApiSortBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListCustomersApiSortBy> get values =>
-      _$listCustomersApiSortByValues;
+  static BuiltSet<ListCustomersApiSortBy> get values => _$values;
 
-  static ListCustomersApiSortBy valueOf(String name) =>
-      _$listCustomersApiSortByValueOf(name);
+  static ListCustomersApiSortBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

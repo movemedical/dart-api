@@ -13,8 +13,7 @@ const OrderFilePushMessageFileUpdateType _$wireUPLOADED =
 const OrderFilePushMessageFileUpdateType _$wireDELETED =
     const OrderFilePushMessageFileUpdateType._('DELETED');
 
-OrderFilePushMessageFileUpdateType _$orderFilePushMessageFileUpdateTypeValueOf(
-    String name) {
+OrderFilePushMessageFileUpdateType _$valueOf(String name) {
   switch (name) {
     case 'UPLOADING':
       return _$wireUPLOADING;
@@ -27,8 +26,7 @@ OrderFilePushMessageFileUpdateType _$orderFilePushMessageFileUpdateTypeValueOf(
   }
 }
 
-final BuiltSet<OrderFilePushMessageFileUpdateType>
-    _$orderFilePushMessageFileUpdateTypeValues =
+final BuiltSet<OrderFilePushMessageFileUpdateType> _$values =
     new BuiltSet<OrderFilePushMessageFileUpdateType>(const <
         OrderFilePushMessageFileUpdateType>[
   _$wireUPLOADING,

@@ -109,9 +109,11 @@ class ListLinesForSalesOrderApiResponseBuilder
   _$ListLinesForSalesOrderApiResponse _$v;
 
   ListBuilder<ListLinesForSalesOrderApiOrderLine> _orderLines;
+
   ListBuilder<ListLinesForSalesOrderApiOrderLine> get orderLines =>
       _$this._orderLines ??=
           new ListBuilder<ListLinesForSalesOrderApiOrderLine>();
+
   set orderLines(ListBuilder<ListLinesForSalesOrderApiOrderLine> orderLines) =>
       _$this._orderLines = orderLines;
 
@@ -210,6 +212,7 @@ class _$ListLinesForSalesOrderApiResponseActions
       ListLinesForSalesOrderApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

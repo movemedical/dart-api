@@ -38,6 +38,9 @@ abstract class ReadBarcode2ApiResponse
   bool get complete;
 
   @nullable
+  bool get isProcessed;
+
+  @nullable
   Item get item;
 
   @nullable
@@ -110,6 +113,8 @@ abstract class ReadBarcode2ApiResponseActions extends ModelActions<
   FieldDispatcher<String> get message;
 
   FieldDispatcher<bool> get complete;
+
+  FieldDispatcher<bool> get isProcessed;
 
   ItemActions get item;
 

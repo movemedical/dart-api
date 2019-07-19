@@ -97,7 +97,9 @@ class GetMessageApiRequestBuilder
   _$GetMessageApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   GetMessageApiRequestBuilder();
@@ -170,6 +172,7 @@ class _$GetMessageApiRequestActions extends GetMessageApiRequestActions {
   GetMessageApiRequestBuilder newBuilder$() => GetMessageApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

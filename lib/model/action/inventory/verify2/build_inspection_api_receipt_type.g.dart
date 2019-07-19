@@ -17,8 +17,7 @@ const BuildInspectionApiReceiptType _$wireKIT_INSPECTION =
 const BuildInspectionApiReceiptType _$wireTRAY_INSPECTION =
     const BuildInspectionApiReceiptType._('TRAY_INSPECTION');
 
-BuildInspectionApiReceiptType _$buildInspectionApiReceiptTypeValueOf(
-    String name) {
+BuildInspectionApiReceiptType _$valueOf(String name) {
   switch (name) {
     case 'SHIPMENT':
       return _$wireSHIPMENT;
@@ -35,9 +34,8 @@ BuildInspectionApiReceiptType _$buildInspectionApiReceiptTypeValueOf(
   }
 }
 
-final BuiltSet<BuildInspectionApiReceiptType>
-    _$buildInspectionApiReceiptTypeValues = new BuiltSet<
-        BuildInspectionApiReceiptType>(const <BuildInspectionApiReceiptType>[
+final BuiltSet<BuildInspectionApiReceiptType> _$values = new BuiltSet<
+    BuildInspectionApiReceiptType>(const <BuildInspectionApiReceiptType>[
   _$wireSHIPMENT,
   _$wireLOAN,
   _$wireLOCATION,

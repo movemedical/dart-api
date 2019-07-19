@@ -32,6 +32,9 @@ abstract class ListOrderReasonsApiRequest
   bool get forCreate;
 
   @nullable
+  bool get inventoryOrder;
+
+  @nullable
   PaginationParams get paging;
 
   ////////////////////////////////
@@ -69,6 +72,8 @@ abstract class ListOrderReasonsApiRequestActions extends ModelActions<
   FieldDispatcher<bool> get active;
 
   FieldDispatcher<bool> get forCreate;
+
+  FieldDispatcher<bool> get inventoryOrder;
 
   PaginationParamsActions get paging;
 

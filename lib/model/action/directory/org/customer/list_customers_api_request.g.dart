@@ -246,45 +246,63 @@ class ListCustomersApiRequestBuilder
   _$ListCustomersApiRequest _$v;
 
   ListBuilder<String> _customerIds;
+
   ListBuilder<String> get customerIds =>
       _$this._customerIds ??= new ListBuilder<String>();
+
   set customerIds(ListBuilder<String> customerIds) =>
       _$this._customerIds = customerIds;
 
   ListBuilder<String> _hsOrgIds;
+
   ListBuilder<String> get hsOrgIds =>
       _$this._hsOrgIds ??= new ListBuilder<String>();
+
   set hsOrgIds(ListBuilder<String> hsOrgIds) => _$this._hsOrgIds = hsOrgIds;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   bool _scopeToLocationVizibility;
+
   bool get scopeToLocationVizibility => _$this._scopeToLocationVizibility;
+
   set scopeToLocationVizibility(bool scopeToLocationVizibility) =>
       _$this._scopeToLocationVizibility = scopeToLocationVizibility;
 
   ListCustomersApiSortBy _sortBy;
+
   ListCustomersApiSortBy get sortBy => _$this._sortBy;
+
   set sortBy(ListCustomersApiSortBy sortBy) => _$this._sortBy = sortBy;
 
   bool _sortAscending;
+
   bool get sortAscending => _$this._sortAscending;
+
   set sortAscending(bool sortAscending) =>
       _$this._sortAscending = sortAscending;
 
   int _startRecordIdx;
+
   int get startRecordIdx => _$this._startRecordIdx;
+
   set startRecordIdx(int startRecordIdx) =>
       _$this._startRecordIdx = startRecordIdx;
 
   int _pageSize;
+
   int get pageSize => _$this._pageSize;
+
   set pageSize(int pageSize) => _$this._pageSize = pageSize;
 
   ListCustomersApiRequestBuilder();
@@ -427,6 +445,7 @@ class _$ListCustomersApiRequestActions extends ListCustomersApiRequestActions {
       ListCustomersApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

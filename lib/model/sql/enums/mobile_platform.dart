@@ -22,9 +22,9 @@ class MobilePlatform extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<MobilePlatform> get values => _$mobilePlatformValues;
+  static BuiltSet<MobilePlatform> get values => _$values;
 
-  static MobilePlatform valueOf(String name) => _$mobilePlatformValueOf(name);
+  static MobilePlatform valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

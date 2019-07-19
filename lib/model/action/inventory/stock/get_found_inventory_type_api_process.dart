@@ -23,11 +23,10 @@ class GetFoundInventoryTypeApiProcess extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<GetFoundInventoryTypeApiProcess> get values =>
-      _$getFoundInventoryTypeApiProcessValues;
+  static BuiltSet<GetFoundInventoryTypeApiProcess> get values => _$values;
 
   static GetFoundInventoryTypeApiProcess valueOf(String name) =>
-      _$getFoundInventoryTypeApiProcessValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

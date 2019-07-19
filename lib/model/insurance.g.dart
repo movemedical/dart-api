@@ -208,40 +208,56 @@ class InsuranceBuilder implements Builder<Insurance, InsuranceBuilder> {
   _$Insurance _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _policyNumber;
+
   String get policyNumber => _$this._policyNumber;
+
   set policyNumber(String policyNumber) => _$this._policyNumber = policyNumber;
 
   String _groupNumber;
+
   String get groupNumber => _$this._groupNumber;
+
   set groupNumber(String groupNumber) => _$this._groupNumber = groupNumber;
 
   PhoneNumberBuilder _phoneNumber;
+
   PhoneNumberBuilder get phoneNumber =>
       _$this._phoneNumber ??= new PhoneNumberBuilder();
+
   set phoneNumber(PhoneNumberBuilder phoneNumber) =>
       _$this._phoneNumber = phoneNumber;
 
   PersonNameBuilder _subscriberName;
+
   PersonNameBuilder get subscriberName =>
       _$this._subscriberName ??= new PersonNameBuilder();
+
   set subscriberName(PersonNameBuilder subscriberName) =>
       _$this._subscriberName = subscriberName;
 
   String _subscriberRelation;
+
   String get subscriberRelation => _$this._subscriberRelation;
+
   set subscriberRelation(String subscriberRelation) =>
       _$this._subscriberRelation = subscriberRelation;
 
   DateTime _subscriberDateOfBirth;
+
   DateTime get subscriberDateOfBirth => _$this._subscriberDateOfBirth;
+
   set subscriberDateOfBirth(DateTime subscriberDateOfBirth) =>
       _$this._subscriberDateOfBirth = subscriberDateOfBirth;
 
@@ -385,6 +401,7 @@ class _$InsuranceActions extends InsuranceActions {
   InsuranceBuilder newBuilder$() => InsuranceBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.phoneNumber,
@@ -392,6 +409,7 @@ class _$InsuranceActions extends InsuranceActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

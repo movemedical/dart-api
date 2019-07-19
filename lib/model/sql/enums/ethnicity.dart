@@ -28,9 +28,9 @@ class Ethnicity extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<Ethnicity> get values => _$ethnicityValues;
+  static BuiltSet<Ethnicity> get values => _$values;
 
-  static Ethnicity valueOf(String name) => _$ethnicityValueOf(name);
+  static Ethnicity valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

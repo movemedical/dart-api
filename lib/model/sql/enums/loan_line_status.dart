@@ -23,9 +23,9 @@ class LoanLineStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<LoanLineStatus> get values => _$loanLineStatusValues;
+  static BuiltSet<LoanLineStatus> get values => _$values;
 
-  static LoanLineStatus valueOf(String name) => _$loanLineStatusValueOf(name);
+  static LoanLineStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

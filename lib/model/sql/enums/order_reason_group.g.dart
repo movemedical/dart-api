@@ -25,7 +25,7 @@ const OrderReasonGroup _$wireEVENT_SALES =
 const OrderReasonGroup _$wireNO_EVENT_SALES =
     const OrderReasonGroup._('NO_EVENT_SALES');
 
-OrderReasonGroup _$orderReasonGroupValueOf(String name) {
+OrderReasonGroup _$valueOf(String name) {
   switch (name) {
     case 'DEMAND_LOAN':
       return _$wireDEMAND_LOAN;
@@ -54,7 +54,7 @@ OrderReasonGroup _$orderReasonGroupValueOf(String name) {
   }
 }
 
-final BuiltSet<OrderReasonGroup> _$orderReasonGroupValues =
+final BuiltSet<OrderReasonGroup> _$values =
     new BuiltSet<OrderReasonGroup>(const <OrderReasonGroup>[
   _$wireDEMAND_LOAN,
   _$wireDEMAND_LOAN_RETURN,

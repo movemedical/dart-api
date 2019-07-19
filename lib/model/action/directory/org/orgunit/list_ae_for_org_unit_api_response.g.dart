@@ -122,11 +122,15 @@ class ListAEForOrgUnitApiResponseBuilder
   _$ListAEForOrgUnitApiResponse _$v;
 
   ListBuilder<Ae> _data;
+
   ListBuilder<Ae> get data => _$this._data ??= new ListBuilder<Ae>();
+
   set data(ListBuilder<Ae> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListAEForOrgUnitApiResponseBuilder();
@@ -223,6 +227,7 @@ class _$ListAEForOrgUnitApiResponseActions
       ListAEForOrgUnitApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

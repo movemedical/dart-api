@@ -108,8 +108,10 @@ class ListSubProceduresApiResponseBuilder
   _$ListSubProceduresApiResponse _$v;
 
   ListBuilder<SubProcedure> _subProcedures;
+
   ListBuilder<SubProcedure> get subProcedures =>
       _$this._subProcedures ??= new ListBuilder<SubProcedure>();
+
   set subProcedures(ListBuilder<SubProcedure> subProcedures) =>
       _$this._subProcedures = subProcedures;
 
@@ -206,6 +208,7 @@ class _$ListSubProceduresApiResponseActions
       ListSubProceduresApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

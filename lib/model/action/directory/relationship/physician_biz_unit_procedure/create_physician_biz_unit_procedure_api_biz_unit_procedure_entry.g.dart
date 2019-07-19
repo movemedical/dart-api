@@ -133,11 +133,15 @@ class CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntryBuilder
   _$CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry _$v;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntryBuilder();
@@ -232,6 +236,7 @@ class _$CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntryActions
           CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntryBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

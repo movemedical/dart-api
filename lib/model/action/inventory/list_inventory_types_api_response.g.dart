@@ -122,12 +122,16 @@ class ListInventoryTypesApiResponseBuilder
   _$ListInventoryTypesApiResponse _$v;
 
   ListBuilder<InventoryType> _data;
+
   ListBuilder<InventoryType> get data =>
       _$this._data ??= new ListBuilder<InventoryType>();
+
   set data(ListBuilder<InventoryType> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListInventoryTypesApiResponseBuilder();
@@ -224,6 +228,7 @@ class _$ListInventoryTypesApiResponseActions
       ListInventoryTypesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

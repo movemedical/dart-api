@@ -12,7 +12,7 @@ const PickStatus _$wireASSIGNED = const PickStatus._('ASSIGNED');
 const PickStatus _$wireCOMPLETE = const PickStatus._('COMPLETE');
 const PickStatus _$wireCANCELLED = const PickStatus._('CANCELLED');
 
-PickStatus _$pickStatusValueOf(String name) {
+PickStatus _$valueOf(String name) {
   switch (name) {
     case 'RESERVED':
       return _$wireRESERVED;
@@ -29,7 +29,7 @@ PickStatus _$pickStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<PickStatus> _$pickStatusValues =
+final BuiltSet<PickStatus> _$values =
     new BuiltSet<PickStatus>(const <PickStatus>[
   _$wireRESERVED,
   _$wireUNASSIGNED,

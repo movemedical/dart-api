@@ -12,7 +12,7 @@ const BodySide _$wireBILATERAL = const BodySide._('BILATERAL');
 const BodySide _$wireFAR_LATERAL = const BodySide._('FAR_LATERAL');
 const BodySide _$wireUNKNOWN = const BodySide._('UNKNOWN');
 
-BodySide _$bodySideValueOf(String name) {
+BodySide _$valueOf(String name) {
   switch (name) {
     case 'LEFT':
       return _$wireLEFT;
@@ -29,8 +29,7 @@ BodySide _$bodySideValueOf(String name) {
   }
 }
 
-final BuiltSet<BodySide> _$bodySideValues =
-    new BuiltSet<BodySide>(const <BodySide>[
+final BuiltSet<BodySide> _$values = new BuiltSet<BodySide>(const <BodySide>[
   _$wireLEFT,
   _$wireRIGHT,
   _$wireBILATERAL,

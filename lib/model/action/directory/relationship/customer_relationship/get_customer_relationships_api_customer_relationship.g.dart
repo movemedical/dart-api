@@ -166,22 +166,30 @@ class GetCustomerRelationshipsApiCustomerRelationshipBuilder
   _$GetCustomerRelationshipsApiCustomerRelationship _$v;
 
   GetCustomerRelationshipsApiDirection _direction;
+
   GetCustomerRelationshipsApiDirection get direction => _$this._direction;
+
   set direction(GetCustomerRelationshipsApiDirection direction) =>
       _$this._direction = direction;
 
   String _relatedCustomerId;
+
   String get relatedCustomerId => _$this._relatedCustomerId;
+
   set relatedCustomerId(String relatedCustomerId) =>
       _$this._relatedCustomerId = relatedCustomerId;
 
   String _relatedCustomerName;
+
   String get relatedCustomerName => _$this._relatedCustomerName;
+
   set relatedCustomerName(String relatedCustomerName) =>
       _$this._relatedCustomerName = relatedCustomerName;
 
   String _comments;
+
   String get comments => _$this._comments;
+
   set comments(String comments) => _$this._comments = comments;
 
   GetCustomerRelationshipsApiCustomerRelationshipBuilder();
@@ -289,6 +297,7 @@ class _$GetCustomerRelationshipsApiCustomerRelationshipActions
       GetCustomerRelationshipsApiCustomerRelationshipBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

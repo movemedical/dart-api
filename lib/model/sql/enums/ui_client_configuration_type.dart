@@ -36,11 +36,9 @@ class UiClientConfigurationType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<UiClientConfigurationType> get values =>
-      _$uiClientConfigurationTypeValues;
+  static BuiltSet<UiClientConfigurationType> get values => _$values;
 
-  static UiClientConfigurationType valueOf(String name) =>
-      _$uiClientConfigurationTypeValueOf(name);
+  static UiClientConfigurationType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

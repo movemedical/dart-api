@@ -120,6 +120,12 @@ abstract class MoveStock2ApiRequest
   String get attention;
 
   @nullable
+  String get salesLeadUserId;
+
+  @nullable
+  String get opsLeadUserId;
+
+  @nullable
   String get trackingNumber;
 
   ////////////////////////////////
@@ -212,6 +218,10 @@ abstract class MoveStock2ApiRequestActions extends ModelActions<
   FieldDispatcher<String> get email;
 
   FieldDispatcher<String> get attention;
+
+  FieldDispatcher<String> get salesLeadUserId;
+
+  FieldDispatcher<String> get opsLeadUserId;
 
   FieldDispatcher<String> get trackingNumber;
 

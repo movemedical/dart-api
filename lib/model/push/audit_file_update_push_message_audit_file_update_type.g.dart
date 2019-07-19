@@ -13,8 +13,7 @@ const AuditFileUpdatePushMessageAuditFileUpdateType _$wireUPLOADED =
 const AuditFileUpdatePushMessageAuditFileUpdateType _$wireDELETED =
     const AuditFileUpdatePushMessageAuditFileUpdateType._('DELETED');
 
-AuditFileUpdatePushMessageAuditFileUpdateType
-    _$auditFileUpdatePushMessageAuditFileUpdateTypeValueOf(String name) {
+AuditFileUpdatePushMessageAuditFileUpdateType _$valueOf(String name) {
   switch (name) {
     case 'UPLOADING':
       return _$wireUPLOADING;
@@ -27,8 +26,7 @@ AuditFileUpdatePushMessageAuditFileUpdateType
   }
 }
 
-final BuiltSet<AuditFileUpdatePushMessageAuditFileUpdateType>
-    _$auditFileUpdatePushMessageAuditFileUpdateTypeValues =
+final BuiltSet<AuditFileUpdatePushMessageAuditFileUpdateType> _$values =
     new BuiltSet<AuditFileUpdatePushMessageAuditFileUpdateType>(const <
         AuditFileUpdatePushMessageAuditFileUpdateType>[
   _$wireUPLOADING,

@@ -62,6 +62,7 @@ class _$DeactivateParticipantApi extends DeactivateParticipantApi {
           ApiCommand<DeactivateParticipantApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

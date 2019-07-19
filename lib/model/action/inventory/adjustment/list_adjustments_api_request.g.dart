@@ -313,63 +313,89 @@ class ListAdjustmentsApiRequestBuilder
   _$ListAdjustmentsApiRequest _$v;
 
   AdjustmentReason _reason;
+
   AdjustmentReason get reason => _$this._reason;
+
   set reason(AdjustmentReason reason) => _$this._reason = reason;
 
   AdjustmentStatus _status;
+
   AdjustmentStatus get status => _$this._status;
+
   set status(AdjustmentStatus status) => _$this._status = status;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   MoveItemClass _moveItemClass;
+
   MoveItemClass get moveItemClass => _$this._moveItemClass;
+
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   MoveItemType _moveItemType;
+
   MoveItemType get moveItemType => _$this._moveItemType;
+
   set moveItemType(MoveItemType moveItemType) =>
       _$this._moveItemType = moveItemType;
 
   String _inventoryTypeId;
+
   String get inventoryTypeId => _$this._inventoryTypeId;
+
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   LocationDataBuilder _location;
+
   LocationDataBuilder get location =>
       _$this._location ??= new LocationDataBuilder();
+
   set location(LocationDataBuilder location) => _$this._location = location;
 
   DateRangeBuilder _adjustedDateRange;
+
   DateRangeBuilder get adjustedDateRange =>
       _$this._adjustedDateRange ??= new DateRangeBuilder();
+
   set adjustedDateRange(DateRangeBuilder adjustedDateRange) =>
       _$this._adjustedDateRange = adjustedDateRange;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListAdjustmentsApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListAdjustmentsApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListAdjustmentsApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListAdjustmentsApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -563,6 +589,7 @@ class _$ListAdjustmentsApiRequestActions
       ListAdjustmentsApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
@@ -572,6 +599,7 @@ class _$ListAdjustmentsApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

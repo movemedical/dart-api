@@ -22,9 +22,9 @@ class EventType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<EventType> get values => _$eventTypeValues;
+  static BuiltSet<EventType> get values => _$values;
 
-  static EventType valueOf(String name) => _$eventTypeValueOf(name);
+  static EventType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

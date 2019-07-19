@@ -219,37 +219,53 @@ class AddHcrMatrixApiRequestBuilder
   _$AddHcrMatrixApiRequest _$v;
 
   String _hcrId;
+
   String get hcrId => _$this._hcrId;
+
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   String _teamId;
+
   String get teamId => _$this._teamId;
+
   set teamId(String teamId) => _$this._teamId = teamId;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   bool _allFacilities;
+
   bool get allFacilities => _$this._allFacilities;
+
   set allFacilities(bool allFacilities) =>
       _$this._allFacilities = allFacilities;
 
   String _physicianId;
+
   String get physicianId => _$this._physicianId;
+
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   bool _allPhysicians;
+
   bool get allPhysicians => _$this._allPhysicians;
+
   set allPhysicians(bool allPhysicians) =>
       _$this._allPhysicians = allPhysicians;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   bool _allProcedures;
+
   bool get allProcedures => _$this._allProcedures;
+
   set allProcedures(bool allProcedures) =>
       _$this._allProcedures = allProcedures;
 
@@ -376,6 +392,7 @@ class _$AddHcrMatrixApiRequestActions extends AddHcrMatrixApiRequestActions {
       AddHcrMatrixApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

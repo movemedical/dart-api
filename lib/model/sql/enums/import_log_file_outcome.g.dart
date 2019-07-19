@@ -19,7 +19,7 @@ const ImportLogFileOutcome _$wirePROCESSED =
 const ImportLogFileOutcome _$wireIN_PROGRESS =
     const ImportLogFileOutcome._('IN_PROGRESS');
 
-ImportLogFileOutcome _$importLogFileOutcomeValueOf(String name) {
+ImportLogFileOutcome _$valueOf(String name) {
   switch (name) {
     case 'COULD_NOT_DOWNLOAD':
       return _$wireCOULD_NOT_DOWNLOAD;
@@ -38,7 +38,7 @@ ImportLogFileOutcome _$importLogFileOutcomeValueOf(String name) {
   }
 }
 
-final BuiltSet<ImportLogFileOutcome> _$importLogFileOutcomeValues =
+final BuiltSet<ImportLogFileOutcome> _$values =
     new BuiltSet<ImportLogFileOutcome>(const <ImportLogFileOutcome>[
   _$wireCOULD_NOT_DOWNLOAD,
   _$wireCOULD_NOT_UPLOAD,

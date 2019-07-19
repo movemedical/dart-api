@@ -26,11 +26,9 @@ class ReadBarcode2ApiReadType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ReadBarcode2ApiReadType> get values =>
-      _$readBarcode2ApiReadTypeValues;
+  static BuiltSet<ReadBarcode2ApiReadType> get values => _$values;
 
-  static ReadBarcode2ApiReadType valueOf(String name) =>
-      _$readBarcode2ApiReadTypeValueOf(name);
+  static ReadBarcode2ApiReadType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

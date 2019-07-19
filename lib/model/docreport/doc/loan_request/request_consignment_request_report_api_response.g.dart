@@ -111,7 +111,9 @@ class RequestConsignmentRequestReportApiResponseBuilder
   _$RequestConsignmentRequestReportApiResponse _$v;
 
   String _docReportId;
+
   String get docReportId => _$this._docReportId;
+
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   RequestConsignmentRequestReportApiResponseBuilder();
@@ -195,6 +197,7 @@ class _$RequestConsignmentRequestReportApiResponseActions
       RequestConsignmentRequestReportApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

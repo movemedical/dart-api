@@ -273,50 +273,72 @@ class CreateCustomerApiRequestBuilder
   _$CreateCustomerApiRequest _$v;
 
   String _hsOrgId;
+
   String get hsOrgId => _$this._hsOrgId;
+
   set hsOrgId(String hsOrgId) => _$this._hsOrgId = hsOrgId;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   String _idOverride;
+
   String get idOverride => _$this._idOverride;
+
   set idOverride(String idOverride) => _$this._idOverride = idOverride;
 
   String _customerNumber;
+
   String get customerNumber => _$this._customerNumber;
+
   set customerNumber(String customerNumber) =>
       _$this._customerNumber = customerNumber;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   PhoneNumberBuilder _phoneNumber;
+
   PhoneNumberBuilder get phoneNumber =>
       _$this._phoneNumber ??= new PhoneNumberBuilder();
+
   set phoneNumber(PhoneNumberBuilder phoneNumber) =>
       _$this._phoneNumber = phoneNumber;
 
   String _timeZone;
+
   String get timeZone => _$this._timeZone;
+
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   bool _creditHold;
+
   bool get creditHold => _$this._creditHold;
+
   set creditHold(bool creditHold) => _$this._creditHold = creditHold;
 
   bool _moveManaged;
+
   bool get moveManaged => _$this._moveManaged;
+
   set moveManaged(bool moveManaged) => _$this._moveManaged = moveManaged;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   CreateCustomerApiRequestBuilder();
@@ -476,6 +498,7 @@ class _$CreateCustomerApiRequestActions
       CreateCustomerApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
@@ -483,6 +506,7 @@ class _$CreateCustomerApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

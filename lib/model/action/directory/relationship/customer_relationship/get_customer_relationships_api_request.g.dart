@@ -107,7 +107,9 @@ class GetCustomerRelationshipsApiRequestBuilder
   _$GetCustomerRelationshipsApiRequest _$v;
 
   String _customerId;
+
   String get customerId => _$this._customerId;
+
   set customerId(String customerId) => _$this._customerId = customerId;
 
   GetCustomerRelationshipsApiRequestBuilder();
@@ -186,6 +188,7 @@ class _$GetCustomerRelationshipsApiRequestActions
       GetCustomerRelationshipsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

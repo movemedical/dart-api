@@ -9,7 +9,7 @@ part of 'currency_type.dart';
 const CurrencyType _$wireUSD = const CurrencyType._('USD');
 const CurrencyType _$wireYEN = const CurrencyType._('YEN');
 
-CurrencyType _$currencyTypeValueOf(String name) {
+CurrencyType _$valueOf(String name) {
   switch (name) {
     case 'USD':
       return _$wireUSD;
@@ -20,7 +20,7 @@ CurrencyType _$currencyTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<CurrencyType> _$currencyTypeValues =
+final BuiltSet<CurrencyType> _$values =
     new BuiltSet<CurrencyType>(const <CurrencyType>[
   _$wireUSD,
   _$wireYEN,

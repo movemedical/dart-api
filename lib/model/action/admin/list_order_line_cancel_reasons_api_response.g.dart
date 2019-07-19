@@ -127,16 +127,20 @@ class ListOrderLineCancelReasonsApiResponseBuilder
   _$ListOrderLineCancelReasonsApiResponse _$v;
 
   ListBuilder<ListOrderLineCancelReasonsApiOrderLineCancelReason> _data;
+
   ListBuilder<ListOrderLineCancelReasonsApiOrderLineCancelReason> get data =>
       _$this._data ??=
           new ListBuilder<ListOrderLineCancelReasonsApiOrderLineCancelReason>();
+
   set data(
           ListBuilder<ListOrderLineCancelReasonsApiOrderLineCancelReason>
               data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListOrderLineCancelReasonsApiResponseBuilder();
@@ -237,6 +241,7 @@ class _$ListOrderLineCancelReasonsApiResponseActions
       ListOrderLineCancelReasonsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

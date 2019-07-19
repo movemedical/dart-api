@@ -27,9 +27,6 @@ abstract class UpdateDceApiRequest
   Email get email;
 
   @nullable
-  String get timeZone;
-
-  @nullable
   String get workingHomeId;
 
   @nullable
@@ -37,6 +34,18 @@ abstract class UpdateDceApiRequest
 
   @nullable
   bool get active;
+
+  @nullable
+  String get timeZone;
+
+  @nullable
+  String get erpUserId;
+
+  @nullable
+  String get defaultBizUnitId;
+
+  @nullable
+  String get defaultOpsOrgUnitId;
 
   ////////////////////////////////
   /// Constructors
@@ -71,13 +80,19 @@ abstract class UpdateDceApiRequestActions extends ModelActions<
 
   EmailActions get email;
 
-  FieldDispatcher<String> get timeZone;
-
   FieldDispatcher<String> get workingHomeId;
 
   FieldDispatcher<String> get workingAtId;
 
   FieldDispatcher<bool> get active;
+
+  FieldDispatcher<String> get timeZone;
+
+  FieldDispatcher<String> get erpUserId;
+
+  FieldDispatcher<String> get defaultBizUnitId;
+
+  FieldDispatcher<String> get defaultOpsOrgUnitId;
 
   ////////////////////////////////
   /// Constructors

@@ -147,15 +147,21 @@ class GetOrderReasonSpecificationApiOrderReasonFieldDataBuilder
   _$GetOrderReasonSpecificationApiOrderReasonFieldData _$v;
 
   OrderReasonField _name;
+
   OrderReasonField get name => _$this._name;
+
   set name(OrderReasonField name) => _$this._name = name;
 
   int _sort;
+
   int get sort => _$this._sort;
+
   set sort(int sort) => _$this._sort = sort;
 
   bool _required;
+
   bool get required => _$this._required;
+
   set required(bool required) => _$this._required = required;
 
   GetOrderReasonSpecificationApiOrderReasonFieldDataBuilder();
@@ -248,6 +254,7 @@ class _$GetOrderReasonSpecificationApiOrderReasonFieldDataActions
       GetOrderReasonSpecificationApiOrderReasonFieldDataBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

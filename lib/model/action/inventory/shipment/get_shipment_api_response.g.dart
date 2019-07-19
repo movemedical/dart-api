@@ -40,8 +40,8 @@ class _$GetShipmentApiResponseSerializer
       result
         ..add('customDocs')
         ..add(serializers.serialize(object.customDocs,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(CustomDoc)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(OrderCustomDoc)])));
     }
     if (object.displayRule != null) {
       result
@@ -85,8 +85,9 @@ class _$GetShipmentApiResponseSerializer
           break;
         case 'customDocs':
           result.customDocs.replace(serializers.deserialize(value,
-              specifiedType: const FullType(
-                  BuiltList, const [const FullType(CustomDoc)])) as BuiltList);
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(OrderCustomDoc)]))
+              as BuiltList);
           break;
         case 'displayRule':
           result.displayRule.replace(serializers.deserialize(value,
@@ -112,7 +113,7 @@ class _$GetShipmentApiResponse extends GetShipmentApiResponse {
   @override
   final ListPackagesForShipmentApiResponse pkgResponse;
   @override
-  final BuiltList<CustomDoc> customDocs;
+  final BuiltList<OrderCustomDoc> customDocs;
   @override
   final GetShipmentApiDisplayRule displayRule;
   @override
@@ -177,32 +178,42 @@ class GetShipmentApiResponseBuilder
   _$GetShipmentApiResponse _$v;
 
   GetShipmentApiShipmentBuilder _shipment;
+
   GetShipmentApiShipmentBuilder get shipment =>
       _$this._shipment ??= new GetShipmentApiShipmentBuilder();
+
   set shipment(GetShipmentApiShipmentBuilder shipment) =>
       _$this._shipment = shipment;
 
   ListPackagesForShipmentApiResponseBuilder _pkgResponse;
+
   ListPackagesForShipmentApiResponseBuilder get pkgResponse =>
       _$this._pkgResponse ??= new ListPackagesForShipmentApiResponseBuilder();
+
   set pkgResponse(ListPackagesForShipmentApiResponseBuilder pkgResponse) =>
       _$this._pkgResponse = pkgResponse;
 
-  ListBuilder<CustomDoc> _customDocs;
-  ListBuilder<CustomDoc> get customDocs =>
-      _$this._customDocs ??= new ListBuilder<CustomDoc>();
-  set customDocs(ListBuilder<CustomDoc> customDocs) =>
+  ListBuilder<OrderCustomDoc> _customDocs;
+
+  ListBuilder<OrderCustomDoc> get customDocs =>
+      _$this._customDocs ??= new ListBuilder<OrderCustomDoc>();
+
+  set customDocs(ListBuilder<OrderCustomDoc> customDocs) =>
       _$this._customDocs = customDocs;
 
   GetShipmentApiDisplayRuleBuilder _displayRule;
+
   GetShipmentApiDisplayRuleBuilder get displayRule =>
       _$this._displayRule ??= new GetShipmentApiDisplayRuleBuilder();
+
   set displayRule(GetShipmentApiDisplayRuleBuilder displayRule) =>
       _$this._displayRule = displayRule;
 
   ListBuilder<GetShipmentApiShipmentAttribute> _attributes;
+
   ListBuilder<GetShipmentApiShipmentAttribute> get attributes =>
       _$this._attributes ??= new ListBuilder<GetShipmentApiShipmentAttribute>();
+
   set attributes(ListBuilder<GetShipmentApiShipmentAttribute> attributes) =>
       _$this._attributes = attributes;
 
@@ -289,7 +300,7 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
   final ActionDispatcher<GetShipmentApiResponse> replace$;
   final GetShipmentApiShipmentActions shipment;
   final ListPackagesForShipmentApiResponseActions pkgResponse;
-  final FieldDispatcher<BuiltList<CustomDoc>> customDocs;
+  final FieldDispatcher<BuiltList<OrderCustomDoc>> customDocs;
   final GetShipmentApiDisplayRuleActions displayRule;
   final FieldDispatcher<BuiltList<GetShipmentApiShipmentAttribute>> attributes;
 
@@ -315,7 +326,7 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
                 (s) => s?.pkgResponse,
                 (b) => b?.pkgResponse,
                 (parent, builder) => parent?.pkgResponse = builder)),
-        customDocs = options$.field<BuiltList<CustomDoc>>(
+        customDocs = options$.field<BuiltList<OrderCustomDoc>>(
             'customDocs',
             (a) => a?.customDocs,
             (s) => s?.customDocs,
@@ -348,6 +359,7 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
       GetShipmentApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.shipment,
@@ -356,6 +368,7 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

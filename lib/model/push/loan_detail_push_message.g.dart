@@ -98,7 +98,9 @@ class LoanDetailPushMessageBuilder
   _$LoanDetailPushMessage _$v;
 
   String _content;
+
   String get content => _$this._content;
+
   set content(String content) => _$this._content = content;
 
   LoanDetailPushMessageBuilder();
@@ -171,6 +173,7 @@ class _$LoanDetailPushMessageActions extends LoanDetailPushMessageActions {
   LoanDetailPushMessageBuilder newBuilder$() => LoanDetailPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

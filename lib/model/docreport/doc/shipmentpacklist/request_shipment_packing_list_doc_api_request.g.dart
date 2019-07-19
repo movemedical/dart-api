@@ -195,30 +195,42 @@ class RequestShipmentPackingListDocApiRequestBuilder
   _$RequestShipmentPackingListDocApiRequest _$v;
 
   DBGeneratedDocReportBuilder _docReport;
+
   DBGeneratedDocReportBuilder get docReport =>
       _$this._docReport ??= new DBGeneratedDocReportBuilder();
+
   set docReport(DBGeneratedDocReportBuilder docReport) =>
       _$this._docReport = docReport;
 
   DocReportFormat _format;
+
   DocReportFormat get format => _$this._format;
+
   set format(DocReportFormat format) => _$this._format = format;
 
   DocReportDisplayType _displayType;
+
   DocReportDisplayType get displayType => _$this._displayType;
+
   set displayType(DocReportDisplayType displayType) =>
       _$this._displayType = displayType;
 
   String _shipmentId;
+
   String get shipmentId => _$this._shipmentId;
+
   set shipmentId(String shipmentId) => _$this._shipmentId = shipmentId;
 
   String _packageId;
+
   String get packageId => _$this._packageId;
+
   set packageId(String packageId) => _$this._packageId = packageId;
 
   bool _displayNotes;
+
   bool get displayNotes => _$this._displayNotes;
+
   set displayNotes(bool displayNotes) => _$this._displayNotes = displayNotes;
 
   RequestShipmentPackingListDocApiRequestBuilder();
@@ -351,12 +363,14 @@ class _$RequestShipmentPackingListDocApiRequestActions
       RequestShipmentPackingListDocApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

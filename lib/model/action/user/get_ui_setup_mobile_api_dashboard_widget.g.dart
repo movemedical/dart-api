@@ -123,12 +123,16 @@ class GetUiSetupMobileApiDashboardWidgetBuilder
   _$GetUiSetupMobileApiDashboardWidget _$v;
 
   MobileDashboardWidgetType _widgetType;
+
   MobileDashboardWidgetType get widgetType => _$this._widgetType;
+
   set widgetType(MobileDashboardWidgetType widgetType) =>
       _$this._widgetType = widgetType;
 
   String _widgetConfig;
+
   String get widgetConfig => _$this._widgetConfig;
+
   set widgetConfig(String widgetConfig) => _$this._widgetConfig = widgetConfig;
 
   GetUiSetupMobileApiDashboardWidgetBuilder();
@@ -218,6 +222,7 @@ class _$GetUiSetupMobileApiDashboardWidgetActions
       GetUiSetupMobileApiDashboardWidgetBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

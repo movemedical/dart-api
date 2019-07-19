@@ -13,8 +13,7 @@ const ListCustomerQualifiersApiOrderBy _$wirePRIORITY =
 const ListCustomerQualifiersApiOrderBy _$wireVALUE =
     const ListCustomerQualifiersApiOrderBy._('VALUE');
 
-ListCustomerQualifiersApiOrderBy _$listCustomerQualifiersApiOrderByValueOf(
-    String name) {
+ListCustomerQualifiersApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'TYPE':
       return _$wireTYPE;
@@ -27,10 +26,8 @@ ListCustomerQualifiersApiOrderBy _$listCustomerQualifiersApiOrderByValueOf(
   }
 }
 
-final BuiltSet<ListCustomerQualifiersApiOrderBy>
-    _$listCustomerQualifiersApiOrderByValues =
-    new BuiltSet<ListCustomerQualifiersApiOrderBy>(const <
-        ListCustomerQualifiersApiOrderBy>[
+final BuiltSet<ListCustomerQualifiersApiOrderBy> _$values = new BuiltSet<
+    ListCustomerQualifiersApiOrderBy>(const <ListCustomerQualifiersApiOrderBy>[
   _$wireTYPE,
   _$wirePRIORITY,
   _$wireVALUE,

@@ -69,6 +69,7 @@ class _$ListOrgUnitFacilityLinksApi extends ListOrgUnitFacilityLinksApi {
           ApiResult<ListOrgUnitFacilityLinksApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -54,6 +54,12 @@ abstract class EditCaseEventSchedulingApiRequest
   @nullable
   String get procedureDesc;
 
+  @nullable
+  String get salesLeadUserId;
+
+  @nullable
+  String get opsLeadUserId;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -105,6 +111,10 @@ abstract class EditCaseEventSchedulingApiRequestActions extends ModelActions<
   FieldDispatcher<BodySide> get bodySide;
 
   FieldDispatcher<String> get procedureDesc;
+
+  FieldDispatcher<String> get salesLeadUserId;
+
+  FieldDispatcher<String> get opsLeadUserId;
 
   ////////////////////////////////
   /// Constructors

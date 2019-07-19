@@ -21,11 +21,9 @@ class ListHcrOrgUnitLinksApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListHcrOrgUnitLinksApiOrderBy> get values =>
-      _$listHcrOrgUnitLinksApiOrderByValues;
+  static BuiltSet<ListHcrOrgUnitLinksApiOrderBy> get values => _$values;
 
-  static ListHcrOrgUnitLinksApiOrderBy valueOf(String name) =>
-      _$listHcrOrgUnitLinksApiOrderByValueOf(name);
+  static ListHcrOrgUnitLinksApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -67,6 +67,7 @@ class _$ListUnitOfMeasureApi extends ListUnitOfMeasureApi {
           ApiResult<ListUnitOfMeasureApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

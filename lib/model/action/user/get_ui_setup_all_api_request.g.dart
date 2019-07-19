@@ -133,15 +133,21 @@ class GetUiSetupAllApiRequestBuilder
   _$GetUiSetupAllApiRequest _$v;
 
   String _type;
+
   String get type => _$this._type;
+
   set type(String type) => _$this._type = type;
 
   String _appVersion;
+
   String get appVersion => _$this._appVersion;
+
   set appVersion(String appVersion) => _$this._appVersion = appVersion;
 
   String _platformVersion;
+
   String get platformVersion => _$this._platformVersion;
+
   set platformVersion(String platformVersion) =>
       _$this._platformVersion = platformVersion;
 
@@ -231,6 +237,7 @@ class _$GetUiSetupAllApiRequestActions extends GetUiSetupAllApiRequestActions {
       GetUiSetupAllApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

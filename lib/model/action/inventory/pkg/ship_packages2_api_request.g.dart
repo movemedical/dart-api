@@ -104,8 +104,10 @@ class ShipPackages2ApiRequestBuilder
   _$ShipPackages2ApiRequest _$v;
 
   ListBuilder<String> _packageIds;
+
   ListBuilder<String> get packageIds =>
       _$this._packageIds ??= new ListBuilder<String>();
+
   set packageIds(ListBuilder<String> packageIds) =>
       _$this._packageIds = packageIds;
 
@@ -197,6 +199,7 @@ class _$ShipPackages2ApiRequestActions extends ShipPackages2ApiRequestActions {
       ShipPackages2ApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

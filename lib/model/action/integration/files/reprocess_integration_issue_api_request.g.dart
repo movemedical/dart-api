@@ -108,7 +108,9 @@ class ReprocessIntegrationIssueApiRequestBuilder
   _$ReprocessIntegrationIssueApiRequest _$v;
 
   String _integrationIssueId;
+
   String get integrationIssueId => _$this._integrationIssueId;
+
   set integrationIssueId(String integrationIssueId) =>
       _$this._integrationIssueId = integrationIssueId;
 
@@ -192,6 +194,7 @@ class _$ReprocessIntegrationIssueApiRequestActions
       ReprocessIntegrationIssueApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

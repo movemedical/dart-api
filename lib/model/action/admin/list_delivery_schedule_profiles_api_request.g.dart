@@ -177,30 +177,40 @@ class ListDeliveryScheduleProfilesApiRequestBuilder
   _$ListDeliveryScheduleProfilesApiRequest _$v;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListDeliveryScheduleProfilesApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListDeliveryScheduleProfilesApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListDeliveryScheduleProfilesApiOrderBy>();
+
   set orderBy(
           OrderByParamsBuilder<ListDeliveryScheduleProfilesApiOrderBy>
               orderBy) =>
       _$this._orderBy = orderBy;
 
   ListBuilder<String> _profileIds;
+
   ListBuilder<String> get profileIds =>
       _$this._profileIds ??= new ListBuilder<String>();
+
   set profileIds(ListBuilder<String> profileIds) =>
       _$this._profileIds = profileIds;
 
@@ -338,6 +348,7 @@ class _$ListDeliveryScheduleProfilesApiRequestActions
       ListDeliveryScheduleProfilesApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
@@ -345,6 +356,7 @@ class _$ListDeliveryScheduleProfilesApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

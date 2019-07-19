@@ -107,7 +107,9 @@ class ListReservationsForStockApiRequestBuilder
   _$ListReservationsForStockApiRequest _$v;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   ListReservationsForStockApiRequestBuilder();
@@ -186,6 +188,7 @@ class _$ListReservationsForStockApiRequestActions
       ListReservationsForStockApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

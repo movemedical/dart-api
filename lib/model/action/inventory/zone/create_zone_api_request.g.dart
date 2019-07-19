@@ -66,6 +66,12 @@ class _$CreateZoneApiRequestSerializer
         ..add(serializers.serialize(object.receivable,
             specifiedType: const FullType(bool)));
     }
+    if (object.defaultBinName != null) {
+      result
+        ..add('defaultBinName')
+        ..add(serializers.serialize(object.defaultBinName,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -109,6 +115,10 @@ class _$CreateZoneApiRequestSerializer
           result.receivable = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'defaultBinName':
+          result.defaultBinName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -131,6 +141,8 @@ class _$CreateZoneApiRequest extends CreateZoneApiRequest {
   final bool sourceable;
   @override
   final bool receivable;
+  @override
+  final String defaultBinName;
 
   factory _$CreateZoneApiRequest(
           [void updates(CreateZoneApiRequestBuilder b)]) =>
@@ -143,7 +155,8 @@ class _$CreateZoneApiRequest extends CreateZoneApiRequest {
       this.active,
       this.zoneType,
       this.sourceable,
-      this.receivable})
+      this.receivable,
+      this.defaultBinName})
       : super._();
 
   @override
@@ -164,7 +177,8 @@ class _$CreateZoneApiRequest extends CreateZoneApiRequest {
         active == other.active &&
         zoneType == other.zoneType &&
         sourceable == other.sourceable &&
-        receivable == other.receivable;
+        receivable == other.receivable &&
+        defaultBinName == other.defaultBinName;
   }
 
   @override
@@ -173,12 +187,14 @@ class _$CreateZoneApiRequest extends CreateZoneApiRequest {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc(0, facilityId.hashCode), name.hashCode),
-                        description.hashCode),
-                    active.hashCode),
-                zoneType.hashCode),
-            sourceable.hashCode),
-        receivable.hashCode));
+                    $jc(
+                        $jc($jc($jc(0, facilityId.hashCode), name.hashCode),
+                            description.hashCode),
+                        active.hashCode),
+                    zoneType.hashCode),
+                sourceable.hashCode),
+            receivable.hashCode),
+        defaultBinName.hashCode));
   }
 
   @override
@@ -190,7 +206,8 @@ class _$CreateZoneApiRequest extends CreateZoneApiRequest {
           ..add('active', active)
           ..add('zoneType', zoneType)
           ..add('sourceable', sourceable)
-          ..add('receivable', receivable))
+          ..add('receivable', receivable)
+          ..add('defaultBinName', defaultBinName))
         .toString();
   }
 }
@@ -200,32 +217,53 @@ class CreateZoneApiRequestBuilder
   _$CreateZoneApiRequest _$v;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   ZoneType _zoneType;
+
   ZoneType get zoneType => _$this._zoneType;
+
   set zoneType(ZoneType zoneType) => _$this._zoneType = zoneType;
 
   bool _sourceable;
+
   bool get sourceable => _$this._sourceable;
+
   set sourceable(bool sourceable) => _$this._sourceable = sourceable;
 
   bool _receivable;
+
   bool get receivable => _$this._receivable;
+
   set receivable(bool receivable) => _$this._receivable = receivable;
+
+  String _defaultBinName;
+
+  String get defaultBinName => _$this._defaultBinName;
+
+  set defaultBinName(String defaultBinName) =>
+      _$this._defaultBinName = defaultBinName;
 
   CreateZoneApiRequestBuilder();
 
@@ -238,6 +276,7 @@ class CreateZoneApiRequestBuilder
       _zoneType = _$v.zoneType;
       _sourceable = _$v.sourceable;
       _receivable = _$v.receivable;
+      _defaultBinName = _$v.defaultBinName;
       _$v = null;
     }
     return this;
@@ -266,7 +305,8 @@ class CreateZoneApiRequestBuilder
             active: active,
             zoneType: zoneType,
             sourceable: sourceable,
-            receivable: receivable);
+            receivable: receivable,
+            defaultBinName: defaultBinName);
     replace(_$result);
     return _$result;
   }
@@ -298,6 +338,7 @@ class _$CreateZoneApiRequestActions extends CreateZoneApiRequestActions {
   final FieldDispatcher<ZoneType> zoneType;
   final FieldDispatcher<bool> sourceable;
   final FieldDispatcher<bool> receivable;
+  final FieldDispatcher<String> defaultBinName;
 
   _$CreateZoneApiRequestActions._(this.options$)
       : replace$ = options$.action<CreateZoneApiRequest>(
@@ -319,6 +360,11 @@ class _$CreateZoneApiRequestActions extends CreateZoneApiRequestActions {
             (s) => s?.sourceable, (p, b) => p?.sourceable = b),
         receivable = options$.field<bool>('receivable', (a) => a?.receivable,
             (s) => s?.receivable, (p, b) => p?.receivable = b),
+        defaultBinName = options$.field<String>(
+            'defaultBinName',
+            (a) => a?.defaultBinName,
+            (s) => s?.defaultBinName,
+            (p, b) => p?.defaultBinName = b),
         super._();
 
   factory _$CreateZoneApiRequestActions(
@@ -332,6 +378,7 @@ class _$CreateZoneApiRequestActions extends CreateZoneApiRequestActions {
   CreateZoneApiRequestBuilder newBuilder$() => CreateZoneApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -343,6 +390,7 @@ class _$CreateZoneApiRequestActions extends CreateZoneApiRequestActions {
         this.zoneType,
         this.sourceable,
         this.receivable,
+        this.defaultBinName,
       ]);
 
   @override
@@ -355,6 +403,7 @@ class _$CreateZoneApiRequestActions extends CreateZoneApiRequestActions {
     zoneType.reducer$(reducer);
     sourceable.reducer$(reducer);
     receivable.reducer$(reducer);
+    defaultBinName.reducer$(reducer);
   }
 
   @override

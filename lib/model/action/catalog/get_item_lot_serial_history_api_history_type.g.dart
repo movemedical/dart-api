@@ -11,8 +11,7 @@ const GetItemLotSerialHistoryApiHistoryType _$wireSALES_ORDER =
 const GetItemLotSerialHistoryApiHistoryType _$wireSTOCK_ORDER =
     const GetItemLotSerialHistoryApiHistoryType._('STOCK_ORDER');
 
-GetItemLotSerialHistoryApiHistoryType
-    _$getItemLotSerialHistoryApiHistoryTypeValueOf(String name) {
+GetItemLotSerialHistoryApiHistoryType _$valueOf(String name) {
   switch (name) {
     case 'SALES_ORDER':
       return _$wireSALES_ORDER;
@@ -23,8 +22,7 @@ GetItemLotSerialHistoryApiHistoryType
   }
 }
 
-final BuiltSet<GetItemLotSerialHistoryApiHistoryType>
-    _$getItemLotSerialHistoryApiHistoryTypeValues =
+final BuiltSet<GetItemLotSerialHistoryApiHistoryType> _$values =
     new BuiltSet<GetItemLotSerialHistoryApiHistoryType>(const <
         GetItemLotSerialHistoryApiHistoryType>[
   _$wireSALES_ORDER,

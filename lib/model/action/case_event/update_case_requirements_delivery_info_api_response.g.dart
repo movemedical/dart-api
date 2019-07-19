@@ -199,34 +199,46 @@ class UpdateCaseRequirementsDeliveryInfoApiResponseBuilder
   _$UpdateCaseRequirementsDeliveryInfoApiResponse _$v;
 
   DateTime _deliverByDate;
+
   DateTime get deliverByDate => _$this._deliverByDate;
+
   set deliverByDate(DateTime deliverByDate) =>
       _$this._deliverByDate = deliverByDate;
 
   String _deliverByDateTz;
+
   String get deliverByDateTz => _$this._deliverByDateTz;
+
   set deliverByDateTz(String deliverByDateTz) =>
       _$this._deliverByDateTz = deliverByDateTz;
 
   String _deliverToAttn;
+
   String get deliverToAttn => _$this._deliverToAttn;
+
   set deliverToAttn(String deliverToAttn) =>
       _$this._deliverToAttn = deliverToAttn;
 
   CustomerAddressBuilder _deliverTo;
+
   CustomerAddressBuilder get deliverTo =>
       _$this._deliverTo ??= new CustomerAddressBuilder();
+
   set deliverTo(CustomerAddressBuilder deliverTo) =>
       _$this._deliverTo = deliverTo;
 
   AddressBuilder _deliverToOverride;
+
   AddressBuilder get deliverToOverride =>
       _$this._deliverToOverride ??= new AddressBuilder();
+
   set deliverToOverride(AddressBuilder deliverToOverride) =>
       _$this._deliverToOverride = deliverToOverride;
 
   bool _editDeliverTo;
+
   bool get editDeliverTo => _$this._editDeliverTo;
+
   set editDeliverTo(bool editDeliverTo) =>
       _$this._editDeliverTo = editDeliverTo;
 
@@ -377,6 +389,7 @@ class _$UpdateCaseRequirementsDeliveryInfoApiResponseActions
       UpdateCaseRequirementsDeliveryInfoApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliverTo,
@@ -384,6 +397,7 @@ class _$UpdateCaseRequirementsDeliveryInfoApiResponseActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

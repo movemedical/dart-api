@@ -46,9 +46,9 @@ class UserPerspective extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<UserPerspective> get values => _$userPerspectiveValues;
+  static BuiltSet<UserPerspective> get values => _$values;
 
-  static UserPerspective valueOf(String name) => _$userPerspectiveValueOf(name);
+  static UserPerspective valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

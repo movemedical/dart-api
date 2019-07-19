@@ -154,21 +154,29 @@ class BuildInspectionApiUpdateEntryBuilder
   _$BuildInspectionApiUpdateEntry _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   BuildInspectionApiUpdateEntryType _type;
+
   BuildInspectionApiUpdateEntryType get type => _$this._type;
+
   set type(BuildInspectionApiUpdateEntryType type) => _$this._type = type;
 
   String _selectedOptionId;
+
   String get selectedOptionId => _$this._selectedOptionId;
+
   set selectedOptionId(String selectedOptionId) =>
       _$this._selectedOptionId = selectedOptionId;
 
   StockContainerDataBuilder _toContainerOverride;
+
   StockContainerDataBuilder get toContainerOverride =>
       _$this._toContainerOverride ??= new StockContainerDataBuilder();
+
   set toContainerOverride(StockContainerDataBuilder toContainerOverride) =>
       _$this._toContainerOverride = toContainerOverride;
 
@@ -287,12 +295,14 @@ class _$BuildInspectionApiUpdateEntryActions
       BuildInspectionApiUpdateEntryBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toContainerOverride,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

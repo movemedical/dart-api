@@ -32,10 +32,9 @@ class OrderReasonGroup extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<OrderReasonGroup> get values => _$orderReasonGroupValues;
+  static BuiltSet<OrderReasonGroup> get values => _$values;
 
-  static OrderReasonGroup valueOf(String name) =>
-      _$orderReasonGroupValueOf(name);
+  static OrderReasonGroup valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

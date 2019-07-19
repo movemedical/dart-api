@@ -102,7 +102,9 @@ class CreateTrayStockApiResponseBuilder
   _$CreateTrayStockApiResponse _$v;
 
   String _stockSummaryKey;
+
   String get stockSummaryKey => _$this._stockSummaryKey;
+
   set stockSummaryKey(String stockSummaryKey) =>
       _$this._stockSummaryKey = stockSummaryKey;
 
@@ -184,6 +186,7 @@ class _$CreateTrayStockApiResponseActions
       CreateTrayStockApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

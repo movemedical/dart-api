@@ -29,7 +29,7 @@ const ListStockSummaryApiOrderBy _$wireLOST_QTY =
 const ListStockSummaryApiOrderBy _$wireFOUND_QTY =
     const ListStockSummaryApiOrderBy._('FOUND_QTY');
 
-ListStockSummaryApiOrderBy _$listStockSummaryApiOrderByValueOf(String name) {
+ListStockSummaryApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'ITEM_NUMBER':
       return _$wireITEM_NUMBER;
@@ -58,7 +58,7 @@ ListStockSummaryApiOrderBy _$listStockSummaryApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListStockSummaryApiOrderBy> _$listStockSummaryApiOrderByValues =
+final BuiltSet<ListStockSummaryApiOrderBy> _$values =
     new BuiltSet<ListStockSummaryApiOrderBy>(const <ListStockSummaryApiOrderBy>[
   _$wireITEM_NUMBER,
   _$wireITEM_CLASS,

@@ -29,8 +29,7 @@ const ListRelatedDeliverToAddressesApiOrderBy _$wireFACILITY =
 const ListRelatedDeliverToAddressesApiOrderBy _$wireDISPLAY_TEXT =
     const ListRelatedDeliverToAddressesApiOrderBy._('DISPLAY_TEXT');
 
-ListRelatedDeliverToAddressesApiOrderBy
-    _$listRelatedDeliverToAddressesApiOrderByValueOf(String name) {
+ListRelatedDeliverToAddressesApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'LINE1':
       return _$wireLINE1;
@@ -59,8 +58,7 @@ ListRelatedDeliverToAddressesApiOrderBy
   }
 }
 
-final BuiltSet<ListRelatedDeliverToAddressesApiOrderBy>
-    _$listRelatedDeliverToAddressesApiOrderByValues =
+final BuiltSet<ListRelatedDeliverToAddressesApiOrderBy> _$values =
     new BuiltSet<ListRelatedDeliverToAddressesApiOrderBy>(const <
         ListRelatedDeliverToAddressesApiOrderBy>[
   _$wireLINE1,

@@ -105,7 +105,9 @@ class CreateConversationApiResponseBuilder
   _$CreateConversationApiResponse _$v;
 
   String _conversationId;
+
   String get conversationId => _$this._conversationId;
+
   set conversationId(String conversationId) =>
       _$this._conversationId = conversationId;
 
@@ -188,6 +190,7 @@ class _$CreateConversationApiResponseActions
       CreateConversationApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

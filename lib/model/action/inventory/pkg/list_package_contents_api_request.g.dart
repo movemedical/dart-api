@@ -104,7 +104,9 @@ class ListPackageContentsApiRequestBuilder
   _$ListPackageContentsApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   ListPackageContentsApiRequestBuilder();
@@ -182,6 +184,7 @@ class _$ListPackageContentsApiRequestActions
       ListPackageContentsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

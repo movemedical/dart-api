@@ -114,9 +114,11 @@ class ListPreferenceCardItemsApiResponseBuilder
 
   ListBuilder<ListPreferenceCardItemsApiPreferenceCardItem>
       _preferenceCardItems;
+
   ListBuilder<ListPreferenceCardItemsApiPreferenceCardItem>
       get preferenceCardItems => _$this._preferenceCardItems ??=
           new ListBuilder<ListPreferenceCardItemsApiPreferenceCardItem>();
+
   set preferenceCardItems(
           ListBuilder<ListPreferenceCardItemsApiPreferenceCardItem>
               preferenceCardItems) =>
@@ -217,6 +219,7 @@ class _$ListPreferenceCardItemsApiResponseActions
       ListPreferenceCardItemsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

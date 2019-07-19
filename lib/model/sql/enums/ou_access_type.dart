@@ -22,9 +22,9 @@ class OuAccessType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<OuAccessType> get values => _$ouAccessTypeValues;
+  static BuiltSet<OuAccessType> get values => _$values;
 
-  static OuAccessType valueOf(String name) => _$ouAccessTypeValueOf(name);
+  static OuAccessType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

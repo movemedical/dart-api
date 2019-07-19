@@ -122,13 +122,17 @@ class ListStockSummaryApiResponseBuilder
   _$ListStockSummaryApiResponse _$v;
 
   ListBuilder<ListStockSummaryApiStockSummary> _data;
+
   ListBuilder<ListStockSummaryApiStockSummary> get data =>
       _$this._data ??= new ListBuilder<ListStockSummaryApiStockSummary>();
+
   set data(ListBuilder<ListStockSummaryApiStockSummary> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListStockSummaryApiResponseBuilder();
@@ -225,6 +229,7 @@ class _$ListStockSummaryApiResponseActions
       ListStockSummaryApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

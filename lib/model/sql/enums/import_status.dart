@@ -25,9 +25,9 @@ class ImportStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ImportStatus> get values => _$importStatusValues;
+  static BuiltSet<ImportStatus> get values => _$values;
 
-  static ImportStatus valueOf(String name) => _$importStatusValueOf(name);
+  static ImportStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

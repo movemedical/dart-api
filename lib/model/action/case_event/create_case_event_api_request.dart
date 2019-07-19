@@ -69,6 +69,12 @@ abstract class CreateCaseEventApiRequest
   BodySide get bodySide;
 
   @nullable
+  String get opsLeadUserId;
+
+  @nullable
+  String get salesLeadUserId;
+
+  @nullable
   String get patientId;
 
   @nullable
@@ -168,6 +174,10 @@ abstract class CreateCaseEventApiRequestActions extends ModelActions<
   FieldDispatcher<String> get coverageId;
 
   FieldDispatcher<BodySide> get bodySide;
+
+  FieldDispatcher<String> get opsLeadUserId;
+
+  FieldDispatcher<String> get salesLeadUserId;
 
   FieldDispatcher<String> get patientId;
 

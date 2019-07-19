@@ -13,8 +13,7 @@ const ListContactsForSearchApiOrderBy _$wireEMAIL =
 const ListContactsForSearchApiOrderBy _$wireTYPE =
     const ListContactsForSearchApiOrderBy._('TYPE');
 
-ListContactsForSearchApiOrderBy _$listContactsForSearchApiOrderByValueOf(
-    String name) {
+ListContactsForSearchApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -27,10 +26,8 @@ ListContactsForSearchApiOrderBy _$listContactsForSearchApiOrderByValueOf(
   }
 }
 
-final BuiltSet<ListContactsForSearchApiOrderBy>
-    _$listContactsForSearchApiOrderByValues =
-    new BuiltSet<ListContactsForSearchApiOrderBy>(const <
-        ListContactsForSearchApiOrderBy>[
+final BuiltSet<ListContactsForSearchApiOrderBy> _$values = new BuiltSet<
+    ListContactsForSearchApiOrderBy>(const <ListContactsForSearchApiOrderBy>[
   _$wireNAME,
   _$wireEMAIL,
   _$wireTYPE,

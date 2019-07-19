@@ -162,24 +162,32 @@ class ListProcedureItemCategoryOptionsApiRequestBuilder
   _$ListProcedureItemCategoryOptionsApiRequest _$v;
 
   String _parentCategoryId;
+
   String get parentCategoryId => _$this._parentCategoryId;
+
   set parentCategoryId(String parentCategoryId) =>
       _$this._parentCategoryId = parentCategoryId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListProcedureItemCategoryOptionsApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<
       ListProcedureItemCategoryOptionsApiOrderBy> get orderBy => _$this
           ._orderBy ??=
       new OrderByParamsBuilder<ListProcedureItemCategoryOptionsApiOrderBy>();
+
   set orderBy(
           OrderByParamsBuilder<ListProcedureItemCategoryOptionsApiOrderBy>
               orderBy) =>
@@ -317,6 +325,7 @@ class _$ListProcedureItemCategoryOptionsApiRequestActions
       ListProcedureItemCategoryOptionsApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
@@ -324,6 +333,7 @@ class _$ListProcedureItemCategoryOptionsApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

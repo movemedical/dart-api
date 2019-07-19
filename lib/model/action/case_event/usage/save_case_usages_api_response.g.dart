@@ -102,7 +102,9 @@ class SaveCaseUsagesApiResponseBuilder
   _$SaveCaseUsagesApiResponse _$v;
 
   bool _confirmUsageFailed;
+
   bool get confirmUsageFailed => _$this._confirmUsageFailed;
+
   set confirmUsageFailed(bool confirmUsageFailed) =>
       _$this._confirmUsageFailed = confirmUsageFailed;
 
@@ -185,6 +187,7 @@ class _$SaveCaseUsagesApiResponseActions
       SaveCaseUsagesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

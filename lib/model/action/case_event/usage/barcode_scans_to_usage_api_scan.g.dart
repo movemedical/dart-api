@@ -206,35 +206,49 @@ class BarcodeScansToUsageApiScanBuilder
   _$BarcodeScansToUsageApiScan _$v;
 
   String _loanId;
+
   String get loanId => _$this._loanId;
+
   set loanId(String loanId) => _$this._loanId = loanId;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   LocationDataBuilder _location;
+
   LocationDataBuilder get location =>
       _$this._location ??= new LocationDataBuilder();
+
   set location(LocationDataBuilder location) => _$this._location = location;
 
   String _inventoryType;
+
   String get inventoryType => _$this._inventoryType;
+
   set inventoryType(String inventoryType) =>
       _$this._inventoryType = inventoryType;
 
   ReadBarcode2ApiResponseBuilder _scan;
+
   ReadBarcode2ApiResponseBuilder get scan =>
       _$this._scan ??= new ReadBarcode2ApiResponseBuilder();
+
   set scan(ReadBarcode2ApiResponseBuilder scan) => _$this._scan = scan;
 
   ItemCaptureType _capturedType;
+
   ItemCaptureType get capturedType => _$this._capturedType;
+
   set capturedType(ItemCaptureType capturedType) =>
       _$this._capturedType = capturedType;
 
   CaseUsageDisposition _disposition;
+
   CaseUsageDisposition get disposition => _$this._disposition;
+
   set disposition(CaseUsageDisposition disposition) =>
       _$this._disposition = disposition;
 
@@ -384,6 +398,7 @@ class _$BarcodeScansToUsageApiScanActions
       BarcodeScansToUsageApiScanBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
@@ -391,6 +406,7 @@ class _$BarcodeScansToUsageApiScanActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

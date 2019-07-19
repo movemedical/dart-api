@@ -29,7 +29,7 @@ const ListImportLogsApiSortBy _$wireISSUE_COUNT =
 const ListImportLogsApiSortBy _$wireSKIP_COUNT =
     const ListImportLogsApiSortBy._('SKIP_COUNT');
 
-ListImportLogsApiSortBy _$listImportLogsApiSortByValueOf(String name) {
+ListImportLogsApiSortBy _$valueOf(String name) {
   switch (name) {
     case 'IMPORT_LOG_NUMBER':
       return _$wireIMPORT_LOG_NUMBER;
@@ -58,7 +58,7 @@ ListImportLogsApiSortBy _$listImportLogsApiSortByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListImportLogsApiSortBy> _$listImportLogsApiSortByValues =
+final BuiltSet<ListImportLogsApiSortBy> _$values =
     new BuiltSet<ListImportLogsApiSortBy>(const <ListImportLogsApiSortBy>[
   _$wireIMPORT_LOG_NUMBER,
   _$wireSTART_DATE,

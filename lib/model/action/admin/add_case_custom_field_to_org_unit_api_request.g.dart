@@ -139,16 +139,22 @@ class AddCaseCustomFieldToOrgUnitApiRequestBuilder
   _$AddCaseCustomFieldToOrgUnitApiRequest _$v;
 
   String _caseTypeCustomFieldId;
+
   String get caseTypeCustomFieldId => _$this._caseTypeCustomFieldId;
+
   set caseTypeCustomFieldId(String caseTypeCustomFieldId) =>
       _$this._caseTypeCustomFieldId = caseTypeCustomFieldId;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   bool _required;
+
   bool get required => _$this._required;
+
   set required(bool required) => _$this._required = required;
 
   AddCaseCustomFieldToOrgUnitApiRequestBuilder();
@@ -241,6 +247,7 @@ class _$AddCaseCustomFieldToOrgUnitApiRequestActions
       AddCaseCustomFieldToOrgUnitApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

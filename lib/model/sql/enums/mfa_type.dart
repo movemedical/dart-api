@@ -21,9 +21,9 @@ class MfaType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<MfaType> get values => _$mfaTypeValues;
+  static BuiltSet<MfaType> get values => _$values;
 
-  static MfaType valueOf(String name) => _$mfaTypeValueOf(name);
+  static MfaType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

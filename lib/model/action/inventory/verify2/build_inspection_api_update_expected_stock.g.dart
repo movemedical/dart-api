@@ -141,17 +141,23 @@ class BuildInspectionApiUpdateExpectedStockBuilder
   _$BuildInspectionApiUpdateExpectedStock _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   BuildInspectionApiUpdateExpectedStockType _updateType;
+
   BuildInspectionApiUpdateExpectedStockType get updateType =>
       _$this._updateType;
+
   set updateType(BuildInspectionApiUpdateExpectedStockType updateType) =>
       _$this._updateType = updateType;
 
   String _selectedOptionId;
+
   String get selectedOptionId => _$this._selectedOptionId;
+
   set selectedOptionId(String selectedOptionId) =>
       _$this._selectedOptionId = selectedOptionId;
 
@@ -246,6 +252,7 @@ class _$BuildInspectionApiUpdateExpectedStockActions
       BuildInspectionApiUpdateExpectedStockBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

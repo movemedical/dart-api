@@ -46,6 +46,12 @@ abstract class EditOrderDetailsApiRequest
   @nullable
   String get poNumber;
 
+  @nullable
+  String get salesLeadUserId;
+
+  @nullable
+  String get opsLeadUserId;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -91,6 +97,10 @@ abstract class EditOrderDetailsApiRequestActions extends ModelActions<
   DateRangeActions get deliveryWindow;
 
   FieldDispatcher<String> get poNumber;
+
+  FieldDispatcher<String> get salesLeadUserId;
+
+  FieldDispatcher<String> get opsLeadUserId;
 
   ////////////////////////////////
   /// Constructors

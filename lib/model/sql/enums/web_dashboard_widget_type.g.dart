@@ -24,8 +24,10 @@ const WebDashboardWidgetType _$wireORDERS_NEEDING_SOURCING =
     const WebDashboardWidgetType._('ORDERS_NEEDING_SOURCING');
 const WebDashboardWidgetType _$wireDUE_BACK_TABLE =
     const WebDashboardWidgetType._('DUE_BACK_TABLE');
+const WebDashboardWidgetType _$wireSALES_ORDERS_AWAITING_APPROVAL_TABLE =
+    const WebDashboardWidgetType._('SALES_ORDERS_AWAITING_APPROVAL_TABLE');
 
-WebDashboardWidgetType _$webDashboardWidgetTypeValueOf(String name) {
+WebDashboardWidgetType _$valueOf(String name) {
   switch (name) {
     case 'CASES_BY_DAY_GRAPH':
       return _$wireCASES_BY_DAY_GRAPH;
@@ -45,12 +47,14 @@ WebDashboardWidgetType _$webDashboardWidgetTypeValueOf(String name) {
       return _$wireORDERS_NEEDING_SOURCING;
     case 'DUE_BACK_TABLE':
       return _$wireDUE_BACK_TABLE;
+    case 'SALES_ORDERS_AWAITING_APPROVAL_TABLE':
+      return _$wireSALES_ORDERS_AWAITING_APPROVAL_TABLE;
     default:
       throw new ArgumentError(name);
   }
 }
 
-final BuiltSet<WebDashboardWidgetType> _$webDashboardWidgetTypeValues =
+final BuiltSet<WebDashboardWidgetType> _$values =
     new BuiltSet<WebDashboardWidgetType>(const <WebDashboardWidgetType>[
   _$wireCASES_BY_DAY_GRAPH,
   _$wireUPCOMING_CASES_TABLE,
@@ -61,6 +65,7 @@ final BuiltSet<WebDashboardWidgetType> _$webDashboardWidgetTypeValues =
   _$wireORDERS_TO_PROCESS_TABLE,
   _$wireORDERS_NEEDING_SOURCING,
   _$wireDUE_BACK_TABLE,
+  _$wireSALES_ORDERS_AWAITING_APPROVAL_TABLE,
 ]);
 
 Serializer<WebDashboardWidgetType> _$webDashboardWidgetTypeSerializer =

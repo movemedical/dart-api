@@ -101,7 +101,9 @@ class ReleaseShipment2ApiRequestBuilder
   _$ReleaseShipment2ApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   ReleaseShipment2ApiRequestBuilder();
@@ -178,6 +180,7 @@ class _$ReleaseShipment2ApiRequestActions
       ReleaseShipment2ApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

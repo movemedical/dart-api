@@ -70,6 +70,7 @@ class _$BuildStockOrderRestockPlanApi extends BuildStockOrderRestockPlanApi {
           ApiResult<BuildStockOrderRestockPlanApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

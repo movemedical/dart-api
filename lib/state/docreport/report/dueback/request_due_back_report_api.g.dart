@@ -11,41 +11,38 @@ part of 'request_due_back_report_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RequestDueBackReportApiRequest>,
-        ApiResult<RequestDueBackReportApiResponse>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RequestDueBackReportApiRequest>,
-        ApiResult<RequestDueBackReportApiResponse>>,
+        ApiResult<Nothing>>,
     RequestDueBackReportApi> RequestDueBackReportApiOptions();
 
 class _$RequestDueBackReportApi extends RequestDueBackReportApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestDueBackReportApiRequest>,
-          ApiResult<RequestDueBackReportApiResponse>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestDueBackReportApiRequest>,
-          ApiResult<RequestDueBackReportApiResponse>>,
+          ApiResult<Nothing>>,
       RequestDueBackReportApi> options$;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestDueBackReportApiRequest>,
-          ApiResult<RequestDueBackReportApiResponse>>> replace$;
+          ApiResult<Nothing>>> replace$;
   final ActionDispatcher<String> cancel$;
   final ActionDispatcher<Command<ApiCommand<RequestDueBackReportApiRequest>>>
       execute$;
-  final ActionDispatcher<
-      CommandResult<ApiResult<RequestDueBackReportApiResponse>>> result$;
+  final ActionDispatcher<CommandResult<ApiResult<Nothing>>> result$;
   final ActionDispatcher<CommandProgress> progress$;
 
   _$RequestDueBackReportApi._(this.options$)
       : replace$ = options$.action<
-                CommandState<ApiCommand<RequestDueBackReportApiRequest>,
-                    ApiResult<RequestDueBackReportApiResponse>>>(
-            'replace\$', (a) => a?.replace$),
+            CommandState<ApiCommand<RequestDueBackReportApiRequest>,
+                ApiResult<Nothing>>>('replace\$', (a) => a?.replace$),
         cancel$ = options$.action<String>('cancel\$', (a) => a?.cancel$),
         execute$ = options$
             .action<Command<ApiCommand<RequestDueBackReportApiRequest>>>(
                 'execute\$', (a) => a?.execute$),
-        result$ = options$
-            .action<CommandResult<ApiResult<RequestDueBackReportApiResponse>>>(
-                'result\$', (a) => a?.result$),
+        result$ = options$.action<CommandResult<ApiResult<Nothing>>>(
+            'result\$', (a) => a?.result$),
         progress$ =
             options$.action<CommandProgress>('progress\$', (a) => a?.progress$),
         super._();
@@ -54,20 +51,18 @@ class _$RequestDueBackReportApi extends RequestDueBackReportApi {
       _$RequestDueBackReportApi._(options());
 
   @override
-  CommandState<ApiCommand<RequestDueBackReportApiRequest>,
-          ApiResult<RequestDueBackReportApiResponse>>
+  CommandState<ApiCommand<RequestDueBackReportApiRequest>, ApiResult<Nothing>>
       get initialState$ => CommandState<
-          ApiCommand<RequestDueBackReportApiRequest>,
-          ApiResult<RequestDueBackReportApiResponse>>();
+          ApiCommand<RequestDueBackReportApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestDueBackReportApiRequest>,
-          ApiResult<RequestDueBackReportApiResponse>>
+          ApiResult<Nothing>>
       newBuilder$() => CommandStateBuilder<
-          ApiCommand<RequestDueBackReportApiRequest>,
-          ApiResult<RequestDueBackReportApiResponse>>();
+          ApiCommand<RequestDueBackReportApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -83,8 +78,8 @@ class _$RequestDueBackReportApi extends RequestDueBackReportApi {
       ApiCommand<RequestDueBackReportApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<RequestDueBackReportApiResponse> newResultBuilder() =>
-      ApiResult<RequestDueBackReportApiResponse>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -94,14 +89,12 @@ class _$RequestDueBackReportApi extends RequestDueBackReportApi {
       RequestDueBackReportApiRequest().toBuilder();
 
   @override
-  RequestDueBackReportApiResponseBuilder newResultPayloadBuilder() =>
-      RequestDueBackReportApiResponse().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RequestDueBackReportApiRequest> get commandPayloadSerializer =>
       RequestDueBackReportApiRequest.serializer;
 
   @override
-  Serializer<RequestDueBackReportApiResponse> get resultPayloadSerializer =>
-      RequestDueBackReportApiResponse.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

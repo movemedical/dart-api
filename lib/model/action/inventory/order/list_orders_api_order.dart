@@ -55,6 +55,18 @@ abstract class ListOrdersApiOrder
   @nullable
   int get noteCount;
 
+  @nullable
+  String get opsLead;
+
+  @nullable
+  String get salesLead;
+
+  @nullable
+  String get repTeamName;
+
+  @nullable
+  DateTime get localEventDate;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -103,6 +115,14 @@ abstract class ListOrdersApiOrderActions extends ModelActions<
   FieldDispatcher<DateTime> get deliveryEnd;
 
   FieldDispatcher<int> get noteCount;
+
+  FieldDispatcher<String> get opsLead;
+
+  FieldDispatcher<String> get salesLead;
+
+  FieldDispatcher<String> get repTeamName;
+
+  FieldDispatcher<DateTime> get localEventDate;
 
   ////////////////////////////////
   /// Constructors

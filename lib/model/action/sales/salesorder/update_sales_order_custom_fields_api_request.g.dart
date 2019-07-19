@@ -112,9 +112,11 @@ class UpdateSalesOrderCustomFieldsApiRequestBuilder
   _$UpdateSalesOrderCustomFieldsApiRequest _$v;
 
   ListBuilder<OrderCustomFieldValue> _orderCustomFieldValues;
+
   ListBuilder<OrderCustomFieldValue> get orderCustomFieldValues =>
       _$this._orderCustomFieldValues ??=
           new ListBuilder<OrderCustomFieldValue>();
+
   set orderCustomFieldValues(
           ListBuilder<OrderCustomFieldValue> orderCustomFieldValues) =>
       _$this._orderCustomFieldValues = orderCustomFieldValues;
@@ -216,6 +218,7 @@ class _$UpdateSalesOrderCustomFieldsApiRequestActions
       UpdateSalesOrderCustomFieldsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -61,6 +61,7 @@ class _$UpdateShipToAddressApi extends UpdateShipToAddressApi {
           ApiCommand<UpdateShipToAddressApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

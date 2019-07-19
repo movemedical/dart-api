@@ -67,6 +67,7 @@ class _$ListNotificationsApi extends ListNotificationsApi {
           ApiResult<ListNotificationsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

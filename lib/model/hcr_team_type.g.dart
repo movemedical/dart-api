@@ -9,7 +9,7 @@ part of 'hcr_team_type.dart';
 const HcrTeamType _$wireHCR = const HcrTeamType._('HCR');
 const HcrTeamType _$wireTEAM = const HcrTeamType._('TEAM');
 
-HcrTeamType _$hcrTeamTypeValueOf(String name) {
+HcrTeamType _$valueOf(String name) {
   switch (name) {
     case 'HCR':
       return _$wireHCR;
@@ -20,7 +20,7 @@ HcrTeamType _$hcrTeamTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<HcrTeamType> _$hcrTeamTypeValues =
+final BuiltSet<HcrTeamType> _$values =
     new BuiltSet<HcrTeamType>(const <HcrTeamType>[
   _$wireHCR,
   _$wireTEAM,

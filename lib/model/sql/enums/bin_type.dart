@@ -22,9 +22,9 @@ class BinType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<BinType> get values => _$binTypeValues;
+  static BuiltSet<BinType> get values => _$values;
 
-  static BinType valueOf(String name) => _$binTypeValueOf(name);
+  static BinType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

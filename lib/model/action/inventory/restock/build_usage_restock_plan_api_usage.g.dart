@@ -261,46 +261,66 @@ class BuildUsageRestockPlanApiUsageBuilder
   _$BuildUsageRestockPlanApiUsage _$v;
 
   String _guid;
+
   String get guid => _$this._guid;
+
   set guid(String guid) => _$this._guid = guid;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   String _rawBarcodeData;
+
   String get rawBarcodeData => _$this._rawBarcodeData;
+
   set rawBarcodeData(String rawBarcodeData) =>
       _$this._rawBarcodeData = rawBarcodeData;
 
   CaseUsageDisposition _caseUsageDisposition;
+
   CaseUsageDisposition get caseUsageDisposition => _$this._caseUsageDisposition;
+
   set caseUsageDisposition(CaseUsageDisposition caseUsageDisposition) =>
       _$this._caseUsageDisposition = caseUsageDisposition;
 
   ItemCaptureType _usageCaptureType;
+
   ItemCaptureType get usageCaptureType => _$this._usageCaptureType;
+
   set usageCaptureType(ItemCaptureType usageCaptureType) =>
       _$this._usageCaptureType = usageCaptureType;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   LocationHint _locationHint;
+
   LocationHint get locationHint => _$this._locationHint;
+
   set locationHint(LocationHint locationHint) =>
       _$this._locationHint = locationHint;
 
@@ -438,6 +458,7 @@ class _$BuildUsageRestockPlanApiUsageActions
       BuildUsageRestockPlanApiUsageBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

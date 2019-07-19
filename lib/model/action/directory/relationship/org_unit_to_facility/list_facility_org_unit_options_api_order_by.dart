@@ -21,11 +21,10 @@ class ListFacilityOrgUnitOptionsApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListFacilityOrgUnitOptionsApiOrderBy> get values =>
-      _$listFacilityOrgUnitOptionsApiOrderByValues;
+  static BuiltSet<ListFacilityOrgUnitOptionsApiOrderBy> get values => _$values;
 
   static ListFacilityOrgUnitOptionsApiOrderBy valueOf(String name) =>
-      _$listFacilityOrgUnitOptionsApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

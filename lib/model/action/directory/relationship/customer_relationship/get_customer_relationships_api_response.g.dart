@@ -114,9 +114,11 @@ class GetCustomerRelationshipsApiResponseBuilder
 
   ListBuilder<GetCustomerRelationshipsApiCustomerRelationship>
       _customerRelationships;
+
   ListBuilder<GetCustomerRelationshipsApiCustomerRelationship>
       get customerRelationships => _$this._customerRelationships ??=
           new ListBuilder<GetCustomerRelationshipsApiCustomerRelationship>();
+
   set customerRelationships(
           ListBuilder<GetCustomerRelationshipsApiCustomerRelationship>
               customerRelationships) =>
@@ -218,6 +220,7 @@ class _$GetCustomerRelationshipsApiResponseActions
       GetCustomerRelationshipsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

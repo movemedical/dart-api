@@ -22,10 +22,10 @@ class ListBizUnitInventoryTypeLinksApiOrderBy extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ListBizUnitInventoryTypeLinksApiOrderBy> get values =>
-      _$listBizUnitInventoryTypeLinksApiOrderByValues;
+      _$values;
 
   static ListBizUnitInventoryTypeLinksApiOrderBy valueOf(String name) =>
-      _$listBizUnitInventoryTypeLinksApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

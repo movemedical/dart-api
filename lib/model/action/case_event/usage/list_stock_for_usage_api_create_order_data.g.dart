@@ -174,25 +174,35 @@ class ListStockForUsageApiCreateOrderDataBuilder
   _$ListStockForUsageApiCreateOrderData _$v;
 
   HcrTeamType _hcrTeamType;
+
   HcrTeamType get hcrTeamType => _$this._hcrTeamType;
+
   set hcrTeamType(HcrTeamType hcrTeamType) => _$this._hcrTeamType = hcrTeamType;
 
   String _hcrTeamId;
+
   String get hcrTeamId => _$this._hcrTeamId;
+
   set hcrTeamId(String hcrTeamId) => _$this._hcrTeamId = hcrTeamId;
 
   String _salesOrgUnitId;
+
   String get salesOrgUnitId => _$this._salesOrgUnitId;
+
   set salesOrgUnitId(String salesOrgUnitId) =>
       _$this._salesOrgUnitId = salesOrgUnitId;
 
   LocationType _toLocationType;
+
   LocationType get toLocationType => _$this._toLocationType;
+
   set toLocationType(LocationType toLocationType) =>
       _$this._toLocationType = toLocationType;
 
   String _toLocationId;
+
   String get toLocationId => _$this._toLocationId;
+
   set toLocationId(String toLocationId) => _$this._toLocationId = toLocationId;
 
   ListStockForUsageApiCreateOrderDataBuilder();
@@ -304,6 +314,7 @@ class _$ListStockForUsageApiCreateOrderDataActions
       ListStockForUsageApiCreateOrderDataBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

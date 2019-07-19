@@ -114,6 +114,18 @@ class _$CreateCaseEventApiRequestSerializer
         ..add(serializers.serialize(object.bodySide,
             specifiedType: const FullType(BodySide)));
     }
+    if (object.opsLeadUserId != null) {
+      result
+        ..add('opsLeadUserId')
+        ..add(serializers.serialize(object.opsLeadUserId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.salesLeadUserId != null) {
+      result
+        ..add('salesLeadUserId')
+        ..add(serializers.serialize(object.salesLeadUserId,
+            specifiedType: const FullType(String)));
+    }
     if (object.patientId != null) {
       result
         ..add('patientId')
@@ -281,6 +293,14 @@ class _$CreateCaseEventApiRequestSerializer
           result.bodySide = serializers.deserialize(value,
               specifiedType: const FullType(BodySide)) as BodySide;
           break;
+        case 'opsLeadUserId':
+          result.opsLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'salesLeadUserId':
+          result.salesLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'patientId':
           result.patientId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -387,6 +407,10 @@ class _$CreateCaseEventApiRequest extends CreateCaseEventApiRequest {
   @override
   final BodySide bodySide;
   @override
+  final String opsLeadUserId;
+  @override
+  final String salesLeadUserId;
+  @override
   final String patientId;
   @override
   final PersonName patientName;
@@ -437,6 +461,8 @@ class _$CreateCaseEventApiRequest extends CreateCaseEventApiRequest {
       this.teamId,
       this.coverageId,
       this.bodySide,
+      this.opsLeadUserId,
+      this.salesLeadUserId,
       this.patientId,
       this.patientName,
       this.patientMrn,
@@ -482,6 +508,8 @@ class _$CreateCaseEventApiRequest extends CreateCaseEventApiRequest {
         teamId == other.teamId &&
         coverageId == other.coverageId &&
         bodySide == other.bodySide &&
+        opsLeadUserId == other.opsLeadUserId &&
+        salesLeadUserId == other.salesLeadUserId &&
         patientId == other.patientId &&
         patientName == other.patientName &&
         patientMrn == other.patientMrn &&
@@ -519,11 +547,11 @@ class _$CreateCaseEventApiRequest extends CreateCaseEventApiRequest {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, caseTypeId.hashCode), surgeryDate.hashCode), eventTimeUnknown.hashCode), eventDuration.hashCode), bizUnitId.hashCode), salesOuId.hashCode), facilityId.hashCode), procedureId.hashCode), subProcedureId.hashCode), surgeonPhysicianId.hashCode), surgeonPhysicianTemp.hashCode),
-                                                                                hcrId.hashCode),
-                                                                            teamId.hashCode),
-                                                                        coverageId.hashCode),
-                                                                    bodySide.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, caseTypeId.hashCode), surgeryDate.hashCode), eventTimeUnknown.hashCode), eventDuration.hashCode), bizUnitId.hashCode), salesOuId.hashCode), facilityId.hashCode), procedureId.hashCode), subProcedureId.hashCode), surgeonPhysicianId.hashCode), surgeonPhysicianTemp.hashCode), hcrId.hashCode), teamId.hashCode),
+                                                                                coverageId.hashCode),
+                                                                            bodySide.hashCode),
+                                                                        opsLeadUserId.hashCode),
+                                                                    salesLeadUserId.hashCode),
                                                                 patientId.hashCode),
                                                             patientName.hashCode),
                                                         patientMrn.hashCode),
@@ -559,6 +587,8 @@ class _$CreateCaseEventApiRequest extends CreateCaseEventApiRequest {
           ..add('teamId', teamId)
           ..add('coverageId', coverageId)
           ..add('bodySide', bodySide)
+          ..add('opsLeadUserId', opsLeadUserId)
+          ..add('salesLeadUserId', salesLeadUserId)
           ..add('patientId', patientId)
           ..add('patientName', patientName)
           ..add('patientMrn', patientMrn)
@@ -584,144 +614,218 @@ class CreateCaseEventApiRequestBuilder
   _$CreateCaseEventApiRequest _$v;
 
   String _caseTypeId;
+
   String get caseTypeId => _$this._caseTypeId;
+
   set caseTypeId(String caseTypeId) => _$this._caseTypeId = caseTypeId;
 
   DateTime _surgeryDate;
+
   DateTime get surgeryDate => _$this._surgeryDate;
+
   set surgeryDate(DateTime surgeryDate) => _$this._surgeryDate = surgeryDate;
 
   bool _eventTimeUnknown;
+
   bool get eventTimeUnknown => _$this._eventTimeUnknown;
+
   set eventTimeUnknown(bool eventTimeUnknown) =>
       _$this._eventTimeUnknown = eventTimeUnknown;
 
   int _eventDuration;
+
   int get eventDuration => _$this._eventDuration;
+
   set eventDuration(int eventDuration) => _$this._eventDuration = eventDuration;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _salesOuId;
+
   String get salesOuId => _$this._salesOuId;
+
   set salesOuId(String salesOuId) => _$this._salesOuId = salesOuId;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _subProcedureId;
+
   String get subProcedureId => _$this._subProcedureId;
+
   set subProcedureId(String subProcedureId) =>
       _$this._subProcedureId = subProcedureId;
 
   String _surgeonPhysicianId;
+
   String get surgeonPhysicianId => _$this._surgeonPhysicianId;
+
   set surgeonPhysicianId(String surgeonPhysicianId) =>
       _$this._surgeonPhysicianId = surgeonPhysicianId;
 
   String _surgeonPhysicianTemp;
+
   String get surgeonPhysicianTemp => _$this._surgeonPhysicianTemp;
+
   set surgeonPhysicianTemp(String surgeonPhysicianTemp) =>
       _$this._surgeonPhysicianTemp = surgeonPhysicianTemp;
 
   String _hcrId;
+
   String get hcrId => _$this._hcrId;
+
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   String _teamId;
+
   String get teamId => _$this._teamId;
+
   set teamId(String teamId) => _$this._teamId = teamId;
 
   String _coverageId;
+
   String get coverageId => _$this._coverageId;
+
   set coverageId(String coverageId) => _$this._coverageId = coverageId;
 
   BodySide _bodySide;
+
   BodySide get bodySide => _$this._bodySide;
+
   set bodySide(BodySide bodySide) => _$this._bodySide = bodySide;
 
+  String _opsLeadUserId;
+
+  String get opsLeadUserId => _$this._opsLeadUserId;
+
+  set opsLeadUserId(String opsLeadUserId) =>
+      _$this._opsLeadUserId = opsLeadUserId;
+
+  String _salesLeadUserId;
+
+  String get salesLeadUserId => _$this._salesLeadUserId;
+
+  set salesLeadUserId(String salesLeadUserId) =>
+      _$this._salesLeadUserId = salesLeadUserId;
+
   String _patientId;
+
   String get patientId => _$this._patientId;
+
   set patientId(String patientId) => _$this._patientId = patientId;
 
   PersonNameBuilder _patientName;
+
   PersonNameBuilder get patientName =>
       _$this._patientName ??= new PersonNameBuilder();
+
   set patientName(PersonNameBuilder patientName) =>
       _$this._patientName = patientName;
 
   String _patientMrn;
+
   String get patientMrn => _$this._patientMrn;
+
   set patientMrn(String patientMrn) => _$this._patientMrn = patientMrn;
 
   DateTime _patientDob;
+
   DateTime get patientDob => _$this._patientDob;
+
   set patientDob(DateTime patientDob) => _$this._patientDob = patientDob;
 
   Gender _patientGender;
+
   Gender get patientGender => _$this._patientGender;
+
   set patientGender(Gender patientGender) =>
       _$this._patientGender = patientGender;
 
   double _heightMeasurement;
+
   double get heightMeasurement => _$this._heightMeasurement;
+
   set heightMeasurement(double heightMeasurement) =>
       _$this._heightMeasurement = heightMeasurement;
 
   LengthMeasurementType _heightMeasurementType;
+
   LengthMeasurementType get heightMeasurementType =>
       _$this._heightMeasurementType;
+
   set heightMeasurementType(LengthMeasurementType heightMeasurementType) =>
       _$this._heightMeasurementType = heightMeasurementType;
 
   double _weightMeasurement;
+
   double get weightMeasurement => _$this._weightMeasurement;
+
   set weightMeasurement(double weightMeasurement) =>
       _$this._weightMeasurement = weightMeasurement;
 
   WeightMeasurementType _weightMeasurementType;
+
   WeightMeasurementType get weightMeasurementType =>
       _$this._weightMeasurementType;
+
   set weightMeasurementType(WeightMeasurementType weightMeasurementType) =>
       _$this._weightMeasurementType = weightMeasurementType;
 
   Ethnicity _ethnicity;
+
   Ethnicity get ethnicity => _$this._ethnicity;
+
   set ethnicity(Ethnicity ethnicity) => _$this._ethnicity = ethnicity;
 
   CreateCaseEventApiInsuranceBuilder _primaryInsurance;
+
   CreateCaseEventApiInsuranceBuilder get primaryInsurance =>
       _$this._primaryInsurance ??= new CreateCaseEventApiInsuranceBuilder();
+
   set primaryInsurance(CreateCaseEventApiInsuranceBuilder primaryInsurance) =>
       _$this._primaryInsurance = primaryInsurance;
 
   CreateCaseEventApiInsuranceBuilder _secondaryInsurance;
+
   CreateCaseEventApiInsuranceBuilder get secondaryInsurance =>
       _$this._secondaryInsurance ??= new CreateCaseEventApiInsuranceBuilder();
+
   set secondaryInsurance(
           CreateCaseEventApiInsuranceBuilder secondaryInsurance) =>
       _$this._secondaryInsurance = secondaryInsurance;
 
   CaseEventStatus _fastForward;
+
   CaseEventStatus get fastForward => _$this._fastForward;
+
   set fastForward(CaseEventStatus fastForward) =>
       _$this._fastForward = fastForward;
 
   String _procedureDesc;
+
   String get procedureDesc => _$this._procedureDesc;
+
   set procedureDesc(String procedureDesc) =>
       _$this._procedureDesc = procedureDesc;
 
   ListBuilder<CaseCustomValue> _customFieldValues;
+
   ListBuilder<CaseCustomValue> get customFieldValues =>
       _$this._customFieldValues ??= new ListBuilder<CaseCustomValue>();
+
   set customFieldValues(ListBuilder<CaseCustomValue> customFieldValues) =>
       _$this._customFieldValues = customFieldValues;
 
@@ -744,6 +848,8 @@ class CreateCaseEventApiRequestBuilder
       _teamId = _$v.teamId;
       _coverageId = _$v.coverageId;
       _bodySide = _$v.bodySide;
+      _opsLeadUserId = _$v.opsLeadUserId;
+      _salesLeadUserId = _$v.salesLeadUserId;
       _patientId = _$v.patientId;
       _patientName = _$v.patientName?.toBuilder();
       _patientMrn = _$v.patientMrn;
@@ -798,6 +904,8 @@ class CreateCaseEventApiRequestBuilder
               teamId: teamId,
               coverageId: coverageId,
               bodySide: bodySide,
+              opsLeadUserId: opsLeadUserId,
+              salesLeadUserId: salesLeadUserId,
               patientId: patientId,
               patientName: _patientName?.build(),
               patientMrn: patientMrn,
@@ -874,6 +982,8 @@ class _$CreateCaseEventApiRequestActions
   final FieldDispatcher<String> teamId;
   final FieldDispatcher<String> coverageId;
   final FieldDispatcher<BodySide> bodySide;
+  final FieldDispatcher<String> opsLeadUserId;
+  final FieldDispatcher<String> salesLeadUserId;
   final FieldDispatcher<String> patientId;
   final PersonNameActions patientName;
   final FieldDispatcher<String> patientMrn;
@@ -944,6 +1054,16 @@ class _$CreateCaseEventApiRequestActions
             (s) => s?.coverageId, (p, b) => p?.coverageId = b),
         bodySide = options$.field<BodySide>('bodySide', (a) => a?.bodySide,
             (s) => s?.bodySide, (p, b) => p?.bodySide = b),
+        opsLeadUserId = options$.field<String>(
+            'opsLeadUserId',
+            (a) => a?.opsLeadUserId,
+            (s) => s?.opsLeadUserId,
+            (p, b) => p?.opsLeadUserId = b),
+        salesLeadUserId = options$.field<String>(
+            'salesLeadUserId',
+            (a) => a?.salesLeadUserId,
+            (s) => s?.salesLeadUserId,
+            (p, b) => p?.salesLeadUserId = b),
         patientId = options$.field<String>('patientId', (a) => a?.patientId,
             (s) => s?.patientId, (p, b) => p?.patientId = b),
         patientName = PersonNameActions(() =>
@@ -1036,6 +1156,7 @@ class _$CreateCaseEventApiRequestActions
       CreateCaseEventApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.patientName,
@@ -1044,6 +1165,7 @@ class _$CreateCaseEventApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -1063,6 +1185,8 @@ class _$CreateCaseEventApiRequestActions
         this.teamId,
         this.coverageId,
         this.bodySide,
+        this.opsLeadUserId,
+        this.salesLeadUserId,
         this.patientId,
         this.patientMrn,
         this.patientDob,
@@ -1095,6 +1219,8 @@ class _$CreateCaseEventApiRequestActions
     teamId.reducer$(reducer);
     coverageId.reducer$(reducer);
     bodySide.reducer$(reducer);
+    opsLeadUserId.reducer$(reducer);
+    salesLeadUserId.reducer$(reducer);
     patientId.reducer$(reducer);
     patientName.reducer$(reducer);
     patientMrn.reducer$(reducer);

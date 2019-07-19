@@ -9,7 +9,7 @@ part of 'shipment_file_type.dart';
 const ShipmentFileType _$wirePACKING_LIST =
     const ShipmentFileType._('PACKING_LIST');
 
-ShipmentFileType _$shipmentFileTypeValueOf(String name) {
+ShipmentFileType _$valueOf(String name) {
   switch (name) {
     case 'PACKING_LIST':
       return _$wirePACKING_LIST;
@@ -18,7 +18,7 @@ ShipmentFileType _$shipmentFileTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<ShipmentFileType> _$shipmentFileTypeValues =
+final BuiltSet<ShipmentFileType> _$values =
     new BuiltSet<ShipmentFileType>(const <ShipmentFileType>[
   _$wirePACKING_LIST,
 ]);

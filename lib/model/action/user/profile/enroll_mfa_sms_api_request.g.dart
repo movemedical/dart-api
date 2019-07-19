@@ -100,7 +100,9 @@ class EnrollMfaSmsApiRequestBuilder
   _$EnrollMfaSmsApiRequest _$v;
 
   String _phoneNumber;
+
   String get phoneNumber => _$this._phoneNumber;
+
   set phoneNumber(String phoneNumber) => _$this._phoneNumber = phoneNumber;
 
   EnrollMfaSmsApiRequestBuilder();
@@ -178,6 +180,7 @@ class _$EnrollMfaSmsApiRequestActions extends EnrollMfaSmsApiRequestActions {
       EnrollMfaSmsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

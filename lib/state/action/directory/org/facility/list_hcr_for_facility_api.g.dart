@@ -68,6 +68,7 @@ class _$ListHCRForFacilityApi extends ListHCRForFacilityApi {
           ApiResult<ListHCRForFacilityApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

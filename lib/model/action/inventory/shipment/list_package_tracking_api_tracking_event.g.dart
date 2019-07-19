@@ -138,15 +138,21 @@ class ListPackageTrackingApiTrackingEventBuilder
   _$ListPackageTrackingApiTrackingEvent _$v;
 
   DateTime _timestamp;
+
   DateTime get timestamp => _$this._timestamp;
+
   set timestamp(DateTime timestamp) => _$this._timestamp = timestamp;
 
   String _city;
+
   String get city => _$this._city;
+
   set city(String city) => _$this._city = city;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   ListPackageTrackingApiTrackingEventBuilder();
@@ -237,6 +243,7 @@ class _$ListPackageTrackingApiTrackingEventActions
       ListPackageTrackingApiTrackingEventBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

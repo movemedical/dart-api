@@ -122,13 +122,17 @@ class ListChildOrderLinesApiResponseBuilder
   _$ListChildOrderLinesApiResponse _$v;
 
   ListBuilder<ListChildOrderLinesApiOrderLine> _data;
+
   ListBuilder<ListChildOrderLinesApiOrderLine> get data =>
       _$this._data ??= new ListBuilder<ListChildOrderLinesApiOrderLine>();
+
   set data(ListBuilder<ListChildOrderLinesApiOrderLine> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListChildOrderLinesApiResponseBuilder();
@@ -225,6 +229,7 @@ class _$ListChildOrderLinesApiResponseActions
       ListChildOrderLinesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

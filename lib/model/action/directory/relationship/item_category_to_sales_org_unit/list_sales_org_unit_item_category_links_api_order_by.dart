@@ -30,10 +30,10 @@ class ListSalesOrgUnitItemCategoryLinksApiOrderBy extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ListSalesOrgUnitItemCategoryLinksApiOrderBy> get values =>
-      _$listSalesOrgUnitItemCategoryLinksApiOrderByValues;
+      _$values;
 
   static ListSalesOrgUnitItemCategoryLinksApiOrderBy valueOf(String name) =>
-      _$listSalesOrgUnitItemCategoryLinksApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

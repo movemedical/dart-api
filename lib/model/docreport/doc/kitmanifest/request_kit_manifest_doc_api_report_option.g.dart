@@ -11,8 +11,7 @@ const RequestKitManifestDocApiReportOption _$wireOPTION_1 =
 const RequestKitManifestDocApiReportOption _$wireOPTION_2 =
     const RequestKitManifestDocApiReportOption._('OPTION_2');
 
-RequestKitManifestDocApiReportOption
-    _$requestKitManifestDocApiReportOptionValueOf(String name) {
+RequestKitManifestDocApiReportOption _$valueOf(String name) {
   switch (name) {
     case 'OPTION_1':
       return _$wireOPTION_1;
@@ -23,8 +22,7 @@ RequestKitManifestDocApiReportOption
   }
 }
 
-final BuiltSet<RequestKitManifestDocApiReportOption>
-    _$requestKitManifestDocApiReportOptionValues =
+final BuiltSet<RequestKitManifestDocApiReportOption> _$values =
     new BuiltSet<RequestKitManifestDocApiReportOption>(const <
         RequestKitManifestDocApiReportOption>[
   _$wireOPTION_1,

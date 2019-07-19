@@ -106,7 +106,9 @@ class GetMobileVersionDetailsApiRequestBuilder
   _$GetMobileVersionDetailsApiRequest _$v;
 
   MobilePlatform _platform;
+
   MobilePlatform get platform => _$this._platform;
+
   set platform(MobilePlatform platform) => _$this._platform = platform;
 
   GetMobileVersionDetailsApiRequestBuilder();
@@ -185,6 +187,7 @@ class _$GetMobileVersionDetailsApiRequestActions
       GetMobileVersionDetailsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

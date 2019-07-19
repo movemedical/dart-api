@@ -116,11 +116,15 @@ class GetStockSnapshotApiRequestBuilder
   _$GetStockSnapshotApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   bool _skipPresence;
+
   bool get skipPresence => _$this._skipPresence;
+
   set skipPresence(bool skipPresence) => _$this._skipPresence = skipPresence;
 
   GetStockSnapshotApiRequestBuilder();
@@ -205,6 +209,7 @@ class _$GetStockSnapshotApiRequestActions
       GetStockSnapshotApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

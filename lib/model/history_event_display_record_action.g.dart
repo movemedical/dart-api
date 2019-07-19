@@ -13,8 +13,7 @@ const HistoryEventDisplayRecordAction _$wireUPDATE =
 const HistoryEventDisplayRecordAction _$wireDELETE =
     const HistoryEventDisplayRecordAction._('DELETE');
 
-HistoryEventDisplayRecordAction _$historyEventDisplayRecordActionValueOf(
-    String name) {
+HistoryEventDisplayRecordAction _$valueOf(String name) {
   switch (name) {
     case 'CREATE':
       return _$wireCREATE;
@@ -27,10 +26,8 @@ HistoryEventDisplayRecordAction _$historyEventDisplayRecordActionValueOf(
   }
 }
 
-final BuiltSet<HistoryEventDisplayRecordAction>
-    _$historyEventDisplayRecordActionValues =
-    new BuiltSet<HistoryEventDisplayRecordAction>(const <
-        HistoryEventDisplayRecordAction>[
+final BuiltSet<HistoryEventDisplayRecordAction> _$values = new BuiltSet<
+    HistoryEventDisplayRecordAction>(const <HistoryEventDisplayRecordAction>[
   _$wireCREATE,
   _$wireUPDATE,
   _$wireDELETE,

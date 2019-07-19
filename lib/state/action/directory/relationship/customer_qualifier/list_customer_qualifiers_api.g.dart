@@ -69,6 +69,7 @@ class _$ListCustomerQualifiersApi extends ListCustomerQualifiersApi {
           ApiResult<ListCustomerQualifiersApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

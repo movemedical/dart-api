@@ -26,11 +26,9 @@ class ListAuditFilesApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListAuditFilesApiOrderBy> get values =>
-      _$listAuditFilesApiOrderByValues;
+  static BuiltSet<ListAuditFilesApiOrderBy> get values => _$values;
 
-  static ListAuditFilesApiOrderBy valueOf(String name) =>
-      _$listAuditFilesApiOrderByValueOf(name);
+  static ListAuditFilesApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

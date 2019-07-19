@@ -5,6 +5,7 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 import 'package:movemedical_api/model/pagination_params.dart';
+import 'package:movemedical_api/model/sql/enums/body_side.dart';
 
 part 'list_preference_cards_api_request.g.dart';
 
@@ -42,6 +43,9 @@ abstract class ListPreferenceCardsApiRequest
 
   @nullable
   BuiltList<String> get orgUnitIds;
+
+  @nullable
+  BuiltList<BodySide> get bodySides;
 
   @nullable
   String get search;
@@ -95,6 +99,8 @@ abstract class ListPreferenceCardsApiRequestActions extends ModelActions<
   FieldDispatcher<BuiltList<String>> get productGroupIds;
 
   FieldDispatcher<BuiltList<String>> get orgUnitIds;
+
+  FieldDispatcher<BuiltList<BodySide>> get bodySides;
 
   FieldDispatcher<String> get search;
 

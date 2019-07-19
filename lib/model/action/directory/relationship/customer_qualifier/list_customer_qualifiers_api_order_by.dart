@@ -23,11 +23,10 @@ class ListCustomerQualifiersApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListCustomerQualifiersApiOrderBy> get values =>
-      _$listCustomerQualifiersApiOrderByValues;
+  static BuiltSet<ListCustomerQualifiersApiOrderBy> get values => _$values;
 
   static ListCustomerQualifiersApiOrderBy valueOf(String name) =>
-      _$listCustomerQualifiersApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

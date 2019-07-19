@@ -25,9 +25,9 @@ class ItemCaptureType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ItemCaptureType> get values => _$itemCaptureTypeValues;
+  static BuiltSet<ItemCaptureType> get values => _$values;
 
-  static ItemCaptureType valueOf(String name) => _$itemCaptureTypeValueOf(name);
+  static ItemCaptureType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

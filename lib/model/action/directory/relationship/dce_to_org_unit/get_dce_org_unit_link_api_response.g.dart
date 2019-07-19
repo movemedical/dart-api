@@ -108,9 +108,11 @@ class GetDceOrgUnitLinkApiResponseBuilder
   _$GetDceOrgUnitLinkApiResponse _$v;
 
   GetDceOrgUnitLinkApiDetailedOrgUnitLinkBuilder _detailedOrgUnitLink;
+
   GetDceOrgUnitLinkApiDetailedOrgUnitLinkBuilder get detailedOrgUnitLink =>
       _$this._detailedOrgUnitLink ??=
           new GetDceOrgUnitLinkApiDetailedOrgUnitLinkBuilder();
+
   set detailedOrgUnitLink(
           GetDceOrgUnitLinkApiDetailedOrgUnitLinkBuilder detailedOrgUnitLink) =>
       _$this._detailedOrgUnitLink = detailedOrgUnitLink;
@@ -213,12 +215,14 @@ class _$GetDceOrgUnitLinkApiResponseActions
       GetDceOrgUnitLinkApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.detailedOrgUnitLink,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -14,9 +14,10 @@ const SearchLocationsApiSearchLocationsPurpose _$wireTRANSFER =
     const SearchLocationsApiSearchLocationsPurpose._('TRANSFER');
 const SearchLocationsApiSearchLocationsPurpose _$wireRECEIVE =
     const SearchLocationsApiSearchLocationsPurpose._('RECEIVE');
+const SearchLocationsApiSearchLocationsPurpose _$wireREPORT =
+    const SearchLocationsApiSearchLocationsPurpose._('REPORT');
 
-SearchLocationsApiSearchLocationsPurpose
-    _$searchLocationsApiSearchLocationsPurposeValueOf(String name) {
+SearchLocationsApiSearchLocationsPurpose _$valueOf(String name) {
   switch (name) {
     case 'STOCK_SEARCH':
       return _$wireSTOCK_SEARCH;
@@ -26,19 +27,21 @@ SearchLocationsApiSearchLocationsPurpose
       return _$wireTRANSFER;
     case 'RECEIVE':
       return _$wireRECEIVE;
+    case 'REPORT':
+      return _$wireREPORT;
     default:
       throw new ArgumentError(name);
   }
 }
 
-final BuiltSet<SearchLocationsApiSearchLocationsPurpose>
-    _$searchLocationsApiSearchLocationsPurposeValues =
+final BuiltSet<SearchLocationsApiSearchLocationsPurpose> _$values =
     new BuiltSet<SearchLocationsApiSearchLocationsPurpose>(const <
         SearchLocationsApiSearchLocationsPurpose>[
   _$wireSTOCK_SEARCH,
   _$wireORDER,
   _$wireTRANSFER,
   _$wireRECEIVE,
+  _$wireREPORT,
 ]);
 
 Serializer<SearchLocationsApiSearchLocationsPurpose>

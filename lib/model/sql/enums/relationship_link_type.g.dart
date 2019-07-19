@@ -12,7 +12,7 @@ const RelationshipLinkType _$wireHCR = const RelationshipLinkType._('HCR');
 const RelationshipLinkType _$wirePHYSICIAN =
     const RelationshipLinkType._('PHYSICIAN');
 
-RelationshipLinkType _$relationshipLinkTypeValueOf(String name) {
+RelationshipLinkType _$valueOf(String name) {
   switch (name) {
     case 'FACILITY':
       return _$wireFACILITY;
@@ -25,7 +25,7 @@ RelationshipLinkType _$relationshipLinkTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<RelationshipLinkType> _$relationshipLinkTypeValues =
+final BuiltSet<RelationshipLinkType> _$values =
     new BuiltSet<RelationshipLinkType>(const <RelationshipLinkType>[
   _$wireFACILITY,
   _$wireHCR,

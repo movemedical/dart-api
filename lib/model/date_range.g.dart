@@ -102,11 +102,15 @@ class DateRangeBuilder implements Builder<DateRange, DateRangeBuilder> {
   _$DateRange _$v;
 
   DateTime _start;
+
   DateTime get start => _$this._start;
+
   set start(DateTime start) => _$this._start = start;
 
   DateTime _end;
+
   DateTime get end => _$this._end;
+
   set end(DateTime end) => _$this._end = end;
 
   DateRangeBuilder();
@@ -179,6 +183,7 @@ class _$DateRangeActions extends DateRangeActions {
   DateRangeBuilder newBuilder$() => DateRangeBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

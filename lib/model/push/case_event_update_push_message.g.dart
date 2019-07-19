@@ -118,11 +118,15 @@ class CaseEventUpdatePushMessageBuilder
   _$CaseEventUpdatePushMessage _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   CaseEventUpdateType _updateType;
+
   CaseEventUpdateType get updateType => _$this._updateType;
+
   set updateType(CaseEventUpdateType updateType) =>
       _$this._updateType = updateType;
 
@@ -212,6 +216,7 @@ class _$CaseEventUpdatePushMessageActions
       CaseEventUpdatePushMessageBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

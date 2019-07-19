@@ -64,6 +64,7 @@ class _$MoveStock2Api extends MoveStock2Api {
           ApiResult<MoveStock2ApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

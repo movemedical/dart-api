@@ -17,6 +17,8 @@ const DocReportType _$wireCASE_USAGE_PO_REQ =
 const DocReportType _$wireCASES_EXPORT = const DocReportType._('CASES_EXPORT');
 const DocReportType _$wireBACK_ORDER = const DocReportType._('BACK_ORDER');
 const DocReportType _$wireDUE_BACK = const DocReportType._('DUE_BACK');
+const DocReportType _$wireCASE_LOAN_DUE_BACK =
+    const DocReportType._('CASE_LOAN_DUE_BACK');
 const DocReportType _$wireSTOCK_SUMMARY_EXPORT =
     const DocReportType._('STOCK_SUMMARY_EXPORT');
 const DocReportType _$wireITEM_HISTORY = const DocReportType._('ITEM_HISTORY');
@@ -36,6 +38,7 @@ const DocReportType _$wireEVENT_LOAN_EXPORT =
     const DocReportType._('EVENT_LOAN_EXPORT');
 const DocReportType _$wireSTOCK_BARCODE =
     const DocReportType._('STOCK_BARCODE');
+const DocReportType _$wireLOST_FOUND = const DocReportType._('LOST_FOUND');
 const DocReportType _$wirePROOF_OF_DELIVERY =
     const DocReportType._('PROOF_OF_DELIVERY');
 const DocReportType _$wireSHIPMENT_PACKING_LIST =
@@ -104,6 +107,8 @@ const DocReportType _$wireOUTSTANDING_BILLING_DETAIL_REPORT =
 const DocReportType _$wireSALES_ORDER_EXPORT =
     const DocReportType._('SALES_ORDER_EXPORT');
 const DocReportType _$wireORDER_EXPORT = const DocReportType._('ORDER_EXPORT');
+const DocReportType _$wireREPLACEMENT_REPORT =
+    const DocReportType._('REPLACEMENT_REPORT');
 const DocReportType _$wireORDER_PRINTOUT =
     const DocReportType._('ORDER_PRINTOUT');
 const DocReportType _$wireORDER_REQUESTS =
@@ -124,7 +129,7 @@ const DocReportType _$wireCATALOG_EXPORT =
 const DocReportType _$wireKIT_DETAIL = const DocReportType._('KIT_DETAIL');
 const DocReportType _$wireKIT_MANIFEST = const DocReportType._('KIT_MANIFEST');
 
-DocReportType _$docReportTypeValueOf(String name) {
+DocReportType _$valueOf(String name) {
   switch (name) {
     case 'USER_PERMISSIONS_REPORT':
       return _$wireUSER_PERMISSIONS_REPORT;
@@ -140,6 +145,8 @@ DocReportType _$docReportTypeValueOf(String name) {
       return _$wireBACK_ORDER;
     case 'DUE_BACK':
       return _$wireDUE_BACK;
+    case 'CASE_LOAN_DUE_BACK':
+      return _$wireCASE_LOAN_DUE_BACK;
     case 'STOCK_SUMMARY_EXPORT':
       return _$wireSTOCK_SUMMARY_EXPORT;
     case 'ITEM_HISTORY':
@@ -162,6 +169,8 @@ DocReportType _$docReportTypeValueOf(String name) {
       return _$wireEVENT_LOAN_EXPORT;
     case 'STOCK_BARCODE':
       return _$wireSTOCK_BARCODE;
+    case 'LOST_FOUND':
+      return _$wireLOST_FOUND;
     case 'PROOF_OF_DELIVERY':
       return _$wirePROOF_OF_DELIVERY;
     case 'SHIPMENT_PACKING_LIST':
@@ -236,6 +245,8 @@ DocReportType _$docReportTypeValueOf(String name) {
       return _$wireSALES_ORDER_EXPORT;
     case 'ORDER_EXPORT':
       return _$wireORDER_EXPORT;
+    case 'REPLACEMENT_REPORT':
+      return _$wireREPLACEMENT_REPORT;
     case 'ORDER_PRINTOUT':
       return _$wireORDER_PRINTOUT;
     case 'ORDER_REQUESTS':
@@ -263,7 +274,7 @@ DocReportType _$docReportTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<DocReportType> _$docReportTypeValues =
+final BuiltSet<DocReportType> _$values =
     new BuiltSet<DocReportType>(const <DocReportType>[
   _$wireUSER_PERMISSIONS_REPORT,
   _$wireCASE_REQ_PICK_LIST,
@@ -272,6 +283,7 @@ final BuiltSet<DocReportType> _$docReportTypeValues =
   _$wireCASES_EXPORT,
   _$wireBACK_ORDER,
   _$wireDUE_BACK,
+  _$wireCASE_LOAN_DUE_BACK,
   _$wireSTOCK_SUMMARY_EXPORT,
   _$wireITEM_HISTORY,
   _$wireLOAN_CONSIGNMENT_COMPARE,
@@ -283,6 +295,7 @@ final BuiltSet<DocReportType> _$docReportTypeValues =
   _$wireCONSIGNMENT_REQUEST_REPORT,
   _$wireEVENT_LOAN_EXPORT,
   _$wireSTOCK_BARCODE,
+  _$wireLOST_FOUND,
   _$wirePROOF_OF_DELIVERY,
   _$wireSHIPMENT_PACKING_LIST,
   _$wireSHIPMENTS,
@@ -320,6 +333,7 @@ final BuiltSet<DocReportType> _$docReportTypeValues =
   _$wireOUTSTANDING_BILLING_DETAIL_REPORT,
   _$wireSALES_ORDER_EXPORT,
   _$wireORDER_EXPORT,
+  _$wireREPLACEMENT_REPORT,
   _$wireORDER_PRINTOUT,
   _$wireORDER_REQUESTS,
   _$wireSALES_ORDER_PO_REQUEST,

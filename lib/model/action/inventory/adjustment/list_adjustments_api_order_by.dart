@@ -27,11 +27,9 @@ class ListAdjustmentsApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListAdjustmentsApiOrderBy> get values =>
-      _$listAdjustmentsApiOrderByValues;
+  static BuiltSet<ListAdjustmentsApiOrderBy> get values => _$values;
 
-  static ListAdjustmentsApiOrderBy valueOf(String name) =>
-      _$listAdjustmentsApiOrderByValueOf(name);
+  static ListAdjustmentsApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

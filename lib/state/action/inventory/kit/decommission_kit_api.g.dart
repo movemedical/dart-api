@@ -59,6 +59,7 @@ class _$DecommissionKitApi extends DecommissionKitApi {
           ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

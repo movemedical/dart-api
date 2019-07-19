@@ -26,9 +26,9 @@ class DeviceType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<DeviceType> get values => _$deviceTypeValues;
+  static BuiltSet<DeviceType> get values => _$values;
 
-  static DeviceType valueOf(String name) => _$deviceTypeValueOf(name);
+  static DeviceType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

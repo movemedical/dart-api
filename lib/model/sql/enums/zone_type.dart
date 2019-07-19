@@ -22,9 +22,9 @@ class ZoneType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ZoneType> get values => _$zoneTypeValues;
+  static BuiltSet<ZoneType> get values => _$values;
 
-  static ZoneType valueOf(String name) => _$zoneTypeValueOf(name);
+  static ZoneType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

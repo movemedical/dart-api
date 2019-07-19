@@ -16,7 +16,7 @@ const PackageStatus _$wireCONFIRMED = const PackageStatus._('CONFIRMED');
 const PackageStatus _$wireEXCEPTION = const PackageStatus._('EXCEPTION');
 const PackageStatus _$wireREVIEW = const PackageStatus._('REVIEW');
 
-PackageStatus _$packageStatusValueOf(String name) {
+PackageStatus _$valueOf(String name) {
   switch (name) {
     case 'EMPTY':
       return _$wireEMPTY;
@@ -39,7 +39,7 @@ PackageStatus _$packageStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<PackageStatus> _$packageStatusValues =
+final BuiltSet<PackageStatus> _$values =
     new BuiltSet<PackageStatus>(const <PackageStatus>[
   _$wireEMPTY,
   _$wireBUILDING,

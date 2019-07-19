@@ -21,9 +21,9 @@ class ItemFileType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ItemFileType> get values => _$itemFileTypeValues;
+  static BuiltSet<ItemFileType> get values => _$values;
 
-  static ItemFileType valueOf(String name) => _$itemFileTypeValueOf(name);
+  static ItemFileType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -228,36 +228,52 @@ class GetShippingServiceApiShippingServiceDetailBuilder
   _$GetShippingServiceApiShippingServiceDetail _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   int _daysInTransit;
+
   int get daysInTransit => _$this._daysInTransit;
+
   set daysInTransit(int daysInTransit) => _$this._daysInTransit = daysInTransit;
 
   int _hoursInTransit;
+
   int get hoursInTransit => _$this._hoursInTransit;
+
   set hoursInTransit(int hoursInTransit) =>
       _$this._hoursInTransit = hoursInTransit;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _orgName;
+
   String get orgName => _$this._orgName;
+
   set orgName(String orgName) => _$this._orgName = orgName;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   String _erpCode;
+
   String get erpCode => _$this._erpCode;
+
   set erpCode(String erpCode) => _$this._erpCode = erpCode;
 
   GetShippingServiceApiShippingServiceDetailBuilder();
@@ -379,6 +395,7 @@ class _$GetShippingServiceApiShippingServiceDetailActions
       GetShippingServiceApiShippingServiceDetailBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

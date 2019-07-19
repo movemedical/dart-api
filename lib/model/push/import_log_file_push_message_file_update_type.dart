@@ -25,10 +25,10 @@ class ImportLogFilePushMessageFileUpdateType extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ImportLogFilePushMessageFileUpdateType> get values =>
-      _$importLogFilePushMessageFileUpdateTypeValues;
+      _$values;
 
   static ImportLogFilePushMessageFileUpdateType valueOf(String name) =>
-      _$importLogFilePushMessageFileUpdateTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -109,7 +109,9 @@ class CanUserConfirmPkgAtLocationApiResponseBuilder
   _$CanUserConfirmPkgAtLocationApiResponse _$v;
 
   bool _canDeliverAndConfirm;
+
   bool get canDeliverAndConfirm => _$this._canDeliverAndConfirm;
+
   set canDeliverAndConfirm(bool canDeliverAndConfirm) =>
       _$this._canDeliverAndConfirm = canDeliverAndConfirm;
 
@@ -193,6 +195,7 @@ class _$CanUserConfirmPkgAtLocationApiResponseActions
       CanUserConfirmPkgAtLocationApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

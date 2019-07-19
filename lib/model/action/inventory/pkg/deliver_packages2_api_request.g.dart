@@ -105,8 +105,10 @@ class DeliverPackages2ApiRequestBuilder
   _$DeliverPackages2ApiRequest _$v;
 
   ListBuilder<String> _packageIds;
+
   ListBuilder<String> get packageIds =>
       _$this._packageIds ??= new ListBuilder<String>();
+
   set packageIds(ListBuilder<String> packageIds) =>
       _$this._packageIds = packageIds;
 
@@ -201,6 +203,7 @@ class _$DeliverPackages2ApiRequestActions
       DeliverPackages2ApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

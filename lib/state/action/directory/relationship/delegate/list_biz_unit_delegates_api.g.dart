@@ -68,6 +68,7 @@ class _$ListBizUnitDelegatesApi extends ListBizUnitDelegatesApi {
           ApiResult<ListBizUnitDelegatesApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

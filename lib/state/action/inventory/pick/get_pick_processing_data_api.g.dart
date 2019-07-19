@@ -68,6 +68,7 @@ class _$GetPickProcessingDataApi extends GetPickProcessingDataApi {
           ApiResult<GetPickProcessingDataApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

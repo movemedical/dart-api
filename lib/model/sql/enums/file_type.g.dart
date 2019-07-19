@@ -25,7 +25,7 @@ const FileType _$wireINTEGRATION = const FileType._('INTEGRATION');
 const FileType _$wireITEM = const FileType._('ITEM');
 const FileType _$wireSERIAL = const FileType._('SERIAL');
 
-FileType _$fileTypeValueOf(String name) {
+FileType _$valueOf(String name) {
   switch (name) {
     case 'CASE_EVENT':
       return _$wireCASE_EVENT;
@@ -66,8 +66,7 @@ FileType _$fileTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<FileType> _$fileTypeValues =
-    new BuiltSet<FileType>(const <FileType>[
+final BuiltSet<FileType> _$values = new BuiltSet<FileType>(const <FileType>[
   _$wireCASE_EVENT,
   _$wireCONVERSATION,
   _$wireSTOCK_ORDER,

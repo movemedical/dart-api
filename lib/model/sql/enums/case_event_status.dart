@@ -28,9 +28,9 @@ class CaseEventStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<CaseEventStatus> get values => _$caseEventStatusValues;
+  static BuiltSet<CaseEventStatus> get values => _$values;
 
-  static CaseEventStatus valueOf(String name) => _$caseEventStatusValueOf(name);
+  static CaseEventStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

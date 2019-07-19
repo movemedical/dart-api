@@ -14,7 +14,7 @@ const StockContainerType _$wirePACKAGE = const StockContainerType._('PACKAGE');
 const StockContainerType _$wireMULTIPLE =
     const StockContainerType._('MULTIPLE');
 
-StockContainerType _$stockContainerTypeValueOf(String name) {
+StockContainerType _$valueOf(String name) {
   switch (name) {
     case 'BIN':
       return _$wireBIN;
@@ -33,7 +33,7 @@ StockContainerType _$stockContainerTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<StockContainerType> _$stockContainerTypeValues =
+final BuiltSet<StockContainerType> _$values =
     new BuiltSet<StockContainerType>(const <StockContainerType>[
   _$wireBIN,
   _$wireTRAY,

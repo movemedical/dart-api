@@ -36,6 +36,12 @@ class _$SearchLocationsApiRequestSerializer
         ..add(serializers.serialize(object.search,
             specifiedType: const FullType(String)));
     }
+    if (object.orderReasonId != null) {
+      result
+        ..add('orderReasonId')
+        ..add(serializers.serialize(object.orderReasonId,
+            specifiedType: const FullType(String)));
+    }
     if (object.bizUnitIds != null) {
       result
         ..add('bizUnitIds')
@@ -102,6 +108,12 @@ class _$SearchLocationsApiRequestSerializer
         ..add(serializers.serialize(object.longitude,
             specifiedType: const FullType(double)));
     }
+    if (object.reportType != null) {
+      result
+        ..add('reportType')
+        ..add(serializers.serialize(object.reportType,
+            specifiedType: const FullType(DocReportType)));
+    }
 
     return result;
   }
@@ -124,6 +136,10 @@ class _$SearchLocationsApiRequestSerializer
           break;
         case 'search':
           result.search = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'orderReasonId':
+          result.orderReasonId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
         case 'bizUnitIds':
@@ -178,6 +194,10 @@ class _$SearchLocationsApiRequestSerializer
           result.longitude = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
           break;
+        case 'reportType':
+          result.reportType = serializers.deserialize(value,
+              specifiedType: const FullType(DocReportType)) as DocReportType;
+          break;
       }
     }
 
@@ -190,6 +210,8 @@ class _$SearchLocationsApiRequest extends SearchLocationsApiRequest {
   final String id;
   @override
   final String search;
+  @override
+  final String orderReasonId;
   @override
   final BuiltList<String> bizUnitIds;
   @override
@@ -210,6 +232,8 @@ class _$SearchLocationsApiRequest extends SearchLocationsApiRequest {
   final double latitude;
   @override
   final double longitude;
+  @override
+  final DocReportType reportType;
 
   factory _$SearchLocationsApiRequest(
           [void updates(SearchLocationsApiRequestBuilder b)]) =>
@@ -218,6 +242,7 @@ class _$SearchLocationsApiRequest extends SearchLocationsApiRequest {
   _$SearchLocationsApiRequest._(
       {this.id,
       this.search,
+      this.orderReasonId,
       this.bizUnitIds,
       this.orgUnitIds,
       this.locationTypes,
@@ -227,7 +252,8 @@ class _$SearchLocationsApiRequest extends SearchLocationsApiRequest {
       this.skipCache,
       this.purpose,
       this.latitude,
-      this.longitude})
+      this.longitude,
+      this.reportType})
       : super._();
 
   @override
@@ -245,6 +271,7 @@ class _$SearchLocationsApiRequest extends SearchLocationsApiRequest {
     return other is SearchLocationsApiRequest &&
         id == other.id &&
         search == other.search &&
+        orderReasonId == other.orderReasonId &&
         bizUnitIds == other.bizUnitIds &&
         orgUnitIds == other.orgUnitIds &&
         locationTypes == other.locationTypes &&
@@ -254,7 +281,8 @@ class _$SearchLocationsApiRequest extends SearchLocationsApiRequest {
         skipCache == other.skipCache &&
         purpose == other.purpose &&
         latitude == other.latitude &&
-        longitude == other.longitude;
+        longitude == other.longitude &&
+        reportType == other.reportType;
   }
 
   @override
@@ -269,18 +297,22 @@ class _$SearchLocationsApiRequest extends SearchLocationsApiRequest {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, id.hashCode),
-                                                search.hashCode),
-                                            bizUnitIds.hashCode),
-                                        orgUnitIds.hashCode),
-                                    locationTypes.hashCode),
-                                facilityTypes.hashCode),
-                            scopeToLocationVizibility.hashCode),
-                        locationIds.hashCode),
-                    skipCache.hashCode),
-                purpose.hashCode),
-            latitude.hashCode),
-        longitude.hashCode));
+                                            $jc(
+                                                $jc(
+                                                    $jc($jc(0, id.hashCode),
+                                                        search.hashCode),
+                                                    orderReasonId.hashCode),
+                                                bizUnitIds.hashCode),
+                                            orgUnitIds.hashCode),
+                                        locationTypes.hashCode),
+                                    facilityTypes.hashCode),
+                                scopeToLocationVizibility.hashCode),
+                            locationIds.hashCode),
+                        skipCache.hashCode),
+                    purpose.hashCode),
+                latitude.hashCode),
+            longitude.hashCode),
+        reportType.hashCode));
   }
 
   @override
@@ -288,6 +320,7 @@ class _$SearchLocationsApiRequest extends SearchLocationsApiRequest {
     return (newBuiltValueToStringHelper('SearchLocationsApiRequest')
           ..add('id', id)
           ..add('search', search)
+          ..add('orderReasonId', orderReasonId)
           ..add('bizUnitIds', bizUnitIds)
           ..add('orgUnitIds', orgUnitIds)
           ..add('locationTypes', locationTypes)
@@ -297,7 +330,8 @@ class _$SearchLocationsApiRequest extends SearchLocationsApiRequest {
           ..add('skipCache', skipCache)
           ..add('purpose', purpose)
           ..add('latitude', latitude)
-          ..add('longitude', longitude))
+          ..add('longitude', longitude)
+          ..add('reportType', reportType))
         .toString();
   }
 }
@@ -308,64 +342,101 @@ class SearchLocationsApiRequestBuilder
   _$SearchLocationsApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
+  String _orderReasonId;
+
+  String get orderReasonId => _$this._orderReasonId;
+
+  set orderReasonId(String orderReasonId) =>
+      _$this._orderReasonId = orderReasonId;
+
   ListBuilder<String> _bizUnitIds;
+
   ListBuilder<String> get bizUnitIds =>
       _$this._bizUnitIds ??= new ListBuilder<String>();
+
   set bizUnitIds(ListBuilder<String> bizUnitIds) =>
       _$this._bizUnitIds = bizUnitIds;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   ListBuilder<LocationType> _locationTypes;
+
   ListBuilder<LocationType> get locationTypes =>
       _$this._locationTypes ??= new ListBuilder<LocationType>();
+
   set locationTypes(ListBuilder<LocationType> locationTypes) =>
       _$this._locationTypes = locationTypes;
 
   ListBuilder<FacilityType> _facilityTypes;
+
   ListBuilder<FacilityType> get facilityTypes =>
       _$this._facilityTypes ??= new ListBuilder<FacilityType>();
+
   set facilityTypes(ListBuilder<FacilityType> facilityTypes) =>
       _$this._facilityTypes = facilityTypes;
 
   bool _scopeToLocationVizibility;
+
   bool get scopeToLocationVizibility => _$this._scopeToLocationVizibility;
+
   set scopeToLocationVizibility(bool scopeToLocationVizibility) =>
       _$this._scopeToLocationVizibility = scopeToLocationVizibility;
 
   ListBuilder<String> _locationIds;
+
   ListBuilder<String> get locationIds =>
       _$this._locationIds ??= new ListBuilder<String>();
+
   set locationIds(ListBuilder<String> locationIds) =>
       _$this._locationIds = locationIds;
 
   bool _skipCache;
+
   bool get skipCache => _$this._skipCache;
+
   set skipCache(bool skipCache) => _$this._skipCache = skipCache;
 
   SearchLocationsApiSearchLocationsPurpose _purpose;
+
   SearchLocationsApiSearchLocationsPurpose get purpose => _$this._purpose;
+
   set purpose(SearchLocationsApiSearchLocationsPurpose purpose) =>
       _$this._purpose = purpose;
 
   double _latitude;
+
   double get latitude => _$this._latitude;
+
   set latitude(double latitude) => _$this._latitude = latitude;
 
   double _longitude;
+
   double get longitude => _$this._longitude;
+
   set longitude(double longitude) => _$this._longitude = longitude;
+
+  DocReportType _reportType;
+
+  DocReportType get reportType => _$this._reportType;
+
+  set reportType(DocReportType reportType) => _$this._reportType = reportType;
 
   SearchLocationsApiRequestBuilder();
 
@@ -373,6 +444,7 @@ class SearchLocationsApiRequestBuilder
     if (_$v != null) {
       _id = _$v.id;
       _search = _$v.search;
+      _orderReasonId = _$v.orderReasonId;
       _bizUnitIds = _$v.bizUnitIds?.toBuilder();
       _orgUnitIds = _$v.orgUnitIds?.toBuilder();
       _locationTypes = _$v.locationTypes?.toBuilder();
@@ -383,6 +455,7 @@ class SearchLocationsApiRequestBuilder
       _purpose = _$v.purpose;
       _latitude = _$v.latitude;
       _longitude = _$v.longitude;
+      _reportType = _$v.reportType;
       _$v = null;
     }
     return this;
@@ -409,6 +482,7 @@ class SearchLocationsApiRequestBuilder
           new _$SearchLocationsApiRequest._(
               id: id,
               search: search,
+              orderReasonId: orderReasonId,
               bizUnitIds: _bizUnitIds?.build(),
               orgUnitIds: _orgUnitIds?.build(),
               locationTypes: _locationTypes?.build(),
@@ -418,7 +492,8 @@ class SearchLocationsApiRequestBuilder
               skipCache: skipCache,
               purpose: purpose,
               latitude: latitude,
-              longitude: longitude);
+              longitude: longitude,
+              reportType: reportType);
     } catch (_) {
       String _$failedField;
       try {
@@ -468,6 +543,7 @@ class _$SearchLocationsApiRequestActions
   final ActionDispatcher<SearchLocationsApiRequest> replace$;
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> search;
+  final FieldDispatcher<String> orderReasonId;
   final FieldDispatcher<BuiltList<String>> bizUnitIds;
   final FieldDispatcher<BuiltList<String>> orgUnitIds;
   final FieldDispatcher<BuiltList<LocationType>> locationTypes;
@@ -478,6 +554,7 @@ class _$SearchLocationsApiRequestActions
   final FieldDispatcher<SearchLocationsApiSearchLocationsPurpose> purpose;
   final FieldDispatcher<double> latitude;
   final FieldDispatcher<double> longitude;
+  final FieldDispatcher<DocReportType> reportType;
 
   _$SearchLocationsApiRequestActions._(this.options$)
       : replace$ = options$.action<SearchLocationsApiRequest>(
@@ -486,6 +563,11 @@ class _$SearchLocationsApiRequestActions
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
+        orderReasonId = options$.field<String>(
+            'orderReasonId',
+            (a) => a?.orderReasonId,
+            (s) => s?.orderReasonId,
+            (p, b) => p?.orderReasonId = b),
         bizUnitIds = options$.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
@@ -527,6 +609,11 @@ class _$SearchLocationsApiRequestActions
             (s) => s?.latitude, (p, b) => p?.latitude = b),
         longitude = options$.field<double>('longitude', (a) => a?.longitude,
             (s) => s?.longitude, (p, b) => p?.longitude = b),
+        reportType = options$.field<DocReportType>(
+            'reportType',
+            (a) => a?.reportType,
+            (s) => s?.reportType,
+            (p, b) => p?.reportType = b),
         super._();
 
   factory _$SearchLocationsApiRequestActions(
@@ -541,12 +628,14 @@ class _$SearchLocationsApiRequestActions
       SearchLocationsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
         this.replace$,
         this.id,
         this.search,
+        this.orderReasonId,
         this.bizUnitIds,
         this.orgUnitIds,
         this.locationTypes,
@@ -557,6 +646,7 @@ class _$SearchLocationsApiRequestActions
         this.purpose,
         this.latitude,
         this.longitude,
+        this.reportType,
       ]);
 
   @override
@@ -564,6 +654,7 @@ class _$SearchLocationsApiRequestActions
     super.reducer$(reducer);
     id.reducer$(reducer);
     search.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
     bizUnitIds.reducer$(reducer);
     orgUnitIds.reducer$(reducer);
     locationTypes.reducer$(reducer);
@@ -574,6 +665,7 @@ class _$SearchLocationsApiRequestActions
     purpose.reducer$(reducer);
     latitude.reducer$(reducer);
     longitude.reducer$(reducer);
+    reportType.reducer$(reducer);
   }
 
   @override

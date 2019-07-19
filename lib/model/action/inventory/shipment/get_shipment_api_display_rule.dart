@@ -46,6 +46,9 @@ abstract class GetShipmentApiDisplayRule
   @nullable
   bool get deliverAndConfirm;
 
+  @nullable
+  bool get sendToErp;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -93,6 +96,8 @@ abstract class GetShipmentApiDisplayRuleActions extends ModelActions<
   FieldDispatcher<bool> get autoComplete;
 
   FieldDispatcher<bool> get deliverAndConfirm;
+
+  FieldDispatcher<bool> get sendToErp;
 
   ////////////////////////////////
   /// Constructors

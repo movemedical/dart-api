@@ -21,11 +21,10 @@ class ListHcrOrgUnitOptionsApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListHcrOrgUnitOptionsApiOrderBy> get values =>
-      _$listHcrOrgUnitOptionsApiOrderByValues;
+  static BuiltSet<ListHcrOrgUnitOptionsApiOrderBy> get values => _$values;
 
   static ListHcrOrgUnitOptionsApiOrderBy valueOf(String name) =>
-      _$listHcrOrgUnitOptionsApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

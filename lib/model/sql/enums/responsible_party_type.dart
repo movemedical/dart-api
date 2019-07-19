@@ -25,11 +25,9 @@ class ResponsiblePartyType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ResponsiblePartyType> get values =>
-      _$responsiblePartyTypeValues;
+  static BuiltSet<ResponsiblePartyType> get values => _$values;
 
-  static ResponsiblePartyType valueOf(String name) =>
-      _$responsiblePartyTypeValueOf(name);
+  static ResponsiblePartyType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

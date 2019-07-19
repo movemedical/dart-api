@@ -10,7 +10,7 @@ const OuAccessType _$wireFULL = const OuAccessType._('FULL');
 const OuAccessType _$wireINVENTORY_ONLY =
     const OuAccessType._('INVENTORY_ONLY');
 
-OuAccessType _$ouAccessTypeValueOf(String name) {
+OuAccessType _$valueOf(String name) {
   switch (name) {
     case 'FULL':
       return _$wireFULL;
@@ -21,7 +21,7 @@ OuAccessType _$ouAccessTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<OuAccessType> _$ouAccessTypeValues =
+final BuiltSet<OuAccessType> _$values =
     new BuiltSet<OuAccessType>(const <OuAccessType>[
   _$wireFULL,
   _$wireINVENTORY_ONLY,

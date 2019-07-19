@@ -27,7 +27,7 @@ const ListCaseEventsApiOrderBy _$wireGENDER =
 const ListCaseEventsApiOrderBy _$wirePATIENT_DOB =
     const ListCaseEventsApiOrderBy._('PATIENT_DOB');
 
-ListCaseEventsApiOrderBy _$listCaseEventsApiOrderByValueOf(String name) {
+ListCaseEventsApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'CASE_NUMBER':
       return _$wireCASE_NUMBER;
@@ -54,7 +54,7 @@ ListCaseEventsApiOrderBy _$listCaseEventsApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListCaseEventsApiOrderBy> _$listCaseEventsApiOrderByValues =
+final BuiltSet<ListCaseEventsApiOrderBy> _$values =
     new BuiltSet<ListCaseEventsApiOrderBy>(const <ListCaseEventsApiOrderBy>[
   _$wireCASE_NUMBER,
   _$wireSTATUS,

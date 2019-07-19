@@ -98,7 +98,9 @@ class CreateTeamApiResponseBuilder
   _$CreateTeamApiResponse _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   CreateTeamApiResponseBuilder();
@@ -171,6 +173,7 @@ class _$CreateTeamApiResponseActions extends CreateTeamApiResponseActions {
   CreateTeamApiResponseBuilder newBuilder$() => CreateTeamApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

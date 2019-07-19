@@ -59,6 +59,7 @@ class _$AddParticipantsApi extends AddParticipantsApi {
           ApiCommand<AddParticipantsApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

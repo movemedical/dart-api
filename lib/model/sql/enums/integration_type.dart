@@ -24,9 +24,9 @@ class IntegrationType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<IntegrationType> get values => _$integrationTypeValues;
+  static BuiltSet<IntegrationType> get values => _$values;
 
-  static IntegrationType valueOf(String name) => _$integrationTypeValueOf(name);
+  static IntegrationType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

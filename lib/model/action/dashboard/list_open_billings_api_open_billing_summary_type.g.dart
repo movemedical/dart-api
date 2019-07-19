@@ -13,8 +13,7 @@ const ListOpenBillingsApiOpenBillingSummaryType _$wireUNBILLED =
 const ListOpenBillingsApiOpenBillingSummaryType _$wireUNRECONCILED_USAGE =
     const ListOpenBillingsApiOpenBillingSummaryType._('UNRECONCILED_USAGE');
 
-ListOpenBillingsApiOpenBillingSummaryType
-    _$listOpenBillingsApiOpenBillingSummaryTypeValueOf(String name) {
+ListOpenBillingsApiOpenBillingSummaryType _$valueOf(String name) {
   switch (name) {
     case 'PENDING_PO':
       return _$wirePENDING_PO;
@@ -27,8 +26,7 @@ ListOpenBillingsApiOpenBillingSummaryType
   }
 }
 
-final BuiltSet<ListOpenBillingsApiOpenBillingSummaryType>
-    _$listOpenBillingsApiOpenBillingSummaryTypeValues =
+final BuiltSet<ListOpenBillingsApiOpenBillingSummaryType> _$values =
     new BuiltSet<ListOpenBillingsApiOpenBillingSummaryType>(const <
         ListOpenBillingsApiOpenBillingSummaryType>[
   _$wirePENDING_PO,

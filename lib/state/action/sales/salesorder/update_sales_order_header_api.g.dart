@@ -69,6 +69,7 @@ class _$UpdateSalesOrderHeaderApi extends UpdateSalesOrderHeaderApi {
           ApiResult<UpdateSalesOrderHeaderApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

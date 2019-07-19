@@ -98,7 +98,9 @@ class UnlockUserApiRequestBuilder
   _$UnlockUserApiRequest _$v;
 
   String _linkedId;
+
   String get linkedId => _$this._linkedId;
+
   set linkedId(String linkedId) => _$this._linkedId = linkedId;
 
   UnlockUserApiRequestBuilder();
@@ -171,6 +173,7 @@ class _$UnlockUserApiRequestActions extends UnlockUserApiRequestActions {
   UnlockUserApiRequestBuilder newBuilder$() => UnlockUserApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

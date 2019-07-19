@@ -122,6 +122,18 @@ class _$GetShipmentApiShipmentSerializer
         ..add(serializers.serialize(object.deliverWindowEnd,
             specifiedType: const FullType(DateTime)));
     }
+    if (object.salesLead != null) {
+      result
+        ..add('salesLead')
+        ..add(serializers.serialize(object.salesLead,
+            specifiedType: const FullType(UserLite)));
+    }
+    if (object.opsLead != null) {
+      result
+        ..add('opsLead')
+        ..add(serializers.serialize(object.opsLead,
+            specifiedType: const FullType(UserLite)));
+    }
 
     return result;
   }
@@ -210,6 +222,14 @@ class _$GetShipmentApiShipmentSerializer
           result.deliverWindowEnd = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
+        case 'salesLead':
+          result.salesLead.replace(serializers.deserialize(value,
+              specifiedType: const FullType(UserLite)) as UserLite);
+          break;
+        case 'opsLead':
+          result.opsLead.replace(serializers.deserialize(value,
+              specifiedType: const FullType(UserLite)) as UserLite);
+          break;
       }
     }
 
@@ -250,6 +270,10 @@ class _$GetShipmentApiShipment extends GetShipmentApiShipment {
   final BuiltList<GetShipmentApiValidationMsg> validationMessages;
   @override
   final DateTime deliverWindowEnd;
+  @override
+  final UserLite salesLead;
+  @override
+  final UserLite opsLead;
 
   factory _$GetShipmentApiShipment(
           [void updates(GetShipmentApiShipmentBuilder b)]) =>
@@ -271,7 +295,9 @@ class _$GetShipmentApiShipment extends GetShipmentApiShipment {
       this.erpReference,
       this.erpStatus,
       this.validationMessages,
-      this.deliverWindowEnd})
+      this.deliverWindowEnd,
+      this.salesLead,
+      this.opsLead})
       : super._();
 
   @override
@@ -302,7 +328,9 @@ class _$GetShipmentApiShipment extends GetShipmentApiShipment {
         erpReference == other.erpReference &&
         erpStatus == other.erpStatus &&
         validationMessages == other.validationMessages &&
-        deliverWindowEnd == other.deliverWindowEnd;
+        deliverWindowEnd == other.deliverWindowEnd &&
+        salesLead == other.salesLead &&
+        opsLead == other.opsLead;
   }
 
   @override
@@ -322,23 +350,32 @@ class _$GetShipmentApiShipment extends GetShipmentApiShipment {
                                                     $jc(
                                                         $jc(
                                                             $jc(
-                                                                $jc(0,
-                                                                    id.hashCode),
-                                                                number.hashCode),
-                                                            status.hashCode),
-                                                        order.hashCode),
-                                                    transferType.hashCode),
-                                                loan.hashCode),
-                                            caseEvents.hashCode),
-                                        fromLocation.hashCode),
-                                    toLocation.hashCode),
-                                deliverTo.hashCode),
-                            deliverToOverride.hashCode),
-                        shippingService.hashCode),
-                    erpReference.hashCode),
-                erpStatus.hashCode),
-            validationMessages.hashCode),
-        deliverWindowEnd.hashCode));
+                                                                $jc(
+                                                                    $jc(
+                                                                        $jc(
+                                                                            0,
+                                                                            id
+                                                                                .hashCode),
+                                                                        number
+                                                                            .hashCode),
+                                                                    status
+                                                                        .hashCode),
+                                                                order.hashCode),
+                                                            transferType
+                                                                .hashCode),
+                                                        loan.hashCode),
+                                                    caseEvents.hashCode),
+                                                fromLocation.hashCode),
+                                            toLocation.hashCode),
+                                        deliverTo.hashCode),
+                                    deliverToOverride.hashCode),
+                                shippingService.hashCode),
+                            erpReference.hashCode),
+                        erpStatus.hashCode),
+                    validationMessages.hashCode),
+                deliverWindowEnd.hashCode),
+            salesLead.hashCode),
+        opsLead.hashCode));
   }
 
   @override
@@ -359,7 +396,9 @@ class _$GetShipmentApiShipment extends GetShipmentApiShipment {
           ..add('erpReference', erpReference)
           ..add('erpStatus', erpStatus)
           ..add('validationMessages', validationMessages)
-          ..add('deliverWindowEnd', deliverWindowEnd))
+          ..add('deliverWindowEnd', deliverWindowEnd)
+          ..add('salesLead', salesLead)
+          ..add('opsLead', opsLead))
         .toString();
   }
 }
@@ -369,87 +408,131 @@ class GetShipmentApiShipmentBuilder
   _$GetShipmentApiShipment _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _number;
+
   int get number => _$this._number;
+
   set number(int number) => _$this._number = number;
 
   ShipmentStatus _status;
+
   ShipmentStatus get status => _$this._status;
+
   set status(ShipmentStatus status) => _$this._status = status;
 
   OrderHeaderLiteBuilder _order;
+
   OrderHeaderLiteBuilder get order =>
       _$this._order ??= new OrderHeaderLiteBuilder();
+
   set order(OrderHeaderLiteBuilder order) => _$this._order = order;
 
   TransferTypeLiteBuilder _transferType;
+
   TransferTypeLiteBuilder get transferType =>
       _$this._transferType ??= new TransferTypeLiteBuilder();
+
   set transferType(TransferTypeLiteBuilder transferType) =>
       _$this._transferType = transferType;
 
   LoanLiteBuilder _loan;
+
   LoanLiteBuilder get loan => _$this._loan ??= new LoanLiteBuilder();
+
   set loan(LoanLiteBuilder loan) => _$this._loan = loan;
 
   ListBuilder<CaseEventLite> _caseEvents;
+
   ListBuilder<CaseEventLite> get caseEvents =>
       _$this._caseEvents ??= new ListBuilder<CaseEventLite>();
+
   set caseEvents(ListBuilder<CaseEventLite> caseEvents) =>
       _$this._caseEvents = caseEvents;
 
   LocationBuilder _fromLocation;
+
   LocationBuilder get fromLocation =>
       _$this._fromLocation ??= new LocationBuilder();
+
   set fromLocation(LocationBuilder fromLocation) =>
       _$this._fromLocation = fromLocation;
 
   LocationBuilder _toLocation;
+
   LocationBuilder get toLocation =>
       _$this._toLocation ??= new LocationBuilder();
+
   set toLocation(LocationBuilder toLocation) => _$this._toLocation = toLocation;
 
   CustomerAddressBuilder _deliverTo;
+
   CustomerAddressBuilder get deliverTo =>
       _$this._deliverTo ??= new CustomerAddressBuilder();
+
   set deliverTo(CustomerAddressBuilder deliverTo) =>
       _$this._deliverTo = deliverTo;
 
   AddressBuilder _deliverToOverride;
+
   AddressBuilder get deliverToOverride =>
       _$this._deliverToOverride ??= new AddressBuilder();
+
   set deliverToOverride(AddressBuilder deliverToOverride) =>
       _$this._deliverToOverride = deliverToOverride;
 
   ShippingServiceBuilder _shippingService;
+
   ShippingServiceBuilder get shippingService =>
       _$this._shippingService ??= new ShippingServiceBuilder();
+
   set shippingService(ShippingServiceBuilder shippingService) =>
       _$this._shippingService = shippingService;
 
   String _erpReference;
+
   String get erpReference => _$this._erpReference;
+
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   ErpStatus _erpStatus;
+
   ErpStatus get erpStatus => _$this._erpStatus;
+
   set erpStatus(ErpStatus erpStatus) => _$this._erpStatus = erpStatus;
 
   ListBuilder<GetShipmentApiValidationMsg> _validationMessages;
+
   ListBuilder<GetShipmentApiValidationMsg> get validationMessages =>
       _$this._validationMessages ??=
           new ListBuilder<GetShipmentApiValidationMsg>();
+
   set validationMessages(
           ListBuilder<GetShipmentApiValidationMsg> validationMessages) =>
       _$this._validationMessages = validationMessages;
 
   DateTime _deliverWindowEnd;
+
   DateTime get deliverWindowEnd => _$this._deliverWindowEnd;
+
   set deliverWindowEnd(DateTime deliverWindowEnd) =>
       _$this._deliverWindowEnd = deliverWindowEnd;
+
+  UserLiteBuilder _salesLead;
+
+  UserLiteBuilder get salesLead => _$this._salesLead ??= new UserLiteBuilder();
+
+  set salesLead(UserLiteBuilder salesLead) => _$this._salesLead = salesLead;
+
+  UserLiteBuilder _opsLead;
+
+  UserLiteBuilder get opsLead => _$this._opsLead ??= new UserLiteBuilder();
+
+  set opsLead(UserLiteBuilder opsLead) => _$this._opsLead = opsLead;
 
   GetShipmentApiShipmentBuilder();
 
@@ -471,6 +554,8 @@ class GetShipmentApiShipmentBuilder
       _erpStatus = _$v.erpStatus;
       _validationMessages = _$v.validationMessages?.toBuilder();
       _deliverWindowEnd = _$v.deliverWindowEnd;
+      _salesLead = _$v.salesLead?.toBuilder();
+      _opsLead = _$v.opsLead?.toBuilder();
       _$v = null;
     }
     return this;
@@ -510,7 +595,9 @@ class GetShipmentApiShipmentBuilder
               erpReference: erpReference,
               erpStatus: erpStatus,
               validationMessages: _validationMessages?.build(),
-              deliverWindowEnd: deliverWindowEnd);
+              deliverWindowEnd: deliverWindowEnd,
+              salesLead: _salesLead?.build(),
+              opsLead: _opsLead?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -535,6 +622,11 @@ class GetShipmentApiShipmentBuilder
 
         _$failedField = 'validationMessages';
         _validationMessages?.build();
+
+        _$failedField = 'salesLead';
+        _salesLead?.build();
+        _$failedField = 'opsLead';
+        _opsLead?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetShipmentApiShipment', _$failedField, e.toString());
@@ -582,6 +674,8 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
   final FieldDispatcher<BuiltList<GetShipmentApiValidationMsg>>
       validationMessages;
   final FieldDispatcher<DateTime> deliverWindowEnd;
+  final UserLiteActions salesLead;
+  final UserLiteActions opsLead;
 
   _$GetShipmentApiShipmentActions._(this.options$)
       : replace$ = options$.action<GetShipmentApiShipment>(
@@ -677,6 +771,20 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
             (a) => a?.deliverWindowEnd,
             (s) => s?.deliverWindowEnd,
             (p, b) => p?.deliverWindowEnd = b),
+        salesLead = UserLiteActions(() =>
+            options$.stateful<UserLite, UserLiteBuilder, UserLiteActions>(
+                'salesLead',
+                (a) => a.salesLead,
+                (s) => s?.salesLead,
+                (b) => b?.salesLead,
+                (parent, builder) => parent?.salesLead = builder)),
+        opsLead = UserLiteActions(() =>
+            options$.stateful<UserLite, UserLiteBuilder, UserLiteActions>(
+                'opsLead',
+                (a) => a.opsLead,
+                (s) => s?.opsLead,
+                (b) => b?.opsLead,
+                (parent, builder) => parent?.opsLead = builder)),
         super._();
 
   factory _$GetShipmentApiShipmentActions(
@@ -691,6 +799,7 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
       GetShipmentApiShipmentBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.order,
@@ -701,9 +810,12 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
         this.deliverTo,
         this.deliverToOverride,
         this.shippingService,
+        this.salesLead,
+        this.opsLead,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -737,6 +849,8 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
     erpStatus.reducer$(reducer);
     validationMessages.reducer$(reducer);
     deliverWindowEnd.reducer$(reducer);
+    salesLead.reducer$(reducer);
+    opsLead.reducer$(reducer);
   }
 
   @override
@@ -750,5 +864,7 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
     deliverTo.middleware$(middleware);
     deliverToOverride.middleware$(middleware);
     shippingService.middleware$(middleware);
+    salesLead.middleware$(middleware);
+    opsLead.middleware$(middleware);
   }
 }

@@ -115,11 +115,15 @@ class GetAuditApiPieceDetailBuilder
   _$GetAuditApiPieceDetail _$v;
 
   int _pieceQty;
+
   int get pieceQty => _$this._pieceQty;
+
   set pieceQty(int pieceQty) => _$this._pieceQty = pieceQty;
 
   double _totalPrice;
+
   double get totalPrice => _$this._totalPrice;
+
   set totalPrice(double totalPrice) => _$this._totalPrice = totalPrice;
 
   GetAuditApiPieceDetailBuilder();
@@ -199,6 +203,7 @@ class _$GetAuditApiPieceDetailActions extends GetAuditApiPieceDetailActions {
       GetAuditApiPieceDetailBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

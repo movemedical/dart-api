@@ -28,10 +28,10 @@ class ShipmentFileUpdatePushMessageFileUpdateType extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ShipmentFileUpdatePushMessageFileUpdateType> get values =>
-      _$shipmentFileUpdatePushMessageFileUpdateTypeValues;
+      _$values;
 
   static ShipmentFileUpdatePushMessageFileUpdateType valueOf(String name) =>
-      _$shipmentFileUpdatePushMessageFileUpdateTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

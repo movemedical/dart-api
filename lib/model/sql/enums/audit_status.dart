@@ -27,9 +27,9 @@ class AuditStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<AuditStatus> get values => _$auditStatusValues;
+  static BuiltSet<AuditStatus> get values => _$values;
 
-  static AuditStatus valueOf(String name) => _$auditStatusValueOf(name);
+  static AuditStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

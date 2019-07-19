@@ -17,6 +17,8 @@ const WebReport _$wireUNRECONCILED_CASE_USAGE =
 const WebReport _$wireUNBILLED = const WebReport._('UNBILLED');
 const WebReport _$wireUSER_PERMISSIONS = const WebReport._('USER_PERMISSIONS');
 const WebReport _$wireDUE_BACK = const WebReport._('DUE_BACK');
+const WebReport _$wireCASE_LOAN_DUE_BACK =
+    const WebReport._('CASE_LOAN_DUE_BACK');
 const WebReport _$wireBACK_ORDER = const WebReport._('BACK_ORDER');
 const WebReport _$wireCREDIT_HOLD = const WebReport._('CREDIT_HOLD');
 const WebReport _$wireORDER_PRINTOUT = const WebReport._('ORDER_PRINTOUT');
@@ -24,8 +26,10 @@ const WebReport _$wirePROOF_OF_DELIVERY =
     const WebReport._('PROOF_OF_DELIVERY');
 const WebReport _$wireCONSIGNMENT_LOAN_EXPORT =
     const WebReport._('CONSIGNMENT_LOAN_EXPORT');
+const WebReport _$wireREPLACEMENT = const WebReport._('REPLACEMENT');
+const WebReport _$wireLOST_FOUND = const WebReport._('LOST_FOUND');
 
-WebReport _$webReportValueOf(String name) {
+WebReport _$valueOf(String name) {
   switch (name) {
     case 'STOCK_HISTORY':
       return _$wireSTOCK_HISTORY;
@@ -47,6 +51,8 @@ WebReport _$webReportValueOf(String name) {
       return _$wireUSER_PERMISSIONS;
     case 'DUE_BACK':
       return _$wireDUE_BACK;
+    case 'CASE_LOAN_DUE_BACK':
+      return _$wireCASE_LOAN_DUE_BACK;
     case 'BACK_ORDER':
       return _$wireBACK_ORDER;
     case 'CREDIT_HOLD':
@@ -57,13 +63,16 @@ WebReport _$webReportValueOf(String name) {
       return _$wirePROOF_OF_DELIVERY;
     case 'CONSIGNMENT_LOAN_EXPORT':
       return _$wireCONSIGNMENT_LOAN_EXPORT;
+    case 'REPLACEMENT':
+      return _$wireREPLACEMENT;
+    case 'LOST_FOUND':
+      return _$wireLOST_FOUND;
     default:
       throw new ArgumentError(name);
   }
 }
 
-final BuiltSet<WebReport> _$webReportValues =
-    new BuiltSet<WebReport>(const <WebReport>[
+final BuiltSet<WebReport> _$values = new BuiltSet<WebReport>(const <WebReport>[
   _$wireSTOCK_HISTORY,
   _$wireOPEN_BILLING,
   _$wireROLL_FORWARD,
@@ -74,11 +83,14 @@ final BuiltSet<WebReport> _$webReportValues =
   _$wireUNBILLED,
   _$wireUSER_PERMISSIONS,
   _$wireDUE_BACK,
+  _$wireCASE_LOAN_DUE_BACK,
   _$wireBACK_ORDER,
   _$wireCREDIT_HOLD,
   _$wireORDER_PRINTOUT,
   _$wirePROOF_OF_DELIVERY,
   _$wireCONSIGNMENT_LOAN_EXPORT,
+  _$wireREPLACEMENT,
+  _$wireLOST_FOUND,
 ]);
 
 Serializer<WebReport> _$webReportSerializer = new _$WebReportSerializer();

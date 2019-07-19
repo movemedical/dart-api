@@ -18,8 +18,9 @@ const FacilityType _$wireSURGERY_CENTER =
 const FacilityType _$wireSCAN_CENTER = const FacilityType._('SCAN_CENTER');
 const FacilityType _$wireSTERILIZATION_CENTER =
     const FacilityType._('STERILIZATION_CENTER');
+const FacilityType _$wireDISTRIBUTOR = const FacilityType._('DISTRIBUTOR');
 
-FacilityType _$facilityTypeValueOf(String name) {
+FacilityType _$valueOf(String name) {
   switch (name) {
     case 'MDC_FIELD_OFFICE':
       return _$wireMDC_FIELD_OFFICE;
@@ -37,12 +38,14 @@ FacilityType _$facilityTypeValueOf(String name) {
       return _$wireSCAN_CENTER;
     case 'STERILIZATION_CENTER':
       return _$wireSTERILIZATION_CENTER;
+    case 'DISTRIBUTOR':
+      return _$wireDISTRIBUTOR;
     default:
       throw new ArgumentError(name);
   }
 }
 
-final BuiltSet<FacilityType> _$facilityTypeValues =
+final BuiltSet<FacilityType> _$values =
     new BuiltSet<FacilityType>(const <FacilityType>[
   _$wireMDC_FIELD_OFFICE,
   _$wireDISTRIBUTION_CENTER,
@@ -52,6 +55,7 @@ final BuiltSet<FacilityType> _$facilityTypeValues =
   _$wireSURGERY_CENTER,
   _$wireSCAN_CENTER,
   _$wireSTERILIZATION_CENTER,
+  _$wireDISTRIBUTOR,
 ]);
 
 Serializer<FacilityType> _$facilityTypeSerializer =

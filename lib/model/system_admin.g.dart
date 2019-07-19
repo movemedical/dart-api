@@ -133,19 +133,27 @@ class SystemAdminBuilder implements Builder<SystemAdmin, SystemAdminBuilder> {
   _$SystemAdmin _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   PersonNameBuilder _name;
+
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
+
   set name(PersonNameBuilder name) => _$this._name = name;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   SystemAdminBuilder();
@@ -257,6 +265,7 @@ class _$SystemAdminActions extends SystemAdminActions {
   SystemAdminBuilder newBuilder$() => SystemAdminBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
@@ -264,6 +273,7 @@ class _$SystemAdminActions extends SystemAdminActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

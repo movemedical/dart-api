@@ -68,6 +68,7 @@ class _$CreateShippingServiceApi extends CreateShippingServiceApi {
           ApiResult<CreateShippingServiceApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

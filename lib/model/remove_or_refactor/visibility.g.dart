@@ -10,7 +10,7 @@ const Visibility _$wireORG_UNIT = const Visibility._('ORG_UNIT');
 const Visibility _$wireORG = const Visibility._('ORG');
 const Visibility _$wireOPEN = const Visibility._('OPEN');
 
-Visibility _$visibilityValueOf(String name) {
+Visibility _$valueOf(String name) {
   switch (name) {
     case 'ORG_UNIT':
       return _$wireORG_UNIT;
@@ -23,7 +23,7 @@ Visibility _$visibilityValueOf(String name) {
   }
 }
 
-final BuiltSet<Visibility> _$visibilityValues =
+final BuiltSet<Visibility> _$values =
     new BuiltSet<Visibility>(const <Visibility>[
   _$wireORG_UNIT,
   _$wireORG,

@@ -68,6 +68,7 @@ class _$ListLinesForInvoiceApi extends ListLinesForInvoiceApi {
           ApiResult<ListLinesForInvoiceApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

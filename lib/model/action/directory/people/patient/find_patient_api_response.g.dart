@@ -102,8 +102,10 @@ class FindPatientApiResponseBuilder
   _$FindPatientApiResponse _$v;
 
   ListBuilder<Patient> _patients;
+
   ListBuilder<Patient> get patients =>
       _$this._patients ??= new ListBuilder<Patient>();
+
   set patients(ListBuilder<Patient> patients) => _$this._patients = patients;
 
   FindPatientApiResponseBuilder();
@@ -191,6 +193,7 @@ class _$FindPatientApiResponseActions extends FindPatientApiResponseActions {
       FindPatientApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

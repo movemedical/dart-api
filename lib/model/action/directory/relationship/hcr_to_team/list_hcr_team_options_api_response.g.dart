@@ -121,12 +121,16 @@ class ListHcrTeamOptionsApiResponseBuilder
   _$ListHcrTeamOptionsApiResponse _$v;
 
   ListBuilder<TeamOption> _data;
+
   ListBuilder<TeamOption> get data =>
       _$this._data ??= new ListBuilder<TeamOption>();
+
   set data(ListBuilder<TeamOption> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListHcrTeamOptionsApiResponseBuilder();
@@ -223,6 +227,7 @@ class _$ListHcrTeamOptionsApiResponseActions
       ListHcrTeamOptionsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

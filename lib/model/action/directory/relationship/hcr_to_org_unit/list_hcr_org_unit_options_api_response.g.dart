@@ -123,12 +123,16 @@ class ListHcrOrgUnitOptionsApiResponseBuilder
   _$ListHcrOrgUnitOptionsApiResponse _$v;
 
   ListBuilder<OrgUnitOption> _data;
+
   ListBuilder<OrgUnitOption> get data =>
       _$this._data ??= new ListBuilder<OrgUnitOption>();
+
   set data(ListBuilder<OrgUnitOption> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListHcrOrgUnitOptionsApiResponseBuilder();
@@ -225,6 +229,7 @@ class _$ListHcrOrgUnitOptionsApiResponseActions
       ListHcrOrgUnitOptionsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

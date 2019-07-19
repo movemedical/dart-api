@@ -17,6 +17,7 @@ class FacilityType extends EnumClass {
   static const FacilityType SURGERY_CENTER = _$wireSURGERY_CENTER;
   static const FacilityType SCAN_CENTER = _$wireSCAN_CENTER;
   static const FacilityType STERILIZATION_CENTER = _$wireSTERILIZATION_CENTER;
+  static const FacilityType DISTRIBUTOR = _$wireDISTRIBUTOR;
 
   ////////////////////////////////
   /// Constructor
@@ -28,9 +29,9 @@ class FacilityType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<FacilityType> get values => _$facilityTypeValues;
+  static BuiltSet<FacilityType> get values => _$values;
 
-  static FacilityType valueOf(String name) => _$facilityTypeValueOf(name);
+  static FacilityType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

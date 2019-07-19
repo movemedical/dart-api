@@ -18,7 +18,7 @@ const ListLoansApiOrderBy _$wireSERVICE_START =
 const ListLoansApiOrderBy _$wireSERVICE_END =
     const ListLoansApiOrderBy._('SERVICE_END');
 
-ListLoansApiOrderBy _$listLoansApiOrderByValueOf(String name) {
+ListLoansApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NUMBER':
       return _$wireNUMBER;
@@ -39,7 +39,7 @@ ListLoansApiOrderBy _$listLoansApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListLoansApiOrderBy> _$listLoansApiOrderByValues =
+final BuiltSet<ListLoansApiOrderBy> _$values =
     new BuiltSet<ListLoansApiOrderBy>(const <ListLoansApiOrderBy>[
   _$wireNUMBER,
   _$wireSTATUS,

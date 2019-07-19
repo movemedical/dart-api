@@ -69,6 +69,7 @@ class _$ListContainersToBeCountedApi extends ListContainersToBeCountedApi {
           ApiResult<ListContainersToBeCountedApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

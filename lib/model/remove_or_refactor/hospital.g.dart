@@ -157,23 +157,33 @@ class HospitalBuilder implements Builder<Hospital, HospitalBuilder> {
   _$Hospital _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _displayName;
+
   String get displayName => _$this._displayName;
+
   set displayName(String displayName) => _$this._displayName = displayName;
 
   bool _creditHold;
+
   bool get creditHold => _$this._creditHold;
+
   set creditHold(bool creditHold) => _$this._creditHold = creditHold;
 
   String _customerId;
+
   String get customerId => _$this._customerId;
+
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _timezone;
+
   String get timezone => _$this._timezone;
+
   set timezone(String timezone) => _$this._timezone = timezone;
 
   HospitalBuilder();
@@ -267,6 +277,7 @@ class _$HospitalActions extends HospitalActions {
   HospitalBuilder newBuilder$() => HospitalBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

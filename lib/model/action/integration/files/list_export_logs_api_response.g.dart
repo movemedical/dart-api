@@ -119,12 +119,16 @@ class ListExportLogsApiResponseBuilder
   _$ListExportLogsApiResponse _$v;
 
   ListBuilder<ListExportLogsApiExportLog> _data;
+
   ListBuilder<ListExportLogsApiExportLog> get data =>
       _$this._data ??= new ListBuilder<ListExportLogsApiExportLog>();
+
   set data(ListBuilder<ListExportLogsApiExportLog> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListExportLogsApiResponseBuilder();
@@ -220,6 +224,7 @@ class _$ListExportLogsApiResponseActions
       ListExportLogsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

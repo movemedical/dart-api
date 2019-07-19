@@ -10,7 +10,7 @@ const MoveItemClass _$wireIMPLANT = const MoveItemClass._('IMPLANT');
 const MoveItemClass _$wireINSTRUMENT = const MoveItemClass._('INSTRUMENT');
 const MoveItemClass _$wireMIXED = const MoveItemClass._('MIXED');
 
-MoveItemClass _$moveItemClassValueOf(String name) {
+MoveItemClass _$valueOf(String name) {
   switch (name) {
     case 'IMPLANT':
       return _$wireIMPLANT;
@@ -23,7 +23,7 @@ MoveItemClass _$moveItemClassValueOf(String name) {
   }
 }
 
-final BuiltSet<MoveItemClass> _$moveItemClassValues =
+final BuiltSet<MoveItemClass> _$values =
     new BuiltSet<MoveItemClass>(const <MoveItemClass>[
   _$wireIMPLANT,
   _$wireINSTRUMENT,

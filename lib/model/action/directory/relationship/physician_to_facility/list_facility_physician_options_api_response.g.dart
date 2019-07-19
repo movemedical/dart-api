@@ -127,14 +127,18 @@ class ListFacilityPhysicianOptionsApiResponseBuilder
   _$ListFacilityPhysicianOptionsApiResponse _$v;
 
   ListBuilder<ListFacilityPhysicianOptionsApiPhysicianOption> _data;
+
   ListBuilder<ListFacilityPhysicianOptionsApiPhysicianOption> get data =>
       _$this._data ??=
           new ListBuilder<ListFacilityPhysicianOptionsApiPhysicianOption>();
+
   set data(ListBuilder<ListFacilityPhysicianOptionsApiPhysicianOption> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListFacilityPhysicianOptionsApiResponseBuilder();
@@ -235,6 +239,7 @@ class _$ListFacilityPhysicianOptionsApiResponseActions
       ListFacilityPhysicianOptionsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

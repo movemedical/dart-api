@@ -33,7 +33,7 @@ const MobileNavigationElement _$wireREPORTS =
 const MobileNavigationElement _$wirePRICE_LOOKUP =
     const MobileNavigationElement._('PRICE_LOOKUP');
 
-MobileNavigationElement _$mobileNavigationElementValueOf(String name) {
+MobileNavigationElement _$valueOf(String name) {
   switch (name) {
     case 'DASHBOARD':
       return _$wireDASHBOARD;
@@ -66,7 +66,7 @@ MobileNavigationElement _$mobileNavigationElementValueOf(String name) {
   }
 }
 
-final BuiltSet<MobileNavigationElement> _$mobileNavigationElementValues =
+final BuiltSet<MobileNavigationElement> _$values =
     new BuiltSet<MobileNavigationElement>(const <MobileNavigationElement>[
   _$wireDASHBOARD,
   _$wireMESSAGES,

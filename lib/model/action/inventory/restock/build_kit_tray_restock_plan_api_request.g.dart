@@ -108,8 +108,10 @@ class BuildKitTrayRestockPlanApiRequestBuilder
   _$BuildKitTrayRestockPlanApiRequest _$v;
 
   String _kitTrayStockIdOrStockSummaryId;
+
   String get kitTrayStockIdOrStockSummaryId =>
       _$this._kitTrayStockIdOrStockSummaryId;
+
   set kitTrayStockIdOrStockSummaryId(String kitTrayStockIdOrStockSummaryId) =>
       _$this._kitTrayStockIdOrStockSummaryId = kitTrayStockIdOrStockSummaryId;
 
@@ -193,6 +195,7 @@ class _$BuildKitTrayRestockPlanApiRequestActions
       BuildKitTrayRestockPlanApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

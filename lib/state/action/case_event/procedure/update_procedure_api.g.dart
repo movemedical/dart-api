@@ -59,6 +59,7 @@ class _$UpdateProcedureApi extends UpdateProcedureApi {
           ApiCommand<UpdateProcedureApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

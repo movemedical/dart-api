@@ -22,9 +22,9 @@ class HcrType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<HcrType> get values => _$hcrTypeValues;
+  static BuiltSet<HcrType> get values => _$values;
 
-  static HcrType valueOf(String name) => _$hcrTypeValueOf(name);
+  static HcrType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

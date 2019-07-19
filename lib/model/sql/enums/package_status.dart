@@ -28,9 +28,9 @@ class PackageStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<PackageStatus> get values => _$packageStatusValues;
+  static BuiltSet<PackageStatus> get values => _$values;
 
-  static PackageStatus valueOf(String name) => _$packageStatusValueOf(name);
+  static PackageStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

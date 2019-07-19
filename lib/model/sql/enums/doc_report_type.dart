@@ -17,6 +17,7 @@ class DocReportType extends EnumClass {
   static const DocReportType CASES_EXPORT = _$wireCASES_EXPORT;
   static const DocReportType BACK_ORDER = _$wireBACK_ORDER;
   static const DocReportType DUE_BACK = _$wireDUE_BACK;
+  static const DocReportType CASE_LOAN_DUE_BACK = _$wireCASE_LOAN_DUE_BACK;
   static const DocReportType STOCK_SUMMARY_EXPORT = _$wireSTOCK_SUMMARY_EXPORT;
   static const DocReportType ITEM_HISTORY = _$wireITEM_HISTORY;
   static const DocReportType LOAN_CONSIGNMENT_COMPARE =
@@ -31,6 +32,7 @@ class DocReportType extends EnumClass {
       _$wireCONSIGNMENT_REQUEST_REPORT;
   static const DocReportType EVENT_LOAN_EXPORT = _$wireEVENT_LOAN_EXPORT;
   static const DocReportType STOCK_BARCODE = _$wireSTOCK_BARCODE;
+  static const DocReportType LOST_FOUND = _$wireLOST_FOUND;
   static const DocReportType PROOF_OF_DELIVERY = _$wirePROOF_OF_DELIVERY;
   static const DocReportType SHIPMENT_PACKING_LIST =
       _$wireSHIPMENT_PACKING_LIST;
@@ -80,6 +82,7 @@ class DocReportType extends EnumClass {
       _$wireOUTSTANDING_BILLING_DETAIL_REPORT;
   static const DocReportType SALES_ORDER_EXPORT = _$wireSALES_ORDER_EXPORT;
   static const DocReportType ORDER_EXPORT = _$wireORDER_EXPORT;
+  static const DocReportType REPLACEMENT_REPORT = _$wireREPLACEMENT_REPORT;
   static const DocReportType ORDER_PRINTOUT = _$wireORDER_PRINTOUT;
   static const DocReportType ORDER_REQUESTS = _$wireORDER_REQUESTS;
   static const DocReportType SALES_ORDER_PO_REQUEST =
@@ -104,9 +107,9 @@ class DocReportType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<DocReportType> get values => _$docReportTypeValues;
+  static BuiltSet<DocReportType> get values => _$values;
 
-  static DocReportType valueOf(String name) => _$docReportTypeValueOf(name);
+  static DocReportType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

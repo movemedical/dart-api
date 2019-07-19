@@ -15,7 +15,7 @@ const PreferenceCardType _$wireFACILITY_PHYSICIAN =
 const PreferenceCardType _$wirePHYSICIAN =
     const PreferenceCardType._('PHYSICIAN');
 
-PreferenceCardType _$preferenceCardTypeValueOf(String name) {
+PreferenceCardType _$valueOf(String name) {
   switch (name) {
     case 'MASTERLIST':
       return _$wireMASTERLIST;
@@ -30,7 +30,7 @@ PreferenceCardType _$preferenceCardTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<PreferenceCardType> _$preferenceCardTypeValues =
+final BuiltSet<PreferenceCardType> _$values =
     new BuiltSet<PreferenceCardType>(const <PreferenceCardType>[
   _$wireMASTERLIST,
   _$wireFACILITY,

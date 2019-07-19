@@ -118,11 +118,15 @@ class ListMessagesApiResponseBuilder
   _$ListMessagesApiResponse _$v;
 
   ListBuilder<Message> _data;
+
   ListBuilder<Message> get data => _$this._data ??= new ListBuilder<Message>();
+
   set data(ListBuilder<Message> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListMessagesApiResponseBuilder();
@@ -215,6 +219,7 @@ class _$ListMessagesApiResponseActions extends ListMessagesApiResponseActions {
       ListMessagesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

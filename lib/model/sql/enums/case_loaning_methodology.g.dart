@@ -11,7 +11,7 @@ const CaseLoaningMethodology _$wireLOAN_PER_CASE =
 const CaseLoaningMethodology _$wireLOAN_PER_DAY =
     const CaseLoaningMethodology._('LOAN_PER_DAY');
 
-CaseLoaningMethodology _$caseLoaningMethodologyValueOf(String name) {
+CaseLoaningMethodology _$valueOf(String name) {
   switch (name) {
     case 'LOAN_PER_CASE':
       return _$wireLOAN_PER_CASE;
@@ -22,7 +22,7 @@ CaseLoaningMethodology _$caseLoaningMethodologyValueOf(String name) {
   }
 }
 
-final BuiltSet<CaseLoaningMethodology> _$caseLoaningMethodologyValues =
+final BuiltSet<CaseLoaningMethodology> _$values =
     new BuiltSet<CaseLoaningMethodology>(const <CaseLoaningMethodology>[
   _$wireLOAN_PER_CASE,
   _$wireLOAN_PER_DAY,

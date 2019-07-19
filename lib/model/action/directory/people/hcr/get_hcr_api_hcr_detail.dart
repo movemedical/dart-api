@@ -4,7 +4,9 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 import 'package:movemedical_api/model/action/directory/org/customer/list_customers_api_customer_details.dart';
+import 'package:movemedical_api/model/biz_unit.dart';
 import 'package:movemedical_api/model/email.dart';
+import 'package:movemedical_api/model/org_unit.dart';
 import 'package:movemedical_api/model/person_name.dart';
 import 'package:movemedical_api/model/phone_number.dart';
 import 'package:movemedical_api/model/sql/enums/hcr_type.dart';
@@ -84,9 +86,6 @@ abstract class GetHcrApiHcrDetail
   bool get userLocked;
 
   @nullable
-  String get timeZone;
-
-  @nullable
   DateTime get startDate;
 
   @nullable
@@ -100,6 +99,18 @@ abstract class GetHcrApiHcrDetail
 
   @nullable
   DateTime get lastVisibilityUpdateDate;
+
+  @nullable
+  String get timeZone;
+
+  @nullable
+  String get erpUserId;
+
+  @nullable
+  BizUnit get defaultBizUnit;
+
+  @nullable
+  OrgUnit get defaultSalesOrgUnit;
 
   ////////////////////////////////
   /// Constructors
@@ -166,8 +177,6 @@ abstract class GetHcrApiHcrDetailActions extends ModelActions<
 
   FieldDispatcher<bool> get userLocked;
 
-  FieldDispatcher<String> get timeZone;
-
   FieldDispatcher<DateTime> get startDate;
 
   FieldDispatcher<DateTime> get endDate;
@@ -177,6 +186,14 @@ abstract class GetHcrApiHcrDetailActions extends ModelActions<
   FieldDispatcher<bool> get phiAllowed;
 
   FieldDispatcher<DateTime> get lastVisibilityUpdateDate;
+
+  FieldDispatcher<String> get timeZone;
+
+  FieldDispatcher<String> get erpUserId;
+
+  BizUnitActions get defaultBizUnit;
+
+  OrgUnitActions get defaultSalesOrgUnit;
 
   ////////////////////////////////
   /// Constructors

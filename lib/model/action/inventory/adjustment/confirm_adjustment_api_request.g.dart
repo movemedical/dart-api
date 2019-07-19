@@ -120,11 +120,15 @@ class ConfirmAdjustmentApiRequestBuilder
   _$ConfirmAdjustmentApiRequest _$v;
 
   String _adjustmentId;
+
   String get adjustmentId => _$this._adjustmentId;
+
   set adjustmentId(String adjustmentId) => _$this._adjustmentId = adjustmentId;
 
   String _erpReference;
+
   String get erpReference => _$this._erpReference;
+
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   ConfirmAdjustmentApiRequestBuilder();
@@ -214,6 +218,7 @@ class _$ConfirmAdjustmentApiRequestActions
       ConfirmAdjustmentApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

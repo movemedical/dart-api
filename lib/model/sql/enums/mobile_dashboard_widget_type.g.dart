@@ -37,7 +37,7 @@ const MobileDashboardWidgetType _$wireSTOCK_LEVELS =
 const MobileDashboardWidgetType _$wireDUE_BACK_COUNT =
     const MobileDashboardWidgetType._('DUE_BACK_COUNT');
 
-MobileDashboardWidgetType _$mobileDashboardWidgetTypeValueOf(String name) {
+MobileDashboardWidgetType _$valueOf(String name) {
   switch (name) {
     case 'SALES_ORDER_CREATE':
       return _$wireSALES_ORDER_CREATE;
@@ -74,7 +74,7 @@ MobileDashboardWidgetType _$mobileDashboardWidgetTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<MobileDashboardWidgetType> _$mobileDashboardWidgetTypeValues =
+final BuiltSet<MobileDashboardWidgetType> _$values =
     new BuiltSet<MobileDashboardWidgetType>(const <MobileDashboardWidgetType>[
   _$wireSALES_ORDER_CREATE,
   _$wireSTOCK_ORDER_CREATE,

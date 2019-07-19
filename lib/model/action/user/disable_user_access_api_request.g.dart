@@ -26,11 +26,19 @@ class _$DisableUserAccessApiRequestSerializer
       Serializers serializers, DisableUserAccessApiRequest object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.linkedId != null) {
+    if (object.linkedIds != null) {
       result
-        ..add('linkedId')
-        ..add(serializers.serialize(object.linkedId,
-            specifiedType: const FullType(String)));
+        ..add('linkedIds')
+        ..add(serializers.serialize(object.linkedIds,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
+    if (object.userIds != null) {
+      result
+        ..add('userIds')
+        ..add(serializers.serialize(object.userIds,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
     }
 
     return result;
@@ -48,9 +56,17 @@ class _$DisableUserAccessApiRequestSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'linkedId':
-          result.linkedId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
+        case 'linkedIds':
+          result.linkedIds.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList);
+          break;
+        case 'userIds':
+          result.userIds.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList);
           break;
       }
     }
@@ -61,13 +77,15 @@ class _$DisableUserAccessApiRequestSerializer
 
 class _$DisableUserAccessApiRequest extends DisableUserAccessApiRequest {
   @override
-  final String linkedId;
+  final BuiltList<String> linkedIds;
+  @override
+  final BuiltList<String> userIds;
 
   factory _$DisableUserAccessApiRequest(
           [void updates(DisableUserAccessApiRequestBuilder b)]) =>
       (new DisableUserAccessApiRequestBuilder()..update(updates)).build();
 
-  _$DisableUserAccessApiRequest._({this.linkedId}) : super._();
+  _$DisableUserAccessApiRequest._({this.linkedIds, this.userIds}) : super._();
 
   @override
   DisableUserAccessApiRequest rebuild(
@@ -81,18 +99,21 @@ class _$DisableUserAccessApiRequest extends DisableUserAccessApiRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is DisableUserAccessApiRequest && linkedId == other.linkedId;
+    return other is DisableUserAccessApiRequest &&
+        linkedIds == other.linkedIds &&
+        userIds == other.userIds;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, linkedId.hashCode));
+    return $jf($jc($jc(0, linkedIds.hashCode), userIds.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('DisableUserAccessApiRequest')
-          ..add('linkedId', linkedId))
+          ..add('linkedIds', linkedIds)
+          ..add('userIds', userIds))
         .toString();
   }
 }
@@ -103,15 +124,26 @@ class DisableUserAccessApiRequestBuilder
             DisableUserAccessApiRequestBuilder> {
   _$DisableUserAccessApiRequest _$v;
 
-  String _linkedId;
-  String get linkedId => _$this._linkedId;
-  set linkedId(String linkedId) => _$this._linkedId = linkedId;
+  ListBuilder<String> _linkedIds;
+
+  ListBuilder<String> get linkedIds =>
+      _$this._linkedIds ??= new ListBuilder<String>();
+
+  set linkedIds(ListBuilder<String> linkedIds) => _$this._linkedIds = linkedIds;
+
+  ListBuilder<String> _userIds;
+
+  ListBuilder<String> get userIds =>
+      _$this._userIds ??= new ListBuilder<String>();
+
+  set userIds(ListBuilder<String> userIds) => _$this._userIds = userIds;
 
   DisableUserAccessApiRequestBuilder();
 
   DisableUserAccessApiRequestBuilder get _$this {
     if (_$v != null) {
-      _linkedId = _$v.linkedId;
+      _linkedIds = _$v.linkedIds?.toBuilder();
+      _userIds = _$v.userIds?.toBuilder();
       _$v = null;
     }
     return this;
@@ -132,8 +164,24 @@ class DisableUserAccessApiRequestBuilder
 
   @override
   _$DisableUserAccessApiRequest build() {
-    final _$result =
-        _$v ?? new _$DisableUserAccessApiRequest._(linkedId: linkedId);
+    _$DisableUserAccessApiRequest _$result;
+    try {
+      _$result = _$v ??
+          new _$DisableUserAccessApiRequest._(
+              linkedIds: _linkedIds?.build(), userIds: _userIds?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'linkedIds';
+        _linkedIds?.build();
+        _$failedField = 'userIds';
+        _userIds?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'DisableUserAccessApiRequest', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }
@@ -161,13 +209,19 @@ class _$DisableUserAccessApiRequestActions
       DisableUserAccessApiRequestActions> options$;
 
   final ActionDispatcher<DisableUserAccessApiRequest> replace$;
-  final FieldDispatcher<String> linkedId;
+  final FieldDispatcher<BuiltList<String>> linkedIds;
+  final FieldDispatcher<BuiltList<String>> userIds;
 
   _$DisableUserAccessApiRequestActions._(this.options$)
       : replace$ = options$.action<DisableUserAccessApiRequest>(
             'replace\$', (a) => a?.replace$),
-        linkedId = options$.field<String>('linkedId', (a) => a?.linkedId,
-            (s) => s?.linkedId, (p, b) => p?.linkedId = b),
+        linkedIds = options$.field<BuiltList<String>>(
+            'linkedIds',
+            (a) => a?.linkedIds,
+            (s) => s?.linkedIds,
+            (p, b) => p?.linkedIds = b),
+        userIds = options$.field<BuiltList<String>>('userIds',
+            (a) => a?.userIds, (s) => s?.userIds, (p, b) => p?.userIds = b),
         super._();
 
   factory _$DisableUserAccessApiRequestActions(
@@ -183,17 +237,20 @@ class _$DisableUserAccessApiRequestActions
       DisableUserAccessApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
         this.replace$,
-        this.linkedId,
+        this.linkedIds,
+        this.userIds,
       ]);
 
   @override
   void reducer$(ReducerBuilder reducer) {
     super.reducer$(reducer);
-    linkedId.reducer$(reducer);
+    linkedIds.reducer$(reducer);
+    userIds.reducer$(reducer);
   }
 
   @override

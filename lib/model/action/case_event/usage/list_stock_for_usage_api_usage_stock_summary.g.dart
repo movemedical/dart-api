@@ -93,6 +93,36 @@ class _$ListStockForUsageApiUsageStockSummarySerializer
         ..add(serializers.serialize(object.responsibleParty,
             specifiedType: const FullType(ResponsibleParty)));
     }
+    if (object.kitContainer != null) {
+      result
+        ..add('kitContainer')
+        ..add(serializers.serialize(object.kitContainer,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.kitId != null) {
+      result
+        ..add('kitId')
+        ..add(serializers.serialize(object.kitId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.kitItemNumber != null) {
+      result
+        ..add('kitItemNumber')
+        ..add(serializers.serialize(object.kitItemNumber,
+            specifiedType: const FullType(String)));
+    }
+    if (object.kitSerialNumber != null) {
+      result
+        ..add('kitSerialNumber')
+        ..add(serializers.serialize(object.kitSerialNumber,
+            specifiedType: const FullType(int)));
+    }
+    if (object.kitSerialRef != null) {
+      result
+        ..add('kitSerialRef')
+        ..add(serializers.serialize(object.kitSerialRef,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -156,6 +186,26 @@ class _$ListStockForUsageApiUsageStockSummarySerializer
                   specifiedType: const FullType(ResponsibleParty))
               as ResponsibleParty);
           break;
+        case 'kitContainer':
+          result.kitContainer = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'kitId':
+          result.kitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'kitItemNumber':
+          result.kitItemNumber = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'kitSerialNumber':
+          result.kitSerialNumber = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'kitSerialRef':
+          result.kitSerialRef = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -187,6 +237,16 @@ class _$ListStockForUsageApiUsageStockSummary
   final String attributeValue;
   @override
   final ResponsibleParty responsibleParty;
+  @override
+  final bool kitContainer;
+  @override
+  final String kitId;
+  @override
+  final String kitItemNumber;
+  @override
+  final int kitSerialNumber;
+  @override
+  final String kitSerialRef;
 
   factory _$ListStockForUsageApiUsageStockSummary(
           [void updates(ListStockForUsageApiUsageStockSummaryBuilder b)]) =>
@@ -204,7 +264,12 @@ class _$ListStockForUsageApiUsageStockSummary
       this.consignmentLoan,
       this.attributeLabel,
       this.attributeValue,
-      this.responsibleParty})
+      this.responsibleParty,
+      this.kitContainer,
+      this.kitId,
+      this.kitItemNumber,
+      this.kitSerialNumber,
+      this.kitSerialRef})
       : super._();
 
   @override
@@ -230,7 +295,12 @@ class _$ListStockForUsageApiUsageStockSummary
         consignmentLoan == other.consignmentLoan &&
         attributeLabel == other.attributeLabel &&
         attributeValue == other.attributeValue &&
-        responsibleParty == other.responsibleParty;
+        responsibleParty == other.responsibleParty &&
+        kitContainer == other.kitContainer &&
+        kitId == other.kitId &&
+        kitItemNumber == other.kitItemNumber &&
+        kitSerialNumber == other.kitSerialNumber &&
+        kitSerialRef == other.kitSerialRef;
   }
 
   @override
@@ -244,17 +314,32 @@ class _$ListStockForUsageApiUsageStockSummary
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, key.hashCode),
-                                            stockIds.hashCode),
-                                        stockItem.hashCode),
-                                    place.hashCode),
-                                expirationInfo.hashCode),
-                            inventoryType.hashCode),
-                        demandLoan.hashCode),
-                    consignmentLoan.hashCode),
-                attributeLabel.hashCode),
-            attributeValue.hashCode),
-        responsibleParty.hashCode));
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                $jc(
+                                                                    0,
+                                                                    key
+                                                                        .hashCode),
+                                                                stockIds
+                                                                    .hashCode),
+                                                            stockItem.hashCode),
+                                                        place.hashCode),
+                                                    expirationInfo.hashCode),
+                                                inventoryType.hashCode),
+                                            demandLoan.hashCode),
+                                        consignmentLoan.hashCode),
+                                    attributeLabel.hashCode),
+                                attributeValue.hashCode),
+                            responsibleParty.hashCode),
+                        kitContainer.hashCode),
+                    kitId.hashCode),
+                kitItemNumber.hashCode),
+            kitSerialNumber.hashCode),
+        kitSerialRef.hashCode));
   }
 
   @override
@@ -270,7 +355,12 @@ class _$ListStockForUsageApiUsageStockSummary
           ..add('consignmentLoan', consignmentLoan)
           ..add('attributeLabel', attributeLabel)
           ..add('attributeValue', attributeValue)
-          ..add('responsibleParty', responsibleParty))
+          ..add('responsibleParty', responsibleParty)
+          ..add('kitContainer', kitContainer)
+          ..add('kitId', kitId)
+          ..add('kitItemNumber', kitItemNumber)
+          ..add('kitSerialNumber', kitSerialNumber)
+          ..add('kitSerialRef', kitSerialRef))
         .toString();
   }
 }
@@ -282,61 +372,115 @@ class ListStockForUsageApiUsageStockSummaryBuilder
   _$ListStockForUsageApiUsageStockSummary _$v;
 
   String _key;
+
   String get key => _$this._key;
+
   set key(String key) => _$this._key = key;
 
   ListBuilder<String> _stockIds;
+
   ListBuilder<String> get stockIds =>
       _$this._stockIds ??= new ListBuilder<String>();
+
   set stockIds(ListBuilder<String> stockIds) => _$this._stockIds = stockIds;
 
   StockItemBuilder _stockItem;
+
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
+
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   StockPlaceBuilder _place;
+
   StockPlaceBuilder get place => _$this._place ??= new StockPlaceBuilder();
+
   set place(StockPlaceBuilder place) => _$this._place = place;
 
   ExpirationInfoBuilder _expirationInfo;
+
   ExpirationInfoBuilder get expirationInfo =>
       _$this._expirationInfo ??= new ExpirationInfoBuilder();
+
   set expirationInfo(ExpirationInfoBuilder expirationInfo) =>
       _$this._expirationInfo = expirationInfo;
 
   InventoryTypeBuilder _inventoryType;
+
   InventoryTypeBuilder get inventoryType =>
       _$this._inventoryType ??= new InventoryTypeBuilder();
+
   set inventoryType(InventoryTypeBuilder inventoryType) =>
       _$this._inventoryType = inventoryType;
 
   LoanLiteBuilder _demandLoan;
+
   LoanLiteBuilder get demandLoan =>
       _$this._demandLoan ??= new LoanLiteBuilder();
+
   set demandLoan(LoanLiteBuilder demandLoan) => _$this._demandLoan = demandLoan;
 
   LoanLiteBuilder _consignmentLoan;
+
   LoanLiteBuilder get consignmentLoan =>
       _$this._consignmentLoan ??= new LoanLiteBuilder();
+
   set consignmentLoan(LoanLiteBuilder consignmentLoan) =>
       _$this._consignmentLoan = consignmentLoan;
 
   String _attributeLabel;
+
   String get attributeLabel => _$this._attributeLabel;
+
   set attributeLabel(String attributeLabel) =>
       _$this._attributeLabel = attributeLabel;
 
   String _attributeValue;
+
   String get attributeValue => _$this._attributeValue;
+
   set attributeValue(String attributeValue) =>
       _$this._attributeValue = attributeValue;
 
   ResponsiblePartyBuilder _responsibleParty;
+
   ResponsiblePartyBuilder get responsibleParty =>
       _$this._responsibleParty ??= new ResponsiblePartyBuilder();
+
   set responsibleParty(ResponsiblePartyBuilder responsibleParty) =>
       _$this._responsibleParty = responsibleParty;
+
+  bool _kitContainer;
+
+  bool get kitContainer => _$this._kitContainer;
+
+  set kitContainer(bool kitContainer) => _$this._kitContainer = kitContainer;
+
+  String _kitId;
+
+  String get kitId => _$this._kitId;
+
+  set kitId(String kitId) => _$this._kitId = kitId;
+
+  String _kitItemNumber;
+
+  String get kitItemNumber => _$this._kitItemNumber;
+
+  set kitItemNumber(String kitItemNumber) =>
+      _$this._kitItemNumber = kitItemNumber;
+
+  int _kitSerialNumber;
+
+  int get kitSerialNumber => _$this._kitSerialNumber;
+
+  set kitSerialNumber(int kitSerialNumber) =>
+      _$this._kitSerialNumber = kitSerialNumber;
+
+  String _kitSerialRef;
+
+  String get kitSerialRef => _$this._kitSerialRef;
+
+  set kitSerialRef(String kitSerialRef) => _$this._kitSerialRef = kitSerialRef;
 
   ListStockForUsageApiUsageStockSummaryBuilder();
 
@@ -353,6 +497,11 @@ class ListStockForUsageApiUsageStockSummaryBuilder
       _attributeLabel = _$v.attributeLabel;
       _attributeValue = _$v.attributeValue;
       _responsibleParty = _$v.responsibleParty?.toBuilder();
+      _kitContainer = _$v.kitContainer;
+      _kitId = _$v.kitId;
+      _kitItemNumber = _$v.kitItemNumber;
+      _kitSerialNumber = _$v.kitSerialNumber;
+      _kitSerialRef = _$v.kitSerialRef;
       _$v = null;
     }
     return this;
@@ -387,7 +536,12 @@ class ListStockForUsageApiUsageStockSummaryBuilder
               consignmentLoan: _consignmentLoan?.build(),
               attributeLabel: attributeLabel,
               attributeValue: attributeValue,
-              responsibleParty: _responsibleParty?.build());
+              responsibleParty: _responsibleParty?.build(),
+              kitContainer: kitContainer,
+              kitId: kitId,
+              kitItemNumber: kitItemNumber,
+              kitSerialNumber: kitSerialNumber,
+              kitSerialRef: kitSerialRef);
     } catch (_) {
       String _$failedField;
       try {
@@ -454,6 +608,11 @@ class _$ListStockForUsageApiUsageStockSummaryActions
   final FieldDispatcher<String> attributeLabel;
   final FieldDispatcher<String> attributeValue;
   final ResponsiblePartyActions responsibleParty;
+  final FieldDispatcher<bool> kitContainer;
+  final FieldDispatcher<String> kitId;
+  final FieldDispatcher<String> kitItemNumber;
+  final FieldDispatcher<int> kitSerialNumber;
+  final FieldDispatcher<String> kitSerialRef;
 
   _$ListStockForUsageApiUsageStockSummaryActions._(this.options$)
       : replace$ = options$.action<ListStockForUsageApiUsageStockSummary>(
@@ -523,6 +682,28 @@ class _$ListStockForUsageApiUsageStockSummaryActions
             (s) => s?.responsibleParty,
             (b) => b?.responsibleParty,
             (parent, builder) => parent?.responsibleParty = builder)),
+        kitContainer = options$.field<bool>(
+            'kitContainer',
+            (a) => a?.kitContainer,
+            (s) => s?.kitContainer,
+            (p, b) => p?.kitContainer = b),
+        kitId = options$.field<String>(
+            'kitId', (a) => a?.kitId, (s) => s?.kitId, (p, b) => p?.kitId = b),
+        kitItemNumber = options$.field<String>(
+            'kitItemNumber',
+            (a) => a?.kitItemNumber,
+            (s) => s?.kitItemNumber,
+            (p, b) => p?.kitItemNumber = b),
+        kitSerialNumber = options$.field<int>(
+            'kitSerialNumber',
+            (a) => a?.kitSerialNumber,
+            (s) => s?.kitSerialNumber,
+            (p, b) => p?.kitSerialNumber = b),
+        kitSerialRef = options$.field<String>(
+            'kitSerialRef',
+            (a) => a?.kitSerialRef,
+            (s) => s?.kitSerialRef,
+            (p, b) => p?.kitSerialRef = b),
         super._();
 
   factory _$ListStockForUsageApiUsageStockSummaryActions(
@@ -538,6 +719,7 @@ class _$ListStockForUsageApiUsageStockSummaryActions
       ListStockForUsageApiUsageStockSummaryBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
@@ -550,6 +732,7 @@ class _$ListStockForUsageApiUsageStockSummaryActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -558,6 +741,11 @@ class _$ListStockForUsageApiUsageStockSummaryActions
         this.stockIds,
         this.attributeLabel,
         this.attributeValue,
+        this.kitContainer,
+        this.kitId,
+        this.kitItemNumber,
+        this.kitSerialNumber,
+        this.kitSerialRef,
       ]);
 
   @override
@@ -574,6 +762,11 @@ class _$ListStockForUsageApiUsageStockSummaryActions
     attributeLabel.reducer$(reducer);
     attributeValue.reducer$(reducer);
     responsibleParty.reducer$(reducer);
+    kitContainer.reducer$(reducer);
+    kitId.reducer$(reducer);
+    kitItemNumber.reducer$(reducer);
+    kitSerialNumber.reducer$(reducer);
+    kitSerialRef.reducer$(reducer);
   }
 
   @override

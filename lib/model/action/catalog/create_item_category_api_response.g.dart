@@ -105,7 +105,9 @@ class CreateItemCategoryApiResponseBuilder
   _$CreateItemCategoryApiResponse _$v;
 
   String _itemCategoryId;
+
   String get itemCategoryId => _$this._itemCategoryId;
+
   set itemCategoryId(String itemCategoryId) =>
       _$this._itemCategoryId = itemCategoryId;
 
@@ -188,6 +190,7 @@ class _$CreateItemCategoryApiResponseActions
       CreateItemCategoryApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

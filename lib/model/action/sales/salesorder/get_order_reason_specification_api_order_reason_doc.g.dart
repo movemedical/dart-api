@@ -127,11 +127,15 @@ class GetOrderReasonSpecificationApiOrderReasonDocBuilder
   _$GetOrderReasonSpecificationApiOrderReasonDoc _$v;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _doc;
+
   String get doc => _$this._doc;
+
   set doc(String doc) => _$this._doc = doc;
 
   GetOrderReasonSpecificationApiOrderReasonDocBuilder();
@@ -217,6 +221,7 @@ class _$GetOrderReasonSpecificationApiOrderReasonDocActions
       GetOrderReasonSpecificationApiOrderReasonDocBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

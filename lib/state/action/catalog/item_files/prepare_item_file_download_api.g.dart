@@ -69,6 +69,7 @@ class _$PrepareItemFileDownloadApi extends PrepareItemFileDownloadApi {
           ApiResult<PrepareItemFileDownloadApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -23,11 +23,10 @@ class ListProceduresForSearchApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListProceduresForSearchApiOrderBy> get values =>
-      _$listProceduresForSearchApiOrderByValues;
+  static BuiltSet<ListProceduresForSearchApiOrderBy> get values => _$values;
 
   static ListProceduresForSearchApiOrderBy valueOf(String name) =>
-      _$listProceduresForSearchApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

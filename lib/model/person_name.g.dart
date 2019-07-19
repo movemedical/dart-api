@@ -208,35 +208,51 @@ class PersonNameBuilder implements Builder<PersonName, PersonNameBuilder> {
   _$PersonName _$v;
 
   String _title;
+
   String get title => _$this._title;
+
   set title(String title) => _$this._title = title;
 
   String _givenName;
+
   String get givenName => _$this._givenName;
+
   set givenName(String givenName) => _$this._givenName = givenName;
 
   String _middleName;
+
   String get middleName => _$this._middleName;
+
   set middleName(String middleName) => _$this._middleName = middleName;
 
   String _familyName;
+
   String get familyName => _$this._familyName;
+
   set familyName(String familyName) => _$this._familyName = familyName;
 
   String _suffix;
+
   String get suffix => _$this._suffix;
+
   set suffix(String suffix) => _$this._suffix = suffix;
 
   String _fullName;
+
   String get fullName => _$this._fullName;
+
   set fullName(String fullName) => _$this._fullName = fullName;
 
   String _displayName;
+
   String get displayName => _$this._displayName;
+
   set displayName(String displayName) => _$this._displayName = displayName;
 
   int _locale;
+
   int get locale => _$this._locale;
+
   set locale(int locale) => _$this._locale = locale;
 
   PersonNameBuilder();
@@ -345,6 +361,7 @@ class _$PersonNameActions extends PersonNameActions {
   PersonNameBuilder newBuilder$() => PersonNameBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

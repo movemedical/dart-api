@@ -29,11 +29,9 @@ class ListShipmentsApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListShipmentsApiOrderBy> get values =>
-      _$listShipmentsApiOrderByValues;
+  static BuiltSet<ListShipmentsApiOrderBy> get values => _$values;
 
-  static ListShipmentsApiOrderBy valueOf(String name) =>
-      _$listShipmentsApiOrderByValueOf(name);
+  static ListShipmentsApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

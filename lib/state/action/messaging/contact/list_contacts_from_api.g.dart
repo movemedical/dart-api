@@ -67,6 +67,7 @@ class _$ListContactsFromApi extends ListContactsFromApi {
           ApiResult<ListContactsFromApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

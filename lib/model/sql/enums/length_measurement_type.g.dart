@@ -9,7 +9,7 @@ part of 'length_measurement_type.dart';
 const LengthMeasurementType _$wireCM = const LengthMeasurementType._('CM');
 const LengthMeasurementType _$wireINCH = const LengthMeasurementType._('INCH');
 
-LengthMeasurementType _$lengthMeasurementTypeValueOf(String name) {
+LengthMeasurementType _$valueOf(String name) {
   switch (name) {
     case 'CM':
       return _$wireCM;
@@ -20,7 +20,7 @@ LengthMeasurementType _$lengthMeasurementTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<LengthMeasurementType> _$lengthMeasurementTypeValues =
+final BuiltSet<LengthMeasurementType> _$values =
     new BuiltSet<LengthMeasurementType>(const <LengthMeasurementType>[
   _$wireCM,
   _$wireINCH,

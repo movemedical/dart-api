@@ -106,8 +106,10 @@ class ListUpcomingCasesApiRequestBuilder
   _$ListUpcomingCasesApiRequest _$v;
 
   PaginationParamsBuilder _paginationParams;
+
   PaginationParamsBuilder get paginationParams =>
       _$this._paginationParams ??= new PaginationParamsBuilder();
+
   set paginationParams(PaginationParamsBuilder paginationParams) =>
       _$this._paginationParams = paginationParams;
 
@@ -208,12 +210,14 @@ class _$ListUpcomingCasesApiRequestActions
       ListUpcomingCasesApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paginationParams,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

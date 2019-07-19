@@ -19,7 +19,7 @@ const ReadBarcode2ApiReadType _$wireTAG =
 const ReadBarcode2ApiReadType _$wireNOT_FOUND =
     const ReadBarcode2ApiReadType._('NOT_FOUND');
 
-ReadBarcode2ApiReadType _$readBarcode2ApiReadTypeValueOf(String name) {
+ReadBarcode2ApiReadType _$valueOf(String name) {
   switch (name) {
     case 'ITEM':
       return _$wireITEM;
@@ -38,7 +38,7 @@ ReadBarcode2ApiReadType _$readBarcode2ApiReadTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<ReadBarcode2ApiReadType> _$readBarcode2ApiReadTypeValues =
+final BuiltSet<ReadBarcode2ApiReadType> _$values =
     new BuiltSet<ReadBarcode2ApiReadType>(const <ReadBarcode2ApiReadType>[
   _$wireITEM,
   _$wireSHIPMENT,

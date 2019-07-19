@@ -62,6 +62,7 @@ class _$GetAuditApi extends GetAuditApi {
           ApiResult<GetAuditApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -148,19 +148,27 @@ class BuildInspectionApiLotHoldBuilder
   _$BuildInspectionApiLotHold _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _holdReasonId;
+
   String get holdReasonId => _$this._holdReasonId;
+
   set holdReasonId(String holdReasonId) => _$this._holdReasonId = holdReasonId;
 
   String _holdReasonName;
+
   String get holdReasonName => _$this._holdReasonName;
+
   set holdReasonName(String holdReasonName) =>
       _$this._holdReasonName = holdReasonName;
 
@@ -261,6 +269,7 @@ class _$BuildInspectionApiLotHoldActions
       BuildInspectionApiLotHoldBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

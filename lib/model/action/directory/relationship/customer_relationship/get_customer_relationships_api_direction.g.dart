@@ -11,8 +11,7 @@ const GetCustomerRelationshipsApiDirection _$wireFROM =
 const GetCustomerRelationshipsApiDirection _$wireTO =
     const GetCustomerRelationshipsApiDirection._('TO');
 
-GetCustomerRelationshipsApiDirection
-    _$getCustomerRelationshipsApiDirectionValueOf(String name) {
+GetCustomerRelationshipsApiDirection _$valueOf(String name) {
   switch (name) {
     case 'FROM':
       return _$wireFROM;
@@ -23,8 +22,7 @@ GetCustomerRelationshipsApiDirection
   }
 }
 
-final BuiltSet<GetCustomerRelationshipsApiDirection>
-    _$getCustomerRelationshipsApiDirectionValues =
+final BuiltSet<GetCustomerRelationshipsApiDirection> _$values =
     new BuiltSet<GetCustomerRelationshipsApiDirection>(const <
         GetCustomerRelationshipsApiDirection>[
   _$wireFROM,

@@ -25,11 +25,9 @@ class MoveStock2ApiProcessingLevel extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<MoveStock2ApiProcessingLevel> get values =>
-      _$moveStock2ApiProcessingLevelValues;
+  static BuiltSet<MoveStock2ApiProcessingLevel> get values => _$values;
 
-  static MoveStock2ApiProcessingLevel valueOf(String name) =>
-      _$moveStock2ApiProcessingLevelValueOf(name);
+  static MoveStock2ApiProcessingLevel valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

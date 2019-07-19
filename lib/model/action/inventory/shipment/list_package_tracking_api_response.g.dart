@@ -107,8 +107,10 @@ class ListPackageTrackingApiResponseBuilder
   _$ListPackageTrackingApiResponse _$v;
 
   ListBuilder<ListPackageTrackingApiTrackingEvent> _events;
+
   ListBuilder<ListPackageTrackingApiTrackingEvent> get events =>
       _$this._events ??= new ListBuilder<ListPackageTrackingApiTrackingEvent>();
+
   set events(ListBuilder<ListPackageTrackingApiTrackingEvent> events) =>
       _$this._events = events;
 
@@ -204,6 +206,7 @@ class _$ListPackageTrackingApiResponseActions
       ListPackageTrackingApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

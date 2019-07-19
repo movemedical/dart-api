@@ -27,8 +27,7 @@ const ListIntegrationIssuesApiSortBy _$wireISSUE_GROUP =
 const ListIntegrationIssuesApiSortBy _$wireASSIGNED_USER =
     const ListIntegrationIssuesApiSortBy._('ASSIGNED_USER');
 
-ListIntegrationIssuesApiSortBy _$listIntegrationIssuesApiSortByValueOf(
-    String name) {
+ListIntegrationIssuesApiSortBy _$valueOf(String name) {
   switch (name) {
     case 'ISSUE_NUMBER':
       return _$wireISSUE_NUMBER;
@@ -55,9 +54,8 @@ ListIntegrationIssuesApiSortBy _$listIntegrationIssuesApiSortByValueOf(
   }
 }
 
-final BuiltSet<ListIntegrationIssuesApiSortBy>
-    _$listIntegrationIssuesApiSortByValues = new BuiltSet<
-        ListIntegrationIssuesApiSortBy>(const <ListIntegrationIssuesApiSortBy>[
+final BuiltSet<ListIntegrationIssuesApiSortBy> _$values = new BuiltSet<
+    ListIntegrationIssuesApiSortBy>(const <ListIntegrationIssuesApiSortBy>[
   _$wireISSUE_NUMBER,
   _$wireCREATED_DATE,
   _$wireRESOLVED_DATE,

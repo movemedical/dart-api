@@ -109,11 +109,15 @@ class GetLoanApiRequestBuilder
   _$GetLoanApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   bool _skipPresence;
+
   bool get skipPresence => _$this._skipPresence;
+
   set skipPresence(bool skipPresence) => _$this._skipPresence = skipPresence;
 
   GetLoanApiRequestBuilder();
@@ -191,6 +195,7 @@ class _$GetLoanApiRequestActions extends GetLoanApiRequestActions {
   GetLoanApiRequestBuilder newBuilder$() => GetLoanApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

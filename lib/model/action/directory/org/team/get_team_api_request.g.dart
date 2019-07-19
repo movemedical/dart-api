@@ -93,7 +93,9 @@ class GetTeamApiRequestBuilder
   _$GetTeamApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   GetTeamApiRequestBuilder();
@@ -163,6 +165,7 @@ class _$GetTeamApiRequestActions extends GetTeamApiRequestActions {
   GetTeamApiRequestBuilder newBuilder$() => GetTeamApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

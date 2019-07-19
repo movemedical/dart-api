@@ -100,7 +100,9 @@ class AuditUpdatedPushMessageBuilder
   _$AuditUpdatedPushMessage _$v;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   AuditUpdatedPushMessageBuilder();
@@ -174,6 +176,7 @@ class _$AuditUpdatedPushMessageActions extends AuditUpdatedPushMessageActions {
       AuditUpdatedPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

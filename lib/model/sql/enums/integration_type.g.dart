@@ -13,7 +13,7 @@ const IntegrationType _$wireSFTP_EXPORT =
 const IntegrationType _$wireWEBSERVICE = const IntegrationType._('WEBSERVICE');
 const IntegrationType _$wireMULTI_JOB = const IntegrationType._('MULTI_JOB');
 
-IntegrationType _$integrationTypeValueOf(String name) {
+IntegrationType _$valueOf(String name) {
   switch (name) {
     case 'SFTP_IMPORT':
       return _$wireSFTP_IMPORT;
@@ -28,7 +28,7 @@ IntegrationType _$integrationTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<IntegrationType> _$integrationTypeValues =
+final BuiltSet<IntegrationType> _$values =
     new BuiltSet<IntegrationType>(const <IntegrationType>[
   _$wireSFTP_IMPORT,
   _$wireSFTP_EXPORT,

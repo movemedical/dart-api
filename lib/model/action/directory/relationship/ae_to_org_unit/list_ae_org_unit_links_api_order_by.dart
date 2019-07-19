@@ -21,11 +21,9 @@ class ListAeOrgUnitLinksApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListAeOrgUnitLinksApiOrderBy> get values =>
-      _$listAeOrgUnitLinksApiOrderByValues;
+  static BuiltSet<ListAeOrgUnitLinksApiOrderBy> get values => _$values;
 
-  static ListAeOrgUnitLinksApiOrderBy valueOf(String name) =>
-      _$listAeOrgUnitLinksApiOrderByValueOf(name);
+  static ListAeOrgUnitLinksApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

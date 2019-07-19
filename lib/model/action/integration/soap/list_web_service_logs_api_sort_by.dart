@@ -26,11 +26,9 @@ class ListWebServiceLogsApiSortBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListWebServiceLogsApiSortBy> get values =>
-      _$listWebServiceLogsApiSortByValues;
+  static BuiltSet<ListWebServiceLogsApiSortBy> get values => _$values;
 
-  static ListWebServiceLogsApiSortBy valueOf(String name) =>
-      _$listWebServiceLogsApiSortByValueOf(name);
+  static ListWebServiceLogsApiSortBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

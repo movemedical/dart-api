@@ -138,15 +138,21 @@ class UpdateCaseFileUploadPercentApiRequestBuilder
   _$UpdateCaseFileUploadPercentApiRequest _$v;
 
   String _caseId;
+
   String get caseId => _$this._caseId;
+
   set caseId(String caseId) => _$this._caseId = caseId;
 
   String _fileId;
+
   String get fileId => _$this._fileId;
+
   set fileId(String fileId) => _$this._fileId = fileId;
 
   double _percentDecimalForm;
+
   double get percentDecimalForm => _$this._percentDecimalForm;
+
   set percentDecimalForm(double percentDecimalForm) =>
       _$this._percentDecimalForm = percentDecimalForm;
 
@@ -240,6 +246,7 @@ class _$UpdateCaseFileUploadPercentApiRequestActions
       UpdateCaseFileUploadPercentApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

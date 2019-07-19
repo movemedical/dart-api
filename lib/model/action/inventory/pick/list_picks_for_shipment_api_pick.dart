@@ -44,6 +44,9 @@ abstract class ListPicksForShipmentApiPick
   @nullable
   Serial get kitSerial;
 
+  @nullable
+  bool get swapped;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -87,6 +90,8 @@ abstract class ListPicksForShipmentApiPickActions extends ModelActions<
   ItemActions get kitItem;
 
   SerialActions get kitSerial;
+
+  FieldDispatcher<bool> get swapped;
 
   ////////////////////////////////
   /// Constructors

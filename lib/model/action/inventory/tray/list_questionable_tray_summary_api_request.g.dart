@@ -110,8 +110,10 @@ class ListQuestionableTraySummaryApiRequestBuilder
   _$ListQuestionableTraySummaryApiRequest _$v;
 
   ListBuilder<String> _trayIds;
+
   ListBuilder<String> get trayIds =>
       _$this._trayIds ??= new ListBuilder<String>();
+
   set trayIds(ListBuilder<String> trayIds) => _$this._trayIds = trayIds;
 
   ListQuestionableTraySummaryApiRequestBuilder();
@@ -206,6 +208,7 @@ class _$ListQuestionableTraySummaryApiRequestActions
       ListQuestionableTraySummaryApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

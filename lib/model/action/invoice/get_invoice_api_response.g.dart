@@ -117,14 +117,18 @@ class GetInvoiceApiResponseBuilder
   _$GetInvoiceApiResponse _$v;
 
   GetInvoiceApiInvoiceDetailBuilder _invoiceDetail;
+
   GetInvoiceApiInvoiceDetailBuilder get invoiceDetail =>
       _$this._invoiceDetail ??= new GetInvoiceApiInvoiceDetailBuilder();
+
   set invoiceDetail(GetInvoiceApiInvoiceDetailBuilder invoiceDetail) =>
       _$this._invoiceDetail = invoiceDetail;
 
   GetInvoiceApiDisplayRulesBuilder _displayRules;
+
   GetInvoiceApiDisplayRulesBuilder get displayRules =>
       _$this._displayRules ??= new GetInvoiceApiDisplayRulesBuilder();
+
   set displayRules(GetInvoiceApiDisplayRulesBuilder displayRules) =>
       _$this._displayRules = displayRules;
 
@@ -235,6 +239,7 @@ class _$GetInvoiceApiResponseActions extends GetInvoiceApiResponseActions {
   GetInvoiceApiResponseBuilder newBuilder$() => GetInvoiceApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.invoiceDetail,
@@ -242,6 +247,7 @@ class _$GetInvoiceApiResponseActions extends GetInvoiceApiResponseActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

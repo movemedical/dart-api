@@ -28,12 +28,11 @@ class CaseEventFileUpdatePushMessageCaseEventFileUpdateType extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<CaseEventFileUpdatePushMessageCaseEventFileUpdateType>
-      get values =>
-          _$caseEventFileUpdatePushMessageCaseEventFileUpdateTypeValues;
+      get values => _$values;
 
   static CaseEventFileUpdatePushMessageCaseEventFileUpdateType valueOf(
           String name) =>
-      _$caseEventFileUpdatePushMessageCaseEventFileUpdateTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

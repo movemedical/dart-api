@@ -21,9 +21,9 @@ class PhysicianType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<PhysicianType> get values => _$physicianTypeValues;
+  static BuiltSet<PhysicianType> get values => _$values;
 
-  static PhysicianType valueOf(String name) => _$physicianTypeValueOf(name);
+  static PhysicianType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

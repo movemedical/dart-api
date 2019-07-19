@@ -26,11 +26,9 @@ class IntegrationLogErrorStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<IntegrationLogErrorStatus> get values =>
-      _$integrationLogErrorStatusValues;
+  static BuiltSet<IntegrationLogErrorStatus> get values => _$values;
 
-  static IntegrationLogErrorStatus valueOf(String name) =>
-      _$integrationLogErrorStatusValueOf(name);
+  static IntegrationLogErrorStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -22,11 +22,9 @@ class ListOrgDelegatesApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListOrgDelegatesApiOrderBy> get values =>
-      _$listOrgDelegatesApiOrderByValues;
+  static BuiltSet<ListOrgDelegatesApiOrderBy> get values => _$values;
 
-  static ListOrgDelegatesApiOrderBy valueOf(String name) =>
-      _$listOrgDelegatesApiOrderByValueOf(name);
+  static ListOrgDelegatesApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

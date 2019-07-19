@@ -13,7 +13,7 @@ const DeviceType _$wireANDROID_PHONE = const DeviceType._('ANDROID_PHONE');
 const DeviceType _$wireANDROID_PAD = const DeviceType._('ANDROID_PAD');
 const DeviceType _$wireWEB_BROWSER = const DeviceType._('WEB_BROWSER');
 
-DeviceType _$deviceTypeValueOf(String name) {
+DeviceType _$valueOf(String name) {
   switch (name) {
     case 'IOS_PHONE':
       return _$wireIOS_PHONE;
@@ -32,7 +32,7 @@ DeviceType _$deviceTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<DeviceType> _$deviceTypeValues =
+final BuiltSet<DeviceType> _$values =
     new BuiltSet<DeviceType>(const <DeviceType>[
   _$wireIOS_PHONE,
   _$wireIOS_PAD,

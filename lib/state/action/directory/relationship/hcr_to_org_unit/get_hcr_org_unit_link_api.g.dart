@@ -67,6 +67,7 @@ class _$GetHcrOrgUnitLinkApi extends GetHcrOrgUnitLinkApi {
           ApiResult<GetHcrOrgUnitLinkApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

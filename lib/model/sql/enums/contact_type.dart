@@ -59,9 +59,9 @@ class ContactType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ContactType> get values => _$contactTypeValues;
+  static BuiltSet<ContactType> get values => _$values;
 
-  static ContactType valueOf(String name) => _$contactTypeValueOf(name);
+  static ContactType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

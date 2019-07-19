@@ -95,8 +95,10 @@ class GetAeApiResponseBuilder
   _$GetAeApiResponse _$v;
 
   GetAeApiAeDetailBuilder _detail;
+
   GetAeApiAeDetailBuilder get detail =>
       _$this._detail ??= new GetAeApiAeDetailBuilder();
+
   set detail(GetAeApiAeDetailBuilder detail) => _$this._detail = detail;
 
   GetAeApiResponseBuilder();
@@ -186,12 +188,14 @@ class _$GetAeApiResponseActions extends GetAeApiResponseActions {
   GetAeApiResponseBuilder newBuilder$() => GetAeApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.detail,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

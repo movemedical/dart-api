@@ -68,6 +68,7 @@ class _$ListHcrColleagueLinksApi extends ListHcrColleagueLinksApi {
           ApiResult<ListHcrColleagueLinksApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

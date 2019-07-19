@@ -127,13 +127,17 @@ class BuildInspectionApiLoanReceiptDataBuilder
   _$BuildInspectionApiLoanReceiptData _$v;
 
   ListBuilder<String> _entryIds;
+
   ListBuilder<String> get entryIds =>
       _$this._entryIds ??= new ListBuilder<String>();
+
   set entryIds(ListBuilder<String> entryIds) => _$this._entryIds = entryIds;
 
   ListBuilder<String> _expectedStockIds;
+
   ListBuilder<String> get expectedStockIds =>
       _$this._expectedStockIds ??= new ListBuilder<String>();
+
   set expectedStockIds(ListBuilder<String> expectedStockIds) =>
       _$this._expectedStockIds = expectedStockIds;
 
@@ -237,6 +241,7 @@ class _$BuildInspectionApiLoanReceiptDataActions
       BuildInspectionApiLoanReceiptDataBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

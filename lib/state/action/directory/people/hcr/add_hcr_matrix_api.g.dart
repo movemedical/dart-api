@@ -56,6 +56,7 @@ class _$AddHcrMatrixApi extends AddHcrMatrixApi {
           ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

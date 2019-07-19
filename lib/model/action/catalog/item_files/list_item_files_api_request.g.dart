@@ -136,17 +136,23 @@ class ListItemFilesApiRequestBuilder
   _$ListItemFilesApiRequest _$v;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListItemFilesApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListItemFilesApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListItemFilesApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListItemFilesApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -263,6 +269,7 @@ class _$ListItemFilesApiRequestActions extends ListItemFilesApiRequestActions {
       ListItemFilesApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
@@ -270,6 +277,7 @@ class _$ListItemFilesApiRequestActions extends ListItemFilesApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

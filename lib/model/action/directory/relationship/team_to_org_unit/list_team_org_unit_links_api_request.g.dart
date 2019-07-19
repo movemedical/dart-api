@@ -155,22 +155,30 @@ class ListTeamOrgUnitLinksApiRequestBuilder
   _$ListTeamOrgUnitLinksApiRequest _$v;
 
   String _teamId;
+
   String get teamId => _$this._teamId;
+
   set teamId(String teamId) => _$this._teamId = teamId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListTeamOrgUnitLinksApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListTeamOrgUnitLinksApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListTeamOrgUnitLinksApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListTeamOrgUnitLinksApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -296,6 +304,7 @@ class _$ListTeamOrgUnitLinksApiRequestActions
       ListTeamOrgUnitLinksApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
@@ -303,6 +312,7 @@ class _$ListTeamOrgUnitLinksApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

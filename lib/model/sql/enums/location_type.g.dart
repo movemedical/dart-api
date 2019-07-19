@@ -12,7 +12,7 @@ const LocationType _$wireTEAM = const LocationType._('TEAM');
 const LocationType _$wireIN_TRANSIT = const LocationType._('IN_TRANSIT');
 const LocationType _$wireMULTIPLE = const LocationType._('MULTIPLE');
 
-LocationType _$locationTypeValueOf(String name) {
+LocationType _$valueOf(String name) {
   switch (name) {
     case 'FACILITY':
       return _$wireFACILITY;
@@ -29,7 +29,7 @@ LocationType _$locationTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<LocationType> _$locationTypeValues =
+final BuiltSet<LocationType> _$values =
     new BuiltSet<LocationType>(const <LocationType>[
   _$wireFACILITY,
   _$wireHCR,

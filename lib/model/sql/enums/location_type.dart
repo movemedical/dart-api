@@ -25,9 +25,9 @@ class LocationType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<LocationType> get values => _$locationTypeValues;
+  static BuiltSet<LocationType> get values => _$values;
 
-  static LocationType valueOf(String name) => _$locationTypeValueOf(name);
+  static LocationType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

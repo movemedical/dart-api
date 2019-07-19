@@ -123,11 +123,15 @@ class ListAuditStockSnapshotApiAuditStockBuilder
   _$ListAuditStockSnapshotApiAuditStock _$v;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   AuditStockSnapshotAffect _affect;
+
   AuditStockSnapshotAffect get affect => _$this._affect;
+
   set affect(AuditStockSnapshotAffect affect) => _$this._affect = affect;
 
   ListAuditStockSnapshotApiAuditStockBuilder();
@@ -211,6 +215,7 @@ class _$ListAuditStockSnapshotApiAuditStockActions
       ListAuditStockSnapshotApiAuditStockBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

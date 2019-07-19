@@ -23,11 +23,10 @@ class ListContactsForSearchApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListContactsForSearchApiOrderBy> get values =>
-      _$listContactsForSearchApiOrderByValues;
+  static BuiltSet<ListContactsForSearchApiOrderBy> get values => _$values;
 
   static ListContactsForSearchApiOrderBy valueOf(String name) =>
-      _$listContactsForSearchApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

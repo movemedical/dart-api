@@ -101,7 +101,9 @@ class LoadTestActionApiResponseBuilder
   _$LoadTestActionApiResponse _$v;
 
   String _message;
+
   String get message => _$this._message;
+
   set message(String message) => _$this._message = message;
 
   LoadTestActionApiResponseBuilder();
@@ -178,6 +180,7 @@ class _$LoadTestActionApiResponseActions
       LoadTestActionApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

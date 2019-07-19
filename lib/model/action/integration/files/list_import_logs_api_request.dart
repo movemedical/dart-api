@@ -1,11 +1,11 @@
-import 'dart:core';
-
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
+
+import 'dart:core';
+import 'package:movemedical_api/model/sql/enums/import_status.dart';
 import 'package:movemedical_api/model/action/integration/files/list_import_logs_api_sort_by.dart';
 import 'package:movemedical_api/model/pagination_params.dart';
-import 'package:movemedical_api/model/sql/enums/import_status.dart';
 
 part 'list_import_logs_api_request.g.dart';
 

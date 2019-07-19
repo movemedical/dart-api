@@ -9,7 +9,7 @@ part of 'restock_type.dart';
 const RestockType _$wireON_USAGE = const RestockType._('ON_USAGE');
 const RestockType _$wirePAR = const RestockType._('PAR');
 
-RestockType _$restockTypeValueOf(String name) {
+RestockType _$valueOf(String name) {
   switch (name) {
     case 'ON_USAGE':
       return _$wireON_USAGE;
@@ -20,7 +20,7 @@ RestockType _$restockTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<RestockType> _$restockTypeValues =
+final BuiltSet<RestockType> _$values =
     new BuiltSet<RestockType>(const <RestockType>[
   _$wireON_USAGE,
   _$wirePAR,

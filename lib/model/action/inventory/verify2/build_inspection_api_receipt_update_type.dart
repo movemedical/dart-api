@@ -29,11 +29,10 @@ class BuildInspectionApiReceiptUpdateType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<BuildInspectionApiReceiptUpdateType> get values =>
-      _$buildInspectionApiReceiptUpdateTypeValues;
+  static BuiltSet<BuildInspectionApiReceiptUpdateType> get values => _$values;
 
   static BuildInspectionApiReceiptUpdateType valueOf(String name) =>
-      _$buildInspectionApiReceiptUpdateTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -40,7 +40,13 @@ abstract class ListStockForUsageApiRequest
   String get lotId;
 
   @nullable
+  String get unknownLotNumber;
+
+  @nullable
   String get serialId;
+
+  @nullable
+  String get unknownSerialNumber;
 
   @nullable
   String get searchText;
@@ -68,6 +74,9 @@ abstract class ListStockForUsageApiRequest
 
   @nullable
   BuiltList<String> get excludeStockIds;
+
+  @nullable
+  bool get excludeKitContents;
 
   @nullable
   PaginationParams get paging;
@@ -113,7 +122,11 @@ abstract class ListStockForUsageApiRequestActions extends ModelActions<
 
   FieldDispatcher<String> get lotId;
 
+  FieldDispatcher<String> get unknownLotNumber;
+
   FieldDispatcher<String> get serialId;
+
+  FieldDispatcher<String> get unknownSerialNumber;
 
   FieldDispatcher<String> get searchText;
 
@@ -132,6 +145,8 @@ abstract class ListStockForUsageApiRequestActions extends ModelActions<
   FieldDispatcher<MoveItemType> get moveItemType;
 
   FieldDispatcher<BuiltList<String>> get excludeStockIds;
+
+  FieldDispatcher<bool> get excludeKitContents;
 
   PaginationParamsActions get paging;
 

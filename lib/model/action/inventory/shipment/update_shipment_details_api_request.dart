@@ -30,6 +30,12 @@ abstract class UpdateShipmentDetailsApiRequest
   @nullable
   Address get deliverToOverrideAddress;
 
+  @nullable
+  String get salesLeadUserId;
+
+  @nullable
+  String get opsLeadUserId;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -65,6 +71,10 @@ abstract class UpdateShipmentDetailsApiRequestActions extends ModelActions<
   FieldDispatcher<String> get deliverToAddressId;
 
   AddressActions get deliverToOverrideAddress;
+
+  FieldDispatcher<String> get salesLeadUserId;
+
+  FieldDispatcher<String> get opsLeadUserId;
 
   ////////////////////////////////
   /// Constructors

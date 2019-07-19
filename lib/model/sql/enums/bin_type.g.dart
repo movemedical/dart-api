@@ -9,7 +9,7 @@ part of 'bin_type.dart';
 const BinType _$wireSIMPLE = const BinType._('SIMPLE');
 const BinType _$wireSTRUCTURED = const BinType._('STRUCTURED');
 
-BinType _$binTypeValueOf(String name) {
+BinType _$valueOf(String name) {
   switch (name) {
     case 'SIMPLE':
       return _$wireSIMPLE;
@@ -20,7 +20,7 @@ BinType _$binTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<BinType> _$binTypeValues = new BuiltSet<BinType>(const <BinType>[
+final BuiltSet<BinType> _$values = new BuiltSet<BinType>(const <BinType>[
   _$wireSIMPLE,
   _$wireSTRUCTURED,
 ]);

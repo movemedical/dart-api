@@ -42,11 +42,9 @@ class MobileDashboardWidgetType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<MobileDashboardWidgetType> get values =>
-      _$mobileDashboardWidgetTypeValues;
+  static BuiltSet<MobileDashboardWidgetType> get values => _$values;
 
-  static MobileDashboardWidgetType valueOf(String name) =>
-      _$mobileDashboardWidgetTypeValueOf(name);
+  static MobileDashboardWidgetType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

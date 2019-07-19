@@ -23,11 +23,9 @@ class IntegrationIssueStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<IntegrationIssueStatus> get values =>
-      _$integrationIssueStatusValues;
+  static BuiltSet<IntegrationIssueStatus> get values => _$values;
 
-  static IntegrationIssueStatus valueOf(String name) =>
-      _$integrationIssueStatusValueOf(name);
+  static IntegrationIssueStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

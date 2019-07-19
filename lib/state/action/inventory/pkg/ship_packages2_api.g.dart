@@ -58,6 +58,7 @@ class _$ShipPackages2Api extends ShipPackages2Api {
           ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -25,11 +25,9 @@ class DirectoryNonPersonType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<DirectoryNonPersonType> get values =>
-      _$directoryNonPersonTypeValues;
+  static BuiltSet<DirectoryNonPersonType> get values => _$values;
 
-  static DirectoryNonPersonType valueOf(String name) =>
-      _$directoryNonPersonTypeValueOf(name);
+  static DirectoryNonPersonType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

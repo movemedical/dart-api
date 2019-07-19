@@ -69,6 +69,7 @@ class _$RequestBackOrderReportApi extends RequestBackOrderReportApi {
           ApiResult<RequestBackOrderReportApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

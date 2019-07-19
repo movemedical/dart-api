@@ -109,8 +109,10 @@ class ListHospitalsForSchedulingApiResponseBuilder
   _$ListHospitalsForSchedulingApiResponse _$v;
 
   ListBuilder<Hospital> _hospitals;
+
   ListBuilder<Hospital> get hospitals =>
       _$this._hospitals ??= new ListBuilder<Hospital>();
+
   set hospitals(ListBuilder<Hospital> hospitals) =>
       _$this._hospitals = hospitals;
 
@@ -209,6 +211,7 @@ class _$ListHospitalsForSchedulingApiResponseActions
       ListHospitalsForSchedulingApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

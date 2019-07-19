@@ -19,7 +19,7 @@ const ListOrderFilesApiOrderBy _$wireUPLOADED_BY =
 const ListOrderFilesApiOrderBy _$wireTIMESTAMP =
     const ListOrderFilesApiOrderBy._('TIMESTAMP');
 
-ListOrderFilesApiOrderBy _$listOrderFilesApiOrderByValueOf(String name) {
+ListOrderFilesApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -38,7 +38,7 @@ ListOrderFilesApiOrderBy _$listOrderFilesApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListOrderFilesApiOrderBy> _$listOrderFilesApiOrderByValues =
+final BuiltSet<ListOrderFilesApiOrderBy> _$values =
     new BuiltSet<ListOrderFilesApiOrderBy>(const <ListOrderFilesApiOrderBy>[
   _$wireNAME,
   _$wireDESC,

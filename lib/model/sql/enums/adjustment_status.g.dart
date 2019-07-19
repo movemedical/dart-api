@@ -11,7 +11,7 @@ const AdjustmentStatus _$wirePENDING_ERP =
 const AdjustmentStatus _$wireENTERED = const AdjustmentStatus._('ENTERED');
 const AdjustmentStatus _$wireCONFIRMED = const AdjustmentStatus._('CONFIRMED');
 
-AdjustmentStatus _$adjustmentStatusValueOf(String name) {
+AdjustmentStatus _$valueOf(String name) {
   switch (name) {
     case 'PENDING_ERP':
       return _$wirePENDING_ERP;
@@ -24,7 +24,7 @@ AdjustmentStatus _$adjustmentStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<AdjustmentStatus> _$adjustmentStatusValues =
+final BuiltSet<AdjustmentStatus> _$values =
     new BuiltSet<AdjustmentStatus>(const <AdjustmentStatus>[
   _$wirePENDING_ERP,
   _$wireENTERED,

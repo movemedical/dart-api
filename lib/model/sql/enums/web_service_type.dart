@@ -22,9 +22,9 @@ class WebServiceType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<WebServiceType> get values => _$webServiceTypeValues;
+  static BuiltSet<WebServiceType> get values => _$values;
 
-  static WebServiceType valueOf(String name) => _$webServiceTypeValueOf(name);
+  static WebServiceType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

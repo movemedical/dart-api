@@ -283,55 +283,79 @@ class CustomFieldValueBuilder
   _$CustomFieldValue _$v;
 
   String _customFieldId;
+
   String get customFieldId => _$this._customFieldId;
+
   set customFieldId(String customFieldId) =>
       _$this._customFieldId = customFieldId;
 
   String _customFieldName;
+
   String get customFieldName => _$this._customFieldName;
+
   set customFieldName(String customFieldName) =>
       _$this._customFieldName = customFieldName;
 
   String _customFieldValueId;
+
   String get customFieldValueId => _$this._customFieldValueId;
+
   set customFieldValueId(String customFieldValueId) =>
       _$this._customFieldValueId = customFieldValueId;
 
   CustomFieldDataType _customFieldDataType;
+
   CustomFieldDataType get customFieldDataType => _$this._customFieldDataType;
+
   set customFieldDataType(CustomFieldDataType customFieldDataType) =>
       _$this._customFieldDataType = customFieldDataType;
 
   int _sort;
+
   int get sort => _$this._sort;
+
   set sort(int sort) => _$this._sort = sort;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   bool _required;
+
   bool get required => _$this._required;
+
   set required(bool required) => _$this._required = required;
 
   bool _booleanValue;
+
   bool get booleanValue => _$this._booleanValue;
+
   set booleanValue(bool booleanValue) => _$this._booleanValue = booleanValue;
 
   String _stringValue;
+
   String get stringValue => _$this._stringValue;
+
   set stringValue(String stringValue) => _$this._stringValue = stringValue;
 
   DateTime _dateValue;
+
   DateTime get dateValue => _$this._dateValue;
+
   set dateValue(DateTime dateValue) => _$this._dateValue = dateValue;
 
   double _doubleValue;
+
   double get doubleValue => _$this._doubleValue;
+
   set doubleValue(double doubleValue) => _$this._doubleValue = doubleValue;
 
   int _longValue;
+
   int get longValue => _$this._longValue;
+
   set longValue(int longValue) => _$this._longValue = longValue;
 
   CustomFieldValueBuilder();
@@ -479,6 +503,7 @@ class _$CustomFieldValueActions extends CustomFieldValueActions {
   CustomFieldValueBuilder newBuilder$() => CustomFieldValueBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

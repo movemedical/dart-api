@@ -22,10 +22,10 @@ class ListProcedureItemCategoryOptionsApiOrderBy extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ListProcedureItemCategoryOptionsApiOrderBy> get values =>
-      _$listProcedureItemCategoryOptionsApiOrderByValues;
+      _$values;
 
   static ListProcedureItemCategoryOptionsApiOrderBy valueOf(String name) =>
-      _$listProcedureItemCategoryOptionsApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

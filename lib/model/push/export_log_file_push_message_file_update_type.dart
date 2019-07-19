@@ -25,10 +25,10 @@ class ExportLogFilePushMessageFileUpdateType extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ExportLogFilePushMessageFileUpdateType> get values =>
-      _$exportLogFilePushMessageFileUpdateTypeValues;
+      _$values;
 
   static ExportLogFilePushMessageFileUpdateType valueOf(String name) =>
-      _$exportLogFilePushMessageFileUpdateTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

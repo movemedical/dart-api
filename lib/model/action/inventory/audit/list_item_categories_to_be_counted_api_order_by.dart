@@ -23,10 +23,10 @@ class ListItemCategoriesToBeCountedApiOrderBy extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ListItemCategoriesToBeCountedApiOrderBy> get values =>
-      _$listItemCategoriesToBeCountedApiOrderByValues;
+      _$values;
 
   static ListItemCategoriesToBeCountedApiOrderBy valueOf(String name) =>
-      _$listItemCategoriesToBeCountedApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

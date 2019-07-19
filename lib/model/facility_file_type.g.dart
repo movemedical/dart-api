@@ -8,7 +8,7 @@ part of 'facility_file_type.dart';
 
 const FacilityFileType _$wireMISC = const FacilityFileType._('MISC');
 
-FacilityFileType _$facilityFileTypeValueOf(String name) {
+FacilityFileType _$valueOf(String name) {
   switch (name) {
     case 'MISC':
       return _$wireMISC;
@@ -17,7 +17,7 @@ FacilityFileType _$facilityFileTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<FacilityFileType> _$facilityFileTypeValues =
+final BuiltSet<FacilityFileType> _$values =
     new BuiltSet<FacilityFileType>(const <FacilityFileType>[
   _$wireMISC,
 ]);

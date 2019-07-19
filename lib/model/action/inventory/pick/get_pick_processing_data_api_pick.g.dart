@@ -276,55 +276,77 @@ class GetPickProcessingDataApiPickBuilder
   _$GetPickProcessingDataApiPick _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _sourcedStockId;
+
   String get sourcedStockId => _$this._sourcedStockId;
+
   set sourcedStockId(String sourcedStockId) =>
       _$this._sourcedStockId = sourcedStockId;
 
   int _pickNumber;
+
   int get pickNumber => _$this._pickNumber;
+
   set pickNumber(int pickNumber) => _$this._pickNumber = pickNumber;
 
   String _dependsOnPickId;
+
   String get dependsOnPickId => _$this._dependsOnPickId;
+
   set dependsOnPickId(String dependsOnPickId) =>
       _$this._dependsOnPickId = dependsOnPickId;
 
   StockItemBuilder _stockItem;
+
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
+
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   ItemBuilder _kitItem;
+
   ItemBuilder get kitItem => _$this._kitItem ??= new ItemBuilder();
+
   set kitItem(ItemBuilder kitItem) => _$this._kitItem = kitItem;
 
   SerialBuilder _kitSerial;
+
   SerialBuilder get kitSerial => _$this._kitSerial ??= new SerialBuilder();
+
   set kitSerial(SerialBuilder kitSerial) => _$this._kitSerial = kitSerial;
 
   StockContainerBuilder _fromContainer;
+
   StockContainerBuilder get fromContainer =>
       _$this._fromContainer ??= new StockContainerBuilder();
+
   set fromContainer(StockContainerBuilder fromContainer) =>
       _$this._fromContainer = fromContainer;
 
   StockContainerBuilder _toContainer;
+
   StockContainerBuilder get toContainer =>
       _$this._toContainer ??= new StockContainerBuilder();
+
   set toContainer(StockContainerBuilder toContainer) =>
       _$this._toContainer = toContainer;
 
   LoanLiteBuilder _loan;
+
   LoanLiteBuilder get loan => _$this._loan ??= new LoanLiteBuilder();
+
   set loan(LoanLiteBuilder loan) => _$this._loan = loan;
 
   CaseEventLiteBuilder _caseEvent;
+
   CaseEventLiteBuilder get caseEvent =>
       _$this._caseEvent ??= new CaseEventLiteBuilder();
+
   set caseEvent(CaseEventLiteBuilder caseEvent) =>
       _$this._caseEvent = caseEvent;
 
@@ -521,6 +543,7 @@ class _$GetPickProcessingDataApiPickActions
       GetPickProcessingDataApiPickBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
@@ -533,6 +556,7 @@ class _$GetPickProcessingDataApiPickActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

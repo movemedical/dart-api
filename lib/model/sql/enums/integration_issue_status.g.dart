@@ -13,7 +13,7 @@ const IntegrationIssueStatus _$wireASSIGNED =
 const IntegrationIssueStatus _$wireRESOLVED =
     const IntegrationIssueStatus._('RESOLVED');
 
-IntegrationIssueStatus _$integrationIssueStatusValueOf(String name) {
+IntegrationIssueStatus _$valueOf(String name) {
   switch (name) {
     case 'OPEN':
       return _$wireOPEN;
@@ -26,7 +26,7 @@ IntegrationIssueStatus _$integrationIssueStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<IntegrationIssueStatus> _$integrationIssueStatusValues =
+final BuiltSet<IntegrationIssueStatus> _$values =
     new BuiltSet<IntegrationIssueStatus>(const <IntegrationIssueStatus>[
   _$wireOPEN,
   _$wireASSIGNED,

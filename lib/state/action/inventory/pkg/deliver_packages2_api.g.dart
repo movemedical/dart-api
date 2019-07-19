@@ -60,6 +60,7 @@ class _$DeliverPackages2Api extends DeliverPackages2Api {
           ApiCommand<DeliverPackages2ApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

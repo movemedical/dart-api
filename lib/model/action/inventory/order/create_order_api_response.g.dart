@@ -100,7 +100,9 @@ class CreateOrderApiResponseBuilder
   _$CreateOrderApiResponse _$v;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   CreateOrderApiResponseBuilder();
@@ -174,6 +176,7 @@ class _$CreateOrderApiResponseActions extends CreateOrderApiResponseActions {
       CreateOrderApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

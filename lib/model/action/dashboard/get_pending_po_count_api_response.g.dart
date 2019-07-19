@@ -119,11 +119,15 @@ class GetPendingPoCountApiResponseBuilder
   _$GetPendingPoCountApiResponse _$v;
 
   int _count;
+
   int get count => _$this._count;
+
   set count(int count) => _$this._count = count;
 
   double _totalAmount;
+
   double get totalAmount => _$this._totalAmount;
+
   set totalAmount(double totalAmount) => _$this._totalAmount = totalAmount;
 
   GetPendingPoCountApiResponseBuilder();
@@ -210,6 +214,7 @@ class _$GetPendingPoCountApiResponseActions
       GetPendingPoCountApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

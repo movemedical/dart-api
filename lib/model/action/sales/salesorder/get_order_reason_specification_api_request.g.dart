@@ -107,7 +107,9 @@ class GetOrderReasonSpecificationApiRequestBuilder
   _$GetOrderReasonSpecificationApiRequest _$v;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
@@ -191,6 +193,7 @@ class _$GetOrderReasonSpecificationApiRequestActions
       GetOrderReasonSpecificationApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

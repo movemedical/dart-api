@@ -68,6 +68,7 @@ class _$ListImportLogErrorsApi extends ListImportLogErrorsApi {
           ApiResult<ListImportLogErrorsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

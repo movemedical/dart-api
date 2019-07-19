@@ -25,9 +25,9 @@ class CaseFileType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<CaseFileType> get values => _$caseFileTypeValues;
+  static BuiltSet<CaseFileType> get values => _$values;
 
-  static CaseFileType valueOf(String name) => _$caseFileTypeValueOf(name);
+  static CaseFileType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -90,12 +90,6 @@ class _$UpdateHcrApiRequestSerializer
         ..add(serializers.serialize(object.email,
             specifiedType: const FullType(Email)));
     }
-    if (object.timeZone != null) {
-      result
-        ..add('timeZone')
-        ..add(serializers.serialize(object.timeZone,
-            specifiedType: const FullType(String)));
-    }
     if (object.startDate != null) {
       result
         ..add('startDate')
@@ -113,6 +107,30 @@ class _$UpdateHcrApiRequestSerializer
         ..add('active')
         ..add(serializers.serialize(object.active,
             specifiedType: const FullType(bool)));
+    }
+    if (object.timeZone != null) {
+      result
+        ..add('timeZone')
+        ..add(serializers.serialize(object.timeZone,
+            specifiedType: const FullType(String)));
+    }
+    if (object.erpUserId != null) {
+      result
+        ..add('erpUserId')
+        ..add(serializers.serialize(object.erpUserId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.defaultBizUnitId != null) {
+      result
+        ..add('defaultBizUnitId')
+        ..add(serializers.serialize(object.defaultBizUnitId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.defaultSalesOrgUnitId != null) {
+      result
+        ..add('defaultSalesOrgUnitId')
+        ..add(serializers.serialize(object.defaultSalesOrgUnitId,
+            specifiedType: const FullType(String)));
     }
 
     return result;
@@ -173,10 +191,6 @@ class _$UpdateHcrApiRequestSerializer
           result.email.replace(serializers.deserialize(value,
               specifiedType: const FullType(Email)) as Email);
           break;
-        case 'timeZone':
-          result.timeZone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'startDate':
           result.startDate = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
@@ -188,6 +202,22 @@ class _$UpdateHcrApiRequestSerializer
         case 'active':
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'timeZone':
+          result.timeZone = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'erpUserId':
+          result.erpUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'defaultBizUnitId':
+          result.defaultBizUnitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'defaultSalesOrgUnitId':
+          result.defaultSalesOrgUnitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -220,13 +250,19 @@ class _$UpdateHcrApiRequest extends UpdateHcrApiRequest {
   @override
   final Email email;
   @override
-  final String timeZone;
-  @override
   final DateTime startDate;
   @override
   final DateTime endDate;
   @override
   final bool active;
+  @override
+  final String timeZone;
+  @override
+  final String erpUserId;
+  @override
+  final String defaultBizUnitId;
+  @override
+  final String defaultSalesOrgUnitId;
 
   factory _$UpdateHcrApiRequest([void updates(UpdateHcrApiRequestBuilder b)]) =>
       (new UpdateHcrApiRequestBuilder()..update(updates)).build();
@@ -243,10 +279,13 @@ class _$UpdateHcrApiRequest extends UpdateHcrApiRequest {
       this.workingHomeId,
       this.workingAtId,
       this.email,
-      this.timeZone,
       this.startDate,
       this.endDate,
-      this.active})
+      this.active,
+      this.timeZone,
+      this.erpUserId,
+      this.defaultBizUnitId,
+      this.defaultSalesOrgUnitId})
       : super._();
 
   @override
@@ -272,10 +311,13 @@ class _$UpdateHcrApiRequest extends UpdateHcrApiRequest {
         workingHomeId == other.workingHomeId &&
         workingAtId == other.workingAtId &&
         email == other.email &&
-        timeZone == other.timeZone &&
         startDate == other.startDate &&
         endDate == other.endDate &&
-        active == other.active;
+        active == other.active &&
+        timeZone == other.timeZone &&
+        erpUserId == other.erpUserId &&
+        defaultBizUnitId == other.defaultBizUnitId &&
+        defaultSalesOrgUnitId == other.defaultSalesOrgUnitId;
   }
 
   @override
@@ -294,22 +336,33 @@ class _$UpdateHcrApiRequest extends UpdateHcrApiRequest {
                                                 $jc(
                                                     $jc(
                                                         $jc(
-                                                            $jc(0, id.hashCode),
-                                                            customerId
-                                                                .hashCode),
-                                                        reference.hashCode),
-                                                    name.hashCode),
-                                                hcrType.hashCode),
-                                            workPhoneNumber.hashCode),
-                                        mobilePhoneNumber.hashCode),
-                                    faxNumber.hashCode),
-                                workingHomeId.hashCode),
-                            workingAtId.hashCode),
-                        email.hashCode),
+                                                            $jc(
+                                                                $jc(
+                                                                    $jc(
+                                                                        $jc(
+                                                                            0,
+                                                                            id
+                                                                                .hashCode),
+                                                                        customerId
+                                                                            .hashCode),
+                                                                    reference
+                                                                        .hashCode),
+                                                                name.hashCode),
+                                                            hcrType.hashCode),
+                                                        workPhoneNumber
+                                                            .hashCode),
+                                                    mobilePhoneNumber.hashCode),
+                                                faxNumber.hashCode),
+                                            workingHomeId.hashCode),
+                                        workingAtId.hashCode),
+                                    email.hashCode),
+                                startDate.hashCode),
+                            endDate.hashCode),
+                        active.hashCode),
                     timeZone.hashCode),
-                startDate.hashCode),
-            endDate.hashCode),
-        active.hashCode));
+                erpUserId.hashCode),
+            defaultBizUnitId.hashCode),
+        defaultSalesOrgUnitId.hashCode));
   }
 
   @override
@@ -326,10 +379,13 @@ class _$UpdateHcrApiRequest extends UpdateHcrApiRequest {
           ..add('workingHomeId', workingHomeId)
           ..add('workingAtId', workingAtId)
           ..add('email', email)
-          ..add('timeZone', timeZone)
           ..add('startDate', startDate)
           ..add('endDate', endDate)
-          ..add('active', active))
+          ..add('active', active)
+          ..add('timeZone', timeZone)
+          ..add('erpUserId', erpUserId)
+          ..add('defaultBizUnitId', defaultBizUnitId)
+          ..add('defaultSalesOrgUnitId', defaultSalesOrgUnitId))
         .toString();
   }
 }
@@ -339,70 +395,120 @@ class UpdateHcrApiRequestBuilder
   _$UpdateHcrApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _customerId;
+
   String get customerId => _$this._customerId;
+
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   PersonNameBuilder _name;
+
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
+
   set name(PersonNameBuilder name) => _$this._name = name;
 
   HcrType _hcrType;
+
   HcrType get hcrType => _$this._hcrType;
+
   set hcrType(HcrType hcrType) => _$this._hcrType = hcrType;
 
   PhoneNumberBuilder _workPhoneNumber;
+
   PhoneNumberBuilder get workPhoneNumber =>
       _$this._workPhoneNumber ??= new PhoneNumberBuilder();
+
   set workPhoneNumber(PhoneNumberBuilder workPhoneNumber) =>
       _$this._workPhoneNumber = workPhoneNumber;
 
   PhoneNumberBuilder _mobilePhoneNumber;
+
   PhoneNumberBuilder get mobilePhoneNumber =>
       _$this._mobilePhoneNumber ??= new PhoneNumberBuilder();
+
   set mobilePhoneNumber(PhoneNumberBuilder mobilePhoneNumber) =>
       _$this._mobilePhoneNumber = mobilePhoneNumber;
 
   PhoneNumberBuilder _faxNumber;
+
   PhoneNumberBuilder get faxNumber =>
       _$this._faxNumber ??= new PhoneNumberBuilder();
+
   set faxNumber(PhoneNumberBuilder faxNumber) => _$this._faxNumber = faxNumber;
 
   String _workingHomeId;
+
   String get workingHomeId => _$this._workingHomeId;
+
   set workingHomeId(String workingHomeId) =>
       _$this._workingHomeId = workingHomeId;
 
   String _workingAtId;
+
   String get workingAtId => _$this._workingAtId;
+
   set workingAtId(String workingAtId) => _$this._workingAtId = workingAtId;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
-  String _timeZone;
-  String get timeZone => _$this._timeZone;
-  set timeZone(String timeZone) => _$this._timeZone = timeZone;
-
   DateTime _startDate;
+
   DateTime get startDate => _$this._startDate;
+
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
+
   DateTime get endDate => _$this._endDate;
+
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
+
+  String _timeZone;
+
+  String get timeZone => _$this._timeZone;
+
+  set timeZone(String timeZone) => _$this._timeZone = timeZone;
+
+  String _erpUserId;
+
+  String get erpUserId => _$this._erpUserId;
+
+  set erpUserId(String erpUserId) => _$this._erpUserId = erpUserId;
+
+  String _defaultBizUnitId;
+
+  String get defaultBizUnitId => _$this._defaultBizUnitId;
+
+  set defaultBizUnitId(String defaultBizUnitId) =>
+      _$this._defaultBizUnitId = defaultBizUnitId;
+
+  String _defaultSalesOrgUnitId;
+
+  String get defaultSalesOrgUnitId => _$this._defaultSalesOrgUnitId;
+
+  set defaultSalesOrgUnitId(String defaultSalesOrgUnitId) =>
+      _$this._defaultSalesOrgUnitId = defaultSalesOrgUnitId;
 
   UpdateHcrApiRequestBuilder();
 
@@ -419,10 +525,13 @@ class UpdateHcrApiRequestBuilder
       _workingHomeId = _$v.workingHomeId;
       _workingAtId = _$v.workingAtId;
       _email = _$v.email?.toBuilder();
-      _timeZone = _$v.timeZone;
       _startDate = _$v.startDate;
       _endDate = _$v.endDate;
       _active = _$v.active;
+      _timeZone = _$v.timeZone;
+      _erpUserId = _$v.erpUserId;
+      _defaultBizUnitId = _$v.defaultBizUnitId;
+      _defaultSalesOrgUnitId = _$v.defaultSalesOrgUnitId;
       _$v = null;
     }
     return this;
@@ -458,10 +567,13 @@ class UpdateHcrApiRequestBuilder
               workingHomeId: workingHomeId,
               workingAtId: workingAtId,
               email: _email?.build(),
-              timeZone: timeZone,
               startDate: startDate,
               endDate: endDate,
-              active: active);
+              active: active,
+              timeZone: timeZone,
+              erpUserId: erpUserId,
+              defaultBizUnitId: defaultBizUnitId,
+              defaultSalesOrgUnitId: defaultSalesOrgUnitId);
     } catch (_) {
       String _$failedField;
       try {
@@ -516,10 +628,13 @@ class _$UpdateHcrApiRequestActions extends UpdateHcrApiRequestActions {
   final FieldDispatcher<String> workingHomeId;
   final FieldDispatcher<String> workingAtId;
   final EmailActions email;
-  final FieldDispatcher<String> timeZone;
   final FieldDispatcher<DateTime> startDate;
   final FieldDispatcher<DateTime> endDate;
   final FieldDispatcher<bool> active;
+  final FieldDispatcher<String> timeZone;
+  final FieldDispatcher<String> erpUserId;
+  final FieldDispatcher<String> defaultBizUnitId;
+  final FieldDispatcher<String> defaultSalesOrgUnitId;
 
   _$UpdateHcrApiRequestActions._(this.options$)
       : replace$ = options$.action<UpdateHcrApiRequest>(
@@ -577,14 +692,26 @@ class _$UpdateHcrApiRequestActions extends UpdateHcrApiRequestActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
-            (s) => s?.timeZone, (p, b) => p?.timeZone = b),
         startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
         endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
         active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
+            (s) => s?.timeZone, (p, b) => p?.timeZone = b),
+        erpUserId = options$.field<String>('erpUserId', (a) => a?.erpUserId,
+            (s) => s?.erpUserId, (p, b) => p?.erpUserId = b),
+        defaultBizUnitId = options$.field<String>(
+            'defaultBizUnitId',
+            (a) => a?.defaultBizUnitId,
+            (s) => s?.defaultBizUnitId,
+            (p, b) => p?.defaultBizUnitId = b),
+        defaultSalesOrgUnitId = options$.field<String>(
+            'defaultSalesOrgUnitId',
+            (a) => a?.defaultSalesOrgUnitId,
+            (s) => s?.defaultSalesOrgUnitId,
+            (p, b) => p?.defaultSalesOrgUnitId = b),
         super._();
 
   factory _$UpdateHcrApiRequestActions(
@@ -598,6 +725,7 @@ class _$UpdateHcrApiRequestActions extends UpdateHcrApiRequestActions {
   UpdateHcrApiRequestBuilder newBuilder$() => UpdateHcrApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
@@ -608,6 +736,7 @@ class _$UpdateHcrApiRequestActions extends UpdateHcrApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -618,10 +747,13 @@ class _$UpdateHcrApiRequestActions extends UpdateHcrApiRequestActions {
         this.hcrType,
         this.workingHomeId,
         this.workingAtId,
-        this.timeZone,
         this.startDate,
         this.endDate,
         this.active,
+        this.timeZone,
+        this.erpUserId,
+        this.defaultBizUnitId,
+        this.defaultSalesOrgUnitId,
       ]);
 
   @override
@@ -638,10 +770,13 @@ class _$UpdateHcrApiRequestActions extends UpdateHcrApiRequestActions {
     workingHomeId.reducer$(reducer);
     workingAtId.reducer$(reducer);
     email.reducer$(reducer);
-    timeZone.reducer$(reducer);
     startDate.reducer$(reducer);
     endDate.reducer$(reducer);
     active.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    erpUserId.reducer$(reducer);
+    defaultBizUnitId.reducer$(reducer);
+    defaultSalesOrgUnitId.reducer$(reducer);
   }
 
   @override

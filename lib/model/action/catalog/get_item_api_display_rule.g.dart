@@ -99,7 +99,9 @@ class GetItemApiDisplayRuleBuilder
   _$GetItemApiDisplayRule _$v;
 
   bool _editAllowed;
+
   bool get editAllowed => _$this._editAllowed;
+
   set editAllowed(bool editAllowed) => _$this._editAllowed = editAllowed;
 
   GetItemApiDisplayRuleBuilder();
@@ -173,6 +175,7 @@ class _$GetItemApiDisplayRuleActions extends GetItemApiDisplayRuleActions {
   GetItemApiDisplayRuleBuilder newBuilder$() => GetItemApiDisplayRuleBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

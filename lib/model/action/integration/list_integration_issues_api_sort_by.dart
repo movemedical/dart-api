@@ -35,11 +35,9 @@ class ListIntegrationIssuesApiSortBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListIntegrationIssuesApiSortBy> get values =>
-      _$listIntegrationIssuesApiSortByValues;
+  static BuiltSet<ListIntegrationIssuesApiSortBy> get values => _$values;
 
-  static ListIntegrationIssuesApiSortBy valueOf(String name) =>
-      _$listIntegrationIssuesApiSortByValueOf(name);
+  static ListIntegrationIssuesApiSortBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

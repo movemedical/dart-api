@@ -105,7 +105,9 @@ class PrepareCaseFileDownloadApiRequestBuilder
   _$PrepareCaseFileDownloadApiRequest _$v;
 
   String _fileId;
+
   String get fileId => _$this._fileId;
+
   set fileId(String fileId) => _$this._fileId = fileId;
 
   PrepareCaseFileDownloadApiRequestBuilder();
@@ -184,6 +186,7 @@ class _$PrepareCaseFileDownloadApiRequestActions
       PrepareCaseFileDownloadApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

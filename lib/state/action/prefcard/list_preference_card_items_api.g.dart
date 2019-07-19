@@ -69,6 +69,7 @@ class _$ListPreferenceCardItemsApi extends ListPreferenceCardItemsApi {
           ApiResult<ListPreferenceCardItemsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

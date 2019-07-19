@@ -70,6 +70,7 @@ class _$ListQuestionableTraySummaryApi extends ListQuestionableTraySummaryApi {
           ApiResult<ListQuestionableTraySummaryApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -280,55 +280,75 @@ class GetCaseCountByDayApiRequestBuilder
   _$GetCaseCountByDayApiRequest _$v;
 
   DateTime _startDate;
+
   DateTime get startDate => _$this._startDate;
+
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
+
   DateTime get endDate => _$this._endDate;
+
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   ListBuilder<String> _caseTypeIds;
+
   ListBuilder<String> get caseTypeIds =>
       _$this._caseTypeIds ??= new ListBuilder<String>();
+
   set caseTypeIds(ListBuilder<String> caseTypeIds) =>
       _$this._caseTypeIds = caseTypeIds;
 
   ListBuilder<String> _hcrIds;
+
   ListBuilder<String> get hcrIds =>
       _$this._hcrIds ??= new ListBuilder<String>();
+
   set hcrIds(ListBuilder<String> hcrIds) => _$this._hcrIds = hcrIds;
 
   ListBuilder<String> _teamIds;
+
   ListBuilder<String> get teamIds =>
       _$this._teamIds ??= new ListBuilder<String>();
+
   set teamIds(ListBuilder<String> teamIds) => _$this._teamIds = teamIds;
 
   ListBuilder<String> _facilityIds;
+
   ListBuilder<String> get facilityIds =>
       _$this._facilityIds ??= new ListBuilder<String>();
+
   set facilityIds(ListBuilder<String> facilityIds) =>
       _$this._facilityIds = facilityIds;
 
   ListBuilder<String> _surgeonIds;
+
   ListBuilder<String> get surgeonIds =>
       _$this._surgeonIds ??= new ListBuilder<String>();
+
   set surgeonIds(ListBuilder<String> surgeonIds) =>
       _$this._surgeonIds = surgeonIds;
 
   ListBuilder<String> _procedureIds;
+
   ListBuilder<String> get procedureIds =>
       _$this._procedureIds ??= new ListBuilder<String>();
+
   set procedureIds(ListBuilder<String> procedureIds) =>
       _$this._procedureIds = procedureIds;
 
   ListBuilder<CaseEventStatus> _statuses;
+
   ListBuilder<CaseEventStatus> get statuses =>
       _$this._statuses ??= new ListBuilder<CaseEventStatus>();
+
   set statuses(ListBuilder<CaseEventStatus> statuses) =>
       _$this._statuses = statuses;
 
   String _patientName;
+
   String get patientName => _$this._patientName;
+
   set patientName(String patientName) => _$this._patientName = patientName;
 
   GetCaseCountByDayApiRequestBuilder();
@@ -493,6 +513,7 @@ class _$GetCaseCountByDayApiRequestActions
       GetCaseCountByDayApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

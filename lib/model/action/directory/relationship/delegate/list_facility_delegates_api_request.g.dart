@@ -156,22 +156,30 @@ class ListFacilityDelegatesApiRequestBuilder
   _$ListFacilityDelegatesApiRequest _$v;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListFacilityDelegatesApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListFacilityDelegatesApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListFacilityDelegatesApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListFacilityDelegatesApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -297,6 +305,7 @@ class _$ListFacilityDelegatesApiRequestActions
       ListFacilityDelegatesApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
@@ -304,6 +313,7 @@ class _$ListFacilityDelegatesApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

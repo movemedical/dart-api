@@ -154,21 +154,29 @@ class ImportLogFilePushMessageBuilder
   _$ImportLogFilePushMessage _$v;
 
   String _exportLogFileId;
+
   String get exportLogFileId => _$this._exportLogFileId;
+
   set exportLogFileId(String exportLogFileId) =>
       _$this._exportLogFileId = exportLogFileId;
 
   String _fileId;
+
   String get fileId => _$this._fileId;
+
   set fileId(String fileId) => _$this._fileId = fileId;
 
   ImportLogFilePushMessageFileUpdateType _updateType;
+
   ImportLogFilePushMessageFileUpdateType get updateType => _$this._updateType;
+
   set updateType(ImportLogFilePushMessageFileUpdateType updateType) =>
       _$this._updateType = updateType;
 
   double _percentUploadedDecimalForm;
+
   double get percentUploadedDecimalForm => _$this._percentUploadedDecimalForm;
+
   set percentUploadedDecimalForm(double percentUploadedDecimalForm) =>
       _$this._percentUploadedDecimalForm = percentUploadedDecimalForm;
 
@@ -272,6 +280,7 @@ class _$ImportLogFilePushMessageActions
       ImportLogFilePushMessageBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

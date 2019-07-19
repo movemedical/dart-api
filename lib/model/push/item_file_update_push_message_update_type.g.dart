@@ -13,8 +13,7 @@ const ItemFileUpdatePushMessageUpdateType _$wireUPLOADED =
 const ItemFileUpdatePushMessageUpdateType _$wireDELETED =
     const ItemFileUpdatePushMessageUpdateType._('DELETED');
 
-ItemFileUpdatePushMessageUpdateType
-    _$itemFileUpdatePushMessageUpdateTypeValueOf(String name) {
+ItemFileUpdatePushMessageUpdateType _$valueOf(String name) {
   switch (name) {
     case 'UPLOADING':
       return _$wireUPLOADING;
@@ -27,8 +26,7 @@ ItemFileUpdatePushMessageUpdateType
   }
 }
 
-final BuiltSet<ItemFileUpdatePushMessageUpdateType>
-    _$itemFileUpdatePushMessageUpdateTypeValues =
+final BuiltSet<ItemFileUpdatePushMessageUpdateType> _$values =
     new BuiltSet<ItemFileUpdatePushMessageUpdateType>(const <
         ItemFileUpdatePushMessageUpdateType>[
   _$wireUPLOADING,

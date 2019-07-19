@@ -131,17 +131,21 @@ class ListBizUnitInventoryTypeOptionsApiResponseBuilder
   _$ListBizUnitInventoryTypeOptionsApiResponse _$v;
 
   ListBuilder<ListBizUnitInventoryTypeOptionsApiInventoryTypeOption> _data;
+
   ListBuilder<
       ListBizUnitInventoryTypeOptionsApiInventoryTypeOption> get data => _$this
           ._data ??=
       new ListBuilder<ListBizUnitInventoryTypeOptionsApiInventoryTypeOption>();
+
   set data(
           ListBuilder<ListBizUnitInventoryTypeOptionsApiInventoryTypeOption>
               data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListBizUnitInventoryTypeOptionsApiResponseBuilder();
@@ -244,6 +248,7 @@ class _$ListBizUnitInventoryTypeOptionsApiResponseActions
       ListBizUnitInventoryTypeOptionsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

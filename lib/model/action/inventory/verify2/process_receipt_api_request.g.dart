@@ -116,11 +116,15 @@ class ProcessReceiptApiRequestBuilder
   _$ProcessReceiptApiRequest _$v;
 
   String _processKey;
+
   String get processKey => _$this._processKey;
+
   set processKey(String processKey) => _$this._processKey = processKey;
 
   String _receiptId;
+
   String get receiptId => _$this._receiptId;
+
   set receiptId(String receiptId) => _$this._receiptId = receiptId;
 
   ProcessReceiptApiRequestBuilder();
@@ -203,6 +207,7 @@ class _$ProcessReceiptApiRequestActions
       ProcessReceiptApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

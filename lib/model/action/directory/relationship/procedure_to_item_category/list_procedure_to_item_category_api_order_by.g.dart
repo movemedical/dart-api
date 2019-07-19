@@ -13,8 +13,7 @@ const ListProcedureToItemCategoryApiOrderBy _$wirePROCEDURE =
 const ListProcedureToItemCategoryApiOrderBy _$wireSUB_PROCEDURE =
     const ListProcedureToItemCategoryApiOrderBy._('SUB_PROCEDURE');
 
-ListProcedureToItemCategoryApiOrderBy
-    _$listProcedureToItemCategoryApiOrderByValueOf(String name) {
+ListProcedureToItemCategoryApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'ITEM_CATEGORY':
       return _$wireITEM_CATEGORY;
@@ -27,8 +26,7 @@ ListProcedureToItemCategoryApiOrderBy
   }
 }
 
-final BuiltSet<ListProcedureToItemCategoryApiOrderBy>
-    _$listProcedureToItemCategoryApiOrderByValues =
+final BuiltSet<ListProcedureToItemCategoryApiOrderBy> _$values =
     new BuiltSet<ListProcedureToItemCategoryApiOrderBy>(const <
         ListProcedureToItemCategoryApiOrderBy>[
   _$wireITEM_CATEGORY,

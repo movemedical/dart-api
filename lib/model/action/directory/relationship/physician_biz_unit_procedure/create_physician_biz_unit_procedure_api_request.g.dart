@@ -131,13 +131,17 @@ class CreatePhysicianBizUnitProcedureApiRequestBuilder
   _$CreatePhysicianBizUnitProcedureApiRequest _$v;
 
   String _physicianId;
+
   String get physicianId => _$this._physicianId;
+
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   ListBuilder<CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry> _entries;
+
   ListBuilder<CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry>
       get entries => _$this._entries ??= new ListBuilder<
           CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry>();
+
   set entries(
           ListBuilder<CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry>
               entries) =>
@@ -250,6 +254,7 @@ class _$CreatePhysicianBizUnitProcedureApiRequestActions
       CreatePhysicianBizUnitProcedureApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

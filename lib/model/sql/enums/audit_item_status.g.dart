@@ -18,7 +18,7 @@ const AuditItemStatus _$wireCLOSED_VARIANCE_NOT_ACCEPTED =
 const AuditItemStatus _$wireCLOSED_VARIANCE_ACCEPTED =
     const AuditItemStatus._('CLOSED_VARIANCE_ACCEPTED');
 
-AuditItemStatus _$auditItemStatusValueOf(String name) {
+AuditItemStatus _$valueOf(String name) {
   switch (name) {
     case 'OPEN':
       return _$wireOPEN;
@@ -37,7 +37,7 @@ AuditItemStatus _$auditItemStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<AuditItemStatus> _$auditItemStatusValues =
+final BuiltSet<AuditItemStatus> _$values =
     new BuiltSet<AuditItemStatus>(const <AuditItemStatus>[
   _$wireOPEN,
   _$wireCLOSED_MATCHED_COUNT,

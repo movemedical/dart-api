@@ -10,6 +10,7 @@ class DelegateType extends EnumClass {
   ////////////////////////////////
 
   static const DelegateType AE = _$wireAE;
+  static const DelegateType DCE = _$wireDCE;
   static const DelegateType HCR = _$wireHCR;
 
   ////////////////////////////////
@@ -22,9 +23,9 @@ class DelegateType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<DelegateType> get values => _$delegateTypeValues;
+  static BuiltSet<DelegateType> get values => _$values;
 
-  static DelegateType valueOf(String name) => _$delegateTypeValueOf(name);
+  static DelegateType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

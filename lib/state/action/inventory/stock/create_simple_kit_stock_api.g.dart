@@ -68,6 +68,7 @@ class _$CreateSimpleKitStockApi extends CreateSimpleKitStockApi {
           ApiResult<CreateSimpleKitStockApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

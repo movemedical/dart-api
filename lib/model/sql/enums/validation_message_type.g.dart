@@ -10,7 +10,7 @@ const ValidationMessageType _$wireINFO = const ValidationMessageType._('INFO');
 const ValidationMessageType _$wireERROR =
     const ValidationMessageType._('ERROR');
 
-ValidationMessageType _$validationMessageTypeValueOf(String name) {
+ValidationMessageType _$valueOf(String name) {
   switch (name) {
     case 'INFO':
       return _$wireINFO;
@@ -21,7 +21,7 @@ ValidationMessageType _$validationMessageTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<ValidationMessageType> _$validationMessageTypeValues =
+final BuiltSet<ValidationMessageType> _$values =
     new BuiltSet<ValidationMessageType>(const <ValidationMessageType>[
   _$wireINFO,
   _$wireERROR,

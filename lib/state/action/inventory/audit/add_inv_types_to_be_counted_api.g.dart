@@ -63,6 +63,7 @@ class _$AddInvTypesToBeCountedApi extends AddInvTypesToBeCountedApi {
           ApiCommand<AddInvTypesToBeCountedApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

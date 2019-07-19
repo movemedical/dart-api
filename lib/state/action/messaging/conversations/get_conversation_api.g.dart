@@ -67,6 +67,7 @@ class _$GetConversationApi extends GetConversationApi {
           ApiResult<GetConversationApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

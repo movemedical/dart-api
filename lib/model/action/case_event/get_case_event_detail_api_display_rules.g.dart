@@ -92,6 +92,12 @@ class _$GetCaseEventDetailApiDisplayRulesSerializer
         ..add(serializers.serialize(object.moveBackToPlanning,
             specifiedType: const FullType(bool)));
     }
+    if (object.moveToComplete != null) {
+      result
+        ..add('moveToComplete')
+        ..add(serializers.serialize(object.moveToComplete,
+            specifiedType: const FullType(bool)));
+    }
     if (object.billingCodes != null) {
       result
         ..add('billingCodes')
@@ -176,6 +182,10 @@ class _$GetCaseEventDetailApiDisplayRulesSerializer
           result.moveBackToPlanning = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'moveToComplete':
+          result.moveToComplete = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'billingCodes':
           result.billingCodes = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -224,6 +234,8 @@ class _$GetCaseEventDetailApiDisplayRules
   @override
   final bool moveBackToPlanning;
   @override
+  final bool moveToComplete;
+  @override
   final bool billingCodes;
   @override
   final bool overridePrice;
@@ -248,6 +260,7 @@ class _$GetCaseEventDetailApiDisplayRules
       this.editPatient,
       this.editDeliverTo,
       this.moveBackToPlanning,
+      this.moveToComplete,
       this.billingCodes,
       this.overridePrice,
       this.addPONumber,
@@ -278,6 +291,7 @@ class _$GetCaseEventDetailApiDisplayRules
         editPatient == other.editPatient &&
         editDeliverTo == other.editDeliverTo &&
         moveBackToPlanning == other.moveBackToPlanning &&
+        moveToComplete == other.moveToComplete &&
         billingCodes == other.billingCodes &&
         overridePrice == other.overridePrice &&
         addPONumber == other.addPONumber &&
@@ -301,21 +315,23 @@ class _$GetCaseEventDetailApiDisplayRules
                                                     $jc(
                                                         $jc(
                                                             $jc(
-                                                                0,
-                                                                confirmCase
+                                                                $jc(
+                                                                    0,
+                                                                    confirmCase
+                                                                        .hashCode),
+                                                                confirmUsage
                                                                     .hashCode),
-                                                            confirmUsage
+                                                            editRequirements
                                                                 .hashCode),
-                                                        editRequirements
-                                                            .hashCode),
-                                                    reschedule.hashCode),
-                                                cancel.hashCode),
-                                            editUsage.hashCode),
-                                        schedulingEditFull.hashCode),
-                                    schedulingEditPartial.hashCode),
-                                editPatient.hashCode),
-                            editDeliverTo.hashCode),
-                        moveBackToPlanning.hashCode),
+                                                        reschedule.hashCode),
+                                                    cancel.hashCode),
+                                                editUsage.hashCode),
+                                            schedulingEditFull.hashCode),
+                                        schedulingEditPartial.hashCode),
+                                    editPatient.hashCode),
+                                editDeliverTo.hashCode),
+                            moveBackToPlanning.hashCode),
+                        moveToComplete.hashCode),
                     billingCodes.hashCode),
                 overridePrice.hashCode),
             addPONumber.hashCode),
@@ -336,6 +352,7 @@ class _$GetCaseEventDetailApiDisplayRules
           ..add('editPatient', editPatient)
           ..add('editDeliverTo', editDeliverTo)
           ..add('moveBackToPlanning', moveBackToPlanning)
+          ..add('moveToComplete', moveToComplete)
           ..add('billingCodes', billingCodes)
           ..add('overridePrice', overridePrice)
           ..add('addPONumber', addPONumber)
@@ -351,69 +368,106 @@ class GetCaseEventDetailApiDisplayRulesBuilder
   _$GetCaseEventDetailApiDisplayRules _$v;
 
   bool _confirmCase;
+
   bool get confirmCase => _$this._confirmCase;
+
   set confirmCase(bool confirmCase) => _$this._confirmCase = confirmCase;
 
   bool _confirmUsage;
+
   bool get confirmUsage => _$this._confirmUsage;
+
   set confirmUsage(bool confirmUsage) => _$this._confirmUsage = confirmUsage;
 
   bool _editRequirements;
+
   bool get editRequirements => _$this._editRequirements;
+
   set editRequirements(bool editRequirements) =>
       _$this._editRequirements = editRequirements;
 
   bool _reschedule;
+
   bool get reschedule => _$this._reschedule;
+
   set reschedule(bool reschedule) => _$this._reschedule = reschedule;
 
   bool _cancel;
+
   bool get cancel => _$this._cancel;
+
   set cancel(bool cancel) => _$this._cancel = cancel;
 
   bool _editUsage;
+
   bool get editUsage => _$this._editUsage;
+
   set editUsage(bool editUsage) => _$this._editUsage = editUsage;
 
   bool _schedulingEditFull;
+
   bool get schedulingEditFull => _$this._schedulingEditFull;
+
   set schedulingEditFull(bool schedulingEditFull) =>
       _$this._schedulingEditFull = schedulingEditFull;
 
   bool _schedulingEditPartial;
+
   bool get schedulingEditPartial => _$this._schedulingEditPartial;
+
   set schedulingEditPartial(bool schedulingEditPartial) =>
       _$this._schedulingEditPartial = schedulingEditPartial;
 
   bool _editPatient;
+
   bool get editPatient => _$this._editPatient;
+
   set editPatient(bool editPatient) => _$this._editPatient = editPatient;
 
   bool _editDeliverTo;
+
   bool get editDeliverTo => _$this._editDeliverTo;
+
   set editDeliverTo(bool editDeliverTo) =>
       _$this._editDeliverTo = editDeliverTo;
 
   bool _moveBackToPlanning;
+
   bool get moveBackToPlanning => _$this._moveBackToPlanning;
+
   set moveBackToPlanning(bool moveBackToPlanning) =>
       _$this._moveBackToPlanning = moveBackToPlanning;
 
+  bool _moveToComplete;
+
+  bool get moveToComplete => _$this._moveToComplete;
+
+  set moveToComplete(bool moveToComplete) =>
+      _$this._moveToComplete = moveToComplete;
+
   bool _billingCodes;
+
   bool get billingCodes => _$this._billingCodes;
+
   set billingCodes(bool billingCodes) => _$this._billingCodes = billingCodes;
 
   bool _overridePrice;
+
   bool get overridePrice => _$this._overridePrice;
+
   set overridePrice(bool overridePrice) =>
       _$this._overridePrice = overridePrice;
 
   bool _addPONumber;
+
   bool get addPONumber => _$this._addPONumber;
+
   set addPONumber(bool addPONumber) => _$this._addPONumber = addPONumber;
 
   bool _loanReturn;
+
   bool get loanReturn => _$this._loanReturn;
+
   set loanReturn(bool loanReturn) => _$this._loanReturn = loanReturn;
 
   GetCaseEventDetailApiDisplayRulesBuilder();
@@ -431,6 +485,7 @@ class GetCaseEventDetailApiDisplayRulesBuilder
       _editPatient = _$v.editPatient;
       _editDeliverTo = _$v.editDeliverTo;
       _moveBackToPlanning = _$v.moveBackToPlanning;
+      _moveToComplete = _$v.moveToComplete;
       _billingCodes = _$v.billingCodes;
       _overridePrice = _$v.overridePrice;
       _addPONumber = _$v.addPONumber;
@@ -468,6 +523,7 @@ class GetCaseEventDetailApiDisplayRulesBuilder
             editPatient: editPatient,
             editDeliverTo: editDeliverTo,
             moveBackToPlanning: moveBackToPlanning,
+            moveToComplete: moveToComplete,
             billingCodes: billingCodes,
             overridePrice: overridePrice,
             addPONumber: addPONumber,
@@ -510,6 +566,7 @@ class _$GetCaseEventDetailApiDisplayRulesActions
   final FieldDispatcher<bool> editPatient;
   final FieldDispatcher<bool> editDeliverTo;
   final FieldDispatcher<bool> moveBackToPlanning;
+  final FieldDispatcher<bool> moveToComplete;
   final FieldDispatcher<bool> billingCodes;
   final FieldDispatcher<bool> overridePrice;
   final FieldDispatcher<bool> addPONumber;
@@ -558,6 +615,11 @@ class _$GetCaseEventDetailApiDisplayRulesActions
             (a) => a?.moveBackToPlanning,
             (s) => s?.moveBackToPlanning,
             (p, b) => p?.moveBackToPlanning = b),
+        moveToComplete = options$.field<bool>(
+            'moveToComplete',
+            (a) => a?.moveToComplete,
+            (s) => s?.moveToComplete,
+            (p, b) => p?.moveToComplete = b),
         billingCodes = options$.field<bool>(
             'billingCodes',
             (a) => a?.billingCodes,
@@ -587,6 +649,7 @@ class _$GetCaseEventDetailApiDisplayRulesActions
       GetCaseEventDetailApiDisplayRulesBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -602,6 +665,7 @@ class _$GetCaseEventDetailApiDisplayRulesActions
         this.editPatient,
         this.editDeliverTo,
         this.moveBackToPlanning,
+        this.moveToComplete,
         this.billingCodes,
         this.overridePrice,
         this.addPONumber,
@@ -622,6 +686,7 @@ class _$GetCaseEventDetailApiDisplayRulesActions
     editPatient.reducer$(reducer);
     editDeliverTo.reducer$(reducer);
     moveBackToPlanning.reducer$(reducer);
+    moveToComplete.reducer$(reducer);
     billingCodes.reducer$(reducer);
     overridePrice.reducer$(reducer);
     addPONumber.reducer$(reducer);

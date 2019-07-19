@@ -94,7 +94,9 @@ class GetAuditApiRequestBuilder
   _$GetAuditApiRequest _$v;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   GetAuditApiRequestBuilder();
@@ -165,6 +167,7 @@ class _$GetAuditApiRequestActions extends GetAuditApiRequestActions {
   GetAuditApiRequestBuilder newBuilder$() => GetAuditApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

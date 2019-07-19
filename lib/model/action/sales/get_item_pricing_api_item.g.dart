@@ -185,29 +185,41 @@ class GetItemPricingApiItemBuilder
   _$GetItemPricingApiItem _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   CaseUsageDisposition _caseUsageDisposition;
+
   CaseUsageDisposition get caseUsageDisposition => _$this._caseUsageDisposition;
+
   set caseUsageDisposition(CaseUsageDisposition caseUsageDisposition) =>
       _$this._caseUsageDisposition = caseUsageDisposition;
 
   String _billingCodeId;
+
   String get billingCodeId => _$this._billingCodeId;
+
   set billingCodeId(String billingCodeId) =>
       _$this._billingCodeId = billingCodeId;
 
   bool _construct;
+
   bool get construct => _$this._construct;
+
   set construct(bool construct) => _$this._construct = construct;
 
   GetItemPricingApiItemBuilder();
@@ -313,6 +325,7 @@ class _$GetItemPricingApiItemActions extends GetItemPricingApiItemActions {
   GetItemPricingApiItemBuilder newBuilder$() => GetItemPricingApiItemBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -22,11 +22,9 @@ class ListAssigneesApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListAssigneesApiOrderBy> get values =>
-      _$listAssigneesApiOrderByValues;
+  static BuiltSet<ListAssigneesApiOrderBy> get values => _$values;
 
-  static ListAssigneesApiOrderBy valueOf(String name) =>
-      _$listAssigneesApiOrderByValueOf(name);
+  static ListAssigneesApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

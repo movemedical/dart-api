@@ -297,54 +297,78 @@ class ListWebServiceLogsApiWebServiceLogBuilder
   _$ListWebServiceLogsApiWebServiceLog _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _interfaceKey;
+
   String get interfaceKey => _$this._interfaceKey;
+
   set interfaceKey(String interfaceKey) => _$this._interfaceKey = interfaceKey;
 
   DateTime _startDate;
+
   DateTime get startDate => _$this._startDate;
+
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
+
   DateTime get endDate => _$this._endDate;
+
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   bool _outcome;
+
   bool get outcome => _$this._outcome;
+
   set outcome(bool outcome) => _$this._outcome = outcome;
 
   String _outcomeMessage;
+
   String get outcomeMessage => _$this._outcomeMessage;
+
   set outcomeMessage(String outcomeMessage) =>
       _$this._outcomeMessage = outcomeMessage;
 
   WebServiceType _webServiceType;
+
   WebServiceType get webServiceType => _$this._webServiceType;
+
   set webServiceType(WebServiceType webServiceType) =>
       _$this._webServiceType = webServiceType;
 
   WebServiceDirection _direction;
+
   WebServiceDirection get direction => _$this._direction;
+
   set direction(WebServiceDirection direction) => _$this._direction = direction;
 
   WebServiceLogInitiatorType _logInitiator;
+
   WebServiceLogInitiatorType get logInitiator => _$this._logInitiator;
+
   set logInitiator(WebServiceLogInitiatorType logInitiator) =>
       _$this._logInitiator = logInitiator;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   String _request;
+
   String get request => _$this._request;
+
   set request(String request) => _$this._request = request;
 
   String _response;
+
   String get response => _$this._response;
+
   set response(String response) => _$this._response = response;
 
   ListWebServiceLogsApiWebServiceLogBuilder();
@@ -494,6 +518,7 @@ class _$ListWebServiceLogsApiWebServiceLogActions
       ListWebServiceLogsApiWebServiceLogBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

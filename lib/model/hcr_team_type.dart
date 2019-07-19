@@ -22,9 +22,9 @@ class HcrTeamType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<HcrTeamType> get values => _$hcrTeamTypeValues;
+  static BuiltSet<HcrTeamType> get values => _$values;
 
-  static HcrTeamType valueOf(String name) => _$hcrTeamTypeValueOf(name);
+  static HcrTeamType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -22,11 +22,9 @@ class LengthMeasurementType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<LengthMeasurementType> get values =>
-      _$lengthMeasurementTypeValues;
+  static BuiltSet<LengthMeasurementType> get values => _$values;
 
-  static LengthMeasurementType valueOf(String name) =>
-      _$lengthMeasurementTypeValueOf(name);
+  static LengthMeasurementType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

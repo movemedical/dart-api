@@ -22,11 +22,9 @@ class SalesOrderInventorySource extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<SalesOrderInventorySource> get values =>
-      _$salesOrderInventorySourceValues;
+  static BuiltSet<SalesOrderInventorySource> get values => _$values;
 
-  static SalesOrderInventorySource valueOf(String name) =>
-      _$salesOrderInventorySourceValueOf(name);
+  static SalesOrderInventorySource valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

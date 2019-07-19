@@ -22,9 +22,9 @@ class EventState extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<EventState> get values => _$eventStateValues;
+  static BuiltSet<EventState> get values => _$values;
 
-  static EventState valueOf(String name) => _$eventStateValueOf(name);
+  static EventState valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

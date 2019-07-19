@@ -153,21 +153,29 @@ class GetSalesOrderApiValidationMsgBuilder
   _$GetSalesOrderApiValidationMsg _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _messageGroupId;
+
   String get messageGroupId => _$this._messageGroupId;
+
   set messageGroupId(String messageGroupId) =>
       _$this._messageGroupId = messageGroupId;
 
   ValidationMessageType _messageType;
+
   ValidationMessageType get messageType => _$this._messageType;
+
   set messageType(ValidationMessageType messageType) =>
       _$this._messageType = messageType;
 
   String _message;
+
   String get message => _$this._message;
+
   set message(String message) => _$this._message = message;
 
   GetSalesOrderApiValidationMsgBuilder();
@@ -268,6 +276,7 @@ class _$GetSalesOrderApiValidationMsgActions
       GetSalesOrderApiValidationMsgBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

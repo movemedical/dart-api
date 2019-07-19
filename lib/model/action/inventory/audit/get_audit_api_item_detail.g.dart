@@ -167,24 +167,34 @@ class GetAuditApiItemDetailBuilder
   _$GetAuditApiItemDetail _$v;
 
   int _expectedItem;
+
   int get expectedItem => _$this._expectedItem;
+
   set expectedItem(int expectedItem) => _$this._expectedItem = expectedItem;
 
   int _notCountedItem;
+
   int get notCountedItem => _$this._notCountedItem;
+
   set notCountedItem(int notCountedItem) =>
       _$this._notCountedItem = notCountedItem;
 
   int _shortageItem;
+
   int get shortageItem => _$this._shortageItem;
+
   set shortageItem(int shortageItem) => _$this._shortageItem = shortageItem;
 
   int _overageItem;
+
   int get overageItem => _$this._overageItem;
+
   set overageItem(int overageItem) => _$this._overageItem = overageItem;
 
   int _matchedItem;
+
   int get matchedItem => _$this._matchedItem;
+
   set matchedItem(int matchedItem) => _$this._matchedItem = matchedItem;
 
   GetAuditApiItemDetailBuilder();
@@ -288,6 +298,7 @@ class _$GetAuditApiItemDetailActions extends GetAuditApiItemDetailActions {
   GetAuditApiItemDetailBuilder newBuilder$() => GetAuditApiItemDetailBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

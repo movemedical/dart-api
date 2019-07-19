@@ -10,6 +10,7 @@ import 'package:movemedical_api/model/order_by_params.dart';
 import 'package:movemedical_api/model/pagination_params.dart';
 import 'package:movemedical_api/model/sql/enums/facility_type.dart';
 import 'package:movemedical_api/model/sql/enums/location_type.dart';
+import 'package:movemedical_api/model/sql/enums/lost_found.dart';
 import 'package:movemedical_api/model/sql/enums/move_item_class.dart';
 import 'package:movemedical_api/model/sql/enums/move_item_type.dart';
 
@@ -92,6 +93,9 @@ abstract class ListStockSummaryApiRequest
   BuiltList<String> get expirationLevelIds;
 
   @nullable
+  LostFound get lostFound;
+
+  @nullable
   String get searchText;
 
   @nullable
@@ -108,6 +112,12 @@ abstract class ListStockSummaryApiRequest
 
   @nullable
   bool get demandLoanOnly;
+
+  @nullable
+  DateTime get demandLoanDueDateStart;
+
+  @nullable
+  DateTime get demandLoanDueDateEnd;
 
   @nullable
   bool get forExport;
@@ -190,6 +200,8 @@ abstract class ListStockSummaryApiRequestActions extends ModelActions<
 
   FieldDispatcher<BuiltList<String>> get expirationLevelIds;
 
+  FieldDispatcher<LostFound> get lostFound;
+
   FieldDispatcher<String> get searchText;
 
   FieldDispatcher<bool> get excludeInTransit;
@@ -201,6 +213,10 @@ abstract class ListStockSummaryApiRequestActions extends ModelActions<
   FieldDispatcher<bool> get excludeKitContainersAndContents;
 
   FieldDispatcher<bool> get demandLoanOnly;
+
+  FieldDispatcher<DateTime> get demandLoanDueDateStart;
+
+  FieldDispatcher<DateTime> get demandLoanDueDateEnd;
 
   FieldDispatcher<bool> get forExport;
 

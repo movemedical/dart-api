@@ -106,7 +106,9 @@ class ListPreferenceCardItemsApiRequestBuilder
   _$ListPreferenceCardItemsApiRequest _$v;
 
   String _preferenceCardId;
+
   String get preferenceCardId => _$this._preferenceCardId;
+
   set preferenceCardId(String preferenceCardId) =>
       _$this._preferenceCardId = preferenceCardId;
 
@@ -190,6 +192,7 @@ class _$ListPreferenceCardItemsApiRequestActions
       ListPreferenceCardItemsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

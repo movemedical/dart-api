@@ -99,7 +99,9 @@ class CreateNoteApiResponseBuilder
   _$CreateNoteApiResponse _$v;
 
   String _noteId;
+
   String get noteId => _$this._noteId;
+
   set noteId(String noteId) => _$this._noteId = noteId;
 
   CreateNoteApiResponseBuilder();
@@ -172,6 +174,7 @@ class _$CreateNoteApiResponseActions extends CreateNoteApiResponseActions {
   CreateNoteApiResponseBuilder newBuilder$() => CreateNoteApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

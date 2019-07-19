@@ -60,6 +60,7 @@ class _$ReleaseShipment2Api extends ReleaseShipment2Api {
           ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

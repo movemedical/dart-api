@@ -23,11 +23,10 @@ class ListContactsForSearchApiActiveStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListContactsForSearchApiActiveStatus> get values =>
-      _$listContactsForSearchApiActiveStatusValues;
+  static BuiltSet<ListContactsForSearchApiActiveStatus> get values => _$values;
 
   static ListContactsForSearchApiActiveStatus valueOf(String name) =>
-      _$listContactsForSearchApiActiveStatusValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

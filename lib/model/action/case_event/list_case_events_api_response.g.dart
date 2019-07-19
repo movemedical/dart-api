@@ -155,22 +155,30 @@ class ListCaseEventsApiResponseBuilder
   _$ListCaseEventsApiResponse _$v;
 
   ListBuilder<ListCaseEventsApiCaseEvent> _data;
+
   ListBuilder<ListCaseEventsApiCaseEvent> get data =>
       _$this._data ??= new ListBuilder<ListCaseEventsApiCaseEvent>();
+
   set data(ListBuilder<ListCaseEventsApiCaseEvent> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   bool _returnedCounts;
+
   bool get returnedCounts => _$this._returnedCounts;
+
   set returnedCounts(bool returnedCounts) =>
       _$this._returnedCounts = returnedCounts;
 
   ListBuilder<ListCaseEventsApiCountData> _countData;
+
   ListBuilder<ListCaseEventsApiCountData> get countData =>
       _$this._countData ??= new ListBuilder<ListCaseEventsApiCountData>();
+
   set countData(ListBuilder<ListCaseEventsApiCountData> countData) =>
       _$this._countData = countData;
 
@@ -287,6 +295,7 @@ class _$ListCaseEventsApiResponseActions
       ListCaseEventsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

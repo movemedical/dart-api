@@ -22,10 +22,9 @@ class NotificationType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<NotificationType> get values => _$notificationTypeValues;
+  static BuiltSet<NotificationType> get values => _$values;
 
-  static NotificationType valueOf(String name) =>
-      _$notificationTypeValueOf(name);
+  static NotificationType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

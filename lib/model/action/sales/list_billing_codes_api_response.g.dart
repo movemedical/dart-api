@@ -108,9 +108,11 @@ class ListBillingCodesApiResponseBuilder
   _$ListBillingCodesApiResponse _$v;
 
   ListBuilder<ListBillingCodesApiBillingCode> _billingCodes;
+
   ListBuilder<ListBillingCodesApiBillingCode> get billingCodes =>
       _$this._billingCodes ??=
           new ListBuilder<ListBillingCodesApiBillingCode>();
+
   set billingCodes(ListBuilder<ListBillingCodesApiBillingCode> billingCodes) =>
       _$this._billingCodes = billingCodes;
 
@@ -208,6 +210,7 @@ class _$ListBillingCodesApiResponseActions
       ListBillingCodesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

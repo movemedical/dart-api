@@ -107,7 +107,9 @@ class ConfirmMfaSmsEnrollmentApiResponseBuilder
   _$ConfirmMfaSmsEnrollmentApiResponse _$v;
 
   String _mfaSmsId;
+
   String get mfaSmsId => _$this._mfaSmsId;
+
   set mfaSmsId(String mfaSmsId) => _$this._mfaSmsId = mfaSmsId;
 
   ConfirmMfaSmsEnrollmentApiResponseBuilder();
@@ -186,6 +188,7 @@ class _$ConfirmMfaSmsEnrollmentApiResponseActions
       ConfirmMfaSmsEnrollmentApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

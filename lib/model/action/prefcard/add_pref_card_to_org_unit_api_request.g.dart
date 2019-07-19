@@ -120,11 +120,15 @@ class AddPrefCardToOrgUnitApiRequestBuilder
   _$AddPrefCardToOrgUnitApiRequest _$v;
 
   String _prefCardId;
+
   String get prefCardId => _$this._prefCardId;
+
   set prefCardId(String prefCardId) => _$this._prefCardId = prefCardId;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   AddPrefCardToOrgUnitApiRequestBuilder();
@@ -208,6 +212,7 @@ class _$AddPrefCardToOrgUnitApiRequestActions
       AddPrefCardToOrgUnitApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

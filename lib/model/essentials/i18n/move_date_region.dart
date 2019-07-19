@@ -22,9 +22,9 @@ class MoveDateRegion extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<MoveDateRegion> get values => _$moveDateRegionValues;
+  static BuiltSet<MoveDateRegion> get values => _$values;
 
-  static MoveDateRegion valueOf(String name) => _$moveDateRegionValueOf(name);
+  static MoveDateRegion valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

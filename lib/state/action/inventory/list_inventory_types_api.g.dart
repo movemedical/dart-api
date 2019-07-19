@@ -68,6 +68,7 @@ class _$ListInventoryTypesApi extends ListInventoryTypesApi {
           ApiResult<ListInventoryTypesApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -21,11 +21,9 @@ class ListAeTeamLinksApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListAeTeamLinksApiOrderBy> get values =>
-      _$listAeTeamLinksApiOrderByValues;
+  static BuiltSet<ListAeTeamLinksApiOrderBy> get values => _$values;
 
-  static ListAeTeamLinksApiOrderBy valueOf(String name) =>
-      _$listAeTeamLinksApiOrderByValueOf(name);
+  static ListAeTeamLinksApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

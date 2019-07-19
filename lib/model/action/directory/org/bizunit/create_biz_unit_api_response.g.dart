@@ -101,7 +101,9 @@ class CreateBizUnitApiResponseBuilder
   _$CreateBizUnitApiResponse _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   CreateBizUnitApiResponseBuilder();
@@ -178,6 +180,7 @@ class _$CreateBizUnitApiResponseActions
       CreateBizUnitApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -84,6 +84,12 @@ abstract class ListCaseEventsApiRequest
   String get patientSearch;
 
   @nullable
+  String get salesLeadId;
+
+  @nullable
+  String get opsLeadId;
+
+  @nullable
   String get caseNumber;
 
   @nullable
@@ -171,6 +177,10 @@ abstract class ListCaseEventsApiRequestActions extends ModelActions<
   FieldDispatcher<Gender> get patientGender;
 
   FieldDispatcher<String> get patientSearch;
+
+  FieldDispatcher<String> get salesLeadId;
+
+  FieldDispatcher<String> get opsLeadId;
 
   FieldDispatcher<String> get caseNumber;
 

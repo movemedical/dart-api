@@ -25,8 +25,7 @@ const BuildInspectionApiExtraEntryOptionType _$wireLOT_SERIAL_FIX =
 const BuildInspectionApiExtraEntryOptionType _$wireLOT_SERIAL_SWAP =
     const BuildInspectionApiExtraEntryOptionType._('LOT_SERIAL_SWAP');
 
-BuildInspectionApiExtraEntryOptionType
-    _$buildInspectionApiExtraEntryOptionTypeValueOf(String name) {
+BuildInspectionApiExtraEntryOptionType _$valueOf(String name) {
   switch (name) {
     case 'CREATE_AND_PROCESS_ORDER_FROM_LOCATION':
       return _$wireCREATE_AND_PROCESS_ORDER_FROM_LOCATION;
@@ -45,8 +44,7 @@ BuildInspectionApiExtraEntryOptionType
   }
 }
 
-final BuiltSet<BuildInspectionApiExtraEntryOptionType>
-    _$buildInspectionApiExtraEntryOptionTypeValues =
+final BuiltSet<BuildInspectionApiExtraEntryOptionType> _$values =
     new BuiltSet<BuildInspectionApiExtraEntryOptionType>(const <
         BuildInspectionApiExtraEntryOptionType>[
   _$wireCREATE_AND_PROCESS_ORDER_FROM_LOCATION,

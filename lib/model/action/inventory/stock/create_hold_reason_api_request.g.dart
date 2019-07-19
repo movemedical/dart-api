@@ -101,7 +101,9 @@ class CreateHoldReasonApiRequestBuilder
   _$CreateHoldReasonApiRequest _$v;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   CreateHoldReasonApiRequestBuilder();
@@ -178,6 +180,7 @@ class _$CreateHoldReasonApiRequestActions
       CreateHoldReasonApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

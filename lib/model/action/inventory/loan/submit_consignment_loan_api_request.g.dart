@@ -105,7 +105,9 @@ class SubmitConsignmentLoanApiRequestBuilder
   _$SubmitConsignmentLoanApiRequest _$v;
 
   String _loanId;
+
   String get loanId => _$this._loanId;
+
   set loanId(String loanId) => _$this._loanId = loanId;
 
   SubmitConsignmentLoanApiRequestBuilder();
@@ -184,6 +186,7 @@ class _$SubmitConsignmentLoanApiRequestActions
       SubmitConsignmentLoanApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

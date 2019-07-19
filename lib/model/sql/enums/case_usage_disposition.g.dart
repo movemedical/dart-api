@@ -15,7 +15,7 @@ const CaseUsageDisposition _$wireWASTED =
 const CaseUsageDisposition _$wireNON_SURGICAL =
     const CaseUsageDisposition._('NON_SURGICAL');
 
-CaseUsageDisposition _$caseUsageDispositionValueOf(String name) {
+CaseUsageDisposition _$valueOf(String name) {
   switch (name) {
     case 'IMPLANTED':
       return _$wireIMPLANTED;
@@ -30,7 +30,7 @@ CaseUsageDisposition _$caseUsageDispositionValueOf(String name) {
   }
 }
 
-final BuiltSet<CaseUsageDisposition> _$caseUsageDispositionValues =
+final BuiltSet<CaseUsageDisposition> _$values =
     new BuiltSet<CaseUsageDisposition>(const <CaseUsageDisposition>[
   _$wireIMPLANTED,
   _$wireDAMAGED,

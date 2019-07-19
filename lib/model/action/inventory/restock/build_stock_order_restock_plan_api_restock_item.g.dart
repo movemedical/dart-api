@@ -338,76 +338,104 @@ class BuildStockOrderRestockPlanApiRestockItemBuilder
   _$BuildStockOrderRestockPlanApiRestockItem _$v;
 
   String _pickId;
+
   String get pickId => _$this._pickId;
+
   set pickId(String pickId) => _$this._pickId = pickId;
 
   bool _shouldRestock;
+
   bool get shouldRestock => _$this._shouldRestock;
+
   set shouldRestock(bool shouldRestock) =>
       _$this._shouldRestock = shouldRestock;
 
   bool _requirePo;
+
   bool get requirePo => _$this._requirePo;
+
   set requirePo(bool requirePo) => _$this._requirePo = requirePo;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _itemNumber;
+
   String get itemNumber => _$this._itemNumber;
+
   set itemNumber(String itemNumber) => _$this._itemNumber = itemNumber;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   InventoryTypeBuilder _inventoryType;
+
   InventoryTypeBuilder get inventoryType =>
       _$this._inventoryType ??= new InventoryTypeBuilder();
+
   set inventoryType(InventoryTypeBuilder inventoryType) =>
       _$this._inventoryType = inventoryType;
 
   LocationBuilder _restockToLocation;
+
   LocationBuilder get restockToLocation =>
       _$this._restockToLocation ??= new LocationBuilder();
+
   set restockToLocation(LocationBuilder restockToLocation) =>
       _$this._restockToLocation = restockToLocation;
 
   CustomerAddressBuilder _deliverToAddress;
+
   CustomerAddressBuilder get deliverToAddress =>
       _$this._deliverToAddress ??= new CustomerAddressBuilder();
+
   set deliverToAddress(CustomerAddressBuilder deliverToAddress) =>
       _$this._deliverToAddress = deliverToAddress;
 
   AddressBuilder _deliverToAddressOverride;
+
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
+
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   BuildStockOrderRestockPlanApiRestockByDateType _restockByDateType;
+
   BuildStockOrderRestockPlanApiRestockByDateType get restockByDateType =>
       _$this._restockByDateType;
+
   set restockByDateType(
           BuildStockOrderRestockPlanApiRestockByDateType restockByDateType) =>
       _$this._restockByDateType = restockByDateType;
 
   DateTime _deliverByDate;
+
   DateTime get deliverByDate => _$this._deliverByDate;
+
   set deliverByDate(DateTime deliverByDate) =>
       _$this._deliverByDate = deliverByDate;
 
   ShippingServiceBuilder _shippingService;
+
   ShippingServiceBuilder get shippingService =>
       _$this._shippingService ??= new ShippingServiceBuilder();
+
   set shippingService(ShippingServiceBuilder shippingService) =>
       _$this._shippingService = shippingService;
 
   BuildStockOrderRestockPlanApiDisplayRuleBuilder _displayRule;
+
   BuildStockOrderRestockPlanApiDisplayRuleBuilder get displayRule =>
       _$this._displayRule ??=
           new BuildStockOrderRestockPlanApiDisplayRuleBuilder();
+
   set displayRule(
           BuildStockOrderRestockPlanApiDisplayRuleBuilder displayRule) =>
       _$this._displayRule = displayRule;
@@ -632,6 +660,7 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
       BuildStockOrderRestockPlanApiRestockItemBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.inventoryType,
@@ -643,6 +672,7 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

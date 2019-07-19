@@ -217,44 +217,58 @@ class GetUiSetupAllApiOrgInfoBuilder
   _$GetUiSetupAllApiOrgInfo _$v;
 
   GetUiSetupAllApiBizUnitBuilder _defaultBizUnit;
+
   GetUiSetupAllApiBizUnitBuilder get defaultBizUnit =>
       _$this._defaultBizUnit ??= new GetUiSetupAllApiBizUnitBuilder();
+
   set defaultBizUnit(GetUiSetupAllApiBizUnitBuilder defaultBizUnit) =>
       _$this._defaultBizUnit = defaultBizUnit;
 
   GetUiSetupAllApiOrgUnitBuilder _defaultSalesOrgUnit;
+
   GetUiSetupAllApiOrgUnitBuilder get defaultSalesOrgUnit =>
       _$this._defaultSalesOrgUnit ??= new GetUiSetupAllApiOrgUnitBuilder();
+
   set defaultSalesOrgUnit(GetUiSetupAllApiOrgUnitBuilder defaultSalesOrgUnit) =>
       _$this._defaultSalesOrgUnit = defaultSalesOrgUnit;
 
   GetUiSetupAllApiOrgUnitBuilder _defaultOpsOrgUnit;
+
   GetUiSetupAllApiOrgUnitBuilder get defaultOpsOrgUnit =>
       _$this._defaultOpsOrgUnit ??= new GetUiSetupAllApiOrgUnitBuilder();
+
   set defaultOpsOrgUnit(GetUiSetupAllApiOrgUnitBuilder defaultOpsOrgUnit) =>
       _$this._defaultOpsOrgUnit = defaultOpsOrgUnit;
 
   ListBuilder<GetUiSetupAllApiBizUnit> _bizUnits;
+
   ListBuilder<GetUiSetupAllApiBizUnit> get bizUnits =>
       _$this._bizUnits ??= new ListBuilder<GetUiSetupAllApiBizUnit>();
+
   set bizUnits(ListBuilder<GetUiSetupAllApiBizUnit> bizUnits) =>
       _$this._bizUnits = bizUnits;
 
   ListBuilder<GetUiSetupAllApiOrgUnit> _invOnlyOrgUnits;
+
   ListBuilder<GetUiSetupAllApiOrgUnit> get invOnlyOrgUnits =>
       _$this._invOnlyOrgUnits ??= new ListBuilder<GetUiSetupAllApiOrgUnit>();
+
   set invOnlyOrgUnits(ListBuilder<GetUiSetupAllApiOrgUnit> invOnlyOrgUnits) =>
       _$this._invOnlyOrgUnits = invOnlyOrgUnits;
 
   ListBuilder<GetUiSetupAllApiOrgUnit> _fullAccessOrgUnits;
+
   ListBuilder<GetUiSetupAllApiOrgUnit> get fullAccessOrgUnits =>
       _$this._fullAccessOrgUnits ??= new ListBuilder<GetUiSetupAllApiOrgUnit>();
+
   set fullAccessOrgUnits(
           ListBuilder<GetUiSetupAllApiOrgUnit> fullAccessOrgUnits) =>
       _$this._fullAccessOrgUnits = fullAccessOrgUnits;
 
   bool _allowCasesWithoutDates;
+
   bool get allowCasesWithoutDates => _$this._allowCasesWithoutDates;
+
   set allowCasesWithoutDates(bool allowCasesWithoutDates) =>
       _$this._allowCasesWithoutDates = allowCasesWithoutDates;
 
@@ -419,6 +433,7 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
       GetUiSetupAllApiOrgInfoBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.defaultBizUnit,
@@ -427,6 +442,7 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

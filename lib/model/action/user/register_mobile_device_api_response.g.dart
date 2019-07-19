@@ -106,7 +106,9 @@ class RegisterMobileDeviceApiResponseBuilder
   _$RegisterMobileDeviceApiResponse _$v;
 
   String _deviceId;
+
   String get deviceId => _$this._deviceId;
+
   set deviceId(String deviceId) => _$this._deviceId = deviceId;
 
   RegisterMobileDeviceApiResponseBuilder();
@@ -185,6 +187,7 @@ class _$RegisterMobileDeviceApiResponseActions
       RegisterMobileDeviceApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

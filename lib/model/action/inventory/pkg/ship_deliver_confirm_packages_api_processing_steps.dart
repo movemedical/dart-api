@@ -27,10 +27,10 @@ class ShipDeliverConfirmPackagesApiProcessingSteps extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ShipDeliverConfirmPackagesApiProcessingSteps> get values =>
-      _$shipDeliverConfirmPackagesApiProcessingStepsValues;
+      _$values;
 
   static ShipDeliverConfirmPackagesApiProcessingSteps valueOf(String name) =>
-      _$shipDeliverConfirmPackagesApiProcessingStepsValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

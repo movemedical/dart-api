@@ -207,33 +207,47 @@ class ListCustomersApiCustomerDetailsBuilder
   _$ListCustomersApiCustomerDetails _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _hsOrgId;
+
   String get hsOrgId => _$this._hsOrgId;
+
   set hsOrgId(String hsOrgId) => _$this._hsOrgId = hsOrgId;
 
   String _hsOrgName;
+
   String get hsOrgName => _$this._hsOrgName;
+
   set hsOrgName(String hsOrgName) => _$this._hsOrgName = hsOrgName;
 
   String _customerNumber;
+
   String get customerNumber => _$this._customerNumber;
+
   set customerNumber(String customerNumber) =>
       _$this._customerNumber = customerNumber;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _formattedName;
+
   String get formattedName => _$this._formattedName;
+
   set formattedName(String formattedName) =>
       _$this._formattedName = formattedName;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   ListCustomersApiCustomerDetailsBuilder();
@@ -349,6 +363,7 @@ class _$ListCustomersApiCustomerDetailsActions
       ListCustomersApiCustomerDetailsBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

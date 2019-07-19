@@ -36,9 +36,9 @@ class OrderStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<OrderStatus> get values => _$orderStatusValues;
+  static BuiltSet<OrderStatus> get values => _$values;
 
-  static OrderStatus valueOf(String name) => _$orderStatusValueOf(name);
+  static OrderStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

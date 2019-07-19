@@ -69,6 +69,7 @@ class _$GetCustomerRelationshipsApi extends GetCustomerRelationshipsApi {
           ApiResult<GetCustomerRelationshipsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

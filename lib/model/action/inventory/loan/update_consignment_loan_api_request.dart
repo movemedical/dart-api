@@ -83,6 +83,12 @@ abstract class UpdateConsignmentLoanApiRequest
   @nullable
   String get reference;
 
+  @nullable
+  String get opsLeadUserId;
+
+  @nullable
+  String get salesLeadUserId;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -152,6 +158,10 @@ abstract class UpdateConsignmentLoanApiRequestActions extends ModelActions<
   FieldDispatcher<String> get description;
 
   FieldDispatcher<String> get reference;
+
+  FieldDispatcher<String> get opsLeadUserId;
+
+  FieldDispatcher<String> get salesLeadUserId;
 
   ////////////////////////////////
   /// Constructors

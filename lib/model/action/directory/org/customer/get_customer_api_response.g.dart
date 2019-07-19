@@ -101,8 +101,10 @@ class GetCustomerApiResponseBuilder
   _$GetCustomerApiResponse _$v;
 
   GetCustomerApiCustomerDetailBuilder _data;
+
   GetCustomerApiCustomerDetailBuilder get data =>
       _$this._data ??= new GetCustomerApiCustomerDetailBuilder();
+
   set data(GetCustomerApiCustomerDetailBuilder data) => _$this._data = data;
 
   GetCustomerApiResponseBuilder();
@@ -196,12 +198,14 @@ class _$GetCustomerApiResponseActions extends GetCustomerApiResponseActions {
       GetCustomerApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.data,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

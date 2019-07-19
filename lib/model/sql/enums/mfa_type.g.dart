@@ -8,7 +8,7 @@ part of 'mfa_type.dart';
 
 const MfaType _$wireSMS = const MfaType._('SMS');
 
-MfaType _$mfaTypeValueOf(String name) {
+MfaType _$valueOf(String name) {
   switch (name) {
     case 'SMS':
       return _$wireSMS;
@@ -17,7 +17,7 @@ MfaType _$mfaTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<MfaType> _$mfaTypeValues = new BuiltSet<MfaType>(const <MfaType>[
+final BuiltSet<MfaType> _$values = new BuiltSet<MfaType>(const <MfaType>[
   _$wireSMS,
 ]);
 

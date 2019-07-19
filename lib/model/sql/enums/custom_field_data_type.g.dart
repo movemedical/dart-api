@@ -16,7 +16,7 @@ const CustomFieldDataType _$wireBOOLEAN =
     const CustomFieldDataType._('BOOLEAN');
 const CustomFieldDataType _$wireCHOICE = const CustomFieldDataType._('CHOICE');
 
-CustomFieldDataType _$customFieldDataTypeValueOf(String name) {
+CustomFieldDataType _$valueOf(String name) {
   switch (name) {
     case 'STRING':
       return _$wireSTRING;
@@ -37,7 +37,7 @@ CustomFieldDataType _$customFieldDataTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<CustomFieldDataType> _$customFieldDataTypeValues =
+final BuiltSet<CustomFieldDataType> _$values =
     new BuiltSet<CustomFieldDataType>(const <CustomFieldDataType>[
   _$wireSTRING,
   _$wireLONG,

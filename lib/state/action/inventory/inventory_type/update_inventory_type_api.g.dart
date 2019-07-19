@@ -61,6 +61,7 @@ class _$UpdateInventoryTypeApi extends UpdateInventoryTypeApi {
           ApiCommand<UpdateInventoryTypeApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

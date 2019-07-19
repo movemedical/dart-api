@@ -251,44 +251,64 @@ class GetTeamApiTeamDetailBuilder
   _$GetTeamApiTeamDetail _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _orgName;
+
   String get orgName => _$this._orgName;
+
   set orgName(String orgName) => _$this._orgName = orgName;
 
   OrgType _orgType;
+
   OrgType get orgType => _$this._orgType;
+
   set orgType(OrgType orgType) => _$this._orgType = orgType;
 
   bool _salesTeam;
+
   bool get salesTeam => _$this._salesTeam;
+
   set salesTeam(bool salesTeam) => _$this._salesTeam = salesTeam;
 
   bool _opsTeam;
+
   bool get opsTeam => _$this._opsTeam;
+
   set opsTeam(bool opsTeam) => _$this._opsTeam = opsTeam;
 
   String _teamReference;
+
   String get teamReference => _$this._teamReference;
+
   set teamReference(String teamReference) =>
       _$this._teamReference = teamReference;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _timeZone;
+
   String get timeZone => _$this._timeZone;
+
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   GetTeamApiTeamDetailBuilder();
@@ -411,6 +431,7 @@ class _$GetTeamApiTeamDetailActions extends GetTeamApiTeamDetailActions {
   GetTeamApiTeamDetailBuilder newBuilder$() => GetTeamApiTeamDetailBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

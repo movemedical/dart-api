@@ -168,30 +168,40 @@ class GetAuditApiResponseBuilder
   _$GetAuditApiResponse _$v;
 
   AuditBuilder _audit;
+
   AuditBuilder get audit => _$this._audit ??= new AuditBuilder();
+
   set audit(AuditBuilder audit) => _$this._audit = audit;
 
   LocationBuilder _location;
+
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
+
   set location(LocationBuilder location) => _$this._location = location;
 
   GetAuditApiAuditCountedSummaryBuilder _auditCountedSummary;
+
   GetAuditApiAuditCountedSummaryBuilder get auditCountedSummary =>
       _$this._auditCountedSummary ??=
           new GetAuditApiAuditCountedSummaryBuilder();
+
   set auditCountedSummary(
           GetAuditApiAuditCountedSummaryBuilder auditCountedSummary) =>
       _$this._auditCountedSummary = auditCountedSummary;
 
   GetAuditApiBillingInfoBuilder _billingInfo;
+
   GetAuditApiBillingInfoBuilder get billingInfo =>
       _$this._billingInfo ??= new GetAuditApiBillingInfoBuilder();
+
   set billingInfo(GetAuditApiBillingInfoBuilder billingInfo) =>
       _$this._billingInfo = billingInfo;
 
   GetAuditApiDisplayRuleBuilder _displayRules;
+
   GetAuditApiDisplayRuleBuilder get displayRules =>
       _$this._displayRules ??= new GetAuditApiDisplayRuleBuilder();
+
   set displayRules(GetAuditApiDisplayRuleBuilder displayRules) =>
       _$this._displayRules = displayRules;
 
@@ -338,6 +348,7 @@ class _$GetAuditApiResponseActions extends GetAuditApiResponseActions {
   GetAuditApiResponseBuilder newBuilder$() => GetAuditApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.audit,
@@ -348,6 +359,7 @@ class _$GetAuditApiResponseActions extends GetAuditApiResponseActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

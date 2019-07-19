@@ -11,8 +11,7 @@ const ListOpenBillingsApiOpenBillingDataType _$wireDOUBLE =
 const ListOpenBillingsApiOpenBillingDataType _$wireLONG =
     const ListOpenBillingsApiOpenBillingDataType._('LONG');
 
-ListOpenBillingsApiOpenBillingDataType
-    _$listOpenBillingsApiOpenBillingDataTypeValueOf(String name) {
+ListOpenBillingsApiOpenBillingDataType _$valueOf(String name) {
   switch (name) {
     case 'DOUBLE':
       return _$wireDOUBLE;
@@ -23,8 +22,7 @@ ListOpenBillingsApiOpenBillingDataType
   }
 }
 
-final BuiltSet<ListOpenBillingsApiOpenBillingDataType>
-    _$listOpenBillingsApiOpenBillingDataTypeValues =
+final BuiltSet<ListOpenBillingsApiOpenBillingDataType> _$values =
     new BuiltSet<ListOpenBillingsApiOpenBillingDataType>(const <
         ListOpenBillingsApiOpenBillingDataType>[
   _$wireDOUBLE,

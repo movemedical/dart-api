@@ -223,6 +223,18 @@ class _$MoveStock2ApiRequestSerializer
         ..add(serializers.serialize(object.attention,
             specifiedType: const FullType(String)));
     }
+    if (object.salesLeadUserId != null) {
+      result
+        ..add('salesLeadUserId')
+        ..add(serializers.serialize(object.salesLeadUserId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.opsLeadUserId != null) {
+      result
+        ..add('opsLeadUserId')
+        ..add(serializers.serialize(object.opsLeadUserId,
+            specifiedType: const FullType(String)));
+    }
     if (object.trackingNumber != null) {
       result
         ..add('trackingNumber')
@@ -381,6 +393,14 @@ class _$MoveStock2ApiRequestSerializer
           result.attention = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'salesLeadUserId':
+          result.salesLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'opsLeadUserId':
+          result.opsLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'trackingNumber':
           result.trackingNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -460,6 +480,10 @@ class _$MoveStock2ApiRequest extends MoveStock2ApiRequest {
   @override
   final String attention;
   @override
+  final String salesLeadUserId;
+  @override
+  final String opsLeadUserId;
+  @override
   final String trackingNumber;
 
   factory _$MoveStock2ApiRequest(
@@ -500,6 +524,8 @@ class _$MoveStock2ApiRequest extends MoveStock2ApiRequest {
       this.shippingServiceId,
       this.email,
       this.attention,
+      this.salesLeadUserId,
+      this.opsLeadUserId,
       this.trackingNumber})
       : super._();
 
@@ -548,6 +574,8 @@ class _$MoveStock2ApiRequest extends MoveStock2ApiRequest {
         shippingServiceId == other.shippingServiceId &&
         email == other.email &&
         attention == other.attention &&
+        salesLeadUserId == other.salesLeadUserId &&
+        opsLeadUserId == other.opsLeadUserId &&
         trackingNumber == other.trackingNumber;
   }
 
@@ -571,25 +599,25 @@ class _$MoveStock2ApiRequest extends MoveStock2ApiRequest {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, orderReasonId.hashCode), loanId.hashCode), toLocationId.hashCode), toLocationType.hashCode), opsOrgUnitId.hashCode), salesOrgUnitId.hashCode), bizUnitId.hashCode), processingLevel.hashCode), stock.hashCode), toInventoryTypeId.hashCode), toResponsiblePartyType.hashCode), toResponsiblePartyId.hashCode), toHomeLocationType.hashCode), toHomeLocationId.hashCode), erpReference.hashCode),
-                                                                                transferTypeId.hashCode),
-                                                                            moveItemClass.hashCode),
-                                                                        proxyLocationType.hashCode),
-                                                                    proxyLocationId.hashCode),
-                                                                toContainerType.hashCode),
-                                                            toContainerId.hashCode),
-                                                        sourceStartDate.hashCode),
-                                                    deliverWindowStart.hashCode),
-                                                deliverWindowEnd.hashCode),
-                                            loanServiceEndDate.hashCode),
-                                        fulfillmentCutoffDate.hashCode),
-                                    deliverToAddressId.hashCode),
-                                deliverToAddressOverride.hashCode),
-                            shipToAddressId.hashCode),
-                        expirationCutoff.hashCode),
-                    shippingServiceId.hashCode),
-                email.hashCode),
-            attention.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, orderReasonId.hashCode), loanId.hashCode), toLocationId.hashCode), toLocationType.hashCode), opsOrgUnitId.hashCode), salesOrgUnitId.hashCode), bizUnitId.hashCode), processingLevel.hashCode), stock.hashCode), toInventoryTypeId.hashCode), toResponsiblePartyType.hashCode), toResponsiblePartyId.hashCode), toHomeLocationType.hashCode), toHomeLocationId.hashCode), erpReference.hashCode), transferTypeId.hashCode), moveItemClass.hashCode),
+                                                                                proxyLocationType.hashCode),
+                                                                            proxyLocationId.hashCode),
+                                                                        toContainerType.hashCode),
+                                                                    toContainerId.hashCode),
+                                                                sourceStartDate.hashCode),
+                                                            deliverWindowStart.hashCode),
+                                                        deliverWindowEnd.hashCode),
+                                                    loanServiceEndDate.hashCode),
+                                                fulfillmentCutoffDate.hashCode),
+                                            deliverToAddressId.hashCode),
+                                        deliverToAddressOverride.hashCode),
+                                    shipToAddressId.hashCode),
+                                expirationCutoff.hashCode),
+                            shippingServiceId.hashCode),
+                        email.hashCode),
+                    attention.hashCode),
+                salesLeadUserId.hashCode),
+            opsLeadUserId.hashCode),
         trackingNumber.hashCode));
   }
 
@@ -629,6 +657,8 @@ class _$MoveStock2ApiRequest extends MoveStock2ApiRequest {
           ..add('shippingServiceId', shippingServiceId)
           ..add('email', email)
           ..add('attention', attention)
+          ..add('salesLeadUserId', salesLeadUserId)
+          ..add('opsLeadUserId', opsLeadUserId)
           ..add('trackingNumber', trackingNumber))
         .toString();
   }
@@ -639,168 +669,250 @@ class MoveStock2ApiRequestBuilder
   _$MoveStock2ApiRequest _$v;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
   String _loanId;
+
   String get loanId => _$this._loanId;
+
   set loanId(String loanId) => _$this._loanId = loanId;
 
   String _toLocationId;
+
   String get toLocationId => _$this._toLocationId;
+
   set toLocationId(String toLocationId) => _$this._toLocationId = toLocationId;
 
   LocationType _toLocationType;
+
   LocationType get toLocationType => _$this._toLocationType;
+
   set toLocationType(LocationType toLocationType) =>
       _$this._toLocationType = toLocationType;
 
   String _opsOrgUnitId;
+
   String get opsOrgUnitId => _$this._opsOrgUnitId;
+
   set opsOrgUnitId(String opsOrgUnitId) => _$this._opsOrgUnitId = opsOrgUnitId;
 
   String _salesOrgUnitId;
+
   String get salesOrgUnitId => _$this._salesOrgUnitId;
+
   set salesOrgUnitId(String salesOrgUnitId) =>
       _$this._salesOrgUnitId = salesOrgUnitId;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   MoveStock2ApiProcessingLevel _processingLevel;
+
   MoveStock2ApiProcessingLevel get processingLevel => _$this._processingLevel;
+
   set processingLevel(MoveStock2ApiProcessingLevel processingLevel) =>
       _$this._processingLevel = processingLevel;
 
   ListBuilder<MoveStock2ApiMovingStockReq> _stock;
+
   ListBuilder<MoveStock2ApiMovingStockReq> get stock =>
       _$this._stock ??= new ListBuilder<MoveStock2ApiMovingStockReq>();
+
   set stock(ListBuilder<MoveStock2ApiMovingStockReq> stock) =>
       _$this._stock = stock;
 
   String _toInventoryTypeId;
+
   String get toInventoryTypeId => _$this._toInventoryTypeId;
+
   set toInventoryTypeId(String toInventoryTypeId) =>
       _$this._toInventoryTypeId = toInventoryTypeId;
 
   ResponsiblePartyType _toResponsiblePartyType;
+
   ResponsiblePartyType get toResponsiblePartyType =>
       _$this._toResponsiblePartyType;
+
   set toResponsiblePartyType(ResponsiblePartyType toResponsiblePartyType) =>
       _$this._toResponsiblePartyType = toResponsiblePartyType;
 
   String _toResponsiblePartyId;
+
   String get toResponsiblePartyId => _$this._toResponsiblePartyId;
+
   set toResponsiblePartyId(String toResponsiblePartyId) =>
       _$this._toResponsiblePartyId = toResponsiblePartyId;
 
   LocationType _toHomeLocationType;
+
   LocationType get toHomeLocationType => _$this._toHomeLocationType;
+
   set toHomeLocationType(LocationType toHomeLocationType) =>
       _$this._toHomeLocationType = toHomeLocationType;
 
   String _toHomeLocationId;
+
   String get toHomeLocationId => _$this._toHomeLocationId;
+
   set toHomeLocationId(String toHomeLocationId) =>
       _$this._toHomeLocationId = toHomeLocationId;
 
   String _erpReference;
+
   String get erpReference => _$this._erpReference;
+
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   String _transferTypeId;
+
   String get transferTypeId => _$this._transferTypeId;
+
   set transferTypeId(String transferTypeId) =>
       _$this._transferTypeId = transferTypeId;
 
   MoveItemClass _moveItemClass;
+
   MoveItemClass get moveItemClass => _$this._moveItemClass;
+
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   LocationType _proxyLocationType;
+
   LocationType get proxyLocationType => _$this._proxyLocationType;
+
   set proxyLocationType(LocationType proxyLocationType) =>
       _$this._proxyLocationType = proxyLocationType;
 
   String _proxyLocationId;
+
   String get proxyLocationId => _$this._proxyLocationId;
+
   set proxyLocationId(String proxyLocationId) =>
       _$this._proxyLocationId = proxyLocationId;
 
   StockContainerType _toContainerType;
+
   StockContainerType get toContainerType => _$this._toContainerType;
+
   set toContainerType(StockContainerType toContainerType) =>
       _$this._toContainerType = toContainerType;
 
   String _toContainerId;
+
   String get toContainerId => _$this._toContainerId;
+
   set toContainerId(String toContainerId) =>
       _$this._toContainerId = toContainerId;
 
   DateTime _sourceStartDate;
+
   DateTime get sourceStartDate => _$this._sourceStartDate;
+
   set sourceStartDate(DateTime sourceStartDate) =>
       _$this._sourceStartDate = sourceStartDate;
 
   DateTime _deliverWindowStart;
+
   DateTime get deliverWindowStart => _$this._deliverWindowStart;
+
   set deliverWindowStart(DateTime deliverWindowStart) =>
       _$this._deliverWindowStart = deliverWindowStart;
 
   DateTime _deliverWindowEnd;
+
   DateTime get deliverWindowEnd => _$this._deliverWindowEnd;
+
   set deliverWindowEnd(DateTime deliverWindowEnd) =>
       _$this._deliverWindowEnd = deliverWindowEnd;
 
   DateTime _loanServiceEndDate;
+
   DateTime get loanServiceEndDate => _$this._loanServiceEndDate;
+
   set loanServiceEndDate(DateTime loanServiceEndDate) =>
       _$this._loanServiceEndDate = loanServiceEndDate;
 
   DateTime _fulfillmentCutoffDate;
+
   DateTime get fulfillmentCutoffDate => _$this._fulfillmentCutoffDate;
+
   set fulfillmentCutoffDate(DateTime fulfillmentCutoffDate) =>
       _$this._fulfillmentCutoffDate = fulfillmentCutoffDate;
 
   String _deliverToAddressId;
+
   String get deliverToAddressId => _$this._deliverToAddressId;
+
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   AddressBuilder _deliverToAddressOverride;
+
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
+
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   String _shipToAddressId;
+
   String get shipToAddressId => _$this._shipToAddressId;
+
   set shipToAddressId(String shipToAddressId) =>
       _$this._shipToAddressId = shipToAddressId;
 
   DateTime _expirationCutoff;
+
   DateTime get expirationCutoff => _$this._expirationCutoff;
+
   set expirationCutoff(DateTime expirationCutoff) =>
       _$this._expirationCutoff = expirationCutoff;
 
   String _shippingServiceId;
+
   String get shippingServiceId => _$this._shippingServiceId;
+
   set shippingServiceId(String shippingServiceId) =>
       _$this._shippingServiceId = shippingServiceId;
 
   String _email;
+
   String get email => _$this._email;
+
   set email(String email) => _$this._email = email;
 
   String _attention;
+
   String get attention => _$this._attention;
+
   set attention(String attention) => _$this._attention = attention;
 
+  String _salesLeadUserId;
+
+  String get salesLeadUserId => _$this._salesLeadUserId;
+
+  set salesLeadUserId(String salesLeadUserId) =>
+      _$this._salesLeadUserId = salesLeadUserId;
+
+  String _opsLeadUserId;
+
+  String get opsLeadUserId => _$this._opsLeadUserId;
+
+  set opsLeadUserId(String opsLeadUserId) =>
+      _$this._opsLeadUserId = opsLeadUserId;
+
   String _trackingNumber;
+
   String get trackingNumber => _$this._trackingNumber;
+
   set trackingNumber(String trackingNumber) =>
       _$this._trackingNumber = trackingNumber;
 
@@ -841,6 +953,8 @@ class MoveStock2ApiRequestBuilder
       _shippingServiceId = _$v.shippingServiceId;
       _email = _$v.email;
       _attention = _$v.attention;
+      _salesLeadUserId = _$v.salesLeadUserId;
+      _opsLeadUserId = _$v.opsLeadUserId;
       _trackingNumber = _$v.trackingNumber;
       _$v = null;
     }
@@ -899,6 +1013,8 @@ class MoveStock2ApiRequestBuilder
               shippingServiceId: shippingServiceId,
               email: email,
               attention: attention,
+              salesLeadUserId: salesLeadUserId,
+              opsLeadUserId: opsLeadUserId,
               trackingNumber: trackingNumber);
     } catch (_) {
       String _$failedField;
@@ -971,6 +1087,8 @@ class _$MoveStock2ApiRequestActions extends MoveStock2ApiRequestActions {
   final FieldDispatcher<String> shippingServiceId;
   final FieldDispatcher<String> email;
   final FieldDispatcher<String> attention;
+  final FieldDispatcher<String> salesLeadUserId;
+  final FieldDispatcher<String> opsLeadUserId;
   final FieldDispatcher<String> trackingNumber;
 
   _$MoveStock2ApiRequestActions._(this.options$)
@@ -1129,6 +1247,16 @@ class _$MoveStock2ApiRequestActions extends MoveStock2ApiRequestActions {
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
         attention = options$.field<String>('attention', (a) => a?.attention,
             (s) => s?.attention, (p, b) => p?.attention = b),
+        salesLeadUserId = options$.field<String>(
+            'salesLeadUserId',
+            (a) => a?.salesLeadUserId,
+            (s) => s?.salesLeadUserId,
+            (p, b) => p?.salesLeadUserId = b),
+        opsLeadUserId = options$.field<String>(
+            'opsLeadUserId',
+            (a) => a?.opsLeadUserId,
+            (s) => s?.opsLeadUserId,
+            (p, b) => p?.opsLeadUserId = b),
         trackingNumber = options$.field<String>(
             'trackingNumber',
             (a) => a?.trackingNumber,
@@ -1147,12 +1275,14 @@ class _$MoveStock2ApiRequestActions extends MoveStock2ApiRequestActions {
   MoveStock2ApiRequestBuilder newBuilder$() => MoveStock2ApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -1189,6 +1319,8 @@ class _$MoveStock2ApiRequestActions extends MoveStock2ApiRequestActions {
         this.shippingServiceId,
         this.email,
         this.attention,
+        this.salesLeadUserId,
+        this.opsLeadUserId,
         this.trackingNumber,
       ]);
 
@@ -1228,6 +1360,8 @@ class _$MoveStock2ApiRequestActions extends MoveStock2ApiRequestActions {
     shippingServiceId.reducer$(reducer);
     email.reducer$(reducer);
     attention.reducer$(reducer);
+    salesLeadUserId.reducer$(reducer);
+    opsLeadUserId.reducer$(reducer);
     trackingNumber.reducer$(reducer);
   }
 

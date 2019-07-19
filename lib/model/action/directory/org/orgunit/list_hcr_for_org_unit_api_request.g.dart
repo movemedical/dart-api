@@ -136,16 +136,22 @@ class ListHCRForOrgUnitApiRequestBuilder
   _$ListHCRForOrgUnitApiRequest _$v;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListHCRForOrgUnitApiRequestBuilder();
@@ -253,12 +259,14 @@ class _$ListHCRForOrgUnitApiRequestActions
       ListHCRForOrgUnitApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

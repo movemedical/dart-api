@@ -32,10 +32,9 @@ class GeneralContactType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<GeneralContactType> get values => _$generalContactTypeValues;
+  static BuiltSet<GeneralContactType> get values => _$values;
 
-  static GeneralContactType valueOf(String name) =>
-      _$generalContactTypeValueOf(name);
+  static GeneralContactType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

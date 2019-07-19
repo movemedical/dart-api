@@ -22,11 +22,10 @@ class ListInvTypesToBeCountedApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListInvTypesToBeCountedApiOrderBy> get values =>
-      _$listInvTypesToBeCountedApiOrderByValues;
+  static BuiltSet<ListInvTypesToBeCountedApiOrderBy> get values => _$values;
 
   static ListInvTypesToBeCountedApiOrderBy valueOf(String name) =>
-      _$listInvTypesToBeCountedApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

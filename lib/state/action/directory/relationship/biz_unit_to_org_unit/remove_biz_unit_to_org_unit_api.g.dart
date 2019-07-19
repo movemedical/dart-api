@@ -63,6 +63,7 @@ class _$RemoveBizUnitToOrgUnitApi extends RemoveBizUnitToOrgUnitApi {
           ApiCommand<RemoveBizUnitToOrgUnitApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

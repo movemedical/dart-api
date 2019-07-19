@@ -25,9 +25,9 @@ class BodySide extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<BodySide> get values => _$bodySideValues;
+  static BuiltSet<BodySide> get values => _$values;
 
-  static BodySide valueOf(String name) => _$bodySideValueOf(name);
+  static BodySide valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -151,19 +151,27 @@ class UpdateConversationApiRequestBuilder
   _$UpdateConversationApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   bool _stop;
+
   bool get stop => _$this._stop;
+
   set stop(bool stop) => _$this._stop = stop;
 
   String _purpose;
+
   String get purpose => _$this._purpose;
+
   set purpose(String purpose) => _$this._purpose = purpose;
 
   DateTime _urgency;
+
   DateTime get urgency => _$this._urgency;
+
   set urgency(DateTime urgency) => _$this._urgency = urgency;
 
   UpdateConversationApiRequestBuilder();
@@ -255,6 +263,7 @@ class _$UpdateConversationApiRequestActions
       UpdateConversationApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

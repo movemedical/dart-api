@@ -17,8 +17,7 @@ const BuildInspectionApiReceiptUpdateType _$wireAUTO_SCAN =
 const BuildInspectionApiReceiptUpdateType _$wireRECEIVE_INTO_BIN_UPDATE =
     const BuildInspectionApiReceiptUpdateType._('RECEIVE_INTO_BIN_UPDATE');
 
-BuildInspectionApiReceiptUpdateType
-    _$buildInspectionApiReceiptUpdateTypeValueOf(String name) {
+BuildInspectionApiReceiptUpdateType _$valueOf(String name) {
   switch (name) {
     case 'REMOVE_RECEIPT':
       return _$wireREMOVE_RECEIPT;
@@ -35,8 +34,7 @@ BuildInspectionApiReceiptUpdateType
   }
 }
 
-final BuiltSet<BuildInspectionApiReceiptUpdateType>
-    _$buildInspectionApiReceiptUpdateTypeValues =
+final BuiltSet<BuildInspectionApiReceiptUpdateType> _$values =
     new BuiltSet<BuildInspectionApiReceiptUpdateType>(const <
         BuildInspectionApiReceiptUpdateType>[
   _$wireREMOVE_RECEIPT,

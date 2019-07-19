@@ -66,6 +66,7 @@ class _$LoadTestActionApi extends LoadTestActionApi {
           ApiResult<LoadTestActionApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

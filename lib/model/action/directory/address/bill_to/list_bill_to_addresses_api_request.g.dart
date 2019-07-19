@@ -193,30 +193,42 @@ class ListBillToAddressesApiRequestBuilder
   _$ListBillToAddressesApiRequest _$v;
 
   String _customerId;
+
   String get customerId => _$this._customerId;
+
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListBillToAddressesApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListBillToAddressesApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListBillToAddressesApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListBillToAddressesApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -352,6 +364,7 @@ class _$ListBillToAddressesApiRequestActions
       ListBillToAddressesApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
@@ -359,6 +372,7 @@ class _$ListBillToAddressesApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

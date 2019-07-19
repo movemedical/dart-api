@@ -9,7 +9,7 @@ part of 'notification_type.dart';
 const NotificationType _$wireINFO = const NotificationType._('INFO');
 const NotificationType _$wireWARN = const NotificationType._('WARN');
 
-NotificationType _$notificationTypeValueOf(String name) {
+NotificationType _$valueOf(String name) {
   switch (name) {
     case 'INFO':
       return _$wireINFO;
@@ -20,7 +20,7 @@ NotificationType _$notificationTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<NotificationType> _$notificationTypeValues =
+final BuiltSet<NotificationType> _$values =
     new BuiltSet<NotificationType>(const <NotificationType>[
   _$wireINFO,
   _$wireWARN,

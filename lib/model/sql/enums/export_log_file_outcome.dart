@@ -22,11 +22,9 @@ class ExportLogFileOutcome extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ExportLogFileOutcome> get values =>
-      _$exportLogFileOutcomeValues;
+  static BuiltSet<ExportLogFileOutcome> get values => _$values;
 
-  static ExportLogFileOutcome valueOf(String name) =>
-      _$exportLogFileOutcomeValueOf(name);
+  static ExportLogFileOutcome valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -122,12 +122,16 @@ class ListOrderReasonsApiResponseBuilder
   _$ListOrderReasonsApiResponse _$v;
 
   ListBuilder<OrderReason> _data;
+
   ListBuilder<OrderReason> get data =>
       _$this._data ??= new ListBuilder<OrderReason>();
+
   set data(ListBuilder<OrderReason> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListOrderReasonsApiResponseBuilder();
@@ -224,6 +228,7 @@ class _$ListOrderReasonsApiResponseActions
       ListOrderReasonsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

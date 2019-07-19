@@ -105,8 +105,10 @@ class CreateStocks2ApiRequestBuilder
   _$CreateStocks2ApiRequest _$v;
 
   ListBuilder<CreateStocks2ApiStockRequest> _stockRequests;
+
   ListBuilder<CreateStocks2ApiStockRequest> get stockRequests =>
       _$this._stockRequests ??= new ListBuilder<CreateStocks2ApiStockRequest>();
+
   set stockRequests(ListBuilder<CreateStocks2ApiStockRequest> stockRequests) =>
       _$this._stockRequests = stockRequests;
 
@@ -199,6 +201,7 @@ class _$CreateStocks2ApiRequestActions extends CreateStocks2ApiRequestActions {
       CreateStocks2ApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -139,18 +139,24 @@ class ListItemsToBeCountedApiRequestBuilder
   _$ListItemsToBeCountedApiRequest _$v;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListItemsToBeCountedApiOrderBy> _sortBy;
+
   OrderByParamsBuilder<ListItemsToBeCountedApiOrderBy> get sortBy =>
       _$this._sortBy ??=
           new OrderByParamsBuilder<ListItemsToBeCountedApiOrderBy>();
+
   set sortBy(OrderByParamsBuilder<ListItemsToBeCountedApiOrderBy> sortBy) =>
       _$this._sortBy = sortBy;
 
@@ -271,6 +277,7 @@ class _$ListItemsToBeCountedApiRequestActions
       ListItemsToBeCountedApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
@@ -278,6 +285,7 @@ class _$ListItemsToBeCountedApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

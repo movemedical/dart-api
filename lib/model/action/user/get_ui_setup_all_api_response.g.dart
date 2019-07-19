@@ -237,50 +237,66 @@ class GetUiSetupAllApiResponseBuilder
   _$GetUiSetupAllApiResponse _$v;
 
   bool _inventoryEnabled;
+
   bool get inventoryEnabled => _$this._inventoryEnabled;
+
   set inventoryEnabled(bool inventoryEnabled) =>
       _$this._inventoryEnabled = inventoryEnabled;
 
   bool _stockAutoSearch;
+
   bool get stockAutoSearch => _$this._stockAutoSearch;
+
   set stockAutoSearch(bool stockAutoSearch) =>
       _$this._stockAutoSearch = stockAutoSearch;
 
   bool _tempPhysicianEnabled;
+
   bool get tempPhysicianEnabled => _$this._tempPhysicianEnabled;
+
   set tempPhysicianEnabled(bool tempPhysicianEnabled) =>
       _$this._tempPhysicianEnabled = tempPhysicianEnabled;
 
   ListBuilder<GetUiSetupAllApiInvTransferType> _invTransferTypes;
+
   ListBuilder<GetUiSetupAllApiInvTransferType> get invTransferTypes =>
       _$this._invTransferTypes ??=
           new ListBuilder<GetUiSetupAllApiInvTransferType>();
+
   set invTransferTypes(
           ListBuilder<GetUiSetupAllApiInvTransferType> invTransferTypes) =>
       _$this._invTransferTypes = invTransferTypes;
 
   ListBuilder<String> _timezones;
+
   ListBuilder<String> get timezones =>
       _$this._timezones ??= new ListBuilder<String>();
+
   set timezones(ListBuilder<String> timezones) => _$this._timezones = timezones;
 
   ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData> _consignmentLoanSpecs;
+
   ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData>
       get consignmentLoanSpecs => _$this._consignmentLoanSpecs ??=
           new ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData>();
+
   set consignmentLoanSpecs(
           ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData>
               consignmentLoanSpecs) =>
       _$this._consignmentLoanSpecs = consignmentLoanSpecs;
 
   GetUiSetupAllApiUserBuilder _user;
+
   GetUiSetupAllApiUserBuilder get user =>
       _$this._user ??= new GetUiSetupAllApiUserBuilder();
+
   set user(GetUiSetupAllApiUserBuilder user) => _$this._user = user;
 
   ListBuilder<UiClientConfiguration> _uiConfigs;
+
   ListBuilder<UiClientConfiguration> get uiConfigs =>
       _$this._uiConfigs ??= new ListBuilder<UiClientConfiguration>();
+
   set uiConfigs(ListBuilder<UiClientConfiguration> uiConfigs) =>
       _$this._uiConfigs = uiConfigs;
 
@@ -448,12 +464,14 @@ class _$GetUiSetupAllApiResponseActions
       GetUiSetupAllApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.user,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

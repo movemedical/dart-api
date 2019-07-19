@@ -8,7 +8,7 @@ part of 'list_zones_api_order_by.dart';
 
 const ListZonesApiOrderBy _$wireNAME = const ListZonesApiOrderBy._('NAME');
 
-ListZonesApiOrderBy _$listZonesApiOrderByValueOf(String name) {
+ListZonesApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -17,7 +17,7 @@ ListZonesApiOrderBy _$listZonesApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListZonesApiOrderBy> _$listZonesApiOrderByValues =
+final BuiltSet<ListZonesApiOrderBy> _$values =
     new BuiltSet<ListZonesApiOrderBy>(const <ListZonesApiOrderBy>[
   _$wireNAME,
 ]);

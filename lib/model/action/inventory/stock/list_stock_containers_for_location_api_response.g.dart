@@ -112,8 +112,10 @@ class ListStockContainersForLocationApiResponseBuilder
   _$ListStockContainersForLocationApiResponse _$v;
 
   ListBuilder<StockContainer> _stockContainers;
+
   ListBuilder<StockContainer> get stockContainers =>
       _$this._stockContainers ??= new ListBuilder<StockContainer>();
+
   set stockContainers(ListBuilder<StockContainer> stockContainers) =>
       _$this._stockContainers = stockContainers;
 
@@ -213,6 +215,7 @@ class _$ListStockContainersForLocationApiResponseActions
       ListStockContainersForLocationApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

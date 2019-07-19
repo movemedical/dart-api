@@ -106,7 +106,9 @@ class StockSummaryKeyUpdatedPushMessageBuilder
   _$StockSummaryKeyUpdatedPushMessage _$v;
 
   bool _deleted;
+
   bool get deleted => _$this._deleted;
+
   set deleted(bool deleted) => _$this._deleted = deleted;
 
   StockSummaryKeyUpdatedPushMessageBuilder();
@@ -185,6 +187,7 @@ class _$StockSummaryKeyUpdatedPushMessageActions
       StockSummaryKeyUpdatedPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

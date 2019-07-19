@@ -9,7 +9,7 @@ part of 'list_ae_team_options_api_order_by.dart';
 const ListAeTeamOptionsApiOrderBy _$wireNAME =
     const ListAeTeamOptionsApiOrderBy._('NAME');
 
-ListAeTeamOptionsApiOrderBy _$listAeTeamOptionsApiOrderByValueOf(String name) {
+ListAeTeamOptionsApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -18,9 +18,8 @@ ListAeTeamOptionsApiOrderBy _$listAeTeamOptionsApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListAeTeamOptionsApiOrderBy>
-    _$listAeTeamOptionsApiOrderByValues = new BuiltSet<
-        ListAeTeamOptionsApiOrderBy>(const <ListAeTeamOptionsApiOrderBy>[
+final BuiltSet<ListAeTeamOptionsApiOrderBy> _$values = new BuiltSet<
+    ListAeTeamOptionsApiOrderBy>(const <ListAeTeamOptionsApiOrderBy>[
   _$wireNAME,
 ]);
 

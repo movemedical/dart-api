@@ -567,137 +567,197 @@ class StockDataBuilder implements Builder<StockData, StockDataBuilder> {
   _$StockData _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _itemVersionId;
+
   String get itemVersionId => _$this._itemVersionId;
+
   set itemVersionId(String itemVersionId) =>
       _$this._itemVersionId = itemVersionId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   String _tagId;
+
   String get tagId => _$this._tagId;
+
   set tagId(String tagId) => _$this._tagId = tagId;
 
   String _kitId;
+
   String get kitId => _$this._kitId;
+
   set kitId(String kitId) => _$this._kitId = kitId;
 
   bool _kitContainer;
+
   bool get kitContainer => _$this._kitContainer;
+
   set kitContainer(bool kitContainer) => _$this._kitContainer = kitContainer;
 
   bool _virtual;
+
   bool get virtual => _$this._virtual;
+
   set virtual(bool virtual) => _$this._virtual = virtual;
 
   bool _verified;
+
   bool get verified => _$this._verified;
+
   set verified(bool verified) => _$this._verified = verified;
 
   bool _hasExtras;
+
   bool get hasExtras => _$this._hasExtras;
+
   set hasExtras(bool hasExtras) => _$this._hasExtras = hasExtras;
 
   bool _hasMissing;
+
   bool get hasMissing => _$this._hasMissing;
+
   set hasMissing(bool hasMissing) => _$this._hasMissing = hasMissing;
 
   bool _hasUnverified;
+
   bool get hasUnverified => _$this._hasUnverified;
+
   set hasUnverified(bool hasUnverified) =>
       _$this._hasUnverified = hasUnverified;
 
   String _inventoryTypeId;
+
   String get inventoryTypeId => _$this._inventoryTypeId;
+
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   LocationType _fromLocationType;
+
   LocationType get fromLocationType => _$this._fromLocationType;
+
   set fromLocationType(LocationType fromLocationType) =>
       _$this._fromLocationType = fromLocationType;
 
   String _fromLocationId;
+
   String get fromLocationId => _$this._fromLocationId;
+
   set fromLocationId(String fromLocationId) =>
       _$this._fromLocationId = fromLocationId;
 
   LocationType _toLocationType;
+
   LocationType get toLocationType => _$this._toLocationType;
+
   set toLocationType(LocationType toLocationType) =>
       _$this._toLocationType = toLocationType;
 
   String _toLocationId;
+
   String get toLocationId => _$this._toLocationId;
+
   set toLocationId(String toLocationId) => _$this._toLocationId = toLocationId;
 
   LocationType _homeLocationType;
+
   LocationType get homeLocationType => _$this._homeLocationType;
+
   set homeLocationType(LocationType homeLocationType) =>
       _$this._homeLocationType = homeLocationType;
 
   String _homeLocationId;
+
   String get homeLocationId => _$this._homeLocationId;
+
   set homeLocationId(String homeLocationId) =>
       _$this._homeLocationId = homeLocationId;
 
   StockContainerType _rootContainerType;
+
   StockContainerType get rootContainerType => _$this._rootContainerType;
+
   set rootContainerType(StockContainerType rootContainerType) =>
       _$this._rootContainerType = rootContainerType;
 
   String _rootContainerId;
+
   String get rootContainerId => _$this._rootContainerId;
+
   set rootContainerId(String rootContainerId) =>
       _$this._rootContainerId = rootContainerId;
 
   StockContainerType _containerType;
+
   StockContainerType get containerType => _$this._containerType;
+
   set containerType(StockContainerType containerType) =>
       _$this._containerType = containerType;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   ResponsiblePartyType _responsiblePartyType;
+
   ResponsiblePartyType get responsiblePartyType => _$this._responsiblePartyType;
+
   set responsiblePartyType(ResponsiblePartyType responsiblePartyType) =>
       _$this._responsiblePartyType = responsiblePartyType;
 
   String _responsiblePartyId;
+
   String get responsiblePartyId => _$this._responsiblePartyId;
+
   set responsiblePartyId(String responsiblePartyId) =>
       _$this._responsiblePartyId = responsiblePartyId;
 
   String _demandLoanId;
+
   String get demandLoanId => _$this._demandLoanId;
+
   set demandLoanId(String demandLoanId) => _$this._demandLoanId = demandLoanId;
 
   String _consignmentLoanId;
+
   String get consignmentLoanId => _$this._consignmentLoanId;
+
   set consignmentLoanId(String consignmentLoanId) =>
       _$this._consignmentLoanId = consignmentLoanId;
 
@@ -971,6 +1031,7 @@ class _$StockDataActions extends StockDataActions {
   StockDataBuilder newBuilder$() => StockDataBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

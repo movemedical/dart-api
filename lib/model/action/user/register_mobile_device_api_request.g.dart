@@ -153,21 +153,29 @@ class RegisterMobileDeviceApiRequestBuilder
   _$RegisterMobileDeviceApiRequest _$v;
 
   String _existingDeviceId;
+
   String get existingDeviceId => _$this._existingDeviceId;
+
   set existingDeviceId(String existingDeviceId) =>
       _$this._existingDeviceId = existingDeviceId;
 
   MobileDeviceType _deviceType;
+
   MobileDeviceType get deviceType => _$this._deviceType;
+
   set deviceType(MobileDeviceType deviceType) =>
       _$this._deviceType = deviceType;
 
   String _token;
+
   String get token => _$this._token;
+
   set token(String token) => _$this._token = token;
 
   bool _useSandboxArn;
+
   bool get useSandboxArn => _$this._useSandboxArn;
+
   set useSandboxArn(bool useSandboxArn) =>
       _$this._useSandboxArn = useSandboxArn;
 
@@ -272,6 +280,7 @@ class _$RegisterMobileDeviceApiRequestActions
       RegisterMobileDeviceApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

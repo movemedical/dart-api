@@ -13,6 +13,8 @@ class AdjustmentReferenceType extends EnumClass {
   static const AdjustmentReferenceType ORDER_USAGE = _$wireORDER_USAGE;
   static const AdjustmentReferenceType AUDIT = _$wireAUDIT;
   static const AdjustmentReferenceType PACKAGE = _$wirePACKAGE;
+  static const AdjustmentReferenceType RESOLVE_FOUND_STOCK =
+      _$wireRESOLVE_FOUND_STOCK;
 
   ////////////////////////////////
   /// Constructor
@@ -24,11 +26,9 @@ class AdjustmentReferenceType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<AdjustmentReferenceType> get values =>
-      _$adjustmentReferenceTypeValues;
+  static BuiltSet<AdjustmentReferenceType> get values => _$values;
 
-  static AdjustmentReferenceType valueOf(String name) =>
-      _$adjustmentReferenceTypeValueOf(name);
+  static AdjustmentReferenceType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

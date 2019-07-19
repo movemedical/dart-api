@@ -123,11 +123,15 @@ class ListItemsToBeCountedApiResponseBuilder
   _$ListItemsToBeCountedApiResponse _$v;
 
   ListBuilder<Item> _data;
+
   ListBuilder<Item> get data => _$this._data ??= new ListBuilder<Item>();
+
   set data(ListBuilder<Item> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListItemsToBeCountedApiResponseBuilder();
@@ -224,6 +228,7 @@ class _$ListItemsToBeCountedApiResponseActions
       ListItemsToBeCountedApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

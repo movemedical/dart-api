@@ -140,18 +140,24 @@ class RequestStockExportDocApiRequestBuilder
   _$RequestStockExportDocApiRequest _$v;
 
   DBGeneratedDocReportBuilder _docReport;
+
   DBGeneratedDocReportBuilder get docReport =>
       _$this._docReport ??= new DBGeneratedDocReportBuilder();
+
   set docReport(DBGeneratedDocReportBuilder docReport) =>
       _$this._docReport = docReport;
 
   DocReportFormat _format;
+
   DocReportFormat get format => _$this._format;
+
   set format(DocReportFormat format) => _$this._format = format;
 
   ListStockSummaryApiRequestBuilder _stockRequest;
+
   ListStockSummaryApiRequestBuilder get stockRequest =>
       _$this._stockRequest ??= new ListStockSummaryApiRequestBuilder();
+
   set stockRequest(ListStockSummaryApiRequestBuilder stockRequest) =>
       _$this._stockRequest = stockRequest;
 
@@ -273,6 +279,7 @@ class _$RequestStockExportDocApiRequestActions
       RequestStockExportDocApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
@@ -280,6 +287,7 @@ class _$RequestStockExportDocApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -4,6 +4,7 @@ import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
+import 'package:movemedical_api/model/sql/enums/body_side.dart';
 
 part 'update_preference_card_api_request.g.dart';
 
@@ -23,6 +24,9 @@ abstract class UpdatePreferenceCardApiRequest
 
   @nullable
   String get description;
+
+  @nullable
+  BodySide get bodySide;
 
   @nullable
   BuiltList<String> get orgUnitIds;
@@ -61,6 +65,8 @@ abstract class UpdatePreferenceCardApiRequestActions extends ModelActions<
   FieldDispatcher<String> get name;
 
   FieldDispatcher<String> get description;
+
+  FieldDispatcher<BodySide> get bodySide;
 
   FieldDispatcher<BuiltList<String>> get orgUnitIds;
 

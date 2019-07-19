@@ -56,6 +56,18 @@ class _$UpdateShipmentDetailsApiRequestSerializer
         ..add(serializers.serialize(object.deliverToOverrideAddress,
             specifiedType: const FullType(Address)));
     }
+    if (object.salesLeadUserId != null) {
+      result
+        ..add('salesLeadUserId')
+        ..add(serializers.serialize(object.salesLeadUserId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.opsLeadUserId != null) {
+      result
+        ..add('opsLeadUserId')
+        ..add(serializers.serialize(object.opsLeadUserId,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -92,6 +104,14 @@ class _$UpdateShipmentDetailsApiRequestSerializer
           result.deliverToOverrideAddress.replace(serializers.deserialize(value,
               specifiedType: const FullType(Address)) as Address);
           break;
+        case 'salesLeadUserId':
+          result.salesLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'opsLeadUserId':
+          result.opsLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -111,6 +131,10 @@ class _$UpdateShipmentDetailsApiRequest
   final String deliverToAddressId;
   @override
   final Address deliverToOverrideAddress;
+  @override
+  final String salesLeadUserId;
+  @override
+  final String opsLeadUserId;
 
   factory _$UpdateShipmentDetailsApiRequest(
           [void updates(UpdateShipmentDetailsApiRequestBuilder b)]) =>
@@ -121,7 +145,9 @@ class _$UpdateShipmentDetailsApiRequest
       this.erpReference,
       this.shippingServiceId,
       this.deliverToAddressId,
-      this.deliverToOverrideAddress})
+      this.deliverToOverrideAddress,
+      this.salesLeadUserId,
+      this.opsLeadUserId})
       : super._();
 
   @override
@@ -141,17 +167,23 @@ class _$UpdateShipmentDetailsApiRequest
         erpReference == other.erpReference &&
         shippingServiceId == other.shippingServiceId &&
         deliverToAddressId == other.deliverToAddressId &&
-        deliverToOverrideAddress == other.deliverToOverrideAddress;
+        deliverToOverrideAddress == other.deliverToOverrideAddress &&
+        salesLeadUserId == other.salesLeadUserId &&
+        opsLeadUserId == other.opsLeadUserId;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc(0, shipmentId.hashCode), erpReference.hashCode),
-                shippingServiceId.hashCode),
-            deliverToAddressId.hashCode),
-        deliverToOverrideAddress.hashCode));
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, shipmentId.hashCode), erpReference.hashCode),
+                        shippingServiceId.hashCode),
+                    deliverToAddressId.hashCode),
+                deliverToOverrideAddress.hashCode),
+            salesLeadUserId.hashCode),
+        opsLeadUserId.hashCode));
   }
 
   @override
@@ -161,7 +193,9 @@ class _$UpdateShipmentDetailsApiRequest
           ..add('erpReference', erpReference)
           ..add('shippingServiceId', shippingServiceId)
           ..add('deliverToAddressId', deliverToAddressId)
-          ..add('deliverToOverrideAddress', deliverToOverrideAddress))
+          ..add('deliverToOverrideAddress', deliverToOverrideAddress)
+          ..add('salesLeadUserId', salesLeadUserId)
+          ..add('opsLeadUserId', opsLeadUserId))
         .toString();
   }
 }
@@ -173,28 +207,52 @@ class UpdateShipmentDetailsApiRequestBuilder
   _$UpdateShipmentDetailsApiRequest _$v;
 
   String _shipmentId;
+
   String get shipmentId => _$this._shipmentId;
+
   set shipmentId(String shipmentId) => _$this._shipmentId = shipmentId;
 
   String _erpReference;
+
   String get erpReference => _$this._erpReference;
+
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   String _shippingServiceId;
+
   String get shippingServiceId => _$this._shippingServiceId;
+
   set shippingServiceId(String shippingServiceId) =>
       _$this._shippingServiceId = shippingServiceId;
 
   String _deliverToAddressId;
+
   String get deliverToAddressId => _$this._deliverToAddressId;
+
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   AddressBuilder _deliverToOverrideAddress;
+
   AddressBuilder get deliverToOverrideAddress =>
       _$this._deliverToOverrideAddress ??= new AddressBuilder();
+
   set deliverToOverrideAddress(AddressBuilder deliverToOverrideAddress) =>
       _$this._deliverToOverrideAddress = deliverToOverrideAddress;
+
+  String _salesLeadUserId;
+
+  String get salesLeadUserId => _$this._salesLeadUserId;
+
+  set salesLeadUserId(String salesLeadUserId) =>
+      _$this._salesLeadUserId = salesLeadUserId;
+
+  String _opsLeadUserId;
+
+  String get opsLeadUserId => _$this._opsLeadUserId;
+
+  set opsLeadUserId(String opsLeadUserId) =>
+      _$this._opsLeadUserId = opsLeadUserId;
 
   UpdateShipmentDetailsApiRequestBuilder();
 
@@ -205,6 +263,8 @@ class UpdateShipmentDetailsApiRequestBuilder
       _shippingServiceId = _$v.shippingServiceId;
       _deliverToAddressId = _$v.deliverToAddressId;
       _deliverToOverrideAddress = _$v.deliverToOverrideAddress?.toBuilder();
+      _salesLeadUserId = _$v.salesLeadUserId;
+      _opsLeadUserId = _$v.opsLeadUserId;
       _$v = null;
     }
     return this;
@@ -233,7 +293,9 @@ class UpdateShipmentDetailsApiRequestBuilder
               erpReference: erpReference,
               shippingServiceId: shippingServiceId,
               deliverToAddressId: deliverToAddressId,
-              deliverToOverrideAddress: _deliverToOverrideAddress?.build());
+              deliverToOverrideAddress: _deliverToOverrideAddress?.build(),
+              salesLeadUserId: salesLeadUserId,
+              opsLeadUserId: opsLeadUserId);
     } catch (_) {
       String _$failedField;
       try {
@@ -277,6 +339,8 @@ class _$UpdateShipmentDetailsApiRequestActions
   final FieldDispatcher<String> shippingServiceId;
   final FieldDispatcher<String> deliverToAddressId;
   final AddressActions deliverToOverrideAddress;
+  final FieldDispatcher<String> salesLeadUserId;
+  final FieldDispatcher<String> opsLeadUserId;
 
   _$UpdateShipmentDetailsApiRequestActions._(this.options$)
       : replace$ = options$.action<UpdateShipmentDetailsApiRequest>(
@@ -306,6 +370,16 @@ class _$UpdateShipmentDetailsApiRequestActions
                 (b) => b?.deliverToOverrideAddress,
                 (parent, builder) =>
                     parent?.deliverToOverrideAddress = builder)),
+        salesLeadUserId = options$.field<String>(
+            'salesLeadUserId',
+            (a) => a?.salesLeadUserId,
+            (s) => s?.salesLeadUserId,
+            (p, b) => p?.salesLeadUserId = b),
+        opsLeadUserId = options$.field<String>(
+            'opsLeadUserId',
+            (a) => a?.opsLeadUserId,
+            (s) => s?.opsLeadUserId,
+            (p, b) => p?.opsLeadUserId = b),
         super._();
 
   factory _$UpdateShipmentDetailsApiRequestActions(
@@ -321,12 +395,14 @@ class _$UpdateShipmentDetailsApiRequestActions
       UpdateShipmentDetailsApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliverToOverrideAddress,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -335,6 +411,8 @@ class _$UpdateShipmentDetailsApiRequestActions
         this.erpReference,
         this.shippingServiceId,
         this.deliverToAddressId,
+        this.salesLeadUserId,
+        this.opsLeadUserId,
       ]);
 
   @override
@@ -345,6 +423,8 @@ class _$UpdateShipmentDetailsApiRequestActions
     shippingServiceId.reducer$(reducer);
     deliverToAddressId.reducer$(reducer);
     deliverToOverrideAddress.reducer$(reducer);
+    salesLeadUserId.reducer$(reducer);
+    opsLeadUserId.reducer$(reducer);
   }
 
   @override

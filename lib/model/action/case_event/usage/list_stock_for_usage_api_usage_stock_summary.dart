@@ -54,6 +54,21 @@ abstract class ListStockForUsageApiUsageStockSummary
   @nullable
   ResponsibleParty get responsibleParty;
 
+  @nullable
+  bool get kitContainer;
+
+  @nullable
+  String get kitId;
+
+  @nullable
+  String get kitItemNumber;
+
+  @nullable
+  int get kitSerialNumber;
+
+  @nullable
+  String get kitSerialRef;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -102,6 +117,16 @@ abstract class ListStockForUsageApiUsageStockSummaryActions
   FieldDispatcher<String> get attributeValue;
 
   ResponsiblePartyActions get responsibleParty;
+
+  FieldDispatcher<bool> get kitContainer;
+
+  FieldDispatcher<String> get kitId;
+
+  FieldDispatcher<String> get kitItemNumber;
+
+  FieldDispatcher<int> get kitSerialNumber;
+
+  FieldDispatcher<String> get kitSerialRef;
 
   ////////////////////////////////
   /// Constructors

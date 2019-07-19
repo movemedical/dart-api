@@ -123,11 +123,15 @@ class ProcessKitTrayRestockPlanApiRestockItemBuilder
   _$ProcessKitTrayRestockPlanApiRestockItem _$v;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   ProcessKitTrayRestockPlanApiRestockItemBuilder();
@@ -211,6 +215,7 @@ class _$ProcessKitTrayRestockPlanApiRestockItemActions
       ProcessKitTrayRestockPlanApiRestockItemBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

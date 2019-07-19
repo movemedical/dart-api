@@ -119,11 +119,15 @@ class GetCaseEventDetailApiCaseDocBuilder
   _$GetCaseEventDetailApiCaseDoc _$v;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _caseDocId;
+
   String get caseDocId => _$this._caseDocId;
+
   set caseDocId(String caseDocId) => _$this._caseDocId = caseDocId;
 
   GetCaseEventDetailApiCaseDocBuilder();
@@ -206,6 +210,7 @@ class _$GetCaseEventDetailApiCaseDocActions
       GetCaseEventDetailApiCaseDocBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

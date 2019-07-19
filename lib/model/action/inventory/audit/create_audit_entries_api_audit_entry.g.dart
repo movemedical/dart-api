@@ -424,86 +424,124 @@ class CreateAuditEntriesApiAuditEntryBuilder
   _$CreateAuditEntriesApiAuditEntry _$v;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   String _auditItemId;
+
   String get auditItemId => _$this._auditItemId;
+
   set auditItemId(String auditItemId) => _$this._auditItemId = auditItemId;
 
   ItemCaptureType _entryType;
+
   ItemCaptureType get entryType => _$this._entryType;
+
   set entryType(ItemCaptureType entryType) => _$this._entryType = entryType;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   StockContainerType _containerType;
+
   StockContainerType get containerType => _$this._containerType;
+
   set containerType(StockContainerType containerType) =>
       _$this._containerType = containerType;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _itemVersionId;
+
   String get itemVersionId => _$this._itemVersionId;
+
   set itemVersionId(String itemVersionId) =>
       _$this._itemVersionId = itemVersionId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   String _tagId;
+
   String get tagId => _$this._tagId;
+
   set tagId(String tagId) => _$this._tagId = tagId;
 
   String _unknownItemNumber;
+
   String get unknownItemNumber => _$this._unknownItemNumber;
+
   set unknownItemNumber(String unknownItemNumber) =>
       _$this._unknownItemNumber = unknownItemNumber;
 
   String _unknownLotNumber;
+
   String get unknownLotNumber => _$this._unknownLotNumber;
+
   set unknownLotNumber(String unknownLotNumber) =>
       _$this._unknownLotNumber = unknownLotNumber;
 
   String _unknownSerialNumber;
+
   String get unknownSerialNumber => _$this._unknownSerialNumber;
+
   set unknownSerialNumber(String unknownSerialNumber) =>
       _$this._unknownSerialNumber = unknownSerialNumber;
 
   String _unknownScanValue;
+
   String get unknownScanValue => _$this._unknownScanValue;
+
   set unknownScanValue(String unknownScanValue) =>
       _$this._unknownScanValue = unknownScanValue;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   String _containerString;
+
   String get containerString => _$this._containerString;
+
   set containerString(String containerString) =>
       _$this._containerString = containerString;
 
@@ -707,6 +745,7 @@ class _$CreateAuditEntriesApiAuditEntryActions
       CreateAuditEntriesApiAuditEntryBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

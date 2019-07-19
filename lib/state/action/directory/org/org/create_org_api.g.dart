@@ -63,6 +63,7 @@ class _$CreateOrgApi extends CreateOrgApi {
           ApiResult<CreateOrgApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

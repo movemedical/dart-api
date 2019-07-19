@@ -120,15 +120,21 @@ class InventoryTypeBuilder
   _$InventoryType _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   InventoryTypeBuilder();
@@ -207,6 +213,7 @@ class _$InventoryTypeActions extends InventoryTypeActions {
   InventoryTypeBuilder newBuilder$() => InventoryTypeBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

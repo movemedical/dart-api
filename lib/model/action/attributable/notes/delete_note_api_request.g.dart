@@ -98,7 +98,9 @@ class DeleteNoteApiRequestBuilder
   _$DeleteNoteApiRequest _$v;
 
   String _noteId;
+
   String get noteId => _$this._noteId;
+
   set noteId(String noteId) => _$this._noteId = noteId;
 
   DeleteNoteApiRequestBuilder();
@@ -171,6 +173,7 @@ class _$DeleteNoteApiRequestActions extends DeleteNoteApiRequestActions {
   DeleteNoteApiRequestBuilder newBuilder$() => DeleteNoteApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -172,24 +172,34 @@ class CreateItemCategoryApiRequestBuilder
   _$CreateItemCategoryApiRequest _$v;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _opsOuId;
+
   String get opsOuId => _$this._opsOuId;
+
   set opsOuId(String opsOuId) => _$this._opsOuId = opsOuId;
 
   String _parentCategoryId;
+
   String get parentCategoryId => _$this._parentCategoryId;
+
   set parentCategoryId(String parentCategoryId) =>
       _$this._parentCategoryId = parentCategoryId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _code;
+
   String get code => _$this._code;
+
   set code(String code) => _$this._code = code;
 
   CreateItemCategoryApiRequestBuilder();
@@ -292,6 +302,7 @@ class _$CreateItemCategoryApiRequestActions
       CreateItemCategoryApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

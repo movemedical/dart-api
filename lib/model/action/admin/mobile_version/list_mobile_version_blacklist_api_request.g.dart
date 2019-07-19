@@ -107,7 +107,9 @@ class ListMobileVersionBlacklistApiRequestBuilder
   _$ListMobileVersionBlacklistApiRequest _$v;
 
   MobilePlatform _platform;
+
   MobilePlatform get platform => _$this._platform;
+
   set platform(MobilePlatform platform) => _$this._platform = platform;
 
   ListMobileVersionBlacklistApiRequestBuilder();
@@ -186,6 +188,7 @@ class _$ListMobileVersionBlacklistApiRequestActions
       ListMobileVersionBlacklistApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

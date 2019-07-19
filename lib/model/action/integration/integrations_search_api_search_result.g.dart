@@ -154,19 +154,27 @@ class IntegrationsSearchApiSearchResultBuilder
   _$IntegrationsSearchApiSearchResult _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   IntegrationsSearchApiResultType _type;
+
   IntegrationsSearchApiResultType get type => _$this._type;
+
   set type(IntegrationsSearchApiResultType type) => _$this._type = type;
 
   String _displayText;
+
   String get displayText => _$this._displayText;
+
   set displayText(String displayText) => _$this._displayText = displayText;
 
   String _erpReferenceNumber;
+
   String get erpReferenceNumber => _$this._erpReferenceNumber;
+
   set erpReferenceNumber(String erpReferenceNumber) =>
       _$this._erpReferenceNumber = erpReferenceNumber;
 
@@ -268,6 +276,7 @@ class _$IntegrationsSearchApiSearchResultActions
       IntegrationsSearchApiSearchResultBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

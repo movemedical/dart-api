@@ -46,7 +46,7 @@ const UserPerspective _$wirePARTNER_HCR =
     const UserPerspective._('PARTNER_HCR');
 const UserPerspective _$wireCONSUMER = const UserPerspective._('CONSUMER');
 
-UserPerspective _$userPerspectiveValueOf(String name) {
+UserPerspective _$valueOf(String name) {
   switch (name) {
     case 'ADMIN':
       return _$wireADMIN;
@@ -95,7 +95,7 @@ UserPerspective _$userPerspectiveValueOf(String name) {
   }
 }
 
-final BuiltSet<UserPerspective> _$userPerspectiveValues =
+final BuiltSet<UserPerspective> _$values =
     new BuiltSet<UserPerspective>(const <UserPerspective>[
   _$wireADMIN,
   _$wireSYSTEM_ADMIN,

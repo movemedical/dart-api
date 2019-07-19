@@ -9,7 +9,7 @@ part of 'user_status.dart';
 const UserStatus _$wireACTIVE = const UserStatus._('ACTIVE');
 const UserStatus _$wireINACTIVE = const UserStatus._('INACTIVE');
 
-UserStatus _$userStatusValueOf(String name) {
+UserStatus _$valueOf(String name) {
   switch (name) {
     case 'ACTIVE':
       return _$wireACTIVE;
@@ -20,7 +20,7 @@ UserStatus _$userStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<UserStatus> _$userStatusValues =
+final BuiltSet<UserStatus> _$values =
     new BuiltSet<UserStatus>(const <UserStatus>[
   _$wireACTIVE,
   _$wireINACTIVE,

@@ -106,7 +106,9 @@ class RemoveBizUnitToOrgUnitApiRequestBuilder
   _$RemoveBizUnitToOrgUnitApiRequest _$v;
 
   String _bizUnitToOrgUnitId;
+
   String get bizUnitToOrgUnitId => _$this._bizUnitToOrgUnitId;
+
   set bizUnitToOrgUnitId(String bizUnitToOrgUnitId) =>
       _$this._bizUnitToOrgUnitId = bizUnitToOrgUnitId;
 
@@ -190,6 +192,7 @@ class _$RemoveBizUnitToOrgUnitApiRequestActions
       RemoveBizUnitToOrgUnitApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -31,11 +31,9 @@ class GlobalSearchApiType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<GlobalSearchApiType> get values =>
-      _$globalSearchApiTypeValues;
+  static BuiltSet<GlobalSearchApiType> get values => _$values;
 
-  static GlobalSearchApiType valueOf(String name) =>
-      _$globalSearchApiTypeValueOf(name);
+  static GlobalSearchApiType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

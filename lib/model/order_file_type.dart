@@ -22,9 +22,9 @@ class OrderFileType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<OrderFileType> get values => _$orderFileTypeValues;
+  static BuiltSet<OrderFileType> get values => _$values;
 
-  static OrderFileType valueOf(String name) => _$orderFileTypeValueOf(name);
+  static OrderFileType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -26,10 +26,10 @@ class _$AdjustStockQuantityApiAdjustmentSerializer
       Serializers serializers, AdjustStockQuantityApiAdjustment object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.summaryId != null) {
+    if (object.stockIdOrSummaryId != null) {
       result
-        ..add('summaryId')
-        ..add(serializers.serialize(object.summaryId,
+        ..add('stockIdOrSummaryId')
+        ..add(serializers.serialize(object.stockIdOrSummaryId,
             specifiedType: const FullType(String)));
     }
     if (object.qtyChange != null) {
@@ -54,8 +54,8 @@ class _$AdjustStockQuantityApiAdjustmentSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'summaryId':
-          result.summaryId = serializers.deserialize(value,
+        case 'stockIdOrSummaryId':
+          result.stockIdOrSummaryId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
         case 'qtyChange':
@@ -72,7 +72,7 @@ class _$AdjustStockQuantityApiAdjustmentSerializer
 class _$AdjustStockQuantityApiAdjustment
     extends AdjustStockQuantityApiAdjustment {
   @override
-  final String summaryId;
+  final String stockIdOrSummaryId;
   @override
   final int qtyChange;
 
@@ -80,7 +80,8 @@ class _$AdjustStockQuantityApiAdjustment
           [void updates(AdjustStockQuantityApiAdjustmentBuilder b)]) =>
       (new AdjustStockQuantityApiAdjustmentBuilder()..update(updates)).build();
 
-  _$AdjustStockQuantityApiAdjustment._({this.summaryId, this.qtyChange})
+  _$AdjustStockQuantityApiAdjustment._(
+      {this.stockIdOrSummaryId, this.qtyChange})
       : super._();
 
   @override
@@ -96,19 +97,19 @@ class _$AdjustStockQuantityApiAdjustment
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is AdjustStockQuantityApiAdjustment &&
-        summaryId == other.summaryId &&
+        stockIdOrSummaryId == other.stockIdOrSummaryId &&
         qtyChange == other.qtyChange;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, summaryId.hashCode), qtyChange.hashCode));
+    return $jf($jc($jc(0, stockIdOrSummaryId.hashCode), qtyChange.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('AdjustStockQuantityApiAdjustment')
-          ..add('summaryId', summaryId)
+          ..add('stockIdOrSummaryId', stockIdOrSummaryId)
           ..add('qtyChange', qtyChange))
         .toString();
   }
@@ -120,19 +121,24 @@ class AdjustStockQuantityApiAdjustmentBuilder
             AdjustStockQuantityApiAdjustmentBuilder> {
   _$AdjustStockQuantityApiAdjustment _$v;
 
-  String _summaryId;
-  String get summaryId => _$this._summaryId;
-  set summaryId(String summaryId) => _$this._summaryId = summaryId;
+  String _stockIdOrSummaryId;
+
+  String get stockIdOrSummaryId => _$this._stockIdOrSummaryId;
+
+  set stockIdOrSummaryId(String stockIdOrSummaryId) =>
+      _$this._stockIdOrSummaryId = stockIdOrSummaryId;
 
   int _qtyChange;
+
   int get qtyChange => _$this._qtyChange;
+
   set qtyChange(int qtyChange) => _$this._qtyChange = qtyChange;
 
   AdjustStockQuantityApiAdjustmentBuilder();
 
   AdjustStockQuantityApiAdjustmentBuilder get _$this {
     if (_$v != null) {
-      _summaryId = _$v.summaryId;
+      _stockIdOrSummaryId = _$v.stockIdOrSummaryId;
       _qtyChange = _$v.qtyChange;
       _$v = null;
     }
@@ -156,7 +162,7 @@ class AdjustStockQuantityApiAdjustmentBuilder
   _$AdjustStockQuantityApiAdjustment build() {
     final _$result = _$v ??
         new _$AdjustStockQuantityApiAdjustment._(
-            summaryId: summaryId, qtyChange: qtyChange);
+            stockIdOrSummaryId: stockIdOrSummaryId, qtyChange: qtyChange);
     replace(_$result);
     return _$result;
   }
@@ -184,14 +190,17 @@ class _$AdjustStockQuantityApiAdjustmentActions
       AdjustStockQuantityApiAdjustmentActions> options$;
 
   final ActionDispatcher<AdjustStockQuantityApiAdjustment> replace$;
-  final FieldDispatcher<String> summaryId;
+  final FieldDispatcher<String> stockIdOrSummaryId;
   final FieldDispatcher<int> qtyChange;
 
   _$AdjustStockQuantityApiAdjustmentActions._(this.options$)
       : replace$ = options$.action<AdjustStockQuantityApiAdjustment>(
             'replace\$', (a) => a?.replace$),
-        summaryId = options$.field<String>('summaryId', (a) => a?.summaryId,
-            (s) => s?.summaryId, (p, b) => p?.summaryId = b),
+        stockIdOrSummaryId = options$.field<String>(
+            'stockIdOrSummaryId',
+            (a) => a?.stockIdOrSummaryId,
+            (s) => s?.stockIdOrSummaryId,
+            (p, b) => p?.stockIdOrSummaryId = b),
         qtyChange = options$.field<int>('qtyChange', (a) => a?.qtyChange,
             (s) => s?.qtyChange, (p, b) => p?.qtyChange = b),
         super._();
@@ -209,18 +218,19 @@ class _$AdjustStockQuantityApiAdjustmentActions
       AdjustStockQuantityApiAdjustmentBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
         this.replace$,
-        this.summaryId,
+        this.stockIdOrSummaryId,
         this.qtyChange,
       ]);
 
   @override
   void reducer$(ReducerBuilder reducer) {
     super.reducer$(reducer);
-    summaryId.reducer$(reducer);
+    stockIdOrSummaryId.reducer$(reducer);
     qtyChange.reducer$(reducer);
   }
 

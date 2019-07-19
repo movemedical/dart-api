@@ -209,35 +209,49 @@ class PreparePackageFileUploadApiRequestBuilder
   _$PreparePackageFileUploadApiRequest _$v;
 
   String _packageId;
+
   String get packageId => _$this._packageId;
+
   set packageId(String packageId) => _$this._packageId = packageId;
 
   String _fileName;
+
   String get fileName => _$this._fileName;
+
   set fileName(String fileName) => _$this._fileName = fileName;
 
   PackageFileType _packageFileType;
+
   PackageFileType get packageFileType => _$this._packageFileType;
+
   set packageFileType(PackageFileType packageFileType) =>
       _$this._packageFileType = packageFileType;
 
   String _fileDescription;
+
   String get fileDescription => _$this._fileDescription;
+
   set fileDescription(String fileDescription) =>
       _$this._fileDescription = fileDescription;
 
   int _estimatedSizeKb;
+
   int get estimatedSizeKb => _$this._estimatedSizeKb;
+
   set estimatedSizeKb(int estimatedSizeKb) =>
       _$this._estimatedSizeKb = estimatedSizeKb;
 
   String _ownerOrgUnitId;
+
   String get ownerOrgUnitId => _$this._ownerOrgUnitId;
+
   set ownerOrgUnitId(String ownerOrgUnitId) =>
       _$this._ownerOrgUnitId = ownerOrgUnitId;
 
   Visibility _visibility;
+
   Visibility get visibility => _$this._visibility;
+
   set visibility(Visibility visibility) => _$this._visibility = visibility;
 
   PreparePackageFileUploadApiRequestBuilder();
@@ -362,6 +376,7 @@ class _$PreparePackageFileUploadApiRequestActions
       PreparePackageFileUploadApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

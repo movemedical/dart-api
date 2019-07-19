@@ -70,6 +70,7 @@ class _$ListHospitalsForSchedulingApi extends ListHospitalsForSchedulingApi {
           ApiResult<ListHospitalsForSchedulingApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

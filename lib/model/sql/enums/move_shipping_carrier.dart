@@ -24,11 +24,9 @@ class MoveShippingCarrier extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<MoveShippingCarrier> get values =>
-      _$moveShippingCarrierValues;
+  static BuiltSet<MoveShippingCarrier> get values => _$values;
 
-  static MoveShippingCarrier valueOf(String name) =>
-      _$moveShippingCarrierValueOf(name);
+  static MoveShippingCarrier valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

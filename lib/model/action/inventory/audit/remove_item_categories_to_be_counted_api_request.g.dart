@@ -127,12 +127,16 @@ class RemoveItemCategoriesToBeCountedApiRequestBuilder
   _$RemoveItemCategoriesToBeCountedApiRequest _$v;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   ListBuilder<String> _itemCategoryIds;
+
   ListBuilder<String> get itemCategoryIds =>
       _$this._itemCategoryIds ??= new ListBuilder<String>();
+
   set itemCategoryIds(ListBuilder<String> itemCategoryIds) =>
       _$this._itemCategoryIds = itemCategoryIds;
 
@@ -236,6 +240,7 @@ class _$RemoveItemCategoriesToBeCountedApiRequestActions
       RemoveItemCategoriesToBeCountedApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

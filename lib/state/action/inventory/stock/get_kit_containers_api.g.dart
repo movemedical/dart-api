@@ -67,6 +67,7 @@ class _$GetKitContainersApi extends GetKitContainersApi {
           ApiResult<GetKitContainersApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

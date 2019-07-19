@@ -147,15 +147,21 @@ class ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOptionBuilder
   _$ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOption _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _code;
+
   String get code => _$this._code;
+
   set code(String code) => _$this._code = code;
 
   ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOptionBuilder();
@@ -251,6 +257,7 @@ class _$ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOptionActions
           ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOptionBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

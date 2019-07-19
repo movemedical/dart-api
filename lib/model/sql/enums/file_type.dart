@@ -37,9 +37,9 @@ class FileType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<FileType> get values => _$fileTypeValues;
+  static BuiltSet<FileType> get values => _$values;
 
-  static FileType valueOf(String name) => _$fileTypeValueOf(name);
+  static FileType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

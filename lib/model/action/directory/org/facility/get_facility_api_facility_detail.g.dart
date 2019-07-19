@@ -56,6 +56,12 @@ class _$GetFacilityApiFacilityDetailSerializer
         ..add(serializers.serialize(object.facilityType,
             specifiedType: const FullType(FacilityType)));
     }
+    if (object.displayText != null) {
+      result
+        ..add('displayText')
+        ..add(serializers.serialize(object.displayText,
+            specifiedType: const FullType(String)));
+    }
     if (object.name != null) {
       result
         ..add('name')
@@ -287,6 +293,10 @@ class _$GetFacilityApiFacilityDetailSerializer
           result.facilityType = serializers.deserialize(value,
               specifiedType: const FullType(FacilityType)) as FacilityType;
           break;
+        case 'displayText':
+          result.displayText = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'name':
           result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -444,6 +454,8 @@ class _$GetFacilityApiFacilityDetail extends GetFacilityApiFacilityDetail {
   @override
   final FacilityType facilityType;
   @override
+  final String displayText;
+  @override
   final String name;
   @override
   final PersonName contactName;
@@ -518,6 +530,7 @@ class _$GetFacilityApiFacilityDetail extends GetFacilityApiFacilityDetail {
       this.orgType,
       this.orgName,
       this.facilityType,
+      this.displayText,
       this.name,
       this.contactName,
       this.contactPhone,
@@ -570,6 +583,7 @@ class _$GetFacilityApiFacilityDetail extends GetFacilityApiFacilityDetail {
         orgType == other.orgType &&
         orgName == other.orgName &&
         facilityType == other.facilityType &&
+        displayText == other.displayText &&
         name == other.name &&
         contactName == other.contactName &&
         contactPhone == other.contactPhone &&
@@ -624,7 +638,7 @@ class _$GetFacilityApiFacilityDetail extends GetFacilityApiFacilityDetail {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), orgId.hashCode), orgType.hashCode), orgName.hashCode), facilityType.hashCode), name.hashCode), contactName.hashCode), contactPhone.hashCode), email.hashCode), timeZone.hashCode), caseLoaningMethodology.hashCode), restockType.hashCode), publicVisible.hashCode), binManaged.hashCode), autoPutAway.hashCode), opsScheduleProfileName.hashCode), opsScheduleProfileId.hashCode), deliveryScheduleProfileName.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), orgId.hashCode), orgType.hashCode), orgName.hashCode), facilityType.hashCode), displayText.hashCode), name.hashCode), contactName.hashCode), contactPhone.hashCode), email.hashCode), timeZone.hashCode), caseLoaningMethodology.hashCode), restockType.hashCode), publicVisible.hashCode), binManaged.hashCode), autoPutAway.hashCode), opsScheduleProfileName.hashCode), opsScheduleProfileId.hashCode), deliveryScheduleProfileName.hashCode),
                                                                                 deliveryScheduleProfileId.hashCode),
                                                                             courierProfileName.hashCode),
                                                                         courierProfileId.hashCode),
@@ -654,6 +668,7 @@ class _$GetFacilityApiFacilityDetail extends GetFacilityApiFacilityDetail {
           ..add('orgType', orgType)
           ..add('orgName', orgName)
           ..add('facilityType', facilityType)
+          ..add('displayText', displayText)
           ..add('name', name)
           ..add('contactName', contactName)
           ..add('contactPhone', contactPhone)
@@ -697,181 +712,261 @@ class GetFacilityApiFacilityDetailBuilder
   _$GetFacilityApiFacilityDetail _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   OrgType _orgType;
+
   OrgType get orgType => _$this._orgType;
+
   set orgType(OrgType orgType) => _$this._orgType = orgType;
 
   String _orgName;
+
   String get orgName => _$this._orgName;
+
   set orgName(String orgName) => _$this._orgName = orgName;
 
   FacilityType _facilityType;
+
   FacilityType get facilityType => _$this._facilityType;
+
   set facilityType(FacilityType facilityType) =>
       _$this._facilityType = facilityType;
 
+  String _displayText;
+
+  String get displayText => _$this._displayText;
+
+  set displayText(String displayText) => _$this._displayText = displayText;
+
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   PersonNameBuilder _contactName;
+
   PersonNameBuilder get contactName =>
       _$this._contactName ??= new PersonNameBuilder();
+
   set contactName(PersonNameBuilder contactName) =>
       _$this._contactName = contactName;
 
   PhoneNumberBuilder _contactPhone;
+
   PhoneNumberBuilder get contactPhone =>
       _$this._contactPhone ??= new PhoneNumberBuilder();
+
   set contactPhone(PhoneNumberBuilder contactPhone) =>
       _$this._contactPhone = contactPhone;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   String _timeZone;
+
   String get timeZone => _$this._timeZone;
+
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   CaseLoaningMethodology _caseLoaningMethodology;
+
   CaseLoaningMethodology get caseLoaningMethodology =>
       _$this._caseLoaningMethodology;
+
   set caseLoaningMethodology(CaseLoaningMethodology caseLoaningMethodology) =>
       _$this._caseLoaningMethodology = caseLoaningMethodology;
 
   RestockType _restockType;
+
   RestockType get restockType => _$this._restockType;
+
   set restockType(RestockType restockType) => _$this._restockType = restockType;
 
   bool _publicVisible;
+
   bool get publicVisible => _$this._publicVisible;
+
   set publicVisible(bool publicVisible) =>
       _$this._publicVisible = publicVisible;
 
   bool _binManaged;
+
   bool get binManaged => _$this._binManaged;
+
   set binManaged(bool binManaged) => _$this._binManaged = binManaged;
 
   bool _autoPutAway;
+
   bool get autoPutAway => _$this._autoPutAway;
+
   set autoPutAway(bool autoPutAway) => _$this._autoPutAway = autoPutAway;
 
   String _opsScheduleProfileName;
+
   String get opsScheduleProfileName => _$this._opsScheduleProfileName;
+
   set opsScheduleProfileName(String opsScheduleProfileName) =>
       _$this._opsScheduleProfileName = opsScheduleProfileName;
 
   String _opsScheduleProfileId;
+
   String get opsScheduleProfileId => _$this._opsScheduleProfileId;
+
   set opsScheduleProfileId(String opsScheduleProfileId) =>
       _$this._opsScheduleProfileId = opsScheduleProfileId;
 
   String _deliveryScheduleProfileName;
+
   String get deliveryScheduleProfileName => _$this._deliveryScheduleProfileName;
+
   set deliveryScheduleProfileName(String deliveryScheduleProfileName) =>
       _$this._deliveryScheduleProfileName = deliveryScheduleProfileName;
 
   String _deliveryScheduleProfileId;
+
   String get deliveryScheduleProfileId => _$this._deliveryScheduleProfileId;
+
   set deliveryScheduleProfileId(String deliveryScheduleProfileId) =>
       _$this._deliveryScheduleProfileId = deliveryScheduleProfileId;
 
   String _courierProfileName;
+
   String get courierProfileName => _$this._courierProfileName;
+
   set courierProfileName(String courierProfileName) =>
       _$this._courierProfileName = courierProfileName;
 
   String _courierProfileId;
+
   String get courierProfileId => _$this._courierProfileId;
+
   set courierProfileId(String courierProfileId) =>
       _$this._courierProfileId = courierProfileId;
 
   int _lagTime;
+
   int get lagTime => _$this._lagTime;
+
   set lagTime(int lagTime) => _$this._lagTime = lagTime;
 
   bool _splitImplantsAndInstruments;
+
   bool get splitImplantsAndInstruments => _$this._splitImplantsAndInstruments;
+
   set splitImplantsAndInstruments(bool splitImplantsAndInstruments) =>
       _$this._splitImplantsAndInstruments = splitImplantsAndInstruments;
 
   int _turnTimeInMinutes;
+
   int get turnTimeInMinutes => _$this._turnTimeInMinutes;
+
   set turnTimeInMinutes(int turnTimeInMinutes) =>
       _$this._turnTimeInMinutes = turnTimeInMinutes;
 
   LoanSplitMethod _loanSplitMethod;
+
   LoanSplitMethod get loanSplitMethod => _$this._loanSplitMethod;
+
   set loanSplitMethod(LoanSplitMethod loanSplitMethod) =>
       _$this._loanSplitMethod = loanSplitMethod;
 
   bool _optimizeLoans;
+
   bool get optimizeLoans => _$this._optimizeLoans;
+
   set optimizeLoans(bool optimizeLoans) =>
       _$this._optimizeLoans = optimizeLoans;
 
   String _customerId;
+
   String get customerId => _$this._customerId;
+
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _customerName;
+
   String get customerName => _$this._customerName;
+
   set customerName(String customerName) => _$this._customerName = customerName;
 
   String _customerNumber;
+
   String get customerNumber => _$this._customerNumber;
+
   set customerNumber(String customerNumber) =>
       _$this._customerNumber = customerNumber;
 
   CustomerAddressBuilder _shipTo;
+
   CustomerAddressBuilder get shipTo =>
       _$this._shipTo ??= new CustomerAddressBuilder();
+
   set shipTo(CustomerAddressBuilder shipTo) => _$this._shipTo = shipTo;
 
   CustomerAddressBuilder _defaultBillTo;
+
   CustomerAddressBuilder get defaultBillTo =>
       _$this._defaultBillTo ??= new CustomerAddressBuilder();
+
   set defaultBillTo(CustomerAddressBuilder defaultBillTo) =>
       _$this._defaultBillTo = defaultBillTo;
 
   String _defaultDeliverToAddressId;
+
   String get defaultDeliverToAddressId => _$this._defaultDeliverToAddressId;
+
   set defaultDeliverToAddressId(String defaultDeliverToAddressId) =>
       _$this._defaultDeliverToAddressId = defaultDeliverToAddressId;
 
   AddressBuilder _defaultDeliverToAddress;
+
   AddressBuilder get defaultDeliverToAddress =>
       _$this._defaultDeliverToAddress ??= new AddressBuilder();
+
   set defaultDeliverToAddress(AddressBuilder defaultDeliverToAddress) =>
       _$this._defaultDeliverToAddress = defaultDeliverToAddress;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   ListBuilder<FacilityAttribute> _attributes;
+
   ListBuilder<FacilityAttribute> get attributes =>
       _$this._attributes ??= new ListBuilder<FacilityAttribute>();
+
   set attributes(ListBuilder<FacilityAttribute> attributes) =>
       _$this._attributes = attributes;
 
   ListBuilder<AttributeContact> _attributeContacts;
+
   ListBuilder<AttributeContact> get attributeContacts =>
       _$this._attributeContacts ??= new ListBuilder<AttributeContact>();
+
   set attributeContacts(ListBuilder<AttributeContact> attributeContacts) =>
       _$this._attributeContacts = attributeContacts;
 
   ListBuilder<CustomAction> _customActions;
+
   ListBuilder<CustomAction> get customActions =>
       _$this._customActions ??= new ListBuilder<CustomAction>();
+
   set customActions(ListBuilder<CustomAction> customActions) =>
       _$this._customActions = customActions;
 
@@ -884,6 +979,7 @@ class GetFacilityApiFacilityDetailBuilder
       _orgType = _$v.orgType;
       _orgName = _$v.orgName;
       _facilityType = _$v.facilityType;
+      _displayText = _$v.displayText;
       _name = _$v.name;
       _contactName = _$v.contactName?.toBuilder();
       _contactPhone = _$v.contactPhone?.toBuilder();
@@ -945,6 +1041,7 @@ class GetFacilityApiFacilityDetailBuilder
               orgType: orgType,
               orgName: orgName,
               facilityType: facilityType,
+              displayText: displayText,
               name: name,
               contactName: _contactName?.build(),
               contactPhone: _contactPhone?.build(),
@@ -1039,6 +1136,7 @@ class _$GetFacilityApiFacilityDetailActions
   final FieldDispatcher<OrgType> orgType;
   final FieldDispatcher<String> orgName;
   final FieldDispatcher<FacilityType> facilityType;
+  final FieldDispatcher<String> displayText;
   final FieldDispatcher<String> name;
   final PersonNameActions contactName;
   final PhoneNumberActions contactPhone;
@@ -1088,6 +1186,11 @@ class _$GetFacilityApiFacilityDetailActions
             (a) => a?.facilityType,
             (s) => s?.facilityType,
             (p, b) => p?.facilityType = b),
+        displayText = options$.field<String>(
+            'displayText',
+            (a) => a?.displayText,
+            (s) => s?.displayText,
+            (p, b) => p?.displayText = b),
         name = options$.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         contactName = PersonNameActions(() =>
@@ -1257,6 +1360,7 @@ class _$GetFacilityApiFacilityDetailActions
       GetFacilityApiFacilityDetailBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.contactName,
@@ -1268,6 +1372,7 @@ class _$GetFacilityApiFacilityDetailActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -1277,6 +1382,7 @@ class _$GetFacilityApiFacilityDetailActions
         this.orgType,
         this.orgName,
         this.facilityType,
+        this.displayText,
         this.name,
         this.timeZone,
         this.caseLoaningMethodology,
@@ -1313,6 +1419,7 @@ class _$GetFacilityApiFacilityDetailActions
     orgType.reducer$(reducer);
     orgName.reducer$(reducer);
     facilityType.reducer$(reducer);
+    displayText.reducer$(reducer);
     name.reducer$(reducer);
     contactName.reducer$(reducer);
     contactPhone.reducer$(reducer);

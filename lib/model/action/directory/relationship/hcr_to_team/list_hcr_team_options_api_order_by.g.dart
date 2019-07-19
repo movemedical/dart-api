@@ -9,8 +9,7 @@ part of 'list_hcr_team_options_api_order_by.dart';
 const ListHcrTeamOptionsApiOrderBy _$wireNAME =
     const ListHcrTeamOptionsApiOrderBy._('NAME');
 
-ListHcrTeamOptionsApiOrderBy _$listHcrTeamOptionsApiOrderByValueOf(
-    String name) {
+ListHcrTeamOptionsApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -19,9 +18,8 @@ ListHcrTeamOptionsApiOrderBy _$listHcrTeamOptionsApiOrderByValueOf(
   }
 }
 
-final BuiltSet<ListHcrTeamOptionsApiOrderBy>
-    _$listHcrTeamOptionsApiOrderByValues = new BuiltSet<
-        ListHcrTeamOptionsApiOrderBy>(const <ListHcrTeamOptionsApiOrderBy>[
+final BuiltSet<ListHcrTeamOptionsApiOrderBy> _$values = new BuiltSet<
+    ListHcrTeamOptionsApiOrderBy>(const <ListHcrTeamOptionsApiOrderBy>[
   _$wireNAME,
 ]);
 

@@ -298,59 +298,83 @@ class UpdateCaseEventPatientApiRequestBuilder
   _$UpdateCaseEventPatientApiRequest _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   String _ssn;
+
   String get ssn => _$this._ssn;
+
   set ssn(String ssn) => _$this._ssn = ssn;
 
   String _mrn;
+
   String get mrn => _$this._mrn;
+
   set mrn(String mrn) => _$this._mrn = mrn;
 
   PersonNameBuilder _name;
+
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
+
   set name(PersonNameBuilder name) => _$this._name = name;
 
   DateTime _dateOfBirth;
+
   DateTime get dateOfBirth => _$this._dateOfBirth;
+
   set dateOfBirth(DateTime dateOfBirth) => _$this._dateOfBirth = dateOfBirth;
 
   Gender _gender;
+
   Gender get gender => _$this._gender;
+
   set gender(Gender gender) => _$this._gender = gender;
 
   double _heightMeasurement;
+
   double get heightMeasurement => _$this._heightMeasurement;
+
   set heightMeasurement(double heightMeasurement) =>
       _$this._heightMeasurement = heightMeasurement;
 
   LengthMeasurementType _heightMeasurementType;
+
   LengthMeasurementType get heightMeasurementType =>
       _$this._heightMeasurementType;
+
   set heightMeasurementType(LengthMeasurementType heightMeasurementType) =>
       _$this._heightMeasurementType = heightMeasurementType;
 
   double _weightMeasurement;
+
   double get weightMeasurement => _$this._weightMeasurement;
+
   set weightMeasurement(double weightMeasurement) =>
       _$this._weightMeasurement = weightMeasurement;
 
   WeightMeasurementType _weightMeasurementType;
+
   WeightMeasurementType get weightMeasurementType =>
       _$this._weightMeasurementType;
+
   set weightMeasurementType(WeightMeasurementType weightMeasurementType) =>
       _$this._weightMeasurementType = weightMeasurementType;
 
   Ethnicity _ethnicity;
+
   Ethnicity get ethnicity => _$this._ethnicity;
+
   set ethnicity(Ethnicity ethnicity) => _$this._ethnicity = ethnicity;
 
   UpdateCaseEventInsuranceApiRequestBuilder _updateInsuranceRequest;
+
   UpdateCaseEventInsuranceApiRequestBuilder get updateInsuranceRequest =>
       _$this._updateInsuranceRequest ??=
           new UpdateCaseEventInsuranceApiRequestBuilder();
+
   set updateInsuranceRequest(
           UpdateCaseEventInsuranceApiRequestBuilder updateInsuranceRequest) =>
       _$this._updateInsuranceRequest = updateInsuranceRequest;
@@ -534,6 +558,7 @@ class _$UpdateCaseEventPatientApiRequestActions
       UpdateCaseEventPatientApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
@@ -541,6 +566,7 @@ class _$UpdateCaseEventPatientApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

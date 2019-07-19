@@ -104,6 +104,12 @@ class _$ListPreferenceCardsApiPreferenceCardSerializer
         ..add(serializers.serialize(object.subProcedureName,
             specifiedType: const FullType(String)));
     }
+    if (object.bodySide != null) {
+      result
+        ..add('bodySide')
+        ..add(serializers.serialize(object.bodySide,
+            specifiedType: const FullType(BodySide)));
+    }
     if (object.preferenceCardType != null) {
       result
         ..add('preferenceCardType')
@@ -190,6 +196,10 @@ class _$ListPreferenceCardsApiPreferenceCardSerializer
           result.subProcedureName = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'bodySide':
+          result.bodySide = serializers.deserialize(value,
+              specifiedType: const FullType(BodySide)) as BodySide;
+          break;
         case 'preferenceCardType':
           result.preferenceCardType = serializers.deserialize(value,
                   specifiedType: const FullType(PreferenceCardType))
@@ -239,6 +249,8 @@ class _$ListPreferenceCardsApiPreferenceCard
   @override
   final String subProcedureName;
   @override
+  final BodySide bodySide;
+  @override
   final PreferenceCardType preferenceCardType;
   @override
   final int totalItems;
@@ -264,6 +276,7 @@ class _$ListPreferenceCardsApiPreferenceCard
       this.procedureName,
       this.subProcedureId,
       this.subProcedureName,
+      this.bodySide,
       this.preferenceCardType,
       this.totalItems,
       this.active})
@@ -295,6 +308,7 @@ class _$ListPreferenceCardsApiPreferenceCard
         procedureName == other.procedureName &&
         subProcedureId == other.subProcedureId &&
         subProcedureName == other.subProcedureName &&
+        bodySide == other.bodySide &&
         preferenceCardType == other.preferenceCardType &&
         totalItems == other.totalItems &&
         active == other.active;
@@ -317,20 +331,27 @@ class _$ListPreferenceCardsApiPreferenceCard
                                                     $jc(
                                                         $jc(
                                                             $jc(
-                                                                $jc(0,
-                                                                    id.hashCode),
-                                                                name.hashCode),
-                                                            description.hashCode),
-                                                        techniqueId.hashCode),
-                                                    techniqueName.hashCode),
-                                                physicianId.hashCode),
-                                            physicianName.hashCode),
-                                        facilityId.hashCode),
-                                    facilityName.hashCode),
-                                procedureId.hashCode),
-                            procedureName.hashCode),
-                        subProcedureId.hashCode),
-                    subProcedureName.hashCode),
+                                                                $jc(
+                                                                    $jc(
+                                                                        0,
+                                                                        id
+                                                                            .hashCode),
+                                                                    name
+                                                                        .hashCode),
+                                                                description
+                                                                    .hashCode),
+                                                            techniqueId
+                                                                .hashCode),
+                                                        techniqueName.hashCode),
+                                                    physicianId.hashCode),
+                                                physicianName.hashCode),
+                                            facilityId.hashCode),
+                                        facilityName.hashCode),
+                                    procedureId.hashCode),
+                                procedureName.hashCode),
+                            subProcedureId.hashCode),
+                        subProcedureName.hashCode),
+                    bodySide.hashCode),
                 preferenceCardType.hashCode),
             totalItems.hashCode),
         active.hashCode));
@@ -352,6 +373,7 @@ class _$ListPreferenceCardsApiPreferenceCard
           ..add('procedureName', procedureName)
           ..add('subProcedureId', subProcedureId)
           ..add('subProcedureName', subProcedureName)
+          ..add('bodySide', bodySide)
           ..add('preferenceCardType', preferenceCardType)
           ..add('totalItems', totalItems)
           ..add('active', active))
@@ -366,73 +388,111 @@ class ListPreferenceCardsApiPreferenceCardBuilder
   _$ListPreferenceCardsApiPreferenceCard _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   String _techniqueId;
+
   String get techniqueId => _$this._techniqueId;
+
   set techniqueId(String techniqueId) => _$this._techniqueId = techniqueId;
 
   String _techniqueName;
+
   String get techniqueName => _$this._techniqueName;
+
   set techniqueName(String techniqueName) =>
       _$this._techniqueName = techniqueName;
 
   String _physicianId;
+
   String get physicianId => _$this._physicianId;
+
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   String _physicianName;
+
   String get physicianName => _$this._physicianName;
+
   set physicianName(String physicianName) =>
       _$this._physicianName = physicianName;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _facilityName;
+
   String get facilityName => _$this._facilityName;
+
   set facilityName(String facilityName) => _$this._facilityName = facilityName;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _procedureName;
+
   String get procedureName => _$this._procedureName;
+
   set procedureName(String procedureName) =>
       _$this._procedureName = procedureName;
 
   String _subProcedureId;
+
   String get subProcedureId => _$this._subProcedureId;
+
   set subProcedureId(String subProcedureId) =>
       _$this._subProcedureId = subProcedureId;
 
   String _subProcedureName;
+
   String get subProcedureName => _$this._subProcedureName;
+
   set subProcedureName(String subProcedureName) =>
       _$this._subProcedureName = subProcedureName;
 
+  BodySide _bodySide;
+
+  BodySide get bodySide => _$this._bodySide;
+
+  set bodySide(BodySide bodySide) => _$this._bodySide = bodySide;
+
   PreferenceCardType _preferenceCardType;
+
   PreferenceCardType get preferenceCardType => _$this._preferenceCardType;
+
   set preferenceCardType(PreferenceCardType preferenceCardType) =>
       _$this._preferenceCardType = preferenceCardType;
 
   int _totalItems;
+
   int get totalItems => _$this._totalItems;
+
   set totalItems(int totalItems) => _$this._totalItems = totalItems;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   ListPreferenceCardsApiPreferenceCardBuilder();
@@ -452,6 +512,7 @@ class ListPreferenceCardsApiPreferenceCardBuilder
       _procedureName = _$v.procedureName;
       _subProcedureId = _$v.subProcedureId;
       _subProcedureName = _$v.subProcedureName;
+      _bodySide = _$v.bodySide;
       _preferenceCardType = _$v.preferenceCardType;
       _totalItems = _$v.totalItems;
       _active = _$v.active;
@@ -490,6 +551,7 @@ class ListPreferenceCardsApiPreferenceCardBuilder
             procedureName: procedureName,
             subProcedureId: subProcedureId,
             subProcedureName: subProcedureName,
+            bodySide: bodySide,
             preferenceCardType: preferenceCardType,
             totalItems: totalItems,
             active: active);
@@ -533,6 +595,7 @@ class _$ListPreferenceCardsApiPreferenceCardActions
   final FieldDispatcher<String> procedureName;
   final FieldDispatcher<String> subProcedureId;
   final FieldDispatcher<String> subProcedureName;
+  final FieldDispatcher<BodySide> bodySide;
   final FieldDispatcher<PreferenceCardType> preferenceCardType;
   final FieldDispatcher<int> totalItems;
   final FieldDispatcher<bool> active;
@@ -596,6 +659,8 @@ class _$ListPreferenceCardsApiPreferenceCardActions
             (a) => a?.subProcedureName,
             (s) => s?.subProcedureName,
             (p, b) => p?.subProcedureName = b),
+        bodySide = options$.field<BodySide>('bodySide', (a) => a?.bodySide,
+            (s) => s?.bodySide, (p, b) => p?.bodySide = b),
         preferenceCardType = options$.field<PreferenceCardType>(
             'preferenceCardType',
             (a) => a?.preferenceCardType,
@@ -620,6 +685,7 @@ class _$ListPreferenceCardsApiPreferenceCardActions
       ListPreferenceCardsApiPreferenceCardBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -637,6 +703,7 @@ class _$ListPreferenceCardsApiPreferenceCardActions
         this.procedureName,
         this.subProcedureId,
         this.subProcedureName,
+        this.bodySide,
         this.preferenceCardType,
         this.totalItems,
         this.active,
@@ -658,6 +725,7 @@ class _$ListPreferenceCardsApiPreferenceCardActions
     procedureName.reducer$(reducer);
     subProcedureId.reducer$(reducer);
     subProcedureName.reducer$(reducer);
+    bodySide.reducer$(reducer);
     preferenceCardType.reducer$(reducer);
     totalItems.reducer$(reducer);
     active.reducer$(reducer);

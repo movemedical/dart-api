@@ -33,11 +33,9 @@ class ListOrderLinesApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListOrderLinesApiOrderBy> get values =>
-      _$listOrderLinesApiOrderByValues;
+  static BuiltSet<ListOrderLinesApiOrderBy> get values => _$values;
 
-  static ListOrderLinesApiOrderBy valueOf(String name) =>
-      _$listOrderLinesApiOrderByValueOf(name);
+  static ListOrderLinesApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

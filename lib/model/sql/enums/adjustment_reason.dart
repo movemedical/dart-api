@@ -39,10 +39,9 @@ class AdjustmentReason extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<AdjustmentReason> get values => _$adjustmentReasonValues;
+  static BuiltSet<AdjustmentReason> get values => _$values;
 
-  static AdjustmentReason valueOf(String name) =>
-      _$adjustmentReasonValueOf(name);
+  static AdjustmentReason valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

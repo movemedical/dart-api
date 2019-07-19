@@ -68,6 +68,7 @@ class _$CreateItemCategoryApi extends CreateItemCategoryApi {
           ApiResult<CreateItemCategoryApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

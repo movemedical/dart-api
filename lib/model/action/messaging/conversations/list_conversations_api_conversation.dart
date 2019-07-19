@@ -29,6 +29,9 @@ abstract class ListConversationsApiConversation
   String get allParticipantsDisplayText;
 
   @nullable
+  BuiltList<String> get participantsDisplayText;
+
+  @nullable
   bool get stopped;
 
   @nullable
@@ -88,6 +91,8 @@ abstract class ListConversationsApiConversationActions extends ModelActions<
   FieldDispatcher<String> get purpose;
 
   FieldDispatcher<String> get allParticipantsDisplayText;
+
+  FieldDispatcher<BuiltList<String>> get participantsDisplayText;
 
   FieldDispatcher<bool> get stopped;
 

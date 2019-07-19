@@ -196,33 +196,47 @@ class OrderHeaderLiteBuilder
   _$OrderHeaderLite _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   DateTime _created;
+
   DateTime get created => _$this._created;
+
   set created(DateTime created) => _$this._created = created;
 
   int _number;
+
   int get number => _$this._number;
+
   set number(int number) => _$this._number = number;
 
   OrderStatus _status;
+
   OrderStatus get status => _$this._status;
+
   set status(OrderStatus status) => _$this._status = status;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
   String _orderReasonName;
+
   String get orderReasonName => _$this._orderReasonName;
+
   set orderReasonName(String orderReasonName) =>
       _$this._orderReasonName = orderReasonName;
 
   OrderReasonGroup _orderReasonGroup;
+
   OrderReasonGroup get orderReasonGroup => _$this._orderReasonGroup;
+
   set orderReasonGroup(OrderReasonGroup orderReasonGroup) =>
       _$this._orderReasonGroup = orderReasonGroup;
 
@@ -334,6 +348,7 @@ class _$OrderHeaderLiteActions extends OrderHeaderLiteActions {
   OrderHeaderLiteBuilder newBuilder$() => OrderHeaderLiteBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

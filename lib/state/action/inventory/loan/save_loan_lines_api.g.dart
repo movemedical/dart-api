@@ -58,6 +58,7 @@ class _$SaveLoanLinesApi extends SaveLoanLinesApi {
           ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

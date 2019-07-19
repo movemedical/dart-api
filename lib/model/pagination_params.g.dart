@@ -108,12 +108,16 @@ class PaginationParamsBuilder
   _$PaginationParams _$v;
 
   int _startRecordIdx;
+
   int get startRecordIdx => _$this._startRecordIdx;
+
   set startRecordIdx(int startRecordIdx) =>
       _$this._startRecordIdx = startRecordIdx;
 
   int _pageSize;
+
   int get pageSize => _$this._pageSize;
+
   set pageSize(int pageSize) => _$this._pageSize = pageSize;
 
   PaginationParamsBuilder();
@@ -192,6 +196,7 @@ class _$PaginationParamsActions extends PaginationParamsActions {
   PaginationParamsBuilder newBuilder$() => PaginationParamsBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

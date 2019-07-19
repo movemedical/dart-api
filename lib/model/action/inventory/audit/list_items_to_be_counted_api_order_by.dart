@@ -27,11 +27,9 @@ class ListItemsToBeCountedApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListItemsToBeCountedApiOrderBy> get values =>
-      _$listItemsToBeCountedApiOrderByValues;
+  static BuiltSet<ListItemsToBeCountedApiOrderBy> get values => _$values;
 
-  static ListItemsToBeCountedApiOrderBy valueOf(String name) =>
-      _$listItemsToBeCountedApiOrderByValueOf(name);
+  static ListItemsToBeCountedApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

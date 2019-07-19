@@ -144,15 +144,21 @@ class ListMobileVersionBlacklistApiBlacklistedVersionBuilder
   _$ListMobileVersionBlacklistApiBlacklistedVersion _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   MobilePlatform _platform;
+
   MobilePlatform get platform => _$this._platform;
+
   set platform(MobilePlatform platform) => _$this._platform = platform;
 
   String _versionNumber;
+
   String get versionNumber => _$this._versionNumber;
+
   set versionNumber(String versionNumber) =>
       _$this._versionNumber = versionNumber;
 
@@ -248,6 +254,7 @@ class _$ListMobileVersionBlacklistApiBlacklistedVersionActions
       ListMobileVersionBlacklistApiBlacklistedVersionBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

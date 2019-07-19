@@ -27,8 +27,7 @@ const ListDeliverToAddressesApiOrderBy _$wireCUSTOMER_KEY =
 const ListDeliverToAddressesApiOrderBy _$wireFACILITY =
     const ListDeliverToAddressesApiOrderBy._('FACILITY');
 
-ListDeliverToAddressesApiOrderBy _$listDeliverToAddressesApiOrderByValueOf(
-    String name) {
+ListDeliverToAddressesApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'LINE1':
       return _$wireLINE1;
@@ -55,10 +54,8 @@ ListDeliverToAddressesApiOrderBy _$listDeliverToAddressesApiOrderByValueOf(
   }
 }
 
-final BuiltSet<ListDeliverToAddressesApiOrderBy>
-    _$listDeliverToAddressesApiOrderByValues =
-    new BuiltSet<ListDeliverToAddressesApiOrderBy>(const <
-        ListDeliverToAddressesApiOrderBy>[
+final BuiltSet<ListDeliverToAddressesApiOrderBy> _$values = new BuiltSet<
+    ListDeliverToAddressesApiOrderBy>(const <ListDeliverToAddressesApiOrderBy>[
   _$wireLINE1,
   _$wireLINE2,
   _$wireLINE3,

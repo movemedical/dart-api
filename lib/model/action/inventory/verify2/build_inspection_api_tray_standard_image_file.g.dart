@@ -123,11 +123,15 @@ class BuildInspectionApiTrayStandardImageFileBuilder
   _$BuildInspectionApiTrayStandardImageFile _$v;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _fileId;
+
   String get fileId => _$this._fileId;
+
   set fileId(String fileId) => _$this._fileId = fileId;
 
   BuildInspectionApiTrayStandardImageFileBuilder();
@@ -211,6 +215,7 @@ class _$BuildInspectionApiTrayStandardImageFileActions
       BuildInspectionApiTrayStandardImageFileBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

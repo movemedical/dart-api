@@ -29,7 +29,7 @@ const WebServiceLogInitiatorType _$wireSUBMIT_CONSIGNMENT_RECEIPT =
 const WebServiceLogInitiatorType _$wireSUBMIT_CONSIGNMENT_TRANSFER =
     const WebServiceLogInitiatorType._('SUBMIT_CONSIGNMENT_TRANSFER');
 
-WebServiceLogInitiatorType _$webServiceLogInitiatorTypeValueOf(String name) {
+WebServiceLogInitiatorType _$valueOf(String name) {
   switch (name) {
     case 'REQUEST_CUSTOMER_PRICES':
       return _$wireREQUEST_CUSTOMER_PRICES;
@@ -58,7 +58,7 @@ WebServiceLogInitiatorType _$webServiceLogInitiatorTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<WebServiceLogInitiatorType> _$webServiceLogInitiatorTypeValues =
+final BuiltSet<WebServiceLogInitiatorType> _$values =
     new BuiltSet<WebServiceLogInitiatorType>(const <WebServiceLogInitiatorType>[
   _$wireREQUEST_CUSTOMER_PRICES,
   _$wireLOAD_BILL_TO_PRICE,

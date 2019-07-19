@@ -33,11 +33,11 @@ import 'package:movemedical_api/model/push/ui_setup_updated_push_message.dart';
 part 'push.g.dart';
 
 class PushType<T> {
-  final String name;
+  final String className;
   final Serializer<T> serializer;
   final ActionDispatcher<T> dispatcher;
 
-  PushType(this.name, this.serializer, this.dispatcher);
+  PushType(this.className, this.serializer, this.dispatcher);
 }
 
 abstract class PushDispatcher extends StatelessActions<PushDispatcher> {
@@ -107,9 +107,9 @@ abstract class PushDispatcher extends StatelessActions<PushDispatcher> {
 
   ActionDispatcher<MovePresenceEvent> get movePresenceEvent;
 
-  PushType findByName(String name) {
-    if (name == null) return null;
-    switch (name) {
+  PushType findByName(String className) {
+    if (className == null) return null;
+    switch (className) {
       case 'AuditFilePushMessage':
         return PushType<AuditFilePushMessage>('AuditFilePushMessage',
             AuditFilePushMessage.serializer, auditFilePushMessage);

@@ -24,10 +24,10 @@ class ProcessStockOrderRestockPlanApiRestockSystem extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ProcessStockOrderRestockPlanApiRestockSystem> get values =>
-      _$processStockOrderRestockPlanApiRestockSystemValues;
+      _$values;
 
   static ProcessStockOrderRestockPlanApiRestockSystem valueOf(String name) =>
-      _$processStockOrderRestockPlanApiRestockSystemValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

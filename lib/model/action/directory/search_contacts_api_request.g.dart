@@ -215,39 +215,53 @@ class SearchContactsApiRequestBuilder
   _$SearchContactsApiRequest _$v;
 
   ListBuilder<String> _bizUnitIds;
+
   ListBuilder<String> get bizUnitIds =>
       _$this._bizUnitIds ??= new ListBuilder<String>();
+
   set bizUnitIds(ListBuilder<String> bizUnitIds) =>
       _$this._bizUnitIds = bizUnitIds;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   ListBuilder<GeneralContactType> _contactTypes;
+
   ListBuilder<GeneralContactType> get contactTypes =>
       _$this._contactTypes ??= new ListBuilder<GeneralContactType>();
+
   set contactTypes(ListBuilder<GeneralContactType> contactTypes) =>
       _$this._contactTypes = contactTypes;
 
   ListBuilder<String> _contactIds;
+
   ListBuilder<String> get contactIds =>
       _$this._contactIds ??= new ListBuilder<String>();
+
   set contactIds(ListBuilder<String> contactIds) =>
       _$this._contactIds = contactIds;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   bool _openSearch;
+
   bool get openSearch => _$this._openSearch;
+
   set openSearch(bool openSearch) => _$this._openSearch = openSearch;
 
   SearchContactsApiRequestBuilder();
@@ -387,6 +401,7 @@ class _$SearchContactsApiRequestActions
       SearchContactsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

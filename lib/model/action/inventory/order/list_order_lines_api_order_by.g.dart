@@ -33,7 +33,7 @@ const ListOrderLinesApiOrderBy _$wireREALLOCATED =
 const ListOrderLinesApiOrderBy _$wireBACKORDERED =
     const ListOrderLinesApiOrderBy._('BACKORDERED');
 
-ListOrderLinesApiOrderBy _$listOrderLinesApiOrderByValueOf(String name) {
+ListOrderLinesApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'ITEM_NUMBER':
       return _$wireITEM_NUMBER;
@@ -66,7 +66,7 @@ ListOrderLinesApiOrderBy _$listOrderLinesApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListOrderLinesApiOrderBy> _$listOrderLinesApiOrderByValues =
+final BuiltSet<ListOrderLinesApiOrderBy> _$values =
     new BuiltSet<ListOrderLinesApiOrderBy>(const <ListOrderLinesApiOrderBy>[
   _$wireITEM_NUMBER,
   _$wireITEM_CLASS,

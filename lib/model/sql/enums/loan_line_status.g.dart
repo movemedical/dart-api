@@ -11,7 +11,7 @@ const LoanLineStatus _$wirePENDING_RETURN =
     const LoanLineStatus._('PENDING_RETURN');
 const LoanLineStatus _$wireRETURNED = const LoanLineStatus._('RETURNED');
 
-LoanLineStatus _$loanLineStatusValueOf(String name) {
+LoanLineStatus _$valueOf(String name) {
   switch (name) {
     case 'ACTIVE':
       return _$wireACTIVE;
@@ -24,7 +24,7 @@ LoanLineStatus _$loanLineStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<LoanLineStatus> _$loanLineStatusValues =
+final BuiltSet<LoanLineStatus> _$values =
     new BuiltSet<LoanLineStatus>(const <LoanLineStatus>[
   _$wireACTIVE,
   _$wirePENDING_RETURN,

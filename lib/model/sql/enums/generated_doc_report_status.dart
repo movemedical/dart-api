@@ -25,11 +25,9 @@ class GeneratedDocReportStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<GeneratedDocReportStatus> get values =>
-      _$generatedDocReportStatusValues;
+  static BuiltSet<GeneratedDocReportStatus> get values => _$values;
 
-  static GeneratedDocReportStatus valueOf(String name) =>
-      _$generatedDocReportStatusValueOf(name);
+  static GeneratedDocReportStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

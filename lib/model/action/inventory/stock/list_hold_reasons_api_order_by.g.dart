@@ -11,7 +11,7 @@ const ListHoldReasonsApiOrderBy _$wireNAME =
 const ListHoldReasonsApiOrderBy _$wireACTIVE =
     const ListHoldReasonsApiOrderBy._('ACTIVE');
 
-ListHoldReasonsApiOrderBy _$listHoldReasonsApiOrderByValueOf(String name) {
+ListHoldReasonsApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -22,7 +22,7 @@ ListHoldReasonsApiOrderBy _$listHoldReasonsApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListHoldReasonsApiOrderBy> _$listHoldReasonsApiOrderByValues =
+final BuiltSet<ListHoldReasonsApiOrderBy> _$values =
     new BuiltSet<ListHoldReasonsApiOrderBy>(const <ListHoldReasonsApiOrderBy>[
   _$wireNAME,
   _$wireACTIVE,

@@ -69,6 +69,7 @@ class _$PrepareCaseFileDownloadApi extends PrepareCaseFileDownloadApi {
           ApiResult<PrepareCaseFileDownloadApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -105,7 +105,9 @@ class GetTeamOrgUnitLinkApiRequestBuilder
   _$GetTeamOrgUnitLinkApiRequest _$v;
 
   String _teamToOrgUnitId;
+
   String get teamToOrgUnitId => _$this._teamToOrgUnitId;
+
   set teamToOrgUnitId(String teamToOrgUnitId) =>
       _$this._teamToOrgUnitId = teamToOrgUnitId;
 
@@ -188,6 +190,7 @@ class _$GetTeamOrgUnitLinkApiRequestActions
       GetTeamOrgUnitLinkApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

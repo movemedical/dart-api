@@ -84,6 +84,18 @@ class _$EditOrderDetailsApiRequestSerializer
         ..add(serializers.serialize(object.poNumber,
             specifiedType: const FullType(String)));
     }
+    if (object.salesLeadUserId != null) {
+      result
+        ..add('salesLeadUserId')
+        ..add(serializers.serialize(object.salesLeadUserId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.opsLeadUserId != null) {
+      result
+        ..add('opsLeadUserId')
+        ..add(serializers.serialize(object.opsLeadUserId,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -140,6 +152,14 @@ class _$EditOrderDetailsApiRequestSerializer
           result.poNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'salesLeadUserId':
+          result.salesLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'opsLeadUserId':
+          result.opsLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -168,6 +188,10 @@ class _$EditOrderDetailsApiRequest extends EditOrderDetailsApiRequest {
   final DateRange deliveryWindow;
   @override
   final String poNumber;
+  @override
+  final String salesLeadUserId;
+  @override
+  final String opsLeadUserId;
 
   factory _$EditOrderDetailsApiRequest(
           [void updates(EditOrderDetailsApiRequestBuilder b)]) =>
@@ -183,7 +207,9 @@ class _$EditOrderDetailsApiRequest extends EditOrderDetailsApiRequest {
       this.deliverToAddressOverride,
       this.shippingServiceId,
       this.deliveryWindow,
-      this.poNumber})
+      this.poNumber,
+      this.salesLeadUserId,
+      this.opsLeadUserId})
       : super._();
 
   @override
@@ -208,7 +234,9 @@ class _$EditOrderDetailsApiRequest extends EditOrderDetailsApiRequest {
         deliverToAddressOverride == other.deliverToAddressOverride &&
         shippingServiceId == other.shippingServiceId &&
         deliveryWindow == other.deliveryWindow &&
-        poNumber == other.poNumber;
+        poNumber == other.poNumber &&
+        salesLeadUserId == other.salesLeadUserId &&
+        opsLeadUserId == other.opsLeadUserId;
   }
 
   @override
@@ -221,16 +249,20 @@ class _$EditOrderDetailsApiRequest extends EditOrderDetailsApiRequest {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, orderId.hashCode),
-                                        toLocation.hashCode),
-                                    email.hashCode),
-                                attention.hashCode),
-                            shipToAddressId.hashCode),
-                        deliverToAddressId.hashCode),
-                    deliverToAddressOverride.hashCode),
-                shippingServiceId.hashCode),
-            deliveryWindow.hashCode),
-        poNumber.hashCode));
+                                    $jc(
+                                        $jc(
+                                            $jc($jc(0, orderId.hashCode),
+                                                toLocation.hashCode),
+                                            email.hashCode),
+                                        attention.hashCode),
+                                    shipToAddressId.hashCode),
+                                deliverToAddressId.hashCode),
+                            deliverToAddressOverride.hashCode),
+                        shippingServiceId.hashCode),
+                    deliveryWindow.hashCode),
+                poNumber.hashCode),
+            salesLeadUserId.hashCode),
+        opsLeadUserId.hashCode));
   }
 
   @override
@@ -245,7 +277,9 @@ class _$EditOrderDetailsApiRequest extends EditOrderDetailsApiRequest {
           ..add('deliverToAddressOverride', deliverToAddressOverride)
           ..add('shippingServiceId', shippingServiceId)
           ..add('deliveryWindow', deliveryWindow)
-          ..add('poNumber', poNumber))
+          ..add('poNumber', poNumber)
+          ..add('salesLeadUserId', salesLeadUserId)
+          ..add('opsLeadUserId', opsLeadUserId))
         .toString();
   }
 }
@@ -256,53 +290,87 @@ class EditOrderDetailsApiRequestBuilder
   _$EditOrderDetailsApiRequest _$v;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   LocationDataBuilder _toLocation;
+
   LocationDataBuilder get toLocation =>
       _$this._toLocation ??= new LocationDataBuilder();
+
   set toLocation(LocationDataBuilder toLocation) =>
       _$this._toLocation = toLocation;
 
   String _email;
+
   String get email => _$this._email;
+
   set email(String email) => _$this._email = email;
 
   String _attention;
+
   String get attention => _$this._attention;
+
   set attention(String attention) => _$this._attention = attention;
 
   String _shipToAddressId;
+
   String get shipToAddressId => _$this._shipToAddressId;
+
   set shipToAddressId(String shipToAddressId) =>
       _$this._shipToAddressId = shipToAddressId;
 
   String _deliverToAddressId;
+
   String get deliverToAddressId => _$this._deliverToAddressId;
+
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   AddressBuilder _deliverToAddressOverride;
+
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
+
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   String _shippingServiceId;
+
   String get shippingServiceId => _$this._shippingServiceId;
+
   set shippingServiceId(String shippingServiceId) =>
       _$this._shippingServiceId = shippingServiceId;
 
   DateRangeBuilder _deliveryWindow;
+
   DateRangeBuilder get deliveryWindow =>
       _$this._deliveryWindow ??= new DateRangeBuilder();
+
   set deliveryWindow(DateRangeBuilder deliveryWindow) =>
       _$this._deliveryWindow = deliveryWindow;
 
   String _poNumber;
+
   String get poNumber => _$this._poNumber;
+
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
+
+  String _salesLeadUserId;
+
+  String get salesLeadUserId => _$this._salesLeadUserId;
+
+  set salesLeadUserId(String salesLeadUserId) =>
+      _$this._salesLeadUserId = salesLeadUserId;
+
+  String _opsLeadUserId;
+
+  String get opsLeadUserId => _$this._opsLeadUserId;
+
+  set opsLeadUserId(String opsLeadUserId) =>
+      _$this._opsLeadUserId = opsLeadUserId;
 
   EditOrderDetailsApiRequestBuilder();
 
@@ -318,6 +386,8 @@ class EditOrderDetailsApiRequestBuilder
       _shippingServiceId = _$v.shippingServiceId;
       _deliveryWindow = _$v.deliveryWindow?.toBuilder();
       _poNumber = _$v.poNumber;
+      _salesLeadUserId = _$v.salesLeadUserId;
+      _opsLeadUserId = _$v.opsLeadUserId;
       _$v = null;
     }
     return this;
@@ -351,7 +421,9 @@ class EditOrderDetailsApiRequestBuilder
               deliverToAddressOverride: _deliverToAddressOverride?.build(),
               shippingServiceId: shippingServiceId,
               deliveryWindow: _deliveryWindow?.build(),
-              poNumber: poNumber);
+              poNumber: poNumber,
+              salesLeadUserId: salesLeadUserId,
+              opsLeadUserId: opsLeadUserId);
     } catch (_) {
       String _$failedField;
       try {
@@ -406,6 +478,8 @@ class _$EditOrderDetailsApiRequestActions
   final FieldDispatcher<String> shippingServiceId;
   final DateRangeActions deliveryWindow;
   final FieldDispatcher<String> poNumber;
+  final FieldDispatcher<String> salesLeadUserId;
+  final FieldDispatcher<String> opsLeadUserId;
 
   _$EditOrderDetailsApiRequestActions._(this.options$)
       : replace$ = options$.action<EditOrderDetailsApiRequest>(
@@ -455,6 +529,16 @@ class _$EditOrderDetailsApiRequestActions
                 (parent, builder) => parent?.deliveryWindow = builder)),
         poNumber = options$.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
+        salesLeadUserId = options$.field<String>(
+            'salesLeadUserId',
+            (a) => a?.salesLeadUserId,
+            (s) => s?.salesLeadUserId,
+            (p, b) => p?.salesLeadUserId = b),
+        opsLeadUserId = options$.field<String>(
+            'opsLeadUserId',
+            (a) => a?.opsLeadUserId,
+            (s) => s?.opsLeadUserId,
+            (p, b) => p?.opsLeadUserId = b),
         super._();
 
   factory _$EditOrderDetailsApiRequestActions(
@@ -469,6 +553,7 @@ class _$EditOrderDetailsApiRequestActions
       EditOrderDetailsApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toLocation,
@@ -477,6 +562,7 @@ class _$EditOrderDetailsApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -488,6 +574,8 @@ class _$EditOrderDetailsApiRequestActions
         this.deliverToAddressId,
         this.shippingServiceId,
         this.poNumber,
+        this.salesLeadUserId,
+        this.opsLeadUserId,
       ]);
 
   @override
@@ -503,6 +591,8 @@ class _$EditOrderDetailsApiRequestActions
     shippingServiceId.reducer$(reducer);
     deliveryWindow.reducer$(reducer);
     poNumber.reducer$(reducer);
+    salesLeadUserId.reducer$(reducer);
+    opsLeadUserId.reducer$(reducer);
   }
 
   @override

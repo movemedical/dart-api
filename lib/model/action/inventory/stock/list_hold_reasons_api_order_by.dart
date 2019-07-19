@@ -22,11 +22,9 @@ class ListHoldReasonsApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListHoldReasonsApiOrderBy> get values =>
-      _$listHoldReasonsApiOrderByValues;
+  static BuiltSet<ListHoldReasonsApiOrderBy> get values => _$values;
 
-  static ListHoldReasonsApiOrderBy valueOf(String name) =>
-      _$listHoldReasonsApiOrderByValueOf(name);
+  static ListHoldReasonsApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

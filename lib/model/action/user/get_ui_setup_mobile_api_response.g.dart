@@ -252,51 +252,69 @@ class GetUiSetupMobileApiResponseBuilder
   _$GetUiSetupMobileApiResponse _$v;
 
   GetUiSetupAllApiResponseBuilder _uiSetup;
+
   GetUiSetupAllApiResponseBuilder get uiSetup =>
       _$this._uiSetup ??= new GetUiSetupAllApiResponseBuilder();
+
   set uiSetup(GetUiSetupAllApiResponseBuilder uiSetup) =>
       _$this._uiSetup = uiSetup;
 
   ListBuilder<GetUiSetupMobileApiDashboardWidget> _dashboardWidgets;
+
   ListBuilder<GetUiSetupMobileApiDashboardWidget> get dashboardWidgets =>
       _$this._dashboardWidgets ??=
           new ListBuilder<GetUiSetupMobileApiDashboardWidget>();
+
   set dashboardWidgets(
           ListBuilder<GetUiSetupMobileApiDashboardWidget> dashboardWidgets) =>
       _$this._dashboardWidgets = dashboardWidgets;
 
   ListBuilder<MobileNavigationElement> _tabBarElements;
+
   ListBuilder<MobileNavigationElement> get tabBarElements =>
       _$this._tabBarElements ??= new ListBuilder<MobileNavigationElement>();
+
   set tabBarElements(ListBuilder<MobileNavigationElement> tabBarElements) =>
       _$this._tabBarElements = tabBarElements;
 
   ListBuilder<MobileReport> _reports;
+
   ListBuilder<MobileReport> get reports =>
       _$this._reports ??= new ListBuilder<MobileReport>();
+
   set reports(ListBuilder<MobileReport> reports) => _$this._reports = reports;
 
   bool _updateAvailable;
+
   bool get updateAvailable => _$this._updateAvailable;
+
   set updateAvailable(bool updateAvailable) =>
       _$this._updateAvailable = updateAvailable;
 
   bool _updateRequired;
+
   bool get updateRequired => _$this._updateRequired;
+
   set updateRequired(bool updateRequired) =>
       _$this._updateRequired = updateRequired;
 
   String _updateVersion;
+
   String get updateVersion => _$this._updateVersion;
+
   set updateVersion(String updateVersion) =>
       _$this._updateVersion = updateVersion;
 
   String _updateUrl;
+
   String get updateUrl => _$this._updateUrl;
+
   set updateUrl(String updateUrl) => _$this._updateUrl = updateUrl;
 
   String _deviceId;
+
   String get deviceId => _$this._deviceId;
+
   set deviceId(String deviceId) => _$this._deviceId = deviceId;
 
   GetUiSetupMobileApiResponseBuilder();
@@ -459,12 +477,14 @@ class _$GetUiSetupMobileApiResponseActions
       GetUiSetupMobileApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.uiSetup,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

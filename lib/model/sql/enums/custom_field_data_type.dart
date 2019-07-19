@@ -27,11 +27,9 @@ class CustomFieldDataType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<CustomFieldDataType> get values =>
-      _$customFieldDataTypeValues;
+  static BuiltSet<CustomFieldDataType> get values => _$values;
 
-  static CustomFieldDataType valueOf(String name) =>
-      _$customFieldDataTypeValueOf(name);
+  static CustomFieldDataType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

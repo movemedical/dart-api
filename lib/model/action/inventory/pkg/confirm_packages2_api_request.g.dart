@@ -105,9 +105,11 @@ class ConfirmPackages2ApiRequestBuilder
   _$ConfirmPackages2ApiRequest _$v;
 
   ListBuilder<ConfirmPackages2ApiConfirmRequest> _confirmRequests;
+
   ListBuilder<ConfirmPackages2ApiConfirmRequest> get confirmRequests =>
       _$this._confirmRequests ??=
           new ListBuilder<ConfirmPackages2ApiConfirmRequest>();
+
   set confirmRequests(
           ListBuilder<ConfirmPackages2ApiConfirmRequest> confirmRequests) =>
       _$this._confirmRequests = confirmRequests;
@@ -206,6 +208,7 @@ class _$ConfirmPackages2ApiRequestActions
       ConfirmPackages2ApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

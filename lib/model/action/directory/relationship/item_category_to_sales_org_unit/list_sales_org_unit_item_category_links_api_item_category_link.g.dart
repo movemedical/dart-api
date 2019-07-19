@@ -234,38 +234,54 @@ class ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkBuilder
   _$ListSalesOrgUnitItemCategoryLinksApiItemCategoryLink _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _itemCategoryId;
+
   String get itemCategoryId => _$this._itemCategoryId;
+
   set itemCategoryId(String itemCategoryId) =>
       _$this._itemCategoryId = itemCategoryId;
 
   String _itemCategoryName;
+
   String get itemCategoryName => _$this._itemCategoryName;
+
   set itemCategoryName(String itemCategoryName) =>
       _$this._itemCategoryName = itemCategoryName;
 
   String _itemCategoryCode;
+
   String get itemCategoryCode => _$this._itemCategoryCode;
+
   set itemCategoryCode(String itemCategoryCode) =>
       _$this._itemCategoryCode = itemCategoryCode;
 
   String _displayText;
+
   String get displayText => _$this._displayText;
+
   set displayText(String displayText) => _$this._displayText = displayText;
 
   bool _canStock;
+
   bool get canStock => _$this._canStock;
+
   set canStock(bool canStock) => _$this._canStock = canStock;
 
   bool _canSell;
+
   bool get canSell => _$this._canSell;
+
   set canSell(bool canSell) => _$this._canSell = canSell;
 
   bool _inherited;
+
   bool get inherited => _$this._inherited;
+
   set inherited(bool inherited) => _$this._inherited = inherited;
 
   ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkBuilder();
@@ -398,6 +414,7 @@ class _$ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkActions
       ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -245,51 +245,69 @@ class ListHcrColleagueLinksApiColleagueLinkBuilder
   _$ListHcrColleagueLinksApiColleagueLink _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _colleagueHcrId;
+
   String get colleagueHcrId => _$this._colleagueHcrId;
+
   set colleagueHcrId(String colleagueHcrId) =>
       _$this._colleagueHcrId = colleagueHcrId;
 
   HcrType _colleagueHcrType;
+
   HcrType get colleagueHcrType => _$this._colleagueHcrType;
+
   set colleagueHcrType(HcrType colleagueHcrType) =>
       _$this._colleagueHcrType = colleagueHcrType;
 
   String _colleagueName;
+
   String get colleagueName => _$this._colleagueName;
+
   set colleagueName(String colleagueName) =>
       _$this._colleagueName = colleagueName;
 
   EmailBuilder _colleagueEmail;
+
   EmailBuilder get colleagueEmail =>
       _$this._colleagueEmail ??= new EmailBuilder();
+
   set colleagueEmail(EmailBuilder colleagueEmail) =>
       _$this._colleagueEmail = colleagueEmail;
 
   PhoneNumberBuilder _colleagueWorkPhoneNumber;
+
   PhoneNumberBuilder get colleagueWorkPhoneNumber =>
       _$this._colleagueWorkPhoneNumber ??= new PhoneNumberBuilder();
+
   set colleagueWorkPhoneNumber(PhoneNumberBuilder colleagueWorkPhoneNumber) =>
       _$this._colleagueWorkPhoneNumber = colleagueWorkPhoneNumber;
 
   PhoneNumberBuilder _colleagueMobilePhoneNumber;
+
   PhoneNumberBuilder get colleagueMobilePhoneNumber =>
       _$this._colleagueMobilePhoneNumber ??= new PhoneNumberBuilder();
+
   set colleagueMobilePhoneNumber(
           PhoneNumberBuilder colleagueMobilePhoneNumber) =>
       _$this._colleagueMobilePhoneNumber = colleagueMobilePhoneNumber;
 
   PhoneNumberBuilder _colleagueFaxNumber;
+
   PhoneNumberBuilder get colleagueFaxNumber =>
       _$this._colleagueFaxNumber ??= new PhoneNumberBuilder();
+
   set colleagueFaxNumber(PhoneNumberBuilder colleagueFaxNumber) =>
       _$this._colleagueFaxNumber = colleagueFaxNumber;
 
   bool _colleagueActive;
+
   bool get colleagueActive => _$this._colleagueActive;
+
   set colleagueActive(bool colleagueActive) =>
       _$this._colleagueActive = colleagueActive;
 
@@ -465,6 +483,7 @@ class _$ListHcrColleagueLinksApiColleagueLinkActions
       ListHcrColleagueLinksApiColleagueLinkBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.colleagueEmail,
@@ -474,6 +493,7 @@ class _$ListHcrColleagueLinksApiColleagueLinkActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

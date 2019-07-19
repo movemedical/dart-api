@@ -106,8 +106,10 @@ class ListRelationshipTypesApiRequestBuilder
   _$ListRelationshipTypesApiRequest _$v;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListRelationshipTypesApiRequestBuilder();
@@ -206,12 +208,14 @@ class _$ListRelationshipTypesApiRequestActions
       ListRelationshipTypesApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

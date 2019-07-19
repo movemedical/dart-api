@@ -197,34 +197,46 @@ class BarcodeScansToStockApiScanBuilder
   _$BarcodeScansToStockApiScan _$v;
 
   ListBuilder<String> _loanIds;
+
   ListBuilder<String> get loanIds =>
       _$this._loanIds ??= new ListBuilder<String>();
+
   set loanIds(ListBuilder<String> loanIds) => _$this._loanIds = loanIds;
 
   ListBuilder<String> _containerIds;
+
   ListBuilder<String> get containerIds =>
       _$this._containerIds ??= new ListBuilder<String>();
+
   set containerIds(ListBuilder<String> containerIds) =>
       _$this._containerIds = containerIds;
 
   LocationDataBuilder _location;
+
   LocationDataBuilder get location =>
       _$this._location ??= new LocationDataBuilder();
+
   set location(LocationDataBuilder location) => _$this._location = location;
 
   ListBuilder<String> _inventoryTypeIds;
+
   ListBuilder<String> get inventoryTypeIds =>
       _$this._inventoryTypeIds ??= new ListBuilder<String>();
+
   set inventoryTypeIds(ListBuilder<String> inventoryTypeIds) =>
       _$this._inventoryTypeIds = inventoryTypeIds;
 
   ReadBarcode2ApiResponseBuilder _scan;
+
   ReadBarcode2ApiResponseBuilder get scan =>
       _$this._scan ??= new ReadBarcode2ApiResponseBuilder();
+
   set scan(ReadBarcode2ApiResponseBuilder scan) => _$this._scan = scan;
 
   ItemCaptureType _capturedType;
+
   ItemCaptureType get capturedType => _$this._capturedType;
+
   set capturedType(ItemCaptureType capturedType) =>
       _$this._capturedType = capturedType;
 
@@ -371,6 +383,7 @@ class _$BarcodeScansToStockApiScanActions
       BarcodeScansToStockApiScanBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
@@ -378,6 +391,7 @@ class _$BarcodeScansToStockApiScanActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -111,17 +111,35 @@ class _$GetDceApiDceDetailSerializer
         ..add(serializers.serialize(object.userLocked,
             specifiedType: const FullType(bool)));
     }
+    if (object.phiAllowed != null) {
+      result
+        ..add('phiAllowed')
+        ..add(serializers.serialize(object.phiAllowed,
+            specifiedType: const FullType(bool)));
+    }
     if (object.timeZone != null) {
       result
         ..add('timeZone')
         ..add(serializers.serialize(object.timeZone,
             specifiedType: const FullType(String)));
     }
-    if (object.phiAllowed != null) {
+    if (object.erpUserId != null) {
       result
-        ..add('phiAllowed')
-        ..add(serializers.serialize(object.phiAllowed,
-            specifiedType: const FullType(bool)));
+        ..add('erpUserId')
+        ..add(serializers.serialize(object.erpUserId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.defaultBizUnit != null) {
+      result
+        ..add('defaultBizUnit')
+        ..add(serializers.serialize(object.defaultBizUnit,
+            specifiedType: const FullType(BizUnit)));
+    }
+    if (object.defaultOpsOrgUnit != null) {
+      result
+        ..add('defaultOpsOrgUnit')
+        ..add(serializers.serialize(object.defaultOpsOrgUnit,
+            specifiedType: const FullType(OrgUnit)));
     }
 
     return result;
@@ -198,13 +216,25 @@ class _$GetDceApiDceDetailSerializer
           result.userLocked = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'phiAllowed':
+          result.phiAllowed = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'timeZone':
           result.timeZone = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'phiAllowed':
-          result.phiAllowed = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
+        case 'erpUserId':
+          result.erpUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'defaultBizUnit':
+          result.defaultBizUnit.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BizUnit)) as BizUnit);
+          break;
+        case 'defaultOpsOrgUnit':
+          result.defaultOpsOrgUnit.replace(serializers.deserialize(value,
+              specifiedType: const FullType(OrgUnit)) as OrgUnit);
           break;
       }
     }
@@ -245,9 +275,15 @@ class _$GetDceApiDceDetail extends GetDceApiDceDetail {
   @override
   final bool userLocked;
   @override
+  final bool phiAllowed;
+  @override
   final String timeZone;
   @override
-  final bool phiAllowed;
+  final String erpUserId;
+  @override
+  final BizUnit defaultBizUnit;
+  @override
+  final OrgUnit defaultOpsOrgUnit;
 
   factory _$GetDceApiDceDetail([void updates(GetDceApiDceDetailBuilder b)]) =>
       (new GetDceApiDceDetailBuilder()..update(updates)).build();
@@ -268,8 +304,11 @@ class _$GetDceApiDceDetail extends GetDceApiDceDetail {
       this.userId,
       this.userStatus,
       this.userLocked,
+      this.phiAllowed,
       this.timeZone,
-      this.phiAllowed})
+      this.erpUserId,
+      this.defaultBizUnit,
+      this.defaultOpsOrgUnit})
       : super._();
 
   @override
@@ -299,8 +338,11 @@ class _$GetDceApiDceDetail extends GetDceApiDceDetail {
         userId == other.userId &&
         userStatus == other.userStatus &&
         userLocked == other.userLocked &&
+        phiAllowed == other.phiAllowed &&
         timeZone == other.timeZone &&
-        phiAllowed == other.phiAllowed;
+        erpUserId == other.erpUserId &&
+        defaultBizUnit == other.defaultBizUnit &&
+        defaultOpsOrgUnit == other.defaultOpsOrgUnit;
   }
 
   @override
@@ -322,27 +364,27 @@ class _$GetDceApiDceDetail extends GetDceApiDceDetail {
                                                             $jc(
                                                                 $jc(
                                                                     $jc(
-                                                                        0,
-                                                                        id
-                                                                            .hashCode),
-                                                                    orgId
-                                                                        .hashCode),
-                                                                orgType
-                                                                    .hashCode),
-                                                            orgName.hashCode),
-                                                        name.hashCode),
-                                                    reference.hashCode),
-                                                email.hashCode),
-                                            workingHomeId.hashCode),
-                                        workingHomeName.hashCode),
-                                    workingAtId.hashCode),
-                                workingAtName.hashCode),
-                            active.hashCode),
-                        userId.hashCode),
-                    userStatus.hashCode),
-                userLocked.hashCode),
-            timeZone.hashCode),
-        phiAllowed.hashCode));
+                                                                        $jc(
+                                                                            $jc($jc(0, id.hashCode),
+                                                                                orgId.hashCode),
+                                                                            orgType.hashCode),
+                                                                        orgName.hashCode),
+                                                                    name.hashCode),
+                                                                reference.hashCode),
+                                                            email.hashCode),
+                                                        workingHomeId.hashCode),
+                                                    workingHomeName.hashCode),
+                                                workingAtId.hashCode),
+                                            workingAtName.hashCode),
+                                        active.hashCode),
+                                    userId.hashCode),
+                                userStatus.hashCode),
+                            userLocked.hashCode),
+                        phiAllowed.hashCode),
+                    timeZone.hashCode),
+                erpUserId.hashCode),
+            defaultBizUnit.hashCode),
+        defaultOpsOrgUnit.hashCode));
   }
 
   @override
@@ -363,8 +405,11 @@ class _$GetDceApiDceDetail extends GetDceApiDceDetail {
           ..add('userId', userId)
           ..add('userStatus', userStatus)
           ..add('userLocked', userLocked)
+          ..add('phiAllowed', phiAllowed)
           ..add('timeZone', timeZone)
-          ..add('phiAllowed', phiAllowed))
+          ..add('erpUserId', erpUserId)
+          ..add('defaultBizUnit', defaultBizUnit)
+          ..add('defaultOpsOrgUnit', defaultOpsOrgUnit))
         .toString();
   }
 }
@@ -374,75 +419,131 @@ class GetDceApiDceDetailBuilder
   _$GetDceApiDceDetail _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   OrgType _orgType;
+
   OrgType get orgType => _$this._orgType;
+
   set orgType(OrgType orgType) => _$this._orgType = orgType;
 
   String _orgName;
+
   String get orgName => _$this._orgName;
+
   set orgName(String orgName) => _$this._orgName = orgName;
 
   PersonNameBuilder _name;
+
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
+
   set name(PersonNameBuilder name) => _$this._name = name;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   String _workingHomeId;
+
   String get workingHomeId => _$this._workingHomeId;
+
   set workingHomeId(String workingHomeId) =>
       _$this._workingHomeId = workingHomeId;
 
   String _workingHomeName;
+
   String get workingHomeName => _$this._workingHomeName;
+
   set workingHomeName(String workingHomeName) =>
       _$this._workingHomeName = workingHomeName;
 
   String _workingAtId;
+
   String get workingAtId => _$this._workingAtId;
+
   set workingAtId(String workingAtId) => _$this._workingAtId = workingAtId;
 
   String _workingAtName;
+
   String get workingAtName => _$this._workingAtName;
+
   set workingAtName(String workingAtName) =>
       _$this._workingAtName = workingAtName;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   String _userId;
+
   String get userId => _$this._userId;
+
   set userId(String userId) => _$this._userId = userId;
 
   UserStatus _userStatus;
+
   UserStatus get userStatus => _$this._userStatus;
+
   set userStatus(UserStatus userStatus) => _$this._userStatus = userStatus;
 
   bool _userLocked;
+
   bool get userLocked => _$this._userLocked;
+
   set userLocked(bool userLocked) => _$this._userLocked = userLocked;
 
+  bool _phiAllowed;
+
+  bool get phiAllowed => _$this._phiAllowed;
+
+  set phiAllowed(bool phiAllowed) => _$this._phiAllowed = phiAllowed;
+
   String _timeZone;
+
   String get timeZone => _$this._timeZone;
+
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
-  bool _phiAllowed;
-  bool get phiAllowed => _$this._phiAllowed;
-  set phiAllowed(bool phiAllowed) => _$this._phiAllowed = phiAllowed;
+  String _erpUserId;
+
+  String get erpUserId => _$this._erpUserId;
+
+  set erpUserId(String erpUserId) => _$this._erpUserId = erpUserId;
+
+  BizUnitBuilder _defaultBizUnit;
+
+  BizUnitBuilder get defaultBizUnit =>
+      _$this._defaultBizUnit ??= new BizUnitBuilder();
+
+  set defaultBizUnit(BizUnitBuilder defaultBizUnit) =>
+      _$this._defaultBizUnit = defaultBizUnit;
+
+  OrgUnitBuilder _defaultOpsOrgUnit;
+
+  OrgUnitBuilder get defaultOpsOrgUnit =>
+      _$this._defaultOpsOrgUnit ??= new OrgUnitBuilder();
+
+  set defaultOpsOrgUnit(OrgUnitBuilder defaultOpsOrgUnit) =>
+      _$this._defaultOpsOrgUnit = defaultOpsOrgUnit;
 
   GetDceApiDceDetailBuilder();
 
@@ -463,8 +564,11 @@ class GetDceApiDceDetailBuilder
       _userId = _$v.userId;
       _userStatus = _$v.userStatus;
       _userLocked = _$v.userLocked;
-      _timeZone = _$v.timeZone;
       _phiAllowed = _$v.phiAllowed;
+      _timeZone = _$v.timeZone;
+      _erpUserId = _$v.erpUserId;
+      _defaultBizUnit = _$v.defaultBizUnit?.toBuilder();
+      _defaultOpsOrgUnit = _$v.defaultOpsOrgUnit?.toBuilder();
       _$v = null;
     }
     return this;
@@ -504,8 +608,11 @@ class GetDceApiDceDetailBuilder
               userId: userId,
               userStatus: userStatus,
               userLocked: userLocked,
+              phiAllowed: phiAllowed,
               timeZone: timeZone,
-              phiAllowed: phiAllowed);
+              erpUserId: erpUserId,
+              defaultBizUnit: _defaultBizUnit?.build(),
+              defaultOpsOrgUnit: _defaultOpsOrgUnit?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -514,6 +621,11 @@ class GetDceApiDceDetailBuilder
 
         _$failedField = 'email';
         _email?.build();
+
+        _$failedField = 'defaultBizUnit';
+        _defaultBizUnit?.build();
+        _$failedField = 'defaultOpsOrgUnit';
+        _defaultOpsOrgUnit?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetDceApiDceDetail', _$failedField, e.toString());
@@ -557,8 +669,11 @@ class _$GetDceApiDceDetailActions extends GetDceApiDceDetailActions {
   final FieldDispatcher<String> userId;
   final FieldDispatcher<UserStatus> userStatus;
   final FieldDispatcher<bool> userLocked;
-  final FieldDispatcher<String> timeZone;
   final FieldDispatcher<bool> phiAllowed;
+  final FieldDispatcher<String> timeZone;
+  final FieldDispatcher<String> erpUserId;
+  final BizUnitActions defaultBizUnit;
+  final OrgUnitActions defaultOpsOrgUnit;
 
   _$GetDceApiDceDetailActions._(this.options$)
       : replace$ = options$.action<GetDceApiDceDetail>(
@@ -618,10 +733,26 @@ class _$GetDceApiDceDetailActions extends GetDceApiDceDetailActions {
             (p, b) => p?.userStatus = b),
         userLocked = options$.field<bool>('userLocked', (a) => a?.userLocked,
             (s) => s?.userLocked, (p, b) => p?.userLocked = b),
-        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
-            (s) => s?.timeZone, (p, b) => p?.timeZone = b),
         phiAllowed = options$.field<bool>('phiAllowed', (a) => a?.phiAllowed,
             (s) => s?.phiAllowed, (p, b) => p?.phiAllowed = b),
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
+            (s) => s?.timeZone, (p, b) => p?.timeZone = b),
+        erpUserId = options$.field<String>('erpUserId', (a) => a?.erpUserId,
+            (s) => s?.erpUserId, (p, b) => p?.erpUserId = b),
+        defaultBizUnit = BizUnitActions(() =>
+            options$.stateful<BizUnit, BizUnitBuilder, BizUnitActions>(
+                'defaultBizUnit',
+                (a) => a.defaultBizUnit,
+                (s) => s?.defaultBizUnit,
+                (b) => b?.defaultBizUnit,
+                (parent, builder) => parent?.defaultBizUnit = builder)),
+        defaultOpsOrgUnit = OrgUnitActions(() =>
+            options$.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
+                'defaultOpsOrgUnit',
+                (a) => a.defaultOpsOrgUnit,
+                (s) => s?.defaultOpsOrgUnit,
+                (b) => b?.defaultOpsOrgUnit,
+                (parent, builder) => parent?.defaultOpsOrgUnit = builder)),
         super._();
 
   factory _$GetDceApiDceDetailActions(
@@ -635,13 +766,17 @@ class _$GetDceApiDceDetailActions extends GetDceApiDceDetailActions {
   GetDceApiDceDetailBuilder newBuilder$() => GetDceApiDceDetailBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
         this.email,
+        this.defaultBizUnit,
+        this.defaultOpsOrgUnit,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -659,8 +794,9 @@ class _$GetDceApiDceDetailActions extends GetDceApiDceDetailActions {
         this.userId,
         this.userStatus,
         this.userLocked,
-        this.timeZone,
         this.phiAllowed,
+        this.timeZone,
+        this.erpUserId,
       ]);
 
   @override
@@ -681,8 +817,11 @@ class _$GetDceApiDceDetailActions extends GetDceApiDceDetailActions {
     userId.reducer$(reducer);
     userStatus.reducer$(reducer);
     userLocked.reducer$(reducer);
-    timeZone.reducer$(reducer);
     phiAllowed.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    erpUserId.reducer$(reducer);
+    defaultBizUnit.reducer$(reducer);
+    defaultOpsOrgUnit.reducer$(reducer);
   }
 
   @override
@@ -690,5 +829,7 @@ class _$GetDceApiDceDetailActions extends GetDceApiDceDetailActions {
     super.middleware$(middleware);
     name.middleware$(middleware);
     email.middleware$(middleware);
+    defaultBizUnit.middleware$(middleware);
+    defaultOpsOrgUnit.middleware$(middleware);
   }
 }

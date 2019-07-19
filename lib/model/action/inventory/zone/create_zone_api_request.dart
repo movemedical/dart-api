@@ -34,6 +34,9 @@ abstract class CreateZoneApiRequest
   @nullable
   bool get receivable;
 
+  @nullable
+  String get defaultBinName;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -72,6 +75,8 @@ abstract class CreateZoneApiRequestActions extends ModelActions<
   FieldDispatcher<bool> get sourceable;
 
   FieldDispatcher<bool> get receivable;
+
+  FieldDispatcher<String> get defaultBinName;
 
   ////////////////////////////////
   /// Constructors

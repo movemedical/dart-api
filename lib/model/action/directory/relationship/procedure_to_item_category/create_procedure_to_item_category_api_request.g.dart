@@ -178,25 +178,35 @@ class CreateProcedureToItemCategoryApiRequestBuilder
   _$CreateProcedureToItemCategoryApiRequest _$v;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _subProcedureId;
+
   String get subProcedureId => _$this._subProcedureId;
+
   set subProcedureId(String subProcedureId) =>
       _$this._subProcedureId = subProcedureId;
 
   String _reference1;
+
   String get reference1 => _$this._reference1;
+
   set reference1(String reference1) => _$this._reference1 = reference1;
 
   String _reference2;
+
   String get reference2 => _$this._reference2;
+
   set reference2(String reference2) => _$this._reference2 = reference2;
 
   ListBuilder<String> _itemCategoryIds;
+
   ListBuilder<String> get itemCategoryIds =>
       _$this._itemCategoryIds ??= new ListBuilder<String>();
+
   set itemCategoryIds(ListBuilder<String> itemCategoryIds) =>
       _$this._itemCategoryIds = itemCategoryIds;
 
@@ -321,6 +331,7 @@ class _$CreateProcedureToItemCategoryApiRequestActions
       CreateProcedureToItemCategoryApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -116,11 +116,15 @@ class RefreshPresenceApiRequestBuilder
   _$RefreshPresenceApiRequest _$v;
 
   String _objectId;
+
   String get objectId => _$this._objectId;
+
   set objectId(String objectId) => _$this._objectId = objectId;
 
   String _message;
+
   String get message => _$this._message;
+
   set message(String message) => _$this._message = message;
 
   RefreshPresenceApiRequestBuilder();
@@ -202,6 +206,7 @@ class _$RefreshPresenceApiRequestActions
       RefreshPresenceApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

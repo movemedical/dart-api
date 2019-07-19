@@ -123,12 +123,16 @@ class ListShippingServicesApiResponseBuilder
   _$ListShippingServicesApiResponse _$v;
 
   ListBuilder<ShippingService> _data;
+
   ListBuilder<ShippingService> get data =>
       _$this._data ??= new ListBuilder<ShippingService>();
+
   set data(ListBuilder<ShippingService> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListShippingServicesApiResponseBuilder();
@@ -225,6 +229,7 @@ class _$ListShippingServicesApiResponseActions
       ListShippingServicesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

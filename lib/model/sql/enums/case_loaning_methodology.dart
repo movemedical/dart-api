@@ -22,11 +22,9 @@ class CaseLoaningMethodology extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<CaseLoaningMethodology> get values =>
-      _$caseLoaningMethodologyValues;
+  static BuiltSet<CaseLoaningMethodology> get values => _$values;
 
-  static CaseLoaningMethodology valueOf(String name) =>
-      _$caseLoaningMethodologyValueOf(name);
+  static CaseLoaningMethodology valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

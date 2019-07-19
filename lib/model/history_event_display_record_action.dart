@@ -23,11 +23,10 @@ class HistoryEventDisplayRecordAction extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<HistoryEventDisplayRecordAction> get values =>
-      _$historyEventDisplayRecordActionValues;
+  static BuiltSet<HistoryEventDisplayRecordAction> get values => _$values;
 
   static HistoryEventDisplayRecordAction valueOf(String name) =>
-      _$historyEventDisplayRecordActionValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

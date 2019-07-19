@@ -99,7 +99,9 @@ class OrderDetailPushMessageBuilder
   _$OrderDetailPushMessage _$v;
 
   String _content;
+
   String get content => _$this._content;
+
   set content(String content) => _$this._content = content;
 
   OrderDetailPushMessageBuilder();
@@ -173,6 +175,7 @@ class _$OrderDetailPushMessageActions extends OrderDetailPushMessageActions {
       OrderDetailPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

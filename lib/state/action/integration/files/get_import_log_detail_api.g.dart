@@ -68,6 +68,7 @@ class _$GetImportLogDetailApi extends GetImportLogDetailApi {
           ApiResult<GetImportLogDetailApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

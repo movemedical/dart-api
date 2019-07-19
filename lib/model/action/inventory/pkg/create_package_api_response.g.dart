@@ -101,7 +101,9 @@ class CreatePackageApiResponseBuilder
   _$CreatePackageApiResponse _$v;
 
   PkgBuilder _pkg;
+
   PkgBuilder get pkg => _$this._pkg ??= new PkgBuilder();
+
   set pkg(PkgBuilder pkg) => _$this._pkg = pkg;
 
   CreatePackageApiResponseBuilder();
@@ -195,12 +197,14 @@ class _$CreatePackageApiResponseActions
       CreatePackageApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.pkg,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

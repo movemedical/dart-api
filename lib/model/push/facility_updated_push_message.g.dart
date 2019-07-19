@@ -102,7 +102,9 @@ class FacilityUpdatedPushMessageBuilder
   _$FacilityUpdatedPushMessage _$v;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   FacilityUpdatedPushMessageBuilder();
@@ -180,6 +182,7 @@ class _$FacilityUpdatedPushMessageActions
       FacilityUpdatedPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

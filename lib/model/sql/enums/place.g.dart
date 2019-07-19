@@ -69,7 +69,7 @@ const Place _$wireORDER_LINE_CANCEL_REASON_LIST =
     const Place._('ORDER_LINE_CANCEL_REASON_LIST');
 const Place _$wireDCE_DETAIL = const Place._('DCE_DETAIL');
 
-Place _$placeValueOf(String name) {
+Place _$valueOf(String name) {
   switch (name) {
     case 'DASH_BOARD':
       return _$wireDASH_BOARD;
@@ -180,7 +180,7 @@ Place _$placeValueOf(String name) {
   }
 }
 
-final BuiltSet<Place> _$placeValues = new BuiltSet<Place>(const <Place>[
+final BuiltSet<Place> _$values = new BuiltSet<Place>(const <Place>[
   _$wireDASH_BOARD,
   _$wireCONVERSATION_LIST,
   _$wireCONVERSATION_DETAIL,

@@ -45,8 +45,7 @@ const GetConsignmentLoanFieldsApiLoanField _$wireREFERENCE =
 const GetConsignmentLoanFieldsApiLoanField _$wireDESCRIPTION =
     const GetConsignmentLoanFieldsApiLoanField._('DESCRIPTION');
 
-GetConsignmentLoanFieldsApiLoanField
-    _$getConsignmentLoanFieldsApiLoanFieldValueOf(String name) {
+GetConsignmentLoanFieldsApiLoanField _$valueOf(String name) {
   switch (name) {
     case 'SALES_OU':
       return _$wireSALES_OU;
@@ -87,8 +86,7 @@ GetConsignmentLoanFieldsApiLoanField
   }
 }
 
-final BuiltSet<GetConsignmentLoanFieldsApiLoanField>
-    _$getConsignmentLoanFieldsApiLoanFieldValues =
+final BuiltSet<GetConsignmentLoanFieldsApiLoanField> _$values =
     new BuiltSet<GetConsignmentLoanFieldsApiLoanField>(const <
         GetConsignmentLoanFieldsApiLoanField>[
   _$wireSALES_OU,

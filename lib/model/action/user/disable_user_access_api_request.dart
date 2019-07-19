@@ -1,5 +1,6 @@
 import 'dart:core';
 
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
@@ -14,7 +15,10 @@ abstract class DisableUserAccessApiRequest
   ////////////////////////////////
 
   @nullable
-  String get linkedId;
+  BuiltList<String> get linkedIds;
+
+  @nullable
+  BuiltList<String> get userIds;
 
   ////////////////////////////////
   /// Constructors
@@ -42,7 +46,9 @@ abstract class DisableUserAccessApiRequestActions extends ModelActions<
   /// Fields
   ////////////////////////////////
 
-  FieldDispatcher<String> get linkedId;
+  FieldDispatcher<BuiltList<String>> get linkedIds;
+
+  FieldDispatcher<BuiltList<String>> get userIds;
 
   ////////////////////////////////
   /// Constructors

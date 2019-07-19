@@ -116,9 +116,11 @@ class ListQuestionableTraySummaryApiResponseBuilder
 
   ListBuilder<ListQuestionableTraySummaryApiQuestionableSummary>
       _questionableSummaryList;
+
   ListBuilder<ListQuestionableTraySummaryApiQuestionableSummary>
       get questionableSummaryList => _$this._questionableSummaryList ??=
           new ListBuilder<ListQuestionableTraySummaryApiQuestionableSummary>();
+
   set questionableSummaryList(
           ListBuilder<ListQuestionableTraySummaryApiQuestionableSummary>
               questionableSummaryList) =>
@@ -222,6 +224,7 @@ class _$ListQuestionableTraySummaryApiResponseActions
       ListQuestionableTraySummaryApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

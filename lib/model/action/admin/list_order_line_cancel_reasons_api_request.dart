@@ -19,6 +19,9 @@ abstract class ListOrderLineCancelReasonsApiRequest
   String get search;
 
   @nullable
+  String get orderReasonId;
+
+  @nullable
   bool get active;
 
   @nullable
@@ -51,6 +54,8 @@ abstract class ListOrderLineCancelReasonsApiRequestActions extends ModelActions<
   ////////////////////////////////
 
   FieldDispatcher<String> get search;
+
+  FieldDispatcher<String> get orderReasonId;
 
   FieldDispatcher<bool> get active;
 

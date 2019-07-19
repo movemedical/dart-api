@@ -125,12 +125,16 @@ class AddContainersToBeCountedApiRequestBuilder
   _$AddContainersToBeCountedApiRequest _$v;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   ListBuilder<StockContainer> _containers;
+
   ListBuilder<StockContainer> get containers =>
       _$this._containers ??= new ListBuilder<StockContainer>();
+
   set containers(ListBuilder<StockContainer> containers) =>
       _$this._containers = containers;
 
@@ -231,6 +235,7 @@ class _$AddContainersToBeCountedApiRequestActions
       AddContainersToBeCountedApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

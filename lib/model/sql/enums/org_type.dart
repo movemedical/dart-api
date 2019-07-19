@@ -25,9 +25,9 @@ class OrgType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<OrgType> get values => _$orgTypeValues;
+  static BuiltSet<OrgType> get values => _$values;
 
-  static OrgType valueOf(String name) => _$orgTypeValueOf(name);
+  static OrgType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -9,7 +9,7 @@ part of 'case_requirement_source.dart';
 const CaseRequirementSource _$wirePREFERENCE_CARD =
     const CaseRequirementSource._('PREFERENCE_CARD');
 
-CaseRequirementSource _$caseRequirementSourceValueOf(String name) {
+CaseRequirementSource _$valueOf(String name) {
   switch (name) {
     case 'PREFERENCE_CARD':
       return _$wirePREFERENCE_CARD;
@@ -18,7 +18,7 @@ CaseRequirementSource _$caseRequirementSourceValueOf(String name) {
   }
 }
 
-final BuiltSet<CaseRequirementSource> _$caseRequirementSourceValues =
+final BuiltSet<CaseRequirementSource> _$values =
     new BuiltSet<CaseRequirementSource>(const <CaseRequirementSource>[
   _$wirePREFERENCE_CARD,
 ]);

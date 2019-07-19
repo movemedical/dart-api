@@ -169,23 +169,33 @@ class BuildInspectionApiAddEntryBuilder
   _$BuildInspectionApiAddEntry _$v;
 
   String _receiptId;
+
   String get receiptId => _$this._receiptId;
+
   set receiptId(String receiptId) => _$this._receiptId = receiptId;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   BuildInspectionApiAddEntryBuilder();
@@ -287,6 +297,7 @@ class _$BuildInspectionApiAddEntryActions
       BuildInspectionApiAddEntryBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

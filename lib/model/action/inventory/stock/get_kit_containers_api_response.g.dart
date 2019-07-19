@@ -108,8 +108,10 @@ class GetKitContainersApiResponseBuilder
   _$GetKitContainersApiResponse _$v;
 
   ListBuilder<GetStockApiStock> _containers;
+
   ListBuilder<GetStockApiStock> get containers =>
       _$this._containers ??= new ListBuilder<GetStockApiStock>();
+
   set containers(ListBuilder<GetStockApiStock> containers) =>
       _$this._containers = containers;
 
@@ -205,6 +207,7 @@ class _$GetKitContainersApiResponseActions
       GetKitContainersApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

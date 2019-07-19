@@ -125,14 +125,18 @@ class ListTrayContentsApiResponseBuilder
   _$ListTrayContentsApiResponse _$v;
 
   ListBuilder<ListStockSummaryApiStockSummary> _contents;
+
   ListBuilder<ListStockSummaryApiStockSummary> get contents =>
       _$this._contents ??= new ListBuilder<ListStockSummaryApiStockSummary>();
+
   set contents(ListBuilder<ListStockSummaryApiStockSummary> contents) =>
       _$this._contents = contents;
 
   ListBuilder<ListTrayContentsApiDiff> _missing;
+
   ListBuilder<ListTrayContentsApiDiff> get missing =>
       _$this._missing ??= new ListBuilder<ListTrayContentsApiDiff>();
+
   set missing(ListBuilder<ListTrayContentsApiDiff> missing) =>
       _$this._missing = missing;
 
@@ -235,6 +239,7 @@ class _$ListTrayContentsApiResponseActions
       ListTrayContentsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

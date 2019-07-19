@@ -104,8 +104,10 @@ class GlobalSearchApiResponseBuilder
   _$GlobalSearchApiResponse _$v;
 
   ListBuilder<GlobalSearchApiSearchResult> _results;
+
   ListBuilder<GlobalSearchApiSearchResult> get results =>
       _$this._results ??= new ListBuilder<GlobalSearchApiSearchResult>();
+
   set results(ListBuilder<GlobalSearchApiSearchResult> results) =>
       _$this._results = results;
 
@@ -197,6 +199,7 @@ class _$GlobalSearchApiResponseActions extends GlobalSearchApiResponseActions {
       GlobalSearchApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

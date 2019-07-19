@@ -109,8 +109,10 @@ class RequestStockBarcodeDocApiRequestBuilder
   _$RequestStockBarcodeDocApiRequest _$v;
 
   ListBuilder<String> _stockIds;
+
   ListBuilder<String> get stockIds =>
       _$this._stockIds ??= new ListBuilder<String>();
+
   set stockIds(ListBuilder<String> stockIds) => _$this._stockIds = stockIds;
 
   RequestStockBarcodeDocApiRequestBuilder();
@@ -203,6 +205,7 @@ class _$RequestStockBarcodeDocApiRequestActions
       RequestStockBarcodeDocApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

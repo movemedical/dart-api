@@ -157,21 +157,29 @@ class CompletePicks2ApiCompleteRequestBuilder
   _$CompletePicks2ApiCompleteRequest _$v;
 
   String _pickId;
+
   String get pickId => _$this._pickId;
+
   set pickId(String pickId) => _$this._pickId = pickId;
 
   String _pickedStockId;
+
   String get pickedStockId => _$this._pickedStockId;
+
   set pickedStockId(String pickedStockId) =>
       _$this._pickedStockId = pickedStockId;
 
   StockContainerType _toContainerType;
+
   StockContainerType get toContainerType => _$this._toContainerType;
+
   set toContainerType(StockContainerType toContainerType) =>
       _$this._toContainerType = toContainerType;
 
   String _toContainerId;
+
   String get toContainerId => _$this._toContainerId;
+
   set toContainerId(String toContainerId) =>
       _$this._toContainerId = toContainerId;
 
@@ -276,6 +284,7 @@ class _$CompletePicks2ApiCompleteRequestActions
       CompletePicks2ApiCompleteRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

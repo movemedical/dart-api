@@ -129,11 +129,15 @@ class GetWebServiceLogRequestResponseUrlsApiResponseBuilder
   _$GetWebServiceLogRequestResponseUrlsApiResponse _$v;
 
   String _requestUrl;
+
   String get requestUrl => _$this._requestUrl;
+
   set requestUrl(String requestUrl) => _$this._requestUrl = requestUrl;
 
   String _responseUrl;
+
   String get responseUrl => _$this._responseUrl;
+
   set responseUrl(String responseUrl) => _$this._responseUrl = responseUrl;
 
   GetWebServiceLogRequestResponseUrlsApiResponseBuilder();
@@ -224,6 +228,7 @@ class _$GetWebServiceLogRequestResponseUrlsApiResponseActions
       GetWebServiceLogRequestResponseUrlsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

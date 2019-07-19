@@ -89,6 +89,13 @@ class _$ListPreferenceCardsApiRequestSerializer
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
     }
+    if (object.bodySides != null) {
+      result
+        ..add('bodySides')
+        ..add(serializers.serialize(object.bodySides,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(BodySide)])));
+    }
     if (object.search != null) {
       result
         ..add('search')
@@ -177,6 +184,11 @@ class _$ListPreferenceCardsApiRequestSerializer
                       const FullType(BuiltList, const [const FullType(String)]))
               as BuiltList);
           break;
+        case 'bodySides':
+          result.bodySides.replace(serializers.deserialize(value,
+              specifiedType: const FullType(
+                  BuiltList, const [const FullType(BodySide)])) as BuiltList);
+          break;
         case 'search':
           result.search = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -217,6 +229,8 @@ class _$ListPreferenceCardsApiRequest extends ListPreferenceCardsApiRequest {
   @override
   final BuiltList<String> orgUnitIds;
   @override
+  final BuiltList<BodySide> bodySides;
+  @override
   final String search;
   @override
   final bool active;
@@ -237,6 +251,7 @@ class _$ListPreferenceCardsApiRequest extends ListPreferenceCardsApiRequest {
       this.itemIds,
       this.productGroupIds,
       this.orgUnitIds,
+      this.bodySides,
       this.search,
       this.active,
       this.paging})
@@ -264,6 +279,7 @@ class _$ListPreferenceCardsApiRequest extends ListPreferenceCardsApiRequest {
         itemIds == other.itemIds &&
         productGroupIds == other.productGroupIds &&
         orgUnitIds == other.orgUnitIds &&
+        bodySides == other.bodySides &&
         search == other.search &&
         active == other.active &&
         paging == other.paging;
@@ -281,15 +297,17 @@ class _$ListPreferenceCardsApiRequest extends ListPreferenceCardsApiRequest {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, ids.hashCode),
-                                                physicianIds.hashCode),
-                                            facilityIds.hashCode),
-                                        techniqueIds.hashCode),
-                                    procedureIds.hashCode),
-                                subProcedureIds.hashCode),
-                            itemIds.hashCode),
-                        productGroupIds.hashCode),
-                    orgUnitIds.hashCode),
+                                            $jc(
+                                                $jc($jc(0, ids.hashCode),
+                                                    physicianIds.hashCode),
+                                                facilityIds.hashCode),
+                                            techniqueIds.hashCode),
+                                        procedureIds.hashCode),
+                                    subProcedureIds.hashCode),
+                                itemIds.hashCode),
+                            productGroupIds.hashCode),
+                        orgUnitIds.hashCode),
+                    bodySides.hashCode),
                 search.hashCode),
             active.hashCode),
         paging.hashCode));
@@ -307,6 +325,7 @@ class _$ListPreferenceCardsApiRequest extends ListPreferenceCardsApiRequest {
           ..add('itemIds', itemIds)
           ..add('productGroupIds', productGroupIds)
           ..add('orgUnitIds', orgUnitIds)
+          ..add('bodySides', bodySides)
           ..add('search', search)
           ..add('active', active)
           ..add('paging', paging))
@@ -321,67 +340,99 @@ class ListPreferenceCardsApiRequestBuilder
   _$ListPreferenceCardsApiRequest _$v;
 
   ListBuilder<String> _ids;
+
   ListBuilder<String> get ids => _$this._ids ??= new ListBuilder<String>();
+
   set ids(ListBuilder<String> ids) => _$this._ids = ids;
 
   ListBuilder<String> _physicianIds;
+
   ListBuilder<String> get physicianIds =>
       _$this._physicianIds ??= new ListBuilder<String>();
+
   set physicianIds(ListBuilder<String> physicianIds) =>
       _$this._physicianIds = physicianIds;
 
   ListBuilder<String> _facilityIds;
+
   ListBuilder<String> get facilityIds =>
       _$this._facilityIds ??= new ListBuilder<String>();
+
   set facilityIds(ListBuilder<String> facilityIds) =>
       _$this._facilityIds = facilityIds;
 
   ListBuilder<String> _techniqueIds;
+
   ListBuilder<String> get techniqueIds =>
       _$this._techniqueIds ??= new ListBuilder<String>();
+
   set techniqueIds(ListBuilder<String> techniqueIds) =>
       _$this._techniqueIds = techniqueIds;
 
   ListBuilder<String> _procedureIds;
+
   ListBuilder<String> get procedureIds =>
       _$this._procedureIds ??= new ListBuilder<String>();
+
   set procedureIds(ListBuilder<String> procedureIds) =>
       _$this._procedureIds = procedureIds;
 
   ListBuilder<String> _subProcedureIds;
+
   ListBuilder<String> get subProcedureIds =>
       _$this._subProcedureIds ??= new ListBuilder<String>();
+
   set subProcedureIds(ListBuilder<String> subProcedureIds) =>
       _$this._subProcedureIds = subProcedureIds;
 
   ListBuilder<String> _itemIds;
+
   ListBuilder<String> get itemIds =>
       _$this._itemIds ??= new ListBuilder<String>();
+
   set itemIds(ListBuilder<String> itemIds) => _$this._itemIds = itemIds;
 
   ListBuilder<String> _productGroupIds;
+
   ListBuilder<String> get productGroupIds =>
       _$this._productGroupIds ??= new ListBuilder<String>();
+
   set productGroupIds(ListBuilder<String> productGroupIds) =>
       _$this._productGroupIds = productGroupIds;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
+  ListBuilder<BodySide> _bodySides;
+
+  ListBuilder<BodySide> get bodySides =>
+      _$this._bodySides ??= new ListBuilder<BodySide>();
+
+  set bodySides(ListBuilder<BodySide> bodySides) =>
+      _$this._bodySides = bodySides;
+
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListPreferenceCardsApiRequestBuilder();
@@ -397,6 +448,7 @@ class ListPreferenceCardsApiRequestBuilder
       _itemIds = _$v.itemIds?.toBuilder();
       _productGroupIds = _$v.productGroupIds?.toBuilder();
       _orgUnitIds = _$v.orgUnitIds?.toBuilder();
+      _bodySides = _$v.bodySides?.toBuilder();
       _search = _$v.search;
       _active = _$v.active;
       _paging = _$v.paging?.toBuilder();
@@ -433,6 +485,7 @@ class ListPreferenceCardsApiRequestBuilder
               itemIds: _itemIds?.build(),
               productGroupIds: _productGroupIds?.build(),
               orgUnitIds: _orgUnitIds?.build(),
+              bodySides: _bodySides?.build(),
               search: search,
               active: active,
               paging: _paging?.build());
@@ -457,6 +510,8 @@ class ListPreferenceCardsApiRequestBuilder
         _productGroupIds?.build();
         _$failedField = 'orgUnitIds';
         _orgUnitIds?.build();
+        _$failedField = 'bodySides';
+        _bodySides?.build();
 
         _$failedField = 'paging';
         _paging?.build();
@@ -502,6 +557,7 @@ class _$ListPreferenceCardsApiRequestActions
   final FieldDispatcher<BuiltList<String>> itemIds;
   final FieldDispatcher<BuiltList<String>> productGroupIds;
   final FieldDispatcher<BuiltList<String>> orgUnitIds;
+  final FieldDispatcher<BuiltList<BodySide>> bodySides;
   final FieldDispatcher<String> search;
   final FieldDispatcher<bool> active;
   final PaginationParamsActions paging;
@@ -548,6 +604,11 @@ class _$ListPreferenceCardsApiRequestActions
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
+        bodySides = options$.field<BuiltList<BodySide>>(
+            'bodySides',
+            (a) => a?.bodySides,
+            (s) => s?.bodySides,
+            (p, b) => p?.bodySides = b),
         search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         active = options$.field<bool>('active', (a) => a?.active,
@@ -576,12 +637,14 @@ class _$ListPreferenceCardsApiRequestActions
       ListPreferenceCardsApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -595,6 +658,7 @@ class _$ListPreferenceCardsApiRequestActions
         this.itemIds,
         this.productGroupIds,
         this.orgUnitIds,
+        this.bodySides,
         this.search,
         this.active,
       ]);
@@ -611,6 +675,7 @@ class _$ListPreferenceCardsApiRequestActions
     itemIds.reducer$(reducer);
     productGroupIds.reducer$(reducer);
     orgUnitIds.reducer$(reducer);
+    bodySides.reducer$(reducer);
     search.reducer$(reducer);
     active.reducer$(reducer);
     paging.reducer$(reducer);

@@ -162,6 +162,18 @@ class _$ListCaseEventsApiRequestSerializer
         ..add(serializers.serialize(object.patientSearch,
             specifiedType: const FullType(String)));
     }
+    if (object.salesLeadId != null) {
+      result
+        ..add('salesLeadId')
+        ..add(serializers.serialize(object.salesLeadId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.opsLeadId != null) {
+      result
+        ..add('opsLeadId')
+        ..add(serializers.serialize(object.opsLeadId,
+            specifiedType: const FullType(String)));
+    }
     if (object.caseNumber != null) {
       result
         ..add('caseNumber')
@@ -329,6 +341,14 @@ class _$ListCaseEventsApiRequestSerializer
           result.patientSearch = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'salesLeadId':
+          result.salesLeadId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'opsLeadId':
+          result.opsLeadId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'caseNumber':
           result.caseNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -413,6 +433,10 @@ class _$ListCaseEventsApiRequest extends ListCaseEventsApiRequest {
   @override
   final String patientSearch;
   @override
+  final String salesLeadId;
+  @override
+  final String opsLeadId;
+  @override
   final String caseNumber;
   @override
   final DateTime syncDate;
@@ -453,6 +477,8 @@ class _$ListCaseEventsApiRequest extends ListCaseEventsApiRequest {
       this.patientName,
       this.patientGender,
       this.patientSearch,
+      this.salesLeadId,
+      this.opsLeadId,
       this.caseNumber,
       this.syncDate,
       this.activeWarnings,
@@ -496,6 +522,8 @@ class _$ListCaseEventsApiRequest extends ListCaseEventsApiRequest {
         patientName == other.patientName &&
         patientGender == other.patientGender &&
         patientSearch == other.patientSearch &&
+        salesLeadId == other.salesLeadId &&
+        opsLeadId == other.opsLeadId &&
         caseNumber == other.caseNumber &&
         syncDate == other.syncDate &&
         activeWarnings == other.activeWarnings &&
@@ -525,19 +553,19 @@ class _$ListCaseEventsApiRequest extends ListCaseEventsApiRequest {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, canReturnCounts.hashCode), forceReturnCounts.hashCode), startDate.hashCode), endDate.hashCode), startDateLocal.hashCode), endDateLocal.hashCode), caseIds.hashCode), caseTypeIds.hashCode), bizUnitIds.hashCode),
-                                                                                hcrIds.hashCode),
-                                                                            coverageHcrIds.hashCode),
-                                                                        teamIds.hashCode),
-                                                                    facilityIds.hashCode),
-                                                                surgeonIds.hashCode),
-                                                            procedureIds.hashCode),
-                                                        subProcedureIds.hashCode),
-                                                    bodySides.hashCode),
-                                                statuses.hashCode),
-                                            patientName.hashCode),
-                                        patientGender.hashCode),
-                                    patientSearch.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, canReturnCounts.hashCode), forceReturnCounts.hashCode), startDate.hashCode), endDate.hashCode), startDateLocal.hashCode), endDateLocal.hashCode), caseIds.hashCode), caseTypeIds.hashCode), bizUnitIds.hashCode), hcrIds.hashCode), coverageHcrIds.hashCode),
+                                                                                teamIds.hashCode),
+                                                                            facilityIds.hashCode),
+                                                                        surgeonIds.hashCode),
+                                                                    procedureIds.hashCode),
+                                                                subProcedureIds.hashCode),
+                                                            bodySides.hashCode),
+                                                        statuses.hashCode),
+                                                    patientName.hashCode),
+                                                patientGender.hashCode),
+                                            patientSearch.hashCode),
+                                        salesLeadId.hashCode),
+                                    opsLeadId.hashCode),
                                 caseNumber.hashCode),
                             syncDate.hashCode),
                         activeWarnings.hashCode),
@@ -571,6 +599,8 @@ class _$ListCaseEventsApiRequest extends ListCaseEventsApiRequest {
           ..add('patientName', patientName)
           ..add('patientGender', patientGender)
           ..add('patientSearch', patientSearch)
+          ..add('salesLeadId', salesLeadId)
+          ..add('opsLeadId', opsLeadId)
           ..add('caseNumber', caseNumber)
           ..add('syncDate', syncDate)
           ..add('activeWarnings', activeWarnings)
@@ -588,147 +618,215 @@ class ListCaseEventsApiRequestBuilder
   _$ListCaseEventsApiRequest _$v;
 
   bool _canReturnCounts;
+
   bool get canReturnCounts => _$this._canReturnCounts;
+
   set canReturnCounts(bool canReturnCounts) =>
       _$this._canReturnCounts = canReturnCounts;
 
   bool _forceReturnCounts;
+
   bool get forceReturnCounts => _$this._forceReturnCounts;
+
   set forceReturnCounts(bool forceReturnCounts) =>
       _$this._forceReturnCounts = forceReturnCounts;
 
   DateTime _startDate;
+
   DateTime get startDate => _$this._startDate;
+
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
+
   DateTime get endDate => _$this._endDate;
+
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   DateTime _startDateLocal;
+
   DateTime get startDateLocal => _$this._startDateLocal;
+
   set startDateLocal(DateTime startDateLocal) =>
       _$this._startDateLocal = startDateLocal;
 
   DateTime _endDateLocal;
+
   DateTime get endDateLocal => _$this._endDateLocal;
+
   set endDateLocal(DateTime endDateLocal) =>
       _$this._endDateLocal = endDateLocal;
 
   ListBuilder<String> _caseIds;
+
   ListBuilder<String> get caseIds =>
       _$this._caseIds ??= new ListBuilder<String>();
+
   set caseIds(ListBuilder<String> caseIds) => _$this._caseIds = caseIds;
 
   ListBuilder<String> _caseTypeIds;
+
   ListBuilder<String> get caseTypeIds =>
       _$this._caseTypeIds ??= new ListBuilder<String>();
+
   set caseTypeIds(ListBuilder<String> caseTypeIds) =>
       _$this._caseTypeIds = caseTypeIds;
 
   ListBuilder<String> _bizUnitIds;
+
   ListBuilder<String> get bizUnitIds =>
       _$this._bizUnitIds ??= new ListBuilder<String>();
+
   set bizUnitIds(ListBuilder<String> bizUnitIds) =>
       _$this._bizUnitIds = bizUnitIds;
 
   ListBuilder<String> _hcrIds;
+
   ListBuilder<String> get hcrIds =>
       _$this._hcrIds ??= new ListBuilder<String>();
+
   set hcrIds(ListBuilder<String> hcrIds) => _$this._hcrIds = hcrIds;
 
   ListBuilder<String> _coverageHcrIds;
+
   ListBuilder<String> get coverageHcrIds =>
       _$this._coverageHcrIds ??= new ListBuilder<String>();
+
   set coverageHcrIds(ListBuilder<String> coverageHcrIds) =>
       _$this._coverageHcrIds = coverageHcrIds;
 
   ListBuilder<String> _teamIds;
+
   ListBuilder<String> get teamIds =>
       _$this._teamIds ??= new ListBuilder<String>();
+
   set teamIds(ListBuilder<String> teamIds) => _$this._teamIds = teamIds;
 
   ListBuilder<String> _facilityIds;
+
   ListBuilder<String> get facilityIds =>
       _$this._facilityIds ??= new ListBuilder<String>();
+
   set facilityIds(ListBuilder<String> facilityIds) =>
       _$this._facilityIds = facilityIds;
 
   ListBuilder<String> _surgeonIds;
+
   ListBuilder<String> get surgeonIds =>
       _$this._surgeonIds ??= new ListBuilder<String>();
+
   set surgeonIds(ListBuilder<String> surgeonIds) =>
       _$this._surgeonIds = surgeonIds;
 
   ListBuilder<String> _procedureIds;
+
   ListBuilder<String> get procedureIds =>
       _$this._procedureIds ??= new ListBuilder<String>();
+
   set procedureIds(ListBuilder<String> procedureIds) =>
       _$this._procedureIds = procedureIds;
 
   ListBuilder<String> _subProcedureIds;
+
   ListBuilder<String> get subProcedureIds =>
       _$this._subProcedureIds ??= new ListBuilder<String>();
+
   set subProcedureIds(ListBuilder<String> subProcedureIds) =>
       _$this._subProcedureIds = subProcedureIds;
 
   ListBuilder<BodySide> _bodySides;
+
   ListBuilder<BodySide> get bodySides =>
       _$this._bodySides ??= new ListBuilder<BodySide>();
+
   set bodySides(ListBuilder<BodySide> bodySides) =>
       _$this._bodySides = bodySides;
 
   ListBuilder<CaseEventStatus> _statuses;
+
   ListBuilder<CaseEventStatus> get statuses =>
       _$this._statuses ??= new ListBuilder<CaseEventStatus>();
+
   set statuses(ListBuilder<CaseEventStatus> statuses) =>
       _$this._statuses = statuses;
 
   String _patientName;
+
   String get patientName => _$this._patientName;
+
   set patientName(String patientName) => _$this._patientName = patientName;
 
   Gender _patientGender;
+
   Gender get patientGender => _$this._patientGender;
+
   set patientGender(Gender patientGender) =>
       _$this._patientGender = patientGender;
 
   String _patientSearch;
+
   String get patientSearch => _$this._patientSearch;
+
   set patientSearch(String patientSearch) =>
       _$this._patientSearch = patientSearch;
 
+  String _salesLeadId;
+
+  String get salesLeadId => _$this._salesLeadId;
+
+  set salesLeadId(String salesLeadId) => _$this._salesLeadId = salesLeadId;
+
+  String _opsLeadId;
+
+  String get opsLeadId => _$this._opsLeadId;
+
+  set opsLeadId(String opsLeadId) => _$this._opsLeadId = opsLeadId;
+
   String _caseNumber;
+
   String get caseNumber => _$this._caseNumber;
+
   set caseNumber(String caseNumber) => _$this._caseNumber = caseNumber;
 
   DateTime _syncDate;
+
   DateTime get syncDate => _$this._syncDate;
+
   set syncDate(DateTime syncDate) => _$this._syncDate = syncDate;
 
   bool _activeWarnings;
+
   bool get activeWarnings => _$this._activeWarnings;
+
   set activeWarnings(bool activeWarnings) =>
       _$this._activeWarnings = activeWarnings;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   bool _forExport;
+
   bool get forExport => _$this._forExport;
+
   set forExport(bool forExport) => _$this._forExport = forExport;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListCaseEventsApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListCaseEventsApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListCaseEventsApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListCaseEventsApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -757,6 +855,8 @@ class ListCaseEventsApiRequestBuilder
       _patientName = _$v.patientName;
       _patientGender = _$v.patientGender;
       _patientSearch = _$v.patientSearch;
+      _salesLeadId = _$v.salesLeadId;
+      _opsLeadId = _$v.opsLeadId;
       _caseNumber = _$v.caseNumber;
       _syncDate = _$v.syncDate;
       _activeWarnings = _$v.activeWarnings;
@@ -809,6 +909,8 @@ class ListCaseEventsApiRequestBuilder
               patientName: patientName,
               patientGender: patientGender,
               patientSearch: patientSearch,
+              salesLeadId: salesLeadId,
+              opsLeadId: opsLeadId,
               caseNumber: caseNumber,
               syncDate: syncDate,
               activeWarnings: activeWarnings,
@@ -905,6 +1007,8 @@ class _$ListCaseEventsApiRequestActions
   final FieldDispatcher<String> patientName;
   final FieldDispatcher<Gender> patientGender;
   final FieldDispatcher<String> patientSearch;
+  final FieldDispatcher<String> salesLeadId;
+  final FieldDispatcher<String> opsLeadId;
   final FieldDispatcher<String> caseNumber;
   final FieldDispatcher<DateTime> syncDate;
   final FieldDispatcher<bool> activeWarnings;
@@ -1003,6 +1107,13 @@ class _$ListCaseEventsApiRequestActions
             (a) => a?.patientSearch,
             (s) => s?.patientSearch,
             (p, b) => p?.patientSearch = b),
+        salesLeadId = options$.field<String>(
+            'salesLeadId',
+            (a) => a?.salesLeadId,
+            (s) => s?.salesLeadId,
+            (p, b) => p?.salesLeadId = b),
+        opsLeadId = options$.field<String>('opsLeadId', (a) => a?.opsLeadId,
+            (s) => s?.opsLeadId, (p, b) => p?.opsLeadId = b),
         caseNumber = options$.field<String>('caseNumber', (a) => a?.caseNumber,
             (s) => s?.caseNumber, (p, b) => p?.caseNumber = b),
         syncDate = options$.field<DateTime>('syncDate', (a) => a?.syncDate,
@@ -1052,6 +1163,7 @@ class _$ListCaseEventsApiRequestActions
       ListCaseEventsApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
@@ -1059,6 +1171,7 @@ class _$ListCaseEventsApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -1084,6 +1197,8 @@ class _$ListCaseEventsApiRequestActions
         this.patientName,
         this.patientGender,
         this.patientSearch,
+        this.salesLeadId,
+        this.opsLeadId,
         this.caseNumber,
         this.syncDate,
         this.activeWarnings,
@@ -1115,6 +1230,8 @@ class _$ListCaseEventsApiRequestActions
     patientName.reducer$(reducer);
     patientGender.reducer$(reducer);
     patientSearch.reducer$(reducer);
+    salesLeadId.reducer$(reducer);
+    opsLeadId.reducer$(reducer);
     caseNumber.reducer$(reducer);
     syncDate.reducer$(reducer);
     activeWarnings.reducer$(reducer);

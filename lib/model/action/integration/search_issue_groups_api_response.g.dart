@@ -108,8 +108,10 @@ class SearchIssueGroupsApiResponseBuilder
   _$SearchIssueGroupsApiResponse _$v;
 
   ListBuilder<String> _issuesGroups;
+
   ListBuilder<String> get issuesGroups =>
       _$this._issuesGroups ??= new ListBuilder<String>();
+
   set issuesGroups(ListBuilder<String> issuesGroups) =>
       _$this._issuesGroups = issuesGroups;
 
@@ -206,6 +208,7 @@ class _$SearchIssueGroupsApiResponseActions
       SearchIssueGroupsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

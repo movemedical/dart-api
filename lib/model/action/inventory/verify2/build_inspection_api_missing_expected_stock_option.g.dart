@@ -235,42 +235,58 @@ class BuildInspectionApiMissingExpectedStockOptionBuilder
   _$BuildInspectionApiMissingExpectedStockOption _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   BuildInspectionApiMissingExpectedStockOptionType _type;
+
   BuildInspectionApiMissingExpectedStockOptionType get type => _$this._type;
+
   set type(BuildInspectionApiMissingExpectedStockOptionType type) =>
       _$this._type = type;
 
   AssociationType _pushBackAssociationType;
+
   AssociationType get pushBackAssociationType =>
       _$this._pushBackAssociationType;
+
   set pushBackAssociationType(AssociationType pushBackAssociationType) =>
       _$this._pushBackAssociationType = pushBackAssociationType;
 
   String _pushBackAssociationId;
+
   String get pushBackAssociationId => _$this._pushBackAssociationId;
+
   set pushBackAssociationId(String pushBackAssociationId) =>
       _$this._pushBackAssociationId = pushBackAssociationId;
 
   LocationType _pushBackLocationType;
+
   LocationType get pushBackLocationType => _$this._pushBackLocationType;
+
   set pushBackLocationType(LocationType pushBackLocationType) =>
       _$this._pushBackLocationType = pushBackLocationType;
 
   String _pushBackLocationId;
+
   String get pushBackLocationId => _$this._pushBackLocationId;
+
   set pushBackLocationId(String pushBackLocationId) =>
       _$this._pushBackLocationId = pushBackLocationId;
 
   StockContainerType _pushBackContainerType;
+
   StockContainerType get pushBackContainerType => _$this._pushBackContainerType;
+
   set pushBackContainerType(StockContainerType pushBackContainerType) =>
       _$this._pushBackContainerType = pushBackContainerType;
 
   String _pushBackContainerId;
+
   String get pushBackContainerId => _$this._pushBackContainerId;
+
   set pushBackContainerId(String pushBackContainerId) =>
       _$this._pushBackContainerId = pushBackContainerId;
 
@@ -406,6 +422,7 @@ class _$BuildInspectionApiMissingExpectedStockOptionActions
       BuildInspectionApiMissingExpectedStockOptionBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

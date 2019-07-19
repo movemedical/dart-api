@@ -228,46 +228,62 @@ class GetAuditApiAuditCountedSummaryBuilder
   _$GetAuditApiAuditCountedSummary _$v;
 
   GetAuditApiItemDetailBuilder _itemDetail;
+
   GetAuditApiItemDetailBuilder get itemDetail =>
       _$this._itemDetail ??= new GetAuditApiItemDetailBuilder();
+
   set itemDetail(GetAuditApiItemDetailBuilder itemDetail) =>
       _$this._itemDetail = itemDetail;
 
   GetAuditApiPieceDetailBuilder _expected;
+
   GetAuditApiPieceDetailBuilder get expected =>
       _$this._expected ??= new GetAuditApiPieceDetailBuilder();
+
   set expected(GetAuditApiPieceDetailBuilder expected) =>
       _$this._expected = expected;
 
   GetAuditApiPieceDetailBuilder _applied;
+
   GetAuditApiPieceDetailBuilder get applied =>
       _$this._applied ??= new GetAuditApiPieceDetailBuilder();
+
   set applied(GetAuditApiPieceDetailBuilder applied) =>
       _$this._applied = applied;
 
   GetAuditApiPieceDetailBuilder _shortage;
+
   GetAuditApiPieceDetailBuilder get shortage =>
       _$this._shortage ??= new GetAuditApiPieceDetailBuilder();
+
   set shortage(GetAuditApiPieceDetailBuilder shortage) =>
       _$this._shortage = shortage;
 
   GetAuditApiPieceDetailBuilder _overage;
+
   GetAuditApiPieceDetailBuilder get overage =>
       _$this._overage ??= new GetAuditApiPieceDetailBuilder();
+
   set overage(GetAuditApiPieceDetailBuilder overage) =>
       _$this._overage = overage;
 
   bool _matched;
+
   bool get matched => _$this._matched;
+
   set matched(bool matched) => _$this._matched = matched;
 
   int _totalQtyVariance;
+
   int get totalQtyVariance => _$this._totalQtyVariance;
+
   set totalQtyVariance(int totalQtyVariance) =>
       _$this._totalQtyVariance = totalQtyVariance;
 
   double _totalPriceVariance;
+
   double get totalPriceVariance => _$this._totalPriceVariance;
+
   set totalPriceVariance(double totalPriceVariance) =>
       _$this._totalPriceVariance = totalPriceVariance;
 
@@ -445,6 +461,7 @@ class _$GetAuditApiAuditCountedSummaryActions
       GetAuditApiAuditCountedSummaryBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.itemDetail,
@@ -455,6 +472,7 @@ class _$GetAuditApiAuditCountedSummaryActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

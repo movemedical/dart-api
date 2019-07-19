@@ -48,6 +48,9 @@ abstract class GetCaseEventDetailApiDisplayRules
   bool get moveBackToPlanning;
 
   @nullable
+  bool get moveToComplete;
+
+  @nullable
   bool get billingCodes;
 
   @nullable
@@ -106,6 +109,8 @@ abstract class GetCaseEventDetailApiDisplayRulesActions extends ModelActions<
   FieldDispatcher<bool> get editDeliverTo;
 
   FieldDispatcher<bool> get moveBackToPlanning;
+
+  FieldDispatcher<bool> get moveToComplete;
 
   FieldDispatcher<bool> get billingCodes;
 

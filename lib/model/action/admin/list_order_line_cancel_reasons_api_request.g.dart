@@ -32,6 +32,12 @@ class _$ListOrderLineCancelReasonsApiRequestSerializer
         ..add(serializers.serialize(object.search,
             specifiedType: const FullType(String)));
     }
+    if (object.orderReasonId != null) {
+      result
+        ..add('orderReasonId')
+        ..add(serializers.serialize(object.orderReasonId,
+            specifiedType: const FullType(String)));
+    }
     if (object.active != null) {
       result
         ..add('active')
@@ -64,6 +70,10 @@ class _$ListOrderLineCancelReasonsApiRequestSerializer
           result.search = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'orderReasonId':
+          result.orderReasonId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'active':
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -85,6 +95,8 @@ class _$ListOrderLineCancelReasonsApiRequest
   @override
   final String search;
   @override
+  final String orderReasonId;
+  @override
   final bool active;
   @override
   final PaginationParams paging;
@@ -95,7 +107,7 @@ class _$ListOrderLineCancelReasonsApiRequest
           .build();
 
   _$ListOrderLineCancelReasonsApiRequest._(
-      {this.search, this.active, this.paging})
+      {this.search, this.orderReasonId, this.active, this.paging})
       : super._();
 
   @override
@@ -112,20 +124,24 @@ class _$ListOrderLineCancelReasonsApiRequest
     if (identical(other, this)) return true;
     return other is ListOrderLineCancelReasonsApiRequest &&
         search == other.search &&
+        orderReasonId == other.orderReasonId &&
         active == other.active &&
         paging == other.paging;
   }
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, search.hashCode), active.hashCode), paging.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, search.hashCode), orderReasonId.hashCode),
+            active.hashCode),
+        paging.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ListOrderLineCancelReasonsApiRequest')
           ..add('search', search)
+          ..add('orderReasonId', orderReasonId)
           ..add('active', active)
           ..add('paging', paging))
         .toString();
@@ -139,16 +155,29 @@ class ListOrderLineCancelReasonsApiRequestBuilder
   _$ListOrderLineCancelReasonsApiRequest _$v;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
+  String _orderReasonId;
+
+  String get orderReasonId => _$this._orderReasonId;
+
+  set orderReasonId(String orderReasonId) =>
+      _$this._orderReasonId = orderReasonId;
+
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListOrderLineCancelReasonsApiRequestBuilder();
@@ -156,6 +185,7 @@ class ListOrderLineCancelReasonsApiRequestBuilder
   ListOrderLineCancelReasonsApiRequestBuilder get _$this {
     if (_$v != null) {
       _search = _$v.search;
+      _orderReasonId = _$v.orderReasonId;
       _active = _$v.active;
       _paging = _$v.paging?.toBuilder();
       _$v = null;
@@ -182,7 +212,10 @@ class ListOrderLineCancelReasonsApiRequestBuilder
     try {
       _$result = _$v ??
           new _$ListOrderLineCancelReasonsApiRequest._(
-              search: search, active: active, paging: _paging?.build());
+              search: search,
+              orderReasonId: orderReasonId,
+              active: active,
+              paging: _paging?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -224,6 +257,7 @@ class _$ListOrderLineCancelReasonsApiRequestActions
 
   final ActionDispatcher<ListOrderLineCancelReasonsApiRequest> replace$;
   final FieldDispatcher<String> search;
+  final FieldDispatcher<String> orderReasonId;
   final FieldDispatcher<bool> active;
   final PaginationParamsActions paging;
 
@@ -232,6 +266,11 @@ class _$ListOrderLineCancelReasonsApiRequestActions
             'replace\$', (a) => a?.replace$),
         search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
+        orderReasonId = options$.field<String>(
+            'orderReasonId',
+            (a) => a?.orderReasonId,
+            (s) => s?.orderReasonId,
+            (p, b) => p?.orderReasonId = b),
         active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         paging = PaginationParamsActions(() => options$.stateful<
@@ -258,17 +297,20 @@ class _$ListOrderLineCancelReasonsApiRequestActions
       ListOrderLineCancelReasonsApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
         this.replace$,
         this.search,
+        this.orderReasonId,
         this.active,
       ]);
 
@@ -276,6 +318,7 @@ class _$ListOrderLineCancelReasonsApiRequestActions
   void reducer$(ReducerBuilder reducer) {
     super.reducer$(reducer);
     search.reducer$(reducer);
+    orderReasonId.reducer$(reducer);
     active.reducer$(reducer);
     paging.reducer$(reducer);
   }

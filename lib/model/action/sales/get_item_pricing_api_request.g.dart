@@ -206,34 +206,48 @@ class GetItemPricingApiRequestBuilder
   _$GetItemPricingApiRequest _$v;
 
   String _caseId;
+
   String get caseId => _$this._caseId;
+
   set caseId(String caseId) => _$this._caseId = caseId;
 
   String _customerId;
+
   String get customerId => _$this._customerId;
+
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _shipToAddressId;
+
   String get shipToAddressId => _$this._shipToAddressId;
+
   set shipToAddressId(String shipToAddressId) =>
       _$this._shipToAddressId = shipToAddressId;
 
   String _billToAddressId;
+
   String get billToAddressId => _$this._billToAddressId;
+
   set billToAddressId(String billToAddressId) =>
       _$this._billToAddressId = billToAddressId;
 
   String _constructId;
+
   String get constructId => _$this._constructId;
+
   set constructId(String constructId) => _$this._constructId = constructId;
 
   ListBuilder<GetItemPricingApiItem> _items;
+
   ListBuilder<GetItemPricingApiItem> get items =>
       _$this._items ??= new ListBuilder<GetItemPricingApiItem>();
+
   set items(ListBuilder<GetItemPricingApiItem> items) => _$this._items = items;
 
   bool _construct;
+
   bool get construct => _$this._construct;
+
   set construct(bool construct) => _$this._construct = construct;
 
   GetItemPricingApiRequestBuilder();
@@ -364,6 +378,7 @@ class _$GetItemPricingApiRequestActions
       GetItemPricingApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

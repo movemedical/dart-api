@@ -14,7 +14,7 @@ const MoveItemType _$wireTOTE = const MoveItemType._('TOTE');
 const MoveItemType _$wireNON_STOCKABLE = const MoveItemType._('NON_STOCKABLE');
 const MoveItemType _$wireFEE = const MoveItemType._('FEE');
 
-MoveItemType _$moveItemTypeValueOf(String name) {
+MoveItemType _$valueOf(String name) {
   switch (name) {
     case 'PIECE':
       return _$wirePIECE;
@@ -35,7 +35,7 @@ MoveItemType _$moveItemTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<MoveItemType> _$moveItemTypeValues =
+final BuiltSet<MoveItemType> _$values =
     new BuiltSet<MoveItemType>(const <MoveItemType>[
   _$wirePIECE,
   _$wireSET,

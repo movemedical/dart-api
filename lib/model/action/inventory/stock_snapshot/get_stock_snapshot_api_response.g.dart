@@ -105,8 +105,10 @@ class GetStockSnapshotApiResponseBuilder
   _$GetStockSnapshotApiResponse _$v;
 
   GetStockSnapshotApiSnapshotBuilder _snapshot;
+
   GetStockSnapshotApiSnapshotBuilder get snapshot =>
       _$this._snapshot ??= new GetStockSnapshotApiSnapshotBuilder();
+
   set snapshot(GetStockSnapshotApiSnapshotBuilder snapshot) =>
       _$this._snapshot = snapshot;
 
@@ -206,12 +208,14 @@ class _$GetStockSnapshotApiResponseActions
       GetStockSnapshotApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.snapshot,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

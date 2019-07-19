@@ -162,22 +162,30 @@ class ListShipmentsForDashboardApiDashboardShipmentLiteBuilder
   _$ListShipmentsForDashboardApiDashboardShipmentLite _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _shipmentNumber;
+
   int get shipmentNumber => _$this._shipmentNumber;
+
   set shipmentNumber(int shipmentNumber) =>
       _$this._shipmentNumber = shipmentNumber;
 
   ShipmentStatus _shipmentStatus;
+
   ShipmentStatus get shipmentStatus => _$this._shipmentStatus;
+
   set shipmentStatus(ShipmentStatus shipmentStatus) =>
       _$this._shipmentStatus = shipmentStatus;
 
   LocationBuilder _toLocation;
+
   LocationBuilder get toLocation =>
       _$this._toLocation ??= new LocationBuilder();
+
   set toLocation(LocationBuilder toLocation) => _$this._toLocation = toLocation;
 
   ListShipmentsForDashboardApiDashboardShipmentLiteBuilder();
@@ -303,12 +311,14 @@ class _$ListShipmentsForDashboardApiDashboardShipmentLiteActions
       ListShipmentsForDashboardApiDashboardShipmentLiteBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toLocation,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

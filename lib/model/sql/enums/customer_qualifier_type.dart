@@ -23,11 +23,9 @@ class CustomerQualifierType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<CustomerQualifierType> get values =>
-      _$customerQualifierTypeValues;
+  static BuiltSet<CustomerQualifierType> get values => _$values;
 
-  static CustomerQualifierType valueOf(String name) =>
-      _$customerQualifierTypeValueOf(name);
+  static CustomerQualifierType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

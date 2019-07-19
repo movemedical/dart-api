@@ -68,6 +68,7 @@ class _$ListLocationJournalsApi extends ListLocationJournalsApi {
           ApiResult<ListLocationJournalsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

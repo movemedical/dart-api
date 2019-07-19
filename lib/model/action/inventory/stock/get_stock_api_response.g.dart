@@ -98,8 +98,10 @@ class GetStockApiResponseBuilder
   _$GetStockApiResponse _$v;
 
   GetStockApiStockBuilder _stock;
+
   GetStockApiStockBuilder get stock =>
       _$this._stock ??= new GetStockApiStockBuilder();
+
   set stock(GetStockApiStockBuilder stock) => _$this._stock = stock;
 
   GetStockApiResponseBuilder();
@@ -190,12 +192,14 @@ class _$GetStockApiResponseActions extends GetStockApiResponseActions {
   GetStockApiResponseBuilder newBuilder$() => GetStockApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stock,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

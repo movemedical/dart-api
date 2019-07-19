@@ -67,6 +67,7 @@ class _$CreateStockOrderApi extends CreateStockOrderApi {
           ApiResult<CreateStockOrderApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

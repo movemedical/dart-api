@@ -5,9 +5,9 @@ import 'package:modux/modux.dart';
 import 'package:movemedical_api/model/action/inventory/order/get_stock_order_api_display_rules.dart';
 import 'package:movemedical_api/model/action/inventory/order/get_stock_order_api_order.dart';
 import 'package:movemedical_api/model/action/inventory/order/get_stock_order_api_order_attribute.dart';
-import 'package:movemedical_api/model/custom_doc.dart';
 import 'package:movemedical_api/model/custom_field_value.dart';
 import 'package:movemedical_api/model/essentials/intraop/move_presence.dart';
+import 'package:movemedical_api/model/essentials/model/api/order_custom_doc.dart';
 
 part 'get_stock_order_api_response.g.dart';
 
@@ -31,7 +31,7 @@ abstract class GetStockOrderApiResponse
   BuiltList<CustomFieldValue> get orderCustomFieldValues;
 
   @nullable
-  BuiltList<CustomDoc> get customDocs;
+  BuiltList<OrderCustomDoc> get customDocs;
 
   @nullable
   BuiltList<GetStockOrderApiOrderAttribute> get attributes;
@@ -70,7 +70,7 @@ abstract class GetStockOrderApiResponseActions extends ModelActions<
 
   FieldDispatcher<BuiltList<CustomFieldValue>> get orderCustomFieldValues;
 
-  FieldDispatcher<BuiltList<CustomDoc>> get customDocs;
+  FieldDispatcher<BuiltList<OrderCustomDoc>> get customDocs;
 
   FieldDispatcher<BuiltList<GetStockOrderApiOrderAttribute>> get attributes;
 

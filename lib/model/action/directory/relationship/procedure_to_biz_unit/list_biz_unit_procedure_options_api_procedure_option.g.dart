@@ -177,23 +177,33 @@ class ListBizUnitProcedureOptionsApiProcedureOptionBuilder
   _$ListBizUnitProcedureOptionsApiProcedureOption _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _icdCode;
+
   String get icdCode => _$this._icdCode;
+
   set icdCode(String icdCode) => _$this._icdCode = icdCode;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   bool _bodySideRequired;
+
   bool get bodySideRequired => _$this._bodySideRequired;
+
   set bodySideRequired(bool bodySideRequired) =>
       _$this._bodySideRequired = bodySideRequired;
 
@@ -304,6 +314,7 @@ class _$ListBizUnitProcedureOptionsApiProcedureOptionActions
       ListBizUnitProcedureOptionsApiProcedureOptionBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

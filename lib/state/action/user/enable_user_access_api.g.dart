@@ -60,6 +60,7 @@ class _$EnableUserAccessApi extends EnableUserAccessApi {
           ApiCommand<EnableUserAccessApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -15,8 +15,7 @@ const ListDeliveryScheduleProfileHolidaysApiOrderBy _$wireDAY =
 const ListDeliveryScheduleProfileHolidaysApiOrderBy _$wireYEAR =
     const ListDeliveryScheduleProfileHolidaysApiOrderBy._('YEAR');
 
-ListDeliveryScheduleProfileHolidaysApiOrderBy
-    _$listDeliveryScheduleProfileHolidaysApiOrderByValueOf(String name) {
+ListDeliveryScheduleProfileHolidaysApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -31,8 +30,7 @@ ListDeliveryScheduleProfileHolidaysApiOrderBy
   }
 }
 
-final BuiltSet<ListDeliveryScheduleProfileHolidaysApiOrderBy>
-    _$listDeliveryScheduleProfileHolidaysApiOrderByValues =
+final BuiltSet<ListDeliveryScheduleProfileHolidaysApiOrderBy> _$values =
     new BuiltSet<ListDeliveryScheduleProfileHolidaysApiOrderBy>(const <
         ListDeliveryScheduleProfileHolidaysApiOrderBy>[
   _$wireNAME,

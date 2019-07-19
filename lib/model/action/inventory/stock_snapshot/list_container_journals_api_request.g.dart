@@ -122,13 +122,17 @@ class ListContainerJournalsApiRequestBuilder
   _$ListContainerJournalsApiRequest _$v;
 
   String _stockSnapshotId;
+
   String get stockSnapshotId => _$this._stockSnapshotId;
+
   set stockSnapshotId(String stockSnapshotId) =>
       _$this._stockSnapshotId = stockSnapshotId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListContainerJournalsApiRequestBuilder();
@@ -235,12 +239,14 @@ class _$ListContainerJournalsApiRequestActions
       ListContainerJournalsApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

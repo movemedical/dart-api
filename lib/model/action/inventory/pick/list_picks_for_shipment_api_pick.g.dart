@@ -80,6 +80,12 @@ class _$ListPicksForShipmentApiPickSerializer
         ..add(serializers.serialize(object.kitSerial,
             specifiedType: const FullType(Serial)));
     }
+    if (object.swapped != null) {
+      result
+        ..add('swapped')
+        ..add(serializers.serialize(object.swapped,
+            specifiedType: const FullType(bool)));
+    }
 
     return result;
   }
@@ -132,6 +138,10 @@ class _$ListPicksForShipmentApiPickSerializer
           result.kitSerial.replace(serializers.deserialize(value,
               specifiedType: const FullType(Serial)) as Serial);
           break;
+        case 'swapped':
+          result.swapped = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -158,6 +168,8 @@ class _$ListPicksForShipmentApiPick extends ListPicksForShipmentApiPick {
   final Item kitItem;
   @override
   final Serial kitSerial;
+  @override
+  final bool swapped;
 
   factory _$ListPicksForShipmentApiPick(
           [void updates(ListPicksForShipmentApiPickBuilder b)]) =>
@@ -172,7 +184,8 @@ class _$ListPicksForShipmentApiPick extends ListPicksForShipmentApiPick {
       this.assignedUserDisplayName,
       this.stockItem,
       this.kitItem,
-      this.kitSerial})
+      this.kitSerial,
+      this.swapped})
       : super._();
 
   @override
@@ -196,7 +209,8 @@ class _$ListPicksForShipmentApiPick extends ListPicksForShipmentApiPick {
         assignedUserDisplayName == other.assignedUserDisplayName &&
         stockItem == other.stockItem &&
         kitItem == other.kitItem &&
-        kitSerial == other.kitSerial;
+        kitSerial == other.kitSerial &&
+        swapped == other.swapped;
   }
 
   @override
@@ -208,15 +222,17 @@ class _$ListPicksForShipmentApiPick extends ListPicksForShipmentApiPick {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, id.hashCode),
-                                    dependsOnPickId.hashCode),
-                                pickNumber.hashCode),
-                            pickStatus.hashCode),
-                        assignedUserId.hashCode),
-                    assignedUserDisplayName.hashCode),
-                stockItem.hashCode),
-            kitItem.hashCode),
-        kitSerial.hashCode));
+                                $jc(
+                                    $jc($jc(0, id.hashCode),
+                                        dependsOnPickId.hashCode),
+                                    pickNumber.hashCode),
+                                pickStatus.hashCode),
+                            assignedUserId.hashCode),
+                        assignedUserDisplayName.hashCode),
+                    stockItem.hashCode),
+                kitItem.hashCode),
+            kitSerial.hashCode),
+        swapped.hashCode));
   }
 
   @override
@@ -230,7 +246,8 @@ class _$ListPicksForShipmentApiPick extends ListPicksForShipmentApiPick {
           ..add('assignedUserDisplayName', assignedUserDisplayName)
           ..add('stockItem', stockItem)
           ..add('kitItem', kitItem)
-          ..add('kitSerial', kitSerial))
+          ..add('kitSerial', kitSerial)
+          ..add('swapped', swapped))
         .toString();
   }
 }
@@ -242,44 +259,68 @@ class ListPicksForShipmentApiPickBuilder
   _$ListPicksForShipmentApiPick _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _dependsOnPickId;
+
   String get dependsOnPickId => _$this._dependsOnPickId;
+
   set dependsOnPickId(String dependsOnPickId) =>
       _$this._dependsOnPickId = dependsOnPickId;
 
   int _pickNumber;
+
   int get pickNumber => _$this._pickNumber;
+
   set pickNumber(int pickNumber) => _$this._pickNumber = pickNumber;
 
   PickStatus _pickStatus;
+
   PickStatus get pickStatus => _$this._pickStatus;
+
   set pickStatus(PickStatus pickStatus) => _$this._pickStatus = pickStatus;
 
   String _assignedUserId;
+
   String get assignedUserId => _$this._assignedUserId;
+
   set assignedUserId(String assignedUserId) =>
       _$this._assignedUserId = assignedUserId;
 
   String _assignedUserDisplayName;
+
   String get assignedUserDisplayName => _$this._assignedUserDisplayName;
+
   set assignedUserDisplayName(String assignedUserDisplayName) =>
       _$this._assignedUserDisplayName = assignedUserDisplayName;
 
   StockItemBuilder _stockItem;
+
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
+
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   ItemBuilder _kitItem;
+
   ItemBuilder get kitItem => _$this._kitItem ??= new ItemBuilder();
+
   set kitItem(ItemBuilder kitItem) => _$this._kitItem = kitItem;
 
   SerialBuilder _kitSerial;
+
   SerialBuilder get kitSerial => _$this._kitSerial ??= new SerialBuilder();
+
   set kitSerial(SerialBuilder kitSerial) => _$this._kitSerial = kitSerial;
+
+  bool _swapped;
+
+  bool get swapped => _$this._swapped;
+
+  set swapped(bool swapped) => _$this._swapped = swapped;
 
   ListPicksForShipmentApiPickBuilder();
 
@@ -294,6 +335,7 @@ class ListPicksForShipmentApiPickBuilder
       _stockItem = _$v.stockItem?.toBuilder();
       _kitItem = _$v.kitItem?.toBuilder();
       _kitSerial = _$v.kitSerial?.toBuilder();
+      _swapped = _$v.swapped;
       _$v = null;
     }
     return this;
@@ -326,7 +368,8 @@ class ListPicksForShipmentApiPickBuilder
               assignedUserDisplayName: assignedUserDisplayName,
               stockItem: _stockItem?.build(),
               kitItem: _kitItem?.build(),
-              kitSerial: _kitSerial?.build());
+              kitSerial: _kitSerial?.build(),
+              swapped: swapped);
     } catch (_) {
       String _$failedField;
       try {
@@ -378,6 +421,7 @@ class _$ListPicksForShipmentApiPickActions
   final StockItemActions stockItem;
   final ItemActions kitItem;
   final SerialActions kitSerial;
+  final FieldDispatcher<bool> swapped;
 
   _$ListPicksForShipmentApiPickActions._(this.options$)
       : replace$ = options$.action<ListPicksForShipmentApiPick>(
@@ -427,6 +471,8 @@ class _$ListPicksForShipmentApiPickActions
                 (s) => s?.kitSerial,
                 (b) => b?.kitSerial,
                 (parent, builder) => parent?.kitSerial = builder)),
+        swapped = options$.field<bool>('swapped', (a) => a?.swapped,
+            (s) => s?.swapped, (p, b) => p?.swapped = b),
         super._();
 
   factory _$ListPicksForShipmentApiPickActions(
@@ -442,6 +488,7 @@ class _$ListPicksForShipmentApiPickActions
       ListPicksForShipmentApiPickBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
@@ -450,6 +497,7 @@ class _$ListPicksForShipmentApiPickActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -460,6 +508,7 @@ class _$ListPicksForShipmentApiPickActions
         this.pickStatus,
         this.assignedUserId,
         this.assignedUserDisplayName,
+        this.swapped,
       ]);
 
   @override
@@ -474,6 +523,7 @@ class _$ListPicksForShipmentApiPickActions
     stockItem.reducer$(reducer);
     kitItem.reducer$(reducer);
     kitSerial.reducer$(reducer);
+    swapped.reducer$(reducer);
   }
 
   @override

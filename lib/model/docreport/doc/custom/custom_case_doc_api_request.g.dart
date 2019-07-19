@@ -172,26 +172,36 @@ class CustomCaseDocApiRequestBuilder
   _$CustomCaseDocApiRequest _$v;
 
   DBGeneratedDocReportBuilder _docReport;
+
   DBGeneratedDocReportBuilder get docReport =>
       _$this._docReport ??= new DBGeneratedDocReportBuilder();
+
   set docReport(DBGeneratedDocReportBuilder docReport) =>
       _$this._docReport = docReport;
 
   String _caseDocId;
+
   String get caseDocId => _$this._caseDocId;
+
   set caseDocId(String caseDocId) => _$this._caseDocId = caseDocId;
 
   String _caseId;
+
   String get caseId => _$this._caseId;
+
   set caseId(String caseId) => _$this._caseId = caseId;
 
   DocReportDisplayType _displayType;
+
   DocReportDisplayType get displayType => _$this._displayType;
+
   set displayType(DocReportDisplayType displayType) =>
       _$this._displayType = displayType;
 
   DocReportFormat _format;
+
   DocReportFormat get format => _$this._format;
+
   set format(DocReportFormat format) => _$this._format = format;
 
   CustomCaseDocApiRequestBuilder();
@@ -310,12 +320,14 @@ class _$CustomCaseDocApiRequestActions extends CustomCaseDocApiRequestActions {
       CustomCaseDocApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

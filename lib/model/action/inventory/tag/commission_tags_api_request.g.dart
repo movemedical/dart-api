@@ -105,8 +105,10 @@ class CommissionTagsApiRequestBuilder
   _$CommissionTagsApiRequest _$v;
 
   ListBuilder<CommissionTagsApiTagRequest> _tagRequests;
+
   ListBuilder<CommissionTagsApiTagRequest> get tagRequests =>
       _$this._tagRequests ??= new ListBuilder<CommissionTagsApiTagRequest>();
+
   set tagRequests(ListBuilder<CommissionTagsApiTagRequest> tagRequests) =>
       _$this._tagRequests = tagRequests;
 
@@ -201,6 +203,7 @@ class _$CommissionTagsApiRequestActions
       CommissionTagsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

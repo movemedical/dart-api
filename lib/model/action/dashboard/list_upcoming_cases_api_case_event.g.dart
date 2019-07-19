@@ -190,27 +190,39 @@ class ListUpcomingCasesApiCaseEventBuilder
   _$ListUpcomingCasesApiCaseEvent _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   int _caseNumber;
+
   int get caseNumber => _$this._caseNumber;
+
   set caseNumber(int caseNumber) => _$this._caseNumber = caseNumber;
 
   DateTime _eventDate;
+
   DateTime get eventDate => _$this._eventDate;
+
   set eventDate(DateTime eventDate) => _$this._eventDate = eventDate;
 
   CaseEventStatus _status;
+
   CaseEventStatus get status => _$this._status;
+
   set status(CaseEventStatus status) => _$this._status = status;
 
   String _facilityName;
+
   String get facilityName => _$this._facilityName;
+
   set facilityName(String facilityName) => _$this._facilityName = facilityName;
 
   String _timeZone;
+
   String get timeZone => _$this._timeZone;
+
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   ListUpcomingCasesApiCaseEventBuilder();
@@ -321,6 +333,7 @@ class _$ListUpcomingCasesApiCaseEventActions
       ListUpcomingCasesApiCaseEventBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

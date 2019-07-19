@@ -69,6 +69,7 @@ class _$CreateOrderFromOpenLinesApi extends CreateOrderFromOpenLinesApi {
           ApiResult<CreateOrderFromOpenLinesApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -222,37 +222,53 @@ class ListExportLogsApiRequestBuilder
   _$ListExportLogsApiRequest _$v;
 
   String _exportJobId;
+
   String get exportJobId => _$this._exportJobId;
+
   set exportJobId(String exportJobId) => _$this._exportJobId = exportJobId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   DateTime _startDate;
+
   DateTime get startDate => _$this._startDate;
+
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
+
   DateTime get endDate => _$this._endDate;
+
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   ExportState _currentState;
+
   ExportState get currentState => _$this._currentState;
+
   set currentState(ExportState currentState) =>
       _$this._currentState = currentState;
 
   ListExportLogsApiSortBy _sortBy;
+
   ListExportLogsApiSortBy get sortBy => _$this._sortBy;
+
   set sortBy(ListExportLogsApiSortBy sortBy) => _$this._sortBy = sortBy;
 
   bool _descending;
+
   bool get descending => _$this._descending;
+
   set descending(bool descending) => _$this._descending = descending;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListExportLogsApiRequestBuilder();
@@ -392,12 +408,14 @@ class _$ListExportLogsApiRequestActions
       ListExportLogsApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

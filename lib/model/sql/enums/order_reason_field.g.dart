@@ -34,7 +34,7 @@ const OrderReasonField _$wireSALES_ORG_UNIT_HOSPITAL =
 const OrderReasonField _$wireHOSPITAL_BILLTO_REP =
     const OrderReasonField._('HOSPITAL_BILLTO_REP');
 
-OrderReasonField _$orderReasonFieldValueOf(String name) {
+OrderReasonField _$valueOf(String name) {
   switch (name) {
     case 'ATTN':
       return _$wireATTN;
@@ -75,7 +75,7 @@ OrderReasonField _$orderReasonFieldValueOf(String name) {
   }
 }
 
-final BuiltSet<OrderReasonField> _$orderReasonFieldValues =
+final BuiltSet<OrderReasonField> _$values =
     new BuiltSet<OrderReasonField>(const <OrderReasonField>[
   _$wireATTN,
   _$wireBILL_TO,

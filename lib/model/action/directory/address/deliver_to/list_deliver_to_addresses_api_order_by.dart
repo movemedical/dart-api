@@ -32,11 +32,10 @@ class ListDeliverToAddressesApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListDeliverToAddressesApiOrderBy> get values =>
-      _$listDeliverToAddressesApiOrderByValues;
+  static BuiltSet<ListDeliverToAddressesApiOrderBy> get values => _$values;
 
   static ListDeliverToAddressesApiOrderBy valueOf(String name) =>
-      _$listDeliverToAddressesApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

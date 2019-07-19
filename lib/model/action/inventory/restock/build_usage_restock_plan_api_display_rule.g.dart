@@ -200,41 +200,53 @@ class BuildUsageRestockPlanApiDisplayRuleBuilder
   _$BuildUsageRestockPlanApiDisplayRule _$v;
 
   bool _allowUserOverrideDoNotRestock;
+
   bool get allowUserOverrideDoNotRestock =>
       _$this._allowUserOverrideDoNotRestock;
+
   set allowUserOverrideDoNotRestock(bool allowUserOverrideDoNotRestock) =>
       _$this._allowUserOverrideDoNotRestock = allowUserOverrideDoNotRestock;
 
   bool _allowUserOverrideRestockLocation;
+
   bool get allowUserOverrideRestockLocation =>
       _$this._allowUserOverrideRestockLocation;
+
   set allowUserOverrideRestockLocation(bool allowUserOverrideRestockLocation) =>
       _$this._allowUserOverrideRestockLocation =
           allowUserOverrideRestockLocation;
 
   bool _allowUserOverrideRestockDeliverTo;
+
   bool get allowUserOverrideRestockDeliverTo =>
       _$this._allowUserOverrideRestockDeliverTo;
+
   set allowUserOverrideRestockDeliverTo(
           bool allowUserOverrideRestockDeliverTo) =>
       _$this._allowUserOverrideRestockDeliverTo =
           allowUserOverrideRestockDeliverTo;
 
   bool _allowUserOverrideRestockByDateShippingService;
+
   bool get allowUserOverrideRestockByDateShippingService =>
       _$this._allowUserOverrideRestockByDateShippingService;
+
   set allowUserOverrideRestockByDateShippingService(
           bool allowUserOverrideRestockByDateShippingService) =>
       _$this._allowUserOverrideRestockByDateShippingService =
           allowUserOverrideRestockByDateShippingService;
 
   bool _allowOverridePrice;
+
   bool get allowOverridePrice => _$this._allowOverridePrice;
+
   set allowOverridePrice(bool allowOverridePrice) =>
       _$this._allowOverridePrice = allowOverridePrice;
 
   bool _poRequired;
+
   bool get poRequired => _$this._poRequired;
+
   set poRequired(bool poRequired) => _$this._poRequired = poRequired;
 
   BuildUsageRestockPlanApiDisplayRuleBuilder();
@@ -358,6 +370,7 @@ class _$BuildUsageRestockPlanApiDisplayRuleActions
       BuildUsageRestockPlanApiDisplayRuleBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

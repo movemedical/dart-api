@@ -67,6 +67,7 @@ class _$CreateCaseEventApi extends CreateCaseEventApi {
           ApiResult<CreateCaseEventApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

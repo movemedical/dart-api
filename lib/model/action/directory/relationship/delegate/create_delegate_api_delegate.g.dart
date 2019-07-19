@@ -117,11 +117,15 @@ class CreateDelegateApiDelegateBuilder
   _$CreateDelegateApiDelegate _$v;
 
   String _delegateId;
+
   String get delegateId => _$this._delegateId;
+
   set delegateId(String delegateId) => _$this._delegateId = delegateId;
 
   DelegateType _delegateType;
+
   DelegateType get delegateType => _$this._delegateType;
+
   set delegateType(DelegateType delegateType) =>
       _$this._delegateType = delegateType;
 
@@ -208,6 +212,7 @@ class _$CreateDelegateApiDelegateActions
       CreateDelegateApiDelegateBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

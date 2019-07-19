@@ -107,8 +107,10 @@ class BarcodeScansToUsageApiResponseBuilder
   _$BarcodeScansToUsageApiResponse _$v;
 
   ListBuilder<ListCaseUsageApiUsage> _usages;
+
   ListBuilder<ListCaseUsageApiUsage> get usages =>
       _$this._usages ??= new ListBuilder<ListCaseUsageApiUsage>();
+
   set usages(ListBuilder<ListCaseUsageApiUsage> usages) =>
       _$this._usages = usages;
 
@@ -201,6 +203,7 @@ class _$BarcodeScansToUsageApiResponseActions
       BarcodeScansToUsageApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

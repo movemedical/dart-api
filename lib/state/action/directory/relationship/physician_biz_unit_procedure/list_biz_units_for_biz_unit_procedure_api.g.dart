@@ -73,6 +73,7 @@ class _$ListBizUnitsForBizUnitProcedureApi
           ApiResult<ListBizUnitsForBizUnitProcedureApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

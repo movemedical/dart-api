@@ -30,11 +30,11 @@ class BuildInspectionApiMissingExpectedStockOptionType extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<BuildInspectionApiMissingExpectedStockOptionType>
-      get values => _$buildInspectionApiMissingExpectedStockOptionTypeValues;
+      get values => _$values;
 
   static BuildInspectionApiMissingExpectedStockOptionType valueOf(
           String name) =>
-      _$buildInspectionApiMissingExpectedStockOptionTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

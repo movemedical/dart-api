@@ -27,10 +27,10 @@ class ListDeliveryScheduleProfileHolidaysApiOrderBy extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ListDeliveryScheduleProfileHolidaysApiOrderBy> get values =>
-      _$listDeliveryScheduleProfileHolidaysApiOrderByValues;
+      _$values;
 
   static ListDeliveryScheduleProfileHolidaysApiOrderBy valueOf(String name) =>
-      _$listDeliveryScheduleProfileHolidaysApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -119,12 +119,16 @@ class SaveLoanLinesApiRequestBuilder
   _$SaveLoanLinesApiRequest _$v;
 
   String _loanId;
+
   String get loanId => _$this._loanId;
+
   set loanId(String loanId) => _$this._loanId = loanId;
 
   ListBuilder<SaveLoanLinesApiLine> _lines;
+
   ListBuilder<SaveLoanLinesApiLine> get lines =>
       _$this._lines ??= new ListBuilder<SaveLoanLinesApiLine>();
+
   set lines(ListBuilder<SaveLoanLinesApiLine> lines) => _$this._lines = lines;
 
   SaveLoanLinesApiRequestBuilder();
@@ -217,6 +221,7 @@ class _$SaveLoanLinesApiRequestActions extends SaveLoanLinesApiRequestActions {
       SaveLoanLinesApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

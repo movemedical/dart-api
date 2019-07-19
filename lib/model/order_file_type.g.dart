@@ -9,7 +9,7 @@ part of 'order_file_type.dart';
 const OrderFileType _$wireMISC = const OrderFileType._('MISC');
 const OrderFileType _$wireINTEGRATION = const OrderFileType._('INTEGRATION');
 
-OrderFileType _$orderFileTypeValueOf(String name) {
+OrderFileType _$valueOf(String name) {
   switch (name) {
     case 'MISC':
       return _$wireMISC;
@@ -20,7 +20,7 @@ OrderFileType _$orderFileTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<OrderFileType> _$orderFileTypeValues =
+final BuiltSet<OrderFileType> _$values =
     new BuiltSet<OrderFileType>(const <OrderFileType>[
   _$wireMISC,
   _$wireINTEGRATION,

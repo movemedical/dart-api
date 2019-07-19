@@ -13,7 +13,7 @@ const LoanReason _$wireCONSIGNMENT_REQUEST =
 const LoanReason _$wireMULTI_CASE_EVENT =
     const LoanReason._('MULTI_CASE_EVENT');
 
-LoanReason _$loanReasonValueOf(String name) {
+LoanReason _$valueOf(String name) {
   switch (name) {
     case 'CASE_EVENT':
       return _$wireCASE_EVENT;
@@ -28,7 +28,7 @@ LoanReason _$loanReasonValueOf(String name) {
   }
 }
 
-final BuiltSet<LoanReason> _$loanReasonValues =
+final BuiltSet<LoanReason> _$values =
     new BuiltSet<LoanReason>(const <LoanReason>[
   _$wireCASE_EVENT,
   _$wireCONSIGNMENT,

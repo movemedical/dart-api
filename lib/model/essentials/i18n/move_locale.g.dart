@@ -11,7 +11,7 @@ const MoveLocale _$wireFR = const MoveLocale._('FR');
 const MoveLocale _$wireAU = const MoveLocale._('AU');
 const MoveLocale _$wireUK = const MoveLocale._('UK');
 
-MoveLocale _$moveLocaleValueOf(String name) {
+MoveLocale _$valueOf(String name) {
   switch (name) {
     case 'US':
       return _$wireUS;
@@ -26,7 +26,7 @@ MoveLocale _$moveLocaleValueOf(String name) {
   }
 }
 
-final BuiltSet<MoveLocale> _$moveLocaleValues =
+final BuiltSet<MoveLocale> _$values =
     new BuiltSet<MoveLocale>(const <MoveLocale>[
   _$wireUS,
   _$wireFR,

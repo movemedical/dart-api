@@ -104,7 +104,9 @@ class IntegrationsSearchApiRequestBuilder
   _$IntegrationsSearchApiRequest _$v;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   IntegrationsSearchApiRequestBuilder();
@@ -183,6 +185,7 @@ class _$IntegrationsSearchApiRequestActions
       IntegrationsSearchApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -115,12 +115,16 @@ class ListTagsApiResponseBuilder
   _$ListTagsApiResponse _$v;
 
   ListBuilder<ListTagsApiTag> _data;
+
   ListBuilder<ListTagsApiTag> get data =>
       _$this._data ??= new ListBuilder<ListTagsApiTag>();
+
   set data(ListBuilder<ListTagsApiTag> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListTagsApiResponseBuilder();
@@ -209,6 +213,7 @@ class _$ListTagsApiResponseActions extends ListTagsApiResponseActions {
   ListTagsApiResponseBuilder newBuilder$() => ListTagsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

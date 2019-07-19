@@ -104,7 +104,9 @@ class CreateCancelReasonApiRequestBuilder
   _$CreateCancelReasonApiRequest _$v;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   CreateCancelReasonApiRequestBuilder();
@@ -182,6 +184,7 @@ class _$CreateCancelReasonApiRequestActions
       CreateCancelReasonApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

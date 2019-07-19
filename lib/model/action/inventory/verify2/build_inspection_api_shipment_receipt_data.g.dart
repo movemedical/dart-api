@@ -110,9 +110,11 @@ class BuildInspectionApiShipmentReceiptDataBuilder
   _$BuildInspectionApiShipmentReceiptData _$v;
 
   ListBuilder<BuildInspectionApiShipmentReceiptDataPkg> _pkgs;
+
   ListBuilder<BuildInspectionApiShipmentReceiptDataPkg> get pkgs =>
       _$this._pkgs ??=
           new ListBuilder<BuildInspectionApiShipmentReceiptDataPkg>();
+
   set pkgs(ListBuilder<BuildInspectionApiShipmentReceiptDataPkg> pkgs) =>
       _$this._pkgs = pkgs;
 
@@ -209,6 +211,7 @@ class _$BuildInspectionApiShipmentReceiptDataActions
       BuildInspectionApiShipmentReceiptDataBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

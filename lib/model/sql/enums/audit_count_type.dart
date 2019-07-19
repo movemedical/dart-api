@@ -23,9 +23,9 @@ class AuditCountType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<AuditCountType> get values => _$auditCountTypeValues;
+  static BuiltSet<AuditCountType> get values => _$values;
 
-  static AuditCountType valueOf(String name) => _$auditCountTypeValueOf(name);
+  static AuditCountType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

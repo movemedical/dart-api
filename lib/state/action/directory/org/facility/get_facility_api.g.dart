@@ -64,6 +64,7 @@ class _$GetFacilityApi extends GetFacilityApi {
           ApiResult<GetFacilityApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

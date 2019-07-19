@@ -9,7 +9,7 @@ part of 'event_type.dart';
 const EventType _$wireCASE_EVENT = const EventType._('CASE_EVENT');
 const EventType _$wireAPPOINTMENT = const EventType._('APPOINTMENT');
 
-EventType _$eventTypeValueOf(String name) {
+EventType _$valueOf(String name) {
   switch (name) {
     case 'CASE_EVENT':
       return _$wireCASE_EVENT;
@@ -20,8 +20,7 @@ EventType _$eventTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<EventType> _$eventTypeValues =
-    new BuiltSet<EventType>(const <EventType>[
+final BuiltSet<EventType> _$values = new BuiltSet<EventType>(const <EventType>[
   _$wireCASE_EVENT,
   _$wireAPPOINTMENT,
 ]);

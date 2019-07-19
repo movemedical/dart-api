@@ -166,24 +166,34 @@ class ListAssigneesApiAssigneeBuilder
   _$ListAssigneesApiAssignee _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   GeneralContactType _linkedType;
+
   GeneralContactType get linkedType => _$this._linkedType;
+
   set linkedType(GeneralContactType linkedType) =>
       _$this._linkedType = linkedType;
 
   String _linkedId;
+
   String get linkedId => _$this._linkedId;
+
   set linkedId(String linkedId) => _$this._linkedId = linkedId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   ListAssigneesApiAssigneeBuilder();
@@ -285,6 +295,7 @@ class _$ListAssigneesApiAssigneeActions
       ListAssigneesApiAssigneeBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

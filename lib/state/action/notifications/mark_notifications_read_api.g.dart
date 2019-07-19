@@ -62,6 +62,7 @@ class _$MarkNotificationsReadApi extends MarkNotificationsReadApi {
           ApiCommand<MarkNotificationsReadApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

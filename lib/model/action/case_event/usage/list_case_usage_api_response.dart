@@ -7,6 +7,7 @@ import 'package:modux/modux.dart';
 import 'package:movemedical_api/model/action/case_event/usage/list_case_usage_api_case_usage_construct.dart';
 import 'package:movemedical_api/model/action/case_event/usage/list_case_usage_api_case_usage_order.dart';
 import 'package:movemedical_api/model/action/case_event/usage/list_case_usage_api_usage.dart';
+import 'package:movemedical_api/model/sql/enums/case_pricing_status.dart';
 
 part 'list_case_usage_api_response.g.dart';
 
@@ -46,6 +47,12 @@ abstract class ListCaseUsageApiResponse
 
   @nullable
   String get teamId;
+
+  @nullable
+  DateTime get lastPricingRequestDate;
+
+  @nullable
+  CasePricingStatus get casePricingStatus;
 
   ////////////////////////////////
   /// Constructors
@@ -92,6 +99,10 @@ abstract class ListCaseUsageApiResponseActions extends ModelActions<
   FieldDispatcher<String> get hcrId;
 
   FieldDispatcher<String> get teamId;
+
+  FieldDispatcher<DateTime> get lastPricingRequestDate;
+
+  FieldDispatcher<CasePricingStatus> get casePricingStatus;
 
   ////////////////////////////////
   /// Constructors

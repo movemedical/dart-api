@@ -9,7 +9,7 @@ part of 'web_service_type.dart';
 const WebServiceType _$wireSOAP = const WebServiceType._('SOAP');
 const WebServiceType _$wireREST = const WebServiceType._('REST');
 
-WebServiceType _$webServiceTypeValueOf(String name) {
+WebServiceType _$valueOf(String name) {
   switch (name) {
     case 'SOAP':
       return _$wireSOAP;
@@ -20,7 +20,7 @@ WebServiceType _$webServiceTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<WebServiceType> _$webServiceTypeValues =
+final BuiltSet<WebServiceType> _$values =
     new BuiltSet<WebServiceType>(const <WebServiceType>[
   _$wireSOAP,
   _$wireREST,

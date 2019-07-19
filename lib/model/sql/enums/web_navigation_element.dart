@@ -34,11 +34,9 @@ class WebNavigationElement extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<WebNavigationElement> get values =>
-      _$webNavigationElementValues;
+  static BuiltSet<WebNavigationElement> get values => _$values;
 
-  static WebNavigationElement valueOf(String name) =>
-      _$webNavigationElementValueOf(name);
+  static WebNavigationElement valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

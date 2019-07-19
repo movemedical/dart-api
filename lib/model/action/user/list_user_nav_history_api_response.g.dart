@@ -107,8 +107,10 @@ class ListUserNavHistoryApiResponseBuilder
   _$ListUserNavHistoryApiResponse _$v;
 
   ListBuilder<ListUserNavHistoryApiNavEntry> _entries;
+
   ListBuilder<ListUserNavHistoryApiNavEntry> get entries =>
       _$this._entries ??= new ListBuilder<ListUserNavHistoryApiNavEntry>();
+
   set entries(ListBuilder<ListUserNavHistoryApiNavEntry> entries) =>
       _$this._entries = entries;
 
@@ -204,6 +206,7 @@ class _$ListUserNavHistoryApiResponseActions
       ListUserNavHistoryApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

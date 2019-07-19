@@ -179,26 +179,36 @@ class UpdateCaseRequirementsDeliveryInfoApiRequestBuilder
   _$UpdateCaseRequirementsDeliveryInfoApiRequest _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   DateTime _deliverByDate;
+
   DateTime get deliverByDate => _$this._deliverByDate;
+
   set deliverByDate(DateTime deliverByDate) =>
       _$this._deliverByDate = deliverByDate;
 
   String _attention;
+
   String get attention => _$this._attention;
+
   set attention(String attention) => _$this._attention = attention;
 
   String _deliverToAddressId;
+
   String get deliverToAddressId => _$this._deliverToAddressId;
+
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   AddressBuilder _deliverToAddressOverride;
+
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
+
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
@@ -331,12 +341,14 @@ class _$UpdateCaseRequirementsDeliveryInfoApiRequestActions
       UpdateCaseRequirementsDeliveryInfoApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

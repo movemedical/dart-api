@@ -122,12 +122,16 @@ class GetCaseEventDetailApiLoanReturnDataBuilder
   _$GetCaseEventDetailApiLoanReturnData _$v;
 
   String _transferTypeId;
+
   String get transferTypeId => _$this._transferTypeId;
+
   set transferTypeId(String transferTypeId) =>
       _$this._transferTypeId = transferTypeId;
 
   LocationBuilder _returnTo;
+
   LocationBuilder get returnTo => _$this._returnTo ??= new LocationBuilder();
+
   set returnTo(LocationBuilder returnTo) => _$this._returnTo = returnTo;
 
   GetCaseEventDetailApiLoanReturnDataBuilder();
@@ -232,12 +236,14 @@ class _$GetCaseEventDetailApiLoanReturnDataActions
       GetCaseEventDetailApiLoanReturnDataBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.returnTo,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

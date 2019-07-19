@@ -84,6 +84,15 @@ abstract class ListSalesOrdersApiRequest
   String get search;
 
   @nullable
+  String get salesLeadId;
+
+  @nullable
+  String get opsLeadId;
+
+  @nullable
+  bool get enableCatalogBasedVisibility;
+
+  @nullable
   bool get forExport;
 
   @nullable
@@ -159,6 +168,12 @@ abstract class ListSalesOrdersApiRequestActions extends ModelActions<
   FieldDispatcher<String> get orderNumber;
 
   FieldDispatcher<String> get search;
+
+  FieldDispatcher<String> get salesLeadId;
+
+  FieldDispatcher<String> get opsLeadId;
+
+  FieldDispatcher<bool> get enableCatalogBasedVisibility;
 
   FieldDispatcher<bool> get forExport;
 

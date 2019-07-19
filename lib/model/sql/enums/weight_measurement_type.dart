@@ -22,11 +22,9 @@ class WeightMeasurementType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<WeightMeasurementType> get values =>
-      _$weightMeasurementTypeValues;
+  static BuiltSet<WeightMeasurementType> get values => _$values;
 
-  static WeightMeasurementType valueOf(String name) =>
-      _$weightMeasurementTypeValueOf(name);
+  static WeightMeasurementType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

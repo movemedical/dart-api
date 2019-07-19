@@ -24,9 +24,9 @@ class MoveLocale extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<MoveLocale> get values => _$moveLocaleValues;
+  static BuiltSet<MoveLocale> get values => _$values;
 
-  static MoveLocale valueOf(String name) => _$moveLocaleValueOf(name);
+  static MoveLocale valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

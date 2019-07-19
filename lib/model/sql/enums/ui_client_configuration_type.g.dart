@@ -25,7 +25,7 @@ const UiClientConfigurationType _$wireMOBILE_CELLS_HIDE_ITEM_TYPE =
 const UiClientConfigurationType _$wireMOBILE_RESTOCK_HIDE_DELIVER_TO =
     const UiClientConfigurationType._('MOBILE_RESTOCK_HIDE_DELIVER_TO');
 
-UiClientConfigurationType _$uiClientConfigurationTypeValueOf(String name) {
+UiClientConfigurationType _$valueOf(String name) {
   switch (name) {
     case 'HIDE_LOT_WHEN_SERIAL_SERIAL_PRESENT':
       return _$wireHIDE_LOT_WHEN_SERIAL_SERIAL_PRESENT;
@@ -46,7 +46,7 @@ UiClientConfigurationType _$uiClientConfigurationTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<UiClientConfigurationType> _$uiClientConfigurationTypeValues =
+final BuiltSet<UiClientConfigurationType> _$values =
     new BuiltSet<UiClientConfigurationType>(const <UiClientConfigurationType>[
   _$wireHIDE_LOT_WHEN_SERIAL_SERIAL_PRESENT,
   _$wireHIDE_USAGE_PRICING,

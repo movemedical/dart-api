@@ -69,6 +69,7 @@ class _$PrepareShipmntFileUploadApi extends PrepareShipmntFileUploadApi {
           ApiResult<PrepareShipmntFileUploadApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

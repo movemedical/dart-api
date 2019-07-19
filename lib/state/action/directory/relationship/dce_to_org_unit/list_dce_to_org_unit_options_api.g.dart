@@ -69,6 +69,7 @@ class _$ListDceToOrgUnitOptionsApi extends ListDceToOrgUnitOptionsApi {
           ApiResult<ListDceToOrgUnitOptionsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

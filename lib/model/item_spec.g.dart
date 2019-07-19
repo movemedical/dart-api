@@ -144,22 +144,30 @@ class ItemSpecBuilder implements Builder<ItemSpec, ItemSpecBuilder> {
   _$ItemSpec _$v;
 
   ItemBuilder _item;
+
   ItemBuilder get item => _$this._item ??= new ItemBuilder();
+
   set item(ItemBuilder item) => _$this._item = item;
 
   ListBuilder<ItemVersion> _itemVersions;
+
   ListBuilder<ItemVersion> get itemVersions =>
       _$this._itemVersions ??= new ListBuilder<ItemVersion>();
+
   set itemVersions(ListBuilder<ItemVersion> itemVersions) =>
       _$this._itemVersions = itemVersions;
 
   ListBuilder<Lot> _lots;
+
   ListBuilder<Lot> get lots => _$this._lots ??= new ListBuilder<Lot>();
+
   set lots(ListBuilder<Lot> lots) => _$this._lots = lots;
 
   ListBuilder<Serial> _serials;
+
   ListBuilder<Serial> get serials =>
       _$this._serials ??= new ListBuilder<Serial>();
+
   set serials(ListBuilder<Serial> serials) => _$this._serials = serials;
 
   ItemSpecBuilder();
@@ -272,12 +280,14 @@ class _$ItemSpecActions extends ItemSpecActions {
   ItemSpecBuilder newBuilder$() => ItemSpecBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.item,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

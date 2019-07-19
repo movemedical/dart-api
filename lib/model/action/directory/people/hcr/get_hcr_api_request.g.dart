@@ -93,7 +93,9 @@ class GetHcrApiRequestBuilder
   _$GetHcrApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   GetHcrApiRequestBuilder();
@@ -163,6 +165,7 @@ class _$GetHcrApiRequestActions extends GetHcrApiRequestActions {
   GetHcrApiRequestBuilder newBuilder$() => GetHcrApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

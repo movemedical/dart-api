@@ -22,6 +22,7 @@ import 'package:movemedical_api/model/remove_or_refactor/hospital.dart';
 import 'package:movemedical_api/model/sql/enums/body_side.dart';
 import 'package:movemedical_api/model/sql/enums/case_event_status.dart';
 import 'package:movemedical_api/model/sub_procedure.dart';
+import 'package:movemedical_api/model/user_lite.dart';
 
 part 'get_case_event_detail_api_case_event.g.dart';
 
@@ -123,6 +124,12 @@ abstract class GetCaseEventDetailApiCaseEvent
   @nullable
   GetCaseEventDetailApiLoanReturnData get instrumentLoanReturnData;
 
+  @nullable
+  UserLite get salesLead;
+
+  @nullable
+  UserLite get opsLead;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -208,6 +215,10 @@ abstract class GetCaseEventDetailApiCaseEventActions extends ModelActions<
   GetCaseEventDetailApiLoanReturnDataActions get implantLoanReturnData;
 
   GetCaseEventDetailApiLoanReturnDataActions get instrumentLoanReturnData;
+
+  UserLiteActions get salesLead;
+
+  UserLiteActions get opsLead;
 
   ////////////////////////////////
   /// Constructors

@@ -70,6 +70,7 @@ class _$CanUserConfirmPkgAtLocationApi extends CanUserConfirmPkgAtLocationApi {
           ApiResult<CanUserConfirmPkgAtLocationApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

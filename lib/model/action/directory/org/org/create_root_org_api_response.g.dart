@@ -101,7 +101,9 @@ class CreateRootOrgApiResponseBuilder
   _$CreateRootOrgApiResponse _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   CreateRootOrgApiResponseBuilder();
@@ -178,6 +180,7 @@ class _$CreateRootOrgApiResponseActions
       CreateRootOrgApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

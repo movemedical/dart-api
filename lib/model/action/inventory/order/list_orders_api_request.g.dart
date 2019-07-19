@@ -153,6 +153,36 @@ class _$ListOrdersApiRequestSerializer
         ..add(serializers.serialize(object.search,
             specifiedType: const FullType(String)));
     }
+    if (object.salesLeadId != null) {
+      result
+        ..add('salesLeadId')
+        ..add(serializers.serialize(object.salesLeadId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.opsLeadId != null) {
+      result
+        ..add('opsLeadId')
+        ..add(serializers.serialize(object.opsLeadId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.enableCatalogBasedVisibility != null) {
+      result
+        ..add('enableCatalogBasedVisibility')
+        ..add(serializers.serialize(object.enableCatalogBasedVisibility,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.noOpsLeadAssigned != null) {
+      result
+        ..add('noOpsLeadAssigned')
+        ..add(serializers.serialize(object.noOpsLeadAssigned,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.noSalesLeadAssigned != null) {
+      result
+        ..add('noSalesLeadAssigned')
+        ..add(serializers.serialize(object.noSalesLeadAssigned,
+            specifiedType: const FullType(bool)));
+    }
     if (object.paging != null) {
       result
         ..add('paging')
@@ -165,6 +195,12 @@ class _$ListOrdersApiRequestSerializer
         ..add(serializers.serialize(object.orderBy,
             specifiedType: const FullType(
                 OrderByParams, const [const FullType(ListOrdersApiOrderBy)])));
+    }
+    if (object.useOltp != null) {
+      result
+        ..add('useOltp')
+        ..add(serializers.serialize(object.useOltp,
+            specifiedType: const FullType(bool)));
     }
 
     return result;
@@ -279,6 +315,26 @@ class _$ListOrdersApiRequestSerializer
           result.search = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'salesLeadId':
+          result.salesLeadId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'opsLeadId':
+          result.opsLeadId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'enableCatalogBasedVisibility':
+          result.enableCatalogBasedVisibility = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'noOpsLeadAssigned':
+          result.noOpsLeadAssigned = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'noSalesLeadAssigned':
+          result.noSalesLeadAssigned = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'paging':
           result.paging.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PaginationParams))
@@ -289,6 +345,10 @@ class _$ListOrdersApiRequestSerializer
               specifiedType: const FullType(OrderByParams, const [
                 const FullType(ListOrdersApiOrderBy)
               ])) as OrderByParams<ListOrdersApiOrderBy>);
+          break;
+        case 'useOltp':
+          result.useOltp = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
           break;
       }
     }
@@ -339,9 +399,21 @@ class _$ListOrdersApiRequest extends ListOrdersApiRequest {
   @override
   final String search;
   @override
+  final String salesLeadId;
+  @override
+  final String opsLeadId;
+  @override
+  final bool enableCatalogBasedVisibility;
+  @override
+  final bool noOpsLeadAssigned;
+  @override
+  final bool noSalesLeadAssigned;
+  @override
   final PaginationParams paging;
   @override
   final OrderByParams<ListOrdersApiOrderBy> orderBy;
+  @override
+  final bool useOltp;
 
   factory _$ListOrdersApiRequest(
           [void updates(ListOrdersApiRequestBuilder b)]) =>
@@ -368,8 +440,14 @@ class _$ListOrdersApiRequest extends ListOrdersApiRequest {
       this.deliveryStartDateRange,
       this.deliveryEndDateRange,
       this.search,
+      this.salesLeadId,
+      this.opsLeadId,
+      this.enableCatalogBasedVisibility,
+      this.noOpsLeadAssigned,
+      this.noSalesLeadAssigned,
       this.paging,
-      this.orderBy})
+      this.orderBy,
+      this.useOltp})
       : super._();
 
   @override
@@ -404,8 +482,14 @@ class _$ListOrdersApiRequest extends ListOrdersApiRequest {
         deliveryStartDateRange == other.deliveryStartDateRange &&
         deliveryEndDateRange == other.deliveryEndDateRange &&
         search == other.search &&
+        salesLeadId == other.salesLeadId &&
+        opsLeadId == other.opsLeadId &&
+        enableCatalogBasedVisibility == other.enableCatalogBasedVisibility &&
+        noOpsLeadAssigned == other.noOpsLeadAssigned &&
+        noSalesLeadAssigned == other.noSalesLeadAssigned &&
         paging == other.paging &&
-        orderBy == other.orderBy;
+        orderBy == other.orderBy &&
+        useOltp == other.useOltp;
   }
 
   @override
@@ -428,26 +512,26 @@ class _$ListOrdersApiRequest extends ListOrdersApiRequest {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc(0, orderStatuses.hashCode), orderReasonGroups.hashCode), orderReasonIds.hashCode),
-                                                                                orgUnitIds.hashCode),
-                                                                            itemCategoryIds.hashCode),
-                                                                        createdByContactIds.hashCode),
-                                                                    itemIds.hashCode),
-                                                                lotIds.hashCode),
-                                                            serialIds.hashCode),
-                                                        hasErpErrors.hashCode),
-                                                    pendingPo.hashCode),
-                                                orderNumber.hashCode),
-                                            erpOrderNumber.hashCode),
-                                        location.hashCode),
-                                    locationType.hashCode),
-                                createDateRange.hashCode),
-                            sourceStartDateRange.hashCode),
-                        deliveryStartDateRange.hashCode),
-                    deliveryEndDateRange.hashCode),
-                search.hashCode),
-            paging.hashCode),
-        orderBy.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, orderStatuses.hashCode), orderReasonGroups.hashCode), orderReasonIds.hashCode), orgUnitIds.hashCode), itemCategoryIds.hashCode), createdByContactIds.hashCode), itemIds.hashCode), lotIds.hashCode), serialIds.hashCode),
+                                                                                hasErpErrors.hashCode),
+                                                                            pendingPo.hashCode),
+                                                                        orderNumber.hashCode),
+                                                                    erpOrderNumber.hashCode),
+                                                                location.hashCode),
+                                                            locationType.hashCode),
+                                                        createDateRange.hashCode),
+                                                    sourceStartDateRange.hashCode),
+                                                deliveryStartDateRange.hashCode),
+                                            deliveryEndDateRange.hashCode),
+                                        search.hashCode),
+                                    salesLeadId.hashCode),
+                                opsLeadId.hashCode),
+                            enableCatalogBasedVisibility.hashCode),
+                        noOpsLeadAssigned.hashCode),
+                    noSalesLeadAssigned.hashCode),
+                paging.hashCode),
+            orderBy.hashCode),
+        useOltp.hashCode));
   }
 
   @override
@@ -473,8 +557,14 @@ class _$ListOrdersApiRequest extends ListOrdersApiRequest {
           ..add('deliveryStartDateRange', deliveryStartDateRange)
           ..add('deliveryEndDateRange', deliveryEndDateRange)
           ..add('search', search)
+          ..add('salesLeadId', salesLeadId)
+          ..add('opsLeadId', opsLeadId)
+          ..add('enableCatalogBasedVisibility', enableCatalogBasedVisibility)
+          ..add('noOpsLeadAssigned', noOpsLeadAssigned)
+          ..add('noSalesLeadAssigned', noSalesLeadAssigned)
           ..add('paging', paging)
-          ..add('orderBy', orderBy))
+          ..add('orderBy', orderBy)
+          ..add('useOltp', useOltp))
         .toString();
   }
 }
@@ -484,121 +574,204 @@ class ListOrdersApiRequestBuilder
   _$ListOrdersApiRequest _$v;
 
   ListBuilder<OrderStatus> _orderStatuses;
+
   ListBuilder<OrderStatus> get orderStatuses =>
       _$this._orderStatuses ??= new ListBuilder<OrderStatus>();
+
   set orderStatuses(ListBuilder<OrderStatus> orderStatuses) =>
       _$this._orderStatuses = orderStatuses;
 
   ListBuilder<OrderReasonGroup> _orderReasonGroups;
+
   ListBuilder<OrderReasonGroup> get orderReasonGroups =>
       _$this._orderReasonGroups ??= new ListBuilder<OrderReasonGroup>();
+
   set orderReasonGroups(ListBuilder<OrderReasonGroup> orderReasonGroups) =>
       _$this._orderReasonGroups = orderReasonGroups;
 
   ListBuilder<String> _orderReasonIds;
+
   ListBuilder<String> get orderReasonIds =>
       _$this._orderReasonIds ??= new ListBuilder<String>();
+
   set orderReasonIds(ListBuilder<String> orderReasonIds) =>
       _$this._orderReasonIds = orderReasonIds;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   ListBuilder<String> _itemCategoryIds;
+
   ListBuilder<String> get itemCategoryIds =>
       _$this._itemCategoryIds ??= new ListBuilder<String>();
+
   set itemCategoryIds(ListBuilder<String> itemCategoryIds) =>
       _$this._itemCategoryIds = itemCategoryIds;
 
   ListBuilder<String> _createdByContactIds;
+
   ListBuilder<String> get createdByContactIds =>
       _$this._createdByContactIds ??= new ListBuilder<String>();
+
   set createdByContactIds(ListBuilder<String> createdByContactIds) =>
       _$this._createdByContactIds = createdByContactIds;
 
   ListBuilder<String> _itemIds;
+
   ListBuilder<String> get itemIds =>
       _$this._itemIds ??= new ListBuilder<String>();
+
   set itemIds(ListBuilder<String> itemIds) => _$this._itemIds = itemIds;
 
   ListBuilder<String> _lotIds;
+
   ListBuilder<String> get lotIds =>
       _$this._lotIds ??= new ListBuilder<String>();
+
   set lotIds(ListBuilder<String> lotIds) => _$this._lotIds = lotIds;
 
   ListBuilder<String> _serialIds;
+
   ListBuilder<String> get serialIds =>
       _$this._serialIds ??= new ListBuilder<String>();
+
   set serialIds(ListBuilder<String> serialIds) => _$this._serialIds = serialIds;
 
   bool _hasErpErrors;
+
   bool get hasErpErrors => _$this._hasErpErrors;
+
   set hasErpErrors(bool hasErpErrors) => _$this._hasErpErrors = hasErpErrors;
 
   bool _pendingPo;
+
   bool get pendingPo => _$this._pendingPo;
+
   set pendingPo(bool pendingPo) => _$this._pendingPo = pendingPo;
 
   String _orderNumber;
+
   String get orderNumber => _$this._orderNumber;
+
   set orderNumber(String orderNumber) => _$this._orderNumber = orderNumber;
 
   String _erpOrderNumber;
+
   String get erpOrderNumber => _$this._erpOrderNumber;
+
   set erpOrderNumber(String erpOrderNumber) =>
       _$this._erpOrderNumber = erpOrderNumber;
 
   LocationDataBuilder _location;
+
   LocationDataBuilder get location =>
       _$this._location ??= new LocationDataBuilder();
+
   set location(LocationDataBuilder location) => _$this._location = location;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   DateRangeBuilder _createDateRange;
+
   DateRangeBuilder get createDateRange =>
       _$this._createDateRange ??= new DateRangeBuilder();
+
   set createDateRange(DateRangeBuilder createDateRange) =>
       _$this._createDateRange = createDateRange;
 
   DateRangeBuilder _sourceStartDateRange;
+
   DateRangeBuilder get sourceStartDateRange =>
       _$this._sourceStartDateRange ??= new DateRangeBuilder();
+
   set sourceStartDateRange(DateRangeBuilder sourceStartDateRange) =>
       _$this._sourceStartDateRange = sourceStartDateRange;
 
   DateRangeBuilder _deliveryStartDateRange;
+
   DateRangeBuilder get deliveryStartDateRange =>
       _$this._deliveryStartDateRange ??= new DateRangeBuilder();
+
   set deliveryStartDateRange(DateRangeBuilder deliveryStartDateRange) =>
       _$this._deliveryStartDateRange = deliveryStartDateRange;
 
   DateRangeBuilder _deliveryEndDateRange;
+
   DateRangeBuilder get deliveryEndDateRange =>
       _$this._deliveryEndDateRange ??= new DateRangeBuilder();
+
   set deliveryEndDateRange(DateRangeBuilder deliveryEndDateRange) =>
       _$this._deliveryEndDateRange = deliveryEndDateRange;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
+  String _salesLeadId;
+
+  String get salesLeadId => _$this._salesLeadId;
+
+  set salesLeadId(String salesLeadId) => _$this._salesLeadId = salesLeadId;
+
+  String _opsLeadId;
+
+  String get opsLeadId => _$this._opsLeadId;
+
+  set opsLeadId(String opsLeadId) => _$this._opsLeadId = opsLeadId;
+
+  bool _enableCatalogBasedVisibility;
+
+  bool get enableCatalogBasedVisibility => _$this._enableCatalogBasedVisibility;
+
+  set enableCatalogBasedVisibility(bool enableCatalogBasedVisibility) =>
+      _$this._enableCatalogBasedVisibility = enableCatalogBasedVisibility;
+
+  bool _noOpsLeadAssigned;
+
+  bool get noOpsLeadAssigned => _$this._noOpsLeadAssigned;
+
+  set noOpsLeadAssigned(bool noOpsLeadAssigned) =>
+      _$this._noOpsLeadAssigned = noOpsLeadAssigned;
+
+  bool _noSalesLeadAssigned;
+
+  bool get noSalesLeadAssigned => _$this._noSalesLeadAssigned;
+
+  set noSalesLeadAssigned(bool noSalesLeadAssigned) =>
+      _$this._noSalesLeadAssigned = noSalesLeadAssigned;
+
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListOrdersApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListOrdersApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListOrdersApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListOrdersApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
+
+  bool _useOltp;
+
+  bool get useOltp => _$this._useOltp;
+
+  set useOltp(bool useOltp) => _$this._useOltp = useOltp;
 
   ListOrdersApiRequestBuilder();
 
@@ -624,8 +797,14 @@ class ListOrdersApiRequestBuilder
       _deliveryStartDateRange = _$v.deliveryStartDateRange?.toBuilder();
       _deliveryEndDateRange = _$v.deliveryEndDateRange?.toBuilder();
       _search = _$v.search;
+      _salesLeadId = _$v.salesLeadId;
+      _opsLeadId = _$v.opsLeadId;
+      _enableCatalogBasedVisibility = _$v.enableCatalogBasedVisibility;
+      _noOpsLeadAssigned = _$v.noOpsLeadAssigned;
+      _noSalesLeadAssigned = _$v.noSalesLeadAssigned;
       _paging = _$v.paging?.toBuilder();
       _orderBy = _$v.orderBy?.toBuilder();
+      _useOltp = _$v.useOltp;
       _$v = null;
     }
     return this;
@@ -670,8 +849,14 @@ class ListOrdersApiRequestBuilder
               deliveryStartDateRange: _deliveryStartDateRange?.build(),
               deliveryEndDateRange: _deliveryEndDateRange?.build(),
               search: search,
+              salesLeadId: salesLeadId,
+              opsLeadId: opsLeadId,
+              enableCatalogBasedVisibility: enableCatalogBasedVisibility,
+              noOpsLeadAssigned: noOpsLeadAssigned,
+              noSalesLeadAssigned: noSalesLeadAssigned,
               paging: _paging?.build(),
-              orderBy: _orderBy?.build());
+              orderBy: _orderBy?.build(),
+              useOltp: useOltp);
     } catch (_) {
       String _$failedField;
       try {
@@ -760,8 +945,14 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
   final DateRangeActions deliveryStartDateRange;
   final DateRangeActions deliveryEndDateRange;
   final FieldDispatcher<String> search;
+  final FieldDispatcher<String> salesLeadId;
+  final FieldDispatcher<String> opsLeadId;
+  final FieldDispatcher<bool> enableCatalogBasedVisibility;
+  final FieldDispatcher<bool> noOpsLeadAssigned;
+  final FieldDispatcher<bool> noSalesLeadAssigned;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListOrdersApiOrderBy> orderBy;
+  final FieldDispatcher<bool> useOltp;
 
   _$ListOrdersApiRequestActions._(this.options$)
       : replace$ = options$.action<ListOrdersApiRequest>(
@@ -864,6 +1055,28 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
                 (parent, builder) => parent?.deliveryEndDateRange = builder)),
         search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
+        salesLeadId = options$.field<String>(
+            'salesLeadId',
+            (a) => a?.salesLeadId,
+            (s) => s?.salesLeadId,
+            (p, b) => p?.salesLeadId = b),
+        opsLeadId = options$.field<String>('opsLeadId', (a) => a?.opsLeadId,
+            (s) => s?.opsLeadId, (p, b) => p?.opsLeadId = b),
+        enableCatalogBasedVisibility = options$.field<bool>(
+            'enableCatalogBasedVisibility',
+            (a) => a?.enableCatalogBasedVisibility,
+            (s) => s?.enableCatalogBasedVisibility,
+            (p, b) => p?.enableCatalogBasedVisibility = b),
+        noOpsLeadAssigned = options$.field<bool>(
+            'noOpsLeadAssigned',
+            (a) => a?.noOpsLeadAssigned,
+            (s) => s?.noOpsLeadAssigned,
+            (p, b) => p?.noOpsLeadAssigned = b),
+        noSalesLeadAssigned = options$.field<bool>(
+            'noSalesLeadAssigned',
+            (a) => a?.noSalesLeadAssigned,
+            (s) => s?.noSalesLeadAssigned,
+            (p, b) => p?.noSalesLeadAssigned = b),
         paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -883,6 +1096,8 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
                 (s) => s?.orderBy,
                 (b) => b?.orderBy,
                 (parent, builder) => parent?.orderBy = builder)),
+        useOltp = options$.field<bool>('useOltp', (a) => a?.useOltp,
+            (s) => s?.useOltp, (p, b) => p?.useOltp = b),
         super._();
 
   factory _$ListOrdersApiRequestActions(
@@ -896,6 +1111,7 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
   ListOrdersApiRequestBuilder newBuilder$() => ListOrdersApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
@@ -908,6 +1124,7 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -927,6 +1144,12 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
         this.erpOrderNumber,
         this.locationType,
         this.search,
+        this.salesLeadId,
+        this.opsLeadId,
+        this.enableCatalogBasedVisibility,
+        this.noOpsLeadAssigned,
+        this.noSalesLeadAssigned,
+        this.useOltp,
       ]);
 
   @override
@@ -952,8 +1175,14 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
     deliveryStartDateRange.reducer$(reducer);
     deliveryEndDateRange.reducer$(reducer);
     search.reducer$(reducer);
+    salesLeadId.reducer$(reducer);
+    opsLeadId.reducer$(reducer);
+    enableCatalogBasedVisibility.reducer$(reducer);
+    noOpsLeadAssigned.reducer$(reducer);
+    noSalesLeadAssigned.reducer$(reducer);
     paging.reducer$(reducer);
     orderBy.reducer$(reducer);
+    useOltp.reducer$(reducer);
   }
 
   @override

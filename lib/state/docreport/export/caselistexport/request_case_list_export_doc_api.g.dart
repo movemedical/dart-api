@@ -64,6 +64,7 @@ class _$RequestCaseListExportDocApi extends RequestCaseListExportDocApi {
           ApiCommand<RequestCaseListExportDocApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

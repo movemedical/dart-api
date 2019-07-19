@@ -68,6 +68,7 @@ class _$ListExportLogFilesApi extends ListExportLogFilesApi {
           ApiResult<ListExportLogFilesApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

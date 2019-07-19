@@ -22,11 +22,9 @@ class WebServiceDirection extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<WebServiceDirection> get values =>
-      _$webServiceDirectionValues;
+  static BuiltSet<WebServiceDirection> get values => _$values;
 
-  static WebServiceDirection valueOf(String name) =>
-      _$webServiceDirectionValueOf(name);
+  static WebServiceDirection valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

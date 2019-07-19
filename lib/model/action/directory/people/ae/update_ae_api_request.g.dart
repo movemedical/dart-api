@@ -63,12 +63,6 @@ class _$UpdateAeApiRequestSerializer
         ..add(serializers.serialize(object.email,
             specifiedType: const FullType(Email)));
     }
-    if (object.timeZone != null) {
-      result
-        ..add('timeZone')
-        ..add(serializers.serialize(object.timeZone,
-            specifiedType: const FullType(String)));
-    }
     if (object.startDate != null) {
       result
         ..add('startDate')
@@ -92,6 +86,30 @@ class _$UpdateAeApiRequestSerializer
         ..add('directoryAdmin')
         ..add(serializers.serialize(object.directoryAdmin,
             specifiedType: const FullType(bool)));
+    }
+    if (object.timeZone != null) {
+      result
+        ..add('timeZone')
+        ..add(serializers.serialize(object.timeZone,
+            specifiedType: const FullType(String)));
+    }
+    if (object.erpUserId != null) {
+      result
+        ..add('erpUserId')
+        ..add(serializers.serialize(object.erpUserId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.defaultBizUnitId != null) {
+      result
+        ..add('defaultBizUnitId')
+        ..add(serializers.serialize(object.defaultBizUnitId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.defaultOpsOrgUnitId != null) {
+      result
+        ..add('defaultOpsOrgUnitId')
+        ..add(serializers.serialize(object.defaultOpsOrgUnitId,
+            specifiedType: const FullType(String)));
     }
 
     return result;
@@ -136,10 +154,6 @@ class _$UpdateAeApiRequestSerializer
           result.email.replace(serializers.deserialize(value,
               specifiedType: const FullType(Email)) as Email);
           break;
-        case 'timeZone':
-          result.timeZone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'startDate':
           result.startDate = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
@@ -155,6 +169,22 @@ class _$UpdateAeApiRequestSerializer
         case 'directoryAdmin':
           result.directoryAdmin = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'timeZone':
+          result.timeZone = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'erpUserId':
+          result.erpUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'defaultBizUnitId':
+          result.defaultBizUnitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'defaultOpsOrgUnitId':
+          result.defaultOpsOrgUnitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -179,8 +209,6 @@ class _$UpdateAeApiRequest extends UpdateAeApiRequest {
   @override
   final Email email;
   @override
-  final String timeZone;
-  @override
   final DateTime startDate;
   @override
   final DateTime endDate;
@@ -188,6 +216,14 @@ class _$UpdateAeApiRequest extends UpdateAeApiRequest {
   final bool active;
   @override
   final bool directoryAdmin;
+  @override
+  final String timeZone;
+  @override
+  final String erpUserId;
+  @override
+  final String defaultBizUnitId;
+  @override
+  final String defaultOpsOrgUnitId;
 
   factory _$UpdateAeApiRequest([void updates(UpdateAeApiRequestBuilder b)]) =>
       (new UpdateAeApiRequestBuilder()..update(updates)).build();
@@ -200,11 +236,14 @@ class _$UpdateAeApiRequest extends UpdateAeApiRequest {
       this.mobilePhoneNumber,
       this.faxNumber,
       this.email,
-      this.timeZone,
       this.startDate,
       this.endDate,
       this.active,
-      this.directoryAdmin})
+      this.directoryAdmin,
+      this.timeZone,
+      this.erpUserId,
+      this.defaultBizUnitId,
+      this.defaultOpsOrgUnitId})
       : super._();
 
   @override
@@ -226,11 +265,14 @@ class _$UpdateAeApiRequest extends UpdateAeApiRequest {
         mobilePhoneNumber == other.mobilePhoneNumber &&
         faxNumber == other.faxNumber &&
         email == other.email &&
-        timeZone == other.timeZone &&
         startDate == other.startDate &&
         endDate == other.endDate &&
         active == other.active &&
-        directoryAdmin == other.directoryAdmin;
+        directoryAdmin == other.directoryAdmin &&
+        timeZone == other.timeZone &&
+        erpUserId == other.erpUserId &&
+        defaultBizUnitId == other.defaultBizUnitId &&
+        defaultOpsOrgUnitId == other.defaultOpsOrgUnitId;
   }
 
   @override
@@ -245,18 +287,24 @@ class _$UpdateAeApiRequest extends UpdateAeApiRequest {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, id.hashCode),
-                                                name.hashCode),
-                                            reference.hashCode),
-                                        workPhoneNumber.hashCode),
-                                    mobilePhoneNumber.hashCode),
-                                faxNumber.hashCode),
-                            email.hashCode),
-                        timeZone.hashCode),
-                    startDate.hashCode),
-                endDate.hashCode),
-            active.hashCode),
-        directoryAdmin.hashCode));
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc($jc(0, id.hashCode),
+                                                            name.hashCode),
+                                                        reference.hashCode),
+                                                    workPhoneNumber.hashCode),
+                                                mobilePhoneNumber.hashCode),
+                                            faxNumber.hashCode),
+                                        email.hashCode),
+                                    startDate.hashCode),
+                                endDate.hashCode),
+                            active.hashCode),
+                        directoryAdmin.hashCode),
+                    timeZone.hashCode),
+                erpUserId.hashCode),
+            defaultBizUnitId.hashCode),
+        defaultOpsOrgUnitId.hashCode));
   }
 
   @override
@@ -269,11 +317,14 @@ class _$UpdateAeApiRequest extends UpdateAeApiRequest {
           ..add('mobilePhoneNumber', mobilePhoneNumber)
           ..add('faxNumber', faxNumber)
           ..add('email', email)
-          ..add('timeZone', timeZone)
           ..add('startDate', startDate)
           ..add('endDate', endDate)
           ..add('active', active)
-          ..add('directoryAdmin', directoryAdmin))
+          ..add('directoryAdmin', directoryAdmin)
+          ..add('timeZone', timeZone)
+          ..add('erpUserId', erpUserId)
+          ..add('defaultBizUnitId', defaultBizUnitId)
+          ..add('defaultOpsOrgUnitId', defaultOpsOrgUnitId))
         .toString();
   }
 }
@@ -283,58 +334,102 @@ class UpdateAeApiRequestBuilder
   _$UpdateAeApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   PersonNameBuilder _name;
+
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
+
   set name(PersonNameBuilder name) => _$this._name = name;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   PhoneNumberBuilder _workPhoneNumber;
+
   PhoneNumberBuilder get workPhoneNumber =>
       _$this._workPhoneNumber ??= new PhoneNumberBuilder();
+
   set workPhoneNumber(PhoneNumberBuilder workPhoneNumber) =>
       _$this._workPhoneNumber = workPhoneNumber;
 
   PhoneNumberBuilder _mobilePhoneNumber;
+
   PhoneNumberBuilder get mobilePhoneNumber =>
       _$this._mobilePhoneNumber ??= new PhoneNumberBuilder();
+
   set mobilePhoneNumber(PhoneNumberBuilder mobilePhoneNumber) =>
       _$this._mobilePhoneNumber = mobilePhoneNumber;
 
   PhoneNumberBuilder _faxNumber;
+
   PhoneNumberBuilder get faxNumber =>
       _$this._faxNumber ??= new PhoneNumberBuilder();
+
   set faxNumber(PhoneNumberBuilder faxNumber) => _$this._faxNumber = faxNumber;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
-  String _timeZone;
-  String get timeZone => _$this._timeZone;
-  set timeZone(String timeZone) => _$this._timeZone = timeZone;
-
   DateTime _startDate;
+
   DateTime get startDate => _$this._startDate;
+
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
+
   DateTime get endDate => _$this._endDate;
+
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   bool _directoryAdmin;
+
   bool get directoryAdmin => _$this._directoryAdmin;
+
   set directoryAdmin(bool directoryAdmin) =>
       _$this._directoryAdmin = directoryAdmin;
+
+  String _timeZone;
+
+  String get timeZone => _$this._timeZone;
+
+  set timeZone(String timeZone) => _$this._timeZone = timeZone;
+
+  String _erpUserId;
+
+  String get erpUserId => _$this._erpUserId;
+
+  set erpUserId(String erpUserId) => _$this._erpUserId = erpUserId;
+
+  String _defaultBizUnitId;
+
+  String get defaultBizUnitId => _$this._defaultBizUnitId;
+
+  set defaultBizUnitId(String defaultBizUnitId) =>
+      _$this._defaultBizUnitId = defaultBizUnitId;
+
+  String _defaultOpsOrgUnitId;
+
+  String get defaultOpsOrgUnitId => _$this._defaultOpsOrgUnitId;
+
+  set defaultOpsOrgUnitId(String defaultOpsOrgUnitId) =>
+      _$this._defaultOpsOrgUnitId = defaultOpsOrgUnitId;
 
   UpdateAeApiRequestBuilder();
 
@@ -347,11 +442,14 @@ class UpdateAeApiRequestBuilder
       _mobilePhoneNumber = _$v.mobilePhoneNumber?.toBuilder();
       _faxNumber = _$v.faxNumber?.toBuilder();
       _email = _$v.email?.toBuilder();
-      _timeZone = _$v.timeZone;
       _startDate = _$v.startDate;
       _endDate = _$v.endDate;
       _active = _$v.active;
       _directoryAdmin = _$v.directoryAdmin;
+      _timeZone = _$v.timeZone;
+      _erpUserId = _$v.erpUserId;
+      _defaultBizUnitId = _$v.defaultBizUnitId;
+      _defaultOpsOrgUnitId = _$v.defaultOpsOrgUnitId;
       _$v = null;
     }
     return this;
@@ -383,11 +481,14 @@ class UpdateAeApiRequestBuilder
               mobilePhoneNumber: _mobilePhoneNumber?.build(),
               faxNumber: _faxNumber?.build(),
               email: _email?.build(),
-              timeZone: timeZone,
               startDate: startDate,
               endDate: endDate,
               active: active,
-              directoryAdmin: directoryAdmin);
+              directoryAdmin: directoryAdmin,
+              timeZone: timeZone,
+              erpUserId: erpUserId,
+              defaultBizUnitId: defaultBizUnitId,
+              defaultOpsOrgUnitId: defaultOpsOrgUnitId);
     } catch (_) {
       String _$failedField;
       try {
@@ -437,11 +538,14 @@ class _$UpdateAeApiRequestActions extends UpdateAeApiRequestActions {
   final PhoneNumberActions mobilePhoneNumber;
   final PhoneNumberActions faxNumber;
   final EmailActions email;
-  final FieldDispatcher<String> timeZone;
   final FieldDispatcher<DateTime> startDate;
   final FieldDispatcher<DateTime> endDate;
   final FieldDispatcher<bool> active;
   final FieldDispatcher<bool> directoryAdmin;
+  final FieldDispatcher<String> timeZone;
+  final FieldDispatcher<String> erpUserId;
+  final FieldDispatcher<String> defaultBizUnitId;
+  final FieldDispatcher<String> defaultOpsOrgUnitId;
 
   _$UpdateAeApiRequestActions._(this.options$)
       : replace$ = options$.action<UpdateAeApiRequest>(
@@ -485,8 +589,6 @@ class _$UpdateAeApiRequestActions extends UpdateAeApiRequestActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
-            (s) => s?.timeZone, (p, b) => p?.timeZone = b),
         startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
         endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
@@ -498,6 +600,20 @@ class _$UpdateAeApiRequestActions extends UpdateAeApiRequestActions {
             (a) => a?.directoryAdmin,
             (s) => s?.directoryAdmin,
             (p, b) => p?.directoryAdmin = b),
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
+            (s) => s?.timeZone, (p, b) => p?.timeZone = b),
+        erpUserId = options$.field<String>('erpUserId', (a) => a?.erpUserId,
+            (s) => s?.erpUserId, (p, b) => p?.erpUserId = b),
+        defaultBizUnitId = options$.field<String>(
+            'defaultBizUnitId',
+            (a) => a?.defaultBizUnitId,
+            (s) => s?.defaultBizUnitId,
+            (p, b) => p?.defaultBizUnitId = b),
+        defaultOpsOrgUnitId = options$.field<String>(
+            'defaultOpsOrgUnitId',
+            (a) => a?.defaultOpsOrgUnitId,
+            (s) => s?.defaultOpsOrgUnitId,
+            (p, b) => p?.defaultOpsOrgUnitId = b),
         super._();
 
   factory _$UpdateAeApiRequestActions(
@@ -511,6 +627,7 @@ class _$UpdateAeApiRequestActions extends UpdateAeApiRequestActions {
   UpdateAeApiRequestBuilder newBuilder$() => UpdateAeApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
@@ -521,17 +638,21 @@ class _$UpdateAeApiRequestActions extends UpdateAeApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
         this.replace$,
         this.id,
         this.reference,
-        this.timeZone,
         this.startDate,
         this.endDate,
         this.active,
         this.directoryAdmin,
+        this.timeZone,
+        this.erpUserId,
+        this.defaultBizUnitId,
+        this.defaultOpsOrgUnitId,
       ]);
 
   @override
@@ -544,11 +665,14 @@ class _$UpdateAeApiRequestActions extends UpdateAeApiRequestActions {
     mobilePhoneNumber.reducer$(reducer);
     faxNumber.reducer$(reducer);
     email.reducer$(reducer);
-    timeZone.reducer$(reducer);
     startDate.reducer$(reducer);
     endDate.reducer$(reducer);
     active.reducer$(reducer);
     directoryAdmin.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    erpUserId.reducer$(reducer);
+    defaultBizUnitId.reducer$(reducer);
+    defaultOpsOrgUnitId.reducer$(reducer);
   }
 
   @override

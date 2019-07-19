@@ -23,10 +23,10 @@ class ListOrgUnitLinkOptionsForBizUnitApiOrderBy extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ListOrgUnitLinkOptionsForBizUnitApiOrderBy> get values =>
-      _$listOrgUnitLinkOptionsForBizUnitApiOrderByValues;
+      _$values;
 
   static ListOrgUnitLinkOptionsForBizUnitApiOrderBy valueOf(String name) =>
-      _$listOrgUnitLinkOptionsForBizUnitApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

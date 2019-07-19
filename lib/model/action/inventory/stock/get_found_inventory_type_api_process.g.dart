@@ -11,8 +11,7 @@ const GetFoundInventoryTypeApiProcess _$wirePROCESS_VERIFY =
 const GetFoundInventoryTypeApiProcess _$wireUNKNOWN =
     const GetFoundInventoryTypeApiProcess._('UNKNOWN');
 
-GetFoundInventoryTypeApiProcess _$getFoundInventoryTypeApiProcessValueOf(
-    String name) {
+GetFoundInventoryTypeApiProcess _$valueOf(String name) {
   switch (name) {
     case 'PROCESS_VERIFY':
       return _$wirePROCESS_VERIFY;
@@ -23,10 +22,8 @@ GetFoundInventoryTypeApiProcess _$getFoundInventoryTypeApiProcessValueOf(
   }
 }
 
-final BuiltSet<GetFoundInventoryTypeApiProcess>
-    _$getFoundInventoryTypeApiProcessValues =
-    new BuiltSet<GetFoundInventoryTypeApiProcess>(const <
-        GetFoundInventoryTypeApiProcess>[
+final BuiltSet<GetFoundInventoryTypeApiProcess> _$values = new BuiltSet<
+    GetFoundInventoryTypeApiProcess>(const <GetFoundInventoryTypeApiProcess>[
   _$wirePROCESS_VERIFY,
   _$wireUNKNOWN,
 ]);

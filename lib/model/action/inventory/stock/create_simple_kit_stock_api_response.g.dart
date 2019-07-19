@@ -138,16 +138,22 @@ class CreateSimpleKitStockApiResponseBuilder
   _$CreateSimpleKitStockApiResponse _$v;
 
   String _kitStockId;
+
   String get kitStockId => _$this._kitStockId;
+
   set kitStockId(String kitStockId) => _$this._kitStockId = kitStockId;
 
   String _kitStockSummaryKey;
+
   String get kitStockSummaryKey => _$this._kitStockSummaryKey;
+
   set kitStockSummaryKey(String kitStockSummaryKey) =>
       _$this._kitStockSummaryKey = kitStockSummaryKey;
 
   String _toteStockId;
+
   String get toteStockId => _$this._toteStockId;
+
   set toteStockId(String toteStockId) => _$this._toteStockId = toteStockId;
 
   CreateSimpleKitStockApiResponseBuilder();
@@ -243,6 +249,7 @@ class _$CreateSimpleKitStockApiResponseActions
       CreateSimpleKitStockApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

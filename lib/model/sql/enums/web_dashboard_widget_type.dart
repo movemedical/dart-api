@@ -26,6 +26,8 @@ class WebDashboardWidgetType extends EnumClass {
   static const WebDashboardWidgetType ORDERS_NEEDING_SOURCING =
       _$wireORDERS_NEEDING_SOURCING;
   static const WebDashboardWidgetType DUE_BACK_TABLE = _$wireDUE_BACK_TABLE;
+  static const WebDashboardWidgetType SALES_ORDERS_AWAITING_APPROVAL_TABLE =
+      _$wireSALES_ORDERS_AWAITING_APPROVAL_TABLE;
 
   ////////////////////////////////
   /// Constructor
@@ -37,11 +39,9 @@ class WebDashboardWidgetType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<WebDashboardWidgetType> get values =>
-      _$webDashboardWidgetTypeValues;
+  static BuiltSet<WebDashboardWidgetType> get values => _$values;
 
-  static WebDashboardWidgetType valueOf(String name) =>
-      _$webDashboardWidgetTypeValueOf(name);
+  static WebDashboardWidgetType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

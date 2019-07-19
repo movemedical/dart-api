@@ -120,13 +120,17 @@ class MarkMessagesReadApiRequestBuilder
   _$MarkMessagesReadApiRequest _$v;
 
   ListBuilder<String> _messageParticipantIds;
+
   ListBuilder<String> get messageParticipantIds =>
       _$this._messageParticipantIds ??= new ListBuilder<String>();
+
   set messageParticipantIds(ListBuilder<String> messageParticipantIds) =>
       _$this._messageParticipantIds = messageParticipantIds;
 
   bool _read;
+
   bool get read => _$this._read;
+
   set read(bool read) => _$this._read = read;
 
   MarkMessagesReadApiRequestBuilder();
@@ -226,6 +230,7 @@ class _$MarkMessagesReadApiRequestActions
       MarkMessagesReadApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

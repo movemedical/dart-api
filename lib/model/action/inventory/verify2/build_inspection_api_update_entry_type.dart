@@ -30,11 +30,10 @@ class BuildInspectionApiUpdateEntryType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<BuildInspectionApiUpdateEntryType> get values =>
-      _$buildInspectionApiUpdateEntryTypeValues;
+  static BuiltSet<BuildInspectionApiUpdateEntryType> get values => _$values;
 
   static BuildInspectionApiUpdateEntryType valueOf(String name) =>
-      _$buildInspectionApiUpdateEntryTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

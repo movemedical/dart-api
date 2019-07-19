@@ -82,10 +82,28 @@ abstract class ListOrdersApiRequest
   String get search;
 
   @nullable
+  String get salesLeadId;
+
+  @nullable
+  String get opsLeadId;
+
+  @nullable
+  bool get enableCatalogBasedVisibility;
+
+  @nullable
+  bool get noOpsLeadAssigned;
+
+  @nullable
+  bool get noSalesLeadAssigned;
+
+  @nullable
   PaginationParams get paging;
 
   @nullable
   OrderByParams<ListOrdersApiOrderBy> get orderBy;
+
+  @nullable
+  bool get useOltp;
 
   ////////////////////////////////
   /// Constructors
@@ -152,9 +170,21 @@ abstract class ListOrdersApiRequestActions extends ModelActions<
 
   FieldDispatcher<String> get search;
 
+  FieldDispatcher<String> get salesLeadId;
+
+  FieldDispatcher<String> get opsLeadId;
+
+  FieldDispatcher<bool> get enableCatalogBasedVisibility;
+
+  FieldDispatcher<bool> get noOpsLeadAssigned;
+
+  FieldDispatcher<bool> get noSalesLeadAssigned;
+
   PaginationParamsActions get paging;
 
   OrderByParamsActions<ListOrdersApiOrderBy> get orderBy;
+
+  FieldDispatcher<bool> get useOltp;
 
   ////////////////////////////////
   /// Constructors

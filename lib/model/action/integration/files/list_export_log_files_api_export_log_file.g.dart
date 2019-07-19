@@ -279,51 +279,73 @@ class ListExportLogFilesApiExportLogFileBuilder
   _$ListExportLogFilesApiExportLogFile _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _jobKey;
+
   String get jobKey => _$this._jobKey;
+
   set jobKey(String jobKey) => _$this._jobKey = jobKey;
 
   String _exportLogId;
+
   String get exportLogId => _$this._exportLogId;
+
   set exportLogId(String exportLogId) => _$this._exportLogId = exportLogId;
 
   String _fileId;
+
   String get fileId => _$this._fileId;
+
   set fileId(String fileId) => _$this._fileId = fileId;
 
   String _fileName;
+
   String get fileName => _$this._fileName;
+
   set fileName(String fileName) => _$this._fileName = fileName;
 
   String _fileContentType;
+
   String get fileContentType => _$this._fileContentType;
+
   set fileContentType(String fileContentType) =>
       _$this._fileContentType = fileContentType;
 
   DateTime _fileCreatedDate;
+
   DateTime get fileCreatedDate => _$this._fileCreatedDate;
+
   set fileCreatedDate(DateTime fileCreatedDate) =>
       _$this._fileCreatedDate = fileCreatedDate;
 
   DateTime _fileExpiresDate;
+
   DateTime get fileExpiresDate => _$this._fileExpiresDate;
+
   set fileExpiresDate(DateTime fileExpiresDate) =>
       _$this._fileExpiresDate = fileExpiresDate;
 
   int _totalRecordCount;
+
   int get totalRecordCount => _$this._totalRecordCount;
+
   set totalRecordCount(int totalRecordCount) =>
       _$this._totalRecordCount = totalRecordCount;
 
   ExportLogFileOutcome _outcome;
+
   ExportLogFileOutcome get outcome => _$this._outcome;
+
   set outcome(ExportLogFileOutcome outcome) => _$this._outcome = outcome;
 
   String _message;
+
   String get message => _$this._message;
+
   set message(String message) => _$this._message = message;
 
   ListExportLogFilesApiExportLogFileBuilder();
@@ -468,6 +490,7 @@ class _$ListExportLogFilesApiExportLogFileActions
       ListExportLogFilesApiExportLogFileBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

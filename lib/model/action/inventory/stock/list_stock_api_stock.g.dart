@@ -213,35 +213,51 @@ class ListStockApiStockBuilder
   _$ListStockApiStock _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _number;
+
   int get number => _$this._number;
+
   set number(int number) => _$this._number = number;
 
   bool _allocated;
+
   bool get allocated => _$this._allocated;
+
   set allocated(bool allocated) => _$this._allocated = allocated;
 
   bool _onHold;
+
   bool get onHold => _$this._onHold;
+
   set onHold(bool onHold) => _$this._onHold = onHold;
 
   bool _lost;
+
   bool get lost => _$this._lost;
+
   set lost(bool lost) => _$this._lost = lost;
 
   bool _found;
+
   bool get found => _$this._found;
+
   set found(bool found) => _$this._found = found;
 
   String _tagId;
+
   String get tagId => _$this._tagId;
+
   set tagId(String tagId) => _$this._tagId = tagId;
 
   String _tagNumber;
+
   String get tagNumber => _$this._tagNumber;
+
   set tagNumber(String tagNumber) => _$this._tagNumber = tagNumber;
 
   ListStockApiStockBuilder();
@@ -348,6 +364,7 @@ class _$ListStockApiStockActions extends ListStockApiStockActions {
   ListStockApiStockBuilder newBuilder$() => ListStockApiStockBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

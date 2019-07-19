@@ -105,8 +105,10 @@ class GetExpiringItemsApiRequestBuilder
   _$GetExpiringItemsApiRequest _$v;
 
   ListBuilder<String> _expirationLevelIds;
+
   ListBuilder<String> get expirationLevelIds =>
       _$this._expirationLevelIds ??= new ListBuilder<String>();
+
   set expirationLevelIds(ListBuilder<String> expirationLevelIds) =>
       _$this._expirationLevelIds = expirationLevelIds;
 
@@ -202,6 +204,7 @@ class _$GetExpiringItemsApiRequestActions
       GetExpiringItemsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

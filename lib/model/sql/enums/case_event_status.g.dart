@@ -16,7 +16,7 @@ const CaseEventStatus _$wirePOSTOP = const CaseEventStatus._('POSTOP');
 const CaseEventStatus _$wireCOMPLETE = const CaseEventStatus._('COMPLETE');
 const CaseEventStatus _$wireCANCELLED = const CaseEventStatus._('CANCELLED');
 
-CaseEventStatus _$caseEventStatusValueOf(String name) {
+CaseEventStatus _$valueOf(String name) {
   switch (name) {
     case 'PLANNING':
       return _$wirePLANNING;
@@ -39,7 +39,7 @@ CaseEventStatus _$caseEventStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<CaseEventStatus> _$caseEventStatusValues =
+final BuiltSet<CaseEventStatus> _$values =
     new BuiltSet<CaseEventStatus>(const <CaseEventStatus>[
   _$wirePLANNING,
   _$wireCONFIRMED,

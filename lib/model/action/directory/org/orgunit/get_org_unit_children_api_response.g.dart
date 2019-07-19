@@ -107,8 +107,10 @@ class GetOrgUnitChildrenApiResponseBuilder
   _$GetOrgUnitChildrenApiResponse _$v;
 
   ListBuilder<GetOrgUnitChildrenApiOrgUnitDetail> _data;
+
   ListBuilder<GetOrgUnitChildrenApiOrgUnitDetail> get data =>
       _$this._data ??= new ListBuilder<GetOrgUnitChildrenApiOrgUnitDetail>();
+
   set data(ListBuilder<GetOrgUnitChildrenApiOrgUnitDetail> data) =>
       _$this._data = data;
 
@@ -201,6 +203,7 @@ class _$GetOrgUnitChildrenApiResponseActions
       GetOrgUnitChildrenApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

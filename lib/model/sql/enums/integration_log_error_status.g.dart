@@ -19,7 +19,7 @@ const IntegrationLogErrorStatus _$wireMANUAL =
 const IntegrationLogErrorStatus _$wireREGENERATED =
     const IntegrationLogErrorStatus._('REGENERATED');
 
-IntegrationLogErrorStatus _$integrationLogErrorStatusValueOf(String name) {
+IntegrationLogErrorStatus _$valueOf(String name) {
   switch (name) {
     case 'OPEN':
       return _$wireOPEN;
@@ -38,7 +38,7 @@ IntegrationLogErrorStatus _$integrationLogErrorStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<IntegrationLogErrorStatus> _$integrationLogErrorStatusValues =
+final BuiltSet<IntegrationLogErrorStatus> _$values =
     new BuiltSet<IntegrationLogErrorStatus>(const <IntegrationLogErrorStatus>[
   _$wireOPEN,
   _$wireEDITED,

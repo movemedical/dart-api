@@ -38,10 +38,9 @@ class OrderReasonField extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<OrderReasonField> get values => _$orderReasonFieldValues;
+  static BuiltSet<OrderReasonField> get values => _$values;
 
-  static OrderReasonField valueOf(String name) =>
-      _$orderReasonFieldValueOf(name);
+  static OrderReasonField valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

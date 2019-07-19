@@ -123,13 +123,17 @@ class ListPicksForShipmentApiResponseBuilder
   _$ListPicksForShipmentApiResponse _$v;
 
   ListBuilder<ListPicksForShipmentApiPick> _data;
+
   ListBuilder<ListPicksForShipmentApiPick> get data =>
       _$this._data ??= new ListBuilder<ListPicksForShipmentApiPick>();
+
   set data(ListBuilder<ListPicksForShipmentApiPick> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListPicksForShipmentApiResponseBuilder();
@@ -226,6 +230,7 @@ class _$ListPicksForShipmentApiResponseActions
       ListPicksForShipmentApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

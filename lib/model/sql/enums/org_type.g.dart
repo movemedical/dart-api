@@ -12,7 +12,7 @@ const OrgType _$wireDISTRIBUTOR = const OrgType._('DISTRIBUTOR');
 const OrgType _$wirePRACTICE = const OrgType._('PRACTICE');
 const OrgType _$wirePARTNER = const OrgType._('PARTNER');
 
-OrgType _$orgTypeValueOf(String name) {
+OrgType _$valueOf(String name) {
   switch (name) {
     case 'MED_DEVICE_COMPANY':
       return _$wireMED_DEVICE_COMPANY;
@@ -29,7 +29,7 @@ OrgType _$orgTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<OrgType> _$orgTypeValues = new BuiltSet<OrgType>(const <OrgType>[
+final BuiltSet<OrgType> _$values = new BuiltSet<OrgType>(const <OrgType>[
   _$wireMED_DEVICE_COMPANY,
   _$wireHEALTH_SYSTEM,
   _$wireDISTRIBUTOR,

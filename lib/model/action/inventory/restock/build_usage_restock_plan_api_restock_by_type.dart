@@ -23,11 +23,10 @@ class BuildUsageRestockPlanApiRestockByType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<BuildUsageRestockPlanApiRestockByType> get values =>
-      _$buildUsageRestockPlanApiRestockByTypeValues;
+  static BuiltSet<BuildUsageRestockPlanApiRestockByType> get values => _$values;
 
   static BuildUsageRestockPlanApiRestockByType valueOf(String name) =>
-      _$buildUsageRestockPlanApiRestockByTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

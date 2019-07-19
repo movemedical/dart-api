@@ -250,44 +250,62 @@ class ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkBuilder
   _$ListOrgUnitFacilityLinksApiOrgUnitFacilityLink _$v;
 
   String _orgUnitToFacilityId;
+
   String get orgUnitToFacilityId => _$this._orgUnitToFacilityId;
+
   set orgUnitToFacilityId(String orgUnitToFacilityId) =>
       _$this._orgUnitToFacilityId = orgUnitToFacilityId;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _facilityName;
+
   String get facilityName => _$this._facilityName;
+
   set facilityName(String facilityName) => _$this._facilityName = facilityName;
 
   FacilityType _facilityType;
+
   FacilityType get facilityType => _$this._facilityType;
+
   set facilityType(FacilityType facilityType) =>
       _$this._facilityType = facilityType;
 
   bool _facilityActive;
+
   bool get facilityActive => _$this._facilityActive;
+
   set facilityActive(bool facilityActive) =>
       _$this._facilityActive = facilityActive;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _procedureName;
+
   String get procedureName => _$this._procedureName;
+
   set procedureName(String procedureName) =>
       _$this._procedureName = procedureName;
 
   String _relationshipTypeId;
+
   String get relationshipTypeId => _$this._relationshipTypeId;
+
   set relationshipTypeId(String relationshipTypeId) =>
       _$this._relationshipTypeId = relationshipTypeId;
 
   String _relationshipTypeName;
+
   String get relationshipTypeName => _$this._relationshipTypeName;
+
   set relationshipTypeName(String relationshipTypeName) =>
       _$this._relationshipTypeName = relationshipTypeName;
 
@@ -436,6 +454,7 @@ class _$ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions
       ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

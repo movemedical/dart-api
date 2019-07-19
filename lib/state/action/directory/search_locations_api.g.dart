@@ -67,6 +67,7 @@ class _$SearchLocationsApi extends SearchLocationsApi {
           ApiResult<SearchLocationsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

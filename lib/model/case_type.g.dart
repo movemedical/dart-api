@@ -174,27 +174,39 @@ class CaseTypeBuilder implements Builder<CaseType, CaseTypeBuilder> {
   _$CaseType _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   String _bizUnitName;
+
   String get bizUnitName => _$this._bizUnitName;
+
   set bizUnitName(String bizUnitName) => _$this._bizUnitName = bizUnitName;
 
   CaseTypeBuilder();
@@ -293,6 +305,7 @@ class _$CaseTypeActions extends CaseTypeActions {
   CaseTypeBuilder newBuilder$() => CaseTypeBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

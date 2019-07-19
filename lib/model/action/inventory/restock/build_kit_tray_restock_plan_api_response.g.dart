@@ -390,94 +390,126 @@ class BuildKitTrayRestockPlanApiResponseBuilder
   _$BuildKitTrayRestockPlanApiResponse _$v;
 
   String _poNumber;
+
   String get poNumber => _$this._poNumber;
+
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   ShippingServiceBuilder _shippingService;
+
   ShippingServiceBuilder get shippingService =>
       _$this._shippingService ??= new ShippingServiceBuilder();
+
   set shippingService(ShippingServiceBuilder shippingService) =>
       _$this._shippingService = shippingService;
 
   BuildKitTrayRestockPlanApiRestockSystem _system;
+
   BuildKitTrayRestockPlanApiRestockSystem get system => _$this._system;
+
   set system(BuildKitTrayRestockPlanApiRestockSystem system) =>
       _$this._system = system;
 
   bool _requirePo;
+
   bool get requirePo => _$this._requirePo;
+
   set requirePo(bool requirePo) => _$this._requirePo = requirePo;
 
   OrderHeaderLiteBuilder _usingExistingOrder;
+
   OrderHeaderLiteBuilder get usingExistingOrder =>
       _$this._usingExistingOrder ??= new OrderHeaderLiteBuilder();
+
   set usingExistingOrder(OrderHeaderLiteBuilder usingExistingOrder) =>
       _$this._usingExistingOrder = usingExistingOrder;
 
   LocationBuilder _location;
+
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
+
   set location(LocationBuilder location) => _$this._location = location;
 
   CustomerAddressBuilder _deliverToAddress;
+
   CustomerAddressBuilder get deliverToAddress =>
       _$this._deliverToAddress ??= new CustomerAddressBuilder();
+
   set deliverToAddress(CustomerAddressBuilder deliverToAddress) =>
       _$this._deliverToAddress = deliverToAddress;
 
   AddressBuilder _deliverToAddressOverride;
+
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
+
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   BuildKitTrayRestockPlanApiRestockByDateType _restockByDateType;
+
   BuildKitTrayRestockPlanApiRestockByDateType get restockByDateType =>
       _$this._restockByDateType;
+
   set restockByDateType(
           BuildKitTrayRestockPlanApiRestockByDateType restockByDateType) =>
       _$this._restockByDateType = restockByDateType;
 
   DateTime _deliverByDate;
+
   DateTime get deliverByDate => _$this._deliverByDate;
+
   set deliverByDate(DateTime deliverByDate) =>
       _$this._deliverByDate = deliverByDate;
 
   bool _allowUserOverrideSystem;
+
   bool get allowUserOverrideSystem => _$this._allowUserOverrideSystem;
+
   set allowUserOverrideSystem(bool allowUserOverrideSystem) =>
       _$this._allowUserOverrideSystem = allowUserOverrideSystem;
 
   bool _allowUserOverrideLocation;
+
   bool get allowUserOverrideLocation => _$this._allowUserOverrideLocation;
+
   set allowUserOverrideLocation(bool allowUserOverrideLocation) =>
       _$this._allowUserOverrideLocation = allowUserOverrideLocation;
 
   bool _allowUserOverrideDeliverTo;
+
   bool get allowUserOverrideDeliverTo => _$this._allowUserOverrideDeliverTo;
+
   set allowUserOverrideDeliverTo(bool allowUserOverrideDeliverTo) =>
       _$this._allowUserOverrideDeliverTo = allowUserOverrideDeliverTo;
 
   bool _allowUserOverrideDateOrShippingService;
+
   bool get allowUserOverrideDateOrShippingService =>
       _$this._allowUserOverrideDateOrShippingService;
+
   set allowUserOverrideDateOrShippingService(
           bool allowUserOverrideDateOrShippingService) =>
       _$this._allowUserOverrideDateOrShippingService =
           allowUserOverrideDateOrShippingService;
 
   ListBuilder<BuildKitTrayRestockPlanApiRestockItem> _restockItems;
+
   ListBuilder<BuildKitTrayRestockPlanApiRestockItem> get restockItems =>
       _$this._restockItems ??=
           new ListBuilder<BuildKitTrayRestockPlanApiRestockItem>();
+
   set restockItems(
           ListBuilder<BuildKitTrayRestockPlanApiRestockItem> restockItems) =>
       _$this._restockItems = restockItems;
 
   ListBuilder<BuildKitTrayRestockPlanApiPendingRestockItem>
       _pendingRestockItems;
+
   ListBuilder<BuildKitTrayRestockPlanApiPendingRestockItem>
       get pendingRestockItems => _$this._pendingRestockItems ??=
           new ListBuilder<BuildKitTrayRestockPlanApiPendingRestockItem>();
+
   set pendingRestockItems(
           ListBuilder<BuildKitTrayRestockPlanApiPendingRestockItem>
               pendingRestockItems) =>
@@ -729,6 +761,7 @@ class _$BuildKitTrayRestockPlanApiResponseActions
       BuildKitTrayRestockPlanApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.shippingService,
@@ -739,6 +772,7 @@ class _$BuildKitTrayRestockPlanApiResponseActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

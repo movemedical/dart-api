@@ -15,7 +15,7 @@ abstract class AdjustStockQuantityApiAdjustment
   ////////////////////////////////
 
   @nullable
-  String get summaryId;
+  String get stockIdOrSummaryId;
 
   @nullable
   int get qtyChange;
@@ -46,7 +46,7 @@ abstract class AdjustStockQuantityApiAdjustmentActions extends ModelActions<
   /// Fields
   ////////////////////////////////
 
-  FieldDispatcher<String> get summaryId;
+  FieldDispatcher<String> get stockIdOrSummaryId;
 
   FieldDispatcher<int> get qtyChange;
 

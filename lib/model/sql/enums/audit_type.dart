@@ -22,9 +22,9 @@ class AuditType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<AuditType> get values => _$auditTypeValues;
+  static BuiltSet<AuditType> get values => _$values;
 
-  static AuditType valueOf(String name) => _$auditTypeValueOf(name);
+  static AuditType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

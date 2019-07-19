@@ -148,22 +148,28 @@ class ListItemCategoriesLinkedToItemApiResponseBuilder
   _$ListItemCategoriesLinkedToItemApiResponse _$v;
 
   ListBuilder<ListItemCategoriesLinkedToItemApiLinkedCategoryPath> _data;
+
   ListBuilder<
       ListItemCategoriesLinkedToItemApiLinkedCategoryPath> get data => _$this
           ._data ??=
       new ListBuilder<ListItemCategoriesLinkedToItemApiLinkedCategoryPath>();
+
   set data(
           ListBuilder<ListItemCategoriesLinkedToItemApiLinkedCategoryPath>
               data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListBuilder<String> _linkedCategoryIds;
+
   ListBuilder<String> get linkedCategoryIds =>
       _$this._linkedCategoryIds ??= new ListBuilder<String>();
+
   set linkedCategoryIds(ListBuilder<String> linkedCategoryIds) =>
       _$this._linkedCategoryIds = linkedCategoryIds;
 
@@ -278,6 +284,7 @@ class _$ListItemCategoriesLinkedToItemApiResponseActions
       ListItemCategoriesLinkedToItemApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -105,7 +105,9 @@ class RequestPackingListApiRequestBuilder
   _$RequestPackingListApiRequest _$v;
 
   String _shipmentId;
+
   String get shipmentId => _$this._shipmentId;
+
   set shipmentId(String shipmentId) => _$this._shipmentId = shipmentId;
 
   RequestPackingListApiRequestBuilder();
@@ -184,6 +186,7 @@ class _$RequestPackingListApiRequestActions
       RequestPackingListApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

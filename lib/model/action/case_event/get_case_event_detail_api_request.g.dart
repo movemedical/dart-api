@@ -136,15 +136,21 @@ class GetCaseEventDetailApiRequestBuilder
   _$GetCaseEventDetailApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _caseNumber;
+
   int get caseNumber => _$this._caseNumber;
+
   set caseNumber(int caseNumber) => _$this._caseNumber = caseNumber;
 
   bool _skipPresence;
+
   bool get skipPresence => _$this._skipPresence;
+
   set skipPresence(bool skipPresence) => _$this._skipPresence = skipPresence;
 
   GetCaseEventDetailApiRequestBuilder();
@@ -235,6 +241,7 @@ class _$GetCaseEventDetailApiRequestActions
       GetCaseEventDetailApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

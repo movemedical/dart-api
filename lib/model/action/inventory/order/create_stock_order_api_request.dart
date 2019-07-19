@@ -58,6 +58,12 @@ abstract class CreateStockOrderApiRequest
   String get attention;
 
   @nullable
+  String get opsLeadUserId;
+
+  @nullable
+  String get salesLeadUserId;
+
+  @nullable
   BuiltList<OrderCustomFieldValue> get orderCustomFieldValues;
 
   ////////////////////////////////
@@ -111,6 +117,10 @@ abstract class CreateStockOrderApiRequestActions extends ModelActions<
   FieldDispatcher<String> get email;
 
   FieldDispatcher<String> get attention;
+
+  FieldDispatcher<String> get opsLeadUserId;
+
+  FieldDispatcher<String> get salesLeadUserId;
 
   FieldDispatcher<BuiltList<OrderCustomFieldValue>> get orderCustomFieldValues;
 

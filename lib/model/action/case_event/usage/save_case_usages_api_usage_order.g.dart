@@ -152,20 +152,28 @@ class SaveCaseUsagesApiUsageOrderBuilder
   _$SaveCaseUsagesApiUsageOrder _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _referenceString;
+
   String get referenceString => _$this._referenceString;
+
   set referenceString(String referenceString) =>
       _$this._referenceString = referenceString;
 
   String _poNumber;
+
   String get poNumber => _$this._poNumber;
+
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _billToAddressId;
+
   String get billToAddressId => _$this._billToAddressId;
+
   set billToAddressId(String billToAddressId) =>
       _$this._billToAddressId = billToAddressId;
 
@@ -267,6 +275,7 @@ class _$SaveCaseUsagesApiUsageOrderActions
       SaveCaseUsagesApiUsageOrderBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

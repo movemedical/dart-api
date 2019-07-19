@@ -108,7 +108,9 @@ class RequestConsignmentLoanReportApiResponseBuilder
   _$RequestConsignmentLoanReportApiResponse _$v;
 
   String _docReportId;
+
   String get docReportId => _$this._docReportId;
+
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   RequestConsignmentLoanReportApiResponseBuilder();
@@ -191,6 +193,7 @@ class _$RequestConsignmentLoanReportApiResponseActions
       RequestConsignmentLoanReportApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

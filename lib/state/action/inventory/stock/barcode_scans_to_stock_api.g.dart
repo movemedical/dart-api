@@ -68,6 +68,7 @@ class _$BarcodeScansToStockApi extends BarcodeScansToStockApi {
           ApiResult<BarcodeScansToStockApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

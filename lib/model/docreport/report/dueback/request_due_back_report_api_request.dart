@@ -30,10 +30,16 @@ abstract class RequestDueBackReportApiRequest
   DocReportDisplayType get displayType;
 
   @nullable
-  BuiltList<String> get locationIds;
+  BuiltList<String> get itemIds;
+
+  @nullable
+  BuiltList<String> get responsiblePartyIds;
 
   @nullable
   BuiltList<String> get orgUnitIds;
+
+  @nullable
+  BuiltList<String> get inventoryTypeIds;
 
   @nullable
   BuiltList<String> get itemCategoryIds;
@@ -70,9 +76,13 @@ abstract class RequestDueBackReportApiRequestActions extends ModelActions<
 
   FieldDispatcher<DocReportDisplayType> get displayType;
 
-  FieldDispatcher<BuiltList<String>> get locationIds;
+  FieldDispatcher<BuiltList<String>> get itemIds;
+
+  FieldDispatcher<BuiltList<String>> get responsiblePartyIds;
 
   FieldDispatcher<BuiltList<String>> get orgUnitIds;
+
+  FieldDispatcher<BuiltList<String>> get inventoryTypeIds;
 
   FieldDispatcher<BuiltList<String>> get itemCategoryIds;
 

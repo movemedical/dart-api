@@ -13,6 +13,8 @@ const MobileReport _$wireON_HAND = const MobileReport._('ON_HAND');
 const MobileReport _$wirePENDING_PO = const MobileReport._('PENDING_PO');
 const MobileReport _$wireUNBILLED = const MobileReport._('UNBILLED');
 const MobileReport _$wireDUE_BACK = const MobileReport._('DUE_BACK');
+const MobileReport _$wireCASE_LOAN_DUE_BACK =
+    const MobileReport._('CASE_LOAN_DUE_BACK');
 const MobileReport _$wireBACK_ORDER = const MobileReport._('BACK_ORDER');
 const MobileReport _$wireCREDIT_HOLD = const MobileReport._('CREDIT_HOLD');
 const MobileReport _$wireORDER_PRINTOUT =
@@ -20,8 +22,10 @@ const MobileReport _$wireORDER_PRINTOUT =
 const MobileReport _$wirePROOF_OF_DELIVERY =
     const MobileReport._('PROOF_OF_DELIVERY');
 const MobileReport _$wireSTOCK_HISTORY = const MobileReport._('STOCK_HISTORY');
+const MobileReport _$wireREPLACEMENT = const MobileReport._('REPLACEMENT');
+const MobileReport _$wireLOST_FOUND = const MobileReport._('LOST_FOUND');
 
-MobileReport _$mobileReportValueOf(String name) {
+MobileReport _$valueOf(String name) {
   switch (name) {
     case 'OPEN_BILLING':
       return _$wireOPEN_BILLING;
@@ -37,6 +41,8 @@ MobileReport _$mobileReportValueOf(String name) {
       return _$wireUNBILLED;
     case 'DUE_BACK':
       return _$wireDUE_BACK;
+    case 'CASE_LOAN_DUE_BACK':
+      return _$wireCASE_LOAN_DUE_BACK;
     case 'BACK_ORDER':
       return _$wireBACK_ORDER;
     case 'CREDIT_HOLD':
@@ -47,12 +53,16 @@ MobileReport _$mobileReportValueOf(String name) {
       return _$wirePROOF_OF_DELIVERY;
     case 'STOCK_HISTORY':
       return _$wireSTOCK_HISTORY;
+    case 'REPLACEMENT':
+      return _$wireREPLACEMENT;
+    case 'LOST_FOUND':
+      return _$wireLOST_FOUND;
     default:
       throw new ArgumentError(name);
   }
 }
 
-final BuiltSet<MobileReport> _$mobileReportValues =
+final BuiltSet<MobileReport> _$values =
     new BuiltSet<MobileReport>(const <MobileReport>[
   _$wireOPEN_BILLING,
   _$wireROLL_FORWARD,
@@ -61,11 +71,14 @@ final BuiltSet<MobileReport> _$mobileReportValues =
   _$wirePENDING_PO,
   _$wireUNBILLED,
   _$wireDUE_BACK,
+  _$wireCASE_LOAN_DUE_BACK,
   _$wireBACK_ORDER,
   _$wireCREDIT_HOLD,
   _$wireORDER_PRINTOUT,
   _$wirePROOF_OF_DELIVERY,
   _$wireSTOCK_HISTORY,
+  _$wireREPLACEMENT,
+  _$wireLOST_FOUND,
 ]);
 
 Serializer<MobileReport> _$mobileReportSerializer =

@@ -103,8 +103,10 @@ class ListOrgUnitsApiResponseBuilder
   _$ListOrgUnitsApiResponse _$v;
 
   ListBuilder<OrgUnit> _orgUnits;
+
   ListBuilder<OrgUnit> get orgUnits =>
       _$this._orgUnits ??= new ListBuilder<OrgUnit>();
+
   set orgUnits(ListBuilder<OrgUnit> orgUnits) => _$this._orgUnits = orgUnits;
 
   ListOrgUnitsApiResponseBuilder();
@@ -192,6 +194,7 @@ class _$ListOrgUnitsApiResponseActions extends ListOrgUnitsApiResponseActions {
       ListOrgUnitsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

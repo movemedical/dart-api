@@ -36,6 +36,18 @@ class _$GetSyncFileApiResponseSerializer
         ..add(serializers.serialize(object.fileUrl,
             specifiedType: const FullType(String)));
     }
+    if (object.processedFileCount != null) {
+      result
+        ..add('processedFileCount')
+        ..add(serializers.serialize(object.processedFileCount,
+            specifiedType: const FullType(int)));
+    }
+    if (object.totalFileCount != null) {
+      result
+        ..add('totalFileCount')
+        ..add(serializers.serialize(object.totalFileCount,
+            specifiedType: const FullType(int)));
+    }
 
     return result;
   }
@@ -60,6 +72,14 @@ class _$GetSyncFileApiResponseSerializer
           result.fileUrl = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'processedFileCount':
+          result.processedFileCount = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'totalFileCount':
+          result.totalFileCount = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
       }
     }
 
@@ -72,12 +92,18 @@ class _$GetSyncFileApiResponse extends GetSyncFileApiResponse {
   final String ackId;
   @override
   final String fileUrl;
+  @override
+  final int processedFileCount;
+  @override
+  final int totalFileCount;
 
   factory _$GetSyncFileApiResponse(
           [void updates(GetSyncFileApiResponseBuilder b)]) =>
       (new GetSyncFileApiResponseBuilder()..update(updates)).build();
 
-  _$GetSyncFileApiResponse._({this.ackId, this.fileUrl}) : super._();
+  _$GetSyncFileApiResponse._(
+      {this.ackId, this.fileUrl, this.processedFileCount, this.totalFileCount})
+      : super._();
 
   @override
   GetSyncFileApiResponse rebuild(
@@ -93,19 +119,26 @@ class _$GetSyncFileApiResponse extends GetSyncFileApiResponse {
     if (identical(other, this)) return true;
     return other is GetSyncFileApiResponse &&
         ackId == other.ackId &&
-        fileUrl == other.fileUrl;
+        fileUrl == other.fileUrl &&
+        processedFileCount == other.processedFileCount &&
+        totalFileCount == other.totalFileCount;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, ackId.hashCode), fileUrl.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, ackId.hashCode), fileUrl.hashCode),
+            processedFileCount.hashCode),
+        totalFileCount.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('GetSyncFileApiResponse')
           ..add('ackId', ackId)
-          ..add('fileUrl', fileUrl))
+          ..add('fileUrl', fileUrl)
+          ..add('processedFileCount', processedFileCount)
+          ..add('totalFileCount', totalFileCount))
         .toString();
   }
 }
@@ -115,12 +148,30 @@ class GetSyncFileApiResponseBuilder
   _$GetSyncFileApiResponse _$v;
 
   String _ackId;
+
   String get ackId => _$this._ackId;
+
   set ackId(String ackId) => _$this._ackId = ackId;
 
   String _fileUrl;
+
   String get fileUrl => _$this._fileUrl;
+
   set fileUrl(String fileUrl) => _$this._fileUrl = fileUrl;
+
+  int _processedFileCount;
+
+  int get processedFileCount => _$this._processedFileCount;
+
+  set processedFileCount(int processedFileCount) =>
+      _$this._processedFileCount = processedFileCount;
+
+  int _totalFileCount;
+
+  int get totalFileCount => _$this._totalFileCount;
+
+  set totalFileCount(int totalFileCount) =>
+      _$this._totalFileCount = totalFileCount;
 
   GetSyncFileApiResponseBuilder();
 
@@ -128,6 +179,8 @@ class GetSyncFileApiResponseBuilder
     if (_$v != null) {
       _ackId = _$v.ackId;
       _fileUrl = _$v.fileUrl;
+      _processedFileCount = _$v.processedFileCount;
+      _totalFileCount = _$v.totalFileCount;
       _$v = null;
     }
     return this;
@@ -148,8 +201,12 @@ class GetSyncFileApiResponseBuilder
 
   @override
   _$GetSyncFileApiResponse build() {
-    final _$result =
-        _$v ?? new _$GetSyncFileApiResponse._(ackId: ackId, fileUrl: fileUrl);
+    final _$result = _$v ??
+        new _$GetSyncFileApiResponse._(
+            ackId: ackId,
+            fileUrl: fileUrl,
+            processedFileCount: processedFileCount,
+            totalFileCount: totalFileCount);
     replace(_$result);
     return _$result;
   }
@@ -176,6 +233,8 @@ class _$GetSyncFileApiResponseActions extends GetSyncFileApiResponseActions {
   final ActionDispatcher<GetSyncFileApiResponse> replace$;
   final FieldDispatcher<String> ackId;
   final FieldDispatcher<String> fileUrl;
+  final FieldDispatcher<int> processedFileCount;
+  final FieldDispatcher<int> totalFileCount;
 
   _$GetSyncFileApiResponseActions._(this.options$)
       : replace$ = options$.action<GetSyncFileApiResponse>(
@@ -184,6 +243,16 @@ class _$GetSyncFileApiResponseActions extends GetSyncFileApiResponseActions {
             'ackId', (a) => a?.ackId, (s) => s?.ackId, (p, b) => p?.ackId = b),
         fileUrl = options$.field<String>('fileUrl', (a) => a?.fileUrl,
             (s) => s?.fileUrl, (p, b) => p?.fileUrl = b),
+        processedFileCount = options$.field<int>(
+            'processedFileCount',
+            (a) => a?.processedFileCount,
+            (s) => s?.processedFileCount,
+            (p, b) => p?.processedFileCount = b),
+        totalFileCount = options$.field<int>(
+            'totalFileCount',
+            (a) => a?.totalFileCount,
+            (s) => s?.totalFileCount,
+            (p, b) => p?.totalFileCount = b),
         super._();
 
   factory _$GetSyncFileApiResponseActions(
@@ -198,12 +267,15 @@ class _$GetSyncFileApiResponseActions extends GetSyncFileApiResponseActions {
       GetSyncFileApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
         this.replace$,
         this.ackId,
         this.fileUrl,
+        this.processedFileCount,
+        this.totalFileCount,
       ]);
 
   @override
@@ -211,6 +283,8 @@ class _$GetSyncFileApiResponseActions extends GetSyncFileApiResponseActions {
     super.reducer$(reducer);
     ackId.reducer$(reducer);
     fileUrl.reducer$(reducer);
+    processedFileCount.reducer$(reducer);
+    totalFileCount.reducer$(reducer);
   }
 
   @override

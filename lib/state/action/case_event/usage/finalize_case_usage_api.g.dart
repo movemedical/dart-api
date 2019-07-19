@@ -60,6 +60,7 @@ class _$FinalizeCaseUsageApi extends FinalizeCaseUsageApi {
           ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

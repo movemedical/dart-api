@@ -283,57 +283,81 @@ class EditItemApiRequestBuilder
   _$EditItemApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _itemNumber;
+
   String get itemNumber => _$this._itemNumber;
+
   set itemNumber(String itemNumber) => _$this._itemNumber = itemNumber;
 
   String _skuNumber;
+
   String get skuNumber => _$this._skuNumber;
+
   set skuNumber(String skuNumber) => _$this._skuNumber = skuNumber;
 
   String _longDescription;
+
   String get longDescription => _$this._longDescription;
+
   set longDescription(String longDescription) =>
       _$this._longDescription = longDescription;
 
   String _shortDescription;
+
   String get shortDescription => _$this._shortDescription;
+
   set shortDescription(String shortDescription) =>
       _$this._shortDescription = shortDescription;
 
   MoveItemClass _moveItemClass;
+
   MoveItemClass get moveItemClass => _$this._moveItemClass;
+
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   MoveItemType _moveItemType;
+
   MoveItemType get moveItemType => _$this._moveItemType;
+
   set moveItemType(MoveItemType moveItemType) =>
       _$this._moveItemType = moveItemType;
 
   int _sizeSequence;
+
   int get sizeSequence => _$this._sizeSequence;
+
   set sizeSequence(int sizeSequence) => _$this._sizeSequence = sizeSequence;
 
   String _unitOfMeasureId;
+
   String get unitOfMeasureId => _$this._unitOfMeasureId;
+
   set unitOfMeasureId(String unitOfMeasureId) =>
       _$this._unitOfMeasureId = unitOfMeasureId;
 
   bool _forceContainersOnDelivery;
+
   bool get forceContainersOnDelivery => _$this._forceContainersOnDelivery;
+
   set forceContainersOnDelivery(bool forceContainersOnDelivery) =>
       _$this._forceContainersOnDelivery = forceContainersOnDelivery;
 
   AuditCode _auditCode;
+
   AuditCode get auditCode => _$this._auditCode;
+
   set auditCode(AuditCode auditCode) => _$this._auditCode = auditCode;
 
   EditItemApiRequestBuilder();
@@ -482,6 +506,7 @@ class _$EditItemApiRequestActions extends EditItemApiRequestActions {
   EditItemApiRequestBuilder newBuilder$() => EditItemApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

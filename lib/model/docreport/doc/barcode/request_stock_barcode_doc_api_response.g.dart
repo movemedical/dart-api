@@ -106,7 +106,9 @@ class RequestStockBarcodeDocApiResponseBuilder
   _$RequestStockBarcodeDocApiResponse _$v;
 
   String _docReportId;
+
   String get docReportId => _$this._docReportId;
+
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   RequestStockBarcodeDocApiResponseBuilder();
@@ -188,6 +190,7 @@ class _$RequestStockBarcodeDocApiResponseActions
       RequestStockBarcodeDocApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

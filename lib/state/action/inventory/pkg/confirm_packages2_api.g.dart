@@ -60,6 +60,7 @@ class _$ConfirmPackages2Api extends ConfirmPackages2Api {
           ApiCommand<ConfirmPackages2ApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

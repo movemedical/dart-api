@@ -28,8 +28,12 @@ const CaseEventUpdateType _$wireINSURANCE_UPDATED =
     const CaseEventUpdateType._('INSURANCE_UPDATED');
 const CaseEventUpdateType _$wireSTATUS_UPDATED =
     const CaseEventUpdateType._('STATUS_UPDATED');
+const CaseEventUpdateType _$wirePRICING_UPDATED =
+    const CaseEventUpdateType._('PRICING_UPDATED');
+const CaseEventUpdateType _$wireSALES_ORDER_PRICING_UPDATED =
+    const CaseEventUpdateType._('SALES_ORDER_PRICING_UPDATED');
 
-CaseEventUpdateType _$caseEventUpdateTypeValueOf(String name) {
+CaseEventUpdateType _$valueOf(String name) {
   switch (name) {
     case 'LOAD_ORDER_SYNCED':
       return _$wireLOAD_ORDER_SYNCED;
@@ -53,12 +57,16 @@ CaseEventUpdateType _$caseEventUpdateTypeValueOf(String name) {
       return _$wireINSURANCE_UPDATED;
     case 'STATUS_UPDATED':
       return _$wireSTATUS_UPDATED;
+    case 'PRICING_UPDATED':
+      return _$wirePRICING_UPDATED;
+    case 'SALES_ORDER_PRICING_UPDATED':
+      return _$wireSALES_ORDER_PRICING_UPDATED;
     default:
       throw new ArgumentError(name);
   }
 }
 
-final BuiltSet<CaseEventUpdateType> _$caseEventUpdateTypeValues =
+final BuiltSet<CaseEventUpdateType> _$values =
     new BuiltSet<CaseEventUpdateType>(const <CaseEventUpdateType>[
   _$wireLOAD_ORDER_SYNCED,
   _$wireREQUIREMENTS_UPDATED,
@@ -71,6 +79,8 @@ final BuiltSet<CaseEventUpdateType> _$caseEventUpdateTypeValues =
   _$wireDETAILS_UPDATED,
   _$wireINSURANCE_UPDATED,
   _$wireSTATUS_UPDATED,
+  _$wirePRICING_UPDATED,
+  _$wireSALES_ORDER_PRICING_UPDATED,
 ]);
 
 Serializer<CaseEventUpdateType> _$caseEventUpdateTypeSerializer =

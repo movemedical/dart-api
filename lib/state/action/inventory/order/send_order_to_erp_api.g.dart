@@ -66,6 +66,7 @@ class _$SendOrderToErpApi extends SendOrderToErpApi {
           ApiResult<SendOrderToErpApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

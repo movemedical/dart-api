@@ -18,6 +18,7 @@ import 'package:movemedical_api/model/sql/enums/loan_reason.dart';
 import 'package:movemedical_api/model/sql/enums/loan_return_type.dart';
 import 'package:movemedical_api/model/sql/enums/loan_status.dart';
 import 'package:movemedical_api/model/sql/enums/move_item_class.dart';
+import 'package:movemedical_api/model/user_lite.dart';
 
 part 'get_loan_api_loan.g.dart';
 
@@ -106,6 +107,9 @@ abstract class GetLoanApiLoan
   DateTime get created;
 
   @nullable
+  String get createdBy;
+
+  @nullable
   String get approvedBy;
 
   @nullable
@@ -113,6 +117,12 @@ abstract class GetLoanApiLoan
 
   @nullable
   GetLoanApiLoanReturnData get loanReturnData;
+
+  @nullable
+  UserLite get salesLead;
+
+  @nullable
+  UserLite get opsLead;
 
   ////////////////////////////////
   /// Constructors
@@ -188,11 +198,17 @@ abstract class GetLoanApiLoanActions extends ModelActions<GetLoanApiLoan,
 
   FieldDispatcher<DateTime> get created;
 
+  FieldDispatcher<String> get createdBy;
+
   FieldDispatcher<String> get approvedBy;
 
   FieldDispatcher<DateTime> get approved;
 
   GetLoanApiLoanReturnDataActions get loanReturnData;
+
+  UserLiteActions get salesLead;
+
+  UserLiteActions get opsLead;
 
   ////////////////////////////////
   /// Constructors

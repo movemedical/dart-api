@@ -67,6 +67,7 @@ class _$ListAEForOrgUnitApi extends ListAEForOrgUnitApi {
           ApiResult<ListAEForOrgUnitApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

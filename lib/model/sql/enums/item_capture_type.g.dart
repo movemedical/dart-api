@@ -16,7 +16,7 @@ const ItemCaptureType _$wireIOS_LINEA_PRO =
     const ItemCaptureType._('IOS_LINEA_PRO');
 const ItemCaptureType _$wireIOS_CAMERA = const ItemCaptureType._('IOS_CAMERA');
 
-ItemCaptureType _$itemCaptureTypeValueOf(String name) {
+ItemCaptureType _$valueOf(String name) {
   switch (name) {
     case 'WEB_MANUAL_ENTRY':
       return _$wireWEB_MANUAL_ENTRY;
@@ -33,7 +33,7 @@ ItemCaptureType _$itemCaptureTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<ItemCaptureType> _$itemCaptureTypeValues =
+final BuiltSet<ItemCaptureType> _$values =
     new BuiltSet<ItemCaptureType>(const <ItemCaptureType>[
   _$wireWEB_MANUAL_ENTRY,
   _$wireWEB_BARCODE,

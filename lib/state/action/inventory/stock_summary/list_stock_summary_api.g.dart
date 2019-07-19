@@ -67,6 +67,7 @@ class _$ListStockSummaryApi extends ListStockSummaryApi {
           ApiResult<ListStockSummaryApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

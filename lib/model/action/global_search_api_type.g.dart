@@ -24,7 +24,7 @@ const GlobalSearchApiType _$wireKIT_STOCK =
 const GlobalSearchApiType _$wireTRAY_STOCK =
     const GlobalSearchApiType._('TRAY_STOCK');
 
-GlobalSearchApiType _$globalSearchApiTypeValueOf(String name) {
+GlobalSearchApiType _$valueOf(String name) {
   switch (name) {
     case 'MDC_CASE_EVENT':
       return _$wireMDC_CASE_EVENT;
@@ -53,7 +53,7 @@ GlobalSearchApiType _$globalSearchApiTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<GlobalSearchApiType> _$globalSearchApiTypeValues =
+final BuiltSet<GlobalSearchApiType> _$values =
     new BuiltSet<GlobalSearchApiType>(const <GlobalSearchApiType>[
   _$wireMDC_CASE_EVENT,
   _$wireLOAN,

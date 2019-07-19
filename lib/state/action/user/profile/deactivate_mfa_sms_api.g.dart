@@ -60,6 +60,7 @@ class _$DeactivateMfaSmsApi extends DeactivateMfaSmsApi {
           ApiCommand<DeactivateMfaSmsApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

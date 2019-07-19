@@ -104,8 +104,10 @@ class DecommissionTagsApiRequestBuilder
   _$DecommissionTagsApiRequest _$v;
 
   ListBuilder<String> _tagIds;
+
   ListBuilder<String> get tagIds =>
       _$this._tagIds ??= new ListBuilder<String>();
+
   set tagIds(ListBuilder<String> tagIds) => _$this._tagIds = tagIds;
 
   DecommissionTagsApiRequestBuilder();
@@ -196,6 +198,7 @@ class _$DecommissionTagsApiRequestActions
       DecommissionTagsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

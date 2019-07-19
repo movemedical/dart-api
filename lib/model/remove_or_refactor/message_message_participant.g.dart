@@ -132,16 +132,22 @@ class MessageMessageParticipantBuilder
   _$MessageMessageParticipant _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _participantId;
+
   String get participantId => _$this._participantId;
+
   set participantId(String participantId) =>
       _$this._participantId = participantId;
 
   bool _read;
+
   bool get read => _$this._read;
+
   set read(bool read) => _$this._read = read;
 
   MessageMessageParticipantBuilder();
@@ -231,6 +237,7 @@ class _$MessageMessageParticipantActions
       MessageMessageParticipantBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

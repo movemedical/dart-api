@@ -51,12 +51,6 @@ class _$BuildInspectionApiExtraEntryOptionSerializer
         ..add(serializers.serialize(object.locationData,
             specifiedType: const FullType(LocationData)));
     }
-    if (object.multipleOptionForLocation != null) {
-      result
-        ..add('multipleOptionForLocation')
-        ..add(serializers.serialize(object.multipleOptionForLocation,
-            specifiedType: const FullType(bool)));
-    }
     if (object.swappedOutExpectedStockId != null) {
       result
         ..add('swappedOutExpectedStockId')
@@ -97,10 +91,6 @@ class _$BuildInspectionApiExtraEntryOptionSerializer
           result.locationData.replace(serializers.deserialize(value,
               specifiedType: const FullType(LocationData)) as LocationData);
           break;
-        case 'multipleOptionForLocation':
-          result.multipleOptionForLocation = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
         case 'swappedOutExpectedStockId':
           result.swappedOutExpectedStockId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -123,8 +113,6 @@ class _$BuildInspectionApiExtraEntryOption
   @override
   final LocationData locationData;
   @override
-  final bool multipleOptionForLocation;
-  @override
   final String swappedOutExpectedStockId;
 
   factory _$BuildInspectionApiExtraEntryOption(
@@ -137,7 +125,6 @@ class _$BuildInspectionApiExtraEntryOption
       this.type,
       this.stockId,
       this.locationData,
-      this.multipleOptionForLocation,
       this.swappedOutExpectedStockId})
       : super._();
 
@@ -158,17 +145,14 @@ class _$BuildInspectionApiExtraEntryOption
         type == other.type &&
         stockId == other.stockId &&
         locationData == other.locationData &&
-        multipleOptionForLocation == other.multipleOptionForLocation &&
         swappedOutExpectedStockId == other.swappedOutExpectedStockId;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc(
-            $jc($jc($jc($jc(0, id.hashCode), type.hashCode), stockId.hashCode),
-                locationData.hashCode),
-            multipleOptionForLocation.hashCode),
+        $jc($jc($jc($jc(0, id.hashCode), type.hashCode), stockId.hashCode),
+            locationData.hashCode),
         swappedOutExpectedStockId.hashCode));
   }
 
@@ -179,7 +163,6 @@ class _$BuildInspectionApiExtraEntryOption
           ..add('type', type)
           ..add('stockId', stockId)
           ..add('locationData', locationData)
-          ..add('multipleOptionForLocation', multipleOptionForLocation)
           ..add('swappedOutExpectedStockId', swappedOutExpectedStockId))
         .toString();
   }
@@ -192,30 +175,35 @@ class BuildInspectionApiExtraEntryOptionBuilder
   _$BuildInspectionApiExtraEntryOption _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   BuildInspectionApiExtraEntryOptionType _type;
+
   BuildInspectionApiExtraEntryOptionType get type => _$this._type;
+
   set type(BuildInspectionApiExtraEntryOptionType type) => _$this._type = type;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   LocationDataBuilder _locationData;
+
   LocationDataBuilder get locationData =>
       _$this._locationData ??= new LocationDataBuilder();
+
   set locationData(LocationDataBuilder locationData) =>
       _$this._locationData = locationData;
 
-  bool _multipleOptionForLocation;
-  bool get multipleOptionForLocation => _$this._multipleOptionForLocation;
-  set multipleOptionForLocation(bool multipleOptionForLocation) =>
-      _$this._multipleOptionForLocation = multipleOptionForLocation;
-
   String _swappedOutExpectedStockId;
+
   String get swappedOutExpectedStockId => _$this._swappedOutExpectedStockId;
+
   set swappedOutExpectedStockId(String swappedOutExpectedStockId) =>
       _$this._swappedOutExpectedStockId = swappedOutExpectedStockId;
 
@@ -227,7 +215,6 @@ class BuildInspectionApiExtraEntryOptionBuilder
       _type = _$v.type;
       _stockId = _$v.stockId;
       _locationData = _$v.locationData?.toBuilder();
-      _multipleOptionForLocation = _$v.multipleOptionForLocation;
       _swappedOutExpectedStockId = _$v.swappedOutExpectedStockId;
       _$v = null;
     }
@@ -257,7 +244,6 @@ class BuildInspectionApiExtraEntryOptionBuilder
               type: type,
               stockId: stockId,
               locationData: _locationData?.build(),
-              multipleOptionForLocation: multipleOptionForLocation,
               swappedOutExpectedStockId: swappedOutExpectedStockId);
     } catch (_) {
       String _$failedField;
@@ -301,7 +287,6 @@ class _$BuildInspectionApiExtraEntryOptionActions
   final FieldDispatcher<BuildInspectionApiExtraEntryOptionType> type;
   final FieldDispatcher<String> stockId;
   final LocationDataActions locationData;
-  final FieldDispatcher<bool> multipleOptionForLocation;
   final FieldDispatcher<String> swappedOutExpectedStockId;
 
   _$BuildInspectionApiExtraEntryOptionActions._(this.options$)
@@ -320,11 +305,6 @@ class _$BuildInspectionApiExtraEntryOptionActions
                 (s) => s?.locationData,
                 (b) => b?.locationData,
                 (parent, builder) => parent?.locationData = builder)),
-        multipleOptionForLocation = options$.field<bool>(
-            'multipleOptionForLocation',
-            (a) => a?.multipleOptionForLocation,
-            (s) => s?.multipleOptionForLocation,
-            (p, b) => p?.multipleOptionForLocation = b),
         swappedOutExpectedStockId = options$.field<String>(
             'swappedOutExpectedStockId',
             (a) => a?.swappedOutExpectedStockId,
@@ -345,12 +325,14 @@ class _$BuildInspectionApiExtraEntryOptionActions
       BuildInspectionApiExtraEntryOptionBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.locationData,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -358,7 +340,6 @@ class _$BuildInspectionApiExtraEntryOptionActions
         this.id,
         this.type,
         this.stockId,
-        this.multipleOptionForLocation,
         this.swappedOutExpectedStockId,
       ]);
 
@@ -369,7 +350,6 @@ class _$BuildInspectionApiExtraEntryOptionActions
     type.reducer$(reducer);
     stockId.reducer$(reducer);
     locationData.reducer$(reducer);
-    multipleOptionForLocation.reducer$(reducer);
     swappedOutExpectedStockId.reducer$(reducer);
   }
 

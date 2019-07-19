@@ -33,11 +33,9 @@ class MobileNavigationElement extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<MobileNavigationElement> get values =>
-      _$mobileNavigationElementValues;
+  static BuiltSet<MobileNavigationElement> get values => _$values;
 
-  static MobileNavigationElement valueOf(String name) =>
-      _$mobileNavigationElementValueOf(name);
+  static MobileNavigationElement valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

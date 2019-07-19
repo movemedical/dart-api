@@ -109,8 +109,10 @@ class MarkNotificationsReadApiRequestBuilder
   _$MarkNotificationsReadApiRequest _$v;
 
   ListBuilder<String> _notificationIds;
+
   ListBuilder<String> get notificationIds =>
       _$this._notificationIds ??= new ListBuilder<String>();
+
   set notificationIds(ListBuilder<String> notificationIds) =>
       _$this._notificationIds = notificationIds;
 
@@ -207,6 +209,7 @@ class _$MarkNotificationsReadApiRequestActions
       MarkNotificationsReadApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

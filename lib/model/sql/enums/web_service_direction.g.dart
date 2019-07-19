@@ -11,7 +11,7 @@ const WebServiceDirection _$wireINBOUND =
 const WebServiceDirection _$wireOUTBOUND =
     const WebServiceDirection._('OUTBOUND');
 
-WebServiceDirection _$webServiceDirectionValueOf(String name) {
+WebServiceDirection _$valueOf(String name) {
   switch (name) {
     case 'INBOUND':
       return _$wireINBOUND;
@@ -22,7 +22,7 @@ WebServiceDirection _$webServiceDirectionValueOf(String name) {
   }
 }
 
-final BuiltSet<WebServiceDirection> _$webServiceDirectionValues =
+final BuiltSet<WebServiceDirection> _$values =
     new BuiltSet<WebServiceDirection>(const <WebServiceDirection>[
   _$wireINBOUND,
   _$wireOUTBOUND,

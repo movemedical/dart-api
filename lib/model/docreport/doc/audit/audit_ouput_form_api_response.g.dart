@@ -102,7 +102,9 @@ class AuditOuputFormApiResponseBuilder
   _$AuditOuputFormApiResponse _$v;
 
   String _docReportId;
+
   String get docReportId => _$this._docReportId;
+
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   AuditOuputFormApiResponseBuilder();
@@ -183,6 +185,7 @@ class _$AuditOuputFormApiResponseActions
       AuditOuputFormApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -44,6 +44,9 @@ abstract class GetFacilityApiFacilityDetail
   FacilityType get facilityType;
 
   @nullable
+  String get displayText;
+
+  @nullable
   String get name;
 
   @nullable
@@ -174,6 +177,8 @@ abstract class GetFacilityApiFacilityDetailActions extends ModelActions<
   FieldDispatcher<String> get orgName;
 
   FieldDispatcher<FacilityType> get facilityType;
+
+  FieldDispatcher<String> get displayText;
 
   FieldDispatcher<String> get name;
 

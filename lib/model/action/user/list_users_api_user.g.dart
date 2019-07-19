@@ -213,38 +213,54 @@ class ListUsersApiUserBuilder
   _$ListUsersApiUser _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _email;
+
   String get email => _$this._email;
+
   set email(String email) => _$this._email = email;
 
   UserPerspective _userPerspective;
+
   UserPerspective get userPerspective => _$this._userPerspective;
+
   set userPerspective(UserPerspective userPerspective) =>
       _$this._userPerspective = userPerspective;
 
   UserStatus _userStatus;
+
   UserStatus get userStatus => _$this._userStatus;
+
   set userStatus(UserStatus userStatus) => _$this._userStatus = userStatus;
 
   bool _directoryAdmin;
+
   bool get directoryAdmin => _$this._directoryAdmin;
+
   set directoryAdmin(bool directoryAdmin) =>
       _$this._directoryAdmin = directoryAdmin;
 
   bool _supportAccessEnabled;
+
   bool get supportAccessEnabled => _$this._supportAccessEnabled;
+
   set supportAccessEnabled(bool supportAccessEnabled) =>
       _$this._supportAccessEnabled = supportAccessEnabled;
 
   DateTime _supportAccessEndDate;
+
   DateTime get supportAccessEndDate => _$this._supportAccessEndDate;
+
   set supportAccessEndDate(DateTime supportAccessEndDate) =>
       _$this._supportAccessEndDate = supportAccessEndDate;
 
@@ -367,6 +383,7 @@ class _$ListUsersApiUserActions extends ListUsersApiUserActions {
   ListUsersApiUserBuilder newBuilder$() => ListUsersApiUserBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

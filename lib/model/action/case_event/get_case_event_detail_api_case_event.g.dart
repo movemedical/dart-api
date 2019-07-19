@@ -210,6 +210,18 @@ class _$GetCaseEventDetailApiCaseEventSerializer
             specifiedType:
                 const FullType(GetCaseEventDetailApiLoanReturnData)));
     }
+    if (object.salesLead != null) {
+      result
+        ..add('salesLead')
+        ..add(serializers.serialize(object.salesLead,
+            specifiedType: const FullType(UserLite)));
+    }
+    if (object.opsLead != null) {
+      result
+        ..add('opsLead')
+        ..add(serializers.serialize(object.opsLead,
+            specifiedType: const FullType(UserLite)));
+    }
 
     return result;
   }
@@ -360,6 +372,14 @@ class _$GetCaseEventDetailApiCaseEventSerializer
                       const FullType(GetCaseEventDetailApiLoanReturnData))
               as GetCaseEventDetailApiLoanReturnData);
           break;
+        case 'salesLead':
+          result.salesLead.replace(serializers.deserialize(value,
+              specifiedType: const FullType(UserLite)) as UserLite);
+          break;
+        case 'opsLead':
+          result.opsLead.replace(serializers.deserialize(value,
+              specifiedType: const FullType(UserLite)) as UserLite);
+          break;
       }
     }
 
@@ -428,6 +448,10 @@ class _$GetCaseEventDetailApiCaseEvent extends GetCaseEventDetailApiCaseEvent {
   final GetCaseEventDetailApiLoanReturnData implantLoanReturnData;
   @override
   final GetCaseEventDetailApiLoanReturnData instrumentLoanReturnData;
+  @override
+  final UserLite salesLead;
+  @override
+  final UserLite opsLead;
 
   factory _$GetCaseEventDetailApiCaseEvent(
           [void updates(GetCaseEventDetailApiCaseEventBuilder b)]) =>
@@ -463,7 +487,9 @@ class _$GetCaseEventDetailApiCaseEvent extends GetCaseEventDetailApiCaseEvent {
       this.caseCustomFieldValues,
       this.poNumber,
       this.implantLoanReturnData,
-      this.instrumentLoanReturnData})
+      this.instrumentLoanReturnData,
+      this.salesLead,
+      this.opsLead})
       : super._();
 
   @override
@@ -509,7 +535,9 @@ class _$GetCaseEventDetailApiCaseEvent extends GetCaseEventDetailApiCaseEvent {
         caseCustomFieldValues == other.caseCustomFieldValues &&
         poNumber == other.poNumber &&
         implantLoanReturnData == other.implantLoanReturnData &&
-        instrumentLoanReturnData == other.instrumentLoanReturnData;
+        instrumentLoanReturnData == other.instrumentLoanReturnData &&
+        salesLead == other.salesLead &&
+        opsLead == other.opsLead;
   }
 
   @override
@@ -532,26 +560,26 @@ class _$GetCaseEventDetailApiCaseEvent extends GetCaseEventDetailApiCaseEvent {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), status.hashCode), bodySide.hashCode), caseType.hashCode), bizUnit.hashCode), salesOu.hashCode), opsOu.hashCode), hospital.hashCode), physician.hashCode), physicianTemp.hashCode), patient.hashCode),
-                                                                                hcr.hashCode),
-                                                                            team.hashCode),
-                                                                        coverage.hashCode),
-                                                                    procedure.hashCode),
-                                                                subProcedure.hashCode),
-                                                            implantLoan.hashCode),
-                                                        instrumentLoan.hashCode),
-                                                    primaryInsurance.hashCode),
-                                                secondaryInsurance.hashCode),
-                                            linkedOrders.hashCode),
-                                        description.hashCode),
-                                    requirementsDeliverBy.hashCode),
-                                requirementsDeliverToAttn.hashCode),
-                            requirementsDeliverToAddress.hashCode),
-                        requirementsDeliverToOverrideAddress.hashCode),
-                    caseCustomFieldValues.hashCode),
-                poNumber.hashCode),
-            implantLoanReturnData.hashCode),
-        instrumentLoanReturnData.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), status.hashCode), bodySide.hashCode), caseType.hashCode), bizUnit.hashCode), salesOu.hashCode), opsOu.hashCode), hospital.hashCode), physician.hashCode), physicianTemp.hashCode), patient.hashCode), hcr.hashCode), team.hashCode),
+                                                                                coverage.hashCode),
+                                                                            procedure.hashCode),
+                                                                        subProcedure.hashCode),
+                                                                    implantLoan.hashCode),
+                                                                instrumentLoan.hashCode),
+                                                            primaryInsurance.hashCode),
+                                                        secondaryInsurance.hashCode),
+                                                    linkedOrders.hashCode),
+                                                description.hashCode),
+                                            requirementsDeliverBy.hashCode),
+                                        requirementsDeliverToAttn.hashCode),
+                                    requirementsDeliverToAddress.hashCode),
+                                requirementsDeliverToOverrideAddress.hashCode),
+                            caseCustomFieldValues.hashCode),
+                        poNumber.hashCode),
+                    implantLoanReturnData.hashCode),
+                instrumentLoanReturnData.hashCode),
+            salesLead.hashCode),
+        opsLead.hashCode));
   }
 
   @override
@@ -587,7 +615,9 @@ class _$GetCaseEventDetailApiCaseEvent extends GetCaseEventDetailApiCaseEvent {
           ..add('caseCustomFieldValues', caseCustomFieldValues)
           ..add('poNumber', poNumber)
           ..add('implantLoanReturnData', implantLoanReturnData)
-          ..add('instrumentLoanReturnData', instrumentLoanReturnData))
+          ..add('instrumentLoanReturnData', instrumentLoanReturnData)
+          ..add('salesLead', salesLead)
+          ..add('opsLead', opsLead))
         .toString();
   }
 }
@@ -599,160 +629,232 @@ class GetCaseEventDetailApiCaseEventBuilder
   _$GetCaseEventDetailApiCaseEvent _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   CaseEventStatus _status;
+
   CaseEventStatus get status => _$this._status;
+
   set status(CaseEventStatus status) => _$this._status = status;
 
   BodySide _bodySide;
+
   BodySide get bodySide => _$this._bodySide;
+
   set bodySide(BodySide bodySide) => _$this._bodySide = bodySide;
 
   CaseTypeBuilder _caseType;
+
   CaseTypeBuilder get caseType => _$this._caseType ??= new CaseTypeBuilder();
+
   set caseType(CaseTypeBuilder caseType) => _$this._caseType = caseType;
 
   BizUnitBuilder _bizUnit;
+
   BizUnitBuilder get bizUnit => _$this._bizUnit ??= new BizUnitBuilder();
+
   set bizUnit(BizUnitBuilder bizUnit) => _$this._bizUnit = bizUnit;
 
   OrgUnitBuilder _salesOu;
+
   OrgUnitBuilder get salesOu => _$this._salesOu ??= new OrgUnitBuilder();
+
   set salesOu(OrgUnitBuilder salesOu) => _$this._salesOu = salesOu;
 
   OrgUnitBuilder _opsOu;
+
   OrgUnitBuilder get opsOu => _$this._opsOu ??= new OrgUnitBuilder();
+
   set opsOu(OrgUnitBuilder opsOu) => _$this._opsOu = opsOu;
 
   HospitalBuilder _hospital;
+
   HospitalBuilder get hospital => _$this._hospital ??= new HospitalBuilder();
+
   set hospital(HospitalBuilder hospital) => _$this._hospital = hospital;
 
   PhysicianBuilder _physician;
+
   PhysicianBuilder get physician =>
       _$this._physician ??= new PhysicianBuilder();
+
   set physician(PhysicianBuilder physician) => _$this._physician = physician;
 
   String _physicianTemp;
+
   String get physicianTemp => _$this._physicianTemp;
+
   set physicianTemp(String physicianTemp) =>
       _$this._physicianTemp = physicianTemp;
 
   PatientBuilder _patient;
+
   PatientBuilder get patient => _$this._patient ??= new PatientBuilder();
+
   set patient(PatientBuilder patient) => _$this._patient = patient;
 
   HcrTeamBuilder _hcr;
+
   HcrTeamBuilder get hcr => _$this._hcr ??= new HcrTeamBuilder();
+
   set hcr(HcrTeamBuilder hcr) => _$this._hcr = hcr;
 
   HcrTeamBuilder _team;
+
   HcrTeamBuilder get team => _$this._team ??= new HcrTeamBuilder();
+
   set team(HcrTeamBuilder team) => _$this._team = team;
 
   HcrTeamBuilder _coverage;
+
   HcrTeamBuilder get coverage => _$this._coverage ??= new HcrTeamBuilder();
+
   set coverage(HcrTeamBuilder coverage) => _$this._coverage = coverage;
 
   ProcedureBuilder _procedure;
+
   ProcedureBuilder get procedure =>
       _$this._procedure ??= new ProcedureBuilder();
+
   set procedure(ProcedureBuilder procedure) => _$this._procedure = procedure;
 
   SubProcedureBuilder _subProcedure;
+
   SubProcedureBuilder get subProcedure =>
       _$this._subProcedure ??= new SubProcedureBuilder();
+
   set subProcedure(SubProcedureBuilder subProcedure) =>
       _$this._subProcedure = subProcedure;
 
   GetCaseEventDetailApiLoanBuilder _implantLoan;
+
   GetCaseEventDetailApiLoanBuilder get implantLoan =>
       _$this._implantLoan ??= new GetCaseEventDetailApiLoanBuilder();
+
   set implantLoan(GetCaseEventDetailApiLoanBuilder implantLoan) =>
       _$this._implantLoan = implantLoan;
 
   GetCaseEventDetailApiLoanBuilder _instrumentLoan;
+
   GetCaseEventDetailApiLoanBuilder get instrumentLoan =>
       _$this._instrumentLoan ??= new GetCaseEventDetailApiLoanBuilder();
+
   set instrumentLoan(GetCaseEventDetailApiLoanBuilder instrumentLoan) =>
       _$this._instrumentLoan = instrumentLoan;
 
   InsuranceBuilder _primaryInsurance;
+
   InsuranceBuilder get primaryInsurance =>
       _$this._primaryInsurance ??= new InsuranceBuilder();
+
   set primaryInsurance(InsuranceBuilder primaryInsurance) =>
       _$this._primaryInsurance = primaryInsurance;
 
   InsuranceBuilder _secondaryInsurance;
+
   InsuranceBuilder get secondaryInsurance =>
       _$this._secondaryInsurance ??= new InsuranceBuilder();
+
   set secondaryInsurance(InsuranceBuilder secondaryInsurance) =>
       _$this._secondaryInsurance = secondaryInsurance;
 
   ListBuilder<OrderHeaderLite> _linkedOrders;
+
   ListBuilder<OrderHeaderLite> get linkedOrders =>
       _$this._linkedOrders ??= new ListBuilder<OrderHeaderLite>();
+
   set linkedOrders(ListBuilder<OrderHeaderLite> linkedOrders) =>
       _$this._linkedOrders = linkedOrders;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   DateTime _requirementsDeliverBy;
+
   DateTime get requirementsDeliverBy => _$this._requirementsDeliverBy;
+
   set requirementsDeliverBy(DateTime requirementsDeliverBy) =>
       _$this._requirementsDeliverBy = requirementsDeliverBy;
 
   String _requirementsDeliverToAttn;
+
   String get requirementsDeliverToAttn => _$this._requirementsDeliverToAttn;
+
   set requirementsDeliverToAttn(String requirementsDeliverToAttn) =>
       _$this._requirementsDeliverToAttn = requirementsDeliverToAttn;
 
   CustomerAddressBuilder _requirementsDeliverToAddress;
+
   CustomerAddressBuilder get requirementsDeliverToAddress =>
       _$this._requirementsDeliverToAddress ??= new CustomerAddressBuilder();
+
   set requirementsDeliverToAddress(
           CustomerAddressBuilder requirementsDeliverToAddress) =>
       _$this._requirementsDeliverToAddress = requirementsDeliverToAddress;
 
   AddressBuilder _requirementsDeliverToOverrideAddress;
+
   AddressBuilder get requirementsDeliverToOverrideAddress =>
       _$this._requirementsDeliverToOverrideAddress ??= new AddressBuilder();
+
   set requirementsDeliverToOverrideAddress(
           AddressBuilder requirementsDeliverToOverrideAddress) =>
       _$this._requirementsDeliverToOverrideAddress =
           requirementsDeliverToOverrideAddress;
 
   ListBuilder<CaseCustomFieldValue> _caseCustomFieldValues;
+
   ListBuilder<CaseCustomFieldValue> get caseCustomFieldValues =>
       _$this._caseCustomFieldValues ??= new ListBuilder<CaseCustomFieldValue>();
+
   set caseCustomFieldValues(
           ListBuilder<CaseCustomFieldValue> caseCustomFieldValues) =>
       _$this._caseCustomFieldValues = caseCustomFieldValues;
 
   String _poNumber;
+
   String get poNumber => _$this._poNumber;
+
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   GetCaseEventDetailApiLoanReturnDataBuilder _implantLoanReturnData;
+
   GetCaseEventDetailApiLoanReturnDataBuilder get implantLoanReturnData =>
       _$this._implantLoanReturnData ??=
           new GetCaseEventDetailApiLoanReturnDataBuilder();
+
   set implantLoanReturnData(
           GetCaseEventDetailApiLoanReturnDataBuilder implantLoanReturnData) =>
       _$this._implantLoanReturnData = implantLoanReturnData;
 
   GetCaseEventDetailApiLoanReturnDataBuilder _instrumentLoanReturnData;
+
   GetCaseEventDetailApiLoanReturnDataBuilder get instrumentLoanReturnData =>
       _$this._instrumentLoanReturnData ??=
           new GetCaseEventDetailApiLoanReturnDataBuilder();
+
   set instrumentLoanReturnData(
           GetCaseEventDetailApiLoanReturnDataBuilder
               instrumentLoanReturnData) =>
       _$this._instrumentLoanReturnData = instrumentLoanReturnData;
+
+  UserLiteBuilder _salesLead;
+
+  UserLiteBuilder get salesLead => _$this._salesLead ??= new UserLiteBuilder();
+
+  set salesLead(UserLiteBuilder salesLead) => _$this._salesLead = salesLead;
+
+  UserLiteBuilder _opsLead;
+
+  UserLiteBuilder get opsLead => _$this._opsLead ??= new UserLiteBuilder();
+
+  set opsLead(UserLiteBuilder opsLead) => _$this._opsLead = opsLead;
 
   GetCaseEventDetailApiCaseEventBuilder();
 
@@ -790,6 +892,8 @@ class GetCaseEventDetailApiCaseEventBuilder
       _poNumber = _$v.poNumber;
       _implantLoanReturnData = _$v.implantLoanReturnData?.toBuilder();
       _instrumentLoanReturnData = _$v.instrumentLoanReturnData?.toBuilder();
+      _salesLead = _$v.salesLead?.toBuilder();
+      _opsLead = _$v.opsLead?.toBuilder();
       _$v = null;
     }
     return this;
@@ -845,7 +949,9 @@ class GetCaseEventDetailApiCaseEventBuilder
               caseCustomFieldValues: _caseCustomFieldValues?.build(),
               poNumber: poNumber,
               implantLoanReturnData: _implantLoanReturnData?.build(),
-              instrumentLoanReturnData: _instrumentLoanReturnData?.build());
+              instrumentLoanReturnData: _instrumentLoanReturnData?.build(),
+              salesLead: _salesLead?.build(),
+              opsLead: _opsLead?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -896,6 +1002,10 @@ class GetCaseEventDetailApiCaseEventBuilder
         _implantLoanReturnData?.build();
         _$failedField = 'instrumentLoanReturnData';
         _instrumentLoanReturnData?.build();
+        _$failedField = 'salesLead';
+        _salesLead?.build();
+        _$failedField = 'opsLead';
+        _opsLead?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetCaseEventDetailApiCaseEvent', _$failedField, e.toString());
@@ -959,6 +1069,8 @@ class _$GetCaseEventDetailApiCaseEventActions
   final FieldDispatcher<String> poNumber;
   final GetCaseEventDetailApiLoanReturnDataActions implantLoanReturnData;
   final GetCaseEventDetailApiLoanReturnDataActions instrumentLoanReturnData;
+  final UserLiteActions salesLead;
+  final UserLiteActions opsLead;
 
   _$GetCaseEventDetailApiCaseEventActions._(this.options$)
       : replace$ = options$.action<GetCaseEventDetailApiCaseEvent>(
@@ -1156,6 +1268,20 @@ class _$GetCaseEventDetailApiCaseEventActions
                 (b) => b?.instrumentLoanReturnData,
                 (parent, builder) =>
                     parent?.instrumentLoanReturnData = builder)),
+        salesLead = UserLiteActions(() =>
+            options$.stateful<UserLite, UserLiteBuilder, UserLiteActions>(
+                'salesLead',
+                (a) => a.salesLead,
+                (s) => s?.salesLead,
+                (b) => b?.salesLead,
+                (parent, builder) => parent?.salesLead = builder)),
+        opsLead = UserLiteActions(() =>
+            options$.stateful<UserLite, UserLiteBuilder, UserLiteActions>(
+                'opsLead',
+                (a) => a.opsLead,
+                (s) => s?.opsLead,
+                (b) => b?.opsLead,
+                (parent, builder) => parent?.opsLead = builder)),
         super._();
 
   factory _$GetCaseEventDetailApiCaseEventActions(
@@ -1171,6 +1297,7 @@ class _$GetCaseEventDetailApiCaseEventActions
       GetCaseEventDetailApiCaseEventBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.caseType,
@@ -1193,9 +1320,12 @@ class _$GetCaseEventDetailApiCaseEventActions
         this.requirementsDeliverToOverrideAddress,
         this.implantLoanReturnData,
         this.instrumentLoanReturnData,
+        this.salesLead,
+        this.opsLead,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -1245,6 +1375,8 @@ class _$GetCaseEventDetailApiCaseEventActions
     poNumber.reducer$(reducer);
     implantLoanReturnData.reducer$(reducer);
     instrumentLoanReturnData.reducer$(reducer);
+    salesLead.reducer$(reducer);
+    opsLead.reducer$(reducer);
   }
 
   @override
@@ -1270,5 +1402,7 @@ class _$GetCaseEventDetailApiCaseEventActions
     requirementsDeliverToOverrideAddress.middleware$(middleware);
     implantLoanReturnData.middleware$(middleware);
     instrumentLoanReturnData.middleware$(middleware);
+    salesLead.middleware$(middleware);
+    opsLead.middleware$(middleware);
   }
 }

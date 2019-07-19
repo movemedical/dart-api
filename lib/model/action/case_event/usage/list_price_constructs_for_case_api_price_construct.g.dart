@@ -157,19 +157,27 @@ class ListPriceConstructsForCaseApiPriceConstructBuilder
   _$ListPriceConstructsForCaseApiPriceConstruct _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _number;
+
   String get number => _$this._number;
+
   set number(String number) => _$this._number = number;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   ListPriceConstructsForCaseApiPriceConstructBuilder();
@@ -265,6 +273,7 @@ class _$ListPriceConstructsForCaseApiPriceConstructActions
       ListPriceConstructsForCaseApiPriceConstructBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -567,150 +567,208 @@ class ListCaseUsageApiUsageBuilder
   _$ListCaseUsageApiUsage _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   StockPlaceBuilder _stockPlace;
+
   StockPlaceBuilder get stockPlace =>
       _$this._stockPlace ??= new StockPlaceBuilder();
+
   set stockPlace(StockPlaceBuilder stockPlace) =>
       _$this._stockPlace = stockPlace;
 
   InventoryTypeBuilder _inventoryType;
+
   InventoryTypeBuilder get inventoryType =>
       _$this._inventoryType ??= new InventoryTypeBuilder();
+
   set inventoryType(InventoryTypeBuilder inventoryType) =>
       _$this._inventoryType = inventoryType;
 
   String _caseUsageOrderId;
+
   String get caseUsageOrderId => _$this._caseUsageOrderId;
+
   set caseUsageOrderId(String caseUsageOrderId) =>
       _$this._caseUsageOrderId = caseUsageOrderId;
 
   String _caseUsageConstructId;
+
   String get caseUsageConstructId => _$this._caseUsageConstructId;
+
   set caseUsageConstructId(String caseUsageConstructId) =>
       _$this._caseUsageConstructId = caseUsageConstructId;
 
   StockItemBuilder _stockItem;
+
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
+
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   double _price;
+
   double get price => _$this._price;
+
   set price(double price) => _$this._price = price;
 
   double _overridePrice;
+
   double get overridePrice => _$this._overridePrice;
+
   set overridePrice(double overridePrice) =>
       _$this._overridePrice = overridePrice;
 
   bool _hasOverridePrice;
+
   bool get hasOverridePrice => _$this._hasOverridePrice;
+
   set hasOverridePrice(bool hasOverridePrice) =>
       _$this._hasOverridePrice = hasOverridePrice;
 
   CaseUsageDisposition _disposition;
+
   CaseUsageDisposition get disposition => _$this._disposition;
+
   set disposition(CaseUsageDisposition disposition) =>
       _$this._disposition = disposition;
 
   String _note;
+
   String get note => _$this._note;
+
   set note(String note) => _$this._note = note;
 
   bool _doNotRestock;
+
   bool get doNotRestock => _$this._doNotRestock;
+
   set doNotRestock(bool doNotRestock) => _$this._doNotRestock = doNotRestock;
 
   LocationBuilder _replenishLocation;
+
   LocationBuilder get replenishLocation =>
       _$this._replenishLocation ??= new LocationBuilder();
+
   set replenishLocation(LocationBuilder replenishLocation) =>
       _$this._replenishLocation = replenishLocation;
 
   DateTime _replenishByDate;
+
   DateTime get replenishByDate => _$this._replenishByDate;
+
   set replenishByDate(DateTime replenishByDate) =>
       _$this._replenishByDate = replenishByDate;
 
   String _restockDeliverToAttn;
+
   String get restockDeliverToAttn => _$this._restockDeliverToAttn;
+
   set restockDeliverToAttn(String restockDeliverToAttn) =>
       _$this._restockDeliverToAttn = restockDeliverToAttn;
 
   CustomerAddressBuilder _restockDeliverToAddress;
+
   CustomerAddressBuilder get restockDeliverToAddress =>
       _$this._restockDeliverToAddress ??= new CustomerAddressBuilder();
+
   set restockDeliverToAddress(CustomerAddressBuilder restockDeliverToAddress) =>
       _$this._restockDeliverToAddress = restockDeliverToAddress;
 
   AddressBuilder _restockDeliverToOverrideAddress;
+
   AddressBuilder get restockDeliverToOverrideAddress =>
       _$this._restockDeliverToOverrideAddress ??= new AddressBuilder();
+
   set restockDeliverToOverrideAddress(
           AddressBuilder restockDeliverToOverrideAddress) =>
       _$this._restockDeliverToOverrideAddress = restockDeliverToOverrideAddress;
 
   ShippingServiceBuilder _restockShippingService;
+
   ShippingServiceBuilder get restockShippingService =>
       _$this._restockShippingService ??= new ShippingServiceBuilder();
+
   set restockShippingService(ShippingServiceBuilder restockShippingService) =>
       _$this._restockShippingService = restockShippingService;
 
   ItemCaptureType _captureType;
+
   ItemCaptureType get captureType => _$this._captureType;
+
   set captureType(ItemCaptureType captureType) =>
       _$this._captureType = captureType;
 
   String _unknownItemNumber;
+
   String get unknownItemNumber => _$this._unknownItemNumber;
+
   set unknownItemNumber(String unknownItemNumber) =>
       _$this._unknownItemNumber = unknownItemNumber;
 
   String _unknownLotNumber;
+
   String get unknownLotNumber => _$this._unknownLotNumber;
+
   set unknownLotNumber(String unknownLotNumber) =>
       _$this._unknownLotNumber = unknownLotNumber;
 
   String _unknownSerialNumber;
+
   String get unknownSerialNumber => _$this._unknownSerialNumber;
+
   set unknownSerialNumber(String unknownSerialNumber) =>
       _$this._unknownSerialNumber = unknownSerialNumber;
 
   String _rawBarcode;
+
   String get rawBarcode => _$this._rawBarcode;
+
   set rawBarcode(String rawBarcode) => _$this._rawBarcode = rawBarcode;
 
   ResponsiblePartyBuilder _responsibleParty;
+
   ResponsiblePartyBuilder get responsibleParty =>
       _$this._responsibleParty ??= new ResponsiblePartyBuilder();
+
   set responsibleParty(ResponsiblePartyBuilder responsibleParty) =>
       _$this._responsibleParty = responsibleParty;
 
   String _billingCodeId;
+
   String get billingCodeId => _$this._billingCodeId;
+
   set billingCodeId(String billingCodeId) =>
       _$this._billingCodeId = billingCodeId;
 
   String _billingCodeName;
+
   String get billingCodeName => _$this._billingCodeName;
+
   set billingCodeName(String billingCodeName) =>
       _$this._billingCodeName = billingCodeName;
 
   LoanLiteBuilder _demandLoan;
+
   LoanLiteBuilder get demandLoan =>
       _$this._demandLoan ??= new LoanLiteBuilder();
+
   set demandLoan(LoanLiteBuilder demandLoan) => _$this._demandLoan = demandLoan;
 
   LoanLiteBuilder _consignmentLoan;
+
   LoanLiteBuilder get consignmentLoan =>
       _$this._consignmentLoan ??= new LoanLiteBuilder();
+
   set consignmentLoan(LoanLiteBuilder consignmentLoan) =>
       _$this._consignmentLoan = consignmentLoan;
 
@@ -1063,6 +1121,7 @@ class _$ListCaseUsageApiUsageActions extends ListCaseUsageApiUsageActions {
   ListCaseUsageApiUsageBuilder newBuilder$() => ListCaseUsageApiUsageBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockPlace,
@@ -1078,6 +1137,7 @@ class _$ListCaseUsageApiUsageActions extends ListCaseUsageApiUsageActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

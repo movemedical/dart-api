@@ -156,20 +156,28 @@ class CancelOrderLinesApiCancellationsBuilder
   _$CancelOrderLinesApiCancellations _$v;
 
   String _orderLineId;
+
   String get orderLineId => _$this._orderLineId;
+
   set orderLineId(String orderLineId) => _$this._orderLineId = orderLineId;
 
   String _orderCancelReasonId;
+
   String get orderCancelReasonId => _$this._orderCancelReasonId;
+
   set orderCancelReasonId(String orderCancelReasonId) =>
       _$this._orderCancelReasonId = orderCancelReasonId;
 
   String _cancelNotes;
+
   String get cancelNotes => _$this._cancelNotes;
+
   set cancelNotes(String cancelNotes) => _$this._cancelNotes = cancelNotes;
 
   int _quantityCancelled;
+
   int get quantityCancelled => _$this._quantityCancelled;
+
   set quantityCancelled(int quantityCancelled) =>
       _$this._quantityCancelled = quantityCancelled;
 
@@ -277,6 +285,7 @@ class _$CancelOrderLinesApiCancellationsActions
       CancelOrderLinesApiCancellationsBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

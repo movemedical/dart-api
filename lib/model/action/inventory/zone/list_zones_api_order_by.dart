@@ -21,11 +21,9 @@ class ListZonesApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListZonesApiOrderBy> get values =>
-      _$listZonesApiOrderByValues;
+  static BuiltSet<ListZonesApiOrderBy> get values => _$values;
 
-  static ListZonesApiOrderBy valueOf(String name) =>
-      _$listZonesApiOrderByValueOf(name);
+  static ListZonesApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

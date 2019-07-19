@@ -100,8 +100,10 @@ class GetOrgUnitApiResponseBuilder
   _$GetOrgUnitApiResponse _$v;
 
   GetOrgUnitApiOrgUnitDetailBuilder _details;
+
   GetOrgUnitApiOrgUnitDetailBuilder get details =>
       _$this._details ??= new GetOrgUnitApiOrgUnitDetailBuilder();
+
   set details(GetOrgUnitApiOrgUnitDetailBuilder details) =>
       _$this._details = details;
 
@@ -196,12 +198,14 @@ class _$GetOrgUnitApiResponseActions extends GetOrgUnitApiResponseActions {
   GetOrgUnitApiResponseBuilder newBuilder$() => GetOrgUnitApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.details,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

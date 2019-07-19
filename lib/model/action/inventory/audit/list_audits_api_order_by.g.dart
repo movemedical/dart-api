@@ -30,7 +30,7 @@ const ListAuditsApiOrderBy _$wireCOUNT_TYPE =
 const ListAuditsApiOrderBy _$wireDAYS_UNTIL_DUE =
     const ListAuditsApiOrderBy._('DAYS_UNTIL_DUE');
 
-ListAuditsApiOrderBy _$listAuditsApiOrderByValueOf(String name) {
+ListAuditsApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NUMBER':
       return _$wireNUMBER;
@@ -61,7 +61,7 @@ ListAuditsApiOrderBy _$listAuditsApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListAuditsApiOrderBy> _$listAuditsApiOrderByValues =
+final BuiltSet<ListAuditsApiOrderBy> _$values =
     new BuiltSet<ListAuditsApiOrderBy>(const <ListAuditsApiOrderBy>[
   _$wireNUMBER,
   _$wireREFERENCE,

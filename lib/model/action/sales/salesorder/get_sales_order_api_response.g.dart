@@ -47,8 +47,8 @@ class _$GetSalesOrderApiResponseSerializer
       result
         ..add('customDocs')
         ..add(serializers.serialize(object.customDocs,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(CustomDoc)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(OrderCustomDoc)])));
     }
     if (object.attributes != null) {
       result
@@ -91,8 +91,9 @@ class _$GetSalesOrderApiResponseSerializer
           break;
         case 'customDocs':
           result.customDocs.replace(serializers.deserialize(value,
-              specifiedType: const FullType(
-                  BuiltList, const [const FullType(CustomDoc)])) as BuiltList);
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(OrderCustomDoc)]))
+              as BuiltList);
           break;
         case 'attributes':
           result.attributes.replace(serializers.deserialize(value,
@@ -115,7 +116,7 @@ class _$GetSalesOrderApiResponse extends GetSalesOrderApiResponse {
   @override
   final BuiltList<CustomFieldValue> orderCustomFieldValues;
   @override
-  final BuiltList<CustomDoc> customDocs;
+  final BuiltList<OrderCustomDoc> customDocs;
   @override
   final BuiltList<GetSalesOrderApiOrderAttribute> attributes;
 
@@ -179,33 +180,43 @@ class GetSalesOrderApiResponseBuilder
   _$GetSalesOrderApiResponse _$v;
 
   GetSalesOrderApiOrderDetailBuilder _orderDetail;
+
   GetSalesOrderApiOrderDetailBuilder get orderDetail =>
       _$this._orderDetail ??= new GetSalesOrderApiOrderDetailBuilder();
+
   set orderDetail(GetSalesOrderApiOrderDetailBuilder orderDetail) =>
       _$this._orderDetail = orderDetail;
 
   GetSalesOrderApiDisplayRulesBuilder _displayRules;
+
   GetSalesOrderApiDisplayRulesBuilder get displayRules =>
       _$this._displayRules ??= new GetSalesOrderApiDisplayRulesBuilder();
+
   set displayRules(GetSalesOrderApiDisplayRulesBuilder displayRules) =>
       _$this._displayRules = displayRules;
 
   ListBuilder<CustomFieldValue> _orderCustomFieldValues;
+
   ListBuilder<CustomFieldValue> get orderCustomFieldValues =>
       _$this._orderCustomFieldValues ??= new ListBuilder<CustomFieldValue>();
+
   set orderCustomFieldValues(
           ListBuilder<CustomFieldValue> orderCustomFieldValues) =>
       _$this._orderCustomFieldValues = orderCustomFieldValues;
 
-  ListBuilder<CustomDoc> _customDocs;
-  ListBuilder<CustomDoc> get customDocs =>
-      _$this._customDocs ??= new ListBuilder<CustomDoc>();
-  set customDocs(ListBuilder<CustomDoc> customDocs) =>
+  ListBuilder<OrderCustomDoc> _customDocs;
+
+  ListBuilder<OrderCustomDoc> get customDocs =>
+      _$this._customDocs ??= new ListBuilder<OrderCustomDoc>();
+
+  set customDocs(ListBuilder<OrderCustomDoc> customDocs) =>
       _$this._customDocs = customDocs;
 
   ListBuilder<GetSalesOrderApiOrderAttribute> _attributes;
+
   ListBuilder<GetSalesOrderApiOrderAttribute> get attributes =>
       _$this._attributes ??= new ListBuilder<GetSalesOrderApiOrderAttribute>();
+
   set attributes(ListBuilder<GetSalesOrderApiOrderAttribute> attributes) =>
       _$this._attributes = attributes;
 
@@ -296,7 +307,7 @@ class _$GetSalesOrderApiResponseActions
   final GetSalesOrderApiOrderDetailActions orderDetail;
   final GetSalesOrderApiDisplayRulesActions displayRules;
   final FieldDispatcher<BuiltList<CustomFieldValue>> orderCustomFieldValues;
-  final FieldDispatcher<BuiltList<CustomDoc>> customDocs;
+  final FieldDispatcher<BuiltList<OrderCustomDoc>> customDocs;
   final FieldDispatcher<BuiltList<GetSalesOrderApiOrderAttribute>> attributes;
 
   _$GetSalesOrderApiResponseActions._(this.options$)
@@ -327,7 +338,7 @@ class _$GetSalesOrderApiResponseActions
             (a) => a?.orderCustomFieldValues,
             (s) => s?.orderCustomFieldValues,
             (p, b) => p?.orderCustomFieldValues = b),
-        customDocs = options$.field<BuiltList<CustomDoc>>(
+        customDocs = options$.field<BuiltList<OrderCustomDoc>>(
             'customDocs',
             (a) => a?.customDocs,
             (s) => s?.customDocs,
@@ -351,6 +362,7 @@ class _$GetSalesOrderApiResponseActions
       GetSalesOrderApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.orderDetail,
@@ -358,6 +370,7 @@ class _$GetSalesOrderApiResponseActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

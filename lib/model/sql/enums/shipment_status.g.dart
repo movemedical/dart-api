@@ -20,7 +20,7 @@ const ShipmentStatus _$wireEXCEPTION = const ShipmentStatus._('EXCEPTION');
 const ShipmentStatus _$wireREVIEW = const ShipmentStatus._('REVIEW');
 const ShipmentStatus _$wireCANCELED = const ShipmentStatus._('CANCELED');
 
-ShipmentStatus _$shipmentStatusValueOf(String name) {
+ShipmentStatus _$valueOf(String name) {
   switch (name) {
     case 'PENDING':
       return _$wirePENDING;
@@ -49,7 +49,7 @@ ShipmentStatus _$shipmentStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<ShipmentStatus> _$shipmentStatusValues =
+final BuiltSet<ShipmentStatus> _$values =
     new BuiltSet<ShipmentStatus>(const <ShipmentStatus>[
   _$wirePENDING,
   _$wireAWAITING_RELEASE,

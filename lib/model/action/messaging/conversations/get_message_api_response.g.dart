@@ -99,7 +99,9 @@ class GetMessageApiResponseBuilder
   _$GetMessageApiResponse _$v;
 
   MessageBuilder _message;
+
   MessageBuilder get message => _$this._message ??= new MessageBuilder();
+
   set message(MessageBuilder message) => _$this._message = message;
 
   GetMessageApiResponseBuilder();
@@ -191,12 +193,14 @@ class _$GetMessageApiResponseActions extends GetMessageApiResponseActions {
   GetMessageApiResponseBuilder newBuilder$() => GetMessageApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.message,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

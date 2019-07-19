@@ -31,11 +31,9 @@ class ListBillToAddressesApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListBillToAddressesApiOrderBy> get values =>
-      _$listBillToAddressesApiOrderByValues;
+  static BuiltSet<ListBillToAddressesApiOrderBy> get values => _$values;
 
-  static ListBillToAddressesApiOrderBy valueOf(String name) =>
-      _$listBillToAddressesApiOrderByValueOf(name);
+  static ListBillToAddressesApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

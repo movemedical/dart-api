@@ -107,7 +107,9 @@ class ListUsersForIssueAssignmentApiRequestBuilder
   _$ListUsersForIssueAssignmentApiRequest _$v;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   ListUsersForIssueAssignmentApiRequestBuilder();
@@ -186,6 +188,7 @@ class _$ListUsersForIssueAssignmentApiRequestActions
       ListUsersForIssueAssignmentApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

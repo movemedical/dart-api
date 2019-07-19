@@ -55,6 +55,7 @@ class _$UpdateDceApi extends UpdateDceApi {
           ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

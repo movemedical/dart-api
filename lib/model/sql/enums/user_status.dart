@@ -22,9 +22,9 @@ class UserStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<UserStatus> get values => _$userStatusValues;
+  static BuiltSet<UserStatus> get values => _$values;
 
-  static UserStatus valueOf(String name) => _$userStatusValueOf(name);
+  static UserStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

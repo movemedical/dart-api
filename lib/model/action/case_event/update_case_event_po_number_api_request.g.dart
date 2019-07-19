@@ -121,11 +121,15 @@ class UpdateCaseEventPONumberApiRequestBuilder
   _$UpdateCaseEventPONumberApiRequest _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   String _poNumber;
+
   String get poNumber => _$this._poNumber;
+
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   UpdateCaseEventPONumberApiRequestBuilder();
@@ -212,6 +216,7 @@ class _$UpdateCaseEventPONumberApiRequestActions
       UpdateCaseEventPONumberApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

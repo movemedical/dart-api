@@ -119,15 +119,21 @@ class EmailBuilder implements Builder<Email, EmailBuilder> {
   _$Email _$v;
 
   String _user;
+
   String get user => _$this._user;
+
   set user(String user) => _$this._user = user;
 
   String _domain;
+
   String get domain => _$this._domain;
+
   set domain(String domain) => _$this._domain = domain;
 
   String _suffix;
+
   String get suffix => _$this._suffix;
+
   set suffix(String suffix) => _$this._suffix = suffix;
 
   EmailBuilder();
@@ -204,6 +210,7 @@ class _$EmailActions extends EmailActions {
   EmailBuilder newBuilder$() => EmailBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

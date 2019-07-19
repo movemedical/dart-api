@@ -64,6 +64,7 @@ class _$FindPatientApi extends FindPatientApi {
           ApiResult<FindPatientApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

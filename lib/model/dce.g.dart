@@ -208,36 +208,52 @@ class DceBuilder implements Builder<Dce, DceBuilder> {
   _$Dce _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   OrgType _orgType;
+
   OrgType get orgType => _$this._orgType;
+
   set orgType(OrgType orgType) => _$this._orgType = orgType;
 
   String _workingHomeId;
+
   String get workingHomeId => _$this._workingHomeId;
+
   set workingHomeId(String workingHomeId) =>
       _$this._workingHomeId = workingHomeId;
 
   String _workingAtId;
+
   String get workingAtId => _$this._workingAtId;
+
   set workingAtId(String workingAtId) => _$this._workingAtId = workingAtId;
 
   PersonNameBuilder _name;
+
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
+
   set name(PersonNameBuilder name) => _$this._name = name;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   DceBuilder();
@@ -371,6 +387,7 @@ class _$DceActions extends DceActions {
   DceBuilder newBuilder$() => DceBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
@@ -378,6 +395,7 @@ class _$DceActions extends DceActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -68,6 +68,7 @@ class _$ListContainerJournalsApi extends ListContainerJournalsApi {
           ApiResult<ListContainerJournalsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

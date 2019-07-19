@@ -44,6 +44,12 @@ class _$BarcodeScansToStockApiBarcodeStockSerializer
         ..add(serializers.serialize(object.stockSummary,
             specifiedType: const FullType(ListStockSummaryApiStockSummary)));
     }
+    if (object.kitContainerSummaryKey != null) {
+      result
+        ..add('kitContainerSummaryKey')
+        ..add(serializers.serialize(object.kitContainerSummaryKey,
+            specifiedType: const FullType(String)));
+    }
     if (object.stockItem != null) {
       result
         ..add('stockItem')
@@ -81,6 +87,10 @@ class _$BarcodeScansToStockApiBarcodeStockSerializer
                       const FullType(ListStockSummaryApiStockSummary))
               as ListStockSummaryApiStockSummary);
           break;
+        case 'kitContainerSummaryKey':
+          result.kitContainerSummaryKey = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'stockItem':
           result.stockItem.replace(serializers.deserialize(value,
               specifiedType: const FullType(StockItem)) as StockItem);
@@ -101,6 +111,8 @@ class _$BarcodeScansToStockApiBarcodeStock
   @override
   final ListStockSummaryApiStockSummary stockSummary;
   @override
+  final String kitContainerSummaryKey;
+  @override
   final StockItem stockItem;
 
   factory _$BarcodeScansToStockApiBarcodeStock(
@@ -109,7 +121,11 @@ class _$BarcodeScansToStockApiBarcodeStock
           .build();
 
   _$BarcodeScansToStockApiBarcodeStock._(
-      {this.scan, this.multipleMatches, this.stockSummary, this.stockItem})
+      {this.scan,
+      this.multipleMatches,
+      this.stockSummary,
+      this.kitContainerSummaryKey,
+      this.stockItem})
       : super._();
 
   @override
@@ -128,14 +144,17 @@ class _$BarcodeScansToStockApiBarcodeStock
         scan == other.scan &&
         multipleMatches == other.multipleMatches &&
         stockSummary == other.stockSummary &&
+        kitContainerSummaryKey == other.kitContainerSummaryKey &&
         stockItem == other.stockItem;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, scan.hashCode), multipleMatches.hashCode),
-            stockSummary.hashCode),
+        $jc(
+            $jc($jc($jc(0, scan.hashCode), multipleMatches.hashCode),
+                stockSummary.hashCode),
+            kitContainerSummaryKey.hashCode),
         stockItem.hashCode));
   }
 
@@ -145,6 +164,7 @@ class _$BarcodeScansToStockApiBarcodeStock
           ..add('scan', scan)
           ..add('multipleMatches', multipleMatches)
           ..add('stockSummary', stockSummary)
+          ..add('kitContainerSummaryKey', kitContainerSummaryKey)
           ..add('stockItem', stockItem))
         .toString();
   }
@@ -157,24 +177,39 @@ class BarcodeScansToStockApiBarcodeStockBuilder
   _$BarcodeScansToStockApiBarcodeStock _$v;
 
   BarcodeScansToStockApiScanBuilder _scan;
+
   BarcodeScansToStockApiScanBuilder get scan =>
       _$this._scan ??= new BarcodeScansToStockApiScanBuilder();
+
   set scan(BarcodeScansToStockApiScanBuilder scan) => _$this._scan = scan;
 
   bool _multipleMatches;
+
   bool get multipleMatches => _$this._multipleMatches;
+
   set multipleMatches(bool multipleMatches) =>
       _$this._multipleMatches = multipleMatches;
 
   ListStockSummaryApiStockSummaryBuilder _stockSummary;
+
   ListStockSummaryApiStockSummaryBuilder get stockSummary =>
       _$this._stockSummary ??= new ListStockSummaryApiStockSummaryBuilder();
+
   set stockSummary(ListStockSummaryApiStockSummaryBuilder stockSummary) =>
       _$this._stockSummary = stockSummary;
 
+  String _kitContainerSummaryKey;
+
+  String get kitContainerSummaryKey => _$this._kitContainerSummaryKey;
+
+  set kitContainerSummaryKey(String kitContainerSummaryKey) =>
+      _$this._kitContainerSummaryKey = kitContainerSummaryKey;
+
   StockItemBuilder _stockItem;
+
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
+
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   BarcodeScansToStockApiBarcodeStockBuilder();
@@ -184,6 +219,7 @@ class BarcodeScansToStockApiBarcodeStockBuilder
       _scan = _$v.scan?.toBuilder();
       _multipleMatches = _$v.multipleMatches;
       _stockSummary = _$v.stockSummary?.toBuilder();
+      _kitContainerSummaryKey = _$v.kitContainerSummaryKey;
       _stockItem = _$v.stockItem?.toBuilder();
       _$v = null;
     }
@@ -212,6 +248,7 @@ class BarcodeScansToStockApiBarcodeStockBuilder
               scan: _scan?.build(),
               multipleMatches: multipleMatches,
               stockSummary: _stockSummary?.build(),
+              kitContainerSummaryKey: kitContainerSummaryKey,
               stockItem: _stockItem?.build());
     } catch (_) {
       String _$failedField;
@@ -221,6 +258,7 @@ class BarcodeScansToStockApiBarcodeStockBuilder
 
         _$failedField = 'stockSummary';
         _stockSummary?.build();
+
         _$failedField = 'stockItem';
         _stockItem?.build();
       } catch (e) {
@@ -259,6 +297,7 @@ class _$BarcodeScansToStockApiBarcodeStockActions
   final BarcodeScansToStockApiScanActions scan;
   final FieldDispatcher<bool> multipleMatches;
   final ListStockSummaryApiStockSummaryActions stockSummary;
+  final FieldDispatcher<String> kitContainerSummaryKey;
   final StockItemActions stockItem;
 
   _$BarcodeScansToStockApiBarcodeStockActions._(this.options$)
@@ -288,6 +327,11 @@ class _$BarcodeScansToStockApiBarcodeStockActions
                 (s) => s?.stockSummary,
                 (b) => b?.stockSummary,
                 (parent, builder) => parent?.stockSummary = builder)),
+        kitContainerSummaryKey = options$.field<String>(
+            'kitContainerSummaryKey',
+            (a) => a?.kitContainerSummaryKey,
+            (s) => s?.kitContainerSummaryKey,
+            (p, b) => p?.kitContainerSummaryKey = b),
         stockItem = StockItemActions(() =>
             options$.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
@@ -310,6 +354,7 @@ class _$BarcodeScansToStockApiBarcodeStockActions
       BarcodeScansToStockApiBarcodeStockBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.scan,
@@ -318,11 +363,13 @@ class _$BarcodeScansToStockApiBarcodeStockActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
         this.replace$,
         this.multipleMatches,
+        this.kitContainerSummaryKey,
       ]);
 
   @override
@@ -331,6 +378,7 @@ class _$BarcodeScansToStockApiBarcodeStockActions
     scan.reducer$(reducer);
     multipleMatches.reducer$(reducer);
     stockSummary.reducer$(reducer);
+    kitContainerSummaryKey.reducer$(reducer);
     stockItem.reducer$(reducer);
   }
 

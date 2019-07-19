@@ -163,6 +163,24 @@ class _$ListSalesOrdersApiRequestSerializer
         ..add(serializers.serialize(object.search,
             specifiedType: const FullType(String)));
     }
+    if (object.salesLeadId != null) {
+      result
+        ..add('salesLeadId')
+        ..add(serializers.serialize(object.salesLeadId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.opsLeadId != null) {
+      result
+        ..add('opsLeadId')
+        ..add(serializers.serialize(object.opsLeadId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.enableCatalogBasedVisibility != null) {
+      result
+        ..add('enableCatalogBasedVisibility')
+        ..add(serializers.serialize(object.enableCatalogBasedVisibility,
+            specifiedType: const FullType(bool)));
+    }
     if (object.forExport != null) {
       result
         ..add('forExport')
@@ -308,6 +326,18 @@ class _$ListSalesOrdersApiRequestSerializer
           result.search = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'salesLeadId':
+          result.salesLeadId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'opsLeadId':
+          result.opsLeadId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'enableCatalogBasedVisibility':
+          result.enableCatalogBasedVisibility = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'forExport':
           result.forExport = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -374,6 +404,12 @@ class _$ListSalesOrdersApiRequest extends ListSalesOrdersApiRequest {
   @override
   final String search;
   @override
+  final String salesLeadId;
+  @override
+  final String opsLeadId;
+  @override
+  final bool enableCatalogBasedVisibility;
+  @override
   final bool forExport;
   @override
   final PaginationParams paging;
@@ -406,6 +442,9 @@ class _$ListSalesOrdersApiRequest extends ListSalesOrdersApiRequest {
       this.pendingPo,
       this.orderNumber,
       this.search,
+      this.salesLeadId,
+      this.opsLeadId,
+      this.enableCatalogBasedVisibility,
       this.forExport,
       this.paging,
       this.orderBy})
@@ -445,6 +484,9 @@ class _$ListSalesOrdersApiRequest extends ListSalesOrdersApiRequest {
         pendingPo == other.pendingPo &&
         orderNumber == other.orderNumber &&
         search == other.search &&
+        salesLeadId == other.salesLeadId &&
+        opsLeadId == other.opsLeadId &&
+        enableCatalogBasedVisibility == other.enableCatalogBasedVisibility &&
         forExport == other.forExport &&
         paging == other.paging &&
         orderBy == other.orderBy;
@@ -470,23 +512,23 @@ class _$ListSalesOrdersApiRequest extends ListSalesOrdersApiRequest {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, customerIds.hashCode), orderStatuses.hashCode), orderReasonIds.hashCode), locationIds.hashCode), locationTypes.hashCode),
-                                                                                orgUnitIds.hashCode),
-                                                                            itemCategoryIds.hashCode),
-                                                                        createdByContactIds.hashCode),
-                                                                    hcrIds.hashCode),
-                                                                teamIds.hashCode),
-                                                            itemIds.hashCode),
-                                                        lotIds.hashCode),
-                                                    serialIds.hashCode),
-                                                createdDateRange.hashCode),
-                                            hasErpError.hashCode),
-                                        billOnly.hashCode),
-                                    erpOrderNumberSearch.hashCode),
-                                poNumberSearch.hashCode),
-                            pendingPo.hashCode),
-                        orderNumber.hashCode),
-                    search.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, customerIds.hashCode), orderStatuses.hashCode), orderReasonIds.hashCode), locationIds.hashCode), locationTypes.hashCode), orgUnitIds.hashCode), itemCategoryIds.hashCode), createdByContactIds.hashCode),
+                                                                                hcrIds.hashCode),
+                                                                            teamIds.hashCode),
+                                                                        itemIds.hashCode),
+                                                                    lotIds.hashCode),
+                                                                serialIds.hashCode),
+                                                            createdDateRange.hashCode),
+                                                        hasErpError.hashCode),
+                                                    billOnly.hashCode),
+                                                erpOrderNumberSearch.hashCode),
+                                            poNumberSearch.hashCode),
+                                        pendingPo.hashCode),
+                                    orderNumber.hashCode),
+                                search.hashCode),
+                            salesLeadId.hashCode),
+                        opsLeadId.hashCode),
+                    enableCatalogBasedVisibility.hashCode),
                 forExport.hashCode),
             paging.hashCode),
         orderBy.hashCode));
@@ -516,6 +558,9 @@ class _$ListSalesOrdersApiRequest extends ListSalesOrdersApiRequest {
           ..add('pendingPo', pendingPo)
           ..add('orderNumber', orderNumber)
           ..add('search', search)
+          ..add('salesLeadId', salesLeadId)
+          ..add('opsLeadId', opsLeadId)
+          ..add('enableCatalogBasedVisibility', enableCatalogBasedVisibility)
           ..add('forExport', forExport)
           ..add('paging', paging)
           ..add('orderBy', orderBy))
@@ -529,126 +574,193 @@ class ListSalesOrdersApiRequestBuilder
   _$ListSalesOrdersApiRequest _$v;
 
   ListBuilder<String> _customerIds;
+
   ListBuilder<String> get customerIds =>
       _$this._customerIds ??= new ListBuilder<String>();
+
   set customerIds(ListBuilder<String> customerIds) =>
       _$this._customerIds = customerIds;
 
   ListBuilder<OrderStatus> _orderStatuses;
+
   ListBuilder<OrderStatus> get orderStatuses =>
       _$this._orderStatuses ??= new ListBuilder<OrderStatus>();
+
   set orderStatuses(ListBuilder<OrderStatus> orderStatuses) =>
       _$this._orderStatuses = orderStatuses;
 
   ListBuilder<String> _orderReasonIds;
+
   ListBuilder<String> get orderReasonIds =>
       _$this._orderReasonIds ??= new ListBuilder<String>();
+
   set orderReasonIds(ListBuilder<String> orderReasonIds) =>
       _$this._orderReasonIds = orderReasonIds;
 
   ListBuilder<String> _locationIds;
+
   ListBuilder<String> get locationIds =>
       _$this._locationIds ??= new ListBuilder<String>();
+
   set locationIds(ListBuilder<String> locationIds) =>
       _$this._locationIds = locationIds;
 
   ListBuilder<LocationType> _locationTypes;
+
   ListBuilder<LocationType> get locationTypes =>
       _$this._locationTypes ??= new ListBuilder<LocationType>();
+
   set locationTypes(ListBuilder<LocationType> locationTypes) =>
       _$this._locationTypes = locationTypes;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   ListBuilder<String> _itemCategoryIds;
+
   ListBuilder<String> get itemCategoryIds =>
       _$this._itemCategoryIds ??= new ListBuilder<String>();
+
   set itemCategoryIds(ListBuilder<String> itemCategoryIds) =>
       _$this._itemCategoryIds = itemCategoryIds;
 
   ListBuilder<String> _createdByContactIds;
+
   ListBuilder<String> get createdByContactIds =>
       _$this._createdByContactIds ??= new ListBuilder<String>();
+
   set createdByContactIds(ListBuilder<String> createdByContactIds) =>
       _$this._createdByContactIds = createdByContactIds;
 
   ListBuilder<String> _hcrIds;
+
   ListBuilder<String> get hcrIds =>
       _$this._hcrIds ??= new ListBuilder<String>();
+
   set hcrIds(ListBuilder<String> hcrIds) => _$this._hcrIds = hcrIds;
 
   ListBuilder<String> _teamIds;
+
   ListBuilder<String> get teamIds =>
       _$this._teamIds ??= new ListBuilder<String>();
+
   set teamIds(ListBuilder<String> teamIds) => _$this._teamIds = teamIds;
 
   ListBuilder<String> _itemIds;
+
   ListBuilder<String> get itemIds =>
       _$this._itemIds ??= new ListBuilder<String>();
+
   set itemIds(ListBuilder<String> itemIds) => _$this._itemIds = itemIds;
 
   ListBuilder<String> _lotIds;
+
   ListBuilder<String> get lotIds =>
       _$this._lotIds ??= new ListBuilder<String>();
+
   set lotIds(ListBuilder<String> lotIds) => _$this._lotIds = lotIds;
 
   ListBuilder<String> _serialIds;
+
   ListBuilder<String> get serialIds =>
       _$this._serialIds ??= new ListBuilder<String>();
+
   set serialIds(ListBuilder<String> serialIds) => _$this._serialIds = serialIds;
 
   DateRangeBuilder _createdDateRange;
+
   DateRangeBuilder get createdDateRange =>
       _$this._createdDateRange ??= new DateRangeBuilder();
+
   set createdDateRange(DateRangeBuilder createdDateRange) =>
       _$this._createdDateRange = createdDateRange;
 
   bool _hasErpError;
+
   bool get hasErpError => _$this._hasErpError;
+
   set hasErpError(bool hasErpError) => _$this._hasErpError = hasErpError;
 
   bool _billOnly;
+
   bool get billOnly => _$this._billOnly;
+
   set billOnly(bool billOnly) => _$this._billOnly = billOnly;
 
   String _erpOrderNumberSearch;
+
   String get erpOrderNumberSearch => _$this._erpOrderNumberSearch;
+
   set erpOrderNumberSearch(String erpOrderNumberSearch) =>
       _$this._erpOrderNumberSearch = erpOrderNumberSearch;
 
   String _poNumberSearch;
+
   String get poNumberSearch => _$this._poNumberSearch;
+
   set poNumberSearch(String poNumberSearch) =>
       _$this._poNumberSearch = poNumberSearch;
 
   bool _pendingPo;
+
   bool get pendingPo => _$this._pendingPo;
+
   set pendingPo(bool pendingPo) => _$this._pendingPo = pendingPo;
 
   String _orderNumber;
+
   String get orderNumber => _$this._orderNumber;
+
   set orderNumber(String orderNumber) => _$this._orderNumber = orderNumber;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
+  String _salesLeadId;
+
+  String get salesLeadId => _$this._salesLeadId;
+
+  set salesLeadId(String salesLeadId) => _$this._salesLeadId = salesLeadId;
+
+  String _opsLeadId;
+
+  String get opsLeadId => _$this._opsLeadId;
+
+  set opsLeadId(String opsLeadId) => _$this._opsLeadId = opsLeadId;
+
+  bool _enableCatalogBasedVisibility;
+
+  bool get enableCatalogBasedVisibility => _$this._enableCatalogBasedVisibility;
+
+  set enableCatalogBasedVisibility(bool enableCatalogBasedVisibility) =>
+      _$this._enableCatalogBasedVisibility = enableCatalogBasedVisibility;
+
   bool _forExport;
+
   bool get forExport => _$this._forExport;
+
   set forExport(bool forExport) => _$this._forExport = forExport;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListSalesOrdersApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListSalesOrdersApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListSalesOrdersApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListSalesOrdersApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -677,6 +789,9 @@ class ListSalesOrdersApiRequestBuilder
       _pendingPo = _$v.pendingPo;
       _orderNumber = _$v.orderNumber;
       _search = _$v.search;
+      _salesLeadId = _$v.salesLeadId;
+      _opsLeadId = _$v.opsLeadId;
+      _enableCatalogBasedVisibility = _$v.enableCatalogBasedVisibility;
       _forExport = _$v.forExport;
       _paging = _$v.paging?.toBuilder();
       _orderBy = _$v.orderBy?.toBuilder();
@@ -725,6 +840,9 @@ class ListSalesOrdersApiRequestBuilder
               pendingPo: pendingPo,
               orderNumber: orderNumber,
               search: search,
+              salesLeadId: salesLeadId,
+              opsLeadId: opsLeadId,
+              enableCatalogBasedVisibility: enableCatalogBasedVisibility,
               forExport: forExport,
               paging: _paging?.build(),
               orderBy: _orderBy?.build());
@@ -818,6 +936,9 @@ class _$ListSalesOrdersApiRequestActions
   final FieldDispatcher<bool> pendingPo;
   final FieldDispatcher<String> orderNumber;
   final FieldDispatcher<String> search;
+  final FieldDispatcher<String> salesLeadId;
+  final FieldDispatcher<String> opsLeadId;
+  final FieldDispatcher<bool> enableCatalogBasedVisibility;
   final FieldDispatcher<bool> forExport;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListSalesOrdersApiOrderBy> orderBy;
@@ -908,6 +1029,18 @@ class _$ListSalesOrdersApiRequestActions
             (p, b) => p?.orderNumber = b),
         search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
+        salesLeadId = options$.field<String>(
+            'salesLeadId',
+            (a) => a?.salesLeadId,
+            (s) => s?.salesLeadId,
+            (p, b) => p?.salesLeadId = b),
+        opsLeadId = options$.field<String>('opsLeadId', (a) => a?.opsLeadId,
+            (s) => s?.opsLeadId, (p, b) => p?.opsLeadId = b),
+        enableCatalogBasedVisibility = options$.field<bool>(
+            'enableCatalogBasedVisibility',
+            (a) => a?.enableCatalogBasedVisibility,
+            (s) => s?.enableCatalogBasedVisibility,
+            (p, b) => p?.enableCatalogBasedVisibility = b),
         forExport = options$.field<bool>('forExport', (a) => a?.forExport,
             (s) => s?.forExport, (p, b) => p?.forExport = b),
         paging = PaginationParamsActions(() => options$.stateful<
@@ -943,6 +1076,7 @@ class _$ListSalesOrdersApiRequestActions
       ListSalesOrdersApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.createdDateRange,
@@ -951,6 +1085,7 @@ class _$ListSalesOrdersApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -975,6 +1110,9 @@ class _$ListSalesOrdersApiRequestActions
         this.pendingPo,
         this.orderNumber,
         this.search,
+        this.salesLeadId,
+        this.opsLeadId,
+        this.enableCatalogBasedVisibility,
         this.forExport,
       ]);
 
@@ -1002,6 +1140,9 @@ class _$ListSalesOrdersApiRequestActions
     pendingPo.reducer$(reducer);
     orderNumber.reducer$(reducer);
     search.reducer$(reducer);
+    salesLeadId.reducer$(reducer);
+    opsLeadId.reducer$(reducer);
+    enableCatalogBasedVisibility.reducer$(reducer);
     forExport.reducer$(reducer);
     paging.reducer$(reducer);
     orderBy.reducer$(reducer);

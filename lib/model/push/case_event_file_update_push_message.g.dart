@@ -158,22 +158,30 @@ class CaseEventFileUpdatePushMessageBuilder
   _$CaseEventFileUpdatePushMessage _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   String _fileId;
+
   String get fileId => _$this._fileId;
+
   set fileId(String fileId) => _$this._fileId = fileId;
 
   CaseEventFileUpdatePushMessageCaseEventFileUpdateType _updateType;
+
   CaseEventFileUpdatePushMessageCaseEventFileUpdateType get updateType =>
       _$this._updateType;
+
   set updateType(
           CaseEventFileUpdatePushMessageCaseEventFileUpdateType updateType) =>
       _$this._updateType = updateType;
 
   double _percentUploadedDecimalForm;
+
   double get percentUploadedDecimalForm => _$this._percentUploadedDecimalForm;
+
   set percentUploadedDecimalForm(double percentUploadedDecimalForm) =>
       _$this._percentUploadedDecimalForm = percentUploadedDecimalForm;
 
@@ -280,6 +288,7 @@ class _$CaseEventFileUpdatePushMessageActions
       CaseEventFileUpdatePushMessageBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

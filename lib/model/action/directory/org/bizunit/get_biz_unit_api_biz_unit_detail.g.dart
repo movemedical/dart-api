@@ -254,44 +254,64 @@ class GetBizUnitApiBizUnitDetailBuilder
   _$GetBizUnitApiBizUnitDetail _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   OrgType _orgType;
+
   OrgType get orgType => _$this._orgType;
+
   set orgType(OrgType orgType) => _$this._orgType = orgType;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _orgName;
+
   String get orgName => _$this._orgName;
+
   set orgName(String orgName) => _$this._orgName = orgName;
 
   String _key;
+
   String get key => _$this._key;
+
   set key(String key) => _$this._key = key;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   bool _publicListing;
+
   bool get publicListing => _$this._publicListing;
+
   set publicListing(bool publicListing) =>
       _$this._publicListing = publicListing;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   GetBizUnitApiBizUnitDetailBuilder();
@@ -439,12 +459,14 @@ class _$GetBizUnitApiBizUnitDetailActions
       GetBizUnitApiBizUnitDetailBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

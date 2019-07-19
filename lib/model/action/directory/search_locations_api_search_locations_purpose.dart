@@ -15,6 +15,7 @@ class SearchLocationsApiSearchLocationsPurpose extends EnumClass {
   static const SearchLocationsApiSearchLocationsPurpose TRANSFER =
       _$wireTRANSFER;
   static const SearchLocationsApiSearchLocationsPurpose RECEIVE = _$wireRECEIVE;
+  static const SearchLocationsApiSearchLocationsPurpose REPORT = _$wireREPORT;
 
   ////////////////////////////////
   /// Constructor
@@ -27,10 +28,10 @@ class SearchLocationsApiSearchLocationsPurpose extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<SearchLocationsApiSearchLocationsPurpose> get values =>
-      _$searchLocationsApiSearchLocationsPurposeValues;
+      _$values;
 
   static SearchLocationsApiSearchLocationsPurpose valueOf(String name) =>
-      _$searchLocationsApiSearchLocationsPurposeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

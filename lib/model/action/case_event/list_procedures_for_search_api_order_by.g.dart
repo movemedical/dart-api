@@ -13,8 +13,7 @@ const ListProceduresForSearchApiOrderBy _$wireDESC =
 const ListProceduresForSearchApiOrderBy _$wireACTIVE =
     const ListProceduresForSearchApiOrderBy._('ACTIVE');
 
-ListProceduresForSearchApiOrderBy _$listProceduresForSearchApiOrderByValueOf(
-    String name) {
+ListProceduresForSearchApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -27,8 +26,7 @@ ListProceduresForSearchApiOrderBy _$listProceduresForSearchApiOrderByValueOf(
   }
 }
 
-final BuiltSet<ListProceduresForSearchApiOrderBy>
-    _$listProceduresForSearchApiOrderByValues =
+final BuiltSet<ListProceduresForSearchApiOrderBy> _$values =
     new BuiltSet<ListProceduresForSearchApiOrderBy>(const <
         ListProceduresForSearchApiOrderBy>[
   _$wireNAME,

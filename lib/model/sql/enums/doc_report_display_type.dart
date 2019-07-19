@@ -23,11 +23,9 @@ class DocReportDisplayType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<DocReportDisplayType> get values =>
-      _$docReportDisplayTypeValues;
+  static BuiltSet<DocReportDisplayType> get values => _$values;
 
-  static DocReportDisplayType valueOf(String name) =>
-      _$docReportDisplayTypeValueOf(name);
+  static DocReportDisplayType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

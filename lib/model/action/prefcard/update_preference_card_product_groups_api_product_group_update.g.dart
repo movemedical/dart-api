@@ -184,26 +184,36 @@ class UpdatePreferenceCardProductGroupsApiProductGroupUpdateBuilder
   _$UpdatePreferenceCardProductGroupsApiProductGroupUpdate _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _quantityPrimary;
+
   int get quantityPrimary => _$this._quantityPrimary;
+
   set quantityPrimary(int quantityPrimary) =>
       _$this._quantityPrimary = quantityPrimary;
 
   int _quantityPlusMinus1;
+
   int get quantityPlusMinus1 => _$this._quantityPlusMinus1;
+
   set quantityPlusMinus1(int quantityPlusMinus1) =>
       _$this._quantityPlusMinus1 = quantityPlusMinus1;
 
   int _quantityPlusMinus2;
+
   int get quantityPlusMinus2 => _$this._quantityPlusMinus2;
+
   set quantityPlusMinus2(int quantityPlusMinus2) =>
       _$this._quantityPlusMinus2 = quantityPlusMinus2;
 
   int _quantityPlusMinus3;
+
   int get quantityPlusMinus3 => _$this._quantityPlusMinus3;
+
   set quantityPlusMinus3(int quantityPlusMinus3) =>
       _$this._quantityPlusMinus3 = quantityPlusMinus3;
 
@@ -323,6 +333,7 @@ class _$UpdatePreferenceCardProductGroupsApiProductGroupUpdateActions
       UpdatePreferenceCardProductGroupsApiProductGroupUpdateBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

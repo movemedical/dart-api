@@ -4,6 +4,7 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 import 'package:movemedical_api/model/preference_card_type.dart';
+import 'package:movemedical_api/model/sql/enums/body_side.dart';
 
 part 'list_preference_cards_api_preference_card.g.dart';
 
@@ -53,6 +54,9 @@ abstract class ListPreferenceCardsApiPreferenceCard
 
   @nullable
   String get subProcedureName;
+
+  @nullable
+  BodySide get bodySide;
 
   @nullable
   PreferenceCardType get preferenceCardType;
@@ -114,6 +118,8 @@ abstract class ListPreferenceCardsApiPreferenceCardActions extends ModelActions<
   FieldDispatcher<String> get subProcedureId;
 
   FieldDispatcher<String> get subProcedureName;
+
+  FieldDispatcher<BodySide> get bodySide;
 
   FieldDispatcher<PreferenceCardType> get preferenceCardType;
 

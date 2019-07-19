@@ -122,13 +122,17 @@ class ListWebServiceLogsApiResponseBuilder
   _$ListWebServiceLogsApiResponse _$v;
 
   ListBuilder<ListWebServiceLogsApiWebServiceLog> _data;
+
   ListBuilder<ListWebServiceLogsApiWebServiceLog> get data =>
       _$this._data ??= new ListBuilder<ListWebServiceLogsApiWebServiceLog>();
+
   set data(ListBuilder<ListWebServiceLogsApiWebServiceLog> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListWebServiceLogsApiResponseBuilder();
@@ -225,6 +229,7 @@ class _$ListWebServiceLogsApiResponseActions
       ListWebServiceLogsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

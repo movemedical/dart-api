@@ -23,10 +23,9 @@ class AdjustmentStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<AdjustmentStatus> get values => _$adjustmentStatusValues;
+  static BuiltSet<AdjustmentStatus> get values => _$values;
 
-  static AdjustmentStatus valueOf(String name) =>
-      _$adjustmentStatusValueOf(name);
+  static AdjustmentStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -121,15 +121,21 @@ class ListSSOApiSSOBuilder
   _$ListSSOApiSSO _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   SSOType _ssoType;
+
   SSOType get ssoType => _$this._ssoType;
+
   set ssoType(SSOType ssoType) => _$this._ssoType = ssoType;
 
   String _ssoName;
+
   String get ssoName => _$this._ssoName;
+
   set ssoName(String ssoName) => _$this._ssoName = ssoName;
 
   ListSSOApiSSOBuilder();
@@ -208,6 +214,7 @@ class _$ListSSOApiSSOActions extends ListSSOApiSSOActions {
   ListSSOApiSSOBuilder newBuilder$() => ListSSOApiSSOBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

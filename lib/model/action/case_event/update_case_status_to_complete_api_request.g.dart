@@ -107,7 +107,9 @@ class UpdateCaseStatusToCompleteApiRequestBuilder
   _$UpdateCaseStatusToCompleteApiRequest _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   UpdateCaseStatusToCompleteApiRequestBuilder();
@@ -189,6 +191,7 @@ class _$UpdateCaseStatusToCompleteApiRequestActions
       UpdateCaseStatusToCompleteApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

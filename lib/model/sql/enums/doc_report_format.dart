@@ -24,9 +24,9 @@ class DocReportFormat extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<DocReportFormat> get values => _$docReportFormatValues;
+  static BuiltSet<DocReportFormat> get values => _$values;
 
-  static DocReportFormat valueOf(String name) => _$docReportFormatValueOf(name);
+  static DocReportFormat valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

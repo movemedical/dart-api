@@ -10,7 +10,7 @@ const ExportState _$wireGENERATING = const ExportState._('GENERATING');
 const ExportState _$wireUPLOADING = const ExportState._('UPLOADING');
 const ExportState _$wireCOMPLETE = const ExportState._('COMPLETE');
 
-ExportState _$exportStateValueOf(String name) {
+ExportState _$valueOf(String name) {
   switch (name) {
     case 'GENERATING':
       return _$wireGENERATING;
@@ -23,7 +23,7 @@ ExportState _$exportStateValueOf(String name) {
   }
 }
 
-final BuiltSet<ExportState> _$exportStateValues =
+final BuiltSet<ExportState> _$values =
     new BuiltSet<ExportState>(const <ExportState>[
   _$wireGENERATING,
   _$wireUPLOADING,

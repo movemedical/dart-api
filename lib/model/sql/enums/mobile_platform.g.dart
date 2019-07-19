@@ -9,7 +9,7 @@ part of 'mobile_platform.dart';
 const MobilePlatform _$wireIOS = const MobilePlatform._('IOS');
 const MobilePlatform _$wireANDROID = const MobilePlatform._('ANDROID');
 
-MobilePlatform _$mobilePlatformValueOf(String name) {
+MobilePlatform _$valueOf(String name) {
   switch (name) {
     case 'IOS':
       return _$wireIOS;
@@ -20,7 +20,7 @@ MobilePlatform _$mobilePlatformValueOf(String name) {
   }
 }
 
-final BuiltSet<MobilePlatform> _$mobilePlatformValues =
+final BuiltSet<MobilePlatform> _$values =
     new BuiltSet<MobilePlatform>(const <MobilePlatform>[
   _$wireIOS,
   _$wireANDROID,

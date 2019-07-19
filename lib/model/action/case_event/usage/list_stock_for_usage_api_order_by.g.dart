@@ -11,7 +11,7 @@ const ListStockForUsageApiOrderBy _$wireITEM =
 const ListStockForUsageApiOrderBy _$wireLOT_SERIAL =
     const ListStockForUsageApiOrderBy._('LOT_SERIAL');
 
-ListStockForUsageApiOrderBy _$listStockForUsageApiOrderByValueOf(String name) {
+ListStockForUsageApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'ITEM':
       return _$wireITEM;
@@ -22,9 +22,8 @@ ListStockForUsageApiOrderBy _$listStockForUsageApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListStockForUsageApiOrderBy>
-    _$listStockForUsageApiOrderByValues = new BuiltSet<
-        ListStockForUsageApiOrderBy>(const <ListStockForUsageApiOrderBy>[
+final BuiltSet<ListStockForUsageApiOrderBy> _$values = new BuiltSet<
+    ListStockForUsageApiOrderBy>(const <ListStockForUsageApiOrderBy>[
   _$wireITEM,
   _$wireLOT_SERIAL,
 ]);

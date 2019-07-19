@@ -244,6 +244,18 @@ class _$GetStockOrderApiOrderSerializer
         ..add(serializers.serialize(object.lastWebServiceLogId,
             specifiedType: const FullType(String)));
     }
+    if (object.salesLead != null) {
+      result
+        ..add('salesLead')
+        ..add(serializers.serialize(object.salesLead,
+            specifiedType: const FullType(UserLite)));
+    }
+    if (object.opsLead != null) {
+      result
+        ..add('opsLead')
+        ..add(serializers.serialize(object.opsLead,
+            specifiedType: const FullType(UserLite)));
+    }
 
     return result;
   }
@@ -418,6 +430,14 @@ class _$GetStockOrderApiOrderSerializer
           result.lastWebServiceLogId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'salesLead':
+          result.salesLead.replace(serializers.deserialize(value,
+              specifiedType: const FullType(UserLite)) as UserLite);
+          break;
+        case 'opsLead':
+          result.opsLead.replace(serializers.deserialize(value,
+              specifiedType: const FullType(UserLite)) as UserLite);
+          break;
       }
     }
 
@@ -498,6 +518,10 @@ class _$GetStockOrderApiOrder extends GetStockOrderApiOrder {
   final StockItem restockingKitTray;
   @override
   final String lastWebServiceLogId;
+  @override
+  final UserLite salesLead;
+  @override
+  final UserLite opsLead;
 
   factory _$GetStockOrderApiOrder(
           [void updates(GetStockOrderApiOrderBuilder b)]) =>
@@ -539,7 +563,9 @@ class _$GetStockOrderApiOrder extends GetStockOrderApiOrder {
       this.toResponsibleParty,
       this.kitTrayStockId,
       this.restockingKitTray,
-      this.lastWebServiceLogId})
+      this.lastWebServiceLogId,
+      this.salesLead,
+      this.opsLead})
       : super._();
 
   @override
@@ -589,7 +615,9 @@ class _$GetStockOrderApiOrder extends GetStockOrderApiOrder {
         toResponsibleParty == other.toResponsibleParty &&
         kitTrayStockId == other.kitTrayStockId &&
         restockingKitTray == other.restockingKitTray &&
-        lastWebServiceLogId == other.lastWebServiceLogId;
+        lastWebServiceLogId == other.lastWebServiceLogId &&
+        salesLead == other.salesLead &&
+        opsLead == other.opsLead;
   }
 
   @override
@@ -612,26 +640,26 @@ class _$GetStockOrderApiOrder extends GetStockOrderApiOrder {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), createdDate.hashCode), createdBy.hashCode), number.hashCode), status.hashCode), email.hashCode), attention.hashCode), orderReason.hashCode), moveItemClass.hashCode), location.hashCode), deliveryWindow.hashCode), sourceStartDate.hashCode), expirationCutoff.hashCode), shippingService.hashCode), opsOrgUnit.hashCode), salesOrgUnit.hashCode), loan.hashCode),
-                                                                                rootLoan.hashCode),
-                                                                            parentOrder.hashCode),
-                                                                        restockForOrder.hashCode),
-                                                                    childOrders.hashCode),
-                                                                restockOrders.hashCode),
-                                                            caseEvents.hashCode),
-                                                        shipToAddress.hashCode),
-                                                    deliverToAttn.hashCode),
-                                                deliverToAddress.hashCode),
-                                            deliverToOverride.hashCode),
-                                        poNumber.hashCode),
-                                    erpReference.hashCode),
-                                validationMsgs.hashCode),
-                            toInventoryType.hashCode),
-                        toHomeLocation.hashCode),
-                    toResponsibleParty.hashCode),
-                kitTrayStockId.hashCode),
-            restockingKitTray.hashCode),
-        lastWebServiceLogId.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), createdDate.hashCode), createdBy.hashCode), number.hashCode), status.hashCode), email.hashCode), attention.hashCode), orderReason.hashCode), moveItemClass.hashCode), location.hashCode), deliveryWindow.hashCode), sourceStartDate.hashCode), expirationCutoff.hashCode), shippingService.hashCode), opsOrgUnit.hashCode), salesOrgUnit.hashCode), loan.hashCode), rootLoan.hashCode), parentOrder.hashCode),
+                                                                                restockForOrder.hashCode),
+                                                                            childOrders.hashCode),
+                                                                        restockOrders.hashCode),
+                                                                    caseEvents.hashCode),
+                                                                shipToAddress.hashCode),
+                                                            deliverToAttn.hashCode),
+                                                        deliverToAddress.hashCode),
+                                                    deliverToOverride.hashCode),
+                                                poNumber.hashCode),
+                                            erpReference.hashCode),
+                                        validationMsgs.hashCode),
+                                    toInventoryType.hashCode),
+                                toHomeLocation.hashCode),
+                            toResponsibleParty.hashCode),
+                        kitTrayStockId.hashCode),
+                    restockingKitTray.hashCode),
+                lastWebServiceLogId.hashCode),
+            salesLead.hashCode),
+        opsLead.hashCode));
   }
 
   @override
@@ -672,7 +700,9 @@ class _$GetStockOrderApiOrder extends GetStockOrderApiOrder {
           ..add('toResponsibleParty', toResponsibleParty)
           ..add('kitTrayStockId', kitTrayStockId)
           ..add('restockingKitTray', restockingKitTray)
-          ..add('lastWebServiceLogId', lastWebServiceLogId))
+          ..add('lastWebServiceLogId', lastWebServiceLogId)
+          ..add('salesLead', salesLead)
+          ..add('opsLead', opsLead))
         .toString();
   }
 }
@@ -682,190 +712,274 @@ class GetStockOrderApiOrderBuilder
   _$GetStockOrderApiOrder _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   DateTime _createdDate;
+
   DateTime get createdDate => _$this._createdDate;
+
   set createdDate(DateTime createdDate) => _$this._createdDate = createdDate;
 
   String _createdBy;
+
   String get createdBy => _$this._createdBy;
+
   set createdBy(String createdBy) => _$this._createdBy = createdBy;
 
   int _number;
+
   int get number => _$this._number;
+
   set number(int number) => _$this._number = number;
 
   OrderStatus _status;
+
   OrderStatus get status => _$this._status;
+
   set status(OrderStatus status) => _$this._status = status;
 
   String _email;
+
   String get email => _$this._email;
+
   set email(String email) => _$this._email = email;
 
   String _attention;
+
   String get attention => _$this._attention;
+
   set attention(String attention) => _$this._attention = attention;
 
   OrderReasonBuilder _orderReason;
+
   OrderReasonBuilder get orderReason =>
       _$this._orderReason ??= new OrderReasonBuilder();
+
   set orderReason(OrderReasonBuilder orderReason) =>
       _$this._orderReason = orderReason;
 
   MoveItemClass _moveItemClass;
+
   MoveItemClass get moveItemClass => _$this._moveItemClass;
+
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   LocationBuilder _location;
+
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
+
   set location(LocationBuilder location) => _$this._location = location;
 
   DateRangeBuilder _deliveryWindow;
+
   DateRangeBuilder get deliveryWindow =>
       _$this._deliveryWindow ??= new DateRangeBuilder();
+
   set deliveryWindow(DateRangeBuilder deliveryWindow) =>
       _$this._deliveryWindow = deliveryWindow;
 
   DateTime _sourceStartDate;
+
   DateTime get sourceStartDate => _$this._sourceStartDate;
+
   set sourceStartDate(DateTime sourceStartDate) =>
       _$this._sourceStartDate = sourceStartDate;
 
   DateTime _expirationCutoff;
+
   DateTime get expirationCutoff => _$this._expirationCutoff;
+
   set expirationCutoff(DateTime expirationCutoff) =>
       _$this._expirationCutoff = expirationCutoff;
 
   ShippingServiceBuilder _shippingService;
+
   ShippingServiceBuilder get shippingService =>
       _$this._shippingService ??= new ShippingServiceBuilder();
+
   set shippingService(ShippingServiceBuilder shippingService) =>
       _$this._shippingService = shippingService;
 
   OrgUnitBuilder _opsOrgUnit;
+
   OrgUnitBuilder get opsOrgUnit => _$this._opsOrgUnit ??= new OrgUnitBuilder();
+
   set opsOrgUnit(OrgUnitBuilder opsOrgUnit) => _$this._opsOrgUnit = opsOrgUnit;
 
   OrgUnitBuilder _salesOrgUnit;
+
   OrgUnitBuilder get salesOrgUnit =>
       _$this._salesOrgUnit ??= new OrgUnitBuilder();
+
   set salesOrgUnit(OrgUnitBuilder salesOrgUnit) =>
       _$this._salesOrgUnit = salesOrgUnit;
 
   LoanLiteBuilder _loan;
+
   LoanLiteBuilder get loan => _$this._loan ??= new LoanLiteBuilder();
+
   set loan(LoanLiteBuilder loan) => _$this._loan = loan;
 
   LoanLiteBuilder _rootLoan;
+
   LoanLiteBuilder get rootLoan => _$this._rootLoan ??= new LoanLiteBuilder();
+
   set rootLoan(LoanLiteBuilder rootLoan) => _$this._rootLoan = rootLoan;
 
   OrderHeaderLiteBuilder _parentOrder;
+
   OrderHeaderLiteBuilder get parentOrder =>
       _$this._parentOrder ??= new OrderHeaderLiteBuilder();
+
   set parentOrder(OrderHeaderLiteBuilder parentOrder) =>
       _$this._parentOrder = parentOrder;
 
   OrderHeaderLiteBuilder _restockForOrder;
+
   OrderHeaderLiteBuilder get restockForOrder =>
       _$this._restockForOrder ??= new OrderHeaderLiteBuilder();
+
   set restockForOrder(OrderHeaderLiteBuilder restockForOrder) =>
       _$this._restockForOrder = restockForOrder;
 
   ListBuilder<OrderHeaderLite> _childOrders;
+
   ListBuilder<OrderHeaderLite> get childOrders =>
       _$this._childOrders ??= new ListBuilder<OrderHeaderLite>();
+
   set childOrders(ListBuilder<OrderHeaderLite> childOrders) =>
       _$this._childOrders = childOrders;
 
   ListBuilder<OrderHeaderLite> _restockOrders;
+
   ListBuilder<OrderHeaderLite> get restockOrders =>
       _$this._restockOrders ??= new ListBuilder<OrderHeaderLite>();
+
   set restockOrders(ListBuilder<OrderHeaderLite> restockOrders) =>
       _$this._restockOrders = restockOrders;
 
   ListBuilder<CaseEventLite> _caseEvents;
+
   ListBuilder<CaseEventLite> get caseEvents =>
       _$this._caseEvents ??= new ListBuilder<CaseEventLite>();
+
   set caseEvents(ListBuilder<CaseEventLite> caseEvents) =>
       _$this._caseEvents = caseEvents;
 
   CustomerAddressBuilder _shipToAddress;
+
   CustomerAddressBuilder get shipToAddress =>
       _$this._shipToAddress ??= new CustomerAddressBuilder();
+
   set shipToAddress(CustomerAddressBuilder shipToAddress) =>
       _$this._shipToAddress = shipToAddress;
 
   String _deliverToAttn;
+
   String get deliverToAttn => _$this._deliverToAttn;
+
   set deliverToAttn(String deliverToAttn) =>
       _$this._deliverToAttn = deliverToAttn;
 
   CustomerAddressBuilder _deliverToAddress;
+
   CustomerAddressBuilder get deliverToAddress =>
       _$this._deliverToAddress ??= new CustomerAddressBuilder();
+
   set deliverToAddress(CustomerAddressBuilder deliverToAddress) =>
       _$this._deliverToAddress = deliverToAddress;
 
   AddressBuilder _deliverToOverride;
+
   AddressBuilder get deliverToOverride =>
       _$this._deliverToOverride ??= new AddressBuilder();
+
   set deliverToOverride(AddressBuilder deliverToOverride) =>
       _$this._deliverToOverride = deliverToOverride;
 
   String _poNumber;
+
   String get poNumber => _$this._poNumber;
+
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _erpReference;
+
   String get erpReference => _$this._erpReference;
+
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   ListBuilder<GetStockOrderApiValidationMsg> _validationMsgs;
+
   ListBuilder<GetStockOrderApiValidationMsg> get validationMsgs =>
       _$this._validationMsgs ??=
           new ListBuilder<GetStockOrderApiValidationMsg>();
+
   set validationMsgs(
           ListBuilder<GetStockOrderApiValidationMsg> validationMsgs) =>
       _$this._validationMsgs = validationMsgs;
 
   InventoryTypeBuilder _toInventoryType;
+
   InventoryTypeBuilder get toInventoryType =>
       _$this._toInventoryType ??= new InventoryTypeBuilder();
+
   set toInventoryType(InventoryTypeBuilder toInventoryType) =>
       _$this._toInventoryType = toInventoryType;
 
   LocationBuilder _toHomeLocation;
+
   LocationBuilder get toHomeLocation =>
       _$this._toHomeLocation ??= new LocationBuilder();
+
   set toHomeLocation(LocationBuilder toHomeLocation) =>
       _$this._toHomeLocation = toHomeLocation;
 
   ResponsiblePartyBuilder _toResponsibleParty;
+
   ResponsiblePartyBuilder get toResponsibleParty =>
       _$this._toResponsibleParty ??= new ResponsiblePartyBuilder();
+
   set toResponsibleParty(ResponsiblePartyBuilder toResponsibleParty) =>
       _$this._toResponsibleParty = toResponsibleParty;
 
   String _kitTrayStockId;
+
   String get kitTrayStockId => _$this._kitTrayStockId;
+
   set kitTrayStockId(String kitTrayStockId) =>
       _$this._kitTrayStockId = kitTrayStockId;
 
   StockItemBuilder _restockingKitTray;
+
   StockItemBuilder get restockingKitTray =>
       _$this._restockingKitTray ??= new StockItemBuilder();
+
   set restockingKitTray(StockItemBuilder restockingKitTray) =>
       _$this._restockingKitTray = restockingKitTray;
 
   String _lastWebServiceLogId;
+
   String get lastWebServiceLogId => _$this._lastWebServiceLogId;
+
   set lastWebServiceLogId(String lastWebServiceLogId) =>
       _$this._lastWebServiceLogId = lastWebServiceLogId;
+
+  UserLiteBuilder _salesLead;
+
+  UserLiteBuilder get salesLead => _$this._salesLead ??= new UserLiteBuilder();
+
+  set salesLead(UserLiteBuilder salesLead) => _$this._salesLead = salesLead;
+
+  UserLiteBuilder _opsLead;
+
+  UserLiteBuilder get opsLead => _$this._opsLead ??= new UserLiteBuilder();
+
+  set opsLead(UserLiteBuilder opsLead) => _$this._opsLead = opsLead;
 
   GetStockOrderApiOrderBuilder();
 
@@ -907,6 +1021,8 @@ class GetStockOrderApiOrderBuilder
       _kitTrayStockId = _$v.kitTrayStockId;
       _restockingKitTray = _$v.restockingKitTray?.toBuilder();
       _lastWebServiceLogId = _$v.lastWebServiceLogId;
+      _salesLead = _$v.salesLead?.toBuilder();
+      _opsLead = _$v.opsLead?.toBuilder();
       _$v = null;
     }
     return this;
@@ -966,7 +1082,9 @@ class GetStockOrderApiOrderBuilder
               toResponsibleParty: _toResponsibleParty?.build(),
               kitTrayStockId: kitTrayStockId,
               restockingKitTray: _restockingKitTray?.build(),
-              lastWebServiceLogId: lastWebServiceLogId);
+              lastWebServiceLogId: lastWebServiceLogId,
+              salesLead: _salesLead?.build(),
+              opsLead: _opsLead?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -1017,6 +1135,11 @@ class GetStockOrderApiOrderBuilder
 
         _$failedField = 'restockingKitTray';
         _restockingKitTray?.build();
+
+        _$failedField = 'salesLead';
+        _salesLead?.build();
+        _$failedField = 'opsLead';
+        _opsLead?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetStockOrderApiOrder', _$failedField, e.toString());
@@ -1084,6 +1207,8 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
   final FieldDispatcher<String> kitTrayStockId;
   final StockItemActions restockingKitTray;
   final FieldDispatcher<String> lastWebServiceLogId;
+  final UserLiteActions salesLead;
+  final UserLiteActions opsLead;
 
   _$GetStockOrderApiOrderActions._(this.options$)
       : replace$ = options$.action<GetStockOrderApiOrder>(
@@ -1294,6 +1419,20 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
             (a) => a?.lastWebServiceLogId,
             (s) => s?.lastWebServiceLogId,
             (p, b) => p?.lastWebServiceLogId = b),
+        salesLead = UserLiteActions(() =>
+            options$.stateful<UserLite, UserLiteBuilder, UserLiteActions>(
+                'salesLead',
+                (a) => a.salesLead,
+                (s) => s?.salesLead,
+                (b) => b?.salesLead,
+                (parent, builder) => parent?.salesLead = builder)),
+        opsLead = UserLiteActions(() =>
+            options$.stateful<UserLite, UserLiteBuilder, UserLiteActions>(
+                'opsLead',
+                (a) => a.opsLead,
+                (s) => s?.opsLead,
+                (b) => b?.opsLead,
+                (parent, builder) => parent?.opsLead = builder)),
         super._();
 
   factory _$GetStockOrderApiOrderActions(
@@ -1307,6 +1446,7 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
   GetStockOrderApiOrderBuilder newBuilder$() => GetStockOrderApiOrderBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.orderReason,
@@ -1326,9 +1466,12 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
         this.toHomeLocation,
         this.toResponsibleParty,
         this.restockingKitTray,
+        this.salesLead,
+        this.opsLead,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -1393,6 +1536,8 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
     kitTrayStockId.reducer$(reducer);
     restockingKitTray.reducer$(reducer);
     lastWebServiceLogId.reducer$(reducer);
+    salesLead.reducer$(reducer);
+    opsLead.reducer$(reducer);
   }
 
   @override
@@ -1415,5 +1560,7 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
     toHomeLocation.middleware$(middleware);
     toResponsibleParty.middleware$(middleware);
     restockingKitTray.middleware$(middleware);
+    salesLead.middleware$(middleware);
+    opsLead.middleware$(middleware);
   }
 }

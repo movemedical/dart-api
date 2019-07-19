@@ -155,26 +155,32 @@ class GetOrderReasonSpecificationApiResponseBuilder
   _$GetOrderReasonSpecificationApiResponse _$v;
 
   ListBuilder<GetOrderReasonSpecificationApiOrderReasonFieldData> _fields;
+
   ListBuilder<GetOrderReasonSpecificationApiOrderReasonFieldData> get fields =>
       _$this._fields ??=
           new ListBuilder<GetOrderReasonSpecificationApiOrderReasonFieldData>();
+
   set fields(
           ListBuilder<GetOrderReasonSpecificationApiOrderReasonFieldData>
               fields) =>
       _$this._fields = fields;
 
   ListBuilder<GetOrderReasonSpecificationApiOrderReasonDoc> _docs;
+
   ListBuilder<GetOrderReasonSpecificationApiOrderReasonDoc> get docs =>
       _$this._docs ??=
           new ListBuilder<GetOrderReasonSpecificationApiOrderReasonDoc>();
+
   set docs(ListBuilder<GetOrderReasonSpecificationApiOrderReasonDoc> docs) =>
       _$this._docs = docs;
 
   ListBuilder<GetOrderReasonSpecificationApiOrderReasonCustomFieldData>
       _customFields;
+
   ListBuilder<GetOrderReasonSpecificationApiOrderReasonCustomFieldData>
       get customFields => _$this._customFields ??= new ListBuilder<
           GetOrderReasonSpecificationApiOrderReasonCustomFieldData>();
+
   set customFields(
           ListBuilder<GetOrderReasonSpecificationApiOrderReasonCustomFieldData>
               customFields) =>
@@ -300,6 +306,7 @@ class _$GetOrderReasonSpecificationApiResponseActions
       GetOrderReasonSpecificationApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

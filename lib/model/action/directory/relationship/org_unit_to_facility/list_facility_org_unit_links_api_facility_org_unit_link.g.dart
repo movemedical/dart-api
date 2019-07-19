@@ -286,51 +286,73 @@ class ListFacilityOrgUnitLinksApiFacilityOrgUnitLinkBuilder
   _$ListFacilityOrgUnitLinksApiFacilityOrgUnitLink _$v;
 
   String _orgUnitToFacilityId;
+
   String get orgUnitToFacilityId => _$this._orgUnitToFacilityId;
+
   set orgUnitToFacilityId(String orgUnitToFacilityId) =>
       _$this._orgUnitToFacilityId = orgUnitToFacilityId;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   String _orgUnitName;
+
   String get orgUnitName => _$this._orgUnitName;
+
   set orgUnitName(String orgUnitName) => _$this._orgUnitName = orgUnitName;
 
   String _orgUnitLabel;
+
   String get orgUnitLabel => _$this._orgUnitLabel;
+
   set orgUnitLabel(String orgUnitLabel) => _$this._orgUnitLabel = orgUnitLabel;
 
   bool _orgUnitSales;
+
   bool get orgUnitSales => _$this._orgUnitSales;
+
   set orgUnitSales(bool orgUnitSales) => _$this._orgUnitSales = orgUnitSales;
 
   bool _orgUnitOps;
+
   bool get orgUnitOps => _$this._orgUnitOps;
+
   set orgUnitOps(bool orgUnitOps) => _$this._orgUnitOps = orgUnitOps;
 
   bool _orgUnitActive;
+
   bool get orgUnitActive => _$this._orgUnitActive;
+
   set orgUnitActive(bool orgUnitActive) =>
       _$this._orgUnitActive = orgUnitActive;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _procedureName;
+
   String get procedureName => _$this._procedureName;
+
   set procedureName(String procedureName) =>
       _$this._procedureName = procedureName;
 
   String _relationshipTypeId;
+
   String get relationshipTypeId => _$this._relationshipTypeId;
+
   set relationshipTypeId(String relationshipTypeId) =>
       _$this._relationshipTypeId = relationshipTypeId;
 
   String _relationshipTypeName;
+
   String get relationshipTypeName => _$this._relationshipTypeName;
+
   set relationshipTypeName(String relationshipTypeName) =>
       _$this._relationshipTypeName = relationshipTypeName;
 
@@ -492,6 +514,7 @@ class _$ListFacilityOrgUnitLinksApiFacilityOrgUnitLinkActions
       ListFacilityOrgUnitLinksApiFacilityOrgUnitLinkBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

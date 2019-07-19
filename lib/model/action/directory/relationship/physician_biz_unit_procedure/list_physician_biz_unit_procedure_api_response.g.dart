@@ -130,16 +130,20 @@ class ListPhysicianBizUnitProcedureApiResponseBuilder
   _$ListPhysicianBizUnitProcedureApiResponse _$v;
 
   ListBuilder<ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure> _data;
+
   ListBuilder<ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure>
       get data => _$this._data ??= new ListBuilder<
           ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure>();
+
   set data(
           ListBuilder<ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure>
               data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListPhysicianBizUnitProcedureApiResponseBuilder();
@@ -242,6 +246,7 @@ class _$ListPhysicianBizUnitProcedureApiResponseActions
       ListPhysicianBizUnitProcedureApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

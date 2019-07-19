@@ -67,6 +67,7 @@ class _$SearchIssueGroupsApi extends SearchIssueGroupsApi {
           ApiResult<SearchIssueGroupsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

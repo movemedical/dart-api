@@ -38,7 +38,7 @@ const AdjustmentReason _$wireLOT_FIX_IN =
 const AdjustmentReason _$wireVIRTUAL_STOCK_PICK_CANCELED =
     const AdjustmentReason._('VIRTUAL_STOCK_PICK_CANCELED');
 
-AdjustmentReason _$adjustmentReasonValueOf(String name) {
+AdjustmentReason _$valueOf(String name) {
   switch (name) {
     case 'STOCK_CREATED_MOVE':
       return _$wireSTOCK_CREATED_MOVE;
@@ -77,7 +77,7 @@ AdjustmentReason _$adjustmentReasonValueOf(String name) {
   }
 }
 
-final BuiltSet<AdjustmentReason> _$adjustmentReasonValues =
+final BuiltSet<AdjustmentReason> _$values =
     new BuiltSet<AdjustmentReason>(const <AdjustmentReason>[
   _$wireSTOCK_CREATED_MOVE,
   _$wireSTOCK_CREATED_ERP,

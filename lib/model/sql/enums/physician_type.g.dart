@@ -8,7 +8,7 @@ part of 'physician_type.dart';
 
 const PhysicianType _$wireSURGEON = const PhysicianType._('SURGEON');
 
-PhysicianType _$physicianTypeValueOf(String name) {
+PhysicianType _$valueOf(String name) {
   switch (name) {
     case 'SURGEON':
       return _$wireSURGEON;
@@ -17,7 +17,7 @@ PhysicianType _$physicianTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<PhysicianType> _$physicianTypeValues =
+final BuiltSet<PhysicianType> _$values =
     new BuiltSet<PhysicianType>(const <PhysicianType>[
   _$wireSURGEON,
 ]);

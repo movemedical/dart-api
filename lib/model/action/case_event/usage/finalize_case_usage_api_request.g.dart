@@ -104,7 +104,9 @@ class FinalizeCaseUsageApiRequestBuilder
   _$FinalizeCaseUsageApiRequest _$v;
 
   String _caseId;
+
   String get caseId => _$this._caseId;
+
   set caseId(String caseId) => _$this._caseId = caseId;
 
   FinalizeCaseUsageApiRequestBuilder();
@@ -182,6 +184,7 @@ class _$FinalizeCaseUsageApiRequestActions
       FinalizeCaseUsageApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -67,6 +67,7 @@ class _$SearchLotsSerialsApi extends SearchLotsSerialsApi {
           ApiResult<SearchLotsSerialsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

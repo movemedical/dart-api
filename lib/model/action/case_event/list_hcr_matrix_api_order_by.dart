@@ -22,11 +22,9 @@ class ListHcrMatrixApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListHcrMatrixApiOrderBy> get values =>
-      _$listHcrMatrixApiOrderByValues;
+  static BuiltSet<ListHcrMatrixApiOrderBy> get values => _$values;
 
-  static ListHcrMatrixApiOrderBy valueOf(String name) =>
-      _$listHcrMatrixApiOrderByValueOf(name);
+  static ListHcrMatrixApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

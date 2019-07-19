@@ -105,8 +105,10 @@ class GetOrderHistoryApiResponseBuilder
   _$GetOrderHistoryApiResponse _$v;
 
   ListBuilder<HistoryEventDisplay> _historyEvents;
+
   ListBuilder<HistoryEventDisplay> get historyEvents =>
       _$this._historyEvents ??= new ListBuilder<HistoryEventDisplay>();
+
   set historyEvents(ListBuilder<HistoryEventDisplay> historyEvents) =>
       _$this._historyEvents = historyEvents;
 
@@ -202,6 +204,7 @@ class _$GetOrderHistoryApiResponseActions
       GetOrderHistoryApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

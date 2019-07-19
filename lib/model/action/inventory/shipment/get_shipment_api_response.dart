@@ -6,7 +6,7 @@ import 'package:movemedical_api/model/action/inventory/pkg/list_packages_for_shi
 import 'package:movemedical_api/model/action/inventory/shipment/get_shipment_api_display_rule.dart';
 import 'package:movemedical_api/model/action/inventory/shipment/get_shipment_api_shipment.dart';
 import 'package:movemedical_api/model/action/inventory/shipment/get_shipment_api_shipment_attribute.dart';
-import 'package:movemedical_api/model/custom_doc.dart';
+import 'package:movemedical_api/model/essentials/model/api/order_custom_doc.dart';
 
 part 'get_shipment_api_response.g.dart';
 
@@ -23,7 +23,7 @@ abstract class GetShipmentApiResponse
   ListPackagesForShipmentApiResponse get pkgResponse;
 
   @nullable
-  BuiltList<CustomDoc> get customDocs;
+  BuiltList<OrderCustomDoc> get customDocs;
 
   @nullable
   GetShipmentApiDisplayRule get displayRule;
@@ -60,7 +60,7 @@ abstract class GetShipmentApiResponseActions extends ModelActions<
 
   ListPackagesForShipmentApiResponseActions get pkgResponse;
 
-  FieldDispatcher<BuiltList<CustomDoc>> get customDocs;
+  FieldDispatcher<BuiltList<OrderCustomDoc>> get customDocs;
 
   GetShipmentApiDisplayRuleActions get displayRule;
 

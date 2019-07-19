@@ -22,9 +22,9 @@ class LoanReturnType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<LoanReturnType> get values => _$loanReturnTypeValues;
+  static BuiltSet<LoanReturnType> get values => _$values;
 
-  static LoanReturnType valueOf(String name) => _$loanReturnTypeValueOf(name);
+  static LoanReturnType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

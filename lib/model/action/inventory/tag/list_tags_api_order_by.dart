@@ -25,10 +25,9 @@ class ListTagsApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListTagsApiOrderBy> get values => _$listTagsApiOrderByValues;
+  static BuiltSet<ListTagsApiOrderBy> get values => _$values;
 
-  static ListTagsApiOrderBy valueOf(String name) =>
-      _$listTagsApiOrderByValueOf(name);
+  static ListTagsApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

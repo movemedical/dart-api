@@ -60,6 +60,7 @@ class _$CancelStockOrderApi extends CancelStockOrderApi {
           ApiCommand<CancelStockOrderApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

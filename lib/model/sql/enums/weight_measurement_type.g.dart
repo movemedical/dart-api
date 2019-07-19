@@ -9,7 +9,7 @@ part of 'weight_measurement_type.dart';
 const WeightMeasurementType _$wireKG = const WeightMeasurementType._('KG');
 const WeightMeasurementType _$wireLB = const WeightMeasurementType._('LB');
 
-WeightMeasurementType _$weightMeasurementTypeValueOf(String name) {
+WeightMeasurementType _$valueOf(String name) {
   switch (name) {
     case 'KG':
       return _$wireKG;
@@ -20,7 +20,7 @@ WeightMeasurementType _$weightMeasurementTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<WeightMeasurementType> _$weightMeasurementTypeValues =
+final BuiltSet<WeightMeasurementType> _$values =
     new BuiltSet<WeightMeasurementType>(const <WeightMeasurementType>[
   _$wireKG,
   _$wireLB,

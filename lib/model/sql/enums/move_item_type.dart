@@ -27,9 +27,9 @@ class MoveItemType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<MoveItemType> get values => _$moveItemTypeValues;
+  static BuiltSet<MoveItemType> get values => _$values;
 
-  static MoveItemType valueOf(String name) => _$moveItemTypeValueOf(name);
+  static MoveItemType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

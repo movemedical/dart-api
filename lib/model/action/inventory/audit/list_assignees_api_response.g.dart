@@ -119,12 +119,16 @@ class ListAssigneesApiResponseBuilder
   _$ListAssigneesApiResponse _$v;
 
   ListBuilder<ListAssigneesApiAssignee> _data;
+
   ListBuilder<ListAssigneesApiAssignee> get data =>
       _$this._data ??= new ListBuilder<ListAssigneesApiAssignee>();
+
   set data(ListBuilder<ListAssigneesApiAssignee> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListAssigneesApiResponseBuilder();
@@ -220,6 +224,7 @@ class _$ListAssigneesApiResponseActions
       ListAssigneesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

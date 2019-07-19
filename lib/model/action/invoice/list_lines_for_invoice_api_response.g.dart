@@ -107,8 +107,10 @@ class ListLinesForInvoiceApiResponseBuilder
   _$ListLinesForInvoiceApiResponse _$v;
 
   ListBuilder<ListLinesForInvoiceApiInvoiceLine> _lines;
+
   ListBuilder<ListLinesForInvoiceApiInvoiceLine> get lines =>
       _$this._lines ??= new ListBuilder<ListLinesForInvoiceApiInvoiceLine>();
+
   set lines(ListBuilder<ListLinesForInvoiceApiInvoiceLine> lines) =>
       _$this._lines = lines;
 
@@ -201,6 +203,7 @@ class _$ListLinesForInvoiceApiResponseActions
       ListLinesForInvoiceApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

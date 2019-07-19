@@ -92,6 +92,18 @@ class _$UpdateSalesOrderHeaderApiRequestSerializer
         ..add(serializers.serialize(object.email,
             specifiedType: const FullType(String)));
     }
+    if (object.salesLeadUserId != null) {
+      result
+        ..add('salesLeadUserId')
+        ..add(serializers.serialize(object.salesLeadUserId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.opsLeadUserId != null) {
+      result
+        ..add('opsLeadUserId')
+        ..add(serializers.serialize(object.opsLeadUserId,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -152,6 +164,14 @@ class _$UpdateSalesOrderHeaderApiRequestSerializer
           result.email = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'salesLeadUserId':
+          result.salesLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'opsLeadUserId':
+          result.opsLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -183,6 +203,10 @@ class _$UpdateSalesOrderHeaderApiRequest
   final String attention;
   @override
   final String email;
+  @override
+  final String salesLeadUserId;
+  @override
+  final String opsLeadUserId;
 
   factory _$UpdateSalesOrderHeaderApiRequest(
           [void updates(UpdateSalesOrderHeaderApiRequestBuilder b)]) =>
@@ -199,7 +223,9 @@ class _$UpdateSalesOrderHeaderApiRequest
       this.deliverToAddressId,
       this.deliverToAddressOverride,
       this.attention,
-      this.email})
+      this.email,
+      this.salesLeadUserId,
+      this.opsLeadUserId})
       : super._();
 
   @override
@@ -225,7 +251,9 @@ class _$UpdateSalesOrderHeaderApiRequest
         deliverToAddressId == other.deliverToAddressId &&
         deliverToAddressOverride == other.deliverToAddressOverride &&
         attention == other.attention &&
-        email == other.email;
+        email == other.email &&
+        salesLeadUserId == other.salesLeadUserId &&
+        opsLeadUserId == other.opsLeadUserId;
   }
 
   @override
@@ -239,17 +267,23 @@ class _$UpdateSalesOrderHeaderApiRequest
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, validateCanDo.hashCode),
-                                            orderId.hashCode),
-                                        poNumber.hashCode),
-                                    billToAddressId.hashCode),
-                                shipToAddressId.hashCode),
-                            deliverWindowStart.hashCode),
-                        deliverWindowEnd.hashCode),
-                    deliverToAddressId.hashCode),
-                deliverToAddressOverride.hashCode),
-            attention.hashCode),
-        email.hashCode));
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(0,
+                                                        validateCanDo.hashCode),
+                                                    orderId.hashCode),
+                                                poNumber.hashCode),
+                                            billToAddressId.hashCode),
+                                        shipToAddressId.hashCode),
+                                    deliverWindowStart.hashCode),
+                                deliverWindowEnd.hashCode),
+                            deliverToAddressId.hashCode),
+                        deliverToAddressOverride.hashCode),
+                    attention.hashCode),
+                email.hashCode),
+            salesLeadUserId.hashCode),
+        opsLeadUserId.hashCode));
   }
 
   @override
@@ -265,7 +299,9 @@ class _$UpdateSalesOrderHeaderApiRequest
           ..add('deliverToAddressId', deliverToAddressId)
           ..add('deliverToAddressOverride', deliverToAddressOverride)
           ..add('attention', attention)
-          ..add('email', email))
+          ..add('email', email)
+          ..add('salesLeadUserId', salesLeadUserId)
+          ..add('opsLeadUserId', opsLeadUserId))
         .toString();
   }
 }
@@ -277,56 +313,92 @@ class UpdateSalesOrderHeaderApiRequestBuilder
   _$UpdateSalesOrderHeaderApiRequest _$v;
 
   bool _validateCanDo;
+
   bool get validateCanDo => _$this._validateCanDo;
+
   set validateCanDo(bool validateCanDo) =>
       _$this._validateCanDo = validateCanDo;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   String _poNumber;
+
   String get poNumber => _$this._poNumber;
+
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _billToAddressId;
+
   String get billToAddressId => _$this._billToAddressId;
+
   set billToAddressId(String billToAddressId) =>
       _$this._billToAddressId = billToAddressId;
 
   String _shipToAddressId;
+
   String get shipToAddressId => _$this._shipToAddressId;
+
   set shipToAddressId(String shipToAddressId) =>
       _$this._shipToAddressId = shipToAddressId;
 
   DateTime _deliverWindowStart;
+
   DateTime get deliverWindowStart => _$this._deliverWindowStart;
+
   set deliverWindowStart(DateTime deliverWindowStart) =>
       _$this._deliverWindowStart = deliverWindowStart;
 
   DateTime _deliverWindowEnd;
+
   DateTime get deliverWindowEnd => _$this._deliverWindowEnd;
+
   set deliverWindowEnd(DateTime deliverWindowEnd) =>
       _$this._deliverWindowEnd = deliverWindowEnd;
 
   String _deliverToAddressId;
+
   String get deliverToAddressId => _$this._deliverToAddressId;
+
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   AddressBuilder _deliverToAddressOverride;
+
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
+
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   String _attention;
+
   String get attention => _$this._attention;
+
   set attention(String attention) => _$this._attention = attention;
 
   String _email;
+
   String get email => _$this._email;
+
   set email(String email) => _$this._email = email;
+
+  String _salesLeadUserId;
+
+  String get salesLeadUserId => _$this._salesLeadUserId;
+
+  set salesLeadUserId(String salesLeadUserId) =>
+      _$this._salesLeadUserId = salesLeadUserId;
+
+  String _opsLeadUserId;
+
+  String get opsLeadUserId => _$this._opsLeadUserId;
+
+  set opsLeadUserId(String opsLeadUserId) =>
+      _$this._opsLeadUserId = opsLeadUserId;
 
   UpdateSalesOrderHeaderApiRequestBuilder();
 
@@ -343,6 +415,8 @@ class UpdateSalesOrderHeaderApiRequestBuilder
       _deliverToAddressOverride = _$v.deliverToAddressOverride?.toBuilder();
       _attention = _$v.attention;
       _email = _$v.email;
+      _salesLeadUserId = _$v.salesLeadUserId;
+      _opsLeadUserId = _$v.opsLeadUserId;
       _$v = null;
     }
     return this;
@@ -377,7 +451,9 @@ class UpdateSalesOrderHeaderApiRequestBuilder
               deliverToAddressId: deliverToAddressId,
               deliverToAddressOverride: _deliverToAddressOverride?.build(),
               attention: attention,
-              email: email);
+              email: email,
+              salesLeadUserId: salesLeadUserId,
+              opsLeadUserId: opsLeadUserId);
     } catch (_) {
       String _$failedField;
       try {
@@ -427,6 +503,8 @@ class _$UpdateSalesOrderHeaderApiRequestActions
   final AddressActions deliverToAddressOverride;
   final FieldDispatcher<String> attention;
   final FieldDispatcher<String> email;
+  final FieldDispatcher<String> salesLeadUserId;
+  final FieldDispatcher<String> opsLeadUserId;
 
   _$UpdateSalesOrderHeaderApiRequestActions._(this.options$)
       : replace$ = options$.action<UpdateSalesOrderHeaderApiRequest>(
@@ -477,6 +555,16 @@ class _$UpdateSalesOrderHeaderApiRequestActions
             (s) => s?.attention, (p, b) => p?.attention = b),
         email = options$.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
+        salesLeadUserId = options$.field<String>(
+            'salesLeadUserId',
+            (a) => a?.salesLeadUserId,
+            (s) => s?.salesLeadUserId,
+            (p, b) => p?.salesLeadUserId = b),
+        opsLeadUserId = options$.field<String>(
+            'opsLeadUserId',
+            (a) => a?.opsLeadUserId,
+            (s) => s?.opsLeadUserId,
+            (p, b) => p?.opsLeadUserId = b),
         super._();
 
   factory _$UpdateSalesOrderHeaderApiRequestActions(
@@ -492,12 +580,14 @@ class _$UpdateSalesOrderHeaderApiRequestActions
       UpdateSalesOrderHeaderApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -512,6 +602,8 @@ class _$UpdateSalesOrderHeaderApiRequestActions
         this.deliverToAddressId,
         this.attention,
         this.email,
+        this.salesLeadUserId,
+        this.opsLeadUserId,
       ]);
 
   @override
@@ -528,6 +620,8 @@ class _$UpdateSalesOrderHeaderApiRequestActions
     deliverToAddressOverride.reducer$(reducer);
     attention.reducer$(reducer);
     email.reducer$(reducer);
+    salesLeadUserId.reducer$(reducer);
+    opsLeadUserId.reducer$(reducer);
   }
 
   @override

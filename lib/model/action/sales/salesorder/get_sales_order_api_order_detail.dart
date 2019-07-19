@@ -20,6 +20,7 @@ import 'package:movemedical_api/model/responsible_party.dart';
 import 'package:movemedical_api/model/shipping_service.dart';
 import 'package:movemedical_api/model/sql/enums/move_item_class.dart';
 import 'package:movemedical_api/model/sql/enums/order_status.dart';
+import 'package:movemedical_api/model/user_lite.dart';
 
 part 'get_sales_order_api_order_detail.g.dart';
 
@@ -126,6 +127,12 @@ abstract class GetSalesOrderApiOrderDetail
   @nullable
   ShippingService get shippingService;
 
+  @nullable
+  UserLite get salesLead;
+
+  @nullable
+  UserLite get opsLead;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -216,6 +223,10 @@ abstract class GetSalesOrderApiOrderDetailActions extends ModelActions<
   FieldDispatcher<String> get lastWebServiceLogId;
 
   ShippingServiceActions get shippingService;
+
+  UserLiteActions get salesLead;
+
+  UserLiteActions get opsLead;
 
   ////////////////////////////////
   /// Constructors

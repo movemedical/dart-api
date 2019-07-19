@@ -24,11 +24,9 @@ class CaseUsageDisposition extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<CaseUsageDisposition> get values =>
-      _$caseUsageDispositionValues;
+  static BuiltSet<CaseUsageDisposition> get values => _$values;
 
-  static CaseUsageDisposition valueOf(String name) =>
-      _$caseUsageDispositionValueOf(name);
+  static CaseUsageDisposition valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

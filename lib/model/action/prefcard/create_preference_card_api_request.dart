@@ -4,6 +4,7 @@ import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
+import 'package:movemedical_api/model/sql/enums/body_side.dart';
 
 part 'create_preference_card_api_request.g.dart';
 
@@ -35,6 +36,9 @@ abstract class CreatePreferenceCardApiRequest
 
   @nullable
   String get subProcedureId;
+
+  @nullable
+  BodySide get bodySide;
 
   @nullable
   BuiltList<String> get orgUnitIds;
@@ -78,6 +82,8 @@ abstract class CreatePreferenceCardApiRequestActions extends ModelActions<
   FieldDispatcher<String> get procedureId;
 
   FieldDispatcher<String> get subProcedureId;
+
+  FieldDispatcher<BodySide> get bodySide;
 
   FieldDispatcher<BuiltList<String>> get orgUnitIds;
 

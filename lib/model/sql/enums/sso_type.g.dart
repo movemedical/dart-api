@@ -9,7 +9,7 @@ part of 'sso_type.dart';
 const SSOType _$wireOAUTH = const SSOType._('OAUTH');
 const SSOType _$wireOPENID = const SSOType._('OPENID');
 
-SSOType _$sSOTypeValueOf(String name) {
+SSOType _$valueOf(String name) {
   switch (name) {
     case 'OAUTH':
       return _$wireOAUTH;
@@ -20,7 +20,7 @@ SSOType _$sSOTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<SSOType> _$sSOTypeValues = new BuiltSet<SSOType>(const <SSOType>[
+final BuiltSet<SSOType> _$values = new BuiltSet<SSOType>(const <SSOType>[
   _$wireOAUTH,
   _$wireOPENID,
 ]);

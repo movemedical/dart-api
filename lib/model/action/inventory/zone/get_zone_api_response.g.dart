@@ -95,8 +95,10 @@ class GetZoneApiResponseBuilder
   _$GetZoneApiResponse _$v;
 
   GetZoneApiZoneDetailBuilder _data;
+
   GetZoneApiZoneDetailBuilder get data =>
       _$this._data ??= new GetZoneApiZoneDetailBuilder();
+
   set data(GetZoneApiZoneDetailBuilder data) => _$this._data = data;
 
   GetZoneApiResponseBuilder();
@@ -187,12 +189,14 @@ class _$GetZoneApiResponseActions extends GetZoneApiResponseActions {
   GetZoneApiResponseBuilder newBuilder$() => GetZoneApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.data,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

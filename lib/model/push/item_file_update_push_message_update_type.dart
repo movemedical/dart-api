@@ -23,11 +23,10 @@ class ItemFileUpdatePushMessageUpdateType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ItemFileUpdatePushMessageUpdateType> get values =>
-      _$itemFileUpdatePushMessageUpdateTypeValues;
+  static BuiltSet<ItemFileUpdatePushMessageUpdateType> get values => _$values;
 
   static ItemFileUpdatePushMessageUpdateType valueOf(String name) =>
-      _$itemFileUpdatePushMessageUpdateTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

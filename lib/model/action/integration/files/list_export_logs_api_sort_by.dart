@@ -32,11 +32,9 @@ class ListExportLogsApiSortBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListExportLogsApiSortBy> get values =>
-      _$listExportLogsApiSortByValues;
+  static BuiltSet<ListExportLogsApiSortBy> get values => _$values;
 
-  static ListExportLogsApiSortBy valueOf(String name) =>
-      _$listExportLogsApiSortByValueOf(name);
+  static ListExportLogsApiSortBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

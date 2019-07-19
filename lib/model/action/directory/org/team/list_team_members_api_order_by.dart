@@ -22,11 +22,9 @@ class ListTeamMembersApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListTeamMembersApiOrderBy> get values =>
-      _$listTeamMembersApiOrderByValues;
+  static BuiltSet<ListTeamMembersApiOrderBy> get values => _$values;
 
-  static ListTeamMembersApiOrderBy valueOf(String name) =>
-      _$listTeamMembersApiOrderByValueOf(name);
+  static ListTeamMembersApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

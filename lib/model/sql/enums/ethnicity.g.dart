@@ -15,7 +15,7 @@ const Ethnicity _$wirePACIFIC_ISLANDER = const Ethnicity._('PACIFIC_ISLANDER');
 const Ethnicity _$wireMIXED = const Ethnicity._('MIXED');
 const Ethnicity _$wireOTHER = const Ethnicity._('OTHER');
 
-Ethnicity _$ethnicityValueOf(String name) {
+Ethnicity _$valueOf(String name) {
   switch (name) {
     case 'WHITE':
       return _$wireWHITE;
@@ -36,8 +36,7 @@ Ethnicity _$ethnicityValueOf(String name) {
   }
 }
 
-final BuiltSet<Ethnicity> _$ethnicityValues =
-    new BuiltSet<Ethnicity>(const <Ethnicity>[
+final BuiltSet<Ethnicity> _$values = new BuiltSet<Ethnicity>(const <Ethnicity>[
   _$wireWHITE,
   _$wireBLACK_OR_AFRICAN_AMERICAN,
   _$wireASIAN,

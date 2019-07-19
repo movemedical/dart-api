@@ -102,6 +102,18 @@ class _$CreateStockOrderApiRequestSerializer
         ..add(serializers.serialize(object.attention,
             specifiedType: const FullType(String)));
     }
+    if (object.opsLeadUserId != null) {
+      result
+        ..add('opsLeadUserId')
+        ..add(serializers.serialize(object.opsLeadUserId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.salesLeadUserId != null) {
+      result
+        ..add('salesLeadUserId')
+        ..add(serializers.serialize(object.salesLeadUserId,
+            specifiedType: const FullType(String)));
+    }
     if (object.orderCustomFieldValues != null) {
       result
         ..add('orderCustomFieldValues')
@@ -177,6 +189,14 @@ class _$CreateStockOrderApiRequestSerializer
           result.attention = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'opsLeadUserId':
+          result.opsLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'salesLeadUserId':
+          result.salesLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'orderCustomFieldValues':
           result.orderCustomFieldValues.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -218,6 +238,10 @@ class _$CreateStockOrderApiRequest extends CreateStockOrderApiRequest {
   @override
   final String attention;
   @override
+  final String opsLeadUserId;
+  @override
+  final String salesLeadUserId;
+  @override
   final BuiltList<OrderCustomFieldValue> orderCustomFieldValues;
 
   factory _$CreateStockOrderApiRequest(
@@ -238,6 +262,8 @@ class _$CreateStockOrderApiRequest extends CreateStockOrderApiRequest {
       this.shippingServiceId,
       this.email,
       this.attention,
+      this.opsLeadUserId,
+      this.salesLeadUserId,
       this.orderCustomFieldValues})
       : super._();
 
@@ -267,6 +293,8 @@ class _$CreateStockOrderApiRequest extends CreateStockOrderApiRequest {
         shippingServiceId == other.shippingServiceId &&
         email == other.email &&
         attention == other.attention &&
+        opsLeadUserId == other.opsLeadUserId &&
+        salesLeadUserId == other.salesLeadUserId &&
         orderCustomFieldValues == other.orderCustomFieldValues;
   }
 
@@ -285,20 +313,28 @@ class _$CreateStockOrderApiRequest extends CreateStockOrderApiRequest {
                                             $jc(
                                                 $jc(
                                                     $jc(
-                                                        $jc(0,
-                                                            bizUnitId.hashCode),
-                                                        opsOrgUnitId.hashCode),
-                                                    salesOrgUnitid.hashCode),
-                                                orderReasonId.hashCode),
-                                            toLocation.hashCode),
-                                        poNumber.hashCode),
-                                    shipToAddressId.hashCode),
-                                deliverToAddressId.hashCode),
-                            deliverToAddressOverride.hashCode),
-                        deliveryWindow.hashCode),
-                    shippingServiceId.hashCode),
-                email.hashCode),
-            attention.hashCode),
+                                                        $jc(
+                                                            $jc(
+                                                                $jc(
+                                                                    0,
+                                                                    bizUnitId
+                                                                        .hashCode),
+                                                                opsOrgUnitId
+                                                                    .hashCode),
+                                                            salesOrgUnitid
+                                                                .hashCode),
+                                                        orderReasonId.hashCode),
+                                                    toLocation.hashCode),
+                                                poNumber.hashCode),
+                                            shipToAddressId.hashCode),
+                                        deliverToAddressId.hashCode),
+                                    deliverToAddressOverride.hashCode),
+                                deliveryWindow.hashCode),
+                            shippingServiceId.hashCode),
+                        email.hashCode),
+                    attention.hashCode),
+                opsLeadUserId.hashCode),
+            salesLeadUserId.hashCode),
         orderCustomFieldValues.hashCode));
   }
 
@@ -318,6 +354,8 @@ class _$CreateStockOrderApiRequest extends CreateStockOrderApiRequest {
           ..add('shippingServiceId', shippingServiceId)
           ..add('email', email)
           ..add('attention', attention)
+          ..add('opsLeadUserId', opsLeadUserId)
+          ..add('salesLeadUserId', salesLeadUserId)
           ..add('orderCustomFieldValues', orderCustomFieldValues))
         .toString();
   }
@@ -329,72 +367,114 @@ class CreateStockOrderApiRequestBuilder
   _$CreateStockOrderApiRequest _$v;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _opsOrgUnitId;
+
   String get opsOrgUnitId => _$this._opsOrgUnitId;
+
   set opsOrgUnitId(String opsOrgUnitId) => _$this._opsOrgUnitId = opsOrgUnitId;
 
   String _salesOrgUnitid;
+
   String get salesOrgUnitid => _$this._salesOrgUnitid;
+
   set salesOrgUnitid(String salesOrgUnitid) =>
       _$this._salesOrgUnitid = salesOrgUnitid;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
   LocationDataBuilder _toLocation;
+
   LocationDataBuilder get toLocation =>
       _$this._toLocation ??= new LocationDataBuilder();
+
   set toLocation(LocationDataBuilder toLocation) =>
       _$this._toLocation = toLocation;
 
   String _poNumber;
+
   String get poNumber => _$this._poNumber;
+
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _shipToAddressId;
+
   String get shipToAddressId => _$this._shipToAddressId;
+
   set shipToAddressId(String shipToAddressId) =>
       _$this._shipToAddressId = shipToAddressId;
 
   String _deliverToAddressId;
+
   String get deliverToAddressId => _$this._deliverToAddressId;
+
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   AddressBuilder _deliverToAddressOverride;
+
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
+
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   DateRangeBuilder _deliveryWindow;
+
   DateRangeBuilder get deliveryWindow =>
       _$this._deliveryWindow ??= new DateRangeBuilder();
+
   set deliveryWindow(DateRangeBuilder deliveryWindow) =>
       _$this._deliveryWindow = deliveryWindow;
 
   String _shippingServiceId;
+
   String get shippingServiceId => _$this._shippingServiceId;
+
   set shippingServiceId(String shippingServiceId) =>
       _$this._shippingServiceId = shippingServiceId;
 
   String _email;
+
   String get email => _$this._email;
+
   set email(String email) => _$this._email = email;
 
   String _attention;
+
   String get attention => _$this._attention;
+
   set attention(String attention) => _$this._attention = attention;
 
+  String _opsLeadUserId;
+
+  String get opsLeadUserId => _$this._opsLeadUserId;
+
+  set opsLeadUserId(String opsLeadUserId) =>
+      _$this._opsLeadUserId = opsLeadUserId;
+
+  String _salesLeadUserId;
+
+  String get salesLeadUserId => _$this._salesLeadUserId;
+
+  set salesLeadUserId(String salesLeadUserId) =>
+      _$this._salesLeadUserId = salesLeadUserId;
+
   ListBuilder<OrderCustomFieldValue> _orderCustomFieldValues;
+
   ListBuilder<OrderCustomFieldValue> get orderCustomFieldValues =>
       _$this._orderCustomFieldValues ??=
           new ListBuilder<OrderCustomFieldValue>();
+
   set orderCustomFieldValues(
           ListBuilder<OrderCustomFieldValue> orderCustomFieldValues) =>
       _$this._orderCustomFieldValues = orderCustomFieldValues;
@@ -416,6 +496,8 @@ class CreateStockOrderApiRequestBuilder
       _shippingServiceId = _$v.shippingServiceId;
       _email = _$v.email;
       _attention = _$v.attention;
+      _opsLeadUserId = _$v.opsLeadUserId;
+      _salesLeadUserId = _$v.salesLeadUserId;
       _orderCustomFieldValues = _$v.orderCustomFieldValues?.toBuilder();
       _$v = null;
     }
@@ -454,6 +536,8 @@ class CreateStockOrderApiRequestBuilder
               shippingServiceId: shippingServiceId,
               email: email,
               attention: attention,
+              opsLeadUserId: opsLeadUserId,
+              salesLeadUserId: salesLeadUserId,
               orderCustomFieldValues: _orderCustomFieldValues?.build());
     } catch (_) {
       String _$failedField;
@@ -514,6 +598,8 @@ class _$CreateStockOrderApiRequestActions
   final FieldDispatcher<String> shippingServiceId;
   final FieldDispatcher<String> email;
   final FieldDispatcher<String> attention;
+  final FieldDispatcher<String> opsLeadUserId;
+  final FieldDispatcher<String> salesLeadUserId;
   final FieldDispatcher<BuiltList<OrderCustomFieldValue>>
       orderCustomFieldValues;
 
@@ -580,6 +666,16 @@ class _$CreateStockOrderApiRequestActions
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
         attention = options$.field<String>('attention', (a) => a?.attention,
             (s) => s?.attention, (p, b) => p?.attention = b),
+        opsLeadUserId = options$.field<String>(
+            'opsLeadUserId',
+            (a) => a?.opsLeadUserId,
+            (s) => s?.opsLeadUserId,
+            (p, b) => p?.opsLeadUserId = b),
+        salesLeadUserId = options$.field<String>(
+            'salesLeadUserId',
+            (a) => a?.salesLeadUserId,
+            (s) => s?.salesLeadUserId,
+            (p, b) => p?.salesLeadUserId = b),
         orderCustomFieldValues =
             options$.field<BuiltList<OrderCustomFieldValue>>(
                 'orderCustomFieldValues',
@@ -600,6 +696,7 @@ class _$CreateStockOrderApiRequestActions
       CreateStockOrderApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toLocation,
@@ -608,6 +705,7 @@ class _$CreateStockOrderApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -622,6 +720,8 @@ class _$CreateStockOrderApiRequestActions
         this.shippingServiceId,
         this.email,
         this.attention,
+        this.opsLeadUserId,
+        this.salesLeadUserId,
         this.orderCustomFieldValues,
       ]);
 
@@ -641,6 +741,8 @@ class _$CreateStockOrderApiRequestActions
     shippingServiceId.reducer$(reducer);
     email.reducer$(reducer);
     attention.reducer$(reducer);
+    opsLeadUserId.reducer$(reducer);
+    salesLeadUserId.reducer$(reducer);
     orderCustomFieldValues.reducer$(reducer);
   }
 

@@ -161,23 +161,31 @@ class SaveComponentsApiItemSpecIdsBuilder
   _$SaveComponentsApiItemSpecIds _$v;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   ListBuilder<String> _itemVersionIds;
+
   ListBuilder<String> get itemVersionIds =>
       _$this._itemVersionIds ??= new ListBuilder<String>();
+
   set itemVersionIds(ListBuilder<String> itemVersionIds) =>
       _$this._itemVersionIds = itemVersionIds;
 
   ListBuilder<String> _lotIds;
+
   ListBuilder<String> get lotIds =>
       _$this._lotIds ??= new ListBuilder<String>();
+
   set lotIds(ListBuilder<String> lotIds) => _$this._lotIds = lotIds;
 
   ListBuilder<String> _serialIds;
+
   ListBuilder<String> get serialIds =>
       _$this._serialIds ??= new ListBuilder<String>();
+
   set serialIds(ListBuilder<String> serialIds) => _$this._serialIds = serialIds;
 
   SaveComponentsApiItemSpecIdsBuilder();
@@ -295,6 +303,7 @@ class _$SaveComponentsApiItemSpecIdsActions
       SaveComponentsApiItemSpecIdsBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

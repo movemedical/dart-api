@@ -11,7 +11,7 @@ const ListCustomersApiSortBy _$wireNAME =
 const ListCustomersApiSortBy _$wireNUMBER =
     const ListCustomersApiSortBy._('NUMBER');
 
-ListCustomersApiSortBy _$listCustomersApiSortByValueOf(String name) {
+ListCustomersApiSortBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -22,7 +22,7 @@ ListCustomersApiSortBy _$listCustomersApiSortByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListCustomersApiSortBy> _$listCustomersApiSortByValues =
+final BuiltSet<ListCustomersApiSortBy> _$values =
     new BuiltSet<ListCustomersApiSortBy>(const <ListCustomersApiSortBy>[
   _$wireNAME,
   _$wireNUMBER,

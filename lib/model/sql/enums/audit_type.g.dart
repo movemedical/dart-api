@@ -9,7 +9,7 @@ part of 'audit_type.dart';
 const AuditType _$wireLOCATION = const AuditType._('LOCATION');
 const AuditType _$wireCONSIGNMENT = const AuditType._('CONSIGNMENT');
 
-AuditType _$auditTypeValueOf(String name) {
+AuditType _$valueOf(String name) {
   switch (name) {
     case 'LOCATION':
       return _$wireLOCATION;
@@ -20,8 +20,7 @@ AuditType _$auditTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<AuditType> _$auditTypeValues =
-    new BuiltSet<AuditType>(const <AuditType>[
+final BuiltSet<AuditType> _$values = new BuiltSet<AuditType>(const <AuditType>[
   _$wireLOCATION,
   _$wireCONSIGNMENT,
 ]);

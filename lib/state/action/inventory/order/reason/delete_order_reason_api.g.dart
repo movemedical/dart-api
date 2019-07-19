@@ -60,6 +60,7 @@ class _$DeleteOrderReasonApi extends DeleteOrderReasonApi {
           ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

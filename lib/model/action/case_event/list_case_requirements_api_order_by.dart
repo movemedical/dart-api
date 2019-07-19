@@ -26,11 +26,9 @@ class ListCaseRequirementsApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListCaseRequirementsApiOrderBy> get values =>
-      _$listCaseRequirementsApiOrderByValues;
+  static BuiltSet<ListCaseRequirementsApiOrderBy> get values => _$values;
 
-  static ListCaseRequirementsApiOrderBy valueOf(String name) =>
-      _$listCaseRequirementsApiOrderByValueOf(name);
+  static ListCaseRequirementsApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -50,6 +50,13 @@ class _$ListConversationsApiConversationSerializer
         ..add(serializers.serialize(object.allParticipantsDisplayText,
             specifiedType: const FullType(String)));
     }
+    if (object.participantsDisplayText != null) {
+      result
+        ..add('participantsDisplayText')
+        ..add(serializers.serialize(object.participantsDisplayText,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
     if (object.stopped != null) {
       result
         ..add('stopped')
@@ -137,6 +144,12 @@ class _$ListConversationsApiConversationSerializer
           result.allParticipantsDisplayText = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'participantsDisplayText':
+          result.participantsDisplayText.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList);
+          break;
         case 'stopped':
           result.stopped = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -193,6 +206,8 @@ class _$ListConversationsApiConversation
   @override
   final String allParticipantsDisplayText;
   @override
+  final BuiltList<String> participantsDisplayText;
+  @override
   final bool stopped;
   @override
   final bool archived;
@@ -220,6 +235,7 @@ class _$ListConversationsApiConversation
       this.urgency,
       this.purpose,
       this.allParticipantsDisplayText,
+      this.participantsDisplayText,
       this.stopped,
       this.archived,
       this.unread,
@@ -248,6 +264,7 @@ class _$ListConversationsApiConversation
         urgency == other.urgency &&
         purpose == other.purpose &&
         allParticipantsDisplayText == other.allParticipantsDisplayText &&
+        participantsDisplayText == other.participantsDisplayText &&
         stopped == other.stopped &&
         archived == other.archived &&
         unread == other.unread &&
@@ -272,11 +289,13 @@ class _$ListConversationsApiConversation
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc($jc(0, id.hashCode),
-                                                    urgency.hashCode),
-                                                purpose.hashCode),
-                                            allParticipantsDisplayText
-                                                .hashCode),
+                                                $jc(
+                                                    $jc($jc(0, id.hashCode),
+                                                        urgency.hashCode),
+                                                    purpose.hashCode),
+                                                allParticipantsDisplayText
+                                                    .hashCode),
+                                            participantsDisplayText.hashCode),
                                         stopped.hashCode),
                                     archived.hashCode),
                                 unread.hashCode),
@@ -295,6 +314,7 @@ class _$ListConversationsApiConversation
           ..add('urgency', urgency)
           ..add('purpose', purpose)
           ..add('allParticipantsDisplayText', allParticipantsDisplayText)
+          ..add('participantsDisplayText', participantsDisplayText)
           ..add('stopped', stopped)
           ..add('archived', archived)
           ..add('unread', unread)
@@ -315,61 +335,95 @@ class ListConversationsApiConversationBuilder
   _$ListConversationsApiConversation _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   DateTime _urgency;
+
   DateTime get urgency => _$this._urgency;
+
   set urgency(DateTime urgency) => _$this._urgency = urgency;
 
   String _purpose;
+
   String get purpose => _$this._purpose;
+
   set purpose(String purpose) => _$this._purpose = purpose;
 
   String _allParticipantsDisplayText;
+
   String get allParticipantsDisplayText => _$this._allParticipantsDisplayText;
+
   set allParticipantsDisplayText(String allParticipantsDisplayText) =>
       _$this._allParticipantsDisplayText = allParticipantsDisplayText;
 
+  ListBuilder<String> _participantsDisplayText;
+
+  ListBuilder<String> get participantsDisplayText =>
+      _$this._participantsDisplayText ??= new ListBuilder<String>();
+
+  set participantsDisplayText(ListBuilder<String> participantsDisplayText) =>
+      _$this._participantsDisplayText = participantsDisplayText;
+
   bool _stopped;
+
   bool get stopped => _$this._stopped;
+
   set stopped(bool stopped) => _$this._stopped = stopped;
 
   bool _archived;
+
   bool get archived => _$this._archived;
+
   set archived(bool archived) => _$this._archived = archived;
 
   int _unread;
+
   int get unread => _$this._unread;
+
   set unread(int unread) => _$this._unread = unread;
 
   String _lastSenderId;
+
   String get lastSenderId => _$this._lastSenderId;
+
   set lastSenderId(String lastSenderId) => _$this._lastSenderId = lastSenderId;
 
   String _lastSenderInitials;
+
   String get lastSenderInitials => _$this._lastSenderInitials;
+
   set lastSenderInitials(String lastSenderInitials) =>
       _$this._lastSenderInitials = lastSenderInitials;
 
   String _lastSenderDisplayText;
+
   String get lastSenderDisplayText => _$this._lastSenderDisplayText;
+
   set lastSenderDisplayText(String lastSenderDisplayText) =>
       _$this._lastSenderDisplayText = lastSenderDisplayText;
 
   String _lastMessagePreview;
+
   String get lastMessagePreview => _$this._lastMessagePreview;
+
   set lastMessagePreview(String lastMessagePreview) =>
       _$this._lastMessagePreview = lastMessagePreview;
 
   DateTime _lastMessageSentDate;
+
   DateTime get lastMessageSentDate => _$this._lastMessageSentDate;
+
   set lastMessageSentDate(DateTime lastMessageSentDate) =>
       _$this._lastMessageSentDate = lastMessageSentDate;
 
   ListBuilder<AttributableObject> _links;
+
   ListBuilder<AttributableObject> get links =>
       _$this._links ??= new ListBuilder<AttributableObject>();
+
   set links(ListBuilder<AttributableObject> links) => _$this._links = links;
 
   ListConversationsApiConversationBuilder();
@@ -380,6 +434,7 @@ class ListConversationsApiConversationBuilder
       _urgency = _$v.urgency;
       _purpose = _$v.purpose;
       _allParticipantsDisplayText = _$v.allParticipantsDisplayText;
+      _participantsDisplayText = _$v.participantsDisplayText?.toBuilder();
       _stopped = _$v.stopped;
       _archived = _$v.archived;
       _unread = _$v.unread;
@@ -417,6 +472,7 @@ class ListConversationsApiConversationBuilder
               urgency: urgency,
               purpose: purpose,
               allParticipantsDisplayText: allParticipantsDisplayText,
+              participantsDisplayText: _participantsDisplayText?.build(),
               stopped: stopped,
               archived: archived,
               unread: unread,
@@ -429,6 +485,9 @@ class ListConversationsApiConversationBuilder
     } catch (_) {
       String _$failedField;
       try {
+        _$failedField = 'participantsDisplayText';
+        _participantsDisplayText?.build();
+
         _$failedField = 'links';
         _links?.build();
       } catch (e) {
@@ -468,6 +527,7 @@ class _$ListConversationsApiConversationActions
   final FieldDispatcher<DateTime> urgency;
   final FieldDispatcher<String> purpose;
   final FieldDispatcher<String> allParticipantsDisplayText;
+  final FieldDispatcher<BuiltList<String>> participantsDisplayText;
   final FieldDispatcher<bool> stopped;
   final FieldDispatcher<bool> archived;
   final FieldDispatcher<int> unread;
@@ -492,6 +552,11 @@ class _$ListConversationsApiConversationActions
             (a) => a?.allParticipantsDisplayText,
             (s) => s?.allParticipantsDisplayText,
             (p, b) => p?.allParticipantsDisplayText = b),
+        participantsDisplayText = options$.field<BuiltList<String>>(
+            'participantsDisplayText',
+            (a) => a?.participantsDisplayText,
+            (s) => s?.participantsDisplayText,
+            (p, b) => p?.participantsDisplayText = b),
         stopped = options$.field<bool>('stopped', (a) => a?.stopped,
             (s) => s?.stopped, (p, b) => p?.stopped = b),
         archived = options$.field<bool>('archived', (a) => a?.archived,
@@ -540,6 +605,7 @@ class _$ListConversationsApiConversationActions
       ListConversationsApiConversationBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -548,6 +614,7 @@ class _$ListConversationsApiConversationActions
         this.urgency,
         this.purpose,
         this.allParticipantsDisplayText,
+        this.participantsDisplayText,
         this.stopped,
         this.archived,
         this.unread,
@@ -566,6 +633,7 @@ class _$ListConversationsApiConversationActions
     urgency.reducer$(reducer);
     purpose.reducer$(reducer);
     allParticipantsDisplayText.reducer$(reducer);
+    participantsDisplayText.reducer$(reducer);
     stopped.reducer$(reducer);
     archived.reducer$(reducer);
     unread.reducer$(reducer);

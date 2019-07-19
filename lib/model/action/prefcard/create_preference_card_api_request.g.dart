@@ -68,6 +68,12 @@ class _$CreatePreferenceCardApiRequestSerializer
         ..add(serializers.serialize(object.subProcedureId,
             specifiedType: const FullType(String)));
     }
+    if (object.bodySide != null) {
+      result
+        ..add('bodySide')
+        ..add(serializers.serialize(object.bodySide,
+            specifiedType: const FullType(BodySide)));
+    }
     if (object.orgUnitIds != null) {
       result
         ..add('orgUnitIds')
@@ -119,6 +125,10 @@ class _$CreatePreferenceCardApiRequestSerializer
           result.subProcedureId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'bodySide':
+          result.bodySide = serializers.deserialize(value,
+              specifiedType: const FullType(BodySide)) as BodySide;
+          break;
         case 'orgUnitIds':
           result.orgUnitIds.replace(serializers.deserialize(value,
                   specifiedType:
@@ -148,6 +158,8 @@ class _$CreatePreferenceCardApiRequest extends CreatePreferenceCardApiRequest {
   @override
   final String subProcedureId;
   @override
+  final BodySide bodySide;
+  @override
   final BuiltList<String> orgUnitIds;
 
   factory _$CreatePreferenceCardApiRequest(
@@ -162,6 +174,7 @@ class _$CreatePreferenceCardApiRequest extends CreatePreferenceCardApiRequest {
       this.description,
       this.procedureId,
       this.subProcedureId,
+      this.bodySide,
       this.orgUnitIds})
       : super._();
 
@@ -185,6 +198,7 @@ class _$CreatePreferenceCardApiRequest extends CreatePreferenceCardApiRequest {
         description == other.description &&
         procedureId == other.procedureId &&
         subProcedureId == other.subProcedureId &&
+        bodySide == other.bodySide &&
         orgUnitIds == other.orgUnitIds;
   }
 
@@ -196,13 +210,15 @@ class _$CreatePreferenceCardApiRequest extends CreatePreferenceCardApiRequest {
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc(0, facilityId.hashCode),
-                                physicianId.hashCode),
-                            techniqueId.hashCode),
-                        name.hashCode),
-                    description.hashCode),
-                procedureId.hashCode),
-            subProcedureId.hashCode),
+                            $jc(
+                                $jc($jc(0, facilityId.hashCode),
+                                    physicianId.hashCode),
+                                techniqueId.hashCode),
+                            name.hashCode),
+                        description.hashCode),
+                    procedureId.hashCode),
+                subProcedureId.hashCode),
+            bodySide.hashCode),
         orgUnitIds.hashCode));
   }
 
@@ -216,6 +232,7 @@ class _$CreatePreferenceCardApiRequest extends CreatePreferenceCardApiRequest {
           ..add('description', description)
           ..add('procedureId', procedureId)
           ..add('subProcedureId', subProcedureId)
+          ..add('bodySide', bodySide)
           ..add('orgUnitIds', orgUnitIds))
         .toString();
   }
@@ -228,37 +245,59 @@ class CreatePreferenceCardApiRequestBuilder
   _$CreatePreferenceCardApiRequest _$v;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _physicianId;
+
   String get physicianId => _$this._physicianId;
+
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   String _techniqueId;
+
   String get techniqueId => _$this._techniqueId;
+
   set techniqueId(String techniqueId) => _$this._techniqueId = techniqueId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _subProcedureId;
+
   String get subProcedureId => _$this._subProcedureId;
+
   set subProcedureId(String subProcedureId) =>
       _$this._subProcedureId = subProcedureId;
 
+  BodySide _bodySide;
+
+  BodySide get bodySide => _$this._bodySide;
+
+  set bodySide(BodySide bodySide) => _$this._bodySide = bodySide;
+
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
@@ -273,6 +312,7 @@ class CreatePreferenceCardApiRequestBuilder
       _description = _$v.description;
       _procedureId = _$v.procedureId;
       _subProcedureId = _$v.subProcedureId;
+      _bodySide = _$v.bodySide;
       _orgUnitIds = _$v.orgUnitIds?.toBuilder();
       _$v = null;
     }
@@ -305,6 +345,7 @@ class CreatePreferenceCardApiRequestBuilder
               description: description,
               procedureId: procedureId,
               subProcedureId: subProcedureId,
+              bodySide: bodySide,
               orgUnitIds: _orgUnitIds?.build());
     } catch (_) {
       String _$failedField;
@@ -351,6 +392,7 @@ class _$CreatePreferenceCardApiRequestActions
   final FieldDispatcher<String> description;
   final FieldDispatcher<String> procedureId;
   final FieldDispatcher<String> subProcedureId;
+  final FieldDispatcher<BodySide> bodySide;
   final FieldDispatcher<BuiltList<String>> orgUnitIds;
 
   _$CreatePreferenceCardApiRequestActions._(this.options$)
@@ -385,6 +427,8 @@ class _$CreatePreferenceCardApiRequestActions
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
             (p, b) => p?.subProcedureId = b),
+        bodySide = options$.field<BodySide>('bodySide', (a) => a?.bodySide,
+            (s) => s?.bodySide, (p, b) => p?.bodySide = b),
         orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
@@ -405,6 +449,7 @@ class _$CreatePreferenceCardApiRequestActions
       CreatePreferenceCardApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -416,6 +461,7 @@ class _$CreatePreferenceCardApiRequestActions
         this.description,
         this.procedureId,
         this.subProcedureId,
+        this.bodySide,
         this.orgUnitIds,
       ]);
 
@@ -429,6 +475,7 @@ class _$CreatePreferenceCardApiRequestActions
     description.reducer$(reducer);
     procedureId.reducer$(reducer);
     subProcedureId.reducer$(reducer);
+    bodySide.reducer$(reducer);
     orgUnitIds.reducer$(reducer);
   }
 

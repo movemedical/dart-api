@@ -19,8 +19,7 @@ const BuildInspectionApiUpdateEntryType _$wireTO_CONTAINER_OVERRIDE =
 const BuildInspectionApiUpdateEntryType _$wireAUTO_SCAN =
     const BuildInspectionApiUpdateEntryType._('AUTO_SCAN');
 
-BuildInspectionApiUpdateEntryType _$buildInspectionApiUpdateEntryTypeValueOf(
-    String name) {
+BuildInspectionApiUpdateEntryType _$valueOf(String name) {
   switch (name) {
     case 'REMOVE':
       return _$wireREMOVE;
@@ -39,8 +38,7 @@ BuildInspectionApiUpdateEntryType _$buildInspectionApiUpdateEntryTypeValueOf(
   }
 }
 
-final BuiltSet<BuildInspectionApiUpdateEntryType>
-    _$buildInspectionApiUpdateEntryTypeValues =
+final BuiltSet<BuildInspectionApiUpdateEntryType> _$values =
     new BuiltSet<BuildInspectionApiUpdateEntryType>(const <
         BuildInspectionApiUpdateEntryType>[
   _$wireREMOVE,

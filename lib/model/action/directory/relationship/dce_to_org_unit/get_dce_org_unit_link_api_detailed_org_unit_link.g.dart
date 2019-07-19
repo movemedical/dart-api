@@ -246,42 +246,60 @@ class GetDceOrgUnitLinkApiDetailedOrgUnitLinkBuilder
   _$GetDceOrgUnitLinkApiDetailedOrgUnitLink _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   String _orgUnitName;
+
   String get orgUnitName => _$this._orgUnitName;
+
   set orgUnitName(String orgUnitName) => _$this._orgUnitName = orgUnitName;
 
   bool _processOrders;
+
   bool get processOrders => _$this._processOrders;
+
   set processOrders(bool processOrders) =>
       _$this._processOrders = processOrders;
 
   bool _manageCatalog;
+
   bool get manageCatalog => _$this._manageCatalog;
+
   set manageCatalog(bool manageCatalog) =>
       _$this._manageCatalog = manageCatalog;
 
   bool _createAudit;
+
   bool get createAudit => _$this._createAudit;
+
   set createAudit(bool createAudit) => _$this._createAudit = createAudit;
 
   bool _manageAudit;
+
   bool get manageAudit => _$this._manageAudit;
+
   set manageAudit(bool manageAudit) => _$this._manageAudit = manageAudit;
 
   bool _processAudit;
+
   bool get processAudit => _$this._processAudit;
+
   set processAudit(bool processAudit) => _$this._processAudit = processAudit;
 
   ListBuilder<OuLinkToInventoryType> _inventoryTypeLinks;
+
   ListBuilder<OuLinkToInventoryType> get inventoryTypeLinks =>
       _$this._inventoryTypeLinks ??= new ListBuilder<OuLinkToInventoryType>();
+
   set inventoryTypeLinks(
           ListBuilder<OuLinkToInventoryType> inventoryTypeLinks) =>
       _$this._inventoryTypeLinks = inventoryTypeLinks;
@@ -433,6 +451,7 @@ class _$GetDceOrgUnitLinkApiDetailedOrgUnitLinkActions
       GetDceOrgUnitLinkApiDetailedOrgUnitLinkBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

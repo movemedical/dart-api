@@ -43,6 +43,12 @@ class _$CaseEventLiteSerializer implements StructuredSerializer<CaseEventLite> {
         ..add(serializers.serialize(object.status,
             specifiedType: const FullType(CaseEventStatus)));
     }
+    if (object.localEventDate != null) {
+      result
+        ..add('localEventDate')
+        ..add(serializers.serialize(object.localEventDate,
+            specifiedType: const FullType(DateTime)));
+    }
 
     return result;
   }
@@ -75,6 +81,10 @@ class _$CaseEventLiteSerializer implements StructuredSerializer<CaseEventLite> {
                   specifiedType: const FullType(CaseEventStatus))
               as CaseEventStatus;
           break;
+        case 'localEventDate':
+          result.localEventDate = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
+          break;
       }
     }
 
@@ -91,11 +101,18 @@ class _$CaseEventLite extends CaseEventLite {
   final int number;
   @override
   final CaseEventStatus status;
+  @override
+  final DateTime localEventDate;
 
   factory _$CaseEventLite([void updates(CaseEventLiteBuilder b)]) =>
       (new CaseEventLiteBuilder()..update(updates)).build();
 
-  _$CaseEventLite._({this.caseEventId, this.eventId, this.number, this.status})
+  _$CaseEventLite._(
+      {this.caseEventId,
+      this.eventId,
+      this.number,
+      this.status,
+      this.localEventDate})
       : super._();
 
   @override
@@ -112,15 +129,18 @@ class _$CaseEventLite extends CaseEventLite {
         caseEventId == other.caseEventId &&
         eventId == other.eventId &&
         number == other.number &&
-        status == other.status;
+        status == other.status &&
+        localEventDate == other.localEventDate;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, caseEventId.hashCode), eventId.hashCode),
-            number.hashCode),
-        status.hashCode));
+        $jc(
+            $jc($jc($jc(0, caseEventId.hashCode), eventId.hashCode),
+                number.hashCode),
+            status.hashCode),
+        localEventDate.hashCode));
   }
 
   @override
@@ -129,7 +149,8 @@ class _$CaseEventLite extends CaseEventLite {
           ..add('caseEventId', caseEventId)
           ..add('eventId', eventId)
           ..add('number', number)
-          ..add('status', status))
+          ..add('status', status)
+          ..add('localEventDate', localEventDate))
         .toString();
   }
 }
@@ -139,20 +160,35 @@ class CaseEventLiteBuilder
   _$CaseEventLite _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   String _eventId;
+
   String get eventId => _$this._eventId;
+
   set eventId(String eventId) => _$this._eventId = eventId;
 
   int _number;
+
   int get number => _$this._number;
+
   set number(int number) => _$this._number = number;
 
   CaseEventStatus _status;
+
   CaseEventStatus get status => _$this._status;
+
   set status(CaseEventStatus status) => _$this._status = status;
+
+  DateTime _localEventDate;
+
+  DateTime get localEventDate => _$this._localEventDate;
+
+  set localEventDate(DateTime localEventDate) =>
+      _$this._localEventDate = localEventDate;
 
   CaseEventLiteBuilder();
 
@@ -162,6 +198,7 @@ class CaseEventLiteBuilder
       _eventId = _$v.eventId;
       _number = _$v.number;
       _status = _$v.status;
+      _localEventDate = _$v.localEventDate;
       _$v = null;
     }
     return this;
@@ -187,7 +224,8 @@ class CaseEventLiteBuilder
             caseEventId: caseEventId,
             eventId: eventId,
             number: number,
-            status: status);
+            status: status,
+            localEventDate: localEventDate);
     replace(_$result);
     return _$result;
   }
@@ -214,6 +252,7 @@ class _$CaseEventLiteActions extends CaseEventLiteActions {
   final FieldDispatcher<String> eventId;
   final FieldDispatcher<int> number;
   final FieldDispatcher<CaseEventStatus> status;
+  final FieldDispatcher<DateTime> localEventDate;
 
   _$CaseEventLiteActions._(this.options$)
       : replace$ =
@@ -229,6 +268,11 @@ class _$CaseEventLiteActions extends CaseEventLiteActions {
             (s) => s?.number, (p, b) => p?.number = b),
         status = options$.field<CaseEventStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
+        localEventDate = options$.field<DateTime>(
+            'localEventDate',
+            (a) => a?.localEventDate,
+            (s) => s?.localEventDate,
+            (p, b) => p?.localEventDate = b),
         super._();
 
   factory _$CaseEventLiteActions(CaseEventLiteActionsOptions options) =>
@@ -241,6 +285,7 @@ class _$CaseEventLiteActions extends CaseEventLiteActions {
   CaseEventLiteBuilder newBuilder$() => CaseEventLiteBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -249,6 +294,7 @@ class _$CaseEventLiteActions extends CaseEventLiteActions {
         this.eventId,
         this.number,
         this.status,
+        this.localEventDate,
       ]);
 
   @override
@@ -258,6 +304,7 @@ class _$CaseEventLiteActions extends CaseEventLiteActions {
     eventId.reducer$(reducer);
     number.reducer$(reducer);
     status.reducer$(reducer);
+    localEventDate.reducer$(reducer);
   }
 
   @override

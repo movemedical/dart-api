@@ -22,11 +22,10 @@ class GetCustomerRelationshipsApiDirection extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<GetCustomerRelationshipsApiDirection> get values =>
-      _$getCustomerRelationshipsApiDirectionValues;
+  static BuiltSet<GetCustomerRelationshipsApiDirection> get values => _$values;
 
   static GetCustomerRelationshipsApiDirection valueOf(String name) =>
-      _$getCustomerRelationshipsApiDirectionValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

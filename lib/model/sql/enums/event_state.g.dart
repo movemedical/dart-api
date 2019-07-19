@@ -9,7 +9,7 @@ part of 'event_state.dart';
 const EventState _$wireIDLE = const EventState._('IDLE');
 const EventState _$wireSYNCING = const EventState._('SYNCING');
 
-EventState _$eventStateValueOf(String name) {
+EventState _$valueOf(String name) {
   switch (name) {
     case 'IDLE':
       return _$wireIDLE;
@@ -20,7 +20,7 @@ EventState _$eventStateValueOf(String name) {
   }
 }
 
-final BuiltSet<EventState> _$eventStateValues =
+final BuiltSet<EventState> _$values =
     new BuiltSet<EventState>(const <EventState>[
   _$wireIDLE,
   _$wireSYNCING,

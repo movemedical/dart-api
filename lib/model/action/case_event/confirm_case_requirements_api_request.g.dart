@@ -137,15 +137,21 @@ class ConfirmCaseRequirementsApiRequestBuilder
   _$ConfirmCaseRequirementsApiRequest _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   DateTime _surgeryDate;
+
   DateTime get surgeryDate => _$this._surgeryDate;
+
   set surgeryDate(DateTime surgeryDate) => _$this._surgeryDate = surgeryDate;
 
   bool _eventTimeUnknown;
+
   bool get eventTimeUnknown => _$this._eventTimeUnknown;
+
   set eventTimeUnknown(bool eventTimeUnknown) =>
       _$this._eventTimeUnknown = eventTimeUnknown;
 
@@ -245,6 +251,7 @@ class _$ConfirmCaseRequirementsApiRequestActions
       ConfirmCaseRequirementsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

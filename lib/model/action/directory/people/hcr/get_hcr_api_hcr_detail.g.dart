@@ -147,12 +147,6 @@ class _$GetHcrApiHcrDetailSerializer
         ..add(serializers.serialize(object.userLocked,
             specifiedType: const FullType(bool)));
     }
-    if (object.timeZone != null) {
-      result
-        ..add('timeZone')
-        ..add(serializers.serialize(object.timeZone,
-            specifiedType: const FullType(String)));
-    }
     if (object.startDate != null) {
       result
         ..add('startDate')
@@ -182,6 +176,30 @@ class _$GetHcrApiHcrDetailSerializer
         ..add('lastVisibilityUpdateDate')
         ..add(serializers.serialize(object.lastVisibilityUpdateDate,
             specifiedType: const FullType(DateTime)));
+    }
+    if (object.timeZone != null) {
+      result
+        ..add('timeZone')
+        ..add(serializers.serialize(object.timeZone,
+            specifiedType: const FullType(String)));
+    }
+    if (object.erpUserId != null) {
+      result
+        ..add('erpUserId')
+        ..add(serializers.serialize(object.erpUserId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.defaultBizUnit != null) {
+      result
+        ..add('defaultBizUnit')
+        ..add(serializers.serialize(object.defaultBizUnit,
+            specifiedType: const FullType(BizUnit)));
+    }
+    if (object.defaultSalesOrgUnit != null) {
+      result
+        ..add('defaultSalesOrgUnit')
+        ..add(serializers.serialize(object.defaultSalesOrgUnit,
+            specifiedType: const FullType(OrgUnit)));
     }
 
     return result;
@@ -285,10 +303,6 @@ class _$GetHcrApiHcrDetailSerializer
           result.userLocked = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
-        case 'timeZone':
-          result.timeZone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'startDate':
           result.startDate = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
@@ -308,6 +322,22 @@ class _$GetHcrApiHcrDetailSerializer
         case 'lastVisibilityUpdateDate':
           result.lastVisibilityUpdateDate = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
+          break;
+        case 'timeZone':
+          result.timeZone = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'erpUserId':
+          result.erpUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'defaultBizUnit':
+          result.defaultBizUnit.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BizUnit)) as BizUnit);
+          break;
+        case 'defaultSalesOrgUnit':
+          result.defaultSalesOrgUnit.replace(serializers.deserialize(value,
+              specifiedType: const FullType(OrgUnit)) as OrgUnit);
           break;
       }
     }
@@ -360,8 +390,6 @@ class _$GetHcrApiHcrDetail extends GetHcrApiHcrDetail {
   @override
   final bool userLocked;
   @override
-  final String timeZone;
-  @override
   final DateTime startDate;
   @override
   final DateTime endDate;
@@ -371,6 +399,14 @@ class _$GetHcrApiHcrDetail extends GetHcrApiHcrDetail {
   final bool phiAllowed;
   @override
   final DateTime lastVisibilityUpdateDate;
+  @override
+  final String timeZone;
+  @override
+  final String erpUserId;
+  @override
+  final BizUnit defaultBizUnit;
+  @override
+  final OrgUnit defaultSalesOrgUnit;
 
   factory _$GetHcrApiHcrDetail([void updates(GetHcrApiHcrDetailBuilder b)]) =>
       (new GetHcrApiHcrDetailBuilder()..update(updates)).build();
@@ -397,12 +433,15 @@ class _$GetHcrApiHcrDetail extends GetHcrApiHcrDetail {
       this.userPerspective,
       this.userStatus,
       this.userLocked,
-      this.timeZone,
       this.startDate,
       this.endDate,
       this.directoryAdmin,
       this.phiAllowed,
-      this.lastVisibilityUpdateDate})
+      this.lastVisibilityUpdateDate,
+      this.timeZone,
+      this.erpUserId,
+      this.defaultBizUnit,
+      this.defaultSalesOrgUnit})
       : super._();
 
   @override
@@ -438,12 +477,15 @@ class _$GetHcrApiHcrDetail extends GetHcrApiHcrDetail {
         userPerspective == other.userPerspective &&
         userStatus == other.userStatus &&
         userLocked == other.userLocked &&
-        timeZone == other.timeZone &&
         startDate == other.startDate &&
         endDate == other.endDate &&
         directoryAdmin == other.directoryAdmin &&
         phiAllowed == other.phiAllowed &&
-        lastVisibilityUpdateDate == other.lastVisibilityUpdateDate;
+        lastVisibilityUpdateDate == other.lastVisibilityUpdateDate &&
+        timeZone == other.timeZone &&
+        erpUserId == other.erpUserId &&
+        defaultBizUnit == other.defaultBizUnit &&
+        defaultSalesOrgUnit == other.defaultSalesOrgUnit;
   }
 
   @override
@@ -466,26 +508,26 @@ class _$GetHcrApiHcrDetail extends GetHcrApiHcrDetail {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), customer.hashCode), orgId.hashCode), orgType.hashCode), orgName.hashCode), hcrType.hashCode), hcrReference.hashCode), name.hashCode),
-                                                                                email.hashCode),
-                                                                            workPhoneNumber.hashCode),
-                                                                        mobilePhoneNumber.hashCode),
-                                                                    faxNumber.hashCode),
-                                                                active.hashCode),
-                                                            workingHomeId.hashCode),
-                                                        workingHomeName.hashCode),
-                                                    workingAtId.hashCode),
-                                                workingAtName.hashCode),
-                                            userId.hashCode),
-                                        userPerspective.hashCode),
-                                    userStatus.hashCode),
-                                userLocked.hashCode),
-                            timeZone.hashCode),
-                        startDate.hashCode),
-                    endDate.hashCode),
-                directoryAdmin.hashCode),
-            phiAllowed.hashCode),
-        lastVisibilityUpdateDate.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), customer.hashCode), orgId.hashCode), orgType.hashCode), orgName.hashCode), hcrType.hashCode), hcrReference.hashCode), name.hashCode), email.hashCode), workPhoneNumber.hashCode), mobilePhoneNumber.hashCode),
+                                                                                faxNumber.hashCode),
+                                                                            active.hashCode),
+                                                                        workingHomeId.hashCode),
+                                                                    workingHomeName.hashCode),
+                                                                workingAtId.hashCode),
+                                                            workingAtName.hashCode),
+                                                        userId.hashCode),
+                                                    userPerspective.hashCode),
+                                                userStatus.hashCode),
+                                            userLocked.hashCode),
+                                        startDate.hashCode),
+                                    endDate.hashCode),
+                                directoryAdmin.hashCode),
+                            phiAllowed.hashCode),
+                        lastVisibilityUpdateDate.hashCode),
+                    timeZone.hashCode),
+                erpUserId.hashCode),
+            defaultBizUnit.hashCode),
+        defaultSalesOrgUnit.hashCode));
   }
 
   @override
@@ -512,12 +554,15 @@ class _$GetHcrApiHcrDetail extends GetHcrApiHcrDetail {
           ..add('userPerspective', userPerspective)
           ..add('userStatus', userStatus)
           ..add('userLocked', userLocked)
-          ..add('timeZone', timeZone)
           ..add('startDate', startDate)
           ..add('endDate', endDate)
           ..add('directoryAdmin', directoryAdmin)
           ..add('phiAllowed', phiAllowed)
-          ..add('lastVisibilityUpdateDate', lastVisibilityUpdateDate))
+          ..add('lastVisibilityUpdateDate', lastVisibilityUpdateDate)
+          ..add('timeZone', timeZone)
+          ..add('erpUserId', erpUserId)
+          ..add('defaultBizUnit', defaultBizUnit)
+          ..add('defaultSalesOrgUnit', defaultSalesOrgUnit))
         .toString();
   }
 }
@@ -527,125 +572,201 @@ class GetHcrApiHcrDetailBuilder
   _$GetHcrApiHcrDetail _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   ListCustomersApiCustomerDetailsBuilder _customer;
+
   ListCustomersApiCustomerDetailsBuilder get customer =>
       _$this._customer ??= new ListCustomersApiCustomerDetailsBuilder();
+
   set customer(ListCustomersApiCustomerDetailsBuilder customer) =>
       _$this._customer = customer;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   OrgType _orgType;
+
   OrgType get orgType => _$this._orgType;
+
   set orgType(OrgType orgType) => _$this._orgType = orgType;
 
   String _orgName;
+
   String get orgName => _$this._orgName;
+
   set orgName(String orgName) => _$this._orgName = orgName;
 
   HcrType _hcrType;
+
   HcrType get hcrType => _$this._hcrType;
+
   set hcrType(HcrType hcrType) => _$this._hcrType = hcrType;
 
   String _hcrReference;
+
   String get hcrReference => _$this._hcrReference;
+
   set hcrReference(String hcrReference) => _$this._hcrReference = hcrReference;
 
   PersonNameBuilder _name;
+
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
+
   set name(PersonNameBuilder name) => _$this._name = name;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   PhoneNumberBuilder _workPhoneNumber;
+
   PhoneNumberBuilder get workPhoneNumber =>
       _$this._workPhoneNumber ??= new PhoneNumberBuilder();
+
   set workPhoneNumber(PhoneNumberBuilder workPhoneNumber) =>
       _$this._workPhoneNumber = workPhoneNumber;
 
   PhoneNumberBuilder _mobilePhoneNumber;
+
   PhoneNumberBuilder get mobilePhoneNumber =>
       _$this._mobilePhoneNumber ??= new PhoneNumberBuilder();
+
   set mobilePhoneNumber(PhoneNumberBuilder mobilePhoneNumber) =>
       _$this._mobilePhoneNumber = mobilePhoneNumber;
 
   PhoneNumberBuilder _faxNumber;
+
   PhoneNumberBuilder get faxNumber =>
       _$this._faxNumber ??= new PhoneNumberBuilder();
+
   set faxNumber(PhoneNumberBuilder faxNumber) => _$this._faxNumber = faxNumber;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   String _workingHomeId;
+
   String get workingHomeId => _$this._workingHomeId;
+
   set workingHomeId(String workingHomeId) =>
       _$this._workingHomeId = workingHomeId;
 
   String _workingHomeName;
+
   String get workingHomeName => _$this._workingHomeName;
+
   set workingHomeName(String workingHomeName) =>
       _$this._workingHomeName = workingHomeName;
 
   String _workingAtId;
+
   String get workingAtId => _$this._workingAtId;
+
   set workingAtId(String workingAtId) => _$this._workingAtId = workingAtId;
 
   String _workingAtName;
+
   String get workingAtName => _$this._workingAtName;
+
   set workingAtName(String workingAtName) =>
       _$this._workingAtName = workingAtName;
 
   String _userId;
+
   String get userId => _$this._userId;
+
   set userId(String userId) => _$this._userId = userId;
 
   UserPerspective _userPerspective;
+
   UserPerspective get userPerspective => _$this._userPerspective;
+
   set userPerspective(UserPerspective userPerspective) =>
       _$this._userPerspective = userPerspective;
 
   UserStatus _userStatus;
+
   UserStatus get userStatus => _$this._userStatus;
+
   set userStatus(UserStatus userStatus) => _$this._userStatus = userStatus;
 
   bool _userLocked;
+
   bool get userLocked => _$this._userLocked;
+
   set userLocked(bool userLocked) => _$this._userLocked = userLocked;
 
-  String _timeZone;
-  String get timeZone => _$this._timeZone;
-  set timeZone(String timeZone) => _$this._timeZone = timeZone;
-
   DateTime _startDate;
+
   DateTime get startDate => _$this._startDate;
+
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
+
   DateTime get endDate => _$this._endDate;
+
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   bool _directoryAdmin;
+
   bool get directoryAdmin => _$this._directoryAdmin;
+
   set directoryAdmin(bool directoryAdmin) =>
       _$this._directoryAdmin = directoryAdmin;
 
   bool _phiAllowed;
+
   bool get phiAllowed => _$this._phiAllowed;
+
   set phiAllowed(bool phiAllowed) => _$this._phiAllowed = phiAllowed;
 
   DateTime _lastVisibilityUpdateDate;
+
   DateTime get lastVisibilityUpdateDate => _$this._lastVisibilityUpdateDate;
+
   set lastVisibilityUpdateDate(DateTime lastVisibilityUpdateDate) =>
       _$this._lastVisibilityUpdateDate = lastVisibilityUpdateDate;
+
+  String _timeZone;
+
+  String get timeZone => _$this._timeZone;
+
+  set timeZone(String timeZone) => _$this._timeZone = timeZone;
+
+  String _erpUserId;
+
+  String get erpUserId => _$this._erpUserId;
+
+  set erpUserId(String erpUserId) => _$this._erpUserId = erpUserId;
+
+  BizUnitBuilder _defaultBizUnit;
+
+  BizUnitBuilder get defaultBizUnit =>
+      _$this._defaultBizUnit ??= new BizUnitBuilder();
+
+  set defaultBizUnit(BizUnitBuilder defaultBizUnit) =>
+      _$this._defaultBizUnit = defaultBizUnit;
+
+  OrgUnitBuilder _defaultSalesOrgUnit;
+
+  OrgUnitBuilder get defaultSalesOrgUnit =>
+      _$this._defaultSalesOrgUnit ??= new OrgUnitBuilder();
+
+  set defaultSalesOrgUnit(OrgUnitBuilder defaultSalesOrgUnit) =>
+      _$this._defaultSalesOrgUnit = defaultSalesOrgUnit;
 
   GetHcrApiHcrDetailBuilder();
 
@@ -672,12 +793,15 @@ class GetHcrApiHcrDetailBuilder
       _userPerspective = _$v.userPerspective;
       _userStatus = _$v.userStatus;
       _userLocked = _$v.userLocked;
-      _timeZone = _$v.timeZone;
       _startDate = _$v.startDate;
       _endDate = _$v.endDate;
       _directoryAdmin = _$v.directoryAdmin;
       _phiAllowed = _$v.phiAllowed;
       _lastVisibilityUpdateDate = _$v.lastVisibilityUpdateDate;
+      _timeZone = _$v.timeZone;
+      _erpUserId = _$v.erpUserId;
+      _defaultBizUnit = _$v.defaultBizUnit?.toBuilder();
+      _defaultSalesOrgUnit = _$v.defaultSalesOrgUnit?.toBuilder();
       _$v = null;
     }
     return this;
@@ -723,12 +847,15 @@ class GetHcrApiHcrDetailBuilder
               userPerspective: userPerspective,
               userStatus: userStatus,
               userLocked: userLocked,
-              timeZone: timeZone,
               startDate: startDate,
               endDate: endDate,
               directoryAdmin: directoryAdmin,
               phiAllowed: phiAllowed,
-              lastVisibilityUpdateDate: lastVisibilityUpdateDate);
+              lastVisibilityUpdateDate: lastVisibilityUpdateDate,
+              timeZone: timeZone,
+              erpUserId: erpUserId,
+              defaultBizUnit: _defaultBizUnit?.build(),
+              defaultSalesOrgUnit: _defaultSalesOrgUnit?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -745,6 +872,11 @@ class GetHcrApiHcrDetailBuilder
         _mobilePhoneNumber?.build();
         _$failedField = 'faxNumber';
         _faxNumber?.build();
+
+        _$failedField = 'defaultBizUnit';
+        _defaultBizUnit?.build();
+        _$failedField = 'defaultSalesOrgUnit';
+        _defaultSalesOrgUnit?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetHcrApiHcrDetail', _$failedField, e.toString());
@@ -794,12 +926,15 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
   final FieldDispatcher<UserPerspective> userPerspective;
   final FieldDispatcher<UserStatus> userStatus;
   final FieldDispatcher<bool> userLocked;
-  final FieldDispatcher<String> timeZone;
   final FieldDispatcher<DateTime> startDate;
   final FieldDispatcher<DateTime> endDate;
   final FieldDispatcher<bool> directoryAdmin;
   final FieldDispatcher<bool> phiAllowed;
   final FieldDispatcher<DateTime> lastVisibilityUpdateDate;
+  final FieldDispatcher<String> timeZone;
+  final FieldDispatcher<String> erpUserId;
+  final BizUnitActions defaultBizUnit;
+  final OrgUnitActions defaultSalesOrgUnit;
 
   _$GetHcrApiHcrDetailActions._(this.options$)
       : replace$ = options$.action<GetHcrApiHcrDetail>(
@@ -900,8 +1035,6 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
             (p, b) => p?.userStatus = b),
         userLocked = options$.field<bool>('userLocked', (a) => a?.userLocked,
             (s) => s?.userLocked, (p, b) => p?.userLocked = b),
-        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
-            (s) => s?.timeZone, (p, b) => p?.timeZone = b),
         startDate = options$.field<DateTime>('startDate', (a) => a?.startDate,
             (s) => s?.startDate, (p, b) => p?.startDate = b),
         endDate = options$.field<DateTime>('endDate', (a) => a?.endDate,
@@ -918,6 +1051,24 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
             (a) => a?.lastVisibilityUpdateDate,
             (s) => s?.lastVisibilityUpdateDate,
             (p, b) => p?.lastVisibilityUpdateDate = b),
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
+            (s) => s?.timeZone, (p, b) => p?.timeZone = b),
+        erpUserId = options$.field<String>('erpUserId', (a) => a?.erpUserId,
+            (s) => s?.erpUserId, (p, b) => p?.erpUserId = b),
+        defaultBizUnit = BizUnitActions(() =>
+            options$.stateful<BizUnit, BizUnitBuilder, BizUnitActions>(
+                'defaultBizUnit',
+                (a) => a.defaultBizUnit,
+                (s) => s?.defaultBizUnit,
+                (b) => b?.defaultBizUnit,
+                (parent, builder) => parent?.defaultBizUnit = builder)),
+        defaultSalesOrgUnit = OrgUnitActions(() =>
+            options$.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
+                'defaultSalesOrgUnit',
+                (a) => a.defaultSalesOrgUnit,
+                (s) => s?.defaultSalesOrgUnit,
+                (b) => b?.defaultSalesOrgUnit,
+                (parent, builder) => parent?.defaultSalesOrgUnit = builder)),
         super._();
 
   factory _$GetHcrApiHcrDetailActions(
@@ -931,6 +1082,7 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
   GetHcrApiHcrDetailBuilder newBuilder$() => GetHcrApiHcrDetailBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.customer,
@@ -939,9 +1091,12 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
         this.workPhoneNumber,
         this.mobilePhoneNumber,
         this.faxNumber,
+        this.defaultBizUnit,
+        this.defaultSalesOrgUnit,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -961,12 +1116,13 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
         this.userPerspective,
         this.userStatus,
         this.userLocked,
-        this.timeZone,
         this.startDate,
         this.endDate,
         this.directoryAdmin,
         this.phiAllowed,
         this.lastVisibilityUpdateDate,
+        this.timeZone,
+        this.erpUserId,
       ]);
 
   @override
@@ -993,12 +1149,15 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
     userPerspective.reducer$(reducer);
     userStatus.reducer$(reducer);
     userLocked.reducer$(reducer);
-    timeZone.reducer$(reducer);
     startDate.reducer$(reducer);
     endDate.reducer$(reducer);
     directoryAdmin.reducer$(reducer);
     phiAllowed.reducer$(reducer);
     lastVisibilityUpdateDate.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    erpUserId.reducer$(reducer);
+    defaultBizUnit.reducer$(reducer);
+    defaultSalesOrgUnit.reducer$(reducer);
   }
 
   @override
@@ -1010,5 +1169,7 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
     workPhoneNumber.middleware$(middleware);
     mobilePhoneNumber.middleware$(middleware);
     faxNumber.middleware$(middleware);
+    defaultBizUnit.middleware$(middleware);
+    defaultSalesOrgUnit.middleware$(middleware);
   }
 }

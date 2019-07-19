@@ -122,11 +122,15 @@ class ListHCRForFacilityApiResponseBuilder
   _$ListHCRForFacilityApiResponse _$v;
 
   ListBuilder<Hcr> _data;
+
   ListBuilder<Hcr> get data => _$this._data ??= new ListBuilder<Hcr>();
+
   set data(ListBuilder<Hcr> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListHCRForFacilityApiResponseBuilder();
@@ -223,6 +227,7 @@ class _$ListHCRForFacilityApiResponseActions
       ListHCRForFacilityApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

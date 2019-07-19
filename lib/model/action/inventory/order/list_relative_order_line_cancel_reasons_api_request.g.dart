@@ -132,14 +132,18 @@ class ListRelativeOrderLineCancelReasonsApiRequestBuilder
   _$ListRelativeOrderLineCancelReasonsApiRequest _$v;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   OrderByParamsBuilder<ListRelativeOrderLineCancelReasonsApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<
       ListRelativeOrderLineCancelReasonsApiOrderBy> get orderBy => _$this
           ._orderBy ??=
       new OrderByParamsBuilder<ListRelativeOrderLineCancelReasonsApiOrderBy>();
+
   set orderBy(
           OrderByParamsBuilder<ListRelativeOrderLineCancelReasonsApiOrderBy>
               orderBy) =>
@@ -255,12 +259,14 @@ class _$ListRelativeOrderLineCancelReasonsApiRequestActions
       ListRelativeOrderLineCancelReasonsApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.orderBy,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

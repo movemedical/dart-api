@@ -157,19 +157,27 @@ class ListCustomerQualifiersApiCustomerQualifierBuilder
   _$ListCustomerQualifiersApiCustomerQualifier _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   CustomerQualifierType _type;
+
   CustomerQualifierType get type => _$this._type;
+
   set type(CustomerQualifierType type) => _$this._type = type;
 
   int _priority;
+
   int get priority => _$this._priority;
+
   set priority(int priority) => _$this._priority = priority;
 
   String _value;
+
   String get value => _$this._value;
+
   set value(String value) => _$this._value = value;
 
   ListCustomerQualifiersApiCustomerQualifierBuilder();
@@ -262,6 +270,7 @@ class _$ListCustomerQualifiersApiCustomerQualifierActions
       ListCustomerQualifiersApiCustomerQualifierBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

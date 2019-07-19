@@ -65,6 +65,7 @@ class _$ListCaseTypesApi extends ListCaseTypesApi {
           ApiResult<ListCaseTypesApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

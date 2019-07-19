@@ -21,11 +21,10 @@ class ListOrgUnitTeamOptionsApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListOrgUnitTeamOptionsApiOrderBy> get values =>
-      _$listOrgUnitTeamOptionsApiOrderByValues;
+  static BuiltSet<ListOrgUnitTeamOptionsApiOrderBy> get values => _$values;
 
   static ListOrgUnitTeamOptionsApiOrderBy valueOf(String name) =>
-      _$listOrgUnitTeamOptionsApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

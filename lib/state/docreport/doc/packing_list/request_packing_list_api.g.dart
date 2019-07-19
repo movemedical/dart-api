@@ -68,6 +68,7 @@ class _$RequestPackingListApi extends RequestPackingListApi {
           ApiResult<RequestPackingListApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

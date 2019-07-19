@@ -111,8 +111,10 @@ class ProcessStockOrderRestockPlanApiResponseBuilder
   _$ProcessStockOrderRestockPlanApiResponse _$v;
 
   ListBuilder<String> _orderIds;
+
   ListBuilder<String> get orderIds =>
       _$this._orderIds ??= new ListBuilder<String>();
+
   set orderIds(ListBuilder<String> orderIds) => _$this._orderIds = orderIds;
 
   ProcessStockOrderRestockPlanApiResponseBuilder();
@@ -207,6 +209,7 @@ class _$ProcessStockOrderRestockPlanApiResponseActions
       ProcessStockOrderRestockPlanApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

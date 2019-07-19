@@ -27,11 +27,9 @@ class ListLoansApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListLoansApiOrderBy> get values =>
-      _$listLoansApiOrderByValues;
+  static BuiltSet<ListLoansApiOrderBy> get values => _$values;
 
-  static ListLoansApiOrderBy valueOf(String name) =>
-      _$listLoansApiOrderByValueOf(name);
+  static ListLoansApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

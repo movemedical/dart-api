@@ -25,7 +25,7 @@ const ListOrdersApiOrderBy _$wireDELIVERY_END =
 const ListOrdersApiOrderBy _$wireCREATED_BY =
     const ListOrdersApiOrderBy._('CREATED_BY');
 
-ListOrdersApiOrderBy _$listOrdersApiOrderByValueOf(String name) {
+ListOrdersApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NUMBER':
       return _$wireNUMBER;
@@ -50,7 +50,7 @@ ListOrdersApiOrderBy _$listOrdersApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListOrdersApiOrderBy> _$listOrdersApiOrderByValues =
+final BuiltSet<ListOrdersApiOrderBy> _$values =
     new BuiltSet<ListOrdersApiOrderBy>(const <ListOrdersApiOrderBy>[
   _$wireNUMBER,
   _$wireSTATUS,

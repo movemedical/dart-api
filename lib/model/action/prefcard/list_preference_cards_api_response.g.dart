@@ -122,13 +122,17 @@ class ListPreferenceCardsApiResponseBuilder
   _$ListPreferenceCardsApiResponse _$v;
 
   ListBuilder<ListPreferenceCardsApiPreferenceCard> _data;
+
   ListBuilder<ListPreferenceCardsApiPreferenceCard> get data =>
       _$this._data ??= new ListBuilder<ListPreferenceCardsApiPreferenceCard>();
+
   set data(ListBuilder<ListPreferenceCardsApiPreferenceCard> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListPreferenceCardsApiResponseBuilder();
@@ -225,6 +229,7 @@ class _$ListPreferenceCardsApiResponseActions
       ListPreferenceCardsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

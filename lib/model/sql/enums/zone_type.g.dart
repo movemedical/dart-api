@@ -9,7 +9,7 @@ part of 'zone_type.dart';
 const ZoneType _$wireSIMPLE = const ZoneType._('SIMPLE');
 const ZoneType _$wireSTRUCTURED = const ZoneType._('STRUCTURED');
 
-ZoneType _$zoneTypeValueOf(String name) {
+ZoneType _$valueOf(String name) {
   switch (name) {
     case 'SIMPLE':
       return _$wireSIMPLE;
@@ -20,8 +20,7 @@ ZoneType _$zoneTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<ZoneType> _$zoneTypeValues =
-    new BuiltSet<ZoneType>(const <ZoneType>[
+final BuiltSet<ZoneType> _$values = new BuiltSet<ZoneType>(const <ZoneType>[
   _$wireSIMPLE,
   _$wireSTRUCTURED,
 ]);

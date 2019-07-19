@@ -22,9 +22,9 @@ class CurrencyType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<CurrencyType> get values => _$currencyTypeValues;
+  static BuiltSet<CurrencyType> get values => _$values;
 
-  static CurrencyType valueOf(String name) => _$currencyTypeValueOf(name);
+  static CurrencyType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

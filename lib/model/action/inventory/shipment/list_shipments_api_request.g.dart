@@ -97,6 +97,18 @@ class _$ListShipmentsApiRequestSerializer
         ..add(serializers.serialize(object.search,
             specifiedType: const FullType(String)));
     }
+    if (object.salesLeadId != null) {
+      result
+        ..add('salesLeadId')
+        ..add(serializers.serialize(object.salesLeadId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.opsLeadId != null) {
+      result
+        ..add('opsLeadId')
+        ..add(serializers.serialize(object.opsLeadId,
+            specifiedType: const FullType(String)));
+    }
     if (object.paging != null) {
       result
         ..add('paging')
@@ -109,6 +121,12 @@ class _$ListShipmentsApiRequestSerializer
         ..add(serializers.serialize(object.orderBy,
             specifiedType: const FullType(OrderByParams,
                 const [const FullType(ListShipmentsApiOrderBy)])));
+    }
+    if (object.useOltp != null) {
+      result
+        ..add('useOltp')
+        ..add(serializers.serialize(object.useOltp,
+            specifiedType: const FullType(bool)));
     }
 
     return result;
@@ -178,6 +196,14 @@ class _$ListShipmentsApiRequestSerializer
           result.search = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'salesLeadId':
+          result.salesLeadId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'opsLeadId':
+          result.opsLeadId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'paging':
           result.paging.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PaginationParams))
@@ -188,6 +214,10 @@ class _$ListShipmentsApiRequestSerializer
               specifiedType: const FullType(OrderByParams, const [
                 const FullType(ListShipmentsApiOrderBy)
               ])) as OrderByParams<ListShipmentsApiOrderBy>);
+          break;
+        case 'useOltp':
+          result.useOltp = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
           break;
       }
     }
@@ -222,9 +252,15 @@ class _$ListShipmentsApiRequest extends ListShipmentsApiRequest {
   @override
   final String search;
   @override
+  final String salesLeadId;
+  @override
+  final String opsLeadId;
+  @override
   final PaginationParams paging;
   @override
   final OrderByParams<ListShipmentsApiOrderBy> orderBy;
+  @override
+  final bool useOltp;
 
   factory _$ListShipmentsApiRequest(
           [void updates(ListShipmentsApiRequestBuilder b)]) =>
@@ -243,8 +279,11 @@ class _$ListShipmentsApiRequest extends ListShipmentsApiRequest {
       this.carrier,
       this.openPicks,
       this.search,
+      this.salesLeadId,
+      this.opsLeadId,
       this.paging,
-      this.orderBy})
+      this.orderBy,
+      this.useOltp})
       : super._();
 
   @override
@@ -272,8 +311,11 @@ class _$ListShipmentsApiRequest extends ListShipmentsApiRequest {
         carrier == other.carrier &&
         openPicks == other.openPicks &&
         search == other.search &&
+        salesLeadId == other.salesLeadId &&
+        opsLeadId == other.opsLeadId &&
         paging == other.paging &&
-        orderBy == other.orderBy;
+        orderBy == other.orderBy &&
+        useOltp == other.useOltp;
   }
 
   @override
@@ -292,23 +334,33 @@ class _$ListShipmentsApiRequest extends ListShipmentsApiRequest {
                                                 $jc(
                                                     $jc(
                                                         $jc(
-                                                            0,
-                                                            shipmentId
+                                                            $jc(
+                                                                $jc(
+                                                                    $jc(
+                                                                        0,
+                                                                        shipmentId
+                                                                            .hashCode),
+                                                                    shipmentNumber
+                                                                        .hashCode),
+                                                                orderNumber
+                                                                    .hashCode),
+                                                            assignedToUserId
                                                                 .hashCode),
-                                                        shipmentNumber
+                                                        createdDateRange
                                                             .hashCode),
-                                                    orderNumber.hashCode),
-                                                assignedToUserId.hashCode),
-                                            createdDateRange.hashCode),
-                                        fulfillmentCutoffDateRange.hashCode),
-                                    status.hashCode),
-                                fromLocationId.hashCode),
-                            toLocationId.hashCode),
-                        carrier.hashCode),
-                    openPicks.hashCode),
-                search.hashCode),
-            paging.hashCode),
-        orderBy.hashCode));
+                                                    fulfillmentCutoffDateRange
+                                                        .hashCode),
+                                                status.hashCode),
+                                            fromLocationId.hashCode),
+                                        toLocationId.hashCode),
+                                    carrier.hashCode),
+                                openPicks.hashCode),
+                            search.hashCode),
+                        salesLeadId.hashCode),
+                    opsLeadId.hashCode),
+                paging.hashCode),
+            orderBy.hashCode),
+        useOltp.hashCode));
   }
 
   @override
@@ -326,8 +378,11 @@ class _$ListShipmentsApiRequest extends ListShipmentsApiRequest {
           ..add('carrier', carrier)
           ..add('openPicks', openPicks)
           ..add('search', search)
+          ..add('salesLeadId', salesLeadId)
+          ..add('opsLeadId', opsLeadId)
           ..add('paging', paging)
-          ..add('orderBy', orderBy))
+          ..add('orderBy', orderBy)
+          ..add('useOltp', useOltp))
         .toString();
   }
 }
@@ -338,71 +393,117 @@ class ListShipmentsApiRequestBuilder
   _$ListShipmentsApiRequest _$v;
 
   String _shipmentId;
+
   String get shipmentId => _$this._shipmentId;
+
   set shipmentId(String shipmentId) => _$this._shipmentId = shipmentId;
 
   String _shipmentNumber;
+
   String get shipmentNumber => _$this._shipmentNumber;
+
   set shipmentNumber(String shipmentNumber) =>
       _$this._shipmentNumber = shipmentNumber;
 
   String _orderNumber;
+
   String get orderNumber => _$this._orderNumber;
+
   set orderNumber(String orderNumber) => _$this._orderNumber = orderNumber;
 
   String _assignedToUserId;
+
   String get assignedToUserId => _$this._assignedToUserId;
+
   set assignedToUserId(String assignedToUserId) =>
       _$this._assignedToUserId = assignedToUserId;
 
   DateRangeBuilder _createdDateRange;
+
   DateRangeBuilder get createdDateRange =>
       _$this._createdDateRange ??= new DateRangeBuilder();
+
   set createdDateRange(DateRangeBuilder createdDateRange) =>
       _$this._createdDateRange = createdDateRange;
 
   DateRangeBuilder _fulfillmentCutoffDateRange;
+
   DateRangeBuilder get fulfillmentCutoffDateRange =>
       _$this._fulfillmentCutoffDateRange ??= new DateRangeBuilder();
+
   set fulfillmentCutoffDateRange(DateRangeBuilder fulfillmentCutoffDateRange) =>
       _$this._fulfillmentCutoffDateRange = fulfillmentCutoffDateRange;
 
   ListBuilder<ShipmentStatus> _status;
+
   ListBuilder<ShipmentStatus> get status =>
       _$this._status ??= new ListBuilder<ShipmentStatus>();
+
   set status(ListBuilder<ShipmentStatus> status) => _$this._status = status;
 
   String _fromLocationId;
+
   String get fromLocationId => _$this._fromLocationId;
+
   set fromLocationId(String fromLocationId) =>
       _$this._fromLocationId = fromLocationId;
 
   String _toLocationId;
+
   String get toLocationId => _$this._toLocationId;
+
   set toLocationId(String toLocationId) => _$this._toLocationId = toLocationId;
 
   MoveShippingCarrier _carrier;
+
   MoveShippingCarrier get carrier => _$this._carrier;
+
   set carrier(MoveShippingCarrier carrier) => _$this._carrier = carrier;
 
   bool _openPicks;
+
   bool get openPicks => _$this._openPicks;
+
   set openPicks(bool openPicks) => _$this._openPicks = openPicks;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
+  String _salesLeadId;
+
+  String get salesLeadId => _$this._salesLeadId;
+
+  set salesLeadId(String salesLeadId) => _$this._salesLeadId = salesLeadId;
+
+  String _opsLeadId;
+
+  String get opsLeadId => _$this._opsLeadId;
+
+  set opsLeadId(String opsLeadId) => _$this._opsLeadId = opsLeadId;
+
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListShipmentsApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListShipmentsApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListShipmentsApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListShipmentsApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
+
+  bool _useOltp;
+
+  bool get useOltp => _$this._useOltp;
+
+  set useOltp(bool useOltp) => _$this._useOltp = useOltp;
 
   ListShipmentsApiRequestBuilder();
 
@@ -420,8 +521,11 @@ class ListShipmentsApiRequestBuilder
       _carrier = _$v.carrier;
       _openPicks = _$v.openPicks;
       _search = _$v.search;
+      _salesLeadId = _$v.salesLeadId;
+      _opsLeadId = _$v.opsLeadId;
       _paging = _$v.paging?.toBuilder();
       _orderBy = _$v.orderBy?.toBuilder();
+      _useOltp = _$v.useOltp;
       _$v = null;
     }
     return this;
@@ -458,8 +562,11 @@ class ListShipmentsApiRequestBuilder
               carrier: carrier,
               openPicks: openPicks,
               search: search,
+              salesLeadId: salesLeadId,
+              opsLeadId: opsLeadId,
               paging: _paging?.build(),
-              orderBy: _orderBy?.build());
+              orderBy: _orderBy?.build(),
+              useOltp: useOltp);
     } catch (_) {
       String _$failedField;
       try {
@@ -516,8 +623,11 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
   final FieldDispatcher<MoveShippingCarrier> carrier;
   final FieldDispatcher<bool> openPicks;
   final FieldDispatcher<String> search;
+  final FieldDispatcher<String> salesLeadId;
+  final FieldDispatcher<String> opsLeadId;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListShipmentsApiOrderBy> orderBy;
+  final FieldDispatcher<bool> useOltp;
 
   _$ListShipmentsApiRequestActions._(this.options$)
       : replace$ = options$.action<ListShipmentsApiRequest>(
@@ -572,6 +682,13 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
             (s) => s?.openPicks, (p, b) => p?.openPicks = b),
         search = options$.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
+        salesLeadId = options$.field<String>(
+            'salesLeadId',
+            (a) => a?.salesLeadId,
+            (s) => s?.salesLeadId,
+            (p, b) => p?.salesLeadId = b),
+        opsLeadId = options$.field<String>('opsLeadId', (a) => a?.opsLeadId,
+            (s) => s?.opsLeadId, (p, b) => p?.opsLeadId = b),
         paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -591,6 +708,8 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
                 (s) => s?.orderBy,
                 (b) => b?.orderBy,
                 (parent, builder) => parent?.orderBy = builder)),
+        useOltp = options$.field<bool>('useOltp', (a) => a?.useOltp,
+            (s) => s?.useOltp, (p, b) => p?.useOltp = b),
         super._();
 
   factory _$ListShipmentsApiRequestActions(
@@ -605,6 +724,7 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
       ListShipmentsApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.createdDateRange,
@@ -614,6 +734,7 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -628,6 +749,9 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
         this.carrier,
         this.openPicks,
         this.search,
+        this.salesLeadId,
+        this.opsLeadId,
+        this.useOltp,
       ]);
 
   @override
@@ -645,8 +769,11 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
     carrier.reducer$(reducer);
     openPicks.reducer$(reducer);
     search.reducer$(reducer);
+    salesLeadId.reducer$(reducer);
+    opsLeadId.reducer$(reducer);
     paging.reducer$(reducer);
     orderBy.reducer$(reducer);
+    useOltp.reducer$(reducer);
   }
 
   @override

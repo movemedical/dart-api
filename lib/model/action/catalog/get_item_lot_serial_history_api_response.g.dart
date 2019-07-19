@@ -111,9 +111,11 @@ class GetItemLotSerialHistoryApiResponseBuilder
   _$GetItemLotSerialHistoryApiResponse _$v;
 
   ListBuilder<GetItemLotSerialHistoryApiHistoryRecord> _historyRecords;
+
   ListBuilder<GetItemLotSerialHistoryApiHistoryRecord> get historyRecords =>
       _$this._historyRecords ??=
           new ListBuilder<GetItemLotSerialHistoryApiHistoryRecord>();
+
   set historyRecords(
           ListBuilder<GetItemLotSerialHistoryApiHistoryRecord>
               historyRecords) =>
@@ -214,6 +216,7 @@ class _$GetItemLotSerialHistoryApiResponseActions
       GetItemLotSerialHistoryApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

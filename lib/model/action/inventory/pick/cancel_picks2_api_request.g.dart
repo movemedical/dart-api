@@ -103,8 +103,10 @@ class CancelPicks2ApiRequestBuilder
   _$CancelPicks2ApiRequest _$v;
 
   ListBuilder<String> _pickIds;
+
   ListBuilder<String> get pickIds =>
       _$this._pickIds ??= new ListBuilder<String>();
+
   set pickIds(ListBuilder<String> pickIds) => _$this._pickIds = pickIds;
 
   CancelPicks2ApiRequestBuilder();
@@ -192,6 +194,7 @@ class _$CancelPicks2ApiRequestActions extends CancelPicks2ApiRequestActions {
       CancelPicks2ApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -176,28 +176,40 @@ class TransferTypeLiteBuilder
   _$TransferTypeLite _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   bool _shipAndConfirmEnabled;
+
   bool get shipAndConfirmEnabled => _$this._shipAndConfirmEnabled;
+
   set shipAndConfirmEnabled(bool shipAndConfirmEnabled) =>
       _$this._shipAndConfirmEnabled = shipAndConfirmEnabled;
 
@@ -301,6 +313,7 @@ class _$TransferTypeLiteActions extends TransferTypeLiteActions {
   TransferTypeLiteBuilder newBuilder$() => TransferTypeLiteBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

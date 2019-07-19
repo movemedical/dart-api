@@ -109,8 +109,10 @@ class GetGeneratedDocReportUrlsApiResponseBuilder
   _$GetGeneratedDocReportUrlsApiResponse _$v;
 
   ListBuilder<GetGeneratedDocReportUrlsApiNamedUrl> _urls;
+
   ListBuilder<GetGeneratedDocReportUrlsApiNamedUrl> get urls =>
       _$this._urls ??= new ListBuilder<GetGeneratedDocReportUrlsApiNamedUrl>();
+
   set urls(ListBuilder<GetGeneratedDocReportUrlsApiNamedUrl> urls) =>
       _$this._urls = urls;
 
@@ -205,6 +207,7 @@ class _$GetGeneratedDocReportUrlsApiResponseActions
       GetGeneratedDocReportUrlsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -7,12 +7,15 @@ part of 'delegate_type.dart';
 // **************************************************************************
 
 const DelegateType _$wireAE = const DelegateType._('AE');
+const DelegateType _$wireDCE = const DelegateType._('DCE');
 const DelegateType _$wireHCR = const DelegateType._('HCR');
 
-DelegateType _$delegateTypeValueOf(String name) {
+DelegateType _$valueOf(String name) {
   switch (name) {
     case 'AE':
       return _$wireAE;
+    case 'DCE':
+      return _$wireDCE;
     case 'HCR':
       return _$wireHCR;
     default:
@@ -20,9 +23,10 @@ DelegateType _$delegateTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<DelegateType> _$delegateTypeValues =
+final BuiltSet<DelegateType> _$values =
     new BuiltSet<DelegateType>(const <DelegateType>[
   _$wireAE,
+  _$wireDCE,
   _$wireHCR,
 ]);
 

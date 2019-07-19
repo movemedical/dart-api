@@ -23,10 +23,9 @@ class PresenceEventType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<PresenceEventType> get values => _$presenceEventTypeValues;
+  static BuiltSet<PresenceEventType> get values => _$values;
 
-  static PresenceEventType valueOf(String name) =>
-      _$presenceEventTypeValueOf(name);
+  static PresenceEventType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

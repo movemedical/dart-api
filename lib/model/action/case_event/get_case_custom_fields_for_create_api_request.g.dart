@@ -110,8 +110,10 @@ class GetCaseCustomFieldsForCreateApiRequestBuilder
   _$GetCaseCustomFieldsForCreateApiRequest _$v;
 
   CreateCaseEventApiRequestBuilder _caseEventRequest;
+
   CreateCaseEventApiRequestBuilder get caseEventRequest =>
       _$this._caseEventRequest ??= new CreateCaseEventApiRequestBuilder();
+
   set caseEventRequest(CreateCaseEventApiRequestBuilder caseEventRequest) =>
       _$this._caseEventRequest = caseEventRequest;
 
@@ -215,12 +217,14 @@ class _$GetCaseCustomFieldsForCreateApiRequestActions
       GetCaseCustomFieldsForCreateApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.caseEventRequest,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

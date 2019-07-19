@@ -23,9 +23,9 @@ class ExportState extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ExportState> get values => _$exportStateValues;
+  static BuiltSet<ExportState> get values => _$values;
 
-  static ExportState valueOf(String name) => _$exportStateValueOf(name);
+  static ExportState valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

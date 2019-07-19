@@ -24,6 +24,12 @@ class _$SourceStockApiSourceStockSerializer
   Iterable serialize(Serializers serializers, SourceStockApiSourceStock object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
+    if (object.stockId != null) {
+      result
+        ..add('stockId')
+        ..add(serializers.serialize(object.stockId,
+            specifiedType: const FullType(String)));
+    }
     if (object.summaryKey != null) {
       result
         ..add('summaryKey')
@@ -52,6 +58,10 @@ class _$SourceStockApiSourceStockSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'stockId':
+          result.stockId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'summaryKey':
           result.summaryKey = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -69,6 +79,8 @@ class _$SourceStockApiSourceStockSerializer
 
 class _$SourceStockApiSourceStock extends SourceStockApiSourceStock {
   @override
+  final String stockId;
+  @override
   final String summaryKey;
   @override
   final int quantity;
@@ -77,7 +89,8 @@ class _$SourceStockApiSourceStock extends SourceStockApiSourceStock {
           [void updates(SourceStockApiSourceStockBuilder b)]) =>
       (new SourceStockApiSourceStockBuilder()..update(updates)).build();
 
-  _$SourceStockApiSourceStock._({this.summaryKey, this.quantity}) : super._();
+  _$SourceStockApiSourceStock._({this.stockId, this.summaryKey, this.quantity})
+      : super._();
 
   @override
   SourceStockApiSourceStock rebuild(
@@ -92,18 +105,21 @@ class _$SourceStockApiSourceStock extends SourceStockApiSourceStock {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is SourceStockApiSourceStock &&
+        stockId == other.stockId &&
         summaryKey == other.summaryKey &&
         quantity == other.quantity;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, summaryKey.hashCode), quantity.hashCode));
+    return $jf($jc(
+        $jc($jc(0, stockId.hashCode), summaryKey.hashCode), quantity.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('SourceStockApiSourceStock')
+          ..add('stockId', stockId)
           ..add('summaryKey', summaryKey)
           ..add('quantity', quantity))
         .toString();
@@ -115,18 +131,29 @@ class SourceStockApiSourceStockBuilder
         Builder<SourceStockApiSourceStock, SourceStockApiSourceStockBuilder> {
   _$SourceStockApiSourceStock _$v;
 
+  String _stockId;
+
+  String get stockId => _$this._stockId;
+
+  set stockId(String stockId) => _$this._stockId = stockId;
+
   String _summaryKey;
+
   String get summaryKey => _$this._summaryKey;
+
   set summaryKey(String summaryKey) => _$this._summaryKey = summaryKey;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   SourceStockApiSourceStockBuilder();
 
   SourceStockApiSourceStockBuilder get _$this {
     if (_$v != null) {
+      _stockId = _$v.stockId;
       _summaryKey = _$v.summaryKey;
       _quantity = _$v.quantity;
       _$v = null;
@@ -151,7 +178,7 @@ class SourceStockApiSourceStockBuilder
   _$SourceStockApiSourceStock build() {
     final _$result = _$v ??
         new _$SourceStockApiSourceStock._(
-            summaryKey: summaryKey, quantity: quantity);
+            stockId: stockId, summaryKey: summaryKey, quantity: quantity);
     replace(_$result);
     return _$result;
   }
@@ -179,12 +206,15 @@ class _$SourceStockApiSourceStockActions
       SourceStockApiSourceStockActions> options$;
 
   final ActionDispatcher<SourceStockApiSourceStock> replace$;
+  final FieldDispatcher<String> stockId;
   final FieldDispatcher<String> summaryKey;
   final FieldDispatcher<int> quantity;
 
   _$SourceStockApiSourceStockActions._(this.options$)
       : replace$ = options$.action<SourceStockApiSourceStock>(
             'replace\$', (a) => a?.replace$),
+        stockId = options$.field<String>('stockId', (a) => a?.stockId,
+            (s) => s?.stockId, (p, b) => p?.stockId = b),
         summaryKey = options$.field<String>('summaryKey', (a) => a?.summaryKey,
             (s) => s?.summaryKey, (p, b) => p?.summaryKey = b),
         quantity = options$.field<int>('quantity', (a) => a?.quantity,
@@ -203,10 +233,12 @@ class _$SourceStockApiSourceStockActions
       SourceStockApiSourceStockBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
         this.replace$,
+        this.stockId,
         this.summaryKey,
         this.quantity,
       ]);
@@ -214,6 +246,7 @@ class _$SourceStockApiSourceStockActions
   @override
   void reducer$(ReducerBuilder reducer) {
     super.reducer$(reducer);
+    stockId.reducer$(reducer);
     summaryKey.reducer$(reducer);
     quantity.reducer$(reducer);
   }

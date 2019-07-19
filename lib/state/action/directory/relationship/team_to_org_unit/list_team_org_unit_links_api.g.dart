@@ -68,6 +68,7 @@ class _$ListTeamOrgUnitLinksApi extends ListTeamOrgUnitLinksApi {
           ApiResult<ListTeamOrgUnitLinksApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

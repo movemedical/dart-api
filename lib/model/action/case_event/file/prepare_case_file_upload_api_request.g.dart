@@ -207,34 +207,48 @@ class PrepareCaseFileUploadApiRequestBuilder
   _$PrepareCaseFileUploadApiRequest _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   String _fileName;
+
   String get fileName => _$this._fileName;
+
   set fileName(String fileName) => _$this._fileName = fileName;
 
   String _fileDescription;
+
   String get fileDescription => _$this._fileDescription;
+
   set fileDescription(String fileDescription) =>
       _$this._fileDescription = fileDescription;
 
   CaseFileType _fileType;
+
   CaseFileType get fileType => _$this._fileType;
+
   set fileType(CaseFileType fileType) => _$this._fileType = fileType;
 
   int _estimatedSizeKb;
+
   int get estimatedSizeKb => _$this._estimatedSizeKb;
+
   set estimatedSizeKb(int estimatedSizeKb) =>
       _$this._estimatedSizeKb = estimatedSizeKb;
 
   String _ownerOrgUnitId;
+
   String get ownerOrgUnitId => _$this._ownerOrgUnitId;
+
   set ownerOrgUnitId(String ownerOrgUnitId) =>
       _$this._ownerOrgUnitId = ownerOrgUnitId;
 
   Visibility _visibility;
+
   Visibility get visibility => _$this._visibility;
+
   set visibility(Visibility visibility) => _$this._visibility = visibility;
 
   PrepareCaseFileUploadApiRequestBuilder();
@@ -359,6 +373,7 @@ class _$PrepareCaseFileUploadApiRequestActions
       PrepareCaseFileUploadApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

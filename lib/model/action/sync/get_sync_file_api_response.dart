@@ -18,6 +18,12 @@ abstract class GetSyncFileApiResponse
   @nullable
   String get fileUrl;
 
+  @nullable
+  int get processedFileCount;
+
+  @nullable
+  int get totalFileCount;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -46,6 +52,10 @@ abstract class GetSyncFileApiResponseActions extends ModelActions<
   FieldDispatcher<String> get ackId;
 
   FieldDispatcher<String> get fileUrl;
+
+  FieldDispatcher<int> get processedFileCount;
+
+  FieldDispatcher<int> get totalFileCount;
 
   ////////////////////////////////
   /// Constructors

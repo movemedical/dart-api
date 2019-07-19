@@ -116,12 +116,16 @@ class GetPackageApiUiSchemaBuilder
   _$GetPackageApiUiSchema _$v;
 
   bool _updateTrackingNumber;
+
   bool get updateTrackingNumber => _$this._updateTrackingNumber;
+
   set updateTrackingNumber(bool updateTrackingNumber) =>
       _$this._updateTrackingNumber = updateTrackingNumber;
 
   bool _printPackingList;
+
   bool get printPackingList => _$this._printPackingList;
+
   set printPackingList(bool printPackingList) =>
       _$this._printPackingList = printPackingList;
 
@@ -208,6 +212,7 @@ class _$GetPackageApiUiSchemaActions extends GetPackageApiUiSchemaActions {
   GetPackageApiUiSchemaBuilder newBuilder$() => GetPackageApiUiSchemaBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

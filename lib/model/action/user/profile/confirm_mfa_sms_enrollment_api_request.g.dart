@@ -106,7 +106,9 @@ class ConfirmMfaSmsEnrollmentApiRequestBuilder
   _$ConfirmMfaSmsEnrollmentApiRequest _$v;
 
   String _smsCode;
+
   String get smsCode => _$this._smsCode;
+
   set smsCode(String smsCode) => _$this._smsCode = smsCode;
 
   ConfirmMfaSmsEnrollmentApiRequestBuilder();
@@ -185,6 +187,7 @@ class _$ConfirmMfaSmsEnrollmentApiRequestActions
       ConfirmMfaSmsEnrollmentApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

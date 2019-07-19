@@ -24,9 +24,9 @@ class ErpStatus extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ErpStatus> get values => _$erpStatusValues;
+  static BuiltSet<ErpStatus> get values => _$values;
 
-  static ErpStatus valueOf(String name) => _$erpStatusValueOf(name);
+  static ErpStatus valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -122,13 +122,17 @@ class ListImportLogErrorsApiResponseBuilder
   _$ListImportLogErrorsApiResponse _$v;
 
   ListBuilder<ListImportLogErrorsApiImportLogError> _data;
+
   ListBuilder<ListImportLogErrorsApiImportLogError> get data =>
       _$this._data ??= new ListBuilder<ListImportLogErrorsApiImportLogError>();
+
   set data(ListBuilder<ListImportLogErrorsApiImportLogError> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListImportLogErrorsApiResponseBuilder();
@@ -225,6 +229,7 @@ class _$ListImportLogErrorsApiResponseActions
       ListImportLogErrorsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

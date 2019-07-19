@@ -178,28 +178,38 @@ class BuildInspectionApiLocationReceiptDataBuilder
   _$BuildInspectionApiLocationReceiptData _$v;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _inventoryTypeId;
+
   String get inventoryTypeId => _$this._inventoryTypeId;
+
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
   ListBuilder<BuildInspectionApiLocationReceiptDataBin> _bins;
+
   ListBuilder<BuildInspectionApiLocationReceiptDataBin> get bins =>
       _$this._bins ??=
           new ListBuilder<BuildInspectionApiLocationReceiptDataBin>();
+
   set bins(ListBuilder<BuildInspectionApiLocationReceiptDataBin> bins) =>
       _$this._bins = bins;
 
@@ -326,6 +336,7 @@ class _$BuildInspectionApiLocationReceiptDataActions
       BuildInspectionApiLocationReceiptDataBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

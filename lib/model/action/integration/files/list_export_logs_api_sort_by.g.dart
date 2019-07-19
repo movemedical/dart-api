@@ -25,7 +25,7 @@ const ListExportLogsApiSortBy _$wireSTATUS_MESSAGE =
 const ListExportLogsApiSortBy _$wireOUTCOME =
     const ListExportLogsApiSortBy._('OUTCOME');
 
-ListExportLogsApiSortBy _$listExportLogsApiSortByValueOf(String name) {
+ListExportLogsApiSortBy _$valueOf(String name) {
   switch (name) {
     case 'JOB_KEY':
       return _$wireJOB_KEY;
@@ -50,7 +50,7 @@ ListExportLogsApiSortBy _$listExportLogsApiSortByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListExportLogsApiSortBy> _$listExportLogsApiSortByValues =
+final BuiltSet<ListExportLogsApiSortBy> _$values =
     new BuiltSet<ListExportLogsApiSortBy>(const <ListExportLogsApiSortBy>[
   _$wireJOB_KEY,
   _$wireSTART_DATE,

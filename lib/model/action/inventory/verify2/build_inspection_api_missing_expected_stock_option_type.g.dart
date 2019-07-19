@@ -16,8 +16,7 @@ const BuildInspectionApiMissingExpectedStockOptionType _$wireLOST =
 const BuildInspectionApiMissingExpectedStockOptionType _$wireKEEP_ON_LOAN =
     const BuildInspectionApiMissingExpectedStockOptionType._('KEEP_ON_LOAN');
 
-BuildInspectionApiMissingExpectedStockOptionType
-    _$buildInspectionApiMissingExpectedStockOptionTypeValueOf(String name) {
+BuildInspectionApiMissingExpectedStockOptionType _$valueOf(String name) {
   switch (name) {
     case 'LEAVE_IN_TRANSIT':
       return _$wireLEAVE_IN_TRANSIT;
@@ -32,8 +31,7 @@ BuildInspectionApiMissingExpectedStockOptionType
   }
 }
 
-final BuiltSet<BuildInspectionApiMissingExpectedStockOptionType>
-    _$buildInspectionApiMissingExpectedStockOptionTypeValues =
+final BuiltSet<BuildInspectionApiMissingExpectedStockOptionType> _$values =
     new BuiltSet<BuildInspectionApiMissingExpectedStockOptionType>(const <
         BuildInspectionApiMissingExpectedStockOptionType>[
   _$wireLEAVE_IN_TRANSIT,

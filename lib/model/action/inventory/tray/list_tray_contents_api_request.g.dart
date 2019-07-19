@@ -102,7 +102,9 @@ class ListTrayContentsApiRequestBuilder
   _$ListTrayContentsApiRequest _$v;
 
   String _trayStockId;
+
   String get trayStockId => _$this._trayStockId;
+
   set trayStockId(String trayStockId) => _$this._trayStockId = trayStockId;
 
   ListTrayContentsApiRequestBuilder();
@@ -183,6 +185,7 @@ class _$ListTrayContentsApiRequestActions
       ListTrayContentsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -122,12 +122,16 @@ class AddItemsToBeCountedApiRequestBuilder
   _$AddItemsToBeCountedApiRequest _$v;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   ListBuilder<String> _itemIds;
+
   ListBuilder<String> get itemIds =>
       _$this._itemIds ??= new ListBuilder<String>();
+
   set itemIds(ListBuilder<String> itemIds) => _$this._itemIds = itemIds;
 
   AddItemsToBeCountedApiRequestBuilder();
@@ -224,6 +228,7 @@ class _$AddItemsToBeCountedApiRequestActions
       AddItemsToBeCountedApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

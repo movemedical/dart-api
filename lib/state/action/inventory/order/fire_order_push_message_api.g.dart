@@ -62,6 +62,7 @@ class _$FireOrderPushMessageApi extends FireOrderPushMessageApi {
           ApiCommand<FireOrderPushMessageApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

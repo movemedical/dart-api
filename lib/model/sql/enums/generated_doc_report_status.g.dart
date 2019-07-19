@@ -15,7 +15,7 @@ const GeneratedDocReportStatus _$wireFAILED_PENDING_ATTEMPT =
 const GeneratedDocReportStatus _$wireFAILED =
     const GeneratedDocReportStatus._('FAILED');
 
-GeneratedDocReportStatus _$generatedDocReportStatusValueOf(String name) {
+GeneratedDocReportStatus _$valueOf(String name) {
   switch (name) {
     case 'PENDING':
       return _$wirePENDING;
@@ -30,7 +30,7 @@ GeneratedDocReportStatus _$generatedDocReportStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<GeneratedDocReportStatus> _$generatedDocReportStatusValues =
+final BuiltSet<GeneratedDocReportStatus> _$values =
     new BuiltSet<GeneratedDocReportStatus>(const <GeneratedDocReportStatus>[
   _$wirePENDING,
   _$wireCOMPLETE,

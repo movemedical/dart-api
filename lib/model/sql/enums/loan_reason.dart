@@ -24,9 +24,9 @@ class LoanReason extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<LoanReason> get values => _$loanReasonValues;
+  static BuiltSet<LoanReason> get values => _$values;
 
-  static LoanReason valueOf(String name) => _$loanReasonValueOf(name);
+  static LoanReason valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

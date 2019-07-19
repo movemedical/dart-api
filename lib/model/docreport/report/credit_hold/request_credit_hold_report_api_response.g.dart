@@ -107,7 +107,9 @@ class RequestCreditHoldReportApiResponseBuilder
   _$RequestCreditHoldReportApiResponse _$v;
 
   String _docReportId;
+
   String get docReportId => _$this._docReportId;
+
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   RequestCreditHoldReportApiResponseBuilder();
@@ -189,6 +191,7 @@ class _$RequestCreditHoldReportApiResponseActions
       RequestCreditHoldReportApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

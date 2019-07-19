@@ -23,11 +23,9 @@ class OrderReasonDocValidFor extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<OrderReasonDocValidFor> get values =>
-      _$orderReasonDocValidForValues;
+  static BuiltSet<OrderReasonDocValidFor> get values => _$values;
 
-  static OrderReasonDocValidFor valueOf(String name) =>
-      _$orderReasonDocValidForValueOf(name);
+  static OrderReasonDocValidFor valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

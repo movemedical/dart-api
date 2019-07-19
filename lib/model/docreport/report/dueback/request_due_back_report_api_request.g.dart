@@ -44,10 +44,17 @@ class _$RequestDueBackReportApiRequestSerializer
         ..add(serializers.serialize(object.displayType,
             specifiedType: const FullType(DocReportDisplayType)));
     }
-    if (object.locationIds != null) {
+    if (object.itemIds != null) {
       result
-        ..add('locationIds')
-        ..add(serializers.serialize(object.locationIds,
+        ..add('itemIds')
+        ..add(serializers.serialize(object.itemIds,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
+    if (object.responsiblePartyIds != null) {
+      result
+        ..add('responsiblePartyIds')
+        ..add(serializers.serialize(object.responsiblePartyIds,
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
     }
@@ -55,6 +62,13 @@ class _$RequestDueBackReportApiRequestSerializer
       result
         ..add('orgUnitIds')
         ..add(serializers.serialize(object.orgUnitIds,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
+    if (object.inventoryTypeIds != null) {
+      result
+        ..add('inventoryTypeIds')
+        ..add(serializers.serialize(object.inventoryTypeIds,
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
     }
@@ -96,14 +110,26 @@ class _$RequestDueBackReportApiRequestSerializer
                   specifiedType: const FullType(DocReportDisplayType))
               as DocReportDisplayType;
           break;
-        case 'locationIds':
-          result.locationIds.replace(serializers.deserialize(value,
+        case 'itemIds':
+          result.itemIds.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList);
+          break;
+        case 'responsiblePartyIds':
+          result.responsiblePartyIds.replace(serializers.deserialize(value,
                   specifiedType:
                       const FullType(BuiltList, const [const FullType(String)]))
               as BuiltList);
           break;
         case 'orgUnitIds':
           result.orgUnitIds.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList);
+          break;
+        case 'inventoryTypeIds':
+          result.inventoryTypeIds.replace(serializers.deserialize(value,
                   specifiedType:
                       const FullType(BuiltList, const [const FullType(String)]))
               as BuiltList);
@@ -129,9 +155,13 @@ class _$RequestDueBackReportApiRequest extends RequestDueBackReportApiRequest {
   @override
   final DocReportDisplayType displayType;
   @override
-  final BuiltList<String> locationIds;
+  final BuiltList<String> itemIds;
+  @override
+  final BuiltList<String> responsiblePartyIds;
   @override
   final BuiltList<String> orgUnitIds;
+  @override
+  final BuiltList<String> inventoryTypeIds;
   @override
   final BuiltList<String> itemCategoryIds;
 
@@ -143,8 +173,10 @@ class _$RequestDueBackReportApiRequest extends RequestDueBackReportApiRequest {
       {this.docReport,
       this.format,
       this.displayType,
-      this.locationIds,
+      this.itemIds,
+      this.responsiblePartyIds,
       this.orgUnitIds,
+      this.inventoryTypeIds,
       this.itemCategoryIds})
       : super._();
 
@@ -164,8 +196,10 @@ class _$RequestDueBackReportApiRequest extends RequestDueBackReportApiRequest {
         docReport == other.docReport &&
         format == other.format &&
         displayType == other.displayType &&
-        locationIds == other.locationIds &&
+        itemIds == other.itemIds &&
+        responsiblePartyIds == other.responsiblePartyIds &&
         orgUnitIds == other.orgUnitIds &&
+        inventoryTypeIds == other.inventoryTypeIds &&
         itemCategoryIds == other.itemCategoryIds;
   }
 
@@ -174,10 +208,14 @@ class _$RequestDueBackReportApiRequest extends RequestDueBackReportApiRequest {
     return $jf($jc(
         $jc(
             $jc(
-                $jc($jc($jc(0, docReport.hashCode), format.hashCode),
-                    displayType.hashCode),
-                locationIds.hashCode),
-            orgUnitIds.hashCode),
+                $jc(
+                    $jc(
+                        $jc($jc($jc(0, docReport.hashCode), format.hashCode),
+                            displayType.hashCode),
+                        itemIds.hashCode),
+                    responsiblePartyIds.hashCode),
+                orgUnitIds.hashCode),
+            inventoryTypeIds.hashCode),
         itemCategoryIds.hashCode));
   }
 
@@ -187,8 +225,10 @@ class _$RequestDueBackReportApiRequest extends RequestDueBackReportApiRequest {
           ..add('docReport', docReport)
           ..add('format', format)
           ..add('displayType', displayType)
-          ..add('locationIds', locationIds)
+          ..add('itemIds', itemIds)
+          ..add('responsiblePartyIds', responsiblePartyIds)
           ..add('orgUnitIds', orgUnitIds)
+          ..add('inventoryTypeIds', inventoryTypeIds)
           ..add('itemCategoryIds', itemCategoryIds))
         .toString();
   }
@@ -201,35 +241,62 @@ class RequestDueBackReportApiRequestBuilder
   _$RequestDueBackReportApiRequest _$v;
 
   DBGeneratedDocReportBuilder _docReport;
+
   DBGeneratedDocReportBuilder get docReport =>
       _$this._docReport ??= new DBGeneratedDocReportBuilder();
+
   set docReport(DBGeneratedDocReportBuilder docReport) =>
       _$this._docReport = docReport;
 
   DocReportFormat _format;
+
   DocReportFormat get format => _$this._format;
+
   set format(DocReportFormat format) => _$this._format = format;
 
   DocReportDisplayType _displayType;
+
   DocReportDisplayType get displayType => _$this._displayType;
+
   set displayType(DocReportDisplayType displayType) =>
       _$this._displayType = displayType;
 
-  ListBuilder<String> _locationIds;
-  ListBuilder<String> get locationIds =>
-      _$this._locationIds ??= new ListBuilder<String>();
-  set locationIds(ListBuilder<String> locationIds) =>
-      _$this._locationIds = locationIds;
+  ListBuilder<String> _itemIds;
+
+  ListBuilder<String> get itemIds =>
+      _$this._itemIds ??= new ListBuilder<String>();
+
+  set itemIds(ListBuilder<String> itemIds) => _$this._itemIds = itemIds;
+
+  ListBuilder<String> _responsiblePartyIds;
+
+  ListBuilder<String> get responsiblePartyIds =>
+      _$this._responsiblePartyIds ??= new ListBuilder<String>();
+
+  set responsiblePartyIds(ListBuilder<String> responsiblePartyIds) =>
+      _$this._responsiblePartyIds = responsiblePartyIds;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
+  ListBuilder<String> _inventoryTypeIds;
+
+  ListBuilder<String> get inventoryTypeIds =>
+      _$this._inventoryTypeIds ??= new ListBuilder<String>();
+
+  set inventoryTypeIds(ListBuilder<String> inventoryTypeIds) =>
+      _$this._inventoryTypeIds = inventoryTypeIds;
+
   ListBuilder<String> _itemCategoryIds;
+
   ListBuilder<String> get itemCategoryIds =>
       _$this._itemCategoryIds ??= new ListBuilder<String>();
+
   set itemCategoryIds(ListBuilder<String> itemCategoryIds) =>
       _$this._itemCategoryIds = itemCategoryIds;
 
@@ -240,8 +307,10 @@ class RequestDueBackReportApiRequestBuilder
       _docReport = _$v.docReport?.toBuilder();
       _format = _$v.format;
       _displayType = _$v.displayType;
-      _locationIds = _$v.locationIds?.toBuilder();
+      _itemIds = _$v.itemIds?.toBuilder();
+      _responsiblePartyIds = _$v.responsiblePartyIds?.toBuilder();
       _orgUnitIds = _$v.orgUnitIds?.toBuilder();
+      _inventoryTypeIds = _$v.inventoryTypeIds?.toBuilder();
       _itemCategoryIds = _$v.itemCategoryIds?.toBuilder();
       _$v = null;
     }
@@ -270,8 +339,10 @@ class RequestDueBackReportApiRequestBuilder
               docReport: _docReport?.build(),
               format: format,
               displayType: displayType,
-              locationIds: _locationIds?.build(),
+              itemIds: _itemIds?.build(),
+              responsiblePartyIds: _responsiblePartyIds?.build(),
               orgUnitIds: _orgUnitIds?.build(),
+              inventoryTypeIds: _inventoryTypeIds?.build(),
               itemCategoryIds: _itemCategoryIds?.build());
     } catch (_) {
       String _$failedField;
@@ -279,10 +350,14 @@ class RequestDueBackReportApiRequestBuilder
         _$failedField = 'docReport';
         _docReport?.build();
 
-        _$failedField = 'locationIds';
-        _locationIds?.build();
+        _$failedField = 'itemIds';
+        _itemIds?.build();
+        _$failedField = 'responsiblePartyIds';
+        _responsiblePartyIds?.build();
         _$failedField = 'orgUnitIds';
         _orgUnitIds?.build();
+        _$failedField = 'inventoryTypeIds';
+        _inventoryTypeIds?.build();
         _$failedField = 'itemCategoryIds';
         _itemCategoryIds?.build();
       } catch (e) {
@@ -321,8 +396,10 @@ class _$RequestDueBackReportApiRequestActions
   final DBGeneratedDocReportActions docReport;
   final FieldDispatcher<DocReportFormat> format;
   final FieldDispatcher<DocReportDisplayType> displayType;
-  final FieldDispatcher<BuiltList<String>> locationIds;
+  final FieldDispatcher<BuiltList<String>> itemIds;
+  final FieldDispatcher<BuiltList<String>> responsiblePartyIds;
   final FieldDispatcher<BuiltList<String>> orgUnitIds;
+  final FieldDispatcher<BuiltList<String>> inventoryTypeIds;
   final FieldDispatcher<BuiltList<String>> itemCategoryIds;
 
   _$RequestDueBackReportApiRequestActions._(this.options$)
@@ -344,16 +421,23 @@ class _$RequestDueBackReportApiRequestActions
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        locationIds = options$.field<BuiltList<String>>(
-            'locationIds',
-            (a) => a?.locationIds,
-            (s) => s?.locationIds,
-            (p, b) => p?.locationIds = b),
+        itemIds = options$.field<BuiltList<String>>('itemIds',
+            (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
+        responsiblePartyIds = options$.field<BuiltList<String>>(
+            'responsiblePartyIds',
+            (a) => a?.responsiblePartyIds,
+            (s) => s?.responsiblePartyIds,
+            (p, b) => p?.responsiblePartyIds = b),
         orgUnitIds = options$.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
+        inventoryTypeIds = options$.field<BuiltList<String>>(
+            'inventoryTypeIds',
+            (a) => a?.inventoryTypeIds,
+            (s) => s?.inventoryTypeIds,
+            (p, b) => p?.inventoryTypeIds = b),
         itemCategoryIds = options$.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
@@ -374,20 +458,24 @@ class _$RequestDueBackReportApiRequestActions
       RequestDueBackReportApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
         this.replace$,
         this.format,
         this.displayType,
-        this.locationIds,
+        this.itemIds,
+        this.responsiblePartyIds,
         this.orgUnitIds,
+        this.inventoryTypeIds,
         this.itemCategoryIds,
       ]);
 
@@ -397,8 +485,10 @@ class _$RequestDueBackReportApiRequestActions
     docReport.reducer$(reducer);
     format.reducer$(reducer);
     displayType.reducer$(reducer);
-    locationIds.reducer$(reducer);
+    itemIds.reducer$(reducer);
+    responsiblePartyIds.reducer$(reducer);
     orgUnitIds.reducer$(reducer);
+    inventoryTypeIds.reducer$(reducer);
     itemCategoryIds.reducer$(reducer);
   }
 

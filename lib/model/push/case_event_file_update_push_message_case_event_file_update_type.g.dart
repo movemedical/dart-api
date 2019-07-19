@@ -13,9 +13,7 @@ const CaseEventFileUpdatePushMessageCaseEventFileUpdateType _$wireUPLOADED =
 const CaseEventFileUpdatePushMessageCaseEventFileUpdateType _$wireDELETED =
     const CaseEventFileUpdatePushMessageCaseEventFileUpdateType._('DELETED');
 
-CaseEventFileUpdatePushMessageCaseEventFileUpdateType
-    _$caseEventFileUpdatePushMessageCaseEventFileUpdateTypeValueOf(
-        String name) {
+CaseEventFileUpdatePushMessageCaseEventFileUpdateType _$valueOf(String name) {
   switch (name) {
     case 'UPLOADING':
       return _$wireUPLOADING;
@@ -28,8 +26,7 @@ CaseEventFileUpdatePushMessageCaseEventFileUpdateType
   }
 }
 
-final BuiltSet<CaseEventFileUpdatePushMessageCaseEventFileUpdateType>
-    _$caseEventFileUpdatePushMessageCaseEventFileUpdateTypeValues =
+final BuiltSet<CaseEventFileUpdatePushMessageCaseEventFileUpdateType> _$values =
     new BuiltSet<CaseEventFileUpdatePushMessageCaseEventFileUpdateType>(const <
         CaseEventFileUpdatePushMessageCaseEventFileUpdateType>[
   _$wireUPLOADING,

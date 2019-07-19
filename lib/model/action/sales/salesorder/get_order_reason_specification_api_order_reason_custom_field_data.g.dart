@@ -203,28 +203,40 @@ class GetOrderReasonSpecificationApiOrderReasonCustomFieldDataBuilder
   _$GetOrderReasonSpecificationApiOrderReasonCustomFieldData _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   CustomFieldDataType _dataType;
+
   CustomFieldDataType get dataType => _$this._dataType;
+
   set dataType(CustomFieldDataType dataType) => _$this._dataType = dataType;
 
   ListBuilder<String> _choices;
+
   ListBuilder<String> get choices =>
       _$this._choices ??= new ListBuilder<String>();
+
   set choices(ListBuilder<String> choices) => _$this._choices = choices;
 
   int _sort;
+
   int get sort => _$this._sort;
+
   set sort(int sort) => _$this._sort = sort;
 
   bool _required;
+
   bool get required => _$this._required;
+
   set required(bool required) => _$this._required = required;
 
   GetOrderReasonSpecificationApiOrderReasonCustomFieldDataBuilder();
@@ -352,6 +364,7 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldDataActions
           GetOrderReasonSpecificationApiOrderReasonCustomFieldDataBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -24,9 +24,9 @@ class ReplenishOption extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ReplenishOption> get values => _$replenishOptionValues;
+  static BuiltSet<ReplenishOption> get values => _$values;
 
-  static ReplenishOption valueOf(String name) => _$replenishOptionValueOf(name);
+  static ReplenishOption valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

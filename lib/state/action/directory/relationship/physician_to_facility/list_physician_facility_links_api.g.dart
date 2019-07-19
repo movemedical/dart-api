@@ -70,6 +70,7 @@ class _$ListPhysicianFacilityLinksApi extends ListPhysicianFacilityLinksApi {
           ApiResult<ListPhysicianFacilityLinksApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

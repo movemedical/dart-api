@@ -114,8 +114,10 @@ class ListRelationshipTypesForOrgUnitApiResponseBuilder
   _$ListRelationshipTypesForOrgUnitApiResponse _$v;
 
   ListBuilder<RelationshipType> _relationshipTypes;
+
   ListBuilder<RelationshipType> get relationshipTypes =>
       _$this._relationshipTypes ??= new ListBuilder<RelationshipType>();
+
   set relationshipTypes(ListBuilder<RelationshipType> relationshipTypes) =>
       _$this._relationshipTypes = relationshipTypes;
 
@@ -215,6 +217,7 @@ class _$ListRelationshipTypesForOrgUnitApiResponseActions
       ListRelationshipTypesForOrgUnitApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

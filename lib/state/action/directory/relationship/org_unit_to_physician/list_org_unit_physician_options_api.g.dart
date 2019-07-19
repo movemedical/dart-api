@@ -70,6 +70,7 @@ class _$ListOrgUnitPhysicianOptionsApi extends ListOrgUnitPhysicianOptionsApi {
           ApiResult<ListOrgUnitPhysicianOptionsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

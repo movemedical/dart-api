@@ -67,6 +67,7 @@ class _$ListHoldReasonsApi extends ListHoldReasonsApi {
           ApiResult<ListHoldReasonsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

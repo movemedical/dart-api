@@ -125,11 +125,15 @@ class OrderByParamsBuilder<F>
   _$OrderByParams<F> _$v;
 
   F _field;
+
   F get field => _$this._field;
+
   set field(F field) => _$this._field = field;
 
   OrderByDirection _direction;
+
   OrderByDirection get direction => _$this._direction;
+
   set direction(OrderByDirection direction) => _$this._direction = direction;
 
   OrderByParamsBuilder();
@@ -207,6 +211,7 @@ class _$OrderByParamsActions<F> extends OrderByParamsActions<F> {
   OrderByParamsBuilder<F> newBuilder$() => OrderByParamsBuilder<F>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

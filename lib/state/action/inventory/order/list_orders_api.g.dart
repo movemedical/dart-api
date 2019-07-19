@@ -64,6 +64,7 @@ class _$ListOrdersApi extends ListOrdersApi {
           ApiResult<ListOrdersApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

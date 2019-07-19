@@ -104,7 +104,9 @@ class RemoveCacheKeysApiRequestBuilder
   _$RemoveCacheKeysApiRequest _$v;
 
   ListBuilder<String> _keys;
+
   ListBuilder<String> get keys => _$this._keys ??= new ListBuilder<String>();
+
   set keys(ListBuilder<String> keys) => _$this._keys = keys;
 
   RemoveCacheKeysApiRequestBuilder();
@@ -194,6 +196,7 @@ class _$RemoveCacheKeysApiRequestActions
       RemoveCacheKeysApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -147,19 +147,27 @@ class SetupSystemApiResponseBuilder
   _$SetupSystemApiResponse _$v;
 
   String _aeId;
+
   String get aeId => _$this._aeId;
+
   set aeId(String aeId) => _$this._aeId = aeId;
 
   String _userId;
+
   String get userId => _$this._userId;
+
   set userId(String userId) => _$this._userId = userId;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   SetupSystemApiResponseBuilder();
@@ -247,6 +255,7 @@ class _$SetupSystemApiResponseActions extends SetupSystemApiResponseActions {
       SetupSystemApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

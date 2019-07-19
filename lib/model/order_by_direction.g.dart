@@ -10,7 +10,7 @@ const OrderByDirection _$wireASCENDING = const OrderByDirection._('ASCENDING');
 const OrderByDirection _$wireDESCENDING =
     const OrderByDirection._('DESCENDING');
 
-OrderByDirection _$orderByDirectionValueOf(String name) {
+OrderByDirection _$valueOf(String name) {
   switch (name) {
     case 'ASCENDING':
       return _$wireASCENDING;
@@ -21,7 +21,7 @@ OrderByDirection _$orderByDirectionValueOf(String name) {
   }
 }
 
-final BuiltSet<OrderByDirection> _$orderByDirectionValues =
+final BuiltSet<OrderByDirection> _$values =
     new BuiltSet<OrderByDirection>(const <OrderByDirection>[
   _$wireASCENDING,
   _$wireDESCENDING,

@@ -124,11 +124,15 @@ class BuildStockOrderRestockPlanApiRequestBuilder
   _$BuildStockOrderRestockPlanApiRequest _$v;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   bool _checkReplenishmentAvailable;
+
   bool get checkReplenishmentAvailable => _$this._checkReplenishmentAvailable;
+
   set checkReplenishmentAvailable(bool checkReplenishmentAvailable) =>
       _$this._checkReplenishmentAvailable = checkReplenishmentAvailable;
 
@@ -217,6 +221,7 @@ class _$BuildStockOrderRestockPlanApiRequestActions
       BuildStockOrderRestockPlanApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

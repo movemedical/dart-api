@@ -35,10 +35,10 @@ class BuildInspectionApiExtraEntryOptionType extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<BuildInspectionApiExtraEntryOptionType> get values =>
-      _$buildInspectionApiExtraEntryOptionTypeValues;
+      _$values;
 
   static BuildInspectionApiExtraEntryOptionType valueOf(String name) =>
-      _$buildInspectionApiExtraEntryOptionTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

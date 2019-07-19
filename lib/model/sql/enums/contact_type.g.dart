@@ -53,7 +53,7 @@ const ContactType _$wireTEAM = const ContactType._('TEAM');
 const ContactType _$wirePHYSICIAN = const ContactType._('PHYSICIAN');
 const ContactType _$wireEXTERNAL = const ContactType._('EXTERNAL');
 
-ContactType _$contactTypeValueOf(String name) {
+ContactType _$valueOf(String name) {
   switch (name) {
     case 'SYSTEM_ADMIN':
       return _$wireSYSTEM_ADMIN;
@@ -138,7 +138,7 @@ ContactType _$contactTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<ContactType> _$contactTypeValues =
+final BuiltSet<ContactType> _$values =
     new BuiltSet<ContactType>(const <ContactType>[
   _$wireSYSTEM_ADMIN,
   _$wireHEALTH_SYSTEM,

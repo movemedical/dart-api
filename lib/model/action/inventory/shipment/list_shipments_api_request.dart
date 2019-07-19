@@ -56,10 +56,19 @@ abstract class ListShipmentsApiRequest
   String get search;
 
   @nullable
+  String get salesLeadId;
+
+  @nullable
+  String get opsLeadId;
+
+  @nullable
   PaginationParams get paging;
 
   @nullable
   OrderByParams<ListShipmentsApiOrderBy> get orderBy;
+
+  @nullable
+  bool get useOltp;
 
   ////////////////////////////////
   /// Constructors
@@ -110,9 +119,15 @@ abstract class ListShipmentsApiRequestActions extends ModelActions<
 
   FieldDispatcher<String> get search;
 
+  FieldDispatcher<String> get salesLeadId;
+
+  FieldDispatcher<String> get opsLeadId;
+
   PaginationParamsActions get paging;
 
   OrderByParamsActions<ListShipmentsApiOrderBy> get orderBy;
+
+  FieldDispatcher<bool> get useOltp;
 
   ////////////////////////////////
   /// Constructors

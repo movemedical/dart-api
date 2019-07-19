@@ -13,8 +13,7 @@ const ShipmentFileUpdatePushMessageFileUpdateType _$wireUPLOADED =
 const ShipmentFileUpdatePushMessageFileUpdateType _$wireDELETED =
     const ShipmentFileUpdatePushMessageFileUpdateType._('DELETED');
 
-ShipmentFileUpdatePushMessageFileUpdateType
-    _$shipmentFileUpdatePushMessageFileUpdateTypeValueOf(String name) {
+ShipmentFileUpdatePushMessageFileUpdateType _$valueOf(String name) {
   switch (name) {
     case 'UPLOADING':
       return _$wireUPLOADING;
@@ -27,8 +26,7 @@ ShipmentFileUpdatePushMessageFileUpdateType
   }
 }
 
-final BuiltSet<ShipmentFileUpdatePushMessageFileUpdateType>
-    _$shipmentFileUpdatePushMessageFileUpdateTypeValues =
+final BuiltSet<ShipmentFileUpdatePushMessageFileUpdateType> _$values =
     new BuiltSet<ShipmentFileUpdatePushMessageFileUpdateType>(const <
         ShipmentFileUpdatePushMessageFileUpdateType>[
   _$wireUPLOADING,

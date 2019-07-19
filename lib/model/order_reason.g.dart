@@ -315,71 +315,99 @@ class OrderReasonBuilder implements Builder<OrderReason, OrderReasonBuilder> {
   _$OrderReason _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   OrderReasonGroup _reasonGroup;
+
   OrderReasonGroup get reasonGroup => _$this._reasonGroup;
+
   set reasonGroup(OrderReasonGroup reasonGroup) =>
       _$this._reasonGroup = reasonGroup;
 
   InventoryTypeBuilder _toInventoryType;
+
   InventoryTypeBuilder get toInventoryType =>
       _$this._toInventoryType ??= new InventoryTypeBuilder();
+
   set toInventoryType(InventoryTypeBuilder toInventoryType) =>
       _$this._toInventoryType = toInventoryType;
 
   SalesOrderInventorySource _salesOrderInventorySource;
+
   SalesOrderInventorySource get salesOrderInventorySource =>
       _$this._salesOrderInventorySource;
+
   set salesOrderInventorySource(
           SalesOrderInventorySource salesOrderInventorySource) =>
       _$this._salesOrderInventorySource = salesOrderInventorySource;
 
   ShippingServiceBuilder _defaultShippingService;
+
   ShippingServiceBuilder get defaultShippingService =>
       _$this._defaultShippingService ??= new ShippingServiceBuilder();
+
   set defaultShippingService(ShippingServiceBuilder defaultShippingService) =>
       _$this._defaultShippingService = defaultShippingService;
 
   bool _approvalRequired;
+
   bool get approvalRequired => _$this._approvalRequired;
+
   set approvalRequired(bool approvalRequired) =>
       _$this._approvalRequired = approvalRequired;
 
   bool _changesResponsibleParty;
+
   bool get changesResponsibleParty => _$this._changesResponsibleParty;
+
   set changesResponsibleParty(bool changesResponsibleParty) =>
       _$this._changesResponsibleParty = changesResponsibleParty;
 
   bool _changesHomeLocation;
+
   bool get changesHomeLocation => _$this._changesHomeLocation;
+
   set changesHomeLocation(bool changesHomeLocation) =>
       _$this._changesHomeLocation = changesHomeLocation;
 
   bool _creditCardAllowed;
+
   bool get creditCardAllowed => _$this._creditCardAllowed;
+
   set creditCardAllowed(bool creditCardAllowed) =>
       _$this._creditCardAllowed = creditCardAllowed;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _bizUnitName;
+
   String get bizUnitName => _$this._bizUnitName;
+
   set bizUnitName(String bizUnitName) => _$this._bizUnitName = bizUnitName;
 
   bool _erp;
+
   bool get erp => _$this._erp;
+
   set erp(bool erp) => _$this._erp = erp;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   OrderReasonBuilder();
@@ -565,6 +593,7 @@ class _$OrderReasonActions extends OrderReasonActions {
   OrderReasonBuilder newBuilder$() => OrderReasonBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toInventoryType,
@@ -572,6 +601,7 @@ class _$OrderReasonActions extends OrderReasonActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

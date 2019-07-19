@@ -21,8 +21,7 @@ const SearchDeliverToAddressesApiOrderBy _$wirePOSTAL_CODE =
 const SearchDeliverToAddressesApiOrderBy _$wireCOUNTRY =
     const SearchDeliverToAddressesApiOrderBy._('COUNTRY');
 
-SearchDeliverToAddressesApiOrderBy _$searchDeliverToAddressesApiOrderByValueOf(
-    String name) {
+SearchDeliverToAddressesApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'LINE1':
       return _$wireLINE1;
@@ -43,8 +42,7 @@ SearchDeliverToAddressesApiOrderBy _$searchDeliverToAddressesApiOrderByValueOf(
   }
 }
 
-final BuiltSet<SearchDeliverToAddressesApiOrderBy>
-    _$searchDeliverToAddressesApiOrderByValues =
+final BuiltSet<SearchDeliverToAddressesApiOrderBy> _$values =
     new BuiltSet<SearchDeliverToAddressesApiOrderBy>(const <
         SearchDeliverToAddressesApiOrderBy>[
   _$wireLINE1,

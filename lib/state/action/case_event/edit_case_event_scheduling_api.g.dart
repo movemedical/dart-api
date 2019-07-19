@@ -64,6 +64,7 @@ class _$EditCaseEventSchedulingApi extends EditCaseEventSchedulingApi {
           ApiCommand<EditCaseEventSchedulingApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

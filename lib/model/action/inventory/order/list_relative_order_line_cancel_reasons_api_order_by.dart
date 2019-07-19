@@ -24,10 +24,10 @@ class ListRelativeOrderLineCancelReasonsApiOrderBy extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ListRelativeOrderLineCancelReasonsApiOrderBy> get values =>
-      _$listRelativeOrderLineCancelReasonsApiOrderByValues;
+      _$values;
 
   static ListRelativeOrderLineCancelReasonsApiOrderBy valueOf(String name) =>
-      _$listRelativeOrderLineCancelReasonsApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

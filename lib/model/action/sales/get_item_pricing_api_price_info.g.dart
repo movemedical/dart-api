@@ -116,11 +116,15 @@ class GetItemPricingApiPriceInfoBuilder
   _$GetItemPricingApiPriceInfo _$v;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _value;
+
   String get value => _$this._value;
+
   set value(String value) => _$this._value = value;
 
   GetItemPricingApiPriceInfoBuilder();
@@ -202,6 +206,7 @@ class _$GetItemPricingApiPriceInfoActions
       GetItemPricingApiPriceInfoBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

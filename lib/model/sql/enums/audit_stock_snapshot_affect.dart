@@ -24,11 +24,9 @@ class AuditStockSnapshotAffect extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<AuditStockSnapshotAffect> get values =>
-      _$auditStockSnapshotAffectValues;
+  static BuiltSet<AuditStockSnapshotAffect> get values => _$values;
 
-  static AuditStockSnapshotAffect valueOf(String name) =>
-      _$auditStockSnapshotAffectValueOf(name);
+  static AuditStockSnapshotAffect valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

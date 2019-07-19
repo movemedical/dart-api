@@ -15,6 +15,7 @@ import 'package:movemedical_api/model/shipping_service.dart';
 import 'package:movemedical_api/model/sql/enums/erp_status.dart';
 import 'package:movemedical_api/model/sql/enums/shipment_status.dart';
 import 'package:movemedical_api/model/transfer_type_lite.dart';
+import 'package:movemedical_api/model/user_lite.dart';
 
 part 'get_shipment_api_shipment.g.dart';
 
@@ -71,6 +72,12 @@ abstract class GetShipmentApiShipment
 
   @nullable
   DateTime get deliverWindowEnd;
+
+  @nullable
+  UserLite get salesLead;
+
+  @nullable
+  UserLite get opsLead;
 
   ////////////////////////////////
   /// Constructors
@@ -129,6 +136,10 @@ abstract class GetShipmentApiShipmentActions extends ModelActions<
       get validationMessages;
 
   FieldDispatcher<DateTime> get deliverWindowEnd;
+
+  UserLiteActions get salesLead;
+
+  UserLiteActions get opsLead;
 
   ////////////////////////////////
   /// Constructors

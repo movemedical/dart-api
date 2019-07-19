@@ -9,8 +9,7 @@ part of 'list_org_unit_team_links_api_order_by.dart';
 const ListOrgUnitTeamLinksApiOrderBy _$wireNAME =
     const ListOrgUnitTeamLinksApiOrderBy._('NAME');
 
-ListOrgUnitTeamLinksApiOrderBy _$listOrgUnitTeamLinksApiOrderByValueOf(
-    String name) {
+ListOrgUnitTeamLinksApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -19,9 +18,8 @@ ListOrgUnitTeamLinksApiOrderBy _$listOrgUnitTeamLinksApiOrderByValueOf(
   }
 }
 
-final BuiltSet<ListOrgUnitTeamLinksApiOrderBy>
-    _$listOrgUnitTeamLinksApiOrderByValues = new BuiltSet<
-        ListOrgUnitTeamLinksApiOrderBy>(const <ListOrgUnitTeamLinksApiOrderBy>[
+final BuiltSet<ListOrgUnitTeamLinksApiOrderBy> _$values = new BuiltSet<
+    ListOrgUnitTeamLinksApiOrderBy>(const <ListOrgUnitTeamLinksApiOrderBy>[
   _$wireNAME,
 ]);
 

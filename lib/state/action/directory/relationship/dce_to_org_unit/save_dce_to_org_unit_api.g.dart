@@ -60,6 +60,7 @@ class _$SaveDceToOrgUnitApi extends SaveDceToOrgUnitApi {
           ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

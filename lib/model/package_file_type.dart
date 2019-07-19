@@ -21,9 +21,9 @@ class PackageFileType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<PackageFileType> get values => _$packageFileTypeValues;
+  static BuiltSet<PackageFileType> get values => _$values;
 
-  static PackageFileType valueOf(String name) => _$packageFileTypeValueOf(name);
+  static PackageFileType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

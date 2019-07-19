@@ -105,7 +105,9 @@ class GetCaseEventHistoryApiRequestBuilder
   _$GetCaseEventHistoryApiRequest _$v;
 
   String _mdcCaseEventId;
+
   String get mdcCaseEventId => _$this._mdcCaseEventId;
+
   set mdcCaseEventId(String mdcCaseEventId) =>
       _$this._mdcCaseEventId = mdcCaseEventId;
 
@@ -188,6 +190,7 @@ class _$GetCaseEventHistoryApiRequestActions
       GetCaseEventHistoryApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

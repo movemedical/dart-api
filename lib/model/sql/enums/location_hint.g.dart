@@ -11,7 +11,7 @@ const LocationHint _$wireCONSIGNMENT = const LocationHint._('CONSIGNMENT');
 const LocationHint _$wireHCR = const LocationHint._('HCR');
 const LocationHint _$wireFACILITY = const LocationHint._('FACILITY');
 
-LocationHint _$locationHintValueOf(String name) {
+LocationHint _$valueOf(String name) {
   switch (name) {
     case 'LOAN':
       return _$wireLOAN;
@@ -26,7 +26,7 @@ LocationHint _$locationHintValueOf(String name) {
   }
 }
 
-final BuiltSet<LocationHint> _$locationHintValues =
+final BuiltSet<LocationHint> _$values =
     new BuiltSet<LocationHint>(const <LocationHint>[
   _$wireLOAN,
   _$wireCONSIGNMENT,

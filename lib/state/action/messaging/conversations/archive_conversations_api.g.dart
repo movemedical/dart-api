@@ -62,6 +62,7 @@ class _$ArchiveConversationsApi extends ArchiveConversationsApi {
           ApiCommand<ArchiveConversationsApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

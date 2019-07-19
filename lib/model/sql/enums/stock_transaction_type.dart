@@ -67,6 +67,8 @@ class StockTransactionType extends EnumClass {
   static const StockTransactionType TRAY_INSPECTED = _$wireTRAY_INSPECTED;
   static const StockTransactionType CASE_TRANSITION_TO_POST_OP =
       _$wireCASE_TRANSITION_TO_POST_OP;
+  static const StockTransactionType HOLD_ADD = _$wireHOLD_ADD;
+  static const StockTransactionType HOLD_REMOVE = _$wireHOLD_REMOVE;
   static const StockTransactionType PKG_CONFIRMED = _$wirePKG_CONFIRMED;
   static const StockTransactionType TRAY_EVAL = _$wireTRAY_EVAL;
   static const StockTransactionType KIT_EVAL = _$wireKIT_EVAL;
@@ -121,11 +123,9 @@ class StockTransactionType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<StockTransactionType> get values =>
-      _$stockTransactionTypeValues;
+  static BuiltSet<StockTransactionType> get values => _$values;
 
-  static StockTransactionType valueOf(String name) =>
-      _$stockTransactionTypeValueOf(name);
+  static StockTransactionType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

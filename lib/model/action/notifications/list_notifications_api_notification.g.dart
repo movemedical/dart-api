@@ -279,50 +279,72 @@ class ListNotificationsApiNotificationBuilder
   _$ListNotificationsApiNotification _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   DateTime _notificationDate;
+
   DateTime get notificationDate => _$this._notificationDate;
+
   set notificationDate(DateTime notificationDate) =>
       _$this._notificationDate = notificationDate;
 
   bool _pushed;
+
   bool get pushed => _$this._pushed;
+
   set pushed(bool pushed) => _$this._pushed = pushed;
 
   bool _emailed;
+
   bool get emailed => _$this._emailed;
+
   set emailed(bool emailed) => _$this._emailed = emailed;
 
   bool _read;
+
   bool get read => _$this._read;
+
   set read(bool read) => _$this._read = read;
 
   DateTime _readDate;
+
   DateTime get readDate => _$this._readDate;
+
   set readDate(DateTime readDate) => _$this._readDate = readDate;
 
   NotificationType _notificationType;
+
   NotificationType get notificationType => _$this._notificationType;
+
   set notificationType(NotificationType notificationType) =>
       _$this._notificationType = notificationType;
 
   String _message;
+
   String get message => _$this._message;
+
   set message(String message) => _$this._message = message;
 
   AttributableType _objectType;
+
   AttributableType get objectType => _$this._objectType;
+
   set objectType(AttributableType objectType) =>
       _$this._objectType = objectType;
 
   String _objectId;
+
   String get objectId => _$this._objectId;
+
   set objectId(String objectId) => _$this._objectId = objectId;
 
   String _objectDisplayText;
+
   String get objectDisplayText => _$this._objectDisplayText;
+
   set objectDisplayText(String objectDisplayText) =>
       _$this._objectDisplayText = objectDisplayText;
 
@@ -465,6 +487,7 @@ class _$ListNotificationsApiNotificationActions
       ListNotificationsApiNotificationBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

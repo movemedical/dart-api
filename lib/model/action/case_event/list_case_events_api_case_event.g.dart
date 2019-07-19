@@ -587,163 +587,235 @@ class ListCaseEventsApiCaseEventBuilder
   _$ListCaseEventsApiCaseEvent _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _caseNumber;
+
   int get caseNumber => _$this._caseNumber;
+
   set caseNumber(int caseNumber) => _$this._caseNumber = caseNumber;
 
   DateTime _eventDate;
+
   DateTime get eventDate => _$this._eventDate;
+
   set eventDate(DateTime eventDate) => _$this._eventDate = eventDate;
 
   DateTime _localEventDate;
+
   DateTime get localEventDate => _$this._localEventDate;
+
   set localEventDate(DateTime localEventDate) =>
       _$this._localEventDate = localEventDate;
 
   int _eventDurationMinutes;
+
   int get eventDurationMinutes => _$this._eventDurationMinutes;
+
   set eventDurationMinutes(int eventDurationMinutes) =>
       _$this._eventDurationMinutes = eventDurationMinutes;
 
   CaseEventStatus _status;
+
   CaseEventStatus get status => _$this._status;
+
   set status(CaseEventStatus status) => _$this._status = status;
 
   String _patientId;
+
   String get patientId => _$this._patientId;
+
   set patientId(String patientId) => _$this._patientId = patientId;
 
   String _patientName;
+
   String get patientName => _$this._patientName;
+
   set patientName(String patientName) => _$this._patientName = patientName;
 
   Gender _patientGender;
+
   Gender get patientGender => _$this._patientGender;
+
   set patientGender(Gender patientGender) =>
       _$this._patientGender = patientGender;
 
   DateTime _patientDob;
+
   DateTime get patientDob => _$this._patientDob;
+
   set patientDob(DateTime patientDob) => _$this._patientDob = patientDob;
 
   String _patientMrn;
+
   String get patientMrn => _$this._patientMrn;
+
   set patientMrn(String patientMrn) => _$this._patientMrn = patientMrn;
 
   String _bizUnitName;
+
   String get bizUnitName => _$this._bizUnitName;
+
   set bizUnitName(String bizUnitName) => _$this._bizUnitName = bizUnitName;
 
   String _salesOrgUnitName;
+
   String get salesOrgUnitName => _$this._salesOrgUnitName;
+
   set salesOrgUnitName(String salesOrgUnitName) =>
       _$this._salesOrgUnitName = salesOrgUnitName;
 
   String _opsOrgUnitName;
+
   String get opsOrgUnitName => _$this._opsOrgUnitName;
+
   set opsOrgUnitName(String opsOrgUnitName) =>
       _$this._opsOrgUnitName = opsOrgUnitName;
 
   String _facilityName;
+
   String get facilityName => _$this._facilityName;
+
   set facilityName(String facilityName) => _$this._facilityName = facilityName;
 
   String _accountRef;
+
   String get accountRef => _$this._accountRef;
+
   set accountRef(String accountRef) => _$this._accountRef = accountRef;
 
   String _surgeonName;
+
   String get surgeonName => _$this._surgeonName;
+
   set surgeonName(String surgeonName) => _$this._surgeonName = surgeonName;
 
   String _surgeonNpi;
+
   String get surgeonNpi => _$this._surgeonNpi;
+
   set surgeonNpi(String surgeonNpi) => _$this._surgeonNpi = surgeonNpi;
 
   String _tempSurgeonName;
+
   String get tempSurgeonName => _$this._tempSurgeonName;
+
   set tempSurgeonName(String tempSurgeonName) =>
       _$this._tempSurgeonName = tempSurgeonName;
 
   String _repTeamName;
+
   String get repTeamName => _$this._repTeamName;
+
   set repTeamName(String repTeamName) => _$this._repTeamName = repTeamName;
 
   String _coverageRepTeamName;
+
   String get coverageRepTeamName => _$this._coverageRepTeamName;
+
   set coverageRepTeamName(String coverageRepTeamName) =>
       _$this._coverageRepTeamName = coverageRepTeamName;
 
   String _procedureName;
+
   String get procedureName => _$this._procedureName;
+
   set procedureName(String procedureName) =>
       _$this._procedureName = procedureName;
 
   String _procedureDesc;
+
   String get procedureDesc => _$this._procedureDesc;
+
   set procedureDesc(String procedureDesc) =>
       _$this._procedureDesc = procedureDesc;
 
   String _subProcedureName;
+
   String get subProcedureName => _$this._subProcedureName;
+
   set subProcedureName(String subProcedureName) =>
       _$this._subProcedureName = subProcedureName;
 
   BodySide _bodySide;
+
   BodySide get bodySide => _$this._bodySide;
+
   set bodySide(BodySide bodySide) => _$this._bodySide = bodySide;
 
   String _timeZone;
+
   String get timeZone => _$this._timeZone;
+
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   bool _timeUnknown;
+
   bool get timeUnknown => _$this._timeUnknown;
+
   set timeUnknown(bool timeUnknown) => _$this._timeUnknown = timeUnknown;
 
   String _caseType;
+
   String get caseType => _$this._caseType;
+
   set caseType(String caseType) => _$this._caseType = caseType;
 
   String _patientFirstName;
+
   String get patientFirstName => _$this._patientFirstName;
+
   set patientFirstName(String patientFirstName) =>
       _$this._patientFirstName = patientFirstName;
 
   String _patientLastName;
+
   String get patientLastName => _$this._patientLastName;
+
   set patientLastName(String patientLastName) =>
       _$this._patientLastName = patientLastName;
 
   String _mdcPatientFirstName;
+
   String get mdcPatientFirstName => _$this._mdcPatientFirstName;
+
   set mdcPatientFirstName(String mdcPatientFirstName) =>
       _$this._mdcPatientFirstName = mdcPatientFirstName;
 
   String _mdcPatientLastName;
+
   String get mdcPatientLastName => _$this._mdcPatientLastName;
+
   set mdcPatientLastName(String mdcPatientLastName) =>
       _$this._mdcPatientLastName = mdcPatientLastName;
 
   String _mdcPatientDob;
+
   String get mdcPatientDob => _$this._mdcPatientDob;
+
   set mdcPatientDob(String mdcPatientDob) =>
       _$this._mdcPatientDob = mdcPatientDob;
 
   String _mdcPatientGender;
+
   String get mdcPatientGender => _$this._mdcPatientGender;
+
   set mdcPatientGender(String mdcPatientGender) =>
       _$this._mdcPatientGender = mdcPatientGender;
 
   String _shipCity;
+
   String get shipCity => _$this._shipCity;
+
   set shipCity(String shipCity) => _$this._shipCity = shipCity;
 
   String _shipState;
+
   String get shipState => _$this._shipState;
+
   set shipState(String shipState) => _$this._shipState = shipState;
 
   ListCaseEventsApiCaseEventBuilder();
@@ -1063,6 +1135,7 @@ class _$ListCaseEventsApiCaseEventActions
       ListCaseEventsApiCaseEventBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

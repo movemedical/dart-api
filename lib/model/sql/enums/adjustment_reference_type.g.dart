@@ -14,8 +14,10 @@ const AdjustmentReferenceType _$wireAUDIT =
     const AdjustmentReferenceType._('AUDIT');
 const AdjustmentReferenceType _$wirePACKAGE =
     const AdjustmentReferenceType._('PACKAGE');
+const AdjustmentReferenceType _$wireRESOLVE_FOUND_STOCK =
+    const AdjustmentReferenceType._('RESOLVE_FOUND_STOCK');
 
-AdjustmentReferenceType _$adjustmentReferenceTypeValueOf(String name) {
+AdjustmentReferenceType _$valueOf(String name) {
   switch (name) {
     case 'USAGE':
       return _$wireUSAGE;
@@ -25,17 +27,20 @@ AdjustmentReferenceType _$adjustmentReferenceTypeValueOf(String name) {
       return _$wireAUDIT;
     case 'PACKAGE':
       return _$wirePACKAGE;
+    case 'RESOLVE_FOUND_STOCK':
+      return _$wireRESOLVE_FOUND_STOCK;
     default:
       throw new ArgumentError(name);
   }
 }
 
-final BuiltSet<AdjustmentReferenceType> _$adjustmentReferenceTypeValues =
+final BuiltSet<AdjustmentReferenceType> _$values =
     new BuiltSet<AdjustmentReferenceType>(const <AdjustmentReferenceType>[
   _$wireUSAGE,
   _$wireORDER_USAGE,
   _$wireAUDIT,
   _$wirePACKAGE,
+  _$wireRESOLVE_FOUND_STOCK,
 ]);
 
 Serializer<AdjustmentReferenceType> _$adjustmentReferenceTypeSerializer =

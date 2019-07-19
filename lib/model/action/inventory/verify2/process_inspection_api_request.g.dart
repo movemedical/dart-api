@@ -105,7 +105,9 @@ class ProcessInspectionApiRequestBuilder
   _$ProcessInspectionApiRequest _$v;
 
   String _processKey;
+
   String get processKey => _$this._processKey;
+
   set processKey(String processKey) => _$this._processKey = processKey;
 
   ProcessInspectionApiRequestBuilder();
@@ -184,6 +186,7 @@ class _$ProcessInspectionApiRequestActions
       ProcessInspectionApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

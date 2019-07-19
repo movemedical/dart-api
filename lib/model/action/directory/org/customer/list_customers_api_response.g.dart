@@ -119,13 +119,17 @@ class ListCustomersApiResponseBuilder
   _$ListCustomersApiResponse _$v;
 
   ListBuilder<ListCustomersApiCustomerDetails> _data;
+
   ListBuilder<ListCustomersApiCustomerDetails> get data =>
       _$this._data ??= new ListBuilder<ListCustomersApiCustomerDetails>();
+
   set data(ListBuilder<ListCustomersApiCustomerDetails> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListCustomersApiResponseBuilder();
@@ -221,6 +225,7 @@ class _$ListCustomersApiResponseActions
       ListCustomersApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

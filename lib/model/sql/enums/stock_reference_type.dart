@@ -19,6 +19,7 @@ class StockReferenceType extends EnumClass {
   static const StockReferenceType FILE_IMPORT = _$wireFILE_IMPORT;
   static const StockReferenceType LOCATION = _$wireLOCATION;
   static const StockReferenceType CASE_EVENT = _$wireCASE_EVENT;
+  static const StockReferenceType HOLD = _$wireHOLD;
 
   ////////////////////////////////
   /// Constructor
@@ -30,10 +31,9 @@ class StockReferenceType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<StockReferenceType> get values => _$stockReferenceTypeValues;
+  static BuiltSet<StockReferenceType> get values => _$values;
 
-  static StockReferenceType valueOf(String name) =>
-      _$stockReferenceTypeValueOf(name);
+  static StockReferenceType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

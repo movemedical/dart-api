@@ -152,21 +152,29 @@ class ListHcrMatrixApiRequestBuilder
   _$ListHcrMatrixApiRequest _$v;
 
   String _hcrId;
+
   String get hcrId => _$this._hcrId;
+
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   String _teamId;
+
   String get teamId => _$this._teamId;
+
   set teamId(String teamId) => _$this._teamId = teamId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListHcrMatrixApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListHcrMatrixApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListHcrMatrixApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListHcrMatrixApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -288,6 +296,7 @@ class _$ListHcrMatrixApiRequestActions extends ListHcrMatrixApiRequestActions {
       ListHcrMatrixApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.paging,
@@ -295,6 +304,7 @@ class _$ListHcrMatrixApiRequestActions extends ListHcrMatrixApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

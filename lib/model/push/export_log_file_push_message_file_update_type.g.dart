@@ -13,8 +13,7 @@ const ExportLogFilePushMessageFileUpdateType _$wireUPLOADED =
 const ExportLogFilePushMessageFileUpdateType _$wireDELETED =
     const ExportLogFilePushMessageFileUpdateType._('DELETED');
 
-ExportLogFilePushMessageFileUpdateType
-    _$exportLogFilePushMessageFileUpdateTypeValueOf(String name) {
+ExportLogFilePushMessageFileUpdateType _$valueOf(String name) {
   switch (name) {
     case 'UPLOADING':
       return _$wireUPLOADING;
@@ -27,8 +26,7 @@ ExportLogFilePushMessageFileUpdateType
   }
 }
 
-final BuiltSet<ExportLogFilePushMessageFileUpdateType>
-    _$exportLogFilePushMessageFileUpdateTypeValues =
+final BuiltSet<ExportLogFilePushMessageFileUpdateType> _$values =
     new BuiltSet<ExportLogFilePushMessageFileUpdateType>(const <
         ExportLogFilePushMessageFileUpdateType>[
   _$wireUPLOADING,

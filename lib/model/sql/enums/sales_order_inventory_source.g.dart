@@ -11,7 +11,7 @@ const SalesOrderInventorySource _$wireDIRECT_BILL =
 const SalesOrderInventorySource _$wireBILL_ONLY =
     const SalesOrderInventorySource._('BILL_ONLY');
 
-SalesOrderInventorySource _$salesOrderInventorySourceValueOf(String name) {
+SalesOrderInventorySource _$valueOf(String name) {
   switch (name) {
     case 'DIRECT_BILL':
       return _$wireDIRECT_BILL;
@@ -22,7 +22,7 @@ SalesOrderInventorySource _$salesOrderInventorySourceValueOf(String name) {
   }
 }
 
-final BuiltSet<SalesOrderInventorySource> _$salesOrderInventorySourceValues =
+final BuiltSet<SalesOrderInventorySource> _$values =
     new BuiltSet<SalesOrderInventorySource>(const <SalesOrderInventorySource>[
   _$wireDIRECT_BILL,
   _$wireBILL_ONLY,

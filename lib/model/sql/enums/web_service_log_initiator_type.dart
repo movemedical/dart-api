@@ -41,11 +41,9 @@ class WebServiceLogInitiatorType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<WebServiceLogInitiatorType> get values =>
-      _$webServiceLogInitiatorTypeValues;
+  static BuiltSet<WebServiceLogInitiatorType> get values => _$values;
 
-  static WebServiceLogInitiatorType valueOf(String name) =>
-      _$webServiceLogInitiatorTypeValueOf(name);
+  static WebServiceLogInitiatorType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

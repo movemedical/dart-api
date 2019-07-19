@@ -63,10 +63,22 @@ class _$ListStockForUsageApiRequestSerializer
         ..add(serializers.serialize(object.lotId,
             specifiedType: const FullType(String)));
     }
+    if (object.unknownLotNumber != null) {
+      result
+        ..add('unknownLotNumber')
+        ..add(serializers.serialize(object.unknownLotNumber,
+            specifiedType: const FullType(String)));
+    }
     if (object.serialId != null) {
       result
         ..add('serialId')
         ..add(serializers.serialize(object.serialId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.unknownSerialNumber != null) {
+      result
+        ..add('unknownSerialNumber')
+        ..add(serializers.serialize(object.unknownSerialNumber,
             specifiedType: const FullType(String)));
     }
     if (object.searchText != null) {
@@ -125,6 +137,12 @@ class _$ListStockForUsageApiRequestSerializer
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
     }
+    if (object.excludeKitContents != null) {
+      result
+        ..add('excludeKitContents')
+        ..add(serializers.serialize(object.excludeKitContents,
+            specifiedType: const FullType(bool)));
+    }
     if (object.paging != null) {
       result
         ..add('paging')
@@ -180,8 +198,16 @@ class _$ListStockForUsageApiRequestSerializer
           result.lotId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'unknownLotNumber':
+          result.unknownLotNumber = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'serialId':
           result.serialId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'unknownSerialNumber':
+          result.unknownSerialNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
         case 'searchText':
@@ -224,6 +250,10 @@ class _$ListStockForUsageApiRequestSerializer
                       const FullType(BuiltList, const [const FullType(String)]))
               as BuiltList);
           break;
+        case 'excludeKitContents':
+          result.excludeKitContents = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'paging':
           result.paging.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PaginationParams))
@@ -256,7 +286,11 @@ class _$ListStockForUsageApiRequest extends ListStockForUsageApiRequest {
   @override
   final String lotId;
   @override
+  final String unknownLotNumber;
+  @override
   final String serialId;
+  @override
+  final String unknownSerialNumber;
   @override
   final String searchText;
   @override
@@ -276,6 +310,8 @@ class _$ListStockForUsageApiRequest extends ListStockForUsageApiRequest {
   @override
   final BuiltList<String> excludeStockIds;
   @override
+  final bool excludeKitContents;
+  @override
   final PaginationParams paging;
   @override
   final OrderByParams<ListStockForUsageApiOrderBy> orderBy;
@@ -291,7 +327,9 @@ class _$ListStockForUsageApiRequest extends ListStockForUsageApiRequest {
       this.createOrderData,
       this.itemId,
       this.lotId,
+      this.unknownLotNumber,
       this.serialId,
+      this.unknownSerialNumber,
       this.searchText,
       this.categoryIds,
       this.location,
@@ -301,6 +339,7 @@ class _$ListStockForUsageApiRequest extends ListStockForUsageApiRequest {
       this.moveItemClass,
       this.moveItemType,
       this.excludeStockIds,
+      this.excludeKitContents,
       this.paging,
       this.orderBy})
       : super._();
@@ -324,7 +363,9 @@ class _$ListStockForUsageApiRequest extends ListStockForUsageApiRequest {
         createOrderData == other.createOrderData &&
         itemId == other.itemId &&
         lotId == other.lotId &&
+        unknownLotNumber == other.unknownLotNumber &&
         serialId == other.serialId &&
+        unknownSerialNumber == other.unknownSerialNumber &&
         searchText == other.searchText &&
         categoryIds == other.categoryIds &&
         location == other.location &&
@@ -334,6 +375,7 @@ class _$ListStockForUsageApiRequest extends ListStockForUsageApiRequest {
         moveItemClass == other.moveItemClass &&
         moveItemType == other.moveItemType &&
         excludeStockIds == other.excludeStockIds &&
+        excludeKitContents == other.excludeKitContents &&
         paging == other.paging &&
         orderBy == other.orderBy;
   }
@@ -358,27 +400,24 @@ class _$ListStockForUsageApiRequest extends ListStockForUsageApiRequest {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            0,
-                                                                            caseId
-                                                                                .hashCode),
-                                                                        orderId
-                                                                            .hashCode),
-                                                                    auditId
-                                                                        .hashCode),
-                                                                createOrderData
-                                                                    .hashCode),
-                                                            itemId.hashCode),
-                                                        lotId.hashCode),
-                                                    serialId.hashCode),
-                                                searchText.hashCode),
-                                            categoryIds.hashCode),
-                                        location.hashCode),
-                                    inventoryTypeId.hashCode),
-                                containerId.hashCode),
-                            loanId.hashCode),
-                        moveItemClass.hashCode),
-                    moveItemType.hashCode),
-                excludeStockIds.hashCode),
+                                                                            $jc($jc($jc(0, caseId.hashCode), orderId.hashCode),
+                                                                                auditId.hashCode),
+                                                                            createOrderData.hashCode),
+                                                                        itemId.hashCode),
+                                                                    lotId.hashCode),
+                                                                unknownLotNumber.hashCode),
+                                                            serialId.hashCode),
+                                                        unknownSerialNumber.hashCode),
+                                                    searchText.hashCode),
+                                                categoryIds.hashCode),
+                                            location.hashCode),
+                                        inventoryTypeId.hashCode),
+                                    containerId.hashCode),
+                                loanId.hashCode),
+                            moveItemClass.hashCode),
+                        moveItemType.hashCode),
+                    excludeStockIds.hashCode),
+                excludeKitContents.hashCode),
             paging.hashCode),
         orderBy.hashCode));
   }
@@ -392,7 +431,9 @@ class _$ListStockForUsageApiRequest extends ListStockForUsageApiRequest {
           ..add('createOrderData', createOrderData)
           ..add('itemId', itemId)
           ..add('lotId', lotId)
+          ..add('unknownLotNumber', unknownLotNumber)
           ..add('serialId', serialId)
+          ..add('unknownSerialNumber', unknownSerialNumber)
           ..add('searchText', searchText)
           ..add('categoryIds', categoryIds)
           ..add('location', location)
@@ -402,6 +443,7 @@ class _$ListStockForUsageApiRequest extends ListStockForUsageApiRequest {
           ..add('moveItemClass', moveItemClass)
           ..add('moveItemType', moveItemType)
           ..add('excludeStockIds', excludeStockIds)
+          ..add('excludeKitContents', excludeKitContents)
           ..add('paging', paging)
           ..add('orderBy', orderBy))
         .toString();
@@ -415,90 +457,147 @@ class ListStockForUsageApiRequestBuilder
   _$ListStockForUsageApiRequest _$v;
 
   String _caseId;
+
   String get caseId => _$this._caseId;
+
   set caseId(String caseId) => _$this._caseId = caseId;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   ListStockForUsageApiCreateOrderDataBuilder _createOrderData;
+
   ListStockForUsageApiCreateOrderDataBuilder get createOrderData =>
       _$this._createOrderData ??=
           new ListStockForUsageApiCreateOrderDataBuilder();
+
   set createOrderData(
           ListStockForUsageApiCreateOrderDataBuilder createOrderData) =>
       _$this._createOrderData = createOrderData;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
+  String _unknownLotNumber;
+
+  String get unknownLotNumber => _$this._unknownLotNumber;
+
+  set unknownLotNumber(String unknownLotNumber) =>
+      _$this._unknownLotNumber = unknownLotNumber;
+
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
+  String _unknownSerialNumber;
+
+  String get unknownSerialNumber => _$this._unknownSerialNumber;
+
+  set unknownSerialNumber(String unknownSerialNumber) =>
+      _$this._unknownSerialNumber = unknownSerialNumber;
+
   String _searchText;
+
   String get searchText => _$this._searchText;
+
   set searchText(String searchText) => _$this._searchText = searchText;
 
   ListBuilder<String> _categoryIds;
+
   ListBuilder<String> get categoryIds =>
       _$this._categoryIds ??= new ListBuilder<String>();
+
   set categoryIds(ListBuilder<String> categoryIds) =>
       _$this._categoryIds = categoryIds;
 
   LocationDataBuilder _location;
+
   LocationDataBuilder get location =>
       _$this._location ??= new LocationDataBuilder();
+
   set location(LocationDataBuilder location) => _$this._location = location;
 
   String _inventoryTypeId;
+
   String get inventoryTypeId => _$this._inventoryTypeId;
+
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   String _loanId;
+
   String get loanId => _$this._loanId;
+
   set loanId(String loanId) => _$this._loanId = loanId;
 
   MoveItemClass _moveItemClass;
+
   MoveItemClass get moveItemClass => _$this._moveItemClass;
+
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   MoveItemType _moveItemType;
+
   MoveItemType get moveItemType => _$this._moveItemType;
+
   set moveItemType(MoveItemType moveItemType) =>
       _$this._moveItemType = moveItemType;
 
   ListBuilder<String> _excludeStockIds;
+
   ListBuilder<String> get excludeStockIds =>
       _$this._excludeStockIds ??= new ListBuilder<String>();
+
   set excludeStockIds(ListBuilder<String> excludeStockIds) =>
       _$this._excludeStockIds = excludeStockIds;
 
+  bool _excludeKitContents;
+
+  bool get excludeKitContents => _$this._excludeKitContents;
+
+  set excludeKitContents(bool excludeKitContents) =>
+      _$this._excludeKitContents = excludeKitContents;
+
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListStockForUsageApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListStockForUsageApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListStockForUsageApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListStockForUsageApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -512,7 +611,9 @@ class ListStockForUsageApiRequestBuilder
       _createOrderData = _$v.createOrderData?.toBuilder();
       _itemId = _$v.itemId;
       _lotId = _$v.lotId;
+      _unknownLotNumber = _$v.unknownLotNumber;
       _serialId = _$v.serialId;
+      _unknownSerialNumber = _$v.unknownSerialNumber;
       _searchText = _$v.searchText;
       _categoryIds = _$v.categoryIds?.toBuilder();
       _location = _$v.location?.toBuilder();
@@ -522,6 +623,7 @@ class ListStockForUsageApiRequestBuilder
       _moveItemClass = _$v.moveItemClass;
       _moveItemType = _$v.moveItemType;
       _excludeStockIds = _$v.excludeStockIds?.toBuilder();
+      _excludeKitContents = _$v.excludeKitContents;
       _paging = _$v.paging?.toBuilder();
       _orderBy = _$v.orderBy?.toBuilder();
       _$v = null;
@@ -554,7 +656,9 @@ class ListStockForUsageApiRequestBuilder
               createOrderData: _createOrderData?.build(),
               itemId: itemId,
               lotId: lotId,
+              unknownLotNumber: unknownLotNumber,
               serialId: serialId,
+              unknownSerialNumber: unknownSerialNumber,
               searchText: searchText,
               categoryIds: _categoryIds?.build(),
               location: _location?.build(),
@@ -564,6 +668,7 @@ class ListStockForUsageApiRequestBuilder
               moveItemClass: moveItemClass,
               moveItemType: moveItemType,
               excludeStockIds: _excludeStockIds?.build(),
+              excludeKitContents: excludeKitContents,
               paging: _paging?.build(),
               orderBy: _orderBy?.build());
     } catch (_) {
@@ -579,6 +684,7 @@ class ListStockForUsageApiRequestBuilder
 
         _$failedField = 'excludeStockIds';
         _excludeStockIds?.build();
+
         _$failedField = 'paging';
         _paging?.build();
         _$failedField = 'orderBy';
@@ -622,7 +728,9 @@ class _$ListStockForUsageApiRequestActions
   final ListStockForUsageApiCreateOrderDataActions createOrderData;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> lotId;
+  final FieldDispatcher<String> unknownLotNumber;
   final FieldDispatcher<String> serialId;
+  final FieldDispatcher<String> unknownSerialNumber;
   final FieldDispatcher<String> searchText;
   final FieldDispatcher<BuiltList<String>> categoryIds;
   final LocationDataActions location;
@@ -632,6 +740,7 @@ class _$ListStockForUsageApiRequestActions
   final FieldDispatcher<MoveItemClass> moveItemClass;
   final FieldDispatcher<MoveItemType> moveItemType;
   final FieldDispatcher<BuiltList<String>> excludeStockIds;
+  final FieldDispatcher<bool> excludeKitContents;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListStockForUsageApiOrderBy> orderBy;
 
@@ -658,8 +767,18 @@ class _$ListStockForUsageApiRequestActions
             (s) => s?.itemId, (p, b) => p?.itemId = b),
         lotId = options$.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
+        unknownLotNumber = options$.field<String>(
+            'unknownLotNumber',
+            (a) => a?.unknownLotNumber,
+            (s) => s?.unknownLotNumber,
+            (p, b) => p?.unknownLotNumber = b),
         serialId = options$.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
+        unknownSerialNumber = options$.field<String>(
+            'unknownSerialNumber',
+            (a) => a?.unknownSerialNumber,
+            (s) => s?.unknownSerialNumber,
+            (p, b) => p?.unknownSerialNumber = b),
         searchText = options$.field<String>('searchText', (a) => a?.searchText,
             (s) => s?.searchText, (p, b) => p?.searchText = b),
         categoryIds = options$.field<BuiltList<String>>(
@@ -701,6 +820,11 @@ class _$ListStockForUsageApiRequestActions
             (a) => a?.excludeStockIds,
             (s) => s?.excludeStockIds,
             (p, b) => p?.excludeStockIds = b),
+        excludeKitContents = options$.field<bool>(
+            'excludeKitContents',
+            (a) => a?.excludeKitContents,
+            (s) => s?.excludeKitContents,
+            (p, b) => p?.excludeKitContents = b),
         paging = PaginationParamsActions(() => options$.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -735,6 +859,7 @@ class _$ListStockForUsageApiRequestActions
       ListStockForUsageApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.createOrderData,
@@ -744,6 +869,7 @@ class _$ListStockForUsageApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -753,7 +879,9 @@ class _$ListStockForUsageApiRequestActions
         this.auditId,
         this.itemId,
         this.lotId,
+        this.unknownLotNumber,
         this.serialId,
+        this.unknownSerialNumber,
         this.searchText,
         this.categoryIds,
         this.inventoryTypeId,
@@ -762,6 +890,7 @@ class _$ListStockForUsageApiRequestActions
         this.moveItemClass,
         this.moveItemType,
         this.excludeStockIds,
+        this.excludeKitContents,
       ]);
 
   @override
@@ -773,7 +902,9 @@ class _$ListStockForUsageApiRequestActions
     createOrderData.reducer$(reducer);
     itemId.reducer$(reducer);
     lotId.reducer$(reducer);
+    unknownLotNumber.reducer$(reducer);
     serialId.reducer$(reducer);
+    unknownSerialNumber.reducer$(reducer);
     searchText.reducer$(reducer);
     categoryIds.reducer$(reducer);
     location.reducer$(reducer);
@@ -783,6 +914,7 @@ class _$ListStockForUsageApiRequestActions
     moveItemClass.reducer$(reducer);
     moveItemType.reducer$(reducer);
     excludeStockIds.reducer$(reducer);
+    excludeKitContents.reducer$(reducer);
     paging.reducer$(reducer);
     orderBy.reducer$(reducer);
   }

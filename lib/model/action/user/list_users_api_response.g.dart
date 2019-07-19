@@ -116,12 +116,16 @@ class ListUsersApiResponseBuilder
   _$ListUsersApiResponse _$v;
 
   ListBuilder<ListUsersApiUser> _data;
+
   ListBuilder<ListUsersApiUser> get data =>
       _$this._data ??= new ListBuilder<ListUsersApiUser>();
+
   set data(ListBuilder<ListUsersApiUser> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListUsersApiResponseBuilder();
@@ -213,6 +217,7 @@ class _$ListUsersApiResponseActions extends ListUsersApiResponseActions {
   ListUsersApiResponseBuilder newBuilder$() => ListUsersApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

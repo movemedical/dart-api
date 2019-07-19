@@ -73,6 +73,7 @@ class _$ListBizUnitInventoryTypeLinksApi
           ApiResult<ListBizUnitInventoryTypeLinksApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

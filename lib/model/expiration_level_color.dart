@@ -26,11 +26,9 @@ class ExpirationLevelColor extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ExpirationLevelColor> get values =>
-      _$expirationLevelColorValues;
+  static BuiltSet<ExpirationLevelColor> get values => _$values;
 
-  static ExpirationLevelColor valueOf(String name) =>
-      _$expirationLevelColorValueOf(name);
+  static ExpirationLevelColor valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -66,6 +66,7 @@ class _$SearchHcrTeamsApi extends SearchHcrTeamsApi {
           ApiResult<SearchHcrTeamsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -24,10 +24,10 @@ class ListProceduresForSearchApiActiveStatus extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ListProceduresForSearchApiActiveStatus> get values =>
-      _$listProceduresForSearchApiActiveStatusValues;
+      _$values;
 
   static ListProceduresForSearchApiActiveStatus valueOf(String name) =>
-      _$listProceduresForSearchApiActiveStatusValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -25,9 +25,9 @@ class AssociationType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<AssociationType> get values => _$associationTypeValues;
+  static BuiltSet<AssociationType> get values => _$values;
 
-  static AssociationType valueOf(String name) => _$associationTypeValueOf(name);
+  static AssociationType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

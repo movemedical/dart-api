@@ -105,7 +105,9 @@ class GetExportLogDetailApiRequestBuilder
   _$GetExportLogDetailApiRequest _$v;
 
   String _exportLogId;
+
   String get exportLogId => _$this._exportLogId;
+
   set exportLogId(String exportLogId) => _$this._exportLogId = exportLogId;
 
   GetExportLogDetailApiRequestBuilder();
@@ -187,6 +189,7 @@ class _$GetExportLogDetailApiRequestActions
       GetExportLogDetailApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

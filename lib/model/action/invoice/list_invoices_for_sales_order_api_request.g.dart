@@ -107,7 +107,9 @@ class ListInvoicesForSalesOrderApiRequestBuilder
   _$ListInvoicesForSalesOrderApiRequest _$v;
 
   String _salesOrderId;
+
   String get salesOrderId => _$this._salesOrderId;
+
   set salesOrderId(String salesOrderId) => _$this._salesOrderId = salesOrderId;
 
   ListInvoicesForSalesOrderApiRequestBuilder();
@@ -189,6 +191,7 @@ class _$ListInvoicesForSalesOrderApiRequestActions
       ListInvoicesForSalesOrderApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -105,9 +105,11 @@ class CancelOrderLinesApiRequestBuilder
   _$CancelOrderLinesApiRequest _$v;
 
   ListBuilder<CancelOrderLinesApiCancellations> _cancellations;
+
   ListBuilder<CancelOrderLinesApiCancellations> get cancellations =>
       _$this._cancellations ??=
           new ListBuilder<CancelOrderLinesApiCancellations>();
+
   set cancellations(
           ListBuilder<CancelOrderLinesApiCancellations> cancellations) =>
       _$this._cancellations = cancellations;
@@ -206,6 +208,7 @@ class _$CancelOrderLinesApiRequestActions
       CancelOrderLinesApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

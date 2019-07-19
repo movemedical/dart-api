@@ -119,14 +119,18 @@ class GetAdjustmentApiResponseBuilder
   _$GetAdjustmentApiResponse _$v;
 
   GetAdjustmentApiAdjustmentBuilder _adjustment;
+
   GetAdjustmentApiAdjustmentBuilder get adjustment =>
       _$this._adjustment ??= new GetAdjustmentApiAdjustmentBuilder();
+
   set adjustment(GetAdjustmentApiAdjustmentBuilder adjustment) =>
       _$this._adjustment = adjustment;
 
   GetAdjustmentApiDisplayRulesBuilder _displayRules;
+
   GetAdjustmentApiDisplayRulesBuilder get displayRules =>
       _$this._displayRules ??= new GetAdjustmentApiDisplayRulesBuilder();
+
   set displayRules(GetAdjustmentApiDisplayRulesBuilder displayRules) =>
       _$this._displayRules = displayRules;
 
@@ -241,6 +245,7 @@ class _$GetAdjustmentApiResponseActions
       GetAdjustmentApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.adjustment,
@@ -248,6 +253,7 @@ class _$GetAdjustmentApiResponseActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

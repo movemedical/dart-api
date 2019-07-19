@@ -28,10 +28,9 @@ class AuditStockOutcome extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<AuditStockOutcome> get values => _$auditStockOutcomeValues;
+  static BuiltSet<AuditStockOutcome> get values => _$values;
 
-  static AuditStockOutcome valueOf(String name) =>
-      _$auditStockOutcomeValueOf(name);
+  static AuditStockOutcome valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

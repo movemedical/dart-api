@@ -175,27 +175,37 @@ class ListHcrColleagueOptionsApiColleagueOptionBuilder
   _$ListHcrColleagueOptionsApiColleagueOption _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _colleagueHcrId;
+
   String get colleagueHcrId => _$this._colleagueHcrId;
+
   set colleagueHcrId(String colleagueHcrId) =>
       _$this._colleagueHcrId = colleagueHcrId;
 
   HcrType _colleagueHcrType;
+
   HcrType get colleagueHcrType => _$this._colleagueHcrType;
+
   set colleagueHcrType(HcrType colleagueHcrType) =>
       _$this._colleagueHcrType = colleagueHcrType;
 
   String _colleagueName;
+
   String get colleagueName => _$this._colleagueName;
+
   set colleagueName(String colleagueName) =>
       _$this._colleagueName = colleagueName;
 
   EmailBuilder _colleagueEmail;
+
   EmailBuilder get colleagueEmail =>
       _$this._colleagueEmail ??= new EmailBuilder();
+
   set colleagueEmail(EmailBuilder colleagueEmail) =>
       _$this._colleagueEmail = colleagueEmail;
 
@@ -326,12 +336,14 @@ class _$ListHcrColleagueOptionsApiColleagueOptionActions
       ListHcrColleagueOptionsApiColleagueOptionBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.colleagueEmail,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -13,7 +13,7 @@ const AuditStockSnapshotAffect _$wireNOT_APPLIED =
 const AuditStockSnapshotAffect _$wireUSAGE_CREATED_REDUCED_EXPECTED =
     const AuditStockSnapshotAffect._('USAGE_CREATED_REDUCED_EXPECTED');
 
-AuditStockSnapshotAffect _$auditStockSnapshotAffectValueOf(String name) {
+AuditStockSnapshotAffect _$valueOf(String name) {
   switch (name) {
     case 'PENDING':
       return _$wirePENDING;
@@ -26,7 +26,7 @@ AuditStockSnapshotAffect _$auditStockSnapshotAffectValueOf(String name) {
   }
 }
 
-final BuiltSet<AuditStockSnapshotAffect> _$auditStockSnapshotAffectValues =
+final BuiltSet<AuditStockSnapshotAffect> _$values =
     new BuiltSet<AuditStockSnapshotAffect>(const <AuditStockSnapshotAffect>[
   _$wirePENDING,
   _$wireNOT_APPLIED,

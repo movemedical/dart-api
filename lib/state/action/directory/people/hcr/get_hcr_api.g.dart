@@ -57,6 +57,7 @@ class _$GetHcrApi extends GetHcrApi {
           ApiResult<GetHcrApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

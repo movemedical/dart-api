@@ -87,6 +87,18 @@ class _$ListCaseUsageApiResponseSerializer
         ..add(serializers.serialize(object.teamId,
             specifiedType: const FullType(String)));
     }
+    if (object.lastPricingRequestDate != null) {
+      result
+        ..add('lastPricingRequestDate')
+        ..add(serializers.serialize(object.lastPricingRequestDate,
+            specifiedType: const FullType(DateTime)));
+    }
+    if (object.casePricingStatus != null) {
+      result
+        ..add('casePricingStatus')
+        ..add(serializers.serialize(object.casePricingStatus,
+            specifiedType: const FullType(CasePricingStatus)));
+    }
 
     return result;
   }
@@ -149,6 +161,15 @@ class _$ListCaseUsageApiResponseSerializer
           result.teamId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'lastPricingRequestDate':
+          result.lastPricingRequestDate = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
+          break;
+        case 'casePricingStatus':
+          result.casePricingStatus = serializers.deserialize(value,
+                  specifiedType: const FullType(CasePricingStatus))
+              as CasePricingStatus;
+          break;
       }
     }
 
@@ -177,6 +198,10 @@ class _$ListCaseUsageApiResponse extends ListCaseUsageApiResponse {
   final String hcrId;
   @override
   final String teamId;
+  @override
+  final DateTime lastPricingRequestDate;
+  @override
+  final CasePricingStatus casePricingStatus;
 
   factory _$ListCaseUsageApiResponse(
           [void updates(ListCaseUsageApiResponseBuilder b)]) =>
@@ -192,7 +217,9 @@ class _$ListCaseUsageApiResponse extends ListCaseUsageApiResponse {
       this.customerId,
       this.facilityId,
       this.hcrId,
-      this.teamId})
+      this.teamId,
+      this.lastPricingRequestDate,
+      this.casePricingStatus})
       : super._();
 
   @override
@@ -217,7 +244,9 @@ class _$ListCaseUsageApiResponse extends ListCaseUsageApiResponse {
         customerId == other.customerId &&
         facilityId == other.facilityId &&
         hcrId == other.hcrId &&
-        teamId == other.teamId;
+        teamId == other.teamId &&
+        lastPricingRequestDate == other.lastPricingRequestDate &&
+        casePricingStatus == other.casePricingStatus;
   }
 
   @override
@@ -230,16 +259,20 @@ class _$ListCaseUsageApiResponse extends ListCaseUsageApiResponse {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, orders.hashCode),
-                                        constructs.hashCode),
-                                    usages.hashCode),
-                                canEditUsage.hashCode),
-                            canConfirmUsage.hashCode),
-                        ownerOrgUnitId.hashCode),
-                    customerId.hashCode),
-                facilityId.hashCode),
-            hcrId.hashCode),
-        teamId.hashCode));
+                                    $jc(
+                                        $jc(
+                                            $jc($jc(0, orders.hashCode),
+                                                constructs.hashCode),
+                                            usages.hashCode),
+                                        canEditUsage.hashCode),
+                                    canConfirmUsage.hashCode),
+                                ownerOrgUnitId.hashCode),
+                            customerId.hashCode),
+                        facilityId.hashCode),
+                    hcrId.hashCode),
+                teamId.hashCode),
+            lastPricingRequestDate.hashCode),
+        casePricingStatus.hashCode));
   }
 
   @override
@@ -254,7 +287,9 @@ class _$ListCaseUsageApiResponse extends ListCaseUsageApiResponse {
           ..add('customerId', customerId)
           ..add('facilityId', facilityId)
           ..add('hcrId', hcrId)
-          ..add('teamId', teamId))
+          ..add('teamId', teamId)
+          ..add('lastPricingRequestDate', lastPricingRequestDate)
+          ..add('casePricingStatus', casePricingStatus))
         .toString();
   }
 }
@@ -265,53 +300,87 @@ class ListCaseUsageApiResponseBuilder
   _$ListCaseUsageApiResponse _$v;
 
   ListBuilder<ListCaseUsageApiCaseUsageOrder> _orders;
+
   ListBuilder<ListCaseUsageApiCaseUsageOrder> get orders =>
       _$this._orders ??= new ListBuilder<ListCaseUsageApiCaseUsageOrder>();
+
   set orders(ListBuilder<ListCaseUsageApiCaseUsageOrder> orders) =>
       _$this._orders = orders;
 
   ListBuilder<ListCaseUsageApiCaseUsageConstruct> _constructs;
+
   ListBuilder<ListCaseUsageApiCaseUsageConstruct> get constructs =>
       _$this._constructs ??=
           new ListBuilder<ListCaseUsageApiCaseUsageConstruct>();
+
   set constructs(ListBuilder<ListCaseUsageApiCaseUsageConstruct> constructs) =>
       _$this._constructs = constructs;
 
   ListBuilder<ListCaseUsageApiUsage> _usages;
+
   ListBuilder<ListCaseUsageApiUsage> get usages =>
       _$this._usages ??= new ListBuilder<ListCaseUsageApiUsage>();
+
   set usages(ListBuilder<ListCaseUsageApiUsage> usages) =>
       _$this._usages = usages;
 
   bool _canEditUsage;
+
   bool get canEditUsage => _$this._canEditUsage;
+
   set canEditUsage(bool canEditUsage) => _$this._canEditUsage = canEditUsage;
 
   bool _canConfirmUsage;
+
   bool get canConfirmUsage => _$this._canConfirmUsage;
+
   set canConfirmUsage(bool canConfirmUsage) =>
       _$this._canConfirmUsage = canConfirmUsage;
 
   String _ownerOrgUnitId;
+
   String get ownerOrgUnitId => _$this._ownerOrgUnitId;
+
   set ownerOrgUnitId(String ownerOrgUnitId) =>
       _$this._ownerOrgUnitId = ownerOrgUnitId;
 
   String _customerId;
+
   String get customerId => _$this._customerId;
+
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _hcrId;
+
   String get hcrId => _$this._hcrId;
+
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   String _teamId;
+
   String get teamId => _$this._teamId;
+
   set teamId(String teamId) => _$this._teamId = teamId;
+
+  DateTime _lastPricingRequestDate;
+
+  DateTime get lastPricingRequestDate => _$this._lastPricingRequestDate;
+
+  set lastPricingRequestDate(DateTime lastPricingRequestDate) =>
+      _$this._lastPricingRequestDate = lastPricingRequestDate;
+
+  CasePricingStatus _casePricingStatus;
+
+  CasePricingStatus get casePricingStatus => _$this._casePricingStatus;
+
+  set casePricingStatus(CasePricingStatus casePricingStatus) =>
+      _$this._casePricingStatus = casePricingStatus;
 
   ListCaseUsageApiResponseBuilder();
 
@@ -327,6 +396,8 @@ class ListCaseUsageApiResponseBuilder
       _facilityId = _$v.facilityId;
       _hcrId = _$v.hcrId;
       _teamId = _$v.teamId;
+      _lastPricingRequestDate = _$v.lastPricingRequestDate;
+      _casePricingStatus = _$v.casePricingStatus;
       _$v = null;
     }
     return this;
@@ -360,7 +431,9 @@ class ListCaseUsageApiResponseBuilder
               customerId: customerId,
               facilityId: facilityId,
               hcrId: hcrId,
-              teamId: teamId);
+              teamId: teamId,
+              lastPricingRequestDate: lastPricingRequestDate,
+              casePricingStatus: casePricingStatus);
     } catch (_) {
       String _$failedField;
       try {
@@ -414,6 +487,8 @@ class _$ListCaseUsageApiResponseActions
   final FieldDispatcher<String> facilityId;
   final FieldDispatcher<String> hcrId;
   final FieldDispatcher<String> teamId;
+  final FieldDispatcher<DateTime> lastPricingRequestDate;
+  final FieldDispatcher<CasePricingStatus> casePricingStatus;
 
   _$ListCaseUsageApiResponseActions._(this.options$)
       : replace$ = options$.action<ListCaseUsageApiResponse>(
@@ -454,6 +529,16 @@ class _$ListCaseUsageApiResponseActions
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
         teamId = options$.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
+        lastPricingRequestDate = options$.field<DateTime>(
+            'lastPricingRequestDate',
+            (a) => a?.lastPricingRequestDate,
+            (s) => s?.lastPricingRequestDate,
+            (p, b) => p?.lastPricingRequestDate = b),
+        casePricingStatus = options$.field<CasePricingStatus>(
+            'casePricingStatus',
+            (a) => a?.casePricingStatus,
+            (s) => s?.casePricingStatus,
+            (p, b) => p?.casePricingStatus = b),
         super._();
 
   factory _$ListCaseUsageApiResponseActions(
@@ -468,6 +553,7 @@ class _$ListCaseUsageApiResponseActions
       ListCaseUsageApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -482,6 +568,8 @@ class _$ListCaseUsageApiResponseActions
         this.facilityId,
         this.hcrId,
         this.teamId,
+        this.lastPricingRequestDate,
+        this.casePricingStatus,
       ]);
 
   @override
@@ -497,6 +585,8 @@ class _$ListCaseUsageApiResponseActions
     facilityId.reducer$(reducer);
     hcrId.reducer$(reducer);
     teamId.reducer$(reducer);
+    lastPricingRequestDate.reducer$(reducer);
+    casePricingStatus.reducer$(reducer);
   }
 
   @override

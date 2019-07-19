@@ -392,85 +392,119 @@ class BuildInspectionApiEntryBuilder
   _$BuildInspectionApiEntry _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _receiptId;
+
   String get receiptId => _$this._receiptId;
+
   set receiptId(String receiptId) => _$this._receiptId = receiptId;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   int _order;
+
   int get order => _$this._order;
+
   set order(int order) => _$this._order = order;
 
   bool _fillsKitStandard;
+
   bool get fillsKitStandard => _$this._fillsKitStandard;
+
   set fillsKitStandard(bool fillsKitStandard) =>
       _$this._fillsKitStandard = fillsKitStandard;
 
   StockContainerDataBuilder _toContainerOverride;
+
   StockContainerDataBuilder get toContainerOverride =>
       _$this._toContainerOverride ??= new StockContainerDataBuilder();
+
   set toContainerOverride(StockContainerDataBuilder toContainerOverride) =>
       _$this._toContainerOverride = toContainerOverride;
 
   bool _fromAutoScan;
+
   bool get fromAutoScan => _$this._fromAutoScan;
+
   set fromAutoScan(bool fromAutoScan) => _$this._fromAutoScan = fromAutoScan;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   String _tagId;
+
   String get tagId => _$this._tagId;
+
   set tagId(String tagId) => _$this._tagId = tagId;
 
   BuildInspectionApiKitDataBuilder _kitData;
+
   BuildInspectionApiKitDataBuilder get kitData =>
       _$this._kitData ??= new BuildInspectionApiKitDataBuilder();
+
   set kitData(BuildInspectionApiKitDataBuilder kitData) =>
       _$this._kitData = kitData;
 
   BuildInspectionApiTrayDataBuilder _trayData;
+
   BuildInspectionApiTrayDataBuilder get trayData =>
       _$this._trayData ??= new BuildInspectionApiTrayDataBuilder();
+
   set trayData(BuildInspectionApiTrayDataBuilder trayData) =>
       _$this._trayData = trayData;
 
   String _matchedToExpectedStockId;
+
   String get matchedToExpectedStockId => _$this._matchedToExpectedStockId;
+
   set matchedToExpectedStockId(String matchedToExpectedStockId) =>
       _$this._matchedToExpectedStockId = matchedToExpectedStockId;
 
   String _selectedOptionId;
+
   String get selectedOptionId => _$this._selectedOptionId;
+
   set selectedOptionId(String selectedOptionId) =>
       _$this._selectedOptionId = selectedOptionId;
 
   ListBuilder<BuildInspectionApiExtraEntryOption> _unfilteredOptions;
+
   ListBuilder<BuildInspectionApiExtraEntryOption> get unfilteredOptions =>
       _$this._unfilteredOptions ??=
           new ListBuilder<BuildInspectionApiExtraEntryOption>();
+
   set unfilteredOptions(
           ListBuilder<BuildInspectionApiExtraEntryOption> unfilteredOptions) =>
       _$this._unfilteredOptions = unfilteredOptions;
 
   ListBuilder<BuildInspectionApiExtraEntryOption> _options;
+
   ListBuilder<BuildInspectionApiExtraEntryOption> get options =>
       _$this._options ??= new ListBuilder<BuildInspectionApiExtraEntryOption>();
+
   set options(ListBuilder<BuildInspectionApiExtraEntryOption> options) =>
       _$this._options = options;
 
@@ -694,6 +728,7 @@ class _$BuildInspectionApiEntryActions extends BuildInspectionApiEntryActions {
       BuildInspectionApiEntryBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.toContainerOverride,
@@ -702,6 +737,7 @@ class _$BuildInspectionApiEntryActions extends BuildInspectionApiEntryActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -101,7 +101,9 @@ class GetOrderHistoryApiRequestBuilder
   _$GetOrderHistoryApiRequest _$v;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   GetOrderHistoryApiRequestBuilder();
@@ -178,6 +180,7 @@ class _$GetOrderHistoryApiRequestActions
       GetOrderHistoryApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

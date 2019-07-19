@@ -11,7 +11,7 @@ const ListTeamMembersApiOrderBy _$wireNAME =
 const ListTeamMembersApiOrderBy _$wireEMAIL =
     const ListTeamMembersApiOrderBy._('EMAIL');
 
-ListTeamMembersApiOrderBy _$listTeamMembersApiOrderByValueOf(String name) {
+ListTeamMembersApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -22,7 +22,7 @@ ListTeamMembersApiOrderBy _$listTeamMembersApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListTeamMembersApiOrderBy> _$listTeamMembersApiOrderByValues =
+final BuiltSet<ListTeamMembersApiOrderBy> _$values =
     new BuiltSet<ListTeamMembersApiOrderBy>(const <ListTeamMembersApiOrderBy>[
   _$wireNAME,
   _$wireEMAIL,

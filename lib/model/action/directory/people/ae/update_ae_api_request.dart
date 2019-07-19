@@ -37,9 +37,6 @@ abstract class UpdateAeApiRequest
   Email get email;
 
   @nullable
-  String get timeZone;
-
-  @nullable
   DateTime get startDate;
 
   @nullable
@@ -50,6 +47,18 @@ abstract class UpdateAeApiRequest
 
   @nullable
   bool get directoryAdmin;
+
+  @nullable
+  String get timeZone;
+
+  @nullable
+  String get erpUserId;
+
+  @nullable
+  String get defaultBizUnitId;
+
+  @nullable
+  String get defaultOpsOrgUnitId;
 
   ////////////////////////////////
   /// Constructors
@@ -88,8 +97,6 @@ abstract class UpdateAeApiRequestActions extends ModelActions<
 
   EmailActions get email;
 
-  FieldDispatcher<String> get timeZone;
-
   FieldDispatcher<DateTime> get startDate;
 
   FieldDispatcher<DateTime> get endDate;
@@ -97,6 +104,14 @@ abstract class UpdateAeApiRequestActions extends ModelActions<
   FieldDispatcher<bool> get active;
 
   FieldDispatcher<bool> get directoryAdmin;
+
+  FieldDispatcher<String> get timeZone;
+
+  FieldDispatcher<String> get erpUserId;
+
+  FieldDispatcher<String> get defaultBizUnitId;
+
+  FieldDispatcher<String> get defaultOpsOrgUnitId;
 
   ////////////////////////////////
   /// Constructors

@@ -127,15 +127,21 @@ class CreateAeApiResponseBuilder
   _$CreateAeApiResponse _$v;
 
   String _aeId;
+
   String get aeId => _$this._aeId;
+
   set aeId(String aeId) => _$this._aeId = aeId;
 
   String _userId;
+
   String get userId => _$this._userId;
+
   set userId(String userId) => _$this._userId = userId;
 
   String _contactId;
+
   String get contactId => _$this._contactId;
+
   set contactId(String contactId) => _$this._contactId = contactId;
 
   CreateAeApiResponseBuilder();
@@ -216,6 +222,7 @@ class _$CreateAeApiResponseActions extends CreateAeApiResponseActions {
   CreateAeApiResponseBuilder newBuilder$() => CreateAeApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

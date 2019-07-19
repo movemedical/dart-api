@@ -101,7 +101,9 @@ class RemovePresenceApiRequestBuilder
   _$RemovePresenceApiRequest _$v;
 
   String _objectId;
+
   String get objectId => _$this._objectId;
+
   set objectId(String objectId) => _$this._objectId = objectId;
 
   RemovePresenceApiRequestBuilder();
@@ -179,6 +181,7 @@ class _$RemovePresenceApiRequestActions
       RemovePresenceApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

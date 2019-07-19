@@ -217,36 +217,52 @@ class SaveLoanLinesApiLineBuilder
   _$SaveLoanLinesApiLine _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   bool _remove;
+
   bool get remove => _$this._remove;
+
   set remove(bool remove) => _$this._remove = remove;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _uomId;
+
   String get uomId => _$this._uomId;
+
   set uomId(String uomId) => _$this._uomId = uomId;
 
   String _itemVersionId;
+
   String get itemVersionId => _$this._itemVersionId;
+
   set itemVersionId(String itemVersionId) =>
       _$this._itemVersionId = itemVersionId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   SaveLoanLinesApiLineBuilder();
@@ -359,6 +375,7 @@ class _$SaveLoanLinesApiLineActions extends SaveLoanLinesApiLineActions {
   SaveLoanLinesApiLineBuilder newBuilder$() => SaveLoanLinesApiLineBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

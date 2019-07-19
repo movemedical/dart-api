@@ -123,12 +123,16 @@ class GetGeneratedDocReportUrlsApiRequestBuilder
   _$GetGeneratedDocReportUrlsApiRequest _$v;
 
   String _generatedDocReportId;
+
   String get generatedDocReportId => _$this._generatedDocReportId;
+
   set generatedDocReportId(String generatedDocReportId) =>
       _$this._generatedDocReportId = generatedDocReportId;
 
   bool _attachment;
+
   bool get attachment => _$this._attachment;
+
   set attachment(bool attachment) => _$this._attachment = attachment;
 
   GetGeneratedDocReportUrlsApiRequestBuilder();
@@ -215,6 +219,7 @@ class _$GetGeneratedDocReportUrlsApiRequestActions
       GetGeneratedDocReportUrlsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

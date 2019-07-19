@@ -21,11 +21,9 @@ class ListHcrTeamLinksApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListHcrTeamLinksApiOrderBy> get values =>
-      _$listHcrTeamLinksApiOrderByValues;
+  static BuiltSet<ListHcrTeamLinksApiOrderBy> get values => _$values;
 
-  static ListHcrTeamLinksApiOrderBy valueOf(String name) =>
-      _$listHcrTeamLinksApiOrderByValueOf(name);
+  static ListHcrTeamLinksApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

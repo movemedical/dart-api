@@ -23,10 +23,10 @@ class ListOpenBillingsApiOpenBillingDataType extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ListOpenBillingsApiOpenBillingDataType> get values =>
-      _$listOpenBillingsApiOpenBillingDataTypeValues;
+      _$values;
 
   static ListOpenBillingsApiOpenBillingDataType valueOf(String name) =>
-      _$listOpenBillingsApiOpenBillingDataTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

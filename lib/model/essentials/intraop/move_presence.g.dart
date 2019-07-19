@@ -122,15 +122,21 @@ class MovePresenceBuilder
   _$MovePresence _$v;
 
   String _userId;
+
   String get userId => _$this._userId;
+
   set userId(String userId) => _$this._userId = userId;
 
   String _userDisplay;
+
   String get userDisplay => _$this._userDisplay;
+
   set userDisplay(String userDisplay) => _$this._userDisplay = userDisplay;
 
   String _message;
+
   String get message => _$this._message;
+
   set message(String message) => _$this._message = message;
 
   MovePresenceBuilder();
@@ -213,6 +219,7 @@ class _$MovePresenceActions extends MovePresenceActions {
   MovePresenceBuilder newBuilder$() => MovePresenceBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

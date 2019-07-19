@@ -119,13 +119,17 @@ class ListHcrMatrixApiResponseBuilder
   _$ListHcrMatrixApiResponse _$v;
 
   ListBuilder<ListHcrMatrixApiHcrMatrixDetail> _data;
+
   ListBuilder<ListHcrMatrixApiHcrMatrixDetail> get data =>
       _$this._data ??= new ListBuilder<ListHcrMatrixApiHcrMatrixDetail>();
+
   set data(ListBuilder<ListHcrMatrixApiHcrMatrixDetail> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListHcrMatrixApiResponseBuilder();
@@ -221,6 +225,7 @@ class _$ListHcrMatrixApiResponseActions
       ListHcrMatrixApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

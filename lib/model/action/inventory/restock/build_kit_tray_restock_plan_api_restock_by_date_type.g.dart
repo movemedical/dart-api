@@ -11,8 +11,7 @@ const BuildKitTrayRestockPlanApiRestockByDateType _$wireDATE =
 const BuildKitTrayRestockPlanApiRestockByDateType _$wireSHIPPING_SERVICE =
     const BuildKitTrayRestockPlanApiRestockByDateType._('SHIPPING_SERVICE');
 
-BuildKitTrayRestockPlanApiRestockByDateType
-    _$buildKitTrayRestockPlanApiRestockByDateTypeValueOf(String name) {
+BuildKitTrayRestockPlanApiRestockByDateType _$valueOf(String name) {
   switch (name) {
     case 'DATE':
       return _$wireDATE;
@@ -23,8 +22,7 @@ BuildKitTrayRestockPlanApiRestockByDateType
   }
 }
 
-final BuiltSet<BuildKitTrayRestockPlanApiRestockByDateType>
-    _$buildKitTrayRestockPlanApiRestockByDateTypeValues =
+final BuiltSet<BuildKitTrayRestockPlanApiRestockByDateType> _$values =
     new BuiltSet<BuildKitTrayRestockPlanApiRestockByDateType>(const <
         BuildKitTrayRestockPlanApiRestockByDateType>[
   _$wireDATE,

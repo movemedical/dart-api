@@ -14,7 +14,7 @@ const AuditStatus _$wireRECONCILING = const AuditStatus._('RECONCILING');
 const AuditStatus _$wireCOMPLETED = const AuditStatus._('COMPLETED');
 const AuditStatus _$wireCANCELLED = const AuditStatus._('CANCELLED');
 
-AuditStatus _$auditStatusValueOf(String name) {
+AuditStatus _$valueOf(String name) {
   switch (name) {
     case 'PLANNING':
       return _$wirePLANNING;
@@ -35,7 +35,7 @@ AuditStatus _$auditStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<AuditStatus> _$auditStatusValues =
+final BuiltSet<AuditStatus> _$values =
     new BuiltSet<AuditStatus>(const <AuditStatus>[
   _$wirePLANNING,
   _$wirePLANNED,

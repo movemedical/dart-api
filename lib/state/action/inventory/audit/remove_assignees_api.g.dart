@@ -59,6 +59,7 @@ class _$RemoveAssigneesApi extends RemoveAssigneesApi {
           ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

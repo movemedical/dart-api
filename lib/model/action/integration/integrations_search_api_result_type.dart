@@ -24,11 +24,10 @@ class IntegrationsSearchApiResultType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<IntegrationsSearchApiResultType> get values =>
-      _$integrationsSearchApiResultTypeValues;
+  static BuiltSet<IntegrationsSearchApiResultType> get values => _$values;
 
   static IntegrationsSearchApiResultType valueOf(String name) =>
-      _$integrationsSearchApiResultTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

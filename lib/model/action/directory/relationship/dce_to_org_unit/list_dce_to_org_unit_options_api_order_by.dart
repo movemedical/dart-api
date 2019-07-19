@@ -21,11 +21,10 @@ class ListDceToOrgUnitOptionsApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListDceToOrgUnitOptionsApiOrderBy> get values =>
-      _$listDceToOrgUnitOptionsApiOrderByValues;
+  static BuiltSet<ListDceToOrgUnitOptionsApiOrderBy> get values => _$values;
 
   static ListDceToOrgUnitOptionsApiOrderBy valueOf(String name) =>
-      _$listDceToOrgUnitOptionsApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

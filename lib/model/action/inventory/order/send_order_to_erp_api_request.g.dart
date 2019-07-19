@@ -116,11 +116,15 @@ class SendOrderToErpApiRequestBuilder
   _$SendOrderToErpApiRequest _$v;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   bool _validateOnly;
+
   bool get validateOnly => _$this._validateOnly;
+
   set validateOnly(bool validateOnly) => _$this._validateOnly = validateOnly;
 
   SendOrderToErpApiRequestBuilder();
@@ -206,6 +210,7 @@ class _$SendOrderToErpApiRequestActions
       SendOrderToErpApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

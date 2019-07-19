@@ -11,8 +11,7 @@ const ListPhysicianOrgUnitLinksApiOrderBy _$wireNAME =
 const ListPhysicianOrgUnitLinksApiOrderBy _$wireRELATIONSHIP_TYPE =
     const ListPhysicianOrgUnitLinksApiOrderBy._('RELATIONSHIP_TYPE');
 
-ListPhysicianOrgUnitLinksApiOrderBy
-    _$listPhysicianOrgUnitLinksApiOrderByValueOf(String name) {
+ListPhysicianOrgUnitLinksApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -23,8 +22,7 @@ ListPhysicianOrgUnitLinksApiOrderBy
   }
 }
 
-final BuiltSet<ListPhysicianOrgUnitLinksApiOrderBy>
-    _$listPhysicianOrgUnitLinksApiOrderByValues =
+final BuiltSet<ListPhysicianOrgUnitLinksApiOrderBy> _$values =
     new BuiltSet<ListPhysicianOrgUnitLinksApiOrderBy>(const <
         ListPhysicianOrgUnitLinksApiOrderBy>[
   _$wireNAME,

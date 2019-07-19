@@ -9,8 +9,7 @@ part of 'list_biz_unit_inventory_type_links_api_order_by.dart';
 const ListBizUnitInventoryTypeLinksApiOrderBy _$wireNAME =
     const ListBizUnitInventoryTypeLinksApiOrderBy._('NAME');
 
-ListBizUnitInventoryTypeLinksApiOrderBy
-    _$listBizUnitInventoryTypeLinksApiOrderByValueOf(String name) {
+ListBizUnitInventoryTypeLinksApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -19,8 +18,7 @@ ListBizUnitInventoryTypeLinksApiOrderBy
   }
 }
 
-final BuiltSet<ListBizUnitInventoryTypeLinksApiOrderBy>
-    _$listBizUnitInventoryTypeLinksApiOrderByValues =
+final BuiltSet<ListBizUnitInventoryTypeLinksApiOrderBy> _$values =
     new BuiltSet<ListBizUnitInventoryTypeLinksApiOrderBy>(const <
         ListBizUnitInventoryTypeLinksApiOrderBy>[
   _$wireNAME,

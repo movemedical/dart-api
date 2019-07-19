@@ -21,10 +21,9 @@ class MobileDeviceType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<MobileDeviceType> get values => _$mobileDeviceTypeValues;
+  static BuiltSet<MobileDeviceType> get values => _$values;
 
-  static MobileDeviceType valueOf(String name) =>
-      _$mobileDeviceTypeValueOf(name);
+  static MobileDeviceType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

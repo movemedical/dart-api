@@ -42,12 +42,6 @@ class _$CreateDceApiRequestSerializer
         ..add(serializers.serialize(object.email,
             specifiedType: const FullType(Email)));
     }
-    if (object.timeZone != null) {
-      result
-        ..add('timeZone')
-        ..add(serializers.serialize(object.timeZone,
-            specifiedType: const FullType(String)));
-    }
     if (object.workingHomeId != null) {
       result
         ..add('workingHomeId')
@@ -65,6 +59,30 @@ class _$CreateDceApiRequestSerializer
         ..add('active')
         ..add(serializers.serialize(object.active,
             specifiedType: const FullType(bool)));
+    }
+    if (object.timeZone != null) {
+      result
+        ..add('timeZone')
+        ..add(serializers.serialize(object.timeZone,
+            specifiedType: const FullType(String)));
+    }
+    if (object.erpUserId != null) {
+      result
+        ..add('erpUserId')
+        ..add(serializers.serialize(object.erpUserId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.defaultBizUnitId != null) {
+      result
+        ..add('defaultBizUnitId')
+        ..add(serializers.serialize(object.defaultBizUnitId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.defaultOpsOrgUnitId != null) {
+      result
+        ..add('defaultOpsOrgUnitId')
+        ..add(serializers.serialize(object.defaultOpsOrgUnitId,
+            specifiedType: const FullType(String)));
     }
 
     return result;
@@ -93,10 +111,6 @@ class _$CreateDceApiRequestSerializer
           result.email.replace(serializers.deserialize(value,
               specifiedType: const FullType(Email)) as Email);
           break;
-        case 'timeZone':
-          result.timeZone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'workingHomeId':
           result.workingHomeId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -108,6 +122,22 @@ class _$CreateDceApiRequestSerializer
         case 'active':
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'timeZone':
+          result.timeZone = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'erpUserId':
+          result.erpUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'defaultBizUnitId':
+          result.defaultBizUnitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'defaultOpsOrgUnitId':
+          result.defaultOpsOrgUnitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -124,13 +154,19 @@ class _$CreateDceApiRequest extends CreateDceApiRequest {
   @override
   final Email email;
   @override
-  final String timeZone;
-  @override
   final String workingHomeId;
   @override
   final String workingAtId;
   @override
   final bool active;
+  @override
+  final String timeZone;
+  @override
+  final String erpUserId;
+  @override
+  final String defaultBizUnitId;
+  @override
+  final String defaultOpsOrgUnitId;
 
   factory _$CreateDceApiRequest([void updates(CreateDceApiRequestBuilder b)]) =>
       (new CreateDceApiRequestBuilder()..update(updates)).build();
@@ -139,10 +175,13 @@ class _$CreateDceApiRequest extends CreateDceApiRequest {
       {this.reference,
       this.name,
       this.email,
-      this.timeZone,
       this.workingHomeId,
       this.workingAtId,
-      this.active})
+      this.active,
+      this.timeZone,
+      this.erpUserId,
+      this.defaultBizUnitId,
+      this.defaultOpsOrgUnitId})
       : super._();
 
   @override
@@ -160,10 +199,13 @@ class _$CreateDceApiRequest extends CreateDceApiRequest {
         reference == other.reference &&
         name == other.name &&
         email == other.email &&
-        timeZone == other.timeZone &&
         workingHomeId == other.workingHomeId &&
         workingAtId == other.workingAtId &&
-        active == other.active;
+        active == other.active &&
+        timeZone == other.timeZone &&
+        erpUserId == other.erpUserId &&
+        defaultBizUnitId == other.defaultBizUnitId &&
+        defaultOpsOrgUnitId == other.defaultOpsOrgUnitId;
   }
 
   @override
@@ -172,12 +214,20 @@ class _$CreateDceApiRequest extends CreateDceApiRequest {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc(0, reference.hashCode), name.hashCode),
-                        email.hashCode),
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc($jc(0, reference.hashCode),
+                                        name.hashCode),
+                                    email.hashCode),
+                                workingHomeId.hashCode),
+                            workingAtId.hashCode),
+                        active.hashCode),
                     timeZone.hashCode),
-                workingHomeId.hashCode),
-            workingAtId.hashCode),
-        active.hashCode));
+                erpUserId.hashCode),
+            defaultBizUnitId.hashCode),
+        defaultOpsOrgUnitId.hashCode));
   }
 
   @override
@@ -186,10 +236,13 @@ class _$CreateDceApiRequest extends CreateDceApiRequest {
           ..add('reference', reference)
           ..add('name', name)
           ..add('email', email)
-          ..add('timeZone', timeZone)
           ..add('workingHomeId', workingHomeId)
           ..add('workingAtId', workingAtId)
-          ..add('active', active))
+          ..add('active', active)
+          ..add('timeZone', timeZone)
+          ..add('erpUserId', erpUserId)
+          ..add('defaultBizUnitId', defaultBizUnitId)
+          ..add('defaultOpsOrgUnitId', defaultOpsOrgUnitId))
         .toString();
   }
 }
@@ -199,33 +252,67 @@ class CreateDceApiRequestBuilder
   _$CreateDceApiRequest _$v;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   PersonNameBuilder _name;
+
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
+
   set name(PersonNameBuilder name) => _$this._name = name;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
-  String _timeZone;
-  String get timeZone => _$this._timeZone;
-  set timeZone(String timeZone) => _$this._timeZone = timeZone;
-
   String _workingHomeId;
+
   String get workingHomeId => _$this._workingHomeId;
+
   set workingHomeId(String workingHomeId) =>
       _$this._workingHomeId = workingHomeId;
 
   String _workingAtId;
+
   String get workingAtId => _$this._workingAtId;
+
   set workingAtId(String workingAtId) => _$this._workingAtId = workingAtId;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
+
+  String _timeZone;
+
+  String get timeZone => _$this._timeZone;
+
+  set timeZone(String timeZone) => _$this._timeZone = timeZone;
+
+  String _erpUserId;
+
+  String get erpUserId => _$this._erpUserId;
+
+  set erpUserId(String erpUserId) => _$this._erpUserId = erpUserId;
+
+  String _defaultBizUnitId;
+
+  String get defaultBizUnitId => _$this._defaultBizUnitId;
+
+  set defaultBizUnitId(String defaultBizUnitId) =>
+      _$this._defaultBizUnitId = defaultBizUnitId;
+
+  String _defaultOpsOrgUnitId;
+
+  String get defaultOpsOrgUnitId => _$this._defaultOpsOrgUnitId;
+
+  set defaultOpsOrgUnitId(String defaultOpsOrgUnitId) =>
+      _$this._defaultOpsOrgUnitId = defaultOpsOrgUnitId;
 
   CreateDceApiRequestBuilder();
 
@@ -234,10 +321,13 @@ class CreateDceApiRequestBuilder
       _reference = _$v.reference;
       _name = _$v.name?.toBuilder();
       _email = _$v.email?.toBuilder();
-      _timeZone = _$v.timeZone;
       _workingHomeId = _$v.workingHomeId;
       _workingAtId = _$v.workingAtId;
       _active = _$v.active;
+      _timeZone = _$v.timeZone;
+      _erpUserId = _$v.erpUserId;
+      _defaultBizUnitId = _$v.defaultBizUnitId;
+      _defaultOpsOrgUnitId = _$v.defaultOpsOrgUnitId;
       _$v = null;
     }
     return this;
@@ -265,10 +355,13 @@ class CreateDceApiRequestBuilder
               reference: reference,
               name: _name?.build(),
               email: _email?.build(),
-              timeZone: timeZone,
               workingHomeId: workingHomeId,
               workingAtId: workingAtId,
-              active: active);
+              active: active,
+              timeZone: timeZone,
+              erpUserId: erpUserId,
+              defaultBizUnitId: defaultBizUnitId,
+              defaultOpsOrgUnitId: defaultOpsOrgUnitId);
     } catch (_) {
       String _$failedField;
       try {
@@ -307,10 +400,13 @@ class _$CreateDceApiRequestActions extends CreateDceApiRequestActions {
   final FieldDispatcher<String> reference;
   final PersonNameActions name;
   final EmailActions email;
-  final FieldDispatcher<String> timeZone;
   final FieldDispatcher<String> workingHomeId;
   final FieldDispatcher<String> workingAtId;
   final FieldDispatcher<bool> active;
+  final FieldDispatcher<String> timeZone;
+  final FieldDispatcher<String> erpUserId;
+  final FieldDispatcher<String> defaultBizUnitId;
+  final FieldDispatcher<String> defaultOpsOrgUnitId;
 
   _$CreateDceApiRequestActions._(this.options$)
       : replace$ = options$.action<CreateDceApiRequest>(
@@ -331,8 +427,6 @@ class _$CreateDceApiRequestActions extends CreateDceApiRequestActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
-            (s) => s?.timeZone, (p, b) => p?.timeZone = b),
         workingHomeId = options$.field<String>(
             'workingHomeId',
             (a) => a?.workingHomeId,
@@ -345,6 +439,20 @@ class _$CreateDceApiRequestActions extends CreateDceApiRequestActions {
             (p, b) => p?.workingAtId = b),
         active = options$.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
+        timeZone = options$.field<String>('timeZone', (a) => a?.timeZone,
+            (s) => s?.timeZone, (p, b) => p?.timeZone = b),
+        erpUserId = options$.field<String>('erpUserId', (a) => a?.erpUserId,
+            (s) => s?.erpUserId, (p, b) => p?.erpUserId = b),
+        defaultBizUnitId = options$.field<String>(
+            'defaultBizUnitId',
+            (a) => a?.defaultBizUnitId,
+            (s) => s?.defaultBizUnitId,
+            (p, b) => p?.defaultBizUnitId = b),
+        defaultOpsOrgUnitId = options$.field<String>(
+            'defaultOpsOrgUnitId',
+            (a) => a?.defaultOpsOrgUnitId,
+            (s) => s?.defaultOpsOrgUnitId,
+            (p, b) => p?.defaultOpsOrgUnitId = b),
         super._();
 
   factory _$CreateDceApiRequestActions(
@@ -358,6 +466,7 @@ class _$CreateDceApiRequestActions extends CreateDceApiRequestActions {
   CreateDceApiRequestBuilder newBuilder$() => CreateDceApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.name,
@@ -365,15 +474,19 @@ class _$CreateDceApiRequestActions extends CreateDceApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
         this.replace$,
         this.reference,
-        this.timeZone,
         this.workingHomeId,
         this.workingAtId,
         this.active,
+        this.timeZone,
+        this.erpUserId,
+        this.defaultBizUnitId,
+        this.defaultOpsOrgUnitId,
       ]);
 
   @override
@@ -382,10 +495,13 @@ class _$CreateDceApiRequestActions extends CreateDceApiRequestActions {
     reference.reducer$(reducer);
     name.reducer$(reducer);
     email.reducer$(reducer);
-    timeZone.reducer$(reducer);
     workingHomeId.reducer$(reducer);
     workingAtId.reducer$(reducer);
     active.reducer$(reducer);
+    timeZone.reducer$(reducer);
+    erpUserId.reducer$(reducer);
+    defaultBizUnitId.reducer$(reducer);
+    defaultOpsOrgUnitId.reducer$(reducer);
   }
 
   @override

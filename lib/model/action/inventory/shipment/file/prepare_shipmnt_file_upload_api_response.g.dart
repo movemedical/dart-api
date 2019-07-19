@@ -121,11 +121,15 @@ class PrepareShipmntFileUploadApiResponseBuilder
   _$PrepareShipmntFileUploadApiResponse _$v;
 
   String _url;
+
   String get url => _$this._url;
+
   set url(String url) => _$this._url = url;
 
   FileDetailBuilder _file;
+
   FileDetailBuilder get file => _$this._file ??= new FileDetailBuilder();
+
   set file(FileDetailBuilder file) => _$this._file = file;
 
   PrepareShipmntFileUploadApiResponseBuilder();
@@ -227,12 +231,14 @@ class _$PrepareShipmntFileUploadApiResponseActions
       PrepareShipmntFileUploadApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.file,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

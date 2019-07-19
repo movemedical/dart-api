@@ -13,7 +13,7 @@ const ReplenishOption _$wireNON_MANAGED =
 const ReplenishOption _$wireDO_NOT_REPLENISH =
     const ReplenishOption._('DO_NOT_REPLENISH');
 
-ReplenishOption _$replenishOptionValueOf(String name) {
+ReplenishOption _$valueOf(String name) {
   switch (name) {
     case 'USAGE':
       return _$wireUSAGE;
@@ -28,7 +28,7 @@ ReplenishOption _$replenishOptionValueOf(String name) {
   }
 }
 
-final BuiltSet<ReplenishOption> _$replenishOptionValues =
+final BuiltSet<ReplenishOption> _$values =
     new BuiltSet<ReplenishOption>(const <ReplenishOption>[
   _$wireUSAGE,
   _$wirePAR,

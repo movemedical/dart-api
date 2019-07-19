@@ -86,6 +86,10 @@ const StockTransactionType _$wireTRAY_INSPECTED =
     const StockTransactionType._('TRAY_INSPECTED');
 const StockTransactionType _$wireCASE_TRANSITION_TO_POST_OP =
     const StockTransactionType._('CASE_TRANSITION_TO_POST_OP');
+const StockTransactionType _$wireHOLD_ADD =
+    const StockTransactionType._('HOLD_ADD');
+const StockTransactionType _$wireHOLD_REMOVE =
+    const StockTransactionType._('HOLD_REMOVE');
 const StockTransactionType _$wirePKG_CONFIRMED =
     const StockTransactionType._('PKG_CONFIRMED');
 const StockTransactionType _$wireTRAY_EVAL =
@@ -155,7 +159,7 @@ const StockTransactionType _$wireFOUND_UNDO =
 const StockTransactionType _$wireCHILDREN_TRANSFERRED =
     const StockTransactionType._('CHILDREN_TRANSFERRED');
 
-StockTransactionType _$stockTransactionTypeValueOf(String name) {
+StockTransactionType _$valueOf(String name) {
   switch (name) {
     case 'ADJUSTMENT_IN':
       return _$wireADJUSTMENT_IN;
@@ -237,6 +241,10 @@ StockTransactionType _$stockTransactionTypeValueOf(String name) {
       return _$wireTRAY_INSPECTED;
     case 'CASE_TRANSITION_TO_POST_OP':
       return _$wireCASE_TRANSITION_TO_POST_OP;
+    case 'HOLD_ADD':
+      return _$wireHOLD_ADD;
+    case 'HOLD_REMOVE':
+      return _$wireHOLD_REMOVE;
     case 'PKG_CONFIRMED':
       return _$wirePKG_CONFIRMED;
     case 'TRAY_EVAL':
@@ -314,7 +322,7 @@ StockTransactionType _$stockTransactionTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<StockTransactionType> _$stockTransactionTypeValues =
+final BuiltSet<StockTransactionType> _$values =
     new BuiltSet<StockTransactionType>(const <StockTransactionType>[
   _$wireADJUSTMENT_IN,
   _$wireADJUSTMENT_OUT,
@@ -356,6 +364,8 @@ final BuiltSet<StockTransactionType> _$stockTransactionTypeValues =
   _$wireKIT_CONTAINER_INSPECTED,
   _$wireTRAY_INSPECTED,
   _$wireCASE_TRANSITION_TO_POST_OP,
+  _$wireHOLD_ADD,
+  _$wireHOLD_REMOVE,
   _$wirePKG_CONFIRMED,
   _$wireTRAY_EVAL,
   _$wireKIT_EVAL,

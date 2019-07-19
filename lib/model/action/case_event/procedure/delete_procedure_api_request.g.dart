@@ -101,7 +101,9 @@ class DeleteProcedureApiRequestBuilder
   _$DeleteProcedureApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   DeleteProcedureApiRequestBuilder();
@@ -178,6 +180,7 @@ class _$DeleteProcedureApiRequestActions
       DeleteProcedureApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

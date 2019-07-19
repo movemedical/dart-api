@@ -13,7 +13,7 @@ const CaseFileType _$wireUSAGE_SIGNATURE =
     const CaseFileType._('USAGE_SIGNATURE');
 const CaseFileType _$wireMISC = const CaseFileType._('MISC');
 
-CaseFileType _$caseFileTypeValueOf(String name) {
+CaseFileType _$valueOf(String name) {
   switch (name) {
     case 'XRAY':
       return _$wireXRAY;
@@ -30,7 +30,7 @@ CaseFileType _$caseFileTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<CaseFileType> _$caseFileTypeValues =
+final BuiltSet<CaseFileType> _$values =
     new BuiltSet<CaseFileType>(const <CaseFileType>[
   _$wireXRAY,
   _$wireDICOM,

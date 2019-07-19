@@ -110,8 +110,10 @@ class ListQuestionableKitSummaryApiRequestBuilder
   _$ListQuestionableKitSummaryApiRequest _$v;
 
   ListBuilder<String> _kitIds;
+
   ListBuilder<String> get kitIds =>
       _$this._kitIds ??= new ListBuilder<String>();
+
   set kitIds(ListBuilder<String> kitIds) => _$this._kitIds = kitIds;
 
   ListQuestionableKitSummaryApiRequestBuilder();
@@ -206,6 +208,7 @@ class _$ListQuestionableKitSummaryApiRequestActions
       ListQuestionableKitSummaryApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

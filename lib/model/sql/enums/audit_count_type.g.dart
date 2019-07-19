@@ -11,7 +11,7 @@ const AuditCountType _$wirePHYSICAL = const AuditCountType._('PHYSICAL');
 const AuditCountType _$wireSELF_REPORTED =
     const AuditCountType._('SELF_REPORTED');
 
-AuditCountType _$auditCountTypeValueOf(String name) {
+AuditCountType _$valueOf(String name) {
   switch (name) {
     case 'ASSIGNED':
       return _$wireASSIGNED;
@@ -24,7 +24,7 @@ AuditCountType _$auditCountTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<AuditCountType> _$auditCountTypeValues =
+final BuiltSet<AuditCountType> _$values =
     new BuiltSet<AuditCountType>(const <AuditCountType>[
   _$wireASSIGNED,
   _$wirePHYSICAL,

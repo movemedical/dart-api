@@ -114,11 +114,15 @@ class AddAeToTeamApiRequestBuilder
   _$AddAeToTeamApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _teamId;
+
   String get teamId => _$this._teamId;
+
   set teamId(String teamId) => _$this._teamId = teamId;
 
   AddAeToTeamApiRequestBuilder();
@@ -196,6 +200,7 @@ class _$AddAeToTeamApiRequestActions extends AddAeToTeamApiRequestActions {
   AddAeToTeamApiRequestBuilder newBuilder$() => AddAeToTeamApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

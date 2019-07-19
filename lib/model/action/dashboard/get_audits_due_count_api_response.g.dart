@@ -104,7 +104,9 @@ class GetAuditsDueCountApiResponseBuilder
   _$GetAuditsDueCountApiResponse _$v;
 
   int _count;
+
   int get count => _$this._count;
+
   set count(int count) => _$this._count = count;
 
   GetAuditsDueCountApiResponseBuilder();
@@ -182,6 +184,7 @@ class _$GetAuditsDueCountApiResponseActions
       GetAuditsDueCountApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

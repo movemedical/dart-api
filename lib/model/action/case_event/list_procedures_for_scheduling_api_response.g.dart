@@ -110,8 +110,10 @@ class ListProceduresForSchedulingApiResponseBuilder
   _$ListProceduresForSchedulingApiResponse _$v;
 
   ListBuilder<Procedure> _procedures;
+
   ListBuilder<Procedure> get procedures =>
       _$this._procedures ??= new ListBuilder<Procedure>();
+
   set procedures(ListBuilder<Procedure> procedures) =>
       _$this._procedures = procedures;
 
@@ -210,6 +212,7 @@ class _$ListProceduresForSchedulingApiResponseActions
       ListProceduresForSchedulingApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -23,9 +23,9 @@ class Visibility extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<Visibility> get values => _$visibilityValues;
+  static BuiltSet<Visibility> get values => _$values;
 
-  static Visibility valueOf(String name) => _$visibilityValueOf(name);
+  static Visibility valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

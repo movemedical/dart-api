@@ -9,8 +9,7 @@ part of 'list_sales_org_unit_item_category_options_api_order_by.dart';
 const ListSalesOrgUnitItemCategoryOptionsApiOrderBy _$wireNAME =
     const ListSalesOrgUnitItemCategoryOptionsApiOrderBy._('NAME');
 
-ListSalesOrgUnitItemCategoryOptionsApiOrderBy
-    _$listSalesOrgUnitItemCategoryOptionsApiOrderByValueOf(String name) {
+ListSalesOrgUnitItemCategoryOptionsApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -19,8 +18,7 @@ ListSalesOrgUnitItemCategoryOptionsApiOrderBy
   }
 }
 
-final BuiltSet<ListSalesOrgUnitItemCategoryOptionsApiOrderBy>
-    _$listSalesOrgUnitItemCategoryOptionsApiOrderByValues =
+final BuiltSet<ListSalesOrgUnitItemCategoryOptionsApiOrderBy> _$values =
     new BuiltSet<ListSalesOrgUnitItemCategoryOptionsApiOrderBy>(const <
         ListSalesOrgUnitItemCategoryOptionsApiOrderBy>[
   _$wireNAME,

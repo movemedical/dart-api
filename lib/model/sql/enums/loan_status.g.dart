@@ -21,7 +21,7 @@ const LoanStatus _$wireCANCELED = const LoanStatus._('CANCELED');
 const LoanStatus _$wireDENIED = const LoanStatus._('DENIED');
 const LoanStatus _$wireCLOSED = const LoanStatus._('CLOSED');
 
-LoanStatus _$loanStatusValueOf(String name) {
+LoanStatus _$valueOf(String name) {
   switch (name) {
     case 'PLANNING':
       return _$wirePLANNING;
@@ -50,7 +50,7 @@ LoanStatus _$loanStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<LoanStatus> _$loanStatusValues =
+final BuiltSet<LoanStatus> _$values =
     new BuiltSet<LoanStatus>(const <LoanStatus>[
   _$wirePLANNING,
   _$wireAWAITING_APPROVAL,

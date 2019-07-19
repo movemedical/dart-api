@@ -67,6 +67,7 @@ class _$ListKitContentsApi extends ListKitContentsApi {
           ApiResult<ListKitContentsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

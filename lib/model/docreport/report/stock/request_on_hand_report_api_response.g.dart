@@ -105,7 +105,9 @@ class RequestOnHandReportApiResponseBuilder
   _$RequestOnHandReportApiResponse _$v;
 
   String _docReportId;
+
   String get docReportId => _$this._docReportId;
+
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   RequestOnHandReportApiResponseBuilder();
@@ -187,6 +189,7 @@ class _$RequestOnHandReportApiResponseActions
       RequestOnHandReportApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

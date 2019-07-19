@@ -11,7 +11,7 @@ const ListHcrMatrixApiOrderBy _$wireHCR =
 const ListHcrMatrixApiOrderBy _$wireTEAM =
     const ListHcrMatrixApiOrderBy._('TEAM');
 
-ListHcrMatrixApiOrderBy _$listHcrMatrixApiOrderByValueOf(String name) {
+ListHcrMatrixApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'HCR':
       return _$wireHCR;
@@ -22,7 +22,7 @@ ListHcrMatrixApiOrderBy _$listHcrMatrixApiOrderByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListHcrMatrixApiOrderBy> _$listHcrMatrixApiOrderByValues =
+final BuiltSet<ListHcrMatrixApiOrderBy> _$values =
     new BuiltSet<ListHcrMatrixApiOrderBy>(const <ListHcrMatrixApiOrderBy>[
   _$wireHCR,
   _$wireTEAM,

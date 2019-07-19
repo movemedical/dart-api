@@ -63,6 +63,7 @@ class _$UpdateCaseEventPatientApi extends UpdateCaseEventPatientApi {
           ApiCommand<UpdateCaseEventPatientApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

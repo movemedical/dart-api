@@ -105,9 +105,11 @@ class CompletePicks2ApiRequestBuilder
   _$CompletePicks2ApiRequest _$v;
 
   ListBuilder<CompletePicks2ApiCompleteRequest> _completeRequests;
+
   ListBuilder<CompletePicks2ApiCompleteRequest> get completeRequests =>
       _$this._completeRequests ??=
           new ListBuilder<CompletePicks2ApiCompleteRequest>();
+
   set completeRequests(
           ListBuilder<CompletePicks2ApiCompleteRequest> completeRequests) =>
       _$this._completeRequests = completeRequests;
@@ -206,6 +208,7 @@ class _$CompletePicks2ApiRequestActions
       CompletePicks2ApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

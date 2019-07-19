@@ -316,63 +316,89 @@ class CreateSimpleKitStockApiRequestBuilder
   _$CreateSimpleKitStockApiRequest _$v;
 
   String _inventoryTypeId;
+
   String get inventoryTypeId => _$this._inventoryTypeId;
+
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   String _kitItemId;
+
   String get kitItemId => _$this._kitItemId;
+
   set kitItemId(String kitItemId) => _$this._kitItemId = kitItemId;
 
   String _kitItemVersionId;
+
   String get kitItemVersionId => _$this._kitItemVersionId;
+
   set kitItemVersionId(String kitItemVersionId) =>
       _$this._kitItemVersionId = kitItemVersionId;
 
   String _toteItemId;
+
   String get toteItemId => _$this._toteItemId;
+
   set toteItemId(String toteItemId) => _$this._toteItemId = toteItemId;
 
   String _toteItemVersionId;
+
   String get toteItemVersionId => _$this._toteItemVersionId;
+
   set toteItemVersionId(String toteItemVersionId) =>
       _$this._toteItemVersionId = toteItemVersionId;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   LocationType _homeLocationType;
+
   LocationType get homeLocationType => _$this._homeLocationType;
+
   set homeLocationType(LocationType homeLocationType) =>
       _$this._homeLocationType = homeLocationType;
 
   String _homeLocationId;
+
   String get homeLocationId => _$this._homeLocationId;
+
   set homeLocationId(String homeLocationId) =>
       _$this._homeLocationId = homeLocationId;
 
   StockContainerType _containerType;
+
   StockContainerType get containerType => _$this._containerType;
+
   set containerType(StockContainerType containerType) =>
       _$this._containerType = containerType;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   ResponsiblePartyType _responsiblePartyType;
+
   ResponsiblePartyType get responsiblePartyType => _$this._responsiblePartyType;
+
   set responsiblePartyType(ResponsiblePartyType responsiblePartyType) =>
       _$this._responsiblePartyType = responsiblePartyType;
 
   String _responsiblePartyId;
+
   String get responsiblePartyId => _$this._responsiblePartyId;
+
   set responsiblePartyId(String responsiblePartyId) =>
       _$this._responsiblePartyId = responsiblePartyId;
 
@@ -543,6 +569,7 @@ class _$CreateSimpleKitStockApiRequestActions
       CreateSimpleKitStockApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

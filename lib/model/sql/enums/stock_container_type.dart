@@ -26,10 +26,9 @@ class StockContainerType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<StockContainerType> get values => _$stockContainerTypeValues;
+  static BuiltSet<StockContainerType> get values => _$values;
 
-  static StockContainerType valueOf(String name) =>
-      _$stockContainerTypeValueOf(name);
+  static StockContainerType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

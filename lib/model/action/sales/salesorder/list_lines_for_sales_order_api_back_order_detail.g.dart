@@ -155,20 +155,28 @@ class ListLinesForSalesOrderApiBackOrderDetailBuilder
   _$ListLinesForSalesOrderApiBackOrderDetail _$v;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   DateTime _createdTimestamp;
+
   DateTime get createdTimestamp => _$this._createdTimestamp;
+
   set createdTimestamp(DateTime createdTimestamp) =>
       _$this._createdTimestamp = createdTimestamp;
 
   String _fieldName;
+
   String get fieldName => _$this._fieldName;
+
   set fieldName(String fieldName) => _$this._fieldName = fieldName;
 
   String _fieldValue;
+
   String get fieldValue => _$this._fieldValue;
+
   set fieldValue(String fieldValue) => _$this._fieldValue = fieldValue;
 
   ListLinesForSalesOrderApiBackOrderDetailBuilder();
@@ -266,6 +274,7 @@ class _$ListLinesForSalesOrderApiBackOrderDetailActions
       ListLinesForSalesOrderApiBackOrderDetailBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

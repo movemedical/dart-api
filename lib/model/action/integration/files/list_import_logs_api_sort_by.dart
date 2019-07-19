@@ -35,11 +35,9 @@ class ListImportLogsApiSortBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListImportLogsApiSortBy> get values =>
-      _$listImportLogsApiSortByValues;
+  static BuiltSet<ListImportLogsApiSortBy> get values => _$values;
 
-  static ListImportLogsApiSortBy valueOf(String name) =>
-      _$listImportLogsApiSortByValueOf(name);
+  static ListImportLogsApiSortBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

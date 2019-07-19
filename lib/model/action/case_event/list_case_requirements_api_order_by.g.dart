@@ -17,8 +17,7 @@ const ListCaseRequirementsApiOrderBy _$wireQTY_REQUESTED =
 const ListCaseRequirementsApiOrderBy _$wireQTY_ON_HAND =
     const ListCaseRequirementsApiOrderBy._('QTY_ON_HAND');
 
-ListCaseRequirementsApiOrderBy _$listCaseRequirementsApiOrderByValueOf(
-    String name) {
+ListCaseRequirementsApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'ITEM':
       return _$wireITEM;
@@ -35,9 +34,8 @@ ListCaseRequirementsApiOrderBy _$listCaseRequirementsApiOrderByValueOf(
   }
 }
 
-final BuiltSet<ListCaseRequirementsApiOrderBy>
-    _$listCaseRequirementsApiOrderByValues = new BuiltSet<
-        ListCaseRequirementsApiOrderBy>(const <ListCaseRequirementsApiOrderBy>[
+final BuiltSet<ListCaseRequirementsApiOrderBy> _$values = new BuiltSet<
+    ListCaseRequirementsApiOrderBy>(const <ListCaseRequirementsApiOrderBy>[
   _$wireITEM,
   _$wireITEM_CLASS,
   _$wireITEM_TYPE,

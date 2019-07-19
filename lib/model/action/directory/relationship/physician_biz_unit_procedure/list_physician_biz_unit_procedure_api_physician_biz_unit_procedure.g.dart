@@ -202,28 +202,40 @@ class ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureBuilder
   _$ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _bizUnitName;
+
   String get bizUnitName => _$this._bizUnitName;
+
   set bizUnitName(String bizUnitName) => _$this._bizUnitName = bizUnitName;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _procedureName;
+
   String get procedureName => _$this._procedureName;
+
   set procedureName(String procedureName) =>
       _$this._procedureName = procedureName;
 
   String _procedureIcdCode;
+
   String get procedureIcdCode => _$this._procedureIcdCode;
+
   set procedureIcdCode(String procedureIcdCode) =>
       _$this._procedureIcdCode = procedureIcdCode;
 
@@ -351,6 +363,7 @@ class _$ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureActions
           ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

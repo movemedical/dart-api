@@ -124,14 +124,18 @@ class ListCustomerQualifiersApiResponseBuilder
   _$ListCustomerQualifiersApiResponse _$v;
 
   ListBuilder<ListCustomerQualifiersApiCustomerQualifier> _data;
+
   ListBuilder<ListCustomerQualifiersApiCustomerQualifier> get data =>
       _$this._data ??=
           new ListBuilder<ListCustomerQualifiersApiCustomerQualifier>();
+
   set data(ListBuilder<ListCustomerQualifiersApiCustomerQualifier> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListCustomerQualifiersApiResponseBuilder();
@@ -230,6 +234,7 @@ class _$ListCustomerQualifiersApiResponseActions
       ListCustomerQualifiersApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

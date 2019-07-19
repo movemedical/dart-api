@@ -68,6 +68,7 @@ class _$ListBillToAddressesApi extends ListBillToAddressesApi {
           ApiResult<ListBillToAddressesApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

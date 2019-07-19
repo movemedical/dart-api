@@ -11,8 +11,7 @@ const ListRelativeOrderLineCancelReasonsApiOrderBy _$wireID =
 const ListRelativeOrderLineCancelReasonsApiOrderBy _$wireNAME =
     const ListRelativeOrderLineCancelReasonsApiOrderBy._('NAME');
 
-ListRelativeOrderLineCancelReasonsApiOrderBy
-    _$listRelativeOrderLineCancelReasonsApiOrderByValueOf(String name) {
+ListRelativeOrderLineCancelReasonsApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'ID':
       return _$wireID;
@@ -23,8 +22,7 @@ ListRelativeOrderLineCancelReasonsApiOrderBy
   }
 }
 
-final BuiltSet<ListRelativeOrderLineCancelReasonsApiOrderBy>
-    _$listRelativeOrderLineCancelReasonsApiOrderByValues =
+final BuiltSet<ListRelativeOrderLineCancelReasonsApiOrderBy> _$values =
     new BuiltSet<ListRelativeOrderLineCancelReasonsApiOrderBy>(const <
         ListRelativeOrderLineCancelReasonsApiOrderBy>[
   _$wireID,

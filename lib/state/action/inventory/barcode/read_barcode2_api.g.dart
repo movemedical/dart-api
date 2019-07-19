@@ -64,6 +64,7 @@ class _$ReadBarcode2Api extends ReadBarcode2Api {
           ApiResult<ReadBarcode2ApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

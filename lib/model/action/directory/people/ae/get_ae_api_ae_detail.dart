@@ -3,7 +3,9 @@ import 'dart:core';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
+import 'package:movemedical_api/model/biz_unit.dart';
 import 'package:movemedical_api/model/email.dart';
+import 'package:movemedical_api/model/org_unit.dart';
 import 'package:movemedical_api/model/person_name.dart';
 import 'package:movemedical_api/model/phone_number.dart';
 import 'package:movemedical_api/model/sql/enums/org_type.dart';
@@ -70,9 +72,6 @@ abstract class GetAeApiAeDetail
   bool get userLocked;
 
   @nullable
-  String get timeZone;
-
-  @nullable
   bool get directoryAdmin;
 
   @nullable
@@ -80,6 +79,18 @@ abstract class GetAeApiAeDetail
 
   @nullable
   DateTime get lastVisibilityUpdateDate;
+
+  @nullable
+  String get timeZone;
+
+  @nullable
+  String get erpUserId;
+
+  @nullable
+  BizUnit get defaultBizUnit;
+
+  @nullable
+  OrgUnit get defaultOpsOrgUnit;
 
   ////////////////////////////////
   /// Constructors
@@ -138,13 +149,19 @@ abstract class GetAeApiAeDetailActions extends ModelActions<GetAeApiAeDetail,
 
   FieldDispatcher<bool> get userLocked;
 
-  FieldDispatcher<String> get timeZone;
-
   FieldDispatcher<bool> get directoryAdmin;
 
   FieldDispatcher<bool> get phiAllowed;
 
   FieldDispatcher<DateTime> get lastVisibilityUpdateDate;
+
+  FieldDispatcher<String> get timeZone;
+
+  FieldDispatcher<String> get erpUserId;
+
+  BizUnitActions get defaultBizUnit;
+
+  OrgUnitActions get defaultOpsOrgUnit;
 
   ////////////////////////////////
   /// Constructors

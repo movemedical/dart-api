@@ -63,6 +63,7 @@ class _$CreateBizUnitToOrgUnitApi extends CreateBizUnitToOrgUnitApi {
           ApiCommand<CreateBizUnitToOrgUnitApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

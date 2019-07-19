@@ -106,7 +106,9 @@ class RequestStockExportDocApiResponseBuilder
   _$RequestStockExportDocApiResponse _$v;
 
   String _docReportId;
+
   String get docReportId => _$this._docReportId;
+
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   RequestStockExportDocApiResponseBuilder();
@@ -188,6 +190,7 @@ class _$RequestStockExportDocApiResponseActions
       RequestStockExportDocApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

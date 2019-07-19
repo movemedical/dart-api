@@ -10,8 +10,7 @@ const BuildInspectionApiUpdateExpectedStockType _$wireSELECTED_OPTION_CHANGED =
     const BuildInspectionApiUpdateExpectedStockType._(
         'SELECTED_OPTION_CHANGED');
 
-BuildInspectionApiUpdateExpectedStockType
-    _$buildInspectionApiUpdateExpectedStockTypeValueOf(String name) {
+BuildInspectionApiUpdateExpectedStockType _$valueOf(String name) {
   switch (name) {
     case 'SELECTED_OPTION_CHANGED':
       return _$wireSELECTED_OPTION_CHANGED;
@@ -20,8 +19,7 @@ BuildInspectionApiUpdateExpectedStockType
   }
 }
 
-final BuiltSet<BuildInspectionApiUpdateExpectedStockType>
-    _$buildInspectionApiUpdateExpectedStockTypeValues =
+final BuiltSet<BuildInspectionApiUpdateExpectedStockType> _$values =
     new BuiltSet<BuildInspectionApiUpdateExpectedStockType>(const <
         BuildInspectionApiUpdateExpectedStockType>[
   _$wireSELECTED_OPTION_CHANGED,

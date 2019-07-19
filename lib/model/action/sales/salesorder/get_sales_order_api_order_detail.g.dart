@@ -220,6 +220,18 @@ class _$GetSalesOrderApiOrderDetailSerializer
         ..add(serializers.serialize(object.shippingService,
             specifiedType: const FullType(ShippingService)));
     }
+    if (object.salesLead != null) {
+      result
+        ..add('salesLead')
+        ..add(serializers.serialize(object.salesLead,
+            specifiedType: const FullType(UserLite)));
+    }
+    if (object.opsLead != null) {
+      result
+        ..add('opsLead')
+        ..add(serializers.serialize(object.opsLead,
+            specifiedType: const FullType(UserLite)));
+    }
 
     return result;
   }
@@ -375,6 +387,14 @@ class _$GetSalesOrderApiOrderDetailSerializer
                   specifiedType: const FullType(ShippingService))
               as ShippingService);
           break;
+        case 'salesLead':
+          result.salesLead.replace(serializers.deserialize(value,
+              specifiedType: const FullType(UserLite)) as UserLite);
+          break;
+        case 'opsLead':
+          result.opsLead.replace(serializers.deserialize(value,
+              specifiedType: const FullType(UserLite)) as UserLite);
+          break;
       }
     }
 
@@ -447,6 +467,10 @@ class _$GetSalesOrderApiOrderDetail extends GetSalesOrderApiOrderDetail {
   final String lastWebServiceLogId;
   @override
   final ShippingService shippingService;
+  @override
+  final UserLite salesLead;
+  @override
+  final UserLite opsLead;
 
   factory _$GetSalesOrderApiOrderDetail(
           [void updates(GetSalesOrderApiOrderDetailBuilder b)]) =>
@@ -484,7 +508,9 @@ class _$GetSalesOrderApiOrderDetail extends GetSalesOrderApiOrderDetail {
       this.validationMessages,
       this.hcr,
       this.lastWebServiceLogId,
-      this.shippingService})
+      this.shippingService,
+      this.salesLead,
+      this.opsLead})
       : super._();
 
   @override
@@ -531,7 +557,9 @@ class _$GetSalesOrderApiOrderDetail extends GetSalesOrderApiOrderDetail {
         validationMessages == other.validationMessages &&
         hcr == other.hcr &&
         lastWebServiceLogId == other.lastWebServiceLogId &&
-        shippingService == other.shippingService;
+        shippingService == other.shippingService &&
+        salesLead == other.salesLead &&
+        opsLead == other.opsLead;
   }
 
   @override
@@ -554,26 +582,26 @@ class _$GetSalesOrderApiOrderDetail extends GetSalesOrderApiOrderDetail {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), orderNumber.hashCode), createdDate.hashCode), createdBy.hashCode), status.hashCode), email.hashCode), attention.hashCode), orderReason.hashCode), moveItemClass.hashCode), location.hashCode), deliveryWindow.hashCode), sourceStartDate.hashCode), opsOrgUnit.hashCode),
-                                                                                salesOrgUnit.hashCode),
-                                                                            restockOrders.hashCode),
-                                                                        caseEvent.hashCode),
-                                                                    shipToAddress.hashCode),
-                                                                billToAddress.hashCode),
-                                                            deliverToAddress.hashCode),
-                                                        physician.hashCode),
-                                                    poNumber.hashCode),
-                                                erpReference.hashCode),
-                                            toInventoryType.hashCode),
-                                        toHomeLocation.hashCode),
-                                    toResponsibleParty.hashCode),
-                                grandTotal.hashCode),
-                            itemQuantity.hashCode),
-                        customer.hashCode),
-                    validationMessages.hashCode),
-                hcr.hashCode),
-            lastWebServiceLogId.hashCode),
-        shippingService.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), orderNumber.hashCode), createdDate.hashCode), createdBy.hashCode), status.hashCode), email.hashCode), attention.hashCode), orderReason.hashCode), moveItemClass.hashCode), location.hashCode), deliveryWindow.hashCode), sourceStartDate.hashCode), opsOrgUnit.hashCode), salesOrgUnit.hashCode), restockOrders.hashCode),
+                                                                                caseEvent.hashCode),
+                                                                            shipToAddress.hashCode),
+                                                                        billToAddress.hashCode),
+                                                                    deliverToAddress.hashCode),
+                                                                physician.hashCode),
+                                                            poNumber.hashCode),
+                                                        erpReference.hashCode),
+                                                    toInventoryType.hashCode),
+                                                toHomeLocation.hashCode),
+                                            toResponsibleParty.hashCode),
+                                        grandTotal.hashCode),
+                                    itemQuantity.hashCode),
+                                customer.hashCode),
+                            validationMessages.hashCode),
+                        hcr.hashCode),
+                    lastWebServiceLogId.hashCode),
+                shippingService.hashCode),
+            salesLead.hashCode),
+        opsLead.hashCode));
   }
 
   @override
@@ -610,7 +638,9 @@ class _$GetSalesOrderApiOrderDetail extends GetSalesOrderApiOrderDetail {
           ..add('validationMessages', validationMessages)
           ..add('hcr', hcr)
           ..add('lastWebServiceLogId', lastWebServiceLogId)
-          ..add('shippingService', shippingService))
+          ..add('shippingService', shippingService)
+          ..add('salesLead', salesLead)
+          ..add('opsLead', opsLead))
         .toString();
   }
 }
@@ -622,166 +652,242 @@ class GetSalesOrderApiOrderDetailBuilder
   _$GetSalesOrderApiOrderDetail _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _orderNumber;
+
   int get orderNumber => _$this._orderNumber;
+
   set orderNumber(int orderNumber) => _$this._orderNumber = orderNumber;
 
   DateTime _createdDate;
+
   DateTime get createdDate => _$this._createdDate;
+
   set createdDate(DateTime createdDate) => _$this._createdDate = createdDate;
 
   String _createdBy;
+
   String get createdBy => _$this._createdBy;
+
   set createdBy(String createdBy) => _$this._createdBy = createdBy;
 
   OrderStatus _status;
+
   OrderStatus get status => _$this._status;
+
   set status(OrderStatus status) => _$this._status = status;
 
   String _email;
+
   String get email => _$this._email;
+
   set email(String email) => _$this._email = email;
 
   String _attention;
+
   String get attention => _$this._attention;
+
   set attention(String attention) => _$this._attention = attention;
 
   OrderReasonBuilder _orderReason;
+
   OrderReasonBuilder get orderReason =>
       _$this._orderReason ??= new OrderReasonBuilder();
+
   set orderReason(OrderReasonBuilder orderReason) =>
       _$this._orderReason = orderReason;
 
   MoveItemClass _moveItemClass;
+
   MoveItemClass get moveItemClass => _$this._moveItemClass;
+
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   LocationBuilder _location;
+
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
+
   set location(LocationBuilder location) => _$this._location = location;
 
   DateRangeBuilder _deliveryWindow;
+
   DateRangeBuilder get deliveryWindow =>
       _$this._deliveryWindow ??= new DateRangeBuilder();
+
   set deliveryWindow(DateRangeBuilder deliveryWindow) =>
       _$this._deliveryWindow = deliveryWindow;
 
   DateTime _sourceStartDate;
+
   DateTime get sourceStartDate => _$this._sourceStartDate;
+
   set sourceStartDate(DateTime sourceStartDate) =>
       _$this._sourceStartDate = sourceStartDate;
 
   OrgUnitBuilder _opsOrgUnit;
+
   OrgUnitBuilder get opsOrgUnit => _$this._opsOrgUnit ??= new OrgUnitBuilder();
+
   set opsOrgUnit(OrgUnitBuilder opsOrgUnit) => _$this._opsOrgUnit = opsOrgUnit;
 
   OrgUnitBuilder _salesOrgUnit;
+
   OrgUnitBuilder get salesOrgUnit =>
       _$this._salesOrgUnit ??= new OrgUnitBuilder();
+
   set salesOrgUnit(OrgUnitBuilder salesOrgUnit) =>
       _$this._salesOrgUnit = salesOrgUnit;
 
   ListBuilder<OrderHeaderLite> _restockOrders;
+
   ListBuilder<OrderHeaderLite> get restockOrders =>
       _$this._restockOrders ??= new ListBuilder<OrderHeaderLite>();
+
   set restockOrders(ListBuilder<OrderHeaderLite> restockOrders) =>
       _$this._restockOrders = restockOrders;
 
   GetSalesOrderApiCaseEventBuilder _caseEvent;
+
   GetSalesOrderApiCaseEventBuilder get caseEvent =>
       _$this._caseEvent ??= new GetSalesOrderApiCaseEventBuilder();
+
   set caseEvent(GetSalesOrderApiCaseEventBuilder caseEvent) =>
       _$this._caseEvent = caseEvent;
 
   CustomerAddressBuilder _shipToAddress;
+
   CustomerAddressBuilder get shipToAddress =>
       _$this._shipToAddress ??= new CustomerAddressBuilder();
+
   set shipToAddress(CustomerAddressBuilder shipToAddress) =>
       _$this._shipToAddress = shipToAddress;
 
   CustomerAddressBuilder _billToAddress;
+
   CustomerAddressBuilder get billToAddress =>
       _$this._billToAddress ??= new CustomerAddressBuilder();
+
   set billToAddress(CustomerAddressBuilder billToAddress) =>
       _$this._billToAddress = billToAddress;
 
   CustomerAddressBuilder _deliverToAddress;
+
   CustomerAddressBuilder get deliverToAddress =>
       _$this._deliverToAddress ??= new CustomerAddressBuilder();
+
   set deliverToAddress(CustomerAddressBuilder deliverToAddress) =>
       _$this._deliverToAddress = deliverToAddress;
 
   PhysicianBuilder _physician;
+
   PhysicianBuilder get physician =>
       _$this._physician ??= new PhysicianBuilder();
+
   set physician(PhysicianBuilder physician) => _$this._physician = physician;
 
   String _poNumber;
+
   String get poNumber => _$this._poNumber;
+
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _erpReference;
+
   String get erpReference => _$this._erpReference;
+
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   InventoryTypeBuilder _toInventoryType;
+
   InventoryTypeBuilder get toInventoryType =>
       _$this._toInventoryType ??= new InventoryTypeBuilder();
+
   set toInventoryType(InventoryTypeBuilder toInventoryType) =>
       _$this._toInventoryType = toInventoryType;
 
   LocationBuilder _toHomeLocation;
+
   LocationBuilder get toHomeLocation =>
       _$this._toHomeLocation ??= new LocationBuilder();
+
   set toHomeLocation(LocationBuilder toHomeLocation) =>
       _$this._toHomeLocation = toHomeLocation;
 
   ResponsiblePartyBuilder _toResponsibleParty;
+
   ResponsiblePartyBuilder get toResponsibleParty =>
       _$this._toResponsibleParty ??= new ResponsiblePartyBuilder();
+
   set toResponsibleParty(ResponsiblePartyBuilder toResponsibleParty) =>
       _$this._toResponsibleParty = toResponsibleParty;
 
   double _grandTotal;
+
   double get grandTotal => _$this._grandTotal;
+
   set grandTotal(double grandTotal) => _$this._grandTotal = grandTotal;
 
   int _itemQuantity;
+
   int get itemQuantity => _$this._itemQuantity;
+
   set itemQuantity(int itemQuantity) => _$this._itemQuantity = itemQuantity;
 
   GetSalesOrderApiCustomerDetailBuilder _customer;
+
   GetSalesOrderApiCustomerDetailBuilder get customer =>
       _$this._customer ??= new GetSalesOrderApiCustomerDetailBuilder();
+
   set customer(GetSalesOrderApiCustomerDetailBuilder customer) =>
       _$this._customer = customer;
 
   ListBuilder<GetSalesOrderApiValidationMsg> _validationMessages;
+
   ListBuilder<GetSalesOrderApiValidationMsg> get validationMessages =>
       _$this._validationMessages ??=
           new ListBuilder<GetSalesOrderApiValidationMsg>();
+
   set validationMessages(
           ListBuilder<GetSalesOrderApiValidationMsg> validationMessages) =>
       _$this._validationMessages = validationMessages;
 
   HcrBuilder _hcr;
+
   HcrBuilder get hcr => _$this._hcr ??= new HcrBuilder();
+
   set hcr(HcrBuilder hcr) => _$this._hcr = hcr;
 
   String _lastWebServiceLogId;
+
   String get lastWebServiceLogId => _$this._lastWebServiceLogId;
+
   set lastWebServiceLogId(String lastWebServiceLogId) =>
       _$this._lastWebServiceLogId = lastWebServiceLogId;
 
   ShippingServiceBuilder _shippingService;
+
   ShippingServiceBuilder get shippingService =>
       _$this._shippingService ??= new ShippingServiceBuilder();
+
   set shippingService(ShippingServiceBuilder shippingService) =>
       _$this._shippingService = shippingService;
+
+  UserLiteBuilder _salesLead;
+
+  UserLiteBuilder get salesLead => _$this._salesLead ??= new UserLiteBuilder();
+
+  set salesLead(UserLiteBuilder salesLead) => _$this._salesLead = salesLead;
+
+  UserLiteBuilder _opsLead;
+
+  UserLiteBuilder get opsLead => _$this._opsLead ??= new UserLiteBuilder();
+
+  set opsLead(UserLiteBuilder opsLead) => _$this._opsLead = opsLead;
 
   GetSalesOrderApiOrderDetailBuilder();
 
@@ -819,6 +925,8 @@ class GetSalesOrderApiOrderDetailBuilder
       _hcr = _$v.hcr?.toBuilder();
       _lastWebServiceLogId = _$v.lastWebServiceLogId;
       _shippingService = _$v.shippingService?.toBuilder();
+      _salesLead = _$v.salesLead?.toBuilder();
+      _opsLead = _$v.opsLead?.toBuilder();
       _$v = null;
     }
     return this;
@@ -874,7 +982,9 @@ class GetSalesOrderApiOrderDetailBuilder
               validationMessages: _validationMessages?.build(),
               hcr: _hcr?.build(),
               lastWebServiceLogId: lastWebServiceLogId,
-              shippingService: _shippingService?.build());
+              shippingService: _shippingService?.build(),
+              salesLead: _salesLead?.build(),
+              opsLead: _opsLead?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -919,6 +1029,10 @@ class GetSalesOrderApiOrderDetailBuilder
 
         _$failedField = 'shippingService';
         _shippingService?.build();
+        _$failedField = 'salesLead';
+        _salesLead?.build();
+        _$failedField = 'opsLead';
+        _opsLead?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetSalesOrderApiOrderDetail', _$failedField, e.toString());
@@ -985,6 +1099,8 @@ class _$GetSalesOrderApiOrderDetailActions
   final HcrActions hcr;
   final FieldDispatcher<String> lastWebServiceLogId;
   final ShippingServiceActions shippingService;
+  final UserLiteActions salesLead;
+  final UserLiteActions opsLead;
 
   _$GetSalesOrderApiOrderDetailActions._(this.options$)
       : replace$ = options$.action<GetSalesOrderApiOrderDetail>(
@@ -1172,6 +1288,20 @@ class _$GetSalesOrderApiOrderDetailActions
             (s) => s?.shippingService,
             (b) => b?.shippingService,
             (parent, builder) => parent?.shippingService = builder)),
+        salesLead = UserLiteActions(() =>
+            options$.stateful<UserLite, UserLiteBuilder, UserLiteActions>(
+                'salesLead',
+                (a) => a.salesLead,
+                (s) => s?.salesLead,
+                (b) => b?.salesLead,
+                (parent, builder) => parent?.salesLead = builder)),
+        opsLead = UserLiteActions(() =>
+            options$.stateful<UserLite, UserLiteBuilder, UserLiteActions>(
+                'opsLead',
+                (a) => a.opsLead,
+                (s) => s?.opsLead,
+                (b) => b?.opsLead,
+                (parent, builder) => parent?.opsLead = builder)),
         super._();
 
   factory _$GetSalesOrderApiOrderDetailActions(
@@ -1187,6 +1317,7 @@ class _$GetSalesOrderApiOrderDetailActions
       GetSalesOrderApiOrderDetailBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.orderReason,
@@ -1205,9 +1336,12 @@ class _$GetSalesOrderApiOrderDetailActions
         this.customer,
         this.hcr,
         this.shippingService,
+        this.salesLead,
+        this.opsLead,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -1265,6 +1399,8 @@ class _$GetSalesOrderApiOrderDetailActions
     hcr.reducer$(reducer);
     lastWebServiceLogId.reducer$(reducer);
     shippingService.reducer$(reducer);
+    salesLead.reducer$(reducer);
+    opsLead.reducer$(reducer);
   }
 
   @override
@@ -1286,5 +1422,7 @@ class _$GetSalesOrderApiOrderDetailActions
     customer.middleware$(middleware);
     hcr.middleware$(middleware);
     shippingService.middleware$(middleware);
+    salesLead.middleware$(middleware);
+    opsLead.middleware$(middleware);
   }
 }

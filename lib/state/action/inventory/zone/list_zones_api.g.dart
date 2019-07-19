@@ -63,6 +63,7 @@ class _$ListZonesApi extends ListZonesApi {
           ApiResult<ListZonesApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

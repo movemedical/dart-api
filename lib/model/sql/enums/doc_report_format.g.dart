@@ -11,7 +11,7 @@ const DocReportFormat _$wireHTML = const DocReportFormat._('HTML');
 const DocReportFormat _$wirePDF = const DocReportFormat._('PDF');
 const DocReportFormat _$wireTEXT = const DocReportFormat._('TEXT');
 
-DocReportFormat _$docReportFormatValueOf(String name) {
+DocReportFormat _$valueOf(String name) {
   switch (name) {
     case 'EXCEL':
       return _$wireEXCEL;
@@ -26,7 +26,7 @@ DocReportFormat _$docReportFormatValueOf(String name) {
   }
 }
 
-final BuiltSet<DocReportFormat> _$docReportFormatValues =
+final BuiltSet<DocReportFormat> _$values =
     new BuiltSet<DocReportFormat>(const <DocReportFormat>[
   _$wireEXCEL,
   _$wireHTML,

@@ -19,7 +19,7 @@ const ListWebServiceLogsApiSortBy _$wireOUTCOME =
 const ListWebServiceLogsApiSortBy _$wireLOG_INITIATOR =
     const ListWebServiceLogsApiSortBy._('LOG_INITIATOR');
 
-ListWebServiceLogsApiSortBy _$listWebServiceLogsApiSortByValueOf(String name) {
+ListWebServiceLogsApiSortBy _$valueOf(String name) {
   switch (name) {
     case 'INTERFACE_KEY':
       return _$wireINTERFACE_KEY;
@@ -38,9 +38,8 @@ ListWebServiceLogsApiSortBy _$listWebServiceLogsApiSortByValueOf(String name) {
   }
 }
 
-final BuiltSet<ListWebServiceLogsApiSortBy>
-    _$listWebServiceLogsApiSortByValues = new BuiltSet<
-        ListWebServiceLogsApiSortBy>(const <ListWebServiceLogsApiSortBy>[
+final BuiltSet<ListWebServiceLogsApiSortBy> _$values = new BuiltSet<
+    ListWebServiceLogsApiSortBy>(const <ListWebServiceLogsApiSortBy>[
   _$wireINTERFACE_KEY,
   _$wireDIRECTION,
   _$wireSTART_DATE,

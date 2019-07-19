@@ -33,7 +33,7 @@ const WebNavigationElement _$wireINTEGRATIONS =
     const WebNavigationElement._('INTEGRATIONS');
 const WebNavigationElement _$wireADMIN = const WebNavigationElement._('ADMIN');
 
-WebNavigationElement _$webNavigationElementValueOf(String name) {
+WebNavigationElement _$valueOf(String name) {
   switch (name) {
     case 'DASHBOARD':
       return _$wireDASHBOARD;
@@ -68,7 +68,7 @@ WebNavigationElement _$webNavigationElementValueOf(String name) {
   }
 }
 
-final BuiltSet<WebNavigationElement> _$webNavigationElementValues =
+final BuiltSet<WebNavigationElement> _$values =
     new BuiltSet<WebNavigationElement>(const <WebNavigationElement>[
   _$wireDASHBOARD,
   _$wireMESSAGES,

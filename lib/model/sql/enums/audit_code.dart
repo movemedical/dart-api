@@ -23,9 +23,9 @@ class AuditCode extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<AuditCode> get values => _$auditCodeValues;
+  static BuiltSet<AuditCode> get values => _$values;
 
-  static AuditCode valueOf(String name) => _$auditCodeValueOf(name);
+  static AuditCode valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

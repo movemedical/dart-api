@@ -49,10 +49,9 @@ class AttributableType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<AttributableType> get values => _$attributableTypeValues;
+  static BuiltSet<AttributableType> get values => _$values;
 
-  static AttributableType valueOf(String name) =>
-      _$attributableTypeValueOf(name);
+  static AttributableType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

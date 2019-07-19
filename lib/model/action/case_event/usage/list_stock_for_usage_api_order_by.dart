@@ -22,11 +22,9 @@ class ListStockForUsageApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListStockForUsageApiOrderBy> get values =>
-      _$listStockForUsageApiOrderByValues;
+  static BuiltSet<ListStockForUsageApiOrderBy> get values => _$values;
 
-  static ListStockForUsageApiOrderBy valueOf(String name) =>
-      _$listStockForUsageApiOrderByValueOf(name);
+  static ListStockForUsageApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

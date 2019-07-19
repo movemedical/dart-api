@@ -182,6 +182,12 @@ class _$ListStockSummaryApiRequestSerializer
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
     }
+    if (object.lostFound != null) {
+      result
+        ..add('lostFound')
+        ..add(serializers.serialize(object.lostFound,
+            specifiedType: const FullType(LostFound)));
+    }
     if (object.searchText != null) {
       result
         ..add('searchText')
@@ -217,6 +223,18 @@ class _$ListStockSummaryApiRequestSerializer
         ..add('demandLoanOnly')
         ..add(serializers.serialize(object.demandLoanOnly,
             specifiedType: const FullType(bool)));
+    }
+    if (object.demandLoanDueDateStart != null) {
+      result
+        ..add('demandLoanDueDateStart')
+        ..add(serializers.serialize(object.demandLoanDueDateStart,
+            specifiedType: const FullType(DateTime)));
+    }
+    if (object.demandLoanDueDateEnd != null) {
+      result
+        ..add('demandLoanDueDateEnd')
+        ..add(serializers.serialize(object.demandLoanDueDateEnd,
+            specifiedType: const FullType(DateTime)));
     }
     if (object.forExport != null) {
       result
@@ -385,6 +403,10 @@ class _$ListStockSummaryApiRequestSerializer
                       const FullType(BuiltList, const [const FullType(String)]))
               as BuiltList);
           break;
+        case 'lostFound':
+          result.lostFound = serializers.deserialize(value,
+              specifiedType: const FullType(LostFound)) as LostFound;
+          break;
         case 'searchText':
           result.searchText = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -408,6 +430,14 @@ class _$ListStockSummaryApiRequestSerializer
         case 'demandLoanOnly':
           result.demandLoanOnly = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'demandLoanDueDateStart':
+          result.demandLoanDueDateStart = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
+          break;
+        case 'demandLoanDueDateEnd':
+          result.demandLoanDueDateEnd = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
           break;
         case 'forExport':
           result.forExport = serializers.deserialize(value,
@@ -479,6 +509,8 @@ class _$ListStockSummaryApiRequest extends ListStockSummaryApiRequest {
   @override
   final BuiltList<String> expirationLevelIds;
   @override
+  final LostFound lostFound;
+  @override
   final String searchText;
   @override
   final bool excludeInTransit;
@@ -490,6 +522,10 @@ class _$ListStockSummaryApiRequest extends ListStockSummaryApiRequest {
   final bool excludeKitContainersAndContents;
   @override
   final bool demandLoanOnly;
+  @override
+  final DateTime demandLoanDueDateStart;
+  @override
+  final DateTime demandLoanDueDateEnd;
   @override
   final bool forExport;
   @override
@@ -525,12 +561,15 @@ class _$ListStockSummaryApiRequest extends ListStockSummaryApiRequest {
       this.expirationDateRange,
       this.onlyWithinExpirationLevels,
       this.expirationLevelIds,
+      this.lostFound,
       this.searchText,
       this.excludeInTransit,
       this.excludeHomeLocation,
       this.excludeKitStocks,
       this.excludeKitContainersAndContents,
       this.demandLoanOnly,
+      this.demandLoanDueDateStart,
+      this.demandLoanDueDateEnd,
       this.forExport,
       this.paging,
       this.orderBy})
@@ -572,6 +611,7 @@ class _$ListStockSummaryApiRequest extends ListStockSummaryApiRequest {
         expirationDateRange == other.expirationDateRange &&
         onlyWithinExpirationLevels == other.onlyWithinExpirationLevels &&
         expirationLevelIds == other.expirationLevelIds &&
+        lostFound == other.lostFound &&
         searchText == other.searchText &&
         excludeInTransit == other.excludeInTransit &&
         excludeHomeLocation == other.excludeHomeLocation &&
@@ -579,6 +619,8 @@ class _$ListStockSummaryApiRequest extends ListStockSummaryApiRequest {
         excludeKitContainersAndContents ==
             other.excludeKitContainersAndContents &&
         demandLoanOnly == other.demandLoanOnly &&
+        demandLoanDueDateStart == other.demandLoanDueDateStart &&
+        demandLoanDueDateEnd == other.demandLoanDueDateEnd &&
         forExport == other.forExport &&
         paging == other.paging &&
         orderBy == other.orderBy;
@@ -604,23 +646,23 @@ class _$ListStockSummaryApiRequest extends ListStockSummaryApiRequest {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, bizUnitIds.hashCode), inventoryTypeIds.hashCode), moveItemClasses.hashCode), moveItemTypes.hashCode), itemIds.hashCode), itemVersionIds.hashCode), serialIds.hashCode), lotIds.hashCode), responsiblePartyIds.hashCode), homeLocationIds.hashCode), locationIds.hashCode), locationTypes.hashCode), facilityTypes.hashCode),
-                                                                                containerIds.hashCode),
-                                                                            loanIds.hashCode),
-                                                                        itemCategoryIds.hashCode),
-                                                                    orgUnitIds.hashCode),
-                                                                zoneIds.hashCode),
-                                                            binIds.hashCode),
-                                                        expiresInDays.hashCode),
-                                                    expirationDateRange.hashCode),
-                                                onlyWithinExpirationLevels.hashCode),
-                                            expirationLevelIds.hashCode),
-                                        searchText.hashCode),
-                                    excludeInTransit.hashCode),
-                                excludeHomeLocation.hashCode),
-                            excludeKitStocks.hashCode),
-                        excludeKitContainersAndContents.hashCode),
-                    demandLoanOnly.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, bizUnitIds.hashCode), inventoryTypeIds.hashCode), moveItemClasses.hashCode), moveItemTypes.hashCode), itemIds.hashCode), itemVersionIds.hashCode), serialIds.hashCode), lotIds.hashCode), responsiblePartyIds.hashCode), homeLocationIds.hashCode), locationIds.hashCode), locationTypes.hashCode), facilityTypes.hashCode), containerIds.hashCode), loanIds.hashCode), itemCategoryIds.hashCode),
+                                                                                orgUnitIds.hashCode),
+                                                                            zoneIds.hashCode),
+                                                                        binIds.hashCode),
+                                                                    expiresInDays.hashCode),
+                                                                expirationDateRange.hashCode),
+                                                            onlyWithinExpirationLevels.hashCode),
+                                                        expirationLevelIds.hashCode),
+                                                    lostFound.hashCode),
+                                                searchText.hashCode),
+                                            excludeInTransit.hashCode),
+                                        excludeHomeLocation.hashCode),
+                                    excludeKitStocks.hashCode),
+                                excludeKitContainersAndContents.hashCode),
+                            demandLoanOnly.hashCode),
+                        demandLoanDueDateStart.hashCode),
+                    demandLoanDueDateEnd.hashCode),
                 forExport.hashCode),
             paging.hashCode),
         orderBy.hashCode));
@@ -652,6 +694,7 @@ class _$ListStockSummaryApiRequest extends ListStockSummaryApiRequest {
           ..add('expirationDateRange', expirationDateRange)
           ..add('onlyWithinExpirationLevels', onlyWithinExpirationLevels)
           ..add('expirationLevelIds', expirationLevelIds)
+          ..add('lostFound', lostFound)
           ..add('searchText', searchText)
           ..add('excludeInTransit', excludeInTransit)
           ..add('excludeHomeLocation', excludeHomeLocation)
@@ -659,6 +702,8 @@ class _$ListStockSummaryApiRequest extends ListStockSummaryApiRequest {
           ..add('excludeKitContainersAndContents',
               excludeKitContainersAndContents)
           ..add('demandLoanOnly', demandLoanOnly)
+          ..add('demandLoanDueDateStart', demandLoanDueDateStart)
+          ..add('demandLoanDueDateEnd', demandLoanDueDateEnd)
           ..add('forExport', forExport)
           ..add('paging', paging)
           ..add('orderBy', orderBy))
@@ -672,177 +717,261 @@ class ListStockSummaryApiRequestBuilder
   _$ListStockSummaryApiRequest _$v;
 
   ListBuilder<String> _bizUnitIds;
+
   ListBuilder<String> get bizUnitIds =>
       _$this._bizUnitIds ??= new ListBuilder<String>();
+
   set bizUnitIds(ListBuilder<String> bizUnitIds) =>
       _$this._bizUnitIds = bizUnitIds;
 
   ListBuilder<String> _inventoryTypeIds;
+
   ListBuilder<String> get inventoryTypeIds =>
       _$this._inventoryTypeIds ??= new ListBuilder<String>();
+
   set inventoryTypeIds(ListBuilder<String> inventoryTypeIds) =>
       _$this._inventoryTypeIds = inventoryTypeIds;
 
   ListBuilder<MoveItemClass> _moveItemClasses;
+
   ListBuilder<MoveItemClass> get moveItemClasses =>
       _$this._moveItemClasses ??= new ListBuilder<MoveItemClass>();
+
   set moveItemClasses(ListBuilder<MoveItemClass> moveItemClasses) =>
       _$this._moveItemClasses = moveItemClasses;
 
   ListBuilder<MoveItemType> _moveItemTypes;
+
   ListBuilder<MoveItemType> get moveItemTypes =>
       _$this._moveItemTypes ??= new ListBuilder<MoveItemType>();
+
   set moveItemTypes(ListBuilder<MoveItemType> moveItemTypes) =>
       _$this._moveItemTypes = moveItemTypes;
 
   ListBuilder<String> _itemIds;
+
   ListBuilder<String> get itemIds =>
       _$this._itemIds ??= new ListBuilder<String>();
+
   set itemIds(ListBuilder<String> itemIds) => _$this._itemIds = itemIds;
 
   ListBuilder<String> _itemVersionIds;
+
   ListBuilder<String> get itemVersionIds =>
       _$this._itemVersionIds ??= new ListBuilder<String>();
+
   set itemVersionIds(ListBuilder<String> itemVersionIds) =>
       _$this._itemVersionIds = itemVersionIds;
 
   ListBuilder<String> _serialIds;
+
   ListBuilder<String> get serialIds =>
       _$this._serialIds ??= new ListBuilder<String>();
+
   set serialIds(ListBuilder<String> serialIds) => _$this._serialIds = serialIds;
 
   ListBuilder<String> _lotIds;
+
   ListBuilder<String> get lotIds =>
       _$this._lotIds ??= new ListBuilder<String>();
+
   set lotIds(ListBuilder<String> lotIds) => _$this._lotIds = lotIds;
 
   ListBuilder<String> _responsiblePartyIds;
+
   ListBuilder<String> get responsiblePartyIds =>
       _$this._responsiblePartyIds ??= new ListBuilder<String>();
+
   set responsiblePartyIds(ListBuilder<String> responsiblePartyIds) =>
       _$this._responsiblePartyIds = responsiblePartyIds;
 
   ListBuilder<String> _homeLocationIds;
+
   ListBuilder<String> get homeLocationIds =>
       _$this._homeLocationIds ??= new ListBuilder<String>();
+
   set homeLocationIds(ListBuilder<String> homeLocationIds) =>
       _$this._homeLocationIds = homeLocationIds;
 
   ListBuilder<String> _locationIds;
+
   ListBuilder<String> get locationIds =>
       _$this._locationIds ??= new ListBuilder<String>();
+
   set locationIds(ListBuilder<String> locationIds) =>
       _$this._locationIds = locationIds;
 
   ListBuilder<LocationType> _locationTypes;
+
   ListBuilder<LocationType> get locationTypes =>
       _$this._locationTypes ??= new ListBuilder<LocationType>();
+
   set locationTypes(ListBuilder<LocationType> locationTypes) =>
       _$this._locationTypes = locationTypes;
 
   ListBuilder<FacilityType> _facilityTypes;
+
   ListBuilder<FacilityType> get facilityTypes =>
       _$this._facilityTypes ??= new ListBuilder<FacilityType>();
+
   set facilityTypes(ListBuilder<FacilityType> facilityTypes) =>
       _$this._facilityTypes = facilityTypes;
 
   ListBuilder<String> _containerIds;
+
   ListBuilder<String> get containerIds =>
       _$this._containerIds ??= new ListBuilder<String>();
+
   set containerIds(ListBuilder<String> containerIds) =>
       _$this._containerIds = containerIds;
 
   ListBuilder<String> _loanIds;
+
   ListBuilder<String> get loanIds =>
       _$this._loanIds ??= new ListBuilder<String>();
+
   set loanIds(ListBuilder<String> loanIds) => _$this._loanIds = loanIds;
 
   ListBuilder<String> _itemCategoryIds;
+
   ListBuilder<String> get itemCategoryIds =>
       _$this._itemCategoryIds ??= new ListBuilder<String>();
+
   set itemCategoryIds(ListBuilder<String> itemCategoryIds) =>
       _$this._itemCategoryIds = itemCategoryIds;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   ListBuilder<String> _zoneIds;
+
   ListBuilder<String> get zoneIds =>
       _$this._zoneIds ??= new ListBuilder<String>();
+
   set zoneIds(ListBuilder<String> zoneIds) => _$this._zoneIds = zoneIds;
 
   ListBuilder<String> _binIds;
+
   ListBuilder<String> get binIds =>
       _$this._binIds ??= new ListBuilder<String>();
+
   set binIds(ListBuilder<String> binIds) => _$this._binIds = binIds;
 
   int _expiresInDays;
+
   int get expiresInDays => _$this._expiresInDays;
+
   set expiresInDays(int expiresInDays) => _$this._expiresInDays = expiresInDays;
 
   DateRangeBuilder _expirationDateRange;
+
   DateRangeBuilder get expirationDateRange =>
       _$this._expirationDateRange ??= new DateRangeBuilder();
+
   set expirationDateRange(DateRangeBuilder expirationDateRange) =>
       _$this._expirationDateRange = expirationDateRange;
 
   bool _onlyWithinExpirationLevels;
+
   bool get onlyWithinExpirationLevels => _$this._onlyWithinExpirationLevels;
+
   set onlyWithinExpirationLevels(bool onlyWithinExpirationLevels) =>
       _$this._onlyWithinExpirationLevels = onlyWithinExpirationLevels;
 
   ListBuilder<String> _expirationLevelIds;
+
   ListBuilder<String> get expirationLevelIds =>
       _$this._expirationLevelIds ??= new ListBuilder<String>();
+
   set expirationLevelIds(ListBuilder<String> expirationLevelIds) =>
       _$this._expirationLevelIds = expirationLevelIds;
 
+  LostFound _lostFound;
+
+  LostFound get lostFound => _$this._lostFound;
+
+  set lostFound(LostFound lostFound) => _$this._lostFound = lostFound;
+
   String _searchText;
+
   String get searchText => _$this._searchText;
+
   set searchText(String searchText) => _$this._searchText = searchText;
 
   bool _excludeInTransit;
+
   bool get excludeInTransit => _$this._excludeInTransit;
+
   set excludeInTransit(bool excludeInTransit) =>
       _$this._excludeInTransit = excludeInTransit;
 
   bool _excludeHomeLocation;
+
   bool get excludeHomeLocation => _$this._excludeHomeLocation;
+
   set excludeHomeLocation(bool excludeHomeLocation) =>
       _$this._excludeHomeLocation = excludeHomeLocation;
 
   bool _excludeKitStocks;
+
   bool get excludeKitStocks => _$this._excludeKitStocks;
+
   set excludeKitStocks(bool excludeKitStocks) =>
       _$this._excludeKitStocks = excludeKitStocks;
 
   bool _excludeKitContainersAndContents;
+
   bool get excludeKitContainersAndContents =>
       _$this._excludeKitContainersAndContents;
+
   set excludeKitContainersAndContents(bool excludeKitContainersAndContents) =>
       _$this._excludeKitContainersAndContents = excludeKitContainersAndContents;
 
   bool _demandLoanOnly;
+
   bool get demandLoanOnly => _$this._demandLoanOnly;
+
   set demandLoanOnly(bool demandLoanOnly) =>
       _$this._demandLoanOnly = demandLoanOnly;
 
+  DateTime _demandLoanDueDateStart;
+
+  DateTime get demandLoanDueDateStart => _$this._demandLoanDueDateStart;
+
+  set demandLoanDueDateStart(DateTime demandLoanDueDateStart) =>
+      _$this._demandLoanDueDateStart = demandLoanDueDateStart;
+
+  DateTime _demandLoanDueDateEnd;
+
+  DateTime get demandLoanDueDateEnd => _$this._demandLoanDueDateEnd;
+
+  set demandLoanDueDateEnd(DateTime demandLoanDueDateEnd) =>
+      _$this._demandLoanDueDateEnd = demandLoanDueDateEnd;
+
   bool _forExport;
+
   bool get forExport => _$this._forExport;
+
   set forExport(bool forExport) => _$this._forExport = forExport;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListStockSummaryApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListStockSummaryApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListStockSummaryApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListStockSummaryApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -873,12 +1002,15 @@ class ListStockSummaryApiRequestBuilder
       _expirationDateRange = _$v.expirationDateRange?.toBuilder();
       _onlyWithinExpirationLevels = _$v.onlyWithinExpirationLevels;
       _expirationLevelIds = _$v.expirationLevelIds?.toBuilder();
+      _lostFound = _$v.lostFound;
       _searchText = _$v.searchText;
       _excludeInTransit = _$v.excludeInTransit;
       _excludeHomeLocation = _$v.excludeHomeLocation;
       _excludeKitStocks = _$v.excludeKitStocks;
       _excludeKitContainersAndContents = _$v.excludeKitContainersAndContents;
       _demandLoanOnly = _$v.demandLoanOnly;
+      _demandLoanDueDateStart = _$v.demandLoanDueDateStart;
+      _demandLoanDueDateEnd = _$v.demandLoanDueDateEnd;
       _forExport = _$v.forExport;
       _paging = _$v.paging?.toBuilder();
       _orderBy = _$v.orderBy?.toBuilder();
@@ -929,12 +1061,15 @@ class ListStockSummaryApiRequestBuilder
               expirationDateRange: _expirationDateRange?.build(),
               onlyWithinExpirationLevels: onlyWithinExpirationLevels,
               expirationLevelIds: _expirationLevelIds?.build(),
+              lostFound: lostFound,
               searchText: searchText,
               excludeInTransit: excludeInTransit,
               excludeHomeLocation: excludeHomeLocation,
               excludeKitStocks: excludeKitStocks,
               excludeKitContainersAndContents: excludeKitContainersAndContents,
               demandLoanOnly: demandLoanOnly,
+              demandLoanDueDateStart: demandLoanDueDateStart,
+              demandLoanDueDateEnd: demandLoanDueDateEnd,
               forExport: forExport,
               paging: _paging?.build(),
               orderBy: _orderBy?.build());
@@ -1046,12 +1181,15 @@ class _$ListStockSummaryApiRequestActions
   final DateRangeActions expirationDateRange;
   final FieldDispatcher<bool> onlyWithinExpirationLevels;
   final FieldDispatcher<BuiltList<String>> expirationLevelIds;
+  final FieldDispatcher<LostFound> lostFound;
   final FieldDispatcher<String> searchText;
   final FieldDispatcher<bool> excludeInTransit;
   final FieldDispatcher<bool> excludeHomeLocation;
   final FieldDispatcher<bool> excludeKitStocks;
   final FieldDispatcher<bool> excludeKitContainersAndContents;
   final FieldDispatcher<bool> demandLoanOnly;
+  final FieldDispatcher<DateTime> demandLoanDueDateStart;
+  final FieldDispatcher<DateTime> demandLoanDueDateEnd;
   final FieldDispatcher<bool> forExport;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListStockSummaryApiOrderBy> orderBy;
@@ -1161,6 +1299,8 @@ class _$ListStockSummaryApiRequestActions
             (a) => a?.expirationLevelIds,
             (s) => s?.expirationLevelIds,
             (p, b) => p?.expirationLevelIds = b),
+        lostFound = options$.field<LostFound>('lostFound', (a) => a?.lostFound,
+            (s) => s?.lostFound, (p, b) => p?.lostFound = b),
         searchText = options$.field<String>('searchText', (a) => a?.searchText,
             (s) => s?.searchText, (p, b) => p?.searchText = b),
         excludeInTransit = options$.field<bool>(
@@ -1188,6 +1328,16 @@ class _$ListStockSummaryApiRequestActions
             (a) => a?.demandLoanOnly,
             (s) => s?.demandLoanOnly,
             (p, b) => p?.demandLoanOnly = b),
+        demandLoanDueDateStart = options$.field<DateTime>(
+            'demandLoanDueDateStart',
+            (a) => a?.demandLoanDueDateStart,
+            (s) => s?.demandLoanDueDateStart,
+            (p, b) => p?.demandLoanDueDateStart = b),
+        demandLoanDueDateEnd = options$.field<DateTime>(
+            'demandLoanDueDateEnd',
+            (a) => a?.demandLoanDueDateEnd,
+            (s) => s?.demandLoanDueDateEnd,
+            (p, b) => p?.demandLoanDueDateEnd = b),
         forExport = options$.field<bool>('forExport', (a) => a?.forExport,
             (s) => s?.forExport, (p, b) => p?.forExport = b),
         paging = PaginationParamsActions(() => options$.stateful<
@@ -1223,6 +1373,7 @@ class _$ListStockSummaryApiRequestActions
       ListStockSummaryApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.expirationDateRange,
@@ -1231,6 +1382,7 @@ class _$ListStockSummaryApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -1257,12 +1409,15 @@ class _$ListStockSummaryApiRequestActions
         this.expiresInDays,
         this.onlyWithinExpirationLevels,
         this.expirationLevelIds,
+        this.lostFound,
         this.searchText,
         this.excludeInTransit,
         this.excludeHomeLocation,
         this.excludeKitStocks,
         this.excludeKitContainersAndContents,
         this.demandLoanOnly,
+        this.demandLoanDueDateStart,
+        this.demandLoanDueDateEnd,
         this.forExport,
       ]);
 
@@ -1292,12 +1447,15 @@ class _$ListStockSummaryApiRequestActions
     expirationDateRange.reducer$(reducer);
     onlyWithinExpirationLevels.reducer$(reducer);
     expirationLevelIds.reducer$(reducer);
+    lostFound.reducer$(reducer);
     searchText.reducer$(reducer);
     excludeInTransit.reducer$(reducer);
     excludeHomeLocation.reducer$(reducer);
     excludeKitStocks.reducer$(reducer);
     excludeKitContainersAndContents.reducer$(reducer);
     demandLoanOnly.reducer$(reducer);
+    demandLoanDueDateStart.reducer$(reducer);
+    demandLoanDueDateEnd.reducer$(reducer);
     forExport.reducer$(reducer);
     paging.reducer$(reducer);
     orderBy.reducer$(reducer);

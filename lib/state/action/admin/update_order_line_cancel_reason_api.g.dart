@@ -66,6 +66,7 @@ class _$UpdateOrderLineCancelReasonApi extends UpdateOrderLineCancelReasonApi {
           ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

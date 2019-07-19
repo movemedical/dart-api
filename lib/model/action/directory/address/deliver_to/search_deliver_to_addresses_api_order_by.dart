@@ -28,11 +28,10 @@ class SearchDeliverToAddressesApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<SearchDeliverToAddressesApiOrderBy> get values =>
-      _$searchDeliverToAddressesApiOrderByValues;
+  static BuiltSet<SearchDeliverToAddressesApiOrderBy> get values => _$values;
 
   static SearchDeliverToAddressesApiOrderBy valueOf(String name) =>
-      _$searchDeliverToAddressesApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

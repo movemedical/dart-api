@@ -25,6 +25,9 @@ abstract class CaseEventLite
   @nullable
   CaseEventStatus get status;
 
+  @nullable
+  DateTime get localEventDate;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -53,6 +56,8 @@ abstract class CaseEventLiteActions extends ModelActions<CaseEventLite,
   FieldDispatcher<int> get number;
 
   FieldDispatcher<CaseEventStatus> get status;
+
+  FieldDispatcher<DateTime> get localEventDate;
 
   ////////////////////////////////
   /// Constructors

@@ -10,7 +10,7 @@ const PresenceEventType _$wireADDED = const PresenceEventType._('ADDED');
 const PresenceEventType _$wireUPDATED = const PresenceEventType._('UPDATED');
 const PresenceEventType _$wireREMOVED = const PresenceEventType._('REMOVED');
 
-PresenceEventType _$presenceEventTypeValueOf(String name) {
+PresenceEventType _$valueOf(String name) {
   switch (name) {
     case 'ADDED':
       return _$wireADDED;
@@ -23,7 +23,7 @@ PresenceEventType _$presenceEventTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<PresenceEventType> _$presenceEventTypeValues =
+final BuiltSet<PresenceEventType> _$values =
     new BuiltSet<PresenceEventType>(const <PresenceEventType>[
   _$wireADDED,
   _$wireUPDATED,

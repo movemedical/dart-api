@@ -10,7 +10,7 @@ const LoanSplitMethod _$wireSURGEON = const LoanSplitMethod._('SURGEON');
 const LoanSplitMethod _$wireREP_TEAM = const LoanSplitMethod._('REP_TEAM');
 const LoanSplitMethod _$wireNONE = const LoanSplitMethod._('NONE');
 
-LoanSplitMethod _$loanSplitMethodValueOf(String name) {
+LoanSplitMethod _$valueOf(String name) {
   switch (name) {
     case 'SURGEON':
       return _$wireSURGEON;
@@ -23,7 +23,7 @@ LoanSplitMethod _$loanSplitMethodValueOf(String name) {
   }
 }
 
-final BuiltSet<LoanSplitMethod> _$loanSplitMethodValues =
+final BuiltSet<LoanSplitMethod> _$values =
     new BuiltSet<LoanSplitMethod>(const <LoanSplitMethod>[
   _$wireSURGEON,
   _$wireREP_TEAM,

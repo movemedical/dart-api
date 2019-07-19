@@ -104,8 +104,10 @@ class GetSubProcedureApiResponseBuilder
   _$GetSubProcedureApiResponse _$v;
 
   GetSubProcedureApiSubProcedureDetailBuilder _data;
+
   GetSubProcedureApiSubProcedureDetailBuilder get data =>
       _$this._data ??= new GetSubProcedureApiSubProcedureDetailBuilder();
+
   set data(GetSubProcedureApiSubProcedureDetailBuilder data) =>
       _$this._data = data;
 
@@ -205,12 +207,14 @@ class _$GetSubProcedureApiResponseActions
       GetSubProcedureApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.data,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

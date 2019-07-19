@@ -233,37 +233,53 @@ class ListOrderLineCancelReasonsApiOrderLineCancelReasonBuilder
   _$ListOrderLineCancelReasonsApiOrderLineCancelReason _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   String _orgUnitName;
+
   String get orgUnitName => _$this._orgUnitName;
+
   set orgUnitName(String orgUnitName) => _$this._orgUnitName = orgUnitName;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
   String _orderReasonName;
+
   String get orderReasonName => _$this._orderReasonName;
+
   set orderReasonName(String orderReasonName) =>
       _$this._orderReasonName = orderReasonName;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   ListOrderLineCancelReasonsApiOrderLineCancelReasonBuilder();
@@ -392,6 +408,7 @@ class _$ListOrderLineCancelReasonsApiOrderLineCancelReasonActions
       ListOrderLineCancelReasonsApiOrderLineCancelReasonBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

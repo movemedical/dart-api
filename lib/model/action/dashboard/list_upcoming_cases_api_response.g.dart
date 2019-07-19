@@ -122,13 +122,17 @@ class ListUpcomingCasesApiResponseBuilder
   _$ListUpcomingCasesApiResponse _$v;
 
   ListBuilder<ListUpcomingCasesApiCaseEvent> _data;
+
   ListBuilder<ListUpcomingCasesApiCaseEvent> get data =>
       _$this._data ??= new ListBuilder<ListUpcomingCasesApiCaseEvent>();
+
   set data(ListBuilder<ListUpcomingCasesApiCaseEvent> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListUpcomingCasesApiResponseBuilder();
@@ -225,6 +229,7 @@ class _$ListUpcomingCasesApiResponseActions
       ListUpcomingCasesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -70,6 +70,7 @@ class _$GetDeliveryScheduleProfileApi extends GetDeliveryScheduleProfileApi {
           ApiResult<GetDeliveryScheduleProfileApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

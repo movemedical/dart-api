@@ -13,7 +13,7 @@ const ImportStatus _$wireCOMPLETE = const ImportStatus._('COMPLETE');
 const ImportStatus _$wireCOMPLETE_ERRORS =
     const ImportStatus._('COMPLETE_ERRORS');
 
-ImportStatus _$importStatusValueOf(String name) {
+ImportStatus _$valueOf(String name) {
   switch (name) {
     case 'CHECKING':
       return _$wireCHECKING;
@@ -30,7 +30,7 @@ ImportStatus _$importStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<ImportStatus> _$importStatusValues =
+final BuiltSet<ImportStatus> _$values =
     new BuiltSet<ImportStatus>(const <ImportStatus>[
   _$wireCHECKING,
   _$wireDOWNLOADING,

@@ -8,7 +8,7 @@ part of 'mobile_device_type.dart';
 
 const MobileDeviceType _$wireIOS = const MobileDeviceType._('IOS');
 
-MobileDeviceType _$mobileDeviceTypeValueOf(String name) {
+MobileDeviceType _$valueOf(String name) {
   switch (name) {
     case 'IOS':
       return _$wireIOS;
@@ -17,7 +17,7 @@ MobileDeviceType _$mobileDeviceTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<MobileDeviceType> _$mobileDeviceTypeValues =
+final BuiltSet<MobileDeviceType> _$values =
     new BuiltSet<MobileDeviceType>(const <MobileDeviceType>[
   _$wireIOS,
 ]);

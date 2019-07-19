@@ -56,6 +56,12 @@ class _$ReadBarcode2ApiResponseSerializer
         ..add(serializers.serialize(object.complete,
             specifiedType: const FullType(bool)));
     }
+    if (object.isProcessed != null) {
+      result
+        ..add('isProcessed')
+        ..add(serializers.serialize(object.isProcessed,
+            specifiedType: const FullType(bool)));
+    }
     if (object.item != null) {
       result
         ..add('item')
@@ -175,6 +181,10 @@ class _$ReadBarcode2ApiResponseSerializer
           result.complete = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'isProcessed':
+          result.isProcessed = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'item':
           result.item.replace(serializers.deserialize(value,
               specifiedType: const FullType(Item)) as Item);
@@ -246,6 +256,8 @@ class _$ReadBarcode2ApiResponse extends ReadBarcode2ApiResponse {
   @override
   final bool complete;
   @override
+  final bool isProcessed;
+  @override
   final Item item;
   @override
   final String unknownItem;
@@ -282,6 +294,7 @@ class _$ReadBarcode2ApiResponse extends ReadBarcode2ApiResponse {
       this.unreconciledBarcodes,
       this.message,
       this.complete,
+      this.isProcessed,
       this.item,
       this.unknownItem,
       this.lot,
@@ -315,6 +328,7 @@ class _$ReadBarcode2ApiResponse extends ReadBarcode2ApiResponse {
         unreconciledBarcodes == other.unreconciledBarcodes &&
         message == other.message &&
         complete == other.complete &&
+        isProcessed == other.isProcessed &&
         item == other.item &&
         unknownItem == other.unknownItem &&
         lot == other.lot &&
@@ -350,16 +364,20 @@ class _$ReadBarcode2ApiResponse extends ReadBarcode2ApiResponse {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            0,
-                                                                            readType
+                                                                            $jc(
+                                                                                0,
+                                                                                readType
+                                                                                    .hashCode),
+                                                                            reconciledBarcodes
                                                                                 .hashCode),
-                                                                        reconciledBarcodes
+                                                                        unreconciledBarcodes
                                                                             .hashCode),
-                                                                    unreconciledBarcodes
+                                                                    message
                                                                         .hashCode),
-                                                                message
+                                                                complete
                                                                     .hashCode),
-                                                            complete.hashCode),
+                                                            isProcessed
+                                                                .hashCode),
                                                         item.hashCode),
                                                     unknownItem.hashCode),
                                                 lot.hashCode),
@@ -383,6 +401,7 @@ class _$ReadBarcode2ApiResponse extends ReadBarcode2ApiResponse {
           ..add('unreconciledBarcodes', unreconciledBarcodes)
           ..add('message', message)
           ..add('complete', complete)
+          ..add('isProcessed', isProcessed)
           ..add('item', item)
           ..add('unknownItem', unknownItem)
           ..add('lot', lot)
@@ -406,84 +425,126 @@ class ReadBarcode2ApiResponseBuilder
   _$ReadBarcode2ApiResponse _$v;
 
   ReadBarcode2ApiReadType _readType;
+
   ReadBarcode2ApiReadType get readType => _$this._readType;
+
   set readType(ReadBarcode2ApiReadType readType) => _$this._readType = readType;
 
   ListBuilder<String> _reconciledBarcodes;
+
   ListBuilder<String> get reconciledBarcodes =>
       _$this._reconciledBarcodes ??= new ListBuilder<String>();
+
   set reconciledBarcodes(ListBuilder<String> reconciledBarcodes) =>
       _$this._reconciledBarcodes = reconciledBarcodes;
 
   ListBuilder<String> _unreconciledBarcodes;
+
   ListBuilder<String> get unreconciledBarcodes =>
       _$this._unreconciledBarcodes ??= new ListBuilder<String>();
+
   set unreconciledBarcodes(ListBuilder<String> unreconciledBarcodes) =>
       _$this._unreconciledBarcodes = unreconciledBarcodes;
 
   String _message;
+
   String get message => _$this._message;
+
   set message(String message) => _$this._message = message;
 
   bool _complete;
+
   bool get complete => _$this._complete;
+
   set complete(bool complete) => _$this._complete = complete;
 
+  bool _isProcessed;
+
+  bool get isProcessed => _$this._isProcessed;
+
+  set isProcessed(bool isProcessed) => _$this._isProcessed = isProcessed;
+
   ItemBuilder _item;
+
   ItemBuilder get item => _$this._item ??= new ItemBuilder();
+
   set item(ItemBuilder item) => _$this._item = item;
 
   String _unknownItem;
+
   String get unknownItem => _$this._unknownItem;
+
   set unknownItem(String unknownItem) => _$this._unknownItem = unknownItem;
 
   LotBuilder _lot;
+
   LotBuilder get lot => _$this._lot ??= new LotBuilder();
+
   set lot(LotBuilder lot) => _$this._lot = lot;
 
   String _unknownLot;
+
   String get unknownLot => _$this._unknownLot;
+
   set unknownLot(String unknownLot) => _$this._unknownLot = unknownLot;
 
   SerialBuilder _serial;
+
   SerialBuilder get serial => _$this._serial ??= new SerialBuilder();
+
   set serial(SerialBuilder serial) => _$this._serial = serial;
 
   String _unknownSerial;
+
   String get unknownSerial => _$this._unknownSerial;
+
   set unknownSerial(String unknownSerial) =>
       _$this._unknownSerial = unknownSerial;
 
   TagBuilder _tag;
+
   TagBuilder get tag => _$this._tag ??= new TagBuilder();
+
   set tag(TagBuilder tag) => _$this._tag = tag;
 
   PkgBuilder _pkg;
+
   PkgBuilder get pkg => _$this._pkg ??= new PkgBuilder();
+
   set pkg(PkgBuilder pkg) => _$this._pkg = pkg;
 
   ShipmentLiteBuilder _shipmentLite;
+
   ShipmentLiteBuilder get shipmentLite =>
       _$this._shipmentLite ??= new ShipmentLiteBuilder();
+
   set shipmentLite(ShipmentLiteBuilder shipmentLite) =>
       _$this._shipmentLite = shipmentLite;
 
   LocationBuilder _pkgToLocation;
+
   LocationBuilder get pkgToLocation =>
       _$this._pkgToLocation ??= new LocationBuilder();
+
   set pkgToLocation(LocationBuilder pkgToLocation) =>
       _$this._pkgToLocation = pkgToLocation;
 
   BinBuilder _bin;
+
   BinBuilder get bin => _$this._bin ??= new BinBuilder();
+
   set bin(BinBuilder bin) => _$this._bin = bin;
 
   ItemBuilder _kitItem;
+
   ItemBuilder get kitItem => _$this._kitItem ??= new ItemBuilder();
+
   set kitItem(ItemBuilder kitItem) => _$this._kitItem = kitItem;
 
   SerialBuilder _kitSerial;
+
   SerialBuilder get kitSerial => _$this._kitSerial ??= new SerialBuilder();
+
   set kitSerial(SerialBuilder kitSerial) => _$this._kitSerial = kitSerial;
 
   ReadBarcode2ApiResponseBuilder();
@@ -495,6 +556,7 @@ class ReadBarcode2ApiResponseBuilder
       _unreconciledBarcodes = _$v.unreconciledBarcodes?.toBuilder();
       _message = _$v.message;
       _complete = _$v.complete;
+      _isProcessed = _$v.isProcessed;
       _item = _$v.item?.toBuilder();
       _unknownItem = _$v.unknownItem;
       _lot = _$v.lot?.toBuilder();
@@ -537,6 +599,7 @@ class ReadBarcode2ApiResponseBuilder
               unreconciledBarcodes: _unreconciledBarcodes?.build(),
               message: message,
               complete: complete,
+              isProcessed: isProcessed,
               item: _item?.build(),
               unknownItem: unknownItem,
               lot: _lot?.build(),
@@ -616,6 +679,7 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
   final FieldDispatcher<BuiltList<String>> unreconciledBarcodes;
   final FieldDispatcher<String> message;
   final FieldDispatcher<bool> complete;
+  final FieldDispatcher<bool> isProcessed;
   final ItemActions item;
   final FieldDispatcher<String> unknownItem;
   final LotActions lot;
@@ -649,6 +713,8 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
             (s) => s?.message, (p, b) => p?.message = b),
         complete = options$.field<bool>('complete', (a) => a?.complete,
             (s) => s?.complete, (p, b) => p?.complete = b),
+        isProcessed = options$.field<bool>('isProcessed', (a) => a?.isProcessed,
+            (s) => s?.isProcessed, (p, b) => p?.isProcessed = b),
         item = ItemActions(() =>
             options$.stateful<Item, ItemBuilder, ItemActions>(
                 'item',
@@ -741,6 +807,7 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
       ReadBarcode2ApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.item,
@@ -756,6 +823,7 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -765,6 +833,7 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
         this.unreconciledBarcodes,
         this.message,
         this.complete,
+        this.isProcessed,
         this.unknownItem,
         this.unknownLot,
         this.unknownSerial,
@@ -778,6 +847,7 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
     unreconciledBarcodes.reducer$(reducer);
     message.reducer$(reducer);
     complete.reducer$(reducer);
+    isProcessed.reducer$(reducer);
     item.reducer$(reducer);
     unknownItem.reducer$(reducer);
     lot.reducer$(reducer);

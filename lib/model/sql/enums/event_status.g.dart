@@ -9,7 +9,7 @@ part of 'event_status.dart';
 const EventStatus _$wireOPEN = const EventStatus._('OPEN');
 const EventStatus _$wireCLOSED = const EventStatus._('CLOSED');
 
-EventStatus _$eventStatusValueOf(String name) {
+EventStatus _$valueOf(String name) {
   switch (name) {
     case 'OPEN':
       return _$wireOPEN;
@@ -20,7 +20,7 @@ EventStatus _$eventStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<EventStatus> _$eventStatusValues =
+final BuiltSet<EventStatus> _$values =
     new BuiltSet<EventStatus>(const <EventStatus>[
   _$wireOPEN,
   _$wireCLOSED,

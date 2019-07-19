@@ -15,8 +15,7 @@ const ListSalesOrgUnitItemCategoryLinksApiOrderBy _$wireCAN_SELL =
 const ListSalesOrgUnitItemCategoryLinksApiOrderBy _$wireINHERITED =
     const ListSalesOrgUnitItemCategoryLinksApiOrderBy._('INHERITED');
 
-ListSalesOrgUnitItemCategoryLinksApiOrderBy
-    _$listSalesOrgUnitItemCategoryLinksApiOrderByValueOf(String name) {
+ListSalesOrgUnitItemCategoryLinksApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'ITEM_CATEGORY':
       return _$wireITEM_CATEGORY;
@@ -31,8 +30,7 @@ ListSalesOrgUnitItemCategoryLinksApiOrderBy
   }
 }
 
-final BuiltSet<ListSalesOrgUnitItemCategoryLinksApiOrderBy>
-    _$listSalesOrgUnitItemCategoryLinksApiOrderByValues =
+final BuiltSet<ListSalesOrgUnitItemCategoryLinksApiOrderBy> _$values =
     new BuiltSet<ListSalesOrgUnitItemCategoryLinksApiOrderBy>(const <
         ListSalesOrgUnitItemCategoryLinksApiOrderBy>[
   _$wireITEM_CATEGORY,

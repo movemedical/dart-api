@@ -23,8 +23,9 @@ const StockReferenceType _$wireLOCATION =
     const StockReferenceType._('LOCATION');
 const StockReferenceType _$wireCASE_EVENT =
     const StockReferenceType._('CASE_EVENT');
+const StockReferenceType _$wireHOLD = const StockReferenceType._('HOLD');
 
-StockReferenceType _$stockReferenceTypeValueOf(String name) {
+StockReferenceType _$valueOf(String name) {
   switch (name) {
     case 'PICK':
       return _$wirePICK;
@@ -46,12 +47,14 @@ StockReferenceType _$stockReferenceTypeValueOf(String name) {
       return _$wireLOCATION;
     case 'CASE_EVENT':
       return _$wireCASE_EVENT;
+    case 'HOLD':
+      return _$wireHOLD;
     default:
       throw new ArgumentError(name);
   }
 }
 
-final BuiltSet<StockReferenceType> _$stockReferenceTypeValues =
+final BuiltSet<StockReferenceType> _$values =
     new BuiltSet<StockReferenceType>(const <StockReferenceType>[
   _$wirePICK,
   _$wirePACKAGE,
@@ -63,6 +66,7 @@ final BuiltSet<StockReferenceType> _$stockReferenceTypeValues =
   _$wireFILE_IMPORT,
   _$wireLOCATION,
   _$wireCASE_EVENT,
+  _$wireHOLD,
 ]);
 
 Serializer<StockReferenceType> _$stockReferenceTypeSerializer =

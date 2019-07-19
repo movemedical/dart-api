@@ -116,11 +116,15 @@ class GetSwapStockApiResponseBuilder
   _$GetSwapStockApiResponse _$v;
 
   String _pickId;
+
   String get pickId => _$this._pickId;
+
   set pickId(String pickId) => _$this._pickId = pickId;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   GetSwapStockApiResponseBuilder();
@@ -199,6 +203,7 @@ class _$GetSwapStockApiResponseActions extends GetSwapStockApiResponseActions {
       GetSwapStockApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

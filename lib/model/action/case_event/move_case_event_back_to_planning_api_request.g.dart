@@ -107,7 +107,9 @@ class MoveCaseEventBackToPlanningApiRequestBuilder
   _$MoveCaseEventBackToPlanningApiRequest _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   MoveCaseEventBackToPlanningApiRequestBuilder();
@@ -189,6 +191,7 @@ class _$MoveCaseEventBackToPlanningApiRequestActions
       MoveCaseEventBackToPlanningApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

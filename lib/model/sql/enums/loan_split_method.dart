@@ -23,9 +23,9 @@ class LoanSplitMethod extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<LoanSplitMethod> get values => _$loanSplitMethodValues;
+  static BuiltSet<LoanSplitMethod> get values => _$values;
 
-  static LoanSplitMethod valueOf(String name) => _$loanSplitMethodValueOf(name);
+  static LoanSplitMethod valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

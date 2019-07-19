@@ -51,11 +51,10 @@ class GetConsignmentLoanFieldsApiLoanField extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<GetConsignmentLoanFieldsApiLoanField> get values =>
-      _$getConsignmentLoanFieldsApiLoanFieldValues;
+  static BuiltSet<GetConsignmentLoanFieldsApiLoanField> get values => _$values;
 
   static GetConsignmentLoanFieldsApiLoanField valueOf(String name) =>
-      _$getConsignmentLoanFieldsApiLoanFieldValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -67,6 +67,7 @@ class _$BuildInspectionApi extends BuildInspectionApi {
           ApiResult<BuildInspectionApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

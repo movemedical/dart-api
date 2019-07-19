@@ -17,8 +17,7 @@ const MoveStock2ApiProcessingLevel _$wireDELIVER =
 const MoveStock2ApiProcessingLevel _$wireCONFIRM =
     const MoveStock2ApiProcessingLevel._('CONFIRM');
 
-MoveStock2ApiProcessingLevel _$moveStock2ApiProcessingLevelValueOf(
-    String name) {
+MoveStock2ApiProcessingLevel _$valueOf(String name) {
   switch (name) {
     case 'CREATE_PICK':
       return _$wireCREATE_PICK;
@@ -35,9 +34,8 @@ MoveStock2ApiProcessingLevel _$moveStock2ApiProcessingLevelValueOf(
   }
 }
 
-final BuiltSet<MoveStock2ApiProcessingLevel>
-    _$moveStock2ApiProcessingLevelValues = new BuiltSet<
-        MoveStock2ApiProcessingLevel>(const <MoveStock2ApiProcessingLevel>[
+final BuiltSet<MoveStock2ApiProcessingLevel> _$values = new BuiltSet<
+    MoveStock2ApiProcessingLevel>(const <MoveStock2ApiProcessingLevel>[
   _$wireCREATE_PICK,
   _$wireCOMPLETE_PICK,
   _$wireSHIP,

@@ -172,24 +172,34 @@ class AddOrgUnitToFacilityApiRequestBuilder
   _$AddOrgUnitToFacilityApiRequest _$v;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _customerQualifierId;
+
   String get customerQualifierId => _$this._customerQualifierId;
+
   set customerQualifierId(String customerQualifierId) =>
       _$this._customerQualifierId = customerQualifierId;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _relationshipTypeId;
+
   String get relationshipTypeId => _$this._relationshipTypeId;
+
   set relationshipTypeId(String relationshipTypeId) =>
       _$this._relationshipTypeId = relationshipTypeId;
 
@@ -299,6 +309,7 @@ class _$AddOrgUnitToFacilityApiRequestActions
       AddOrgUnitToFacilityApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

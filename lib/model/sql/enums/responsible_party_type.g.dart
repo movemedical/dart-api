@@ -15,7 +15,7 @@ const ResponsiblePartyType _$wireFACILITY =
 const ResponsiblePartyType _$wireMULTIPLE =
     const ResponsiblePartyType._('MULTIPLE');
 
-ResponsiblePartyType _$responsiblePartyTypeValueOf(String name) {
+ResponsiblePartyType _$valueOf(String name) {
   switch (name) {
     case 'HCR':
       return _$wireHCR;
@@ -32,7 +32,7 @@ ResponsiblePartyType _$responsiblePartyTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<ResponsiblePartyType> _$responsiblePartyTypeValues =
+final BuiltSet<ResponsiblePartyType> _$values =
     new BuiltSet<ResponsiblePartyType>(const <ResponsiblePartyType>[
   _$wireHCR,
   _$wireTEAM,

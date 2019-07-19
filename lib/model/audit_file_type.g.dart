@@ -8,7 +8,7 @@ part of 'audit_file_type.dart';
 
 const AuditFileType _$wireATTACHMENT = const AuditFileType._('ATTACHMENT');
 
-AuditFileType _$auditFileTypeValueOf(String name) {
+AuditFileType _$valueOf(String name) {
   switch (name) {
     case 'ATTACHMENT':
       return _$wireATTACHMENT;
@@ -17,7 +17,7 @@ AuditFileType _$auditFileTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<AuditFileType> _$auditFileTypeValues =
+final BuiltSet<AuditFileType> _$values =
     new BuiltSet<AuditFileType>(const <AuditFileType>[
   _$wireATTACHMENT,
 ]);

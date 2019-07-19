@@ -29,9 +29,6 @@ abstract class BuildInspectionApiExtraEntryOption
   LocationData get locationData;
 
   @nullable
-  bool get multipleOptionForLocation;
-
-  @nullable
   String get swappedOutExpectedStockId;
 
   ////////////////////////////////
@@ -67,8 +64,6 @@ abstract class BuildInspectionApiExtraEntryOptionActions extends ModelActions<
   FieldDispatcher<String> get stockId;
 
   LocationDataActions get locationData;
-
-  FieldDispatcher<bool> get multipleOptionForLocation;
 
   FieldDispatcher<String> get swappedOutExpectedStockId;
 

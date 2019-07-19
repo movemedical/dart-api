@@ -110,7 +110,9 @@ class RemovePhysicianBizUnitProcedureApiRequestBuilder
   _$RemovePhysicianBizUnitProcedureApiRequest _$v;
 
   String _physicianBizUnitProcedureId;
+
   String get physicianBizUnitProcedureId => _$this._physicianBizUnitProcedureId;
+
   set physicianBizUnitProcedureId(String physicianBizUnitProcedureId) =>
       _$this._physicianBizUnitProcedureId = physicianBizUnitProcedureId;
 
@@ -195,6 +197,7 @@ class _$RemovePhysicianBizUnitProcedureApiRequestActions
       RemovePhysicianBizUnitProcedureApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

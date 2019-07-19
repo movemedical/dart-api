@@ -13,7 +13,7 @@ const OrderReasonDocValidFor _$wireSHIPMENT =
 const OrderReasonDocValidFor _$wirePACKAGE =
     const OrderReasonDocValidFor._('PACKAGE');
 
-OrderReasonDocValidFor _$orderReasonDocValidForValueOf(String name) {
+OrderReasonDocValidFor _$valueOf(String name) {
   switch (name) {
     case 'ORDER':
       return _$wireORDER;
@@ -26,7 +26,7 @@ OrderReasonDocValidFor _$orderReasonDocValidForValueOf(String name) {
   }
 }
 
-final BuiltSet<OrderReasonDocValidFor> _$orderReasonDocValidForValues =
+final BuiltSet<OrderReasonDocValidFor> _$values =
     new BuiltSet<OrderReasonDocValidFor>(const <OrderReasonDocValidFor>[
   _$wireORDER,
   _$wireSHIPMENT,

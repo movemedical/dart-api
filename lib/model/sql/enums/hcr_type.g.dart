@@ -9,7 +9,7 @@ part of 'hcr_type.dart';
 const HcrType _$wireSERVICE_REP = const HcrType._('SERVICE_REP');
 const HcrType _$wireSALES_REP = const HcrType._('SALES_REP');
 
-HcrType _$hcrTypeValueOf(String name) {
+HcrType _$valueOf(String name) {
   switch (name) {
     case 'SERVICE_REP':
       return _$wireSERVICE_REP;
@@ -20,7 +20,7 @@ HcrType _$hcrTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<HcrType> _$hcrTypeValues = new BuiltSet<HcrType>(const <HcrType>[
+final BuiltSet<HcrType> _$values = new BuiltSet<HcrType>(const <HcrType>[
   _$wireSERVICE_REP,
   _$wireSALES_REP,
 ]);

@@ -119,11 +119,15 @@ class GetPackageApiPackageAttributeBuilder
   _$GetPackageApiPackageAttribute _$v;
 
   String _label;
+
   String get label => _$this._label;
+
   set label(String label) => _$this._label = label;
 
   String _value;
+
   String get value => _$this._value;
+
   set value(String value) => _$this._value = value;
 
   GetPackageApiPackageAttributeBuilder();
@@ -206,6 +210,7 @@ class _$GetPackageApiPackageAttributeActions
       GetPackageApiPackageAttributeBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

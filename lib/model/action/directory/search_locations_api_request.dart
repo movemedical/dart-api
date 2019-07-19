@@ -5,6 +5,7 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 import 'package:movemedical_api/model/action/directory/search_locations_api_search_locations_purpose.dart';
+import 'package:movemedical_api/model/sql/enums/doc_report_type.dart';
 import 'package:movemedical_api/model/sql/enums/facility_type.dart';
 import 'package:movemedical_api/model/sql/enums/location_type.dart';
 
@@ -22,6 +23,9 @@ abstract class SearchLocationsApiRequest
 
   @nullable
   String get search;
+
+  @nullable
+  String get orderReasonId;
 
   @nullable
   BuiltList<String> get bizUnitIds;
@@ -53,6 +57,9 @@ abstract class SearchLocationsApiRequest
   @nullable
   double get longitude;
 
+  @nullable
+  DocReportType get reportType;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -83,6 +90,8 @@ abstract class SearchLocationsApiRequestActions extends ModelActions<
 
   FieldDispatcher<String> get search;
 
+  FieldDispatcher<String> get orderReasonId;
+
   FieldDispatcher<BuiltList<String>> get bizUnitIds;
 
   FieldDispatcher<BuiltList<String>> get orgUnitIds;
@@ -102,6 +111,8 @@ abstract class SearchLocationsApiRequestActions extends ModelActions<
   FieldDispatcher<double> get latitude;
 
   FieldDispatcher<double> get longitude;
+
+  FieldDispatcher<DocReportType> get reportType;
 
   ////////////////////////////////
   /// Constructors

@@ -64,6 +64,7 @@ class _$GetOrgUnitApi extends GetOrgUnitApi {
           ApiResult<GetOrgUnitApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

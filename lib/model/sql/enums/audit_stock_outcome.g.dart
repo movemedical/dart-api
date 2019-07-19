@@ -17,7 +17,7 @@ const AuditStockOutcome _$wireRECONCILED_FOUND =
 const AuditStockOutcome _$wireCOMPONENT_VARIANCES =
     const AuditStockOutcome._('COMPONENT_VARIANCES');
 
-AuditStockOutcome _$auditStockOutcomeValueOf(String name) {
+AuditStockOutcome _$valueOf(String name) {
   switch (name) {
     case 'PENDING':
       return _$wirePENDING;
@@ -38,7 +38,7 @@ AuditStockOutcome _$auditStockOutcomeValueOf(String name) {
   }
 }
 
-final BuiltSet<AuditStockOutcome> _$auditStockOutcomeValues =
+final BuiltSet<AuditStockOutcome> _$values =
     new BuiltSet<AuditStockOutcome>(const <AuditStockOutcome>[
   _$wirePENDING,
   _$wireCOUNTED,

@@ -192,30 +192,42 @@ class ListCaseRequirementsApiItemRequestBuilder
   _$ListCaseRequirementsApiItemRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _quantityRequested;
+
   int get quantityRequested => _$this._quantityRequested;
+
   set quantityRequested(int quantityRequested) =>
       _$this._quantityRequested = quantityRequested;
 
   int _quantityOnHand;
+
   int get quantityOnHand => _$this._quantityOnHand;
+
   set quantityOnHand(int quantityOnHand) =>
       _$this._quantityOnHand = quantityOnHand;
 
   StockItemBuilder _stockItem;
+
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
+
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   CaseRequirementSource _source;
+
   CaseRequirementSource get source => _$this._source;
+
   set source(CaseRequirementSource source) => _$this._source = source;
 
   String _sourceId;
+
   String get sourceId => _$this._sourceId;
+
   set sourceId(String sourceId) => _$this._sourceId = sourceId;
 
   ListCaseRequirementsApiItemRequestBuilder();
@@ -344,12 +356,14 @@ class _$ListCaseRequirementsApiItemRequestActions
       ListCaseRequirementsApiItemRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.stockItem,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

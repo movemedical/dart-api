@@ -127,14 +127,18 @@ class ListBizUnitProcedureOptionsApiResponseBuilder
   _$ListBizUnitProcedureOptionsApiResponse _$v;
 
   ListBuilder<ListBizUnitProcedureOptionsApiProcedureOption> _data;
+
   ListBuilder<ListBizUnitProcedureOptionsApiProcedureOption> get data =>
       _$this._data ??=
           new ListBuilder<ListBizUnitProcedureOptionsApiProcedureOption>();
+
   set data(ListBuilder<ListBizUnitProcedureOptionsApiProcedureOption> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListBizUnitProcedureOptionsApiResponseBuilder();
@@ -235,6 +239,7 @@ class _$ListBizUnitProcedureOptionsApiResponseActions
       ListBizUnitProcedureOptionsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

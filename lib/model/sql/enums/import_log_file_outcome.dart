@@ -27,11 +27,9 @@ class ImportLogFileOutcome extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ImportLogFileOutcome> get values =>
-      _$importLogFileOutcomeValues;
+  static BuiltSet<ImportLogFileOutcome> get values => _$values;
 
-  static ImportLogFileOutcome valueOf(String name) =>
-      _$importLogFileOutcomeValueOf(name);
+  static ImportLogFileOutcome valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

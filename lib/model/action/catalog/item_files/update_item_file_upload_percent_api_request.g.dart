@@ -138,15 +138,21 @@ class UpdateItemFileUploadPercentApiRequestBuilder
   _$UpdateItemFileUploadPercentApiRequest _$v;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _fileId;
+
   String get fileId => _$this._fileId;
+
   set fileId(String fileId) => _$this._fileId = fileId;
 
   double _percentDecimalForm;
+
   double get percentDecimalForm => _$this._percentDecimalForm;
+
   set percentDecimalForm(double percentDecimalForm) =>
       _$this._percentDecimalForm = percentDecimalForm;
 
@@ -240,6 +246,7 @@ class _$UpdateItemFileUploadPercentApiRequestActions
       UpdateItemFileUploadPercentApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

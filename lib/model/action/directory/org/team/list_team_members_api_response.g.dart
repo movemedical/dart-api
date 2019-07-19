@@ -119,13 +119,17 @@ class ListTeamMembersApiResponseBuilder
   _$ListTeamMembersApiResponse _$v;
 
   ListBuilder<ListTeamMembersApiTeamMember> _data;
+
   ListBuilder<ListTeamMembersApiTeamMember> get data =>
       _$this._data ??= new ListBuilder<ListTeamMembersApiTeamMember>();
+
   set data(ListBuilder<ListTeamMembersApiTeamMember> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListTeamMembersApiResponseBuilder();
@@ -221,6 +225,7 @@ class _$ListTeamMembersApiResponseActions
       ListTeamMembersApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

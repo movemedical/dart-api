@@ -122,12 +122,16 @@ class ListAeOrgUnitLinksApiResponseBuilder
   _$ListAeOrgUnitLinksApiResponse _$v;
 
   ListBuilder<OrgUnitLink> _data;
+
   ListBuilder<OrgUnitLink> get data =>
       _$this._data ??= new ListBuilder<OrgUnitLink>();
+
   set data(ListBuilder<OrgUnitLink> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListAeOrgUnitLinksApiResponseBuilder();
@@ -224,6 +228,7 @@ class _$ListAeOrgUnitLinksApiResponseActions
       ListAeOrgUnitLinksApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

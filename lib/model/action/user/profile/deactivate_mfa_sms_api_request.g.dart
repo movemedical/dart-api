@@ -101,7 +101,9 @@ class DeactivateMfaSmsApiRequestBuilder
   _$DeactivateMfaSmsApiRequest _$v;
 
   String _mfaSmsId;
+
   String get mfaSmsId => _$this._mfaSmsId;
+
   set mfaSmsId(String mfaSmsId) => _$this._mfaSmsId = mfaSmsId;
 
   DeactivateMfaSmsApiRequestBuilder();
@@ -179,6 +181,7 @@ class _$DeactivateMfaSmsApiRequestActions
       DeactivateMfaSmsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

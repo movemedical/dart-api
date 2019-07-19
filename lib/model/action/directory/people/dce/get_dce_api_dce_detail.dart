@@ -3,8 +3,10 @@ import 'dart:core';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
+import 'package:movemedical_api/model/biz_unit.dart';
 import 'package:movemedical_api/model/essentials/model/api/email.dart';
 import 'package:movemedical_api/model/essentials/model/api/person_name.dart';
+import 'package:movemedical_api/model/org_unit.dart';
 import 'package:movemedical_api/model/sql/enums/org_type.dart';
 import 'package:movemedical_api/model/sql/enums/user_status.dart';
 
@@ -62,10 +64,19 @@ abstract class GetDceApiDceDetail
   bool get userLocked;
 
   @nullable
+  bool get phiAllowed;
+
+  @nullable
   String get timeZone;
 
   @nullable
-  bool get phiAllowed;
+  String get erpUserId;
+
+  @nullable
+  BizUnit get defaultBizUnit;
+
+  @nullable
+  OrgUnit get defaultOpsOrgUnit;
 
   ////////////////////////////////
   /// Constructors
@@ -120,9 +131,15 @@ abstract class GetDceApiDceDetailActions extends ModelActions<
 
   FieldDispatcher<bool> get userLocked;
 
+  FieldDispatcher<bool> get phiAllowed;
+
   FieldDispatcher<String> get timeZone;
 
-  FieldDispatcher<bool> get phiAllowed;
+  FieldDispatcher<String> get erpUserId;
+
+  BizUnitActions get defaultBizUnit;
+
+  OrgUnitActions get defaultOpsOrgUnit;
 
   ////////////////////////////////
   /// Constructors

@@ -14,8 +14,9 @@ import 'http.dart';
 import 'login.dart';
 import 'state/action/user/get_ui_setup_mobile_api.dart';
 
-export 'login.dart';
 export 'package:modux/modux.dart';
+
+export 'login.dart';
 
 part 'command.g.dart';
 

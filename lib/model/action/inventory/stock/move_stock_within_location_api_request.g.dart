@@ -109,9 +109,11 @@ class MoveStockWithinLocationApiRequestBuilder
   _$MoveStockWithinLocationApiRequest _$v;
 
   ListBuilder<MoveStockWithinLocationApiStockMove> _stockMoves;
+
   ListBuilder<MoveStockWithinLocationApiStockMove> get stockMoves =>
       _$this._stockMoves ??=
           new ListBuilder<MoveStockWithinLocationApiStockMove>();
+
   set stockMoves(ListBuilder<MoveStockWithinLocationApiStockMove> stockMoves) =>
       _$this._stockMoves = stockMoves;
 
@@ -210,6 +212,7 @@ class _$MoveStockWithinLocationApiRequestActions
       MoveStockWithinLocationApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -13,8 +13,7 @@ const ListProceduresForSearchApiActiveStatus _$wireINACTIVE =
 const ListProceduresForSearchApiActiveStatus _$wireBOTH =
     const ListProceduresForSearchApiActiveStatus._('BOTH');
 
-ListProceduresForSearchApiActiveStatus
-    _$listProceduresForSearchApiActiveStatusValueOf(String name) {
+ListProceduresForSearchApiActiveStatus _$valueOf(String name) {
   switch (name) {
     case 'ACTIVE':
       return _$wireACTIVE;
@@ -27,8 +26,7 @@ ListProceduresForSearchApiActiveStatus
   }
 }
 
-final BuiltSet<ListProceduresForSearchApiActiveStatus>
-    _$listProceduresForSearchApiActiveStatusValues =
+final BuiltSet<ListProceduresForSearchApiActiveStatus> _$values =
     new BuiltSet<ListProceduresForSearchApiActiveStatus>(const <
         ListProceduresForSearchApiActiveStatus>[
   _$wireACTIVE,

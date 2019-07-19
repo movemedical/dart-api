@@ -11,7 +11,7 @@ const HcpType _$wireNURSE_PRACTITIONER = const HcpType._('NURSE_PRACTITIONER');
 const HcpType _$wireCNA = const HcpType._('CNA');
 const HcpType _$wireNURSE_ANAESTHETIST = const HcpType._('NURSE_ANAESTHETIST');
 
-HcpType _$hcpTypeValueOf(String name) {
+HcpType _$valueOf(String name) {
   switch (name) {
     case 'NURSE':
       return _$wireNURSE;
@@ -26,7 +26,7 @@ HcpType _$hcpTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<HcpType> _$hcpTypeValues = new BuiltSet<HcpType>(const <HcpType>[
+final BuiltSet<HcpType> _$values = new BuiltSet<HcpType>(const <HcpType>[
   _$wireNURSE,
   _$wireNURSE_PRACTITIONER,
   _$wireCNA,

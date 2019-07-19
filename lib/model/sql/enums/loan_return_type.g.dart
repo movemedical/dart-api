@@ -11,7 +11,7 @@ const LoanReturnType _$wireSPECIFIC_LOCATION =
 const LoanReturnType _$wireDONT_AUTO_RETURN =
     const LoanReturnType._('DONT_AUTO_RETURN');
 
-LoanReturnType _$loanReturnTypeValueOf(String name) {
+LoanReturnType _$valueOf(String name) {
   switch (name) {
     case 'SPECIFIC_LOCATION':
       return _$wireSPECIFIC_LOCATION;
@@ -22,7 +22,7 @@ LoanReturnType _$loanReturnTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<LoanReturnType> _$loanReturnTypeValues =
+final BuiltSet<LoanReturnType> _$values =
     new BuiltSet<LoanReturnType>(const <LoanReturnType>[
   _$wireSPECIFIC_LOCATION,
   _$wireDONT_AUTO_RETURN,

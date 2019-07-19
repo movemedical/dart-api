@@ -17,8 +17,7 @@ const ListItemsToBeCountedApiOrderBy _$wireITEM_CLASS =
 const ListItemsToBeCountedApiOrderBy _$wireITEM_TYPE =
     const ListItemsToBeCountedApiOrderBy._('ITEM_TYPE');
 
-ListItemsToBeCountedApiOrderBy _$listItemsToBeCountedApiOrderByValueOf(
-    String name) {
+ListItemsToBeCountedApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'ITEM_NUMBER':
       return _$wireITEM_NUMBER;
@@ -35,9 +34,8 @@ ListItemsToBeCountedApiOrderBy _$listItemsToBeCountedApiOrderByValueOf(
   }
 }
 
-final BuiltSet<ListItemsToBeCountedApiOrderBy>
-    _$listItemsToBeCountedApiOrderByValues = new BuiltSet<
-        ListItemsToBeCountedApiOrderBy>(const <ListItemsToBeCountedApiOrderBy>[
+final BuiltSet<ListItemsToBeCountedApiOrderBy> _$values = new BuiltSet<
+    ListItemsToBeCountedApiOrderBy>(const <ListItemsToBeCountedApiOrderBy>[
   _$wireITEM_NUMBER,
   _$wireLONG_DESCRIPTION,
   _$wireSHORT_DESCRIPTION,

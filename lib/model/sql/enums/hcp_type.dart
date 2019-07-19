@@ -24,9 +24,9 @@ class HcpType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<HcpType> get values => _$hcpTypeValues;
+  static BuiltSet<HcpType> get values => _$values;
 
-  static HcpType valueOf(String name) => _$hcpTypeValueOf(name);
+  static HcpType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -12,7 +12,7 @@ const MoveShippingCarrier _$wireUSPS = const MoveShippingCarrier._('USPS');
 const MoveShippingCarrier _$wireHAND_CARRY =
     const MoveShippingCarrier._('HAND_CARRY');
 
-MoveShippingCarrier _$moveShippingCarrierValueOf(String name) {
+MoveShippingCarrier _$valueOf(String name) {
   switch (name) {
     case 'FEDEX':
       return _$wireFEDEX;
@@ -27,7 +27,7 @@ MoveShippingCarrier _$moveShippingCarrierValueOf(String name) {
   }
 }
 
-final BuiltSet<MoveShippingCarrier> _$moveShippingCarrierValues =
+final BuiltSet<MoveShippingCarrier> _$values =
     new BuiltSet<MoveShippingCarrier>(const <MoveShippingCarrier>[
   _$wireFEDEX,
   _$wireUPS,

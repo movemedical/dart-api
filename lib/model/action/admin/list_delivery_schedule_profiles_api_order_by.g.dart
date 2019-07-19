@@ -21,8 +21,7 @@ const ListDeliveryScheduleProfilesApiOrderBy _$wireINS_HOURS =
 const ListDeliveryScheduleProfilesApiOrderBy _$wireACTIVE =
     const ListDeliveryScheduleProfilesApiOrderBy._('ACTIVE');
 
-ListDeliveryScheduleProfilesApiOrderBy
-    _$listDeliveryScheduleProfilesApiOrderByValueOf(String name) {
+ListDeliveryScheduleProfilesApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -43,8 +42,7 @@ ListDeliveryScheduleProfilesApiOrderBy
   }
 }
 
-final BuiltSet<ListDeliveryScheduleProfilesApiOrderBy>
-    _$listDeliveryScheduleProfilesApiOrderByValues =
+final BuiltSet<ListDeliveryScheduleProfilesApiOrderBy> _$values =
     new BuiltSet<ListDeliveryScheduleProfilesApiOrderBy>(const <
         ListDeliveryScheduleProfilesApiOrderBy>[
   _$wireNAME,

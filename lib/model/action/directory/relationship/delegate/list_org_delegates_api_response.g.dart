@@ -121,12 +121,16 @@ class ListOrgDelegatesApiResponseBuilder
   _$ListOrgDelegatesApiResponse _$v;
 
   ListBuilder<Delegate> _data;
+
   ListBuilder<Delegate> get data =>
       _$this._data ??= new ListBuilder<Delegate>();
+
   set data(ListBuilder<Delegate> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListOrgDelegatesApiResponseBuilder();
@@ -223,6 +227,7 @@ class _$ListOrgDelegatesApiResponseActions
       ListOrgDelegatesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

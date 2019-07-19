@@ -23,11 +23,9 @@ class RelationshipLinkType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<RelationshipLinkType> get values =>
-      _$relationshipLinkTypeValues;
+  static BuiltSet<RelationshipLinkType> get values => _$values;
 
-  static RelationshipLinkType valueOf(String name) =>
-      _$relationshipLinkTypeValueOf(name);
+  static RelationshipLinkType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

@@ -25,7 +25,7 @@ const GeneralContactType _$wireTEAM = const GeneralContactType._('TEAM');
 const GeneralContactType _$wireCUSTOMER =
     const GeneralContactType._('CUSTOMER');
 
-GeneralContactType _$generalContactTypeValueOf(String name) {
+GeneralContactType _$valueOf(String name) {
   switch (name) {
     case 'ORG':
       return _$wireORG;
@@ -56,7 +56,7 @@ GeneralContactType _$generalContactTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<GeneralContactType> _$generalContactTypeValues =
+final BuiltSet<GeneralContactType> _$values =
     new BuiltSet<GeneralContactType>(const <GeneralContactType>[
   _$wireORG,
   _$wireBIZ_UNIT,

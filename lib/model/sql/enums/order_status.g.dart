@@ -25,7 +25,7 @@ const OrderStatus _$wireORDER_VALIDATION_ERROR =
 const OrderStatus _$wireERP_ERROR = const OrderStatus._('ERP_ERROR');
 const OrderStatus _$wireCANCELED = const OrderStatus._('CANCELED');
 
-OrderStatus _$orderStatusValueOf(String name) {
+OrderStatus _$valueOf(String name) {
   switch (name) {
     case 'PENDING':
       return _$wirePENDING;
@@ -62,7 +62,7 @@ OrderStatus _$orderStatusValueOf(String name) {
   }
 }
 
-final BuiltSet<OrderStatus> _$orderStatusValues =
+final BuiltSet<OrderStatus> _$values =
     new BuiltSet<OrderStatus>(const <OrderStatus>[
   _$wirePENDING,
   _$wireAWAITING_APPROVAL,

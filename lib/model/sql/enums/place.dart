@@ -74,9 +74,9 @@ class Place extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<Place> get values => _$placeValues;
+  static BuiltSet<Place> get values => _$values;
 
-  static Place valueOf(String name) => _$placeValueOf(name);
+  static Place valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

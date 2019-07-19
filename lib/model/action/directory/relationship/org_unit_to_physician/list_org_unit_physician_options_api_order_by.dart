@@ -21,11 +21,10 @@ class ListOrgUnitPhysicianOptionsApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListOrgUnitPhysicianOptionsApiOrderBy> get values =>
-      _$listOrgUnitPhysicianOptionsApiOrderByValues;
+  static BuiltSet<ListOrgUnitPhysicianOptionsApiOrderBy> get values => _$values;
 
   static ListOrgUnitPhysicianOptionsApiOrderBy valueOf(String name) =>
-      _$listOrgUnitPhysicianOptionsApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

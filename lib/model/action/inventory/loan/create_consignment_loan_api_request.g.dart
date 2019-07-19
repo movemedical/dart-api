@@ -164,6 +164,18 @@ class _$CreateConsignmentLoanApiRequestSerializer
         ..add(serializers.serialize(object.reference,
             specifiedType: const FullType(String)));
     }
+    if (object.opsLeadUserId != null) {
+      result
+        ..add('opsLeadUserId')
+        ..add(serializers.serialize(object.opsLeadUserId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.salesLeadUserId != null) {
+      result
+        ..add('salesLeadUserId')
+        ..add(serializers.serialize(object.salesLeadUserId,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -273,6 +285,14 @@ class _$CreateConsignmentLoanApiRequestSerializer
           result.reference = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'opsLeadUserId':
+          result.opsLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'salesLeadUserId':
+          result.salesLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -328,6 +348,10 @@ class _$CreateConsignmentLoanApiRequest
   final String description;
   @override
   final String reference;
+  @override
+  final String opsLeadUserId;
+  @override
+  final String salesLeadUserId;
 
   factory _$CreateConsignmentLoanApiRequest(
           [void updates(CreateConsignmentLoanApiRequestBuilder b)]) =>
@@ -356,7 +380,9 @@ class _$CreateConsignmentLoanApiRequest
       this.nextEvaluateOnHandStockDate,
       this.nextEvaluateComplianceStockDate,
       this.description,
-      this.reference})
+      this.reference,
+      this.opsLeadUserId,
+      this.salesLeadUserId})
       : super._();
 
   @override
@@ -395,7 +421,9 @@ class _$CreateConsignmentLoanApiRequest
         nextEvaluateComplianceStockDate ==
             other.nextEvaluateComplianceStockDate &&
         description == other.description &&
-        reference == other.reference;
+        reference == other.reference &&
+        opsLeadUserId == other.opsLeadUserId &&
+        salesLeadUserId == other.salesLeadUserId;
   }
 
   @override
@@ -418,26 +446,26 @@ class _$CreateConsignmentLoanApiRequest
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc(0, loanReason.hashCode), bizUnitId.hashCode), opsOrgUnitId.hashCode), salesOrgUnitId.hashCode),
-                                                                                locationType.hashCode),
-                                                                            locationId.hashCode),
-                                                                        deliverToId.hashCode),
-                                                                    deliverToAddressOverride.hashCode),
-                                                                deliverToAttn.hashCode),
-                                                            shippingServicePreferenceId.hashCode),
-                                                        serviceStartDate.hashCode),
-                                                    serviceEndDate.hashCode),
-                                                lateAfterDate.hashCode),
-                                            loanReturnType.hashCode),
-                                        returnLocationType.hashCode),
-                                    returnLocationId.hashCode),
-                                complianceReturnLocationType.hashCode),
-                            complianceReturnLocationId.hashCode),
-                        expiredReplenishDays.hashCode),
-                    nextEvaluateOnHandStockDate.hashCode),
-                nextEvaluateComplianceStockDate.hashCode),
-            description.hashCode),
-        reference.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, loanReason.hashCode), bizUnitId.hashCode), opsOrgUnitId.hashCode), salesOrgUnitId.hashCode), locationType.hashCode), locationId.hashCode),
+                                                                                deliverToId.hashCode),
+                                                                            deliverToAddressOverride.hashCode),
+                                                                        deliverToAttn.hashCode),
+                                                                    shippingServicePreferenceId.hashCode),
+                                                                serviceStartDate.hashCode),
+                                                            serviceEndDate.hashCode),
+                                                        lateAfterDate.hashCode),
+                                                    loanReturnType.hashCode),
+                                                returnLocationType.hashCode),
+                                            returnLocationId.hashCode),
+                                        complianceReturnLocationType.hashCode),
+                                    complianceReturnLocationId.hashCode),
+                                expiredReplenishDays.hashCode),
+                            nextEvaluateOnHandStockDate.hashCode),
+                        nextEvaluateComplianceStockDate.hashCode),
+                    description.hashCode),
+                reference.hashCode),
+            opsLeadUserId.hashCode),
+        salesLeadUserId.hashCode));
   }
 
   @override
@@ -466,7 +494,9 @@ class _$CreateConsignmentLoanApiRequest
           ..add('nextEvaluateComplianceStockDate',
               nextEvaluateComplianceStockDate)
           ..add('description', description)
-          ..add('reference', reference))
+          ..add('reference', reference)
+          ..add('opsLeadUserId', opsLeadUserId)
+          ..add('salesLeadUserId', salesLeadUserId))
         .toString();
   }
 }
@@ -478,117 +508,177 @@ class CreateConsignmentLoanApiRequestBuilder
   _$CreateConsignmentLoanApiRequest _$v;
 
   LoanReason _loanReason;
+
   LoanReason get loanReason => _$this._loanReason;
+
   set loanReason(LoanReason loanReason) => _$this._loanReason = loanReason;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _opsOrgUnitId;
+
   String get opsOrgUnitId => _$this._opsOrgUnitId;
+
   set opsOrgUnitId(String opsOrgUnitId) => _$this._opsOrgUnitId = opsOrgUnitId;
 
   String _salesOrgUnitId;
+
   String get salesOrgUnitId => _$this._salesOrgUnitId;
+
   set salesOrgUnitId(String salesOrgUnitId) =>
       _$this._salesOrgUnitId = salesOrgUnitId;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   String _deliverToId;
+
   String get deliverToId => _$this._deliverToId;
+
   set deliverToId(String deliverToId) => _$this._deliverToId = deliverToId;
 
   AddressBuilder _deliverToAddressOverride;
+
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
+
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   String _deliverToAttn;
+
   String get deliverToAttn => _$this._deliverToAttn;
+
   set deliverToAttn(String deliverToAttn) =>
       _$this._deliverToAttn = deliverToAttn;
 
   String _shippingServicePreferenceId;
+
   String get shippingServicePreferenceId => _$this._shippingServicePreferenceId;
+
   set shippingServicePreferenceId(String shippingServicePreferenceId) =>
       _$this._shippingServicePreferenceId = shippingServicePreferenceId;
 
   DateTime _serviceStartDate;
+
   DateTime get serviceStartDate => _$this._serviceStartDate;
+
   set serviceStartDate(DateTime serviceStartDate) =>
       _$this._serviceStartDate = serviceStartDate;
 
   DateTime _serviceEndDate;
+
   DateTime get serviceEndDate => _$this._serviceEndDate;
+
   set serviceEndDate(DateTime serviceEndDate) =>
       _$this._serviceEndDate = serviceEndDate;
 
   DateTime _lateAfterDate;
+
   DateTime get lateAfterDate => _$this._lateAfterDate;
+
   set lateAfterDate(DateTime lateAfterDate) =>
       _$this._lateAfterDate = lateAfterDate;
 
   LoanReturnType _loanReturnType;
+
   LoanReturnType get loanReturnType => _$this._loanReturnType;
+
   set loanReturnType(LoanReturnType loanReturnType) =>
       _$this._loanReturnType = loanReturnType;
 
   LocationType _returnLocationType;
+
   LocationType get returnLocationType => _$this._returnLocationType;
+
   set returnLocationType(LocationType returnLocationType) =>
       _$this._returnLocationType = returnLocationType;
 
   String _returnLocationId;
+
   String get returnLocationId => _$this._returnLocationId;
+
   set returnLocationId(String returnLocationId) =>
       _$this._returnLocationId = returnLocationId;
 
   LocationType _complianceReturnLocationType;
+
   LocationType get complianceReturnLocationType =>
       _$this._complianceReturnLocationType;
+
   set complianceReturnLocationType(LocationType complianceReturnLocationType) =>
       _$this._complianceReturnLocationType = complianceReturnLocationType;
 
   String _complianceReturnLocationId;
+
   String get complianceReturnLocationId => _$this._complianceReturnLocationId;
+
   set complianceReturnLocationId(String complianceReturnLocationId) =>
       _$this._complianceReturnLocationId = complianceReturnLocationId;
 
   int _expiredReplenishDays;
+
   int get expiredReplenishDays => _$this._expiredReplenishDays;
+
   set expiredReplenishDays(int expiredReplenishDays) =>
       _$this._expiredReplenishDays = expiredReplenishDays;
 
   DateTime _nextEvaluateOnHandStockDate;
+
   DateTime get nextEvaluateOnHandStockDate =>
       _$this._nextEvaluateOnHandStockDate;
+
   set nextEvaluateOnHandStockDate(DateTime nextEvaluateOnHandStockDate) =>
       _$this._nextEvaluateOnHandStockDate = nextEvaluateOnHandStockDate;
 
   DateTime _nextEvaluateComplianceStockDate;
+
   DateTime get nextEvaluateComplianceStockDate =>
       _$this._nextEvaluateComplianceStockDate;
+
   set nextEvaluateComplianceStockDate(
           DateTime nextEvaluateComplianceStockDate) =>
       _$this._nextEvaluateComplianceStockDate = nextEvaluateComplianceStockDate;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
+
+  String _opsLeadUserId;
+
+  String get opsLeadUserId => _$this._opsLeadUserId;
+
+  set opsLeadUserId(String opsLeadUserId) =>
+      _$this._opsLeadUserId = opsLeadUserId;
+
+  String _salesLeadUserId;
+
+  String get salesLeadUserId => _$this._salesLeadUserId;
+
+  set salesLeadUserId(String salesLeadUserId) =>
+      _$this._salesLeadUserId = salesLeadUserId;
 
   CreateConsignmentLoanApiRequestBuilder();
 
@@ -617,6 +707,8 @@ class CreateConsignmentLoanApiRequestBuilder
       _nextEvaluateComplianceStockDate = _$v.nextEvaluateComplianceStockDate;
       _description = _$v.description;
       _reference = _$v.reference;
+      _opsLeadUserId = _$v.opsLeadUserId;
+      _salesLeadUserId = _$v.salesLeadUserId;
       _$v = null;
     }
     return this;
@@ -663,7 +755,9 @@ class CreateConsignmentLoanApiRequestBuilder
               nextEvaluateOnHandStockDate: nextEvaluateOnHandStockDate,
               nextEvaluateComplianceStockDate: nextEvaluateComplianceStockDate,
               description: description,
-              reference: reference);
+              reference: reference,
+              opsLeadUserId: opsLeadUserId,
+              salesLeadUserId: salesLeadUserId);
     } catch (_) {
       String _$failedField;
       try {
@@ -725,6 +819,8 @@ class _$CreateConsignmentLoanApiRequestActions
   final FieldDispatcher<DateTime> nextEvaluateComplianceStockDate;
   final FieldDispatcher<String> description;
   final FieldDispatcher<String> reference;
+  final FieldDispatcher<String> opsLeadUserId;
+  final FieldDispatcher<String> salesLeadUserId;
 
   _$CreateConsignmentLoanApiRequestActions._(this.options$)
       : replace$ = options$.action<CreateConsignmentLoanApiRequest>(
@@ -838,6 +934,16 @@ class _$CreateConsignmentLoanApiRequestActions
             (p, b) => p?.description = b),
         reference = options$.field<String>('reference', (a) => a?.reference,
             (s) => s?.reference, (p, b) => p?.reference = b),
+        opsLeadUserId = options$.field<String>(
+            'opsLeadUserId',
+            (a) => a?.opsLeadUserId,
+            (s) => s?.opsLeadUserId,
+            (p, b) => p?.opsLeadUserId = b),
+        salesLeadUserId = options$.field<String>(
+            'salesLeadUserId',
+            (a) => a?.salesLeadUserId,
+            (s) => s?.salesLeadUserId,
+            (p, b) => p?.salesLeadUserId = b),
         super._();
 
   factory _$CreateConsignmentLoanApiRequestActions(
@@ -853,12 +959,14 @@ class _$CreateConsignmentLoanApiRequestActions
       CreateConsignmentLoanApiRequestBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -885,6 +993,8 @@ class _$CreateConsignmentLoanApiRequestActions
         this.nextEvaluateComplianceStockDate,
         this.description,
         this.reference,
+        this.opsLeadUserId,
+        this.salesLeadUserId,
       ]);
 
   @override
@@ -913,6 +1023,8 @@ class _$CreateConsignmentLoanApiRequestActions
     nextEvaluateComplianceStockDate.reducer$(reducer);
     description.reducer$(reducer);
     reference.reducer$(reducer);
+    opsLeadUserId.reducer$(reducer);
+    salesLeadUserId.reducer$(reducer);
   }
 
   @override

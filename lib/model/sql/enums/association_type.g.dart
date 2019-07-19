@@ -14,7 +14,7 @@ const AssociationType _$wireCASE_EVENT = const AssociationType._('CASE_EVENT');
 const AssociationType _$wireKIT = const AssociationType._('KIT');
 const AssociationType _$wireTRAY = const AssociationType._('TRAY');
 
-AssociationType _$associationTypeValueOf(String name) {
+AssociationType _$valueOf(String name) {
   switch (name) {
     case 'CONSIGNMENT_LOAN':
       return _$wireCONSIGNMENT_LOAN;
@@ -31,7 +31,7 @@ AssociationType _$associationTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<AssociationType> _$associationTypeValues =
+final BuiltSet<AssociationType> _$values =
     new BuiltSet<AssociationType>(const <AssociationType>[
   _$wireCONSIGNMENT_LOAN,
   _$wireDEMAND_LOAN,

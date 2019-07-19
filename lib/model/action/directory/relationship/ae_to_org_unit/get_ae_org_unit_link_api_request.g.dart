@@ -102,7 +102,9 @@ class GetAeOrgUnitLinkApiRequestBuilder
   _$GetAeOrgUnitLinkApiRequest _$v;
 
   String _aeToOrgUnitId;
+
   String get aeToOrgUnitId => _$this._aeToOrgUnitId;
+
   set aeToOrgUnitId(String aeToOrgUnitId) =>
       _$this._aeToOrgUnitId = aeToOrgUnitId;
 
@@ -184,6 +186,7 @@ class _$GetAeOrgUnitLinkApiRequestActions
       GetAeOrgUnitLinkApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

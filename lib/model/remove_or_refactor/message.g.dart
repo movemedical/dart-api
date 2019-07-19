@@ -194,36 +194,50 @@ class MessageBuilder implements Builder<Message, MessageBuilder> {
   _$Message _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _fromParticipantId;
+
   String get fromParticipantId => _$this._fromParticipantId;
+
   set fromParticipantId(String fromParticipantId) =>
       _$this._fromParticipantId = fromParticipantId;
 
   String _behalfOfParticipantId;
+
   String get behalfOfParticipantId => _$this._behalfOfParticipantId;
+
   set behalfOfParticipantId(String behalfOfParticipantId) =>
       _$this._behalfOfParticipantId = behalfOfParticipantId;
 
   DateTime _sentDate;
+
   DateTime get sentDate => _$this._sentDate;
+
   set sentDate(DateTime sentDate) => _$this._sentDate = sentDate;
 
   String _messageContent;
+
   String get messageContent => _$this._messageContent;
+
   set messageContent(String messageContent) =>
       _$this._messageContent = messageContent;
 
   String _conversationId;
+
   String get conversationId => _$this._conversationId;
+
   set conversationId(String conversationId) =>
       _$this._conversationId = conversationId;
 
   ListBuilder<MessageMessageParticipant> _participants;
+
   ListBuilder<MessageMessageParticipant> get participants =>
       _$this._participants ??= new ListBuilder<MessageMessageParticipant>();
+
   set participants(ListBuilder<MessageMessageParticipant> participants) =>
       _$this._participants = participants;
 
@@ -353,6 +367,7 @@ class _$MessageActions extends MessageActions {
   MessageBuilder newBuilder$() => MessageBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

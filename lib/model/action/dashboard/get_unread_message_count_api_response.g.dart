@@ -105,7 +105,9 @@ class GetUnreadMessageCountApiResponseBuilder
   _$GetUnreadMessageCountApiResponse _$v;
 
   int _count;
+
   int get count => _$this._count;
+
   set count(int count) => _$this._count = count;
 
   GetUnreadMessageCountApiResponseBuilder();
@@ -184,6 +186,7 @@ class _$GetUnreadMessageCountApiResponseActions
       GetUnreadMessageCountApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

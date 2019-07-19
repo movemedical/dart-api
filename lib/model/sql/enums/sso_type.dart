@@ -22,9 +22,9 @@ class SSOType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<SSOType> get values => _$sSOTypeValues;
+  static BuiltSet<SSOType> get values => _$values;
 
-  static SSOType valueOf(String name) => _$sSOTypeValueOf(name);
+  static SSOType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

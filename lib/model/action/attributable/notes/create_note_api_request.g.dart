@@ -167,24 +167,34 @@ class CreateNoteApiRequestBuilder
   _$CreateNoteApiRequest _$v;
 
   String _ownerOrgUnitId;
+
   String get ownerOrgUnitId => _$this._ownerOrgUnitId;
+
   set ownerOrgUnitId(String ownerOrgUnitId) =>
       _$this._ownerOrgUnitId = ownerOrgUnitId;
 
   AttributableType _attrType;
+
   AttributableType get attrType => _$this._attrType;
+
   set attrType(AttributableType attrType) => _$this._attrType = attrType;
 
   String _attrId;
+
   String get attrId => _$this._attrId;
+
   set attrId(String attrId) => _$this._attrId = attrId;
 
   Visibility _visibility;
+
   Visibility get visibility => _$this._visibility;
+
   set visibility(Visibility visibility) => _$this._visibility = visibility;
 
   String _noteValue;
+
   String get noteValue => _$this._noteValue;
+
   set noteValue(String noteValue) => _$this._noteValue = noteValue;
 
   CreateNoteApiRequestBuilder();
@@ -285,6 +295,7 @@ class _$CreateNoteApiRequestActions extends CreateNoteApiRequestActions {
   CreateNoteApiRequestBuilder newBuilder$() => CreateNoteApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

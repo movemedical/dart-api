@@ -214,31 +214,45 @@ class UpdateDeliveryScheduleProfileHolidayApiRequestBuilder
   _$UpdateDeliveryScheduleProfileHolidayApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _profileId;
+
   String get profileId => _$this._profileId;
+
   set profileId(String profileId) => _$this._profileId = profileId;
 
   String _parentId;
+
   String get parentId => _$this._parentId;
+
   set parentId(String parentId) => _$this._parentId = parentId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   int _month;
+
   int get month => _$this._month;
+
   set month(int month) => _$this._month = month;
 
   int _day;
+
   int get day => _$this._day;
+
   set day(int day) => _$this._day = day;
 
   int _year;
+
   int get year => _$this._year;
+
   set year(int year) => _$this._year = year;
 
   UpdateDeliveryScheduleProfileHolidayApiRequestBuilder();
@@ -352,6 +366,7 @@ class _$UpdateDeliveryScheduleProfileHolidayApiRequestActions
       UpdateDeliveryScheduleProfileHolidayApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

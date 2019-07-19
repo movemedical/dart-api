@@ -106,7 +106,9 @@ class DeactivateParticipantApiRequestBuilder
   _$DeactivateParticipantApiRequest _$v;
 
   String _participantId;
+
   String get participantId => _$this._participantId;
+
   set participantId(String participantId) =>
       _$this._participantId = participantId;
 
@@ -189,6 +191,7 @@ class _$DeactivateParticipantApiRequestActions
       DeactivateParticipantApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -11,8 +11,7 @@ const BuildKitTrayRestockPlanApiRestockSystem _$wireMOVE =
 const BuildKitTrayRestockPlanApiRestockSystem _$wireERP =
     const BuildKitTrayRestockPlanApiRestockSystem._('ERP');
 
-BuildKitTrayRestockPlanApiRestockSystem
-    _$buildKitTrayRestockPlanApiRestockSystemValueOf(String name) {
+BuildKitTrayRestockPlanApiRestockSystem _$valueOf(String name) {
   switch (name) {
     case 'MOVE':
       return _$wireMOVE;
@@ -23,8 +22,7 @@ BuildKitTrayRestockPlanApiRestockSystem
   }
 }
 
-final BuiltSet<BuildKitTrayRestockPlanApiRestockSystem>
-    _$buildKitTrayRestockPlanApiRestockSystemValues =
+final BuiltSet<BuildKitTrayRestockPlanApiRestockSystem> _$values =
     new BuiltSet<BuildKitTrayRestockPlanApiRestockSystem>(const <
         BuildKitTrayRestockPlanApiRestockSystem>[
   _$wireMOVE,

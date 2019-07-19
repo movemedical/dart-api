@@ -300,59 +300,83 @@ class ListStockForSourcingMatrixApiSourcingLocationBuilder
   _$ListStockForSourcingMatrixApiSourcingLocation _$v;
 
   String _locationKey;
+
   String get locationKey => _$this._locationKey;
+
   set locationKey(String locationKey) => _$this._locationKey = locationKey;
 
   String _responsibleParty;
+
   String get responsibleParty => _$this._responsibleParty;
+
   set responsibleParty(String responsibleParty) =>
       _$this._responsibleParty = responsibleParty;
 
   LocationBuilder _location;
+
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
+
   set location(LocationBuilder location) => _$this._location = location;
 
   LocationBuilder _homeLocation;
+
   LocationBuilder get homeLocation =>
       _$this._homeLocation ??= new LocationBuilder();
+
   set homeLocation(LocationBuilder homeLocation) =>
       _$this._homeLocation = homeLocation;
 
   String _demandLoanId;
+
   String get demandLoanId => _$this._demandLoanId;
+
   set demandLoanId(String demandLoanId) => _$this._demandLoanId = demandLoanId;
 
   String _consignmentLoanId;
+
   String get consignmentLoanId => _$this._consignmentLoanId;
+
   set consignmentLoanId(String consignmentLoanId) =>
       _$this._consignmentLoanId = consignmentLoanId;
 
   String _loanDisplay;
+
   String get loanDisplay => _$this._loanDisplay;
+
   set loanDisplay(String loanDisplay) => _$this._loanDisplay = loanDisplay;
 
   CaseEventLiteBuilder _caseEventLite;
+
   CaseEventLiteBuilder get caseEventLite =>
       _$this._caseEventLite ??= new CaseEventLiteBuilder();
+
   set caseEventLite(CaseEventLiteBuilder caseEventLite) =>
       _$this._caseEventLite = caseEventLite;
 
   DateTime _lastLoanSurgeryDate;
+
   DateTime get lastLoanSurgeryDate => _$this._lastLoanSurgeryDate;
+
   set lastLoanSurgeryDate(DateTime lastLoanSurgeryDate) =>
       _$this._lastLoanSurgeryDate = lastLoanSurgeryDate;
 
   bool _inTransit;
+
   bool get inTransit => _$this._inTransit;
+
   set inTransit(bool inTransit) => _$this._inTransit = inTransit;
 
   double _percentageMatch;
+
   double get percentageMatch => _$this._percentageMatch;
+
   set percentageMatch(double percentageMatch) =>
       _$this._percentageMatch = percentageMatch;
 
   bool _virtualStock;
+
   bool get virtualStock => _$this._virtualStock;
+
   set virtualStock(bool virtualStock) => _$this._virtualStock = virtualStock;
 
   ListStockForSourcingMatrixApiSourcingLocationBuilder();
@@ -550,6 +574,7 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
       ListStockForSourcingMatrixApiSourcingLocationBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
@@ -558,6 +583,7 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -26,11 +26,9 @@ class ListCaseFilesApiOrderBy extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<ListCaseFilesApiOrderBy> get values =>
-      _$listCaseFilesApiOrderByValues;
+  static BuiltSet<ListCaseFilesApiOrderBy> get values => _$values;
 
-  static ListCaseFilesApiOrderBy valueOf(String name) =>
-      _$listCaseFilesApiOrderByValueOf(name);
+  static ListCaseFilesApiOrderBy valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

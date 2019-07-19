@@ -48,6 +48,12 @@ abstract class UpdateSalesOrderHeaderApiRequest
   @nullable
   String get email;
 
+  @nullable
+  String get salesLeadUserId;
+
+  @nullable
+  String get opsLeadUserId;
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -95,6 +101,10 @@ abstract class UpdateSalesOrderHeaderApiRequestActions extends ModelActions<
   FieldDispatcher<String> get attention;
 
   FieldDispatcher<String> get email;
+
+  FieldDispatcher<String> get salesLeadUserId;
+
+  FieldDispatcher<String> get opsLeadUserId;
 
   ////////////////////////////////
   /// Constructors

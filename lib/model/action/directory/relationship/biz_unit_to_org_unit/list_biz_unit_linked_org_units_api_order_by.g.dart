@@ -9,8 +9,7 @@ part of 'list_biz_unit_linked_org_units_api_order_by.dart';
 const ListBizUnitLinkedOrgUnitsApiOrderBy _$wireORG_UNIT_NAME =
     const ListBizUnitLinkedOrgUnitsApiOrderBy._('ORG_UNIT_NAME');
 
-ListBizUnitLinkedOrgUnitsApiOrderBy
-    _$listBizUnitLinkedOrgUnitsApiOrderByValueOf(String name) {
+ListBizUnitLinkedOrgUnitsApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'ORG_UNIT_NAME':
       return _$wireORG_UNIT_NAME;
@@ -19,8 +18,7 @@ ListBizUnitLinkedOrgUnitsApiOrderBy
   }
 }
 
-final BuiltSet<ListBizUnitLinkedOrgUnitsApiOrderBy>
-    _$listBizUnitLinkedOrgUnitsApiOrderByValues =
+final BuiltSet<ListBizUnitLinkedOrgUnitsApiOrderBy> _$values =
     new BuiltSet<ListBizUnitLinkedOrgUnitsApiOrderBy>(const <
         ListBizUnitLinkedOrgUnitsApiOrderBy>[
   _$wireORG_UNIT_NAME,

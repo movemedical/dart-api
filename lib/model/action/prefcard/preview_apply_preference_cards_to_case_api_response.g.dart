@@ -116,9 +116,11 @@ class PreviewApplyPreferenceCardsToCaseApiResponseBuilder
   _$PreviewApplyPreferenceCardsToCaseApiResponse _$v;
 
   ListBuilder<PreviewApplyPreferenceCardsToCaseApiPreview> _preview;
+
   ListBuilder<PreviewApplyPreferenceCardsToCaseApiPreview> get preview =>
       _$this._preview ??=
           new ListBuilder<PreviewApplyPreferenceCardsToCaseApiPreview>();
+
   set preview(
           ListBuilder<PreviewApplyPreferenceCardsToCaseApiPreview> preview) =>
       _$this._preview = preview;
@@ -222,6 +224,7 @@ class _$PreviewApplyPreferenceCardsToCaseApiResponseActions
       PreviewApplyPreferenceCardsToCaseApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -63,6 +63,7 @@ class _$ListLoansApi extends ListLoansApi {
           ApiResult<ListLoansApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -68,6 +68,7 @@ class _$RequestStockExportDocApi extends RequestStockExportDocApi {
           ApiResult<RequestStockExportDocApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

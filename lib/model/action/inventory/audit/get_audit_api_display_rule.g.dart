@@ -238,40 +238,58 @@ class GetAuditApiDisplayRuleBuilder
   _$GetAuditApiDisplayRule _$v;
 
   bool _manage;
+
   bool get manage => _$this._manage;
+
   set manage(bool manage) => _$this._manage = manage;
 
   bool _manageInventoryTypesCount;
+
   bool get manageInventoryTypesCount => _$this._manageInventoryTypesCount;
+
   set manageInventoryTypesCount(bool manageInventoryTypesCount) =>
       _$this._manageInventoryTypesCount = manageInventoryTypesCount;
 
   bool _start;
+
   bool get start => _$this._start;
+
   set start(bool start) => _$this._start = start;
 
   bool _submit;
+
   bool get submit => _$this._submit;
+
   set submit(bool submit) => _$this._submit = submit;
 
   bool _cancel;
+
   bool get cancel => _$this._cancel;
+
   set cancel(bool cancel) => _$this._cancel = cancel;
 
   bool _addCounts;
+
   bool get addCounts => _$this._addCounts;
+
   set addCounts(bool addCounts) => _$this._addCounts = addCounts;
 
   bool _bill;
+
   bool get bill => _$this._bill;
+
   set bill(bool bill) => _$this._bill = bill;
 
   bool _exportItems;
+
   bool get exportItems => _$this._exportItems;
+
   set exportItems(bool exportItems) => _$this._exportItems = exportItems;
 
   bool _auditOutput;
+
   bool get auditOutput => _$this._auditOutput;
+
   set auditOutput(bool auditOutput) => _$this._auditOutput = auditOutput;
 
   GetAuditApiDisplayRuleBuilder();
@@ -390,6 +408,7 @@ class _$GetAuditApiDisplayRuleActions extends GetAuditApiDisplayRuleActions {
       GetAuditApiDisplayRuleBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -22,9 +22,9 @@ class RestockType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<RestockType> get values => _$restockTypeValues;
+  static BuiltSet<RestockType> get values => _$values;
 
-  static RestockType valueOf(String name) => _$restockTypeValueOf(name);
+  static RestockType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

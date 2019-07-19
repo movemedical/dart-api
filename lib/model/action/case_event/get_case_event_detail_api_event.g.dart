@@ -256,45 +256,65 @@ class GetCaseEventDetailApiEventBuilder
   _$GetCaseEventDetailApiEvent _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   EventType _eventType;
+
   EventType get eventType => _$this._eventType;
+
   set eventType(EventType eventType) => _$this._eventType = eventType;
 
   DateTime _eventDate;
+
   DateTime get eventDate => _$this._eventDate;
+
   set eventDate(DateTime eventDate) => _$this._eventDate = eventDate;
 
   DateTime _localEventDate;
+
   DateTime get localEventDate => _$this._localEventDate;
+
   set localEventDate(DateTime localEventDate) =>
       _$this._localEventDate = localEventDate;
 
   int _eventDuration;
+
   int get eventDuration => _$this._eventDuration;
+
   set eventDuration(int eventDuration) => _$this._eventDuration = eventDuration;
 
   EventStatus _eventStatus;
+
   EventStatus get eventStatus => _$this._eventStatus;
+
   set eventStatus(EventStatus eventStatus) => _$this._eventStatus = eventStatus;
 
   EventState _eventState;
+
   EventState get eventState => _$this._eventState;
+
   set eventState(EventState eventState) => _$this._eventState = eventState;
 
   String _eventDescription;
+
   String get eventDescription => _$this._eventDescription;
+
   set eventDescription(String eventDescription) =>
       _$this._eventDescription = eventDescription;
 
   int _eventNumber;
+
   int get eventNumber => _$this._eventNumber;
+
   set eventNumber(int eventNumber) => _$this._eventNumber = eventNumber;
 
   bool _eventTimeUnknown;
+
   bool get eventTimeUnknown => _$this._eventTimeUnknown;
+
   set eventTimeUnknown(bool eventTimeUnknown) =>
       _$this._eventTimeUnknown = eventTimeUnknown;
 
@@ -437,6 +457,7 @@ class _$GetCaseEventDetailApiEventActions
       GetCaseEventDetailApiEventBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

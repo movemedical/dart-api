@@ -70,6 +70,7 @@ class _$ListBizUnitProcedureOptionsApi extends ListBizUnitProcedureOptionsApi {
           ApiResult<ListBizUnitProcedureOptionsApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

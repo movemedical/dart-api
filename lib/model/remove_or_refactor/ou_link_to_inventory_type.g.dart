@@ -186,29 +186,41 @@ class OuLinkToInventoryTypeBuilder
   _$OuLinkToInventoryType _$v;
 
   String _inventoryTypeId;
+
   String get inventoryTypeId => _$this._inventoryTypeId;
+
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   String _inventoryTypeName;
+
   String get inventoryTypeName => _$this._inventoryTypeName;
+
   set inventoryTypeName(String inventoryTypeName) =>
       _$this._inventoryTypeName = inventoryTypeName;
 
   bool _view;
+
   bool get view => _$this._view;
+
   set view(bool view) => _$this._view = view;
 
   bool _source;
+
   bool get source => _$this._source;
+
   set source(bool source) => _$this._source = source;
 
   bool _reconcile;
+
   bool get reconcile => _$this._reconcile;
+
   set reconcile(bool reconcile) => _$this._reconcile = reconcile;
 
   bool _admin;
+
   bool get admin => _$this._admin;
+
   set admin(bool admin) => _$this._admin = admin;
 
   OuLinkToInventoryTypeBuilder();
@@ -314,6 +326,7 @@ class _$OuLinkToInventoryTypeActions extends OuLinkToInventoryTypeActions {
   OuLinkToInventoryTypeBuilder newBuilder$() => OuLinkToInventoryTypeBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

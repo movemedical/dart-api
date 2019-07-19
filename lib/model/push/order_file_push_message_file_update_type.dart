@@ -23,11 +23,10 @@ class OrderFilePushMessageFileUpdateType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<OrderFilePushMessageFileUpdateType> get values =>
-      _$orderFilePushMessageFileUpdateTypeValues;
+  static BuiltSet<OrderFilePushMessageFileUpdateType> get values => _$values;
 
   static OrderFilePushMessageFileUpdateType valueOf(String name) =>
-      _$orderFilePushMessageFileUpdateTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

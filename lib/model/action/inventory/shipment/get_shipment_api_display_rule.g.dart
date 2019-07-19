@@ -90,6 +90,12 @@ class _$GetShipmentApiDisplayRuleSerializer
         ..add(serializers.serialize(object.deliverAndConfirm,
             specifiedType: const FullType(bool)));
     }
+    if (object.sendToErp != null) {
+      result
+        ..add('sendToErp')
+        ..add(serializers.serialize(object.sendToErp,
+            specifiedType: const FullType(bool)));
+    }
 
     return result;
   }
@@ -150,6 +156,10 @@ class _$GetShipmentApiDisplayRuleSerializer
           result.deliverAndConfirm = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'sendToErp':
+          result.sendToErp = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -180,6 +190,8 @@ class _$GetShipmentApiDisplayRule extends GetShipmentApiDisplayRule {
   final bool autoComplete;
   @override
   final bool deliverAndConfirm;
+  @override
+  final bool sendToErp;
 
   factory _$GetShipmentApiDisplayRule(
           [void updates(GetShipmentApiDisplayRuleBuilder b)]) =>
@@ -196,7 +208,8 @@ class _$GetShipmentApiDisplayRule extends GetShipmentApiDisplayRule {
       this.updateErpReference,
       this.updateShipmentDetails,
       this.autoComplete,
-      this.deliverAndConfirm})
+      this.deliverAndConfirm,
+      this.sendToErp})
       : super._();
 
   @override
@@ -222,7 +235,8 @@ class _$GetShipmentApiDisplayRule extends GetShipmentApiDisplayRule {
         updateErpReference == other.updateErpReference &&
         updateShipmentDetails == other.updateShipmentDetails &&
         autoComplete == other.autoComplete &&
-        deliverAndConfirm == other.deliverAndConfirm;
+        deliverAndConfirm == other.deliverAndConfirm &&
+        sendToErp == other.sendToErp;
   }
 
   @override
@@ -236,17 +250,19 @@ class _$GetShipmentApiDisplayRule extends GetShipmentApiDisplayRule {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, cancel.hashCode),
-                                            release.hashCode),
-                                        processPicks.hashCode),
-                                    printPackingList.hashCode),
-                                receiveShipment.hashCode),
-                            assignPick.hashCode),
-                        cancelPick.hashCode),
-                    updateErpReference.hashCode),
-                updateShipmentDetails.hashCode),
-            autoComplete.hashCode),
-        deliverAndConfirm.hashCode));
+                                        $jc(
+                                            $jc($jc(0, cancel.hashCode),
+                                                release.hashCode),
+                                            processPicks.hashCode),
+                                        printPackingList.hashCode),
+                                    receiveShipment.hashCode),
+                                assignPick.hashCode),
+                            cancelPick.hashCode),
+                        updateErpReference.hashCode),
+                    updateShipmentDetails.hashCode),
+                autoComplete.hashCode),
+            deliverAndConfirm.hashCode),
+        sendToErp.hashCode));
   }
 
   @override
@@ -262,7 +278,8 @@ class _$GetShipmentApiDisplayRule extends GetShipmentApiDisplayRule {
           ..add('updateErpReference', updateErpReference)
           ..add('updateShipmentDetails', updateShipmentDetails)
           ..add('autoComplete', autoComplete)
-          ..add('deliverAndConfirm', deliverAndConfirm))
+          ..add('deliverAndConfirm', deliverAndConfirm)
+          ..add('sendToErp', sendToErp))
         .toString();
   }
 }
@@ -273,53 +290,81 @@ class GetShipmentApiDisplayRuleBuilder
   _$GetShipmentApiDisplayRule _$v;
 
   bool _cancel;
+
   bool get cancel => _$this._cancel;
+
   set cancel(bool cancel) => _$this._cancel = cancel;
 
   bool _release;
+
   bool get release => _$this._release;
+
   set release(bool release) => _$this._release = release;
 
   bool _processPicks;
+
   bool get processPicks => _$this._processPicks;
+
   set processPicks(bool processPicks) => _$this._processPicks = processPicks;
 
   bool _printPackingList;
+
   bool get printPackingList => _$this._printPackingList;
+
   set printPackingList(bool printPackingList) =>
       _$this._printPackingList = printPackingList;
 
   bool _receiveShipment;
+
   bool get receiveShipment => _$this._receiveShipment;
+
   set receiveShipment(bool receiveShipment) =>
       _$this._receiveShipment = receiveShipment;
 
   bool _assignPick;
+
   bool get assignPick => _$this._assignPick;
+
   set assignPick(bool assignPick) => _$this._assignPick = assignPick;
 
   bool _cancelPick;
+
   bool get cancelPick => _$this._cancelPick;
+
   set cancelPick(bool cancelPick) => _$this._cancelPick = cancelPick;
 
   bool _updateErpReference;
+
   bool get updateErpReference => _$this._updateErpReference;
+
   set updateErpReference(bool updateErpReference) =>
       _$this._updateErpReference = updateErpReference;
 
   bool _updateShipmentDetails;
+
   bool get updateShipmentDetails => _$this._updateShipmentDetails;
+
   set updateShipmentDetails(bool updateShipmentDetails) =>
       _$this._updateShipmentDetails = updateShipmentDetails;
 
   bool _autoComplete;
+
   bool get autoComplete => _$this._autoComplete;
+
   set autoComplete(bool autoComplete) => _$this._autoComplete = autoComplete;
 
   bool _deliverAndConfirm;
+
   bool get deliverAndConfirm => _$this._deliverAndConfirm;
+
   set deliverAndConfirm(bool deliverAndConfirm) =>
       _$this._deliverAndConfirm = deliverAndConfirm;
+
+  bool _sendToErp;
+
+  bool get sendToErp => _$this._sendToErp;
+
+  set sendToErp(bool sendToErp) => _$this._sendToErp = sendToErp;
 
   GetShipmentApiDisplayRuleBuilder();
 
@@ -336,6 +381,7 @@ class GetShipmentApiDisplayRuleBuilder
       _updateShipmentDetails = _$v.updateShipmentDetails;
       _autoComplete = _$v.autoComplete;
       _deliverAndConfirm = _$v.deliverAndConfirm;
+      _sendToErp = _$v.sendToErp;
       _$v = null;
     }
     return this;
@@ -368,7 +414,8 @@ class GetShipmentApiDisplayRuleBuilder
             updateErpReference: updateErpReference,
             updateShipmentDetails: updateShipmentDetails,
             autoComplete: autoComplete,
-            deliverAndConfirm: deliverAndConfirm);
+            deliverAndConfirm: deliverAndConfirm,
+            sendToErp: sendToErp);
     replace(_$result);
     return _$result;
   }
@@ -407,6 +454,7 @@ class _$GetShipmentApiDisplayRuleActions
   final FieldDispatcher<bool> updateShipmentDetails;
   final FieldDispatcher<bool> autoComplete;
   final FieldDispatcher<bool> deliverAndConfirm;
+  final FieldDispatcher<bool> sendToErp;
 
   _$GetShipmentApiDisplayRuleActions._(this.options$)
       : replace$ = options$.action<GetShipmentApiDisplayRule>(
@@ -454,6 +502,8 @@ class _$GetShipmentApiDisplayRuleActions
             (a) => a?.deliverAndConfirm,
             (s) => s?.deliverAndConfirm,
             (p, b) => p?.deliverAndConfirm = b),
+        sendToErp = options$.field<bool>('sendToErp', (a) => a?.sendToErp,
+            (s) => s?.sendToErp, (p, b) => p?.sendToErp = b),
         super._();
 
   factory _$GetShipmentApiDisplayRuleActions(
@@ -468,6 +518,7 @@ class _$GetShipmentApiDisplayRuleActions
       GetShipmentApiDisplayRuleBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -483,6 +534,7 @@ class _$GetShipmentApiDisplayRuleActions
         this.updateShipmentDetails,
         this.autoComplete,
         this.deliverAndConfirm,
+        this.sendToErp,
       ]);
 
   @override
@@ -499,6 +551,7 @@ class _$GetShipmentApiDisplayRuleActions
     updateShipmentDetails.reducer$(reducer);
     autoComplete.reducer$(reducer);
     deliverAndConfirm.reducer$(reducer);
+    sendToErp.reducer$(reducer);
   }
 
   @override

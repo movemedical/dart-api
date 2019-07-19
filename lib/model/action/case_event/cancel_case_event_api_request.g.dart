@@ -133,16 +133,22 @@ class CancelCaseEventApiRequestBuilder
   _$CancelCaseEventApiRequest _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   String _cancelReasonId;
+
   String get cancelReasonId => _$this._cancelReasonId;
+
   set cancelReasonId(String cancelReasonId) =>
       _$this._cancelReasonId = cancelReasonId;
 
   String _note;
+
   String get note => _$this._note;
+
   set note(String note) => _$this._note = note;
 
   CancelCaseEventApiRequestBuilder();
@@ -237,6 +243,7 @@ class _$CancelCaseEventApiRequestActions
       CancelCaseEventApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

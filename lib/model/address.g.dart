@@ -261,47 +261,69 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
   _$Address _$v;
 
   String _attn;
+
   String get attn => _$this._attn;
+
   set attn(String attn) => _$this._attn = attn;
 
   String _line1;
+
   String get line1 => _$this._line1;
+
   set line1(String line1) => _$this._line1 = line1;
 
   String _line2;
+
   String get line2 => _$this._line2;
+
   set line2(String line2) => _$this._line2 = line2;
 
   String _line3;
+
   String get line3 => _$this._line3;
+
   set line3(String line3) => _$this._line3 = line3;
 
   String _city;
+
   String get city => _$this._city;
+
   set city(String city) => _$this._city = city;
 
   String _county;
+
   String get county => _$this._county;
+
   set county(String county) => _$this._county = county;
 
   String _state;
+
   String get state => _$this._state;
+
   set state(String state) => _$this._state = state;
 
   String _postalCode;
+
   String get postalCode => _$this._postalCode;
+
   set postalCode(String postalCode) => _$this._postalCode = postalCode;
 
   String _country;
+
   String get country => _$this._country;
+
   set country(String country) => _$this._country = country;
 
   double _latitude;
+
   double get latitude => _$this._latitude;
+
   set latitude(double latitude) => _$this._latitude = latitude;
 
   double _longitude;
+
   double get longitude => _$this._longitude;
+
   set longitude(double longitude) => _$this._longitude = longitude;
 
   AddressBuilder();
@@ -422,6 +444,7 @@ class _$AddressActions extends AddressActions {
   AddressBuilder newBuilder$() => AddressBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

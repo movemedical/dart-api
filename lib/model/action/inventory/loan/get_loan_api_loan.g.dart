@@ -179,6 +179,12 @@ class _$GetLoanApiLoanSerializer
         ..add(serializers.serialize(object.created,
             specifiedType: const FullType(DateTime)));
     }
+    if (object.createdBy != null) {
+      result
+        ..add('createdBy')
+        ..add(serializers.serialize(object.createdBy,
+            specifiedType: const FullType(String)));
+    }
     if (object.approvedBy != null) {
       result
         ..add('approvedBy')
@@ -196,6 +202,18 @@ class _$GetLoanApiLoanSerializer
         ..add('loanReturnData')
         ..add(serializers.serialize(object.loanReturnData,
             specifiedType: const FullType(GetLoanApiLoanReturnData)));
+    }
+    if (object.salesLead != null) {
+      result
+        ..add('salesLead')
+        ..add(serializers.serialize(object.salesLead,
+            specifiedType: const FullType(UserLite)));
+    }
+    if (object.opsLead != null) {
+      result
+        ..add('opsLead')
+        ..add(serializers.serialize(object.opsLead,
+            specifiedType: const FullType(UserLite)));
     }
 
     return result;
@@ -323,6 +341,10 @@ class _$GetLoanApiLoanSerializer
           result.created = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
+        case 'createdBy':
+          result.createdBy = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'approvedBy':
           result.approvedBy = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -335,6 +357,14 @@ class _$GetLoanApiLoanSerializer
           result.loanReturnData.replace(serializers.deserialize(value,
                   specifiedType: const FullType(GetLoanApiLoanReturnData))
               as GetLoanApiLoanReturnData);
+          break;
+        case 'salesLead':
+          result.salesLead.replace(serializers.deserialize(value,
+              specifiedType: const FullType(UserLite)) as UserLite);
+          break;
+        case 'opsLead':
+          result.opsLead.replace(serializers.deserialize(value,
+              specifiedType: const FullType(UserLite)) as UserLite);
           break;
       }
     }
@@ -397,11 +427,17 @@ class _$GetLoanApiLoan extends GetLoanApiLoan {
   @override
   final DateTime created;
   @override
+  final String createdBy;
+  @override
   final String approvedBy;
   @override
   final DateTime approved;
   @override
   final GetLoanApiLoanReturnData loanReturnData;
+  @override
+  final UserLite salesLead;
+  @override
+  final UserLite opsLead;
 
   factory _$GetLoanApiLoan([void updates(GetLoanApiLoanBuilder b)]) =>
       (new GetLoanApiLoanBuilder()..update(updates)).build();
@@ -433,9 +469,12 @@ class _$GetLoanApiLoan extends GetLoanApiLoan {
       this.description,
       this.linkedLoan,
       this.created,
+      this.createdBy,
       this.approvedBy,
       this.approved,
-      this.loanReturnData})
+      this.loanReturnData,
+      this.salesLead,
+      this.opsLead})
       : super._();
 
   @override
@@ -477,9 +516,12 @@ class _$GetLoanApiLoan extends GetLoanApiLoan {
         description == other.description &&
         linkedLoan == other.linkedLoan &&
         created == other.created &&
+        createdBy == other.createdBy &&
         approvedBy == other.approvedBy &&
         approved == other.approved &&
-        loanReturnData == other.loanReturnData;
+        loanReturnData == other.loanReturnData &&
+        salesLead == other.salesLead &&
+        opsLead == other.opsLead;
   }
 
   @override
@@ -502,26 +544,26 @@ class _$GetLoanApiLoan extends GetLoanApiLoan {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), number.hashCode), status.hashCode), reason.hashCode), moveItemClass.hashCode), location.hashCode), service.hashCode), opsOrgUnit.hashCode), salesOrgUnit.hashCode), deliverToAttn.hashCode),
-                                                                                deliverTo.hashCode),
-                                                                            deliverToOverride.hashCode),
-                                                                        shippingService.hashCode),
-                                                                    orders.hashCode),
-                                                                cases.hashCode),
-                                                            loanReturnType.hashCode),
-                                                        returnLocation.hashCode),
-                                                    complianceReturnLocation.hashCode),
-                                                lateAfterDate.hashCode),
-                                            expiredReplenishDays.hashCode),
-                                        nextEvaluateOnHandStockDate.hashCode),
-                                    nextEvaluateComplianceStockDate.hashCode),
-                                reference.hashCode),
-                            description.hashCode),
-                        linkedLoan.hashCode),
-                    created.hashCode),
-                approvedBy.hashCode),
-            approved.hashCode),
-        loanReturnData.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), number.hashCode), status.hashCode), reason.hashCode), moveItemClass.hashCode), location.hashCode), service.hashCode), opsOrgUnit.hashCode), salesOrgUnit.hashCode), deliverToAttn.hashCode), deliverTo.hashCode), deliverToOverride.hashCode), shippingService.hashCode),
+                                                                                orders.hashCode),
+                                                                            cases.hashCode),
+                                                                        loanReturnType.hashCode),
+                                                                    returnLocation.hashCode),
+                                                                complianceReturnLocation.hashCode),
+                                                            lateAfterDate.hashCode),
+                                                        expiredReplenishDays.hashCode),
+                                                    nextEvaluateOnHandStockDate.hashCode),
+                                                nextEvaluateComplianceStockDate.hashCode),
+                                            reference.hashCode),
+                                        description.hashCode),
+                                    linkedLoan.hashCode),
+                                created.hashCode),
+                            createdBy.hashCode),
+                        approvedBy.hashCode),
+                    approved.hashCode),
+                loanReturnData.hashCode),
+            salesLead.hashCode),
+        opsLead.hashCode));
   }
 
   @override
@@ -554,9 +596,12 @@ class _$GetLoanApiLoan extends GetLoanApiLoan {
           ..add('description', description)
           ..add('linkedLoan', linkedLoan)
           ..add('created', created)
+          ..add('createdBy', createdBy)
           ..add('approvedBy', approvedBy)
           ..add('approved', approved)
-          ..add('loanReturnData', loanReturnData))
+          ..add('loanReturnData', loanReturnData)
+          ..add('salesLead', salesLead)
+          ..add('opsLead', opsLead))
         .toString();
   }
 }
@@ -566,147 +611,223 @@ class GetLoanApiLoanBuilder
   _$GetLoanApiLoan _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _number;
+
   int get number => _$this._number;
+
   set number(int number) => _$this._number = number;
 
   LoanStatus _status;
+
   LoanStatus get status => _$this._status;
+
   set status(LoanStatus status) => _$this._status = status;
 
   LoanReason _reason;
+
   LoanReason get reason => _$this._reason;
+
   set reason(LoanReason reason) => _$this._reason = reason;
 
   MoveItemClass _moveItemClass;
+
   MoveItemClass get moveItemClass => _$this._moveItemClass;
+
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   LocationBuilder _location;
+
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
+
   set location(LocationBuilder location) => _$this._location = location;
 
   DateRangeBuilder _service;
+
   DateRangeBuilder get service => _$this._service ??= new DateRangeBuilder();
+
   set service(DateRangeBuilder service) => _$this._service = service;
 
   OrgUnitBuilder _opsOrgUnit;
+
   OrgUnitBuilder get opsOrgUnit => _$this._opsOrgUnit ??= new OrgUnitBuilder();
+
   set opsOrgUnit(OrgUnitBuilder opsOrgUnit) => _$this._opsOrgUnit = opsOrgUnit;
 
   OrgUnitBuilder _salesOrgUnit;
+
   OrgUnitBuilder get salesOrgUnit =>
       _$this._salesOrgUnit ??= new OrgUnitBuilder();
+
   set salesOrgUnit(OrgUnitBuilder salesOrgUnit) =>
       _$this._salesOrgUnit = salesOrgUnit;
 
   String _deliverToAttn;
+
   String get deliverToAttn => _$this._deliverToAttn;
+
   set deliverToAttn(String deliverToAttn) =>
       _$this._deliverToAttn = deliverToAttn;
 
   CustomerAddressBuilder _deliverTo;
+
   CustomerAddressBuilder get deliverTo =>
       _$this._deliverTo ??= new CustomerAddressBuilder();
+
   set deliverTo(CustomerAddressBuilder deliverTo) =>
       _$this._deliverTo = deliverTo;
 
   AddressBuilder _deliverToOverride;
+
   AddressBuilder get deliverToOverride =>
       _$this._deliverToOverride ??= new AddressBuilder();
+
   set deliverToOverride(AddressBuilder deliverToOverride) =>
       _$this._deliverToOverride = deliverToOverride;
 
   ShippingServiceBuilder _shippingService;
+
   ShippingServiceBuilder get shippingService =>
       _$this._shippingService ??= new ShippingServiceBuilder();
+
   set shippingService(ShippingServiceBuilder shippingService) =>
       _$this._shippingService = shippingService;
 
   ListBuilder<OrderHeaderLite> _orders;
+
   ListBuilder<OrderHeaderLite> get orders =>
       _$this._orders ??= new ListBuilder<OrderHeaderLite>();
+
   set orders(ListBuilder<OrderHeaderLite> orders) => _$this._orders = orders;
 
   ListBuilder<CaseEventLite> _cases;
+
   ListBuilder<CaseEventLite> get cases =>
       _$this._cases ??= new ListBuilder<CaseEventLite>();
+
   set cases(ListBuilder<CaseEventLite> cases) => _$this._cases = cases;
 
   LoanReturnType _loanReturnType;
+
   LoanReturnType get loanReturnType => _$this._loanReturnType;
+
   set loanReturnType(LoanReturnType loanReturnType) =>
       _$this._loanReturnType = loanReturnType;
 
   LocationBuilder _returnLocation;
+
   LocationBuilder get returnLocation =>
       _$this._returnLocation ??= new LocationBuilder();
+
   set returnLocation(LocationBuilder returnLocation) =>
       _$this._returnLocation = returnLocation;
 
   LocationBuilder _complianceReturnLocation;
+
   LocationBuilder get complianceReturnLocation =>
       _$this._complianceReturnLocation ??= new LocationBuilder();
+
   set complianceReturnLocation(LocationBuilder complianceReturnLocation) =>
       _$this._complianceReturnLocation = complianceReturnLocation;
 
   DateTime _lateAfterDate;
+
   DateTime get lateAfterDate => _$this._lateAfterDate;
+
   set lateAfterDate(DateTime lateAfterDate) =>
       _$this._lateAfterDate = lateAfterDate;
 
   int _expiredReplenishDays;
+
   int get expiredReplenishDays => _$this._expiredReplenishDays;
+
   set expiredReplenishDays(int expiredReplenishDays) =>
       _$this._expiredReplenishDays = expiredReplenishDays;
 
   DateTime _nextEvaluateOnHandStockDate;
+
   DateTime get nextEvaluateOnHandStockDate =>
       _$this._nextEvaluateOnHandStockDate;
+
   set nextEvaluateOnHandStockDate(DateTime nextEvaluateOnHandStockDate) =>
       _$this._nextEvaluateOnHandStockDate = nextEvaluateOnHandStockDate;
 
   DateTime _nextEvaluateComplianceStockDate;
+
   DateTime get nextEvaluateComplianceStockDate =>
       _$this._nextEvaluateComplianceStockDate;
+
   set nextEvaluateComplianceStockDate(
           DateTime nextEvaluateComplianceStockDate) =>
       _$this._nextEvaluateComplianceStockDate = nextEvaluateComplianceStockDate;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   LoanLiteBuilder _linkedLoan;
+
   LoanLiteBuilder get linkedLoan =>
       _$this._linkedLoan ??= new LoanLiteBuilder();
+
   set linkedLoan(LoanLiteBuilder linkedLoan) => _$this._linkedLoan = linkedLoan;
 
   DateTime _created;
+
   DateTime get created => _$this._created;
+
   set created(DateTime created) => _$this._created = created;
 
+  String _createdBy;
+
+  String get createdBy => _$this._createdBy;
+
+  set createdBy(String createdBy) => _$this._createdBy = createdBy;
+
   String _approvedBy;
+
   String get approvedBy => _$this._approvedBy;
+
   set approvedBy(String approvedBy) => _$this._approvedBy = approvedBy;
 
   DateTime _approved;
+
   DateTime get approved => _$this._approved;
+
   set approved(DateTime approved) => _$this._approved = approved;
 
   GetLoanApiLoanReturnDataBuilder _loanReturnData;
+
   GetLoanApiLoanReturnDataBuilder get loanReturnData =>
       _$this._loanReturnData ??= new GetLoanApiLoanReturnDataBuilder();
+
   set loanReturnData(GetLoanApiLoanReturnDataBuilder loanReturnData) =>
       _$this._loanReturnData = loanReturnData;
+
+  UserLiteBuilder _salesLead;
+
+  UserLiteBuilder get salesLead => _$this._salesLead ??= new UserLiteBuilder();
+
+  set salesLead(UserLiteBuilder salesLead) => _$this._salesLead = salesLead;
+
+  UserLiteBuilder _opsLead;
+
+  UserLiteBuilder get opsLead => _$this._opsLead ??= new UserLiteBuilder();
+
+  set opsLead(UserLiteBuilder opsLead) => _$this._opsLead = opsLead;
 
   GetLoanApiLoanBuilder();
 
@@ -738,9 +859,12 @@ class GetLoanApiLoanBuilder
       _description = _$v.description;
       _linkedLoan = _$v.linkedLoan?.toBuilder();
       _created = _$v.created;
+      _createdBy = _$v.createdBy;
       _approvedBy = _$v.approvedBy;
       _approved = _$v.approved;
       _loanReturnData = _$v.loanReturnData?.toBuilder();
+      _salesLead = _$v.salesLead?.toBuilder();
+      _opsLead = _$v.opsLead?.toBuilder();
       _$v = null;
     }
     return this;
@@ -791,9 +915,12 @@ class GetLoanApiLoanBuilder
               description: description,
               linkedLoan: _linkedLoan?.build(),
               created: created,
+              createdBy: createdBy,
               approvedBy: approvedBy,
               approved: approved,
-              loanReturnData: _loanReturnData?.build());
+              loanReturnData: _loanReturnData?.build(),
+              salesLead: _salesLead?.build(),
+              opsLead: _opsLead?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -827,6 +954,10 @@ class GetLoanApiLoanBuilder
 
         _$failedField = 'loanReturnData';
         _loanReturnData?.build();
+        _$failedField = 'salesLead';
+        _salesLead?.build();
+        _$failedField = 'opsLead';
+        _opsLead?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetLoanApiLoan', _$failedField, e.toString());
@@ -881,9 +1012,12 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
   final FieldDispatcher<String> description;
   final LoanLiteActions linkedLoan;
   final FieldDispatcher<DateTime> created;
+  final FieldDispatcher<String> createdBy;
   final FieldDispatcher<String> approvedBy;
   final FieldDispatcher<DateTime> approved;
   final GetLoanApiLoanReturnDataActions loanReturnData;
+  final UserLiteActions salesLead;
+  final UserLiteActions opsLead;
 
   _$GetLoanApiLoanActions._(this.options$)
       : replace$ =
@@ -1019,6 +1153,8 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
                 (parent, builder) => parent?.linkedLoan = builder)),
         created = options$.field<DateTime>('created', (a) => a?.created,
             (s) => s?.created, (p, b) => p?.created = b),
+        createdBy = options$.field<String>('createdBy', (a) => a?.createdBy,
+            (s) => s?.createdBy, (p, b) => p?.createdBy = b),
         approvedBy = options$.field<String>('approvedBy', (a) => a?.approvedBy,
             (s) => s?.approvedBy, (p, b) => p?.approvedBy = b),
         approved = options$.field<DateTime>('approved', (a) => a?.approved,
@@ -1033,6 +1169,20 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
                 (s) => s?.loanReturnData,
                 (b) => b?.loanReturnData,
                 (parent, builder) => parent?.loanReturnData = builder)),
+        salesLead = UserLiteActions(() =>
+            options$.stateful<UserLite, UserLiteBuilder, UserLiteActions>(
+                'salesLead',
+                (a) => a.salesLead,
+                (s) => s?.salesLead,
+                (b) => b?.salesLead,
+                (parent, builder) => parent?.salesLead = builder)),
+        opsLead = UserLiteActions(() =>
+            options$.stateful<UserLite, UserLiteBuilder, UserLiteActions>(
+                'opsLead',
+                (a) => a.opsLead,
+                (s) => s?.opsLead,
+                (b) => b?.opsLead,
+                (parent, builder) => parent?.opsLead = builder)),
         super._();
 
   factory _$GetLoanApiLoanActions(GetLoanApiLoanActionsOptions options) =>
@@ -1045,6 +1195,7 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
   GetLoanApiLoanBuilder newBuilder$() => GetLoanApiLoanBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
@@ -1058,9 +1209,12 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
         this.complianceReturnLocation,
         this.linkedLoan,
         this.loanReturnData,
+        this.salesLead,
+        this.opsLead,
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -1081,6 +1235,7 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
         this.reference,
         this.description,
         this.created,
+        this.createdBy,
         this.approvedBy,
         this.approved,
       ]);
@@ -1114,9 +1269,12 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
     description.reducer$(reducer);
     linkedLoan.reducer$(reducer);
     created.reducer$(reducer);
+    createdBy.reducer$(reducer);
     approvedBy.reducer$(reducer);
     approved.reducer$(reducer);
     loanReturnData.reducer$(reducer);
+    salesLead.reducer$(reducer);
+    opsLead.reducer$(reducer);
   }
 
   @override
@@ -1133,5 +1291,7 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
     complianceReturnLocation.middleware$(middleware);
     linkedLoan.middleware$(middleware);
     loanReturnData.middleware$(middleware);
+    salesLead.middleware$(middleware);
+    opsLead.middleware$(middleware);
   }
 }

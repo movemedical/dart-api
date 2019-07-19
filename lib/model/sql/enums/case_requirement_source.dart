@@ -21,11 +21,9 @@ class CaseRequirementSource extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<CaseRequirementSource> get values =>
-      _$caseRequirementSourceValues;
+  static BuiltSet<CaseRequirementSource> get values => _$values;
 
-  static CaseRequirementSource valueOf(String name) =>
-      _$caseRequirementSourceValueOf(name);
+  static CaseRequirementSource valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

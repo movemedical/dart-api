@@ -25,10 +25,10 @@ class BuildKitTrayRestockPlanApiRestockByDateType extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<BuildKitTrayRestockPlanApiRestockByDateType> get values =>
-      _$buildKitTrayRestockPlanApiRestockByDateTypeValues;
+      _$values;
 
   static BuildKitTrayRestockPlanApiRestockByDateType valueOf(String name) =>
-      _$buildKitTrayRestockPlanApiRestockByDateTypeValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

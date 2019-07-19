@@ -65,6 +65,7 @@ class _$ListItemFilesApi extends ListItemFilesApi {
           ApiResult<ListItemFilesApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

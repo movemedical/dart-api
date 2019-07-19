@@ -77,6 +77,7 @@ class _$ListDeliveryScheduleProfileHolidaysApi
           ApiResult<ListDeliveryScheduleProfileHolidaysApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

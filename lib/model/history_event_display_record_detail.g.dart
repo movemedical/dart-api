@@ -137,15 +137,21 @@ class HistoryEventDisplayRecordDetailBuilder
   _$HistoryEventDisplayRecordDetail _$v;
 
   String _fieldName;
+
   String get fieldName => _$this._fieldName;
+
   set fieldName(String fieldName) => _$this._fieldName = fieldName;
 
   String _valueBefore;
+
   String get valueBefore => _$this._valueBefore;
+
   set valueBefore(String valueBefore) => _$this._valueBefore = valueBefore;
 
   String _valueAfter;
+
   String get valueAfter => _$this._valueAfter;
+
   set valueAfter(String valueAfter) => _$this._valueAfter = valueAfter;
 
   HistoryEventDisplayRecordDetailBuilder();
@@ -238,6 +244,7 @@ class _$HistoryEventDisplayRecordDetailActions
       HistoryEventDisplayRecordDetailBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -247,47 +247,65 @@ class GetCaseEventDetailApiResponseBuilder
   _$GetCaseEventDetailApiResponse _$v;
 
   GetCaseEventDetailApiCaseEventBuilder _caseEvent;
+
   GetCaseEventDetailApiCaseEventBuilder get caseEvent =>
       _$this._caseEvent ??= new GetCaseEventDetailApiCaseEventBuilder();
+
   set caseEvent(GetCaseEventDetailApiCaseEventBuilder caseEvent) =>
       _$this._caseEvent = caseEvent;
 
   GetCaseEventDetailApiEventBuilder _event;
+
   GetCaseEventDetailApiEventBuilder get event =>
       _$this._event ??= new GetCaseEventDetailApiEventBuilder();
+
   set event(GetCaseEventDetailApiEventBuilder event) => _$this._event = event;
 
   GetCaseEventDetailApiDisplayRulesBuilder _displayRules;
+
   GetCaseEventDetailApiDisplayRulesBuilder get displayRules =>
       _$this._displayRules ??= new GetCaseEventDetailApiDisplayRulesBuilder();
+
   set displayRules(GetCaseEventDetailApiDisplayRulesBuilder displayRules) =>
       _$this._displayRules = displayRules;
 
   ListBuilder<GetCaseEventDetailApiCaseDoc> _caseDocs;
+
   ListBuilder<GetCaseEventDetailApiCaseDoc> get caseDocs =>
       _$this._caseDocs ??= new ListBuilder<GetCaseEventDetailApiCaseDoc>();
+
   set caseDocs(ListBuilder<GetCaseEventDetailApiCaseDoc> caseDocs) =>
       _$this._caseDocs = caseDocs;
 
   int _requirementsCount;
+
   int get requirementsCount => _$this._requirementsCount;
+
   set requirementsCount(int requirementsCount) =>
       _$this._requirementsCount = requirementsCount;
 
   int _usageCount;
+
   int get usageCount => _$this._usageCount;
+
   set usageCount(int usageCount) => _$this._usageCount = usageCount;
 
   int _fileCount;
+
   int get fileCount => _$this._fileCount;
+
   set fileCount(int fileCount) => _$this._fileCount = fileCount;
 
   int _noteCount;
+
   int get noteCount => _$this._noteCount;
+
   set noteCount(int noteCount) => _$this._noteCount = noteCount;
 
   int _conversationCount;
+
   int get conversationCount => _$this._conversationCount;
+
   set conversationCount(int conversationCount) =>
       _$this._conversationCount = conversationCount;
 
@@ -459,6 +477,7 @@ class _$GetCaseEventDetailApiResponseActions
       GetCaseEventDetailApiResponseBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.caseEvent,
@@ -467,6 +486,7 @@ class _$GetCaseEventDetailApiResponseActions
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

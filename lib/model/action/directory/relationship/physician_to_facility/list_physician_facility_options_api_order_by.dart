@@ -22,10 +22,10 @@ class ListPhysicianFacilityOptionsApiOrderBy extends EnumClass {
   ////////////////////////////////
 
   static BuiltSet<ListPhysicianFacilityOptionsApiOrderBy> get values =>
-      _$listPhysicianFacilityOptionsApiOrderByValues;
+      _$values;
 
   static ListPhysicianFacilityOptionsApiOrderBy valueOf(String name) =>
-      _$listPhysicianFacilityOptionsApiOrderByValueOf(name);
+      _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

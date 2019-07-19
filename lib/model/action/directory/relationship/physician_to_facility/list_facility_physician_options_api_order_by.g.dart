@@ -9,8 +9,7 @@ part of 'list_facility_physician_options_api_order_by.dart';
 const ListFacilityPhysicianOptionsApiOrderBy _$wireNAME =
     const ListFacilityPhysicianOptionsApiOrderBy._('NAME');
 
-ListFacilityPhysicianOptionsApiOrderBy
-    _$listFacilityPhysicianOptionsApiOrderByValueOf(String name) {
+ListFacilityPhysicianOptionsApiOrderBy _$valueOf(String name) {
   switch (name) {
     case 'NAME':
       return _$wireNAME;
@@ -19,8 +18,7 @@ ListFacilityPhysicianOptionsApiOrderBy
   }
 }
 
-final BuiltSet<ListFacilityPhysicianOptionsApiOrderBy>
-    _$listFacilityPhysicianOptionsApiOrderByValues =
+final BuiltSet<ListFacilityPhysicianOptionsApiOrderBy> _$values =
     new BuiltSet<ListFacilityPhysicianOptionsApiOrderBy>(const <
         ListFacilityPhysicianOptionsApiOrderBy>[
   _$wireNAME,

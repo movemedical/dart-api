@@ -14,6 +14,9 @@ abstract class SourceStockApiSourceStock
   ////////////////////////////////
 
   @nullable
+  String get stockId;
+
+  @nullable
   String get summaryKey;
 
   @nullable
@@ -44,6 +47,8 @@ abstract class SourceStockApiSourceStockActions extends ModelActions<
   ////////////////////////////////
   /// Fields
   ////////////////////////////////
+
+  FieldDispatcher<String> get stockId;
 
   FieldDispatcher<String> get summaryKey;
 

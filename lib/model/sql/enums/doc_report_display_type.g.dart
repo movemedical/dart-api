@@ -11,7 +11,7 @@ const DocReportDisplayType _$wireIOS = const DocReportDisplayType._('IOS');
 const DocReportDisplayType _$wireANDROID =
     const DocReportDisplayType._('ANDROID');
 
-DocReportDisplayType _$docReportDisplayTypeValueOf(String name) {
+DocReportDisplayType _$valueOf(String name) {
   switch (name) {
     case 'WEB':
       return _$wireWEB;
@@ -24,7 +24,7 @@ DocReportDisplayType _$docReportDisplayTypeValueOf(String name) {
   }
 }
 
-final BuiltSet<DocReportDisplayType> _$docReportDisplayTypeValues =
+final BuiltSet<DocReportDisplayType> _$values =
     new BuiltSet<DocReportDisplayType>(const <DocReportDisplayType>[
   _$wireWEB,
   _$wireIOS,

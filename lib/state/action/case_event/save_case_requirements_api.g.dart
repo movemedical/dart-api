@@ -62,6 +62,7 @@ class _$SaveCaseRequirementsApi extends SaveCaseRequirementsApi {
           ApiCommand<SaveCaseRequirementsApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -23,6 +23,9 @@ class CaseEventUpdateType extends EnumClass {
   static const CaseEventUpdateType DETAILS_UPDATED = _$wireDETAILS_UPDATED;
   static const CaseEventUpdateType INSURANCE_UPDATED = _$wireINSURANCE_UPDATED;
   static const CaseEventUpdateType STATUS_UPDATED = _$wireSTATUS_UPDATED;
+  static const CaseEventUpdateType PRICING_UPDATED = _$wirePRICING_UPDATED;
+  static const CaseEventUpdateType SALES_ORDER_PRICING_UPDATED =
+      _$wireSALES_ORDER_PRICING_UPDATED;
 
   ////////////////////////////////
   /// Constructor
@@ -34,11 +37,9 @@ class CaseEventUpdateType extends EnumClass {
   /// Utilities
   ////////////////////////////////
 
-  static BuiltSet<CaseEventUpdateType> get values =>
-      _$caseEventUpdateTypeValues;
+  static BuiltSet<CaseEventUpdateType> get values => _$values;
 
-  static CaseEventUpdateType valueOf(String name) =>
-      _$caseEventUpdateTypeValueOf(name);
+  static CaseEventUpdateType valueOf(String name) => _$valueOf(name);
 
   ////////////////////////////////
   /// Serializer

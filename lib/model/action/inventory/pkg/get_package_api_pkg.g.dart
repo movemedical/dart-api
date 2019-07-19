@@ -267,53 +267,75 @@ class GetPackageApiPkgBuilder
   _$GetPackageApiPkg _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _number;
+
   int get number => _$this._number;
+
   set number(int number) => _$this._number = number;
 
   PackageStatus _status;
+
   PackageStatus get status => _$this._status;
+
   set status(PackageStatus status) => _$this._status = status;
 
   LocationBuilder _location;
+
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
+
   set location(LocationBuilder location) => _$this._location = location;
 
   OrderHeaderLiteBuilder _order;
+
   OrderHeaderLiteBuilder get order =>
       _$this._order ??= new OrderHeaderLiteBuilder();
+
   set order(OrderHeaderLiteBuilder order) => _$this._order = order;
 
   ShipmentLiteBuilder _shipment;
+
   ShipmentLiteBuilder get shipment =>
       _$this._shipment ??= new ShipmentLiteBuilder();
+
   set shipment(ShipmentLiteBuilder shipment) => _$this._shipment = shipment;
 
   DateTime _estimatedDeliveryDate;
+
   DateTime get estimatedDeliveryDate => _$this._estimatedDeliveryDate;
+
   set estimatedDeliveryDate(DateTime estimatedDeliveryDate) =>
       _$this._estimatedDeliveryDate = estimatedDeliveryDate;
 
   DateTime _actualDeliveryDate;
+
   DateTime get actualDeliveryDate => _$this._actualDeliveryDate;
+
   set actualDeliveryDate(DateTime actualDeliveryDate) =>
       _$this._actualDeliveryDate = actualDeliveryDate;
 
   DateTime _actualShipDate;
+
   DateTime get actualShipDate => _$this._actualShipDate;
+
   set actualShipDate(DateTime actualShipDate) =>
       _$this._actualShipDate = actualShipDate;
 
   String _trackingNumber;
+
   String get trackingNumber => _$this._trackingNumber;
+
   set trackingNumber(String trackingNumber) =>
       _$this._trackingNumber = trackingNumber;
 
   String _trackingNumberUrl;
+
   String get trackingNumberUrl => _$this._trackingNumberUrl;
+
   set trackingNumberUrl(String trackingNumberUrl) =>
       _$this._trackingNumberUrl = trackingNumberUrl;
 
@@ -483,6 +505,7 @@ class _$GetPackageApiPkgActions extends GetPackageApiPkgActions {
   GetPackageApiPkgBuilder newBuilder$() => GetPackageApiPkgBuilder();
 
   BuiltList<ModuxActions> _nested$;
+
   @override
   BuiltList<ModuxActions> get nested$ => _nested$ ??= BuiltList<ModuxActions>([
         this.location,
@@ -491,6 +514,7 @@ class _$GetPackageApiPkgActions extends GetPackageApiPkgActions {
       ]);
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -105,9 +105,11 @@ class CreateStocks2ApiResponseBuilder
   _$CreateStocks2ApiResponse _$v;
 
   ListBuilder<CreateStocks2ApiStockResponse> _stockResponses;
+
   ListBuilder<CreateStocks2ApiStockResponse> get stockResponses =>
       _$this._stockResponses ??=
           new ListBuilder<CreateStocks2ApiStockResponse>();
+
   set stockResponses(
           ListBuilder<CreateStocks2ApiStockResponse> stockResponses) =>
       _$this._stockResponses = stockResponses;
@@ -206,6 +208,7 @@ class _$CreateStocks2ApiResponseActions
       CreateStocks2ApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

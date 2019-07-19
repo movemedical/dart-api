@@ -69,6 +69,7 @@ class _$GetItemLotSerialHistoryApi extends GetItemLotSerialHistoryApi {
           ApiResult<GetItemLotSerialHistoryApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

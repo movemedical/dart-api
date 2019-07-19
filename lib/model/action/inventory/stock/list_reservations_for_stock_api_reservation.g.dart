@@ -212,32 +212,46 @@ class ListReservationsForStockApiReservationBuilder
   _$ListReservationsForStockApiReservation _$v;
 
   int _pickNumber;
+
   int get pickNumber => _$this._pickNumber;
+
   set pickNumber(int pickNumber) => _$this._pickNumber = pickNumber;
 
   String _loanId;
+
   String get loanId => _$this._loanId;
+
   set loanId(String loanId) => _$this._loanId = loanId;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   ListBuilder<String> _caseIds;
+
   ListBuilder<String> get caseIds =>
       _$this._caseIds ??= new ListBuilder<String>();
+
   set caseIds(ListBuilder<String> caseIds) => _$this._caseIds = caseIds;
 
   DateTime _startDate;
+
   DateTime get startDate => _$this._startDate;
+
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
+
   DateTime get endDate => _$this._endDate;
+
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   String _displayText;
+
   String get displayText => _$this._displayText;
+
   set displayText(String displayText) => _$this._displayText = displayText;
 
   ListReservationsForStockApiReservationBuilder();
@@ -365,6 +379,7 @@ class _$ListReservationsForStockApiReservationActions
       ListReservationsForStockApiReservationBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

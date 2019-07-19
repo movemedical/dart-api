@@ -139,19 +139,25 @@ class SaveCaseRequirementsApiRequestBuilder
   _$SaveCaseRequirementsApiRequest _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   ListBuilder<SaveCaseRequirementsApiRequirement> _requirements;
+
   ListBuilder<SaveCaseRequirementsApiRequirement> get requirements =>
       _$this._requirements ??=
           new ListBuilder<SaveCaseRequirementsApiRequirement>();
+
   set requirements(
           ListBuilder<SaveCaseRequirementsApiRequirement> requirements) =>
       _$this._requirements = requirements;
 
   bool _confirmCase;
+
   bool get confirmCase => _$this._confirmCase;
+
   set confirmCase(bool confirmCase) => _$this._confirmCase = confirmCase;
 
   SaveCaseRequirementsApiRequestBuilder();
@@ -262,6 +268,7 @@ class _$SaveCaseRequirementsApiRequestActions
       SaveCaseRequirementsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

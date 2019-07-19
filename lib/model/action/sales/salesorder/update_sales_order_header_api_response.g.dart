@@ -105,7 +105,9 @@ class UpdateSalesOrderHeaderApiResponseBuilder
   _$UpdateSalesOrderHeaderApiResponse _$v;
 
   bool _canDo;
+
   bool get canDo => _$this._canDo;
+
   set canDo(bool canDo) => _$this._canDo = canDo;
 
   UpdateSalesOrderHeaderApiResponseBuilder();
@@ -184,6 +186,7 @@ class _$UpdateSalesOrderHeaderApiResponseActions
       UpdateSalesOrderHeaderApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

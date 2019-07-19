@@ -108,7 +108,9 @@ class PrepareIntegrationFileDownloadApiResponseBuilder
   _$PrepareIntegrationFileDownloadApiResponse _$v;
 
   String _url;
+
   String get url => _$this._url;
+
   set url(String url) => _$this._url = url;
 
   PrepareIntegrationFileDownloadApiResponseBuilder();
@@ -188,6 +190,7 @@ class _$PrepareIntegrationFileDownloadApiResponseActions
       PrepareIntegrationFileDownloadApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

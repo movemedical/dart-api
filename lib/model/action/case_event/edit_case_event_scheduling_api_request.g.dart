@@ -104,6 +104,18 @@ class _$EditCaseEventSchedulingApiRequestSerializer
         ..add(serializers.serialize(object.procedureDesc,
             specifiedType: const FullType(String)));
     }
+    if (object.salesLeadUserId != null) {
+      result
+        ..add('salesLeadUserId')
+        ..add(serializers.serialize(object.salesLeadUserId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.opsLeadUserId != null) {
+      result
+        ..add('opsLeadUserId')
+        ..add(serializers.serialize(object.opsLeadUserId,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -172,6 +184,14 @@ class _$EditCaseEventSchedulingApiRequestSerializer
           result.procedureDesc = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'salesLeadUserId':
+          result.salesLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'opsLeadUserId':
+          result.opsLeadUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -207,6 +227,10 @@ class _$EditCaseEventSchedulingApiRequest
   final BodySide bodySide;
   @override
   final String procedureDesc;
+  @override
+  final String salesLeadUserId;
+  @override
+  final String opsLeadUserId;
 
   factory _$EditCaseEventSchedulingApiRequest(
           [void updates(EditCaseEventSchedulingApiRequestBuilder b)]) =>
@@ -225,7 +249,9 @@ class _$EditCaseEventSchedulingApiRequest
       this.teamId,
       this.coverageId,
       this.bodySide,
-      this.procedureDesc})
+      this.procedureDesc,
+      this.salesLeadUserId,
+      this.opsLeadUserId})
       : super._();
 
   @override
@@ -253,7 +279,9 @@ class _$EditCaseEventSchedulingApiRequest
         teamId == other.teamId &&
         coverageId == other.coverageId &&
         bodySide == other.bodySide &&
-        procedureDesc == other.procedureDesc;
+        procedureDesc == other.procedureDesc &&
+        salesLeadUserId == other.salesLeadUserId &&
+        opsLeadUserId == other.opsLeadUserId;
   }
 
   @override
@@ -269,19 +297,28 @@ class _$EditCaseEventSchedulingApiRequest
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc($jc(0, caseTypeId.hashCode),
-                                                    caseEventId.hashCode),
-                                                salesOuId.hashCode),
-                                            procedureId.hashCode),
-                                        subProcedureId.hashCode),
-                                    facilityId.hashCode),
-                                physicianId.hashCode),
-                            physicianTemp.hashCode),
-                        hcrId.hashCode),
-                    teamId.hashCode),
-                coverageId.hashCode),
-            bodySide.hashCode),
-        procedureDesc.hashCode));
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                0,
+                                                                caseTypeId
+                                                                    .hashCode),
+                                                            caseEventId
+                                                                .hashCode),
+                                                        salesOuId.hashCode),
+                                                    procedureId.hashCode),
+                                                subProcedureId.hashCode),
+                                            facilityId.hashCode),
+                                        physicianId.hashCode),
+                                    physicianTemp.hashCode),
+                                hcrId.hashCode),
+                            teamId.hashCode),
+                        coverageId.hashCode),
+                    bodySide.hashCode),
+                procedureDesc.hashCode),
+            salesLeadUserId.hashCode),
+        opsLeadUserId.hashCode));
   }
 
   @override
@@ -299,7 +336,9 @@ class _$EditCaseEventSchedulingApiRequest
           ..add('teamId', teamId)
           ..add('coverageId', coverageId)
           ..add('bodySide', bodySide)
-          ..add('procedureDesc', procedureDesc))
+          ..add('procedureDesc', procedureDesc)
+          ..add('salesLeadUserId', salesLeadUserId)
+          ..add('opsLeadUserId', opsLeadUserId))
         .toString();
   }
 }
@@ -311,59 +350,99 @@ class EditCaseEventSchedulingApiRequestBuilder
   _$EditCaseEventSchedulingApiRequest _$v;
 
   String _caseTypeId;
+
   String get caseTypeId => _$this._caseTypeId;
+
   set caseTypeId(String caseTypeId) => _$this._caseTypeId = caseTypeId;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   String _salesOuId;
+
   String get salesOuId => _$this._salesOuId;
+
   set salesOuId(String salesOuId) => _$this._salesOuId = salesOuId;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _subProcedureId;
+
   String get subProcedureId => _$this._subProcedureId;
+
   set subProcedureId(String subProcedureId) =>
       _$this._subProcedureId = subProcedureId;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _physicianId;
+
   String get physicianId => _$this._physicianId;
+
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   String _physicianTemp;
+
   String get physicianTemp => _$this._physicianTemp;
+
   set physicianTemp(String physicianTemp) =>
       _$this._physicianTemp = physicianTemp;
 
   String _hcrId;
+
   String get hcrId => _$this._hcrId;
+
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   String _teamId;
+
   String get teamId => _$this._teamId;
+
   set teamId(String teamId) => _$this._teamId = teamId;
 
   String _coverageId;
+
   String get coverageId => _$this._coverageId;
+
   set coverageId(String coverageId) => _$this._coverageId = coverageId;
 
   BodySide _bodySide;
+
   BodySide get bodySide => _$this._bodySide;
+
   set bodySide(BodySide bodySide) => _$this._bodySide = bodySide;
 
   String _procedureDesc;
+
   String get procedureDesc => _$this._procedureDesc;
+
   set procedureDesc(String procedureDesc) =>
       _$this._procedureDesc = procedureDesc;
+
+  String _salesLeadUserId;
+
+  String get salesLeadUserId => _$this._salesLeadUserId;
+
+  set salesLeadUserId(String salesLeadUserId) =>
+      _$this._salesLeadUserId = salesLeadUserId;
+
+  String _opsLeadUserId;
+
+  String get opsLeadUserId => _$this._opsLeadUserId;
+
+  set opsLeadUserId(String opsLeadUserId) =>
+      _$this._opsLeadUserId = opsLeadUserId;
 
   EditCaseEventSchedulingApiRequestBuilder();
 
@@ -382,6 +461,8 @@ class EditCaseEventSchedulingApiRequestBuilder
       _coverageId = _$v.coverageId;
       _bodySide = _$v.bodySide;
       _procedureDesc = _$v.procedureDesc;
+      _salesLeadUserId = _$v.salesLeadUserId;
+      _opsLeadUserId = _$v.opsLeadUserId;
       _$v = null;
     }
     return this;
@@ -416,7 +497,9 @@ class EditCaseEventSchedulingApiRequestBuilder
             teamId: teamId,
             coverageId: coverageId,
             bodySide: bodySide,
-            procedureDesc: procedureDesc);
+            procedureDesc: procedureDesc,
+            salesLeadUserId: salesLeadUserId,
+            opsLeadUserId: opsLeadUserId);
     replace(_$result);
     return _$result;
   }
@@ -457,6 +540,8 @@ class _$EditCaseEventSchedulingApiRequestActions
   final FieldDispatcher<String> coverageId;
   final FieldDispatcher<BodySide> bodySide;
   final FieldDispatcher<String> procedureDesc;
+  final FieldDispatcher<String> salesLeadUserId;
+  final FieldDispatcher<String> opsLeadUserId;
 
   _$EditCaseEventSchedulingApiRequestActions._(this.options$)
       : replace$ = options$.action<EditCaseEventSchedulingApiRequest>(
@@ -505,6 +590,16 @@ class _$EditCaseEventSchedulingApiRequestActions
             (a) => a?.procedureDesc,
             (s) => s?.procedureDesc,
             (p, b) => p?.procedureDesc = b),
+        salesLeadUserId = options$.field<String>(
+            'salesLeadUserId',
+            (a) => a?.salesLeadUserId,
+            (s) => s?.salesLeadUserId,
+            (p, b) => p?.salesLeadUserId = b),
+        opsLeadUserId = options$.field<String>(
+            'opsLeadUserId',
+            (a) => a?.opsLeadUserId,
+            (s) => s?.opsLeadUserId,
+            (p, b) => p?.opsLeadUserId = b),
         super._();
 
   factory _$EditCaseEventSchedulingApiRequestActions(
@@ -520,6 +615,7 @@ class _$EditCaseEventSchedulingApiRequestActions
       EditCaseEventSchedulingApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([
@@ -537,6 +633,8 @@ class _$EditCaseEventSchedulingApiRequestActions
         this.coverageId,
         this.bodySide,
         this.procedureDesc,
+        this.salesLeadUserId,
+        this.opsLeadUserId,
       ]);
 
   @override
@@ -555,6 +653,8 @@ class _$EditCaseEventSchedulingApiRequestActions
     coverageId.reducer$(reducer);
     bodySide.reducer$(reducer);
     procedureDesc.reducer$(reducer);
+    salesLeadUserId.reducer$(reducer);
+    opsLeadUserId.reducer$(reducer);
   }
 
   @override

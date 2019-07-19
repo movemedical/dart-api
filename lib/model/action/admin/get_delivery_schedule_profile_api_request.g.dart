@@ -138,15 +138,21 @@ class GetDeliveryScheduleProfileApiRequestBuilder
   _$GetDeliveryScheduleProfileApiRequest _$v;
 
   String _profileId;
+
   String get profileId => _$this._profileId;
+
   set profileId(String profileId) => _$this._profileId = profileId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   GetDeliveryScheduleProfileApiRequestBuilder();
@@ -234,6 +240,7 @@ class _$GetDeliveryScheduleProfileApiRequestActions
       GetDeliveryScheduleProfileApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

@@ -64,6 +64,7 @@ class _$GlobalSearchApi extends GlobalSearchApi {
           ApiResult<GlobalSearchApiResponse>>();
 
   BuiltList<ActionDispatcher> _actions$;
+
   @override
   BuiltList<ActionDispatcher> get actions$ =>
       _actions$ ??= BuiltList<ActionDispatcher>([

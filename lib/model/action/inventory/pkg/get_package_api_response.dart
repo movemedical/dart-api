@@ -5,7 +5,7 @@ import 'package:modux/modux.dart';
 import 'package:movemedical_api/model/action/inventory/pkg/get_package_api_package_attribute.dart';
 import 'package:movemedical_api/model/action/inventory/pkg/get_package_api_pkg.dart';
 import 'package:movemedical_api/model/action/inventory/pkg/get_package_api_ui_schema.dart';
-import 'package:movemedical_api/model/custom_doc.dart';
+import 'package:movemedical_api/model/essentials/model/api/order_custom_doc.dart';
 
 part 'get_package_api_response.g.dart';
 
@@ -22,7 +22,7 @@ abstract class GetPackageApiResponse
   GetPackageApiUiSchema get uiSchema;
 
   @nullable
-  BuiltList<CustomDoc> get customDocs;
+  BuiltList<OrderCustomDoc> get customDocs;
 
   @nullable
   BuiltList<GetPackageApiPackageAttribute> get attributes;
@@ -56,7 +56,7 @@ abstract class GetPackageApiResponseActions extends ModelActions<
 
   GetPackageApiUiSchemaActions get uiSchema;
 
-  FieldDispatcher<BuiltList<CustomDoc>> get customDocs;
+  FieldDispatcher<BuiltList<OrderCustomDoc>> get customDocs;
 
   FieldDispatcher<BuiltList<GetPackageApiPackageAttribute>> get attributes;
 
